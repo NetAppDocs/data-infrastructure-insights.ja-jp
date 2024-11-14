@@ -1,0 +1,122 @@
+---
+sidebar: sidebar 
+permalink: task_dc_ibm_xiv.html 
+keywords: IBM, XIV, SAN, A9000 
+summary: IBM XIV / A9000 データコレクタの設定 
+---
+= IBM XIV / A9000 データコレクタの設定
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+IBM XIV および A9000 （ CLI ）データコレクタでは、 XIV コマンドラインインターフェイスを使用してインベントリデータを収集します。また、パフォーマンス収集は、ポート 7778 で SMI-S プロバイダを実行する XIV / A9000 アレイを SMI-S から呼び出して実行します。
+
+
+
+== 用語
+
+[cols="2*"]
+|===
+| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+
+
+| ディスク | ディスク 
+
+
+| ストレージシステム | ストレージ 
+
+
+| ストレージプール | ストレージプール 
+
+
+| ボリューム | ボリューム 
+|===
+
+
+== 要件
+
+このデータコレクタを設定して使用するには、次の要件を満たしている必要があります。
+
+* ポート要件： TCP ポート 7778
+* 読み取り専用のユーザ名とパスワード
+* XIV CLI が AU にインストールされている必要があります
+
+
+
+
+== パフォーマンス要件
+
+パフォーマンス収集の要件は次のとおりです。
+
+* SMI-S Agent 1.4 以降
+* SMI-S 互換の CIMService がアレイ上で実行されています。ほとんどの XIV アレイにはデフォルトで cimserver がインストールされています。
+* cimserver にはユーザログインを指定する必要があります。ログインには、アレイの構成とプロパティに対する完全な読み取りアクセス権が必要です。
+* SMI-S ネームスペース。デフォルトは root/IBM です。これは cimserver で設定できます。
+* ポート要件： HTTP の場合は 5988 、 HTTPS の場合は 5989 。
+* SMI-Sパフォーマンス収集のアカウントを作成する方法については、次のリンクを参照してください。 https://www.ibm.com/docs/en/products?topic=/com.ibm.tpc_V41.doc/fqz0_t_adding_cim_agent.html[]
+
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| XIVのIPアドレスを指定します | XIV ストレージの IP アドレスまたは完全修飾ドメイン名 
+
+
+| ユーザー名 | XIV ストレージのユーザ名 
+
+
+| パスワード | XIV ストレージのパスワード 
+
+
+| XIV CLI ディレクトリの完全パス | XIV CLI を含むフォルダの完全パス 
+
+
+| SMI-S ホストの IP アドレス | SMI-S ホストの IP アドレス 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| インベントリポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは40分です。 
+
+
+| SMI-S プロトコル | SMI-S プロバイダへの接続に使用するプロトコル。デフォルトのポートも表示されます。 
+
+
+| SMI-S ポートを上書きします | 空白の場合は、 [Connection Type] フィールドでデフォルトのポートを使用します。それ以外の場合は、使用する接続ポートを入力します 
+
+
+| ユーザ名 | SMI-S プロバイダホストのユーザ名 
+
+
+| パスワード | SMI-S プロバイダホストのパスワード 
+
+
+| パフォーマンスポーリング間隔（秒） | パフォーマンスのポーリング間隔デフォルトは300秒です。 
+|===
+
+
+== トラブルシューティング
+
+このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

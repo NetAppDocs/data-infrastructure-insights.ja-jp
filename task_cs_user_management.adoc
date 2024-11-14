@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: task_cs_user_management.html 
+keywords: Workload Security, User, Login, account, cloud secure 
+summary: ワークロードのセキュリティユーザアカウントはData Infrastructure Insightsのユーザ管理で管理 
+---
+= ユーザ管理
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ワークロードセキュリティユーザアカウントは、Data Infrastructure Insightsを通じて管理されます。
+
+Data Infrastructure Insightsには、アカウント所有者、管理者、ユーザ、ゲストの4つのユーザアカウントレベルが用意されています。各アカウントには、特定の権限レベルが割り当てられます。管理者権限を持つユーザアカウントは、ユーザを作成または変更し、各ユーザに次のいずれかのワークロードセキュリティロールを割り当てることができます。
+
+|===
+
+
+| ロール | ワークロードセキュリティアクセス 
+
+
+| 管理者 | アラート、フォレンジック、データコレクタ、自動応答ポリシー、ワークロードセキュリティ用APIなど、すべてのワークロードセキュリティ機能を実行できます。管理者は、他のユーザーを招待することもできますが、割り当てられるのはワークロードセキュリティロールのみです。 
+
+
+| ユーザ | アラートを表示および管理し、フォレンジックを表示できます。ユーザーロールは、アラートステータスの変更、メモの追加、スナップショットの手動作成、ユーザーアクセスの制限を行うことができます。 
+
+
+| ゲスト | アラートおよびフォレンジックを表示できます。ゲストロールは、アラートステータスの変更、メモの追加、スナップショットの手動作成、ユーザーアクセスの制限を行うことはできません。 
+|===
+.手順
+. Workload Securityにログインします
+. メニューで、 [*Admin] > [User Management] をクリックします
++
+Data Infrastructure Insightsのユーザ管理ページに移動します。
+
+. 各ユーザに必要なロールを選択します。
+
+
+新しいユーザを追加する際には、目的のロール（通常はユーザまたはゲスト）を選択します。
+
+ユーザアカウントとロールの詳細については、Data Infrastructure Insightsのドキュメントを参照してlink:https://docs.netapp.com/us-en/cloudinsights/concept_user_roles.html["ユーザロール"]ください。

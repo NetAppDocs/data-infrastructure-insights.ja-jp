@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: task_configure_data_collectors.html 
+keywords: acquisition, AU, data collector, collector, notification, notify, 
+summary: データコレクタの一般的な手順 
+---
+= データコレクタの設定
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights環境でData Collectorを構成して、データセンター内のデバイスからデータを収集します。
+
+.開始する前に
+* データの収集を開始する前に、 Acquisition Unit を設定しておく必要があります。
+* データの収集元のデバイスのクレデンシャルが必要です。
+* データの収集元のすべてのデバイスには、デバイスのネットワークアドレス、アカウント情報、およびパスワードが必要です。
+
+
+.手順
+. [Data Infrastructure Insights]メニューで、*[Observability]>[Collectors]*をクリックします。
++
+使用可能なデータコレクタがベンダー別に表示されます。
+
+. [+ Collector]*をクリックし、設定するデータコレクタを選択します。
++
+ダイアログボックスで、データコレクタを設定し、 Acquisition Unit を追加できます。
+
+. データコレクタの名前を入力します。
+. [ 詳細構成 *] をクリックして、追加の構成フィールドを追加します。すべてのデータコレクタで高度な設定が必要となるわけで
+. Test Configuration* をクリックして、データコレクタが正しく設定されていることを確認します。
+. [Add Collector]*をクリックして設定を保存し、Data Infrastructure Insightsテナントにデータコレクタを追加します。
+
+
+サービスのデータがダッシュボードに表示されるか、クエリに使用できるようになるまで、ポーリング期間は最大 2 回かかる場合があります。
+
+* 最初のインベントリポーリング：すぐに
+* 第 1 回のパフォーマンスデータのポーリングでベースラインを確立：インベントリのポーリング直後
+* 第 2 回パフォーマンスポーリング：第 1 回のパフォーマンスポーリングが完了してから 15 秒以内
+
+
+ポーリングは、設定されたインベントリとパフォーマンスのポーリング間隔に従って続行されます。

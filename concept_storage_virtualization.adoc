@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: concept_storage_virtualization.html 
+summary: Data Infrastructure Insightsでは、フロントエンドとバックエンドの両方の仮想ストレージを表示できます。 
+keywords: storage, virtual, virtualized, virtualization, 
+---
+= ストレージ仮想化
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsでは、ローカルストレージがあるストレージアレイと、他のストレージアレイが仮想化されているストレージアレイを区別できます。これにより、コストを関連付け、フロントエンドからインフラのバックエンドまで、パフォーマンスを区別することができます。
+
+
+
+=== テーブルウィジェットでの仮想化
+
+ストレージ仮想化を確認する最も簡単な方法の1つは、[Virtualized]タイプを示すダッシュボード表ウィジェットを作成することです。ウィジェットのクエリを作成するときは、グループ化またはフィルタに「virtualizedType」を追加するだけです。
+
+image:StorageVirtualization_TableWidgetSettings.png["Storage virtualizedTypesを表示する基本的なクエリ"]
+
+表示される表ウィジェットには、環境内の_Standard_、_Backend_、および_Virtual _ストレージが表示されます。
+
+image:StorageVirtualization_TableWidgetShowingVirtualizedTypes.png["仮想化タイプを示す表"]
+
+
+
+=== ランディング・ページには仮想化された情報が表示される
+
+ストレージ、ボリューム、内部ボリューム、ディスクのランディングページでは、関連する仮想化情報を確認できます。たとえば、以下のストレージランディングページを見ると、これが仮想ストレージであり、どのバックエンドストレージシステムが適用されているかがわかります。ランディングページの関連テーブルにも、必要に応じて仮想化情報が表示されます。
+
+image:StorageVirtualization_StorageSummary.png["仮想ストレージとバックアップストレージの情報が表示されたストレージランディングページ"]
+
+
+
+=== 既存のランディングページとダッシュボード
+
+現在の環境でカスタマイズされたランディングページやダッシュボードを使用している場合、デフォルトではすべての仮想化情報が自動的に表示されるわけではないことに注意してください。ただし、任意のカスタマイズされたダッシュボードまたはランディングページ（カスタマイズを再実装する必要があります）に戻すことも、必要な仮想化の属性や指標を含めるように関連するウィジェットを変更することもできます。
+
+カスタムダッシュボードまたはランディングページ画面の右上隅にある_revert to default_を使用できます。
+
+image:RevertToDefault.png["[デフォルトに戻す]ボタン"]

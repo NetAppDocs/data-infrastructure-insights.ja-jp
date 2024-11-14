@@ -1,0 +1,173 @@
+---
+sidebar: sidebar 
+permalink: concept_cs_attack_simulator.html 
+keywords: ransomware, simulation, simulator, restrict, attack 
+summary: スクリプトを使用して、ランサムウェア攻撃をシミュレートし、ワークロードセキュリティのテストやデモを実施できます 
+---
+= ワークロードのセキュリティ：攻撃のシミュレーション
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+このページの手順を使用して、付属のランサムウェアシミュレーションスクリプトを使用して、ワークロードセキュリティをテストまたは実証する攻撃をシミュレートできます。
+
+
+
+== 始める前に注意してください
+
+* ランサムウェアシミュレーションスクリプトは Linux でのみ動作します。
+* このスクリプトは、Workload Securityエージェントのインストールファイルとともに提供されます。ワークロードセキュリティエージェントがインストールされているすべてのマシンで使用できます。
+* このスクリプトは、Workload Securityエージェントマシン自体で実行できます。他のLinuxマシンを準備する必要はありません。ただし、スクリプトを別のシステムで実行する場合は、スクリプトをコピーしてそこで実行するだけです。
+
+
+
+
+== サンプルファイルを 1 、 000 個以上用意してください
+
+このスクリプトは、暗号化するファイルが格納されたフォルダを含む SVM で実行する必要があります。フォルダとサブフォルダには、少なくとも 1 、 000 個のファイルを含めることをお勧めします。ファイルは空にできません。ファイルを作成したり、同じユーザを使用して暗号化したりしないでください。ワークロードセキュリティでは、これはリスクの低いアクティビティとみなされるため、アラートは生成されません（つまり、同じユーザが作成したファイルを変更した場合）。
+
+の手順については、以下を参照してくださいlink:#create-files-programmatically["プログラムによって空でないファイルを作成します"]。
+
+
+
+== シミュレータを実行する前のガイドライン：
+
+. 暗号化されたファイルが空でないことを確認します。
+. 必ず50を超えるファイルを暗号化してください。少数のファイルは無視されます。
+. 同じユーザで何度も攻撃を実行しないでください。数回後、ワークロードセキュリティはこのユーザの動作を学習し、それがユーザの通常の動作であると想定します。
+. 同じユーザが作成したファイルは暗号化しないでください。ユーザが作成したばかりのファイルを変更しても、リスクのあるアクティビティとは見なされません。別のユーザが作成したファイルを使用するか、ファイルの作成から暗号化まで数時間かかります。
+
+
+
+
+== システムを準備
+
+まず、ターゲットボリュームをマシンにマウントします。NFS マウントまたは CIFS エクスポートをマウントできます。
+
+Linux で NFS エクスポートをマウントするには、次の手順を実行
+
+....
+mount -t nfs -o vers=4.0 10.193.177.158:/svmvol1 /mntpt
+mount -t nfs -o vers=4.0 Vserver data IP>:/nfsvol /destinationlinuxfolder
+....
+NFS バージョン 4.1 はマウントしないでください。 FPolicy ではサポートされていません。
+
+Linux で CIFS をマウントするには、次の手順を
+
+ mount -t cifs //10.193.77.91/sharedfolderincluster /root/destinationfolder/ -o username=raisa
+次に、 Data Collector をセットアップします。
+
+. ワークロードセキュリティエージェントがまだ構成されていない場合は構成します。
+. SVM データコレクタが設定されていない場合は設定します。
+
+
+
+
+== ランサムウェアシミュレータスクリプトを実行します
+
+. ワークロードセキュリティエージェントマシンにログイン（ssh）します。
+. /opt/NetApp/cloudsecure/agent/install_に 移動します
+. パラメータを指定せずにシミュレータスクリプトを呼び出し、使用状況を確認します。
++
+....
+# pwd
+/opt/netapp/cloudsecure/agent/install
+# ./ransomware_simulator.sh
+Error: Invalid directory  provided.
+Usage: ./ransomware_simulator.sh [-e] [-d] [-i <input_directory>]
+       -e to encrypt files (default)
+       -d to restore files
+       -i <input_directory> - Files under the directory to be encrypted
+....
++
+....
+Encrypt command example: ./ransomware_simulator.sh -e -i /mnt/audit/reports/
+Decrypt command example: ./ransomware_simulator.sh -d -i /mnt/audit/reports/
+....
+
+
+
+
+== テストファイルを暗号化します
+
+ファイルを暗号化するには、次のコマンドを実行します。
+
+....
+# ./ransomware_simulator.sh -e -i /root/for/
+Encryption key is saved in /opt/netapp/cloudsecure/cloudsecure-agent-1.251.0/install/encryption-key,
+which can be used for restoring the files.
+Encrypted /root/for/File000.txt
+Encrypted /root/for/File001.txt
+Encrypted /root/for/File002.txt
+...
+....
+
+
+== ファイルのリストア
+
+復号化するには、次のコマンドを実行します。
+
+....
+[root@scspa2527575001 install]# ./ransomware_simulator.sh -d -i /root/for/
+File /root/for/File000.txt is restored.
+File /root/for/File001.txt is restored.
+File /root/for/File002.txt is restored.
+...
+....
+
+
+== スクリプトを複数回実行します
+
+ユーザがランサムウェア攻撃を受けた場合は、別のユーザに切り替えて攻撃を受けます。Workload Securityはユーザの動作を学習し、同じユーザに対してランサムウェア攻撃が繰り返し発生してもアラートを生成しません。
+
+
+
+== プログラムでファイルを作成します
+
+ファイルを作成する前に、データコレクタの処理を停止または一時停止する必要があります。データコレクタをエージェントに追加する前に、次の手順を実行します。データコレクタをすでに追加している場合は、データコレクタを編集し、無効なパスワードを入力して保存します。これにより、データコレクタが一時的にエラー状態になります。注意：元のパスワードを必ずメモしてください。
+
+
+NOTE: ファイルを作成する前にをお勧めしlink:task_add_collector_svm.html#play-pause-data-collector["コレクターの一時停止"]ます</Z1>.]</</Z1>
+
+シミュレーションを実行する前に、暗号化するファイルを追加する必要があります。暗号化するファイルを手動でターゲットフォルダにコピーするか、スクリプト（以下の例を参照）を使用してプログラムでファイルを作成することができます。どちらの方法を使用した場合も、 1 、 000 個以上のファイルをコピーしてください。
+
+プログラムでファイルを作成する場合は、次の手順を実行します。
+
+. [ エージェント ] ボックスにログインします。
+. Filer の SVM から Agent マシンに NFS エクスポートをマウントします。CD をそのフォルダに移動します。
+. このフォルダに、 createfiles.sh という名前のファイルを作成します
+. 次の行をそのファイルにコピーします。
++
+....
+for i in {000..1000}
+do
+   echo hello > "File${i}.txt"
+done
+echo 3 > /proc/sys/vm/drop_caches ; sync
+....
+. ファイルを保存します。
+. ファイルに対する実行権限を確認します。
++
+ chmod 777 ./createfiles.sh
+. スクリプトを実行します。
++
+ ./createfiles.sh
++
+現在のフォルダには 1000 個のファイルが作成されます。
+
+. データコレクタを再度有効にします
++
+手順 1 でデータコレクタを無効にした場合は、データコレクタを編集し、正しいパスワードを入力して保存します。データコレクタが running 状態であることを確認します。
+
+. これらの手順を実行する前にコレクタを一時停止した場合は、を確認してlink:task_add_collector_svm.html#play-pause-data-collector["コレクタの再開"]ください。
+

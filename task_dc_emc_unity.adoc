@@ -1,0 +1,126 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_unity.html 
+keywords: data collector, VNXe, EMC, Unity 
+summary: VNXe データコレクタを構成しています。 
+---
+= EMC Unity データコレクタの設定
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Dell EMC Unity （旧 VNXe ）データコレクタは、 VNXe ユニファイドストレージアレイのインベントリサポートを提供します。Data Infrastructure Insightsは現在、iSCSIプロトコルとNASプロトコルをサポートしています。
+
+
+
+== 要件
+
+* Unity データコレクタは CLI ベースです。 VNXe データコレクタが存在する Acquisition Unit に Unisphere for Unity CLI （ uemcli.exe ）をインストールする必要があります。
+* uemcli.exe は HTTPS を転送プロトコルとして使用するため、 Acquisition Unit から Unity への HTTPS 接続を開始できる必要があります。
+* Unity デバイスの IP アドレスまたは完全修飾ドメイン名
+* データコレクタで使用するためには、読み取り専用ユーザが少なくとも 1 人必要です。
+* ポート 443 での HTTPS が必要です
+* EMC Unityデータコレクタは、NASおよびiSCSIによるインベントリのサポートを提供します。ファイバチャネルボリュームは検出されますが、Data Infrastructure InsightsはFCマッピング、マスキング、ストレージポートについてはレポートしません。
+
+
+
+
+== 用語
+
+Data Infrastructure Insightsは、Unityデータコレクタから次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+[cols="2*"]
+|===
+| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+
+
+| ディスク | ディスク 
+
+
+| ストレージアレイ | ストレージ 
+
+
+| プロセッサ | ストレージノード 
+
+
+| ストレージプール | ストレージプール 
+
+
+| 全般的なiSCSIブロック情報、VMware VMFS | 共有 
+
+
+| Replication Remote System の略 | 同期 
+
+
+| iSCSI ノード | iSCSI ターゲットノード 
+
+
+| iSCSIイニシエータ | iSCSI ターゲットイニシエータ 
+|===
+注：これらは一般的な用語の対応のみを示したものであり、このデータソースのすべてのケースを表しているとは限りません。
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| Unity ストレージ | Unity デバイスの IP アドレスまたは完全修飾ドメイン名 
+
+
+| ユーザー名 | Unity デバイスのユーザ名 
+
+
+| パスワード | Unity デバイスのパスワード 
+
+
+| 実行可能 UEMCLI への完全パス | _uemcli.exe_executable を含むフォルダへの完全パス 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| インベントリポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは 40 分です。 
+
+
+| Unity CLI ポート | Unity CLI に使用するポート 
+
+
+| パフォーマンスのポーリング間隔（秒） | デフォルトは300です。 
+|===
+
+
+== トラブルシューティング
+
+このデータコレクタで問題が発生した場合の対処方法を次に示します。
+
+
+
+=== インベントリ
+
+[cols="2*"]
+|===
+| 問題 | 次の操作を実行します 
+
+
+| 「 Failed to execute external utility 」というエラーメッセージが表示され、「 Failed to find Unisphere executable uemcli 」 | *正しいIPアドレス、ユーザー名、パスワードを確認します。* Unisphere CLIがData Infrastructure Insights Acquisition Unitにインストールされていることを確認します。*データソース構成でUnisphere CLIのインストールディレクトリが正しいことを確認します。*データソースの構成でVNXeのIPが正しいことを確認します。Data Infrastructure Insights Acquisition UnitでCMDを開き、設定されているインストールディレクトリ$｛INSTALLDIRに移動します。次のように入力して、 VNXe デバイスとの接続を試みます。 uemcli -d <your ip>-u <your ID>/sys/general show 
+|===
+詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

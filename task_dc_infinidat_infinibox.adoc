@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: task_dc_infinidat_infinibox.html 
+keywords: data collector, infinidat, InfiniBox 
+summary: Infinidat InfiniBox データコレクタを設定します。 
+---
+= Infinidat InfiniBox データコレクタ
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Infinidat InfiniBox （ HTTP ）データコレクタは、 Infinidat InfiniBox ストレージシステムからインベントリ情報を収集するために使用されます。
+
+
+
+== 用語
+
+Data Infrastructure Insightsは、Infinidat InfiniBoxデータコレクタから次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+[cols="2*"]
+|===
+| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+
+
+| ストレージプール | ストレージプール 
+
+
+| ノード | コントローラ 
+
+
+| ファイルシステム | 内部ボリューム 
+
+
+| ファイルシステム | ファイル共有 
+
+
+| ファイルシステムエクスポート | 共有 
+|===
+
+
+== 要件
+
+このデータコレクタを設定する際の要件は次のとおりです。
+
+* InfiniBox 管理ノードの IP アドレスまたは FQDN
+* 管理者のユーザ ID とパスワード
+* ポート 443 - REST API を使用
+
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| InfiniBox ホスト | InfiniBox 管理ノードの IP アドレスまたは完全修飾ドメイン名 
+
+
+| ユーザー名 | InfiniBox 管理ノードのユーザ名 
+
+
+| パスワード | InfiniBox 管理ノードのパスワード 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| TCPポート | InfiniBox サーバへの接続に使用する TCP ポート。デフォルトは443です。 
+
+
+| インベントリのポーリング間隔 | インベントリのポーリング間隔。デフォルトは60分です。 
+|===
+
+
+== トラブルシューティング
+
+このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_kafka.html 
+keywords: telegraf, installation, install, kafka 
+summary: Kafka データコレクタの設定 
+---
+= Kafka Data Collector の利用
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsは、このデータコレクタを使用してKafkaから指標データを収集します。
+
+
+
+== インストール
+
+. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。Kafkaを選択します。
++
+Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+
+. コレクション用エージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[_Show Instructions_]をクリックして手順を展開しlink:task_config_telegraf_agent.html["エージェントのインストール"]ます。
+. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
+. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+
+
+image:KafkaDCConfigWindows.png["Kafka の構成です"]
+
+
+
+== セットアップ
+
+Kafka プラグインは、テレグラムの Jolokia プラグインに基づいています。すべての Kafka ブローカーから情報を収集する必要があるため、 JMX はすべてのコンポーネントで Jolokia 経由で設定および公開する必要があります。
+
+
+
+=== 互換性
+
+Kafka バージョン 0.11.0.2 の構成向けに開発されました。
+
+
+
+=== セツトアツフ
+
+以下の手順はすべて、 Kafka のインストール場所が「 /opt/Kafka 」であることを前提としています。以下の手順を使用して、設置場所を変更できます。
+
+
+
+==== Jolokia エージェント JAR
+
+Jolokiaエージェントjarファイルのバージョンが必要ですlink:https://jolokia.org/download.html["ダウンロードしました"]。テスト対象のバージョンは Jolokia エージェント 1.6.0 でした。
+
+以下の手順では、ダウンロードした jar ファイル（ jolokia-jvm-1.6.0-agent.jar ）が「 /opt/Kafka/libs/' 」の下に配置されると想定しています。
+
+
+
+==== Kafka Brokers のようになります
+
+Kafka Brokers で Jolokia API を公開するように設定するには、「 Kafka -run-class.sh 」コールの直前に、 <Kafka_home>/bin/Kafka-server-start.sh に次の項目を追加します。
+
+[listing]
+----
+export JMX_PORT=9999
+export RMI_HOSTNAME=`hostname -I`
+export KAFKA_JMX_OPTS="-javaagent:/opt/kafka/libs/jolokia-jvm-1.6.0-agent.jar=port=8778,host=0.0.0.0  -Dcom.sun.management.jmxremote.password.file=/opt/kafka/config/jmxremote.password -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=$RMI_HOSTNAME -Dcom.sun.management.jmxremote.rmi.port=$JMX_PORT"
+----
+上記の例では 'hostname-i' を使用して 'RMI_HOSTNAME' 環境変数を設定しています。複数の IP マシンでは、 RMI 接続に使用する IP を収集するために、これを調整する必要があります。
+
+JMX (9999 以上 ) とジョロキア (8778) には別のポートを選択できますJolokia をロックする内部 IP を持っている場合は、「 catch all 」 0.0.0.0 を自分の IP で置き換えることができます。この IP には、テレグラムプラグインからアクセスできる必要があります。認証を行わない場合は、オプション「 -Dcom.sun.management.jmxremote.authenticate=false' 」を使用できます。自己責任で使用してください。
+
+
+
+== オブジェクトとカウンタ
+
+次のオブジェクトとそのカウンタが収集されます。
+
+[cols="<.<,<.<,<.<"]
+|===
+| オブジェクト： | 識別子： | 属性： 
+
+
+| Kafka Broker | クラスタネームスペースのブローカー | ノード名ノード IP 
+|===
+
+
+== トラブルシューティング
+
+詳細については、ページを参照してlink:concept_requesting_support.html["サポート"]ください。

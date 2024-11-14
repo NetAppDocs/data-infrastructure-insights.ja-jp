@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: task_cs_add_collector_ontap.html 
+keywords: data collector, ONTAP, SVM 
+summary: データコレクタの追加 
+---
+= NetApp ONTAP Data Collector の設定
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+ワークロードセキュリティでは、データコレクタを使用して、デバイスからファイルとユーザのアクセスデータを収集します。分析のためにワークロードセキュリティにデータが提供されます。
+
+.開始する前に
+このデータコレクタを設定するには、次の情報が必要です。
+
+* データを収集するようにエージェントを設定する必要があります
+* SVM 管理 IP アドレス
+* SVM にアクセスするためのユーザ名
+* SVM にアクセスするためのパスワード
+
+
+.設定の手順
+. ワークロードセキュリティ環境に管理者またはアカウント所有者としてログインします。
+. [Observability]>[Collectors]>[+Data Collectors]*をクリックします。
++
+使用可能なデータコレクタが表示されます。
+
+. NetApp ONTAP のタイルで、 * + Monitor * をクリックします。
++
+Data Collector の追加： ONTAP SVM 設定ページが表示されます。
+
+. コレクタの一意の名前を入力します
+. データを収集するエージェントを選択します
+. SVM 管理 IP アドレスを入力します
+. SVM にアクセスするためのユーザ名を入力します
+. SVM にアクセスするためのパスワードを入力します
+. + Add Collector * をクリックします
+
+
+.終了後
+* [ワークロードセキュリティ]>[コレクタ]*をクリックして、設定したコレクタのステータスを確認します。
++
+通常、コレクタのステータスが表示されるまでに遅延が発生します。
+
+

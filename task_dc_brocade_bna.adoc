@@ -1,0 +1,123 @@
+---
+sidebar: sidebar 
+permalink: task_dc_brocade_bna.html 
+keywords: data collector, Brocade, BNA 
+summary: Brocade BNA コレクタの設定 
+---
+= Brocade Network Advisor データコレクタ
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsは、Brocadeネットワークアドバイザのデータコレクタを使用して、Brocadeスイッチからインベントリとパフォーマンスのデータを取得します。
+
+
+
+== 用語
+
+Data Infrastructure Insightsは、Brocadeネットワークアドバイザのデータコレクタから次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+[cols="2*"]
+|===
+| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+
+
+| スイッチ | スイッチ 
+
+
+| ポート | ポート 
+
+
+| 仮想ファブリック、物理ファブリック | ファブリック 
+
+
+| Logical Switch の略 | Logical Switch の略 
+|===
+注：これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているわけではありません。
+
+
+
+== 要件
+
+このデータコレクタを設定するには、次のものが必要です。
+
+* Data Infrastructure Insights Acquisition Unitは、BNAサーバのTCPポート443への接続を開始します。BNA サーバはバージョン 14.2.1 以降を実行している必要があります。
+* Brocade Network Advisor サーバの IP アドレス
+* 管理者アカウントのユーザ名とパスワード
+* ポート要件： HTTP / HTTPS 443
+
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| Brocade Network Advisor サーバ IP | Network Advisor サーバの IP アドレス 
+
+
+| ユーザー名 | スイッチのユーザ名 
+
+
+| ユーザー名 | 管理者のユーザ名 
+
+
+| パスワード | 管理者パスワード 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| 接続タイプ | HTTPS （デフォルトポート 443 ）または HTTP （デフォルトポート 80 ） 
+
+
+| 接続ポートを上書きします | 空白の場合は、 [Connection Type] フィールドでデフォルトのポートを使用します。それ以外の場合は、使用する接続ポートを入力します 
+
+
+| パスワード | スイッチのパスワード 
+
+
+| インベントリのポーリング間隔（分） | デフォルトは40です 
+
+
+| Report Access Gateway の略 | Access Gateway モードにデバイスを含める場合にオンにします 
+
+
+| パフォーマンスポーリング間隔（秒） | デフォルトは1800です 
+|===
+
+
+== トラブルシューティング
+
+このデータコレクタで問題が発生した場合の対処方法を次に示します。
+
+
+
+=== インベントリ
+
+[cols="2*"]
+|===
+| 問題 | 次の操作を実行します 
+
+
+| 複数のノードが Access Gateway ポートにログインしているというメッセージを受信するか、データコレクタが Access Gateway デバイスを検出できません。 | NPV デバイスが正しく動作していること、および接続されているすべての WWN が必要であることを確認します。NPV デバイスを直接取得しないでください。代わりに、コアファブリックスイッチを取得すると NPV デバイスデータが収集されます。 
+|===
+詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

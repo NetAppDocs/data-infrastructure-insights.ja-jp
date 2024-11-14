@@ -1,0 +1,171 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_hadoop.html 
+keywords: telegraf, installation, install, Hadoop 
+summary: Hadoop のデータコレクタの設定 
+---
+= Hadoop Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsは、このデータコレクタを使用してHadoopから指標を収集します。
+
+
+
+== インストール
+
+. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。Hadoopを選択します。
++
+Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+
+. コレクション用エージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[_Show Instructions_]をクリックして手順を展開しlink:task_config_telegraf_agent.html["エージェントのインストール"]ます。
+. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
+. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+
+
+image:HadoopDCConfigLinux-1.png["Hadoop 構成"] image:HadoopDCConfigLinux-2.png["Hadoop 構成"]
+
+
+
+== セットアップ
+
+Hadoop を完全に導入するには、次のコンポーネントが必要です。
+
+* NameNode ： Hadoop 分散型ファイルシステム（ HDFS ）プライマリシステム。一連の DataNode を調整します。
+* セカンダリ NameNode ：メイン NameNode のウォームフェイルオーバー。Hadoop では、 NameNode への昇格は自動的には行われません。セカンダリ NameNode は、必要に応じてプロモート可能な状態にするために、 NameNode から情報を収集します。
+* DataNode ：データの実際の所有者。
+* ResourceManager ：コンピューティングのプライマリシステム（ yarn ）。一連の NodeManager を調整します。
+* NodeManager ：コンピューティング用のリソース。アプリケーションを実行するための実際の場所。
+* JobHistoryServer ：ジョブ履歴に関連するすべての要求の処理を担当します。
+
+
+Hadoop プラグインは、テレグラムの Jolokia プラグインに基づいています。すべての Hadoop コンポーネントから情報を収集するための要件など、 JMX はすべてのコンポーネントで Jolokia 経由で設定および公開する必要があります。
+
+
+
+=== 互換性
+
+構成は Hadoop バージョン 2.9.2 に対して開発されました。
+
+
+
+=== セットアップ中です
+
+
+
+==== Jolokia エージェント JAR
+
+個々のコンポーネントについては、 Jolokia エージェント jar ファイルのバージョンをダウンロードする必要があります。テストされたバージョンはでしたlink:https://jolokia.org/download.html["Jolokia 代理店 1.6.0"]。
+
+以下の手順では、ダウンロードした jar ファイル（ jolokia-jvm-1.6.0-agent.jar ）が「 /opt/hadoop /lib/' 」の下に配置されると想定しています。
+
+
+
+==== NameNode
+
+Jolokia API が公開されるように NameNode を設定するには、 <hadoop home>/etc/hadoop /hadoop -env.sh で次のセットアップを行います。
+
+[listing]
+----
+export HADOOP_NAMENODE_OPTS="$HADOOP_NAMENODE_OPTS -javaagent:/opt/hadoop/lib/jolokia-jvm-1.6.0-agent.jar=port=7800,host=0.0.0.0 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8000 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.password.file=$HADOOP_HOME/conf/jmxremote.password"
+You can choose a different port for JMX (8000 above) and Jolokia (7800). If you have an internal IP to lock Jolokia onto you can replace the "catch all" 0.0.0.0 by your own IP. Notice this IP needs to be accessible from the telegraf plugin. You can use the option '-Dcom.sun.management.jmxremote.authenticate=false' if you don't want to authenticate. Use at your own risk.
+----
+
+
+==== セカンダリ NameNode
+
+セカンダリ NameNode で Jolokia API を公開するように設定するには、 <hadoop home>/etc/hadoop /hadoop -env.sh で次のように設定します。
+
+[listing]
+----
+export HADOOP_SECONDARYNAMENODE_OPTS="$HADOOP_SECONDARYNAMENODE_OPTS -javaagent:/opt/hadoop/lib/jolokia-jvm-1.6.0-agent.jar=port=7802,host=0.0.0.0 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8002 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.password.file=$HADOOP_HOME/conf/jmxremote.password"
+You can choose a different port for JMX (8002 above) and Jolokia (7802). If you have an internal IP to lock Jolokia onto you can replace the "catch all" 0.0.0.0 by your own IP. Notice this IP needs to be accessible from the telegraf plugin. You can use the option '-Dcom.sun.management.jmxremote.authenticate=false' if you don't want to authenticate. Use at your own risk.
+----
+
+
+==== DataNode
+
+Jolokia API が公開されるように DataNode を設定するには、 <hopp_home>/etc/hadoop /hadoop -env.sh に以下のセットアップを行います。
+
+[listing]
+----
+export HADOOP_DATANODE_OPTS="$HADOOP_DATANODE_OPTS -javaagent:/opt/hadoop/lib/jolokia-jvm-1.6.0-agent.jar=port=7801,host=0.0.0.0 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8001 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.password.file=$HADOOP_HOME/conf/jmxremote.password"
+You can choose a different port for JMX (8001 above) and Jolokia (7801). If you have an internal IP to lock Jolokia onto you can replace the "catch all" 0.0.0.0 by your own IP. Notice this IP needs to be accessible from the telegraf plugin. You can use the option '-Dcom.sun.management.jmxremote.authenticate=false' if you don't want to authenticate. Use at your own risk.
+----
+
+
+==== ResourceManager の略
+
+ResourceManager で Jolokia API を公開するように設定するには、 <hadoop HOME>//etc/hadoop /hadoop -env.sh で次の設定を行うことができます。
+
+[listing]
+----
+export YARN_RESOURCEMANAGER_OPTS="$YARN_RESOURCEMANAGER_OPTS -javaagent:/opt/hadoop/lib/jolokia-jvm-1.6.0-agent.jar=port=7803,host=0.0.0.0 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8003 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.password.file=$HADOOP_HOME/conf/jmxremote.password"
+You can choose a different port for JMX (8003 above) and Jolokia (7803). If you have an internal IP to lock Jolokia onto you can replace the "catch all" 0.0.0.0 by your own IP. Notice this IP needs to be accessible from the telegraf plugin. You can use the option '-Dcom.sun.management.jmxremote.authenticate=false' if you don't want to authenticate. Use at your own risk.
+----
+
+
+==== NodeManager
+
+Jolokia API を公開するように NodeManager を設定するには、 <hadoop home>/etc/hadoop /hadoop -env.sh で次の設定を行うことができます。
+
+[listing]
+----
+export YARN_NODEMANAGER_OPTS="$YARN_NODEMANAGER_OPTS -javaagent:/opt/hadoop/lib/jolokia-jvm-1.6.0-agent.jar=port=7804,host=0.0.0.0 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8004 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.password.file=$HADOOP_HOME/conf/jmxremote.password"
+You can choose a different port for JMX (8004 above) and Jolokia (7804). If you have an internal IP to lock Jolokia onto you can replace the "catch all" 0.0.0.0 by your own IP. Notice this IP needs to be accessible from the telegraf plugin. You can use the option '-Dcom.sun.management.jmxremote.authenticate=false' if you don't want to authenticate. Use at your own risk.
+----
+
+
+==== JobHistoryServer
+
+JobHistoryServer で Jolokia API を公開するように設定するには、 <hadoop home>/etc/hadoop /hadoop -env.sh で次の設定を行うことができます。
+
+[listing]
+----
+export HADOOP_JOB_HISTORYSERVER_OPTS="$HADOOP_JOB_HISTORYSERVER_OPTS -javaagent:/opt/hadoop/lib/jolokia-jvm-1.6.0-agent.jar=port=7805,host=0.0.0.0 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8005 -Dcom.sun.management.jmxremote.password.file=$HADOOP_HOME/conf/jmxremote.password"
+You can choose a different port for JMX (8005 above) and Jolokia (7805). If you have an internal IP to lock Jolokia onto you can replace the "catch all" 0.0.0.0 by your own IP. Notice this IP needs to be accessible from the telegraf plugin. You can use the option '-Dcom.sun.management.jmxremote.authenticate=false' if you don't want to authenticate. Use at your own risk.
+----
+
+
+== オブジェクトとカウンタ
+
+次のオブジェクトとそのカウンタが収集されます。
+
+[cols="<.<,<.<,<.<"]
+|===
+| オブジェクト： | 識別子： | 属性： 
+
+
+| Hadoop セカンダリ NameNode | クラスタネームスペースサーバ | ノード名ノード IP コンパイル情報バージョン 
+
+
+| Hadoop ノードマネージャ | クラスタネームスペースサーバ | ノード名ノード IP 
+
+
+| Hadoop ResourceManager | クラスタネームスペースサーバ | ノード名ノード IP 
+
+
+| Hadoop DataNode | クラスタネームスペースサーバ | ノード名ノード IP クラスタ ID バージョン 
+
+
+| Hadoop NameNode | クラスタネームスペースサーバ | ノード名ノード IP トランザクション ID 前回の書き込み時間最後にロードしたあとの編集 HA 状態ファイルシステム状態ブロックプール ID クラスタ ID コンパイル情報別バージョン数 
+
+
+| Hadoop ジョブ履歴サーバ | クラスタネームスペースサーバ | ノード名ノード IP 
+|===
+
+
+== トラブルシューティング
+
+詳細については、ページを参照してlink:concept_requesting_support.html["サポート"]ください。

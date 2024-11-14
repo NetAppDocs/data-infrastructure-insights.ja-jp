@@ -1,0 +1,79 @@
+---
+sidebar: sidebar 
+permalink: concept_feature_tutorials.html 
+summary: Data Infrastructure Insightsには、さまざまなタスクの実行方法を示すチュートリアルが用意されています。 
+keywords: onboarding, getting started, video, tutorial, resolution, dashboard, query, troubleshooting 
+---
+= 機能チュートリアル
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsには、データの迅速かつ簡単な検索、問題のトラブルシューティング、企業環境に関する分析情報の提供を可能にする便利な機能が搭載されています。強力なクエリでデータを簡単に検索し、ダッシュボードでデータを視覚化し、設定したデータしきい値の E メールアラートを送信します。
+
+Data Infrastructure Insightsには、これらの機能を理解し、ビジネス分析戦略を効果的に実装するのに役立つビデオチュートリアルが多数用意されています。Data Infrastructure Insights環境にアクセスできるすべてのユーザが、このチュートリアルを利用できます。
+
+
+
+== はじめに
+
+Data Infrastructure Insightsの仕組みを説明する簡単なチュートリアルをご覧ください。
+
+video::howTo.mp4[]
+
+
+== チェックリストとビデオチュートリアル
+
+Data Infrastructure Insightsサイトに表示される「スタートアップチェックリスト」*には、いくつかの便利なタスクと概念が記載されています。チェックリストの項目を選択すると、その概念に適した[Data Infrastructure Insights ]ページが表示されます。たとえば、_Create a Dashboard_itemをクリックすると、Data Infrastructure Insights * Dashboards *ページが開きます。
+
+image:OnboardingChecklist.png["チュートリアルチェックリストの進行状況"]
+
+ページの上部には、ダッシュボードの作成方法を示すビデオチュートリアルへのリンクがあります。ビデオは、 [got it （取得） ] をクリックするまで何度でも表示できます。このビデオには、この Again_link を表示しないでください。ビデオは、 [ ダッシュボード ] ページを閉じるまで、 [ ダッシュボード ] ページに移動するたびに使用できます。
+
+image:Startup-DashboardWatchVideo.png["ビデオリンクを見る"]
+
+ビデオを少なくとも 1 回見た後、チェックリストの _ ダッシュボード項目の作成 _ がオフになり、チュートリアルが完了したことを示します。次のチュートリアルに進むことができます。
+
+
+NOTE: チュートリアルは好きな順番で表示できます。終了するまで何度でも表示できます。
+
+
+
+=== チェックリストを削除します
+
+チェックリストの下部にある [ この項目を今後表示しない ] リンクをクリックするまで、 [ スタートアップチェックリスト ] がサイトに表示されます。このチェックリストを却下しても、メッセージヘッダーバーから各チュートリアルを却下するまでは、該当するData Infrastructure Insightsの各ページでチュートリアルを使用できます。
+
+
+
+== チュートリアルを表示します
+
+
+
+=== データを照会しています
+
+video::Queries.mp4[]
+
+
+=== ダッシュボードの作成
+
+video::Dashboards.mp4[]
+
+
+=== トラブルシューティング
+
+video::Troubleshooting.mp4[]
+
+
+=== デバイスを解決します
+
+video::AHR_small.mp4[]

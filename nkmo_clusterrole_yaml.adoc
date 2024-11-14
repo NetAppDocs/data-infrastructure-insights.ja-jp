@@ -1,0 +1,94 @@
+---
+sidebar: sidebar 
+permalink: nkmo_clusterrole_yaml.html 
+keywords: NKMO, yaml, 
+summary: NKMOクラスタロールのYAMLファイルの例 
+---
+= NKMOクラスタロールYAMLの例
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:nofooter: 
+:toclevels: 2
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+NetApp Kubernetes Monitoring Operator（NKMO）の_kubectl_コンポーネントは、少なくとも次のKubernetesオブジェクトにアクセスできるように設定する必要があります。エージェント、クラスタロール、クラスタロールバインド、カスタムリソース定義、導入、 ネームスペース'ロール'ロールバインド'シークレット'サービスアカウント' サービスを提供します。以下は最小権限を持つクラスタロールの例です。
+
+[listing]
+----
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: netapp-kubernetes-monitoring-operator-installer-role
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - services
+  - serviceaccounts
+  - secrets
+  - namespaces
+  verbs:
+  - get
+  - list
+  - create
+  - patch
+  - update
+  - delete
+- apiGroups:
+  - rbac.authorization.k8s.io
+  resources:
+  - roles
+  - clusterroles
+  - rolebindings
+  - clusterrolebindings
+  verbs:
+  - get
+  - list
+  - create
+  - patch
+  - update
+  - delete
+  - escalate
+  - bind
+- apiGroups:
+  - apiextensions.k8s.io
+  resources:
+  - customresourcedefinitions
+  verbs:
+  - get
+  - list
+  - create
+  - patch
+  - update
+  - delete
+- apiGroups:
+  - apps
+  resources:
+  - deployments
+  verbs:
+  - get
+  - list
+  - create
+  - patch
+  - update
+  - delete
+- apiGroups:
+  - monitoring.netapp.com
+  resources:
+  - agents
+  verbs:
+  - get
+  - list
+  - create
+  - patch
+  - update
+  - delete
+----

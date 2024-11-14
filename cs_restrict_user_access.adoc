@@ -1,0 +1,205 @@
+---
+sidebar: sidebar 
+permalink: cs_restrict_user_access.html 
+keywords: alert, snapshot,  attack 
+summary: ワークロードセキュリティを使用すると、破壊の疑いがある場合にユーザーアクセスを制限できます 
+---
+= ユーザアクセスをブロックしています
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media
+
+
+[role="lead"]
+攻撃が検出されると、ワークロードセキュリティは、ファイルシステムへのユーザーアクセスをブロックすることで攻撃を停止できます。アクセスは、自動応答ポリシーを使用して自動的にブロックするか、アラートまたはユーザの詳細ページから手動でブロックできます。
+
+ユーザアクセスをブロックする場合は、ブロック期間を定義する必要があります。選択した期間が終了すると、ユーザアクセスが自動的にリストアされます。アクセスブロックは、SMBプロトコルとNFSプロトコルの両方でサポートされています。
+
+SMBおよびホストマシンのIPアドレスに対してユーザが直接ブロックされているため、NFSに対して攻撃がブロックされます。これらのマシンのIPアドレスは、ワークロードセキュリティで監視されているいずれかのStorage Virtual Machine（SVM）へのアクセスがブロックされます。
+
+たとえば、ワークロードセキュリティでは10個のSVMを管理し、自動応答ポリシーでは4つのSVMを設定するとします。攻撃の原因が4つのSVMのいずれかである場合、10個のSVMすべてでユーザのアクセスがブロックされます。元の SVM では引き続き Snapshot が作成されます。
+
+SMB用に設定されたSVMが4つあり、NFS用に設定されたSVMが残り2つのSVMがNFSとSMB両方に対して設定されている場合、4つのSVMのいずれかで攻撃が発生すると、すべてのSVMがブロックされます。
+
+
+
+== ユーザアクセスブロックの前提条件
+
+この機能を使用するには、クラスタレベルのクレデンシャルが必要です。
+
+クラスタ管理者のクレデンシャルを使用している場合、新しい権限は不要です。
+
+ユーザに付与された権限でカスタムユーザ（_csuser_など）を使用している場合は、次の手順に従ってワークロードセキュリティにユーザをブロックする権限を付与します。
+
+クラスタクレデンシャルを持つ csuser の場合、 ONTAP コマンドラインから次の手順を実行します。
+
+....
+security login role create -role csrole -cmddirname "vserver export-policy rule" -access all
+security login role create -role csrole -cmddirname set -access all
+security login role create -role csrole -cmddirname "vserver cifs session" -access all
+security login role create -role csrole -cmddirname "vserver services access-check authentication translate" -access all
+security login role create -role csrole -cmddirname "vserver name-mapping" -access all
+....
+ページの[Permissions]セクションも確認してlink:task_add_collector_svm.html["ONTAP SVM Data Collector の設定"]ください。
+
+
+
+== 機能を有効にする方法
+
+* [Workload Security]で、*[Workload Security]>[Policies]>[Automated Response Policies]*に移動します。[*+ Attack Policy]*を選択します。
+* [_Block User File Access]を選択（チェック）します。
+
+
+
+
+== 自動ユーザアクセスブロックの設定方法
+
+* 新しい攻撃ポリシーを作成するか、既存の攻撃ポリシーを編集します。
+* 攻撃ポリシーを監視する SVM を選択します。
+* [ユーザーファイルアクセスをブロックする]チェックボックスをオンにします。この機能は、このオプションを選択すると有効になります。
+* [Time Period]で、ブロッキングを適用する時間を選択します。
+* 自動ユーザブロッキングをテストするには、を使用して攻撃をシミュレートしますlink:concept_cs_attack_simulator.html["シミュレートされたスクリプト"]。
+
+
+
+
+== システム内にブロックされているユーザーがいるかどうかを確認する方法
+
+* アラートリストページでは、ユーザがブロックされた場合に画面上部のバナーが表示されます。
+* バナーをクリックすると、[Users]ページが表示され、ブロックされているユーザのリストが表示されます。
+* [Users]ページには、「User/IP Access」という名前のカラムがあります。この列には、ユーザブロッキングの現在の状態が表示されます。
+
+
+
+
+== ユーザアクセスを手動で制限および管理します
+
+* アラートの詳細画面またはユーザの詳細画面に移動して、これらの画面からユーザを手動でブロックまたは復元できます。
+
+
+
+
+== ユーザアクセス制限履歴
+
+［アラートの詳細とユーザーの詳細］ページのユーザーパネルで、ユーザーのアクセス制限履歴（時間、アクション（ブロック、ブロック解除）、期間、実行されたアクション）の監査を表示できます。 手動/自動、およびNFSの影響を受けるIP。
+
+
+
+== 機能を無効にする方法
+
+この機能はいつでも無効にできます。システム内に制限のあるユーザがいる場合は、アクセスを先にリストアする必要があります。
+
+* [Workload Security]で、*[Workload Security]>[Policies]>[Automated Response Policies]*に移動します。[*+ Attack Policy]*を選択します。
+* [_Block User File Access]の選択を解除します（オフにします）。
+
+
+この機能はすべてのページで非表示になります。
+
+
+
+== NFSのIPを手動でリストア
+
+ワークロードセキュリティトライアルの期限が切れた場合、またはエージェント/コレクタがダウンした場合に、ONTAP からIPを手動で復元するには、次の手順を実行します。
+
+. SVM のすべてのエクスポートポリシーをリストします。
++
+....
+contrail-qa-fas8020::> export-policy rule show -vserver <svm name>
+             Policy          Rule    Access   Client                RO
+Vserver      Name            Index   Protocol Match                 Rule
+------------ --------------- ------  -------- --------------------- ---------
+svm0        default         1       nfs3,    cloudsecure_rule,     never
+                                    nfs4,    10.11.12.13
+                                    cifs
+svm1        default         4       cifs,    0.0.0.0/0             any
+                                    nfs
+svm2        test            1       nfs3,    cloudsecure_rule,     never
+                                    nfs4,    10.11.12.13
+                                    cifs
+svm3        test            3       cifs,    0.0.0.0/0             any
+                                    nfs,
+                                    flexcache
+4 entries were displayed.
+....
+. 「cloudsecure_rule」をクライアント一致として持つSVMのすべてのポリシーのルールを削除するには、対応するRuleIndexを指定します。通常、ワークロードのセキュリティルールは1になります。
++
+ contrail-qa-fas8020::*> export-policy rule delete -vserver <svm name> -policyname * -ruleindex 1
+. ワークロードセキュリティルールが削除されていることを確認します（確認のためのオプションの手順）。
++
+....
+contrail-qa-fas8020::*> export-policy rule show -vserver <svm name>
+             Policy          Rule    Access   Client                RO
+Vserver      Name            Index   Protocol Match                 Rule
+------------ --------------- ------  -------- --------------------- ---------
+svm0         default         4       cifs,    0.0.0.0/0             any
+                                    nfs
+svm2         test            3       cifs,    0.0.0.0/0             any
+                                    nfs,
+                                    flexcache
+2 entries were displayed.
+....
+
+
+
+
+== SMBのユーザを手動でリストア
+
+ワークロードセキュリティトライアルの期限が切れた場合、またはエージェント/コレクタがダウンした場合に、ONTAP からユーザーを手動で復元するには、次の手順を実行します。
+
+ワークロードセキュリティでブロックされたユーザーのリストは、ユーザーリストページから取得できます。
+
+. cluster_admin_credentialsを使用してONTAP クラスタ（ユーザのブロックを解除する場所）にログインします。（Amazon FSXの場合、FSXクレデンシャルを使用してログインします）。
+. 次のコマンドを実行して、すべてのSVMのSMBワークロードセキュリティでブロックされているすべてのユーザを表示します。
++
+ vserver name-mapping show -direction win-unix -replacement " "
++
+....
+Vserver:   <vservername>
+Direction: win-unix
+Position Hostname         IP Address/Mask
+-------- ---------------- ----------------
+1       -                 -                   Pattern: CSLAB\\US040
+                                         Replacement:
+2       -                 -                   Pattern: CSLAB\\US030
+                                         Replacement:
+2 entries were displayed.
+....
+
+
+上記の出力では、2人のユーザーがドメインCSLABでブロックされました（US030、US040）。
+
+. 上記の出力から位置を特定したら、次のコマンドを実行してユーザーのブロックを解除します。
++
+ vserver name-mapping delete -direction win-unix -position <position>
+. コマンドを実行して、ユーザがブロックされていないことを確認します。
++
+ vserver name-mapping show -direction win-unix -replacement " "
+
+
+以前にブロックしたユーザに対しては、エントリは表示されません。
+
+
+
+== トラブルシューティング
+
+|===
+| 問題 | 試してみてください 
+
+
+| 一部のユーザーは制限されていませんが、攻撃があります。 | 1.SVMのData CollectorとAgentがin_running_stateであることを確認します。Data CollectorとAgentが停止している場合、ワークロードセキュリティはコマンドを送信できません。2.これは、ユーザが以前に使用されていない新しいIPを持つマシンからストレージにアクセスした可能性があるためです。制限は、ユーザがストレージにアクセスする際に使用するホストの IP アドレスを介して行われます。UI （ Alert Details > Access Limitation History for this User > Affected IP ）で、制限されている IP アドレスのリストを確認します。IP が制限された IP と異なるホストからストレージにアクセスしている場合、ユーザは制限されていない IP を介してストレージにアクセスできます。IP が制限されているホストからアクセスしようとすると、ストレージにアクセスできなくなります。 
+
+
+| [Restrict Access] を手動でクリックすると、「このユーザの IP アドレスはすでに制限されています」というメッセージが表示されます。 | 制限する IP はすでに別のユーザから制限されています。 
+
+
+| ポリシーを変更できませんでした。理由：このコマンドは許可されていません。 | csuserを使用している場合は、上記のようにユーザに権限が与えられているかどうかを確認します。 
+
+
+| NFSのユーザ（IPアドレス）ブロックが機能しますが、SMB / CIFSの場合、次のエラーメッセージが表示されます。「SIDからドメイン名への変換に失敗しました。理由タイムアウト：ソケットが確立されていません」 | これは、is_csuser_doesにsshを実行する権限がありません。（クラスタレベルで接続してから、ユーザがsshを実行できることを確認してください）。_csuser_roleには、これらの権限が必要です。 https://docs.netapp.com/us-en/cloudinsights/cs_restrict_user_access.html#prerequisites-for-user-access-blocking[]csuser_に対してクラスタのクレデンシャルを使用する場合は、ONTAPコマンドラインから次の操作を実行します。security login role create -role csrole -cmddirname set -access all security login role create -role csrole -cmddirname "vserver cifs session"-access all security login role create -role csrole csrole csrole -cmddirname " authentication role " vserver access-cmddirname " vserver services -mapping role ONTAP " 
+
+
+| エラーメッセージ_SID変換に失敗しました。__Reason：255：Error：command failed：not authorized for that commandエラー："access-check" is not a recognized command_、when a user should have been blocked. | これは、_csuser_に正しい権限がない場合に発生する可能性があります。詳細については、を参照してください link:cs_restrict_user_access.html#prerequisites-for-user-access-blocking["ユーザアクセスブロックの前提条件"] 。権限を適用したら、ONTAPデータコレクタとユーザディレクトリデータコレクタを再起動することをお勧めします。必要な権限コマンドを次に示します。---- security login role create -role csrole -cmddirname "vserver export-policy rule"-access all security login role create -role csrole -cmddirname set -access all security login role create -role csrole -cmddirname "vserver cifs session"-access all security login role create -role csrole csrole -cmddirname "vserver services access-check authentication translate"-access role create -role csrole -cmddirname "vserver name-mapping"-access all ---- 
+|===

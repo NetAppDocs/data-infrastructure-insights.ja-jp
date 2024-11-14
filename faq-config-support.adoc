@@ -1,0 +1,73 @@
+---
+sidebar: sidebar 
+permalink: faq-config-support.html 
+keywords: FAQ, Frequently asked questions, questions, configuration, 
+summary:  
+---
+= 構成とサポートされるデバイス
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+このFAQでは、Data Infrastructure Insightsの構成とサポート対象デバイスに関する一般的な質問に回答します。
+
+
+
+== Data Infrastructure Insightsによって環境に変更が加えられているか？
+
+いいえ。Data Infrastructure Insightsは、環境に関する情報を収集する読み取り専用ツールです。Data Infrastructure Insightsは、資産や構成に一切変更を加えることはありません。
+
+
+
+== Data Infrastructure Insightsでデバイスに必要な権限レベルのアクセス権を教えてください。
+
+デバイスがサポートしている場合、ほとんどの場合、読み取り専用アクセスが必要です。読み取り専用アクセスを許可しないソリューションもあるため、適切な昇格されたアクセス許可が必要になります。
+
+
+
+== Data Infrastructure Insightsはどのくらいの頻度で情報を収集しますか？
+
+Data Infrastructure Insightsは通常、パフォーマンスデータを5分ごとに収集し、論理構成と物理構成の検出を0.5時間ごとに実行します。Data Infrastructure Insightsでは、推奨されるベストプラクティスと拡張性に従ってデフォルトのポーリング間隔が設定されますが、ユーザはこれらの間隔を完全に制御できます。
+
+
+
+== Data Infrastructure Insightsが環境に与える影響
+
+Data Infrastructure Insightsのエージェントレス、アウトオブバンド、パッシブIP通信は、セットアップ、メンテナンス、データセンターエコシステムへの影響を最小限に抑えます。Data Infrastructure Insightsのパフォーマンス開発チームは、パフォーマンス自体の監視アクティビティにおけるデータセンターのパフォーマンスへの影響を最小限に抑えるために、優れた対策を講じています。通常の運用環境では影響はごくわずかで、利用率の高いテクノロジプラットフォームやパフォーマンスの低いテクノロジプラットフォームで、リラックスした状態や強化が可能です。詳細については、『Data Infrastructure Insights Installation Guide』を参照してください。
+
+
+
+== Data Infrastructure Insightsにすべてのホスト/ VMを表示するにはどうすればよいですか？
+
+Data Infrastructure Insightsは、ウィジェットやクエリリスト機能を補完する機能を備えており、データセンターアセットのインベントリ形式のリストを提供できます。スピンドルとその間に配置されたさまざまな構成要素を仮想マシンで一覧表示することができ、クエリ、ウィジェット、ダッシュボード、データウェアハウスレポートにアクセスできます。 RESTful API からアクセスできます。
+
+
+
+== Data Infrastructure Insightsは、関連するハイパーバイザー以外のホスト（物理サーバなど）に対して同じタイプのサポートを提供しますか。
+
+VMware などのハイパーバイザーは、 ESXi ホストとその仮想マシン（ VM ）に関する詳細情報を提供します。物理サーバについては、Data Infrastructure InsightsがホストHBAまでの指標を収集します。Data Infrastructure Insightsでは、特許出願中のテクノロジを使用して物理サーバを検出する独自の方法を採用しています。ストレージやスイッチが検出されると、物理サーバのホスト名がファブリックエイリアス情報に含まれます。Data Infrastructure Insightsは、これらのホスト名を選択してDNSで一致させ、ホストをData Infrastructure Insightsに自動的に取り込みます。この方法により、手動での入力更新やツールインベントリのメンテナンスが必要なくなります。
+
+
+
+== Data Infrastructure Insightsは、異機種混在環境全体で同じデバイスのメトリック深度（パリティ）を提供しますか？
+
+サードパーティのプラットフォームとベンダーのテクノロジ全体で、標準化、共通性、および命名方法にはさまざまなレベルがあります。Data Infrastructure Insightsは、容量とパフォーマンスの情報を一貫したフレームワークに標準化しようとします。容量やパフォーマンスの一部の指標は、 IOPS 、レイテンシ、物理容量など、デバイスのカウンタからネイティブに提供されます。カウンタが指定されていない場合、Data Infrastructure Insightsは値を要約しようとします（たとえば、基盤となるボリュームのIOPSや容量の合計など）。どちらも使用できない場合、Data Infrastructure Insightsはさまざまな計算アルゴリズムを使用して指標値を取得しようとします。Data Infrastructure Insightsは、一般的なSNMP統合機能を提供し、現在Data Infrastructure Insightsで収集されていない追加の指標を組み込むことができます。
+
+
+
+== Data Infrastructure Insightsはファイバチャネルスイッチをサポートしていますか。
+
+はい。Data Infrastructure Insightsは、ストレージ資産からデータを収集するだけでなく、環境内のCisco、Brocade、QLogicスイッチからインベントリとパフォーマンスのデータも取得します。
+
+
+
+== インフラ全体のトポロジビューは使用できますか。Data Infrastructure Insightsは「エンドツーエンドの可視化」を示していますか？
+
+はい。Data Infrastructure Insightsは、論理構成と物理構成を動的に検出してマッピングし、コンピューティング、ファブリック、仮想化、バックエンドストレージのエンドツーエンドのトポロジビューをインタラクティブに表示します。トポロジアイコンを使用すると、影響を受けるリソースへのクイック起動ナビゲーションが可能になり、共有ストレージ環境でのワークロードや違反の特定に役立ちます。

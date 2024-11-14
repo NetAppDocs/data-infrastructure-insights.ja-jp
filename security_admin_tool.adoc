@@ -1,0 +1,262 @@
+---
+sidebar: sidebar 
+permalink: security_admin_tool.html 
+summary: Data Infrastructure Insightsは、リリースのライフサイクル全体を通じてセキュリティのベストプラクティスに準拠しています。 
+keywords: security, risk, protection 
+---
+= securityadminツール
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsには、強化されたセキュリティで環境を運用できるセキュリティ機能が含まれています。この機能には、暗号化、パスワードハッシュの改善、内部ユーザパスワードの変更、およびパスワードの暗号化と復号化を行うキーペアの変更が含まれます。
+
+機密データを保護するために、インストールまたはアップグレードの完了後にデフォルトキーと_Acquisition_userパスワードを変更することを推奨します。
+
+データソース暗号化されたパスワードはData Infrastructure Insightsに保存されます。Data Infrastructure Insightsでは、ユーザがデータコレクタの設定ページでパスワードを入力すると、公開鍵を使用してパスワードが暗号化されます。Data Infrastructure Insightsには、データコレクタのパスワードの復号化に必要な秘密鍵はありません。データコレクタのパスワードの復号化に必要なデータコレクタの秘密鍵があるのは、Acquisition Unit（AUS）だけです。
+
+
+
+== アップグレードとインストールに関する考慮事項
+
+Insightシステムにデフォルト以外のセキュリティ設定が含まれている場合（パスワードのキーが変更されている場合など）は、セキュリティ設定をバックアップする必要があります。新しいソフトウェアをインストールするか、ソフトウェアをアップグレードする場合によっては、システムをデフォルトのセキュリティ設定に戻します。システムがデフォルトの設定に戻ったら、システムを正常に動作させるために、デフォルト以外の設定をリストアする必要があります。
+
+
+
+== Acquisition Unit上でセキュリティを管理する
+
+SecurityAdminツールを使用すると、Data Infrastructure Insightsのセキュリティオプションを管理できます。このツールはAcquisition Unitシステムで実行されます。セキュリティの管理には、キーとパスワードの管理、作成したセキュリティ設定の保存とリストア、またはデフォルト設定への設定のリストアが含まれます。
+
+
+
+== 開始する前に
+
+* Acquisition Unitソフトウェア（SecurityAdminツールを含む）をインストールするには、AUシステムに対する管理者権限が必要です。
+* その後SecurityAdminツールにアクセスする必要がある管理者以外のユーザがいる場合は、そのユーザを_cisys_groupに追加する必要があります。_cisys_groupは、AUのインストール中に作成されます。
+
+
+AUのインストール後、SecurityAdminツールはAcquisition Unitシステムの次のいずれかの場所にあります。
+
+....
+Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat
+Linux - /bin/oci-securityadmin.sh
+....
+
+
+== SecurityAdmin Toolを使用する
+
+SecurityAdminツールを対話型モード（-i）で起動します。
+
+
+NOTE: SecurityAdminツールは対話モードで使用することをお勧めします。これは、コマンドラインでシークレットが渡されないようにするためです。シークレットはログに記録されます。
+
+次のオプションが表示されます。
+
+image:SecurityAdminMenuChoices.png["SecurityAdmin Toolのオプション（Linux）"]
+
+. * バックアップ *
++
+すべてのパスワードとキーが格納されているバックアップのzipファイルを作成し、そのファイルをユーザが指定した場所、または次のデフォルトの場所に置きます。
+
++
+....
+Windows - C:\Program Files\SANscreen\backup\vault
+Linux - /var/log/netapp/oci/backup/vault
+....
++
+ヴォールトバックアップには機密情報が含まれているため、安全に保管することを推奨します。
+
+. * 復元 *
++
+作成したバックアップのzipファイルをリストアします。リストアすると、すべてのパスワードとキーがバックアップ作成時の既存の値に戻ります。
+
++
+復元を使用すると、次の手順を使用して、複数のサーバーのパスワードとキーを同期できます。1) AUの暗号化キーを変更します。2）ヴォールトのバックアップを作成します。3）バックアップを各AUSにリストアします。
+
+. *外部キー取得スクリプトの登録/更新*
++
+外部スクリプトを使用して、デバイスパスワードの暗号化または復号化に使用するAU暗号化キーを登録または変更します。
+
++
+暗号化キーを変更した場合、アップグレードまたはインストール後にリストアできるように、新しいセキュリティ設定をバックアップしておく必要があります。
+
++
+注:このオプションはLinuxでのみ使用できます。
+
++
+SecurityAdminツールで独自のキー取得スクリプトを使用する場合は、次の点に注意してください。
+
++
+** 現在サポートされているアルゴリズムは、2048ビット以上のRSAです。
+** スクリプトは、秘密鍵と公開鍵をプレーンテキストで返す必要があります。スクリプトは、暗号化された秘密鍵と公開鍵を返さないでください。
+** スクリプトは、生のエンコードされた内容を返す必要があります（PEM形式のみ）。
+** 外部スクリプトには_execute_permissionsが必要です。
+
+
+. *暗号化キーのローテーション*
++
+暗号化キーをローテーションします（現在のキーの登録を解除し、新しいキーを登録します）。外部キー管理システムのキーを使用するには、公開鍵IDと秘密鍵IDを指定する必要があります。
+
+
+
+. *デフォルトキーにリセット*
++
+acquisitionユーザのパスワードとacquisitionユーザの暗号化キーをデフォルト値にリセットします。デフォルト値はインストール時に指定したパスワードと暗号化キーです。
+
+. *信頼ストアのパスワードの変更*
++
+信頼ストアのパスワードを変更します。
+
+. *キーストアパスワードの変更*
++
+キーストアのパスワードを変更します。
+
+. *コレクタパスワードの暗号化*
++
+暗号化データコレクタのパスワード。
+
+. * 終了 *
++
+SecurityAdminツールを終了します。
+
+
+
+設定するオプションを選択し、画面の指示に従います。
+
+
+
+== ツールを実行するユーザを指定します
+
+管理されたセキュリティ意識の高い環境にいる場合は、_cisys_groupを持っていなくても、特定のユーザーにSecurityAdminツールを実行してもらいたい場合があります。
+
+これを行うには、AUソフトウェアを手動でインストールし、アクセスするユーザ/グループを指定します。
+
+* APIを使用して、CIインストーラをAUシステムにダウンロードして解凍します。
++
+** 1回限りの認証トークンが必要になります。API Swaggerのドキュメント（_Admin > API Access_および_API Documentation_linkを選択）を参照し、_get /au/oneTimeToken_APIのセクションを参照してください。
+** トークンを取得したら、_get /au/installers/｛platform｝/｛version｝_apiを使用してインストーラファイルをダウンロードします。プラットフォーム（LinuxまたはWindows）とインストーラのバージョンを指定する必要があります。
+
+
+* ダウンロードしたインストーラファイルをAUシステムにコピーして解凍します。
+* ファイルが格納されているフォルダに移動し、ユーザとグループを指定してrootとしてインストーラを実行します。
++
+ ./cloudinsights-install.sh <User> <Group>
+
+
+指定したユーザまたはグループが存在しない場合は、作成されます。ユーザーはSecurityAdminツールにアクセスできます。
+
+
+
+== プロキシを更新または削除しています
+
+SecurityAdminツールでAcquisition Unitのプロキシ情報を設定または削除するには、次のように_- pr_パラメータを指定してツールを実行します。
+
+[listing]
+----
+[root@ci-eng-linau bin]# ./securityadmin -pr
+usage: securityadmin -pr -ap <arg> | -h | -rp | -upr <arg>
+
+The purpose of this tool is to enable reconfiguration of security aspects
+of the Acquisition Unit such as encryption keys, and proxy configuration,
+etc. For more information about this tool, please check the Data Infrastructure Insights
+Documentation.
+
+-ap,--add-proxy <arg>       add a proxy server.  Arguments: ip=ip
+                             port=port user=user password=password
+                             domain=domain
+                             (Note: Always use double quote(") or single
+                             quote(') around user and password to escape
+                             any special characters, e.g., <, >, ~, `, ^,
+                             !
+                             For example: user="test" password="t'!<@1"
+                             Note: domain is required if the proxy auth
+                             scheme is NTLM.)
+-h,--help
+-rp,--remove-proxy          remove proxy server
+-upr,--update-proxy <arg>   update a proxy.  Arguments: ip=ip port=port
+                             user=user password=password domain=domain
+                             (Note: Always use double quote(") or single
+                             quote(') around user and password to escape
+                             any special characters, e.g., <, >, ~, `, ^,
+                             !
+                             For example: user="test" password="t'!<@1"
+                             Note: domain is required if the proxy auth
+                             scheme is NTLM.)
+----
+たとえば、プロキシを削除するには、次のコマンドを実行します。
+
+ [root@ci-eng-linau bin]# ./securityadmin -pr -rp
+コマンドの実行後にAcquisition Unitを再起動する必要があります。
+
+プロキシを更新するには、コマンドを使用します
+
+ ./securityadmin -pr -upr <arg>
+
+
+== 外部キーの取得
+
+UNIXシェルスクリプトを指定すると、Acquisition Unitによって実行され、キー管理システムから*秘密鍵*と*公開鍵*を取得できます。
+
+キーを取得するために、Data Infrastructure Insightsはスクリプトを実行し、_key id_と_key type_の2つのパラメータを渡します。キーID _は、キー管理システム内のキーを識別するために使用できます。_Key type _には、「public」または「private」を指定します。キータイプが「public」の場合、スクリプトは公開鍵を返す必要があります。キータイプが「private」の場合は、秘密鍵を返す必要があります。
+
+Acquisition Unitにキーを戻すには、標準出力にキーを出力する必要があります。スクリプトは、標準出力にキーをprint_only_theで出力する必要があります。他のテキストは標準出力に出力しないでください。要求されたキーが標準出力に出力されると、スクリプトは終了コード0で終了する必要があります。その他の戻りコードはエラーと見なされます。
+
+スクリプトはSecurityAdminツールを使用してAcquisition Unitに登録する必要があります。このツールでは、Acquisition Unitとともにスクリプトが実行されます。スクリプトには、rootおよび"cisys"ユーザに対する_read_and_execute_permissionが必要です。登録後にシェルスクリプトを変更した場合は、変更したシェルスクリプトをAcquisition Unitに再登録する必要があります。
+
+|===
+
+
+| 入力パラメータ:キーID | 顧客のキー管理システムでキーを識別するために使用するキー識別子。 
+
+
+| 入力パラメータ:キータイプ | パブリックまたはプライベート。 
+
+
+| 出力 | 要求されたキーを標準出力に出力する必要があります。現在、2048ビットRSAキーがサポートされています。キーは次の形式でエンコードおよび印刷する必要があります。秘密鍵形式- PEM、DERエンコードPKCS8 PrivateKeyInfo RFC 5958公開鍵形式- PEM、DERエンコードX.509 SubjectPublicKeyInfo RFC 5280 
+
+
+| 終了コード | 成功のためのゼロの終了コード。他のすべての終了値は失敗と見なされます。 
+
+
+| スクリプト権限 | スクリプトには、rootおよび「cisys」ユーザに対する読み取りおよび実行権限が必要です。 
+
+
+| ログ | スクリプトの実行が記録されます。ログは-/var/log/cloudinsights/securityadmin/ NetApp securityadmin.log /var/log/cloudinsights/acq/ NetApp acq.logにあります。 
+|===
+
+
+== APIで使用するパスワードの暗号化
+
+オプション8では、パスワードを暗号化し、APIを介してデータコレクタに渡すことができます。
+
+SecurityAdminツールを対話型モードで起動し、オプション8:_Encrypt Password_を選択します。
+
+ securityadmin.sh -i
+暗号化するパスワードの入力を求められます。入力した文字は画面に表示されません。プロンプトが表示されたら、パスワードを再入力します。
+
+または、スクリプトでコマンドを使用する場合は、コマンドラインで「-enc」パラメータを指定して_securityadmin.sh_を使用し、暗号化されていないパスワードを渡します。
+
+ securityadmin -enc mypassword
+image:SecurityAdmin_Encrypt_Key_API_CLI_Example.png["CLIの例"]
+
+暗号化されたパスワードが画面に表示されます。先頭または末尾の記号を含む文字列全体をコピーします。
+
+image:SecurityAdmin_Encrypt_Key_1.png["インタラクティブモード暗号化パスワード、幅= 640"]
+
+暗号化されたパスワードをデータコレクタに送信するには、データ収集APIを使用します。このAPIのSwaggerは* Admin > API Access *にあり、[API Documentation]リンクをクリックします。「データ収集」APIタイプを選択します。_data_collection.data_collector_headingで、この例の__/collector/datasources_POST APIを選択します。
+
+image:SecurityAdmin_Encrypt_Key_Swagger_API.png["データ収集用API"]
+
+_preEncrypted_optionを_True_に設定した場合、APIコマンドを通過するパスワードは*すでに暗号化されている*として扱われます。APIはパスワードを再暗号化しません。APIを構築するときは、以前に暗号化されたパスワードを適切な場所に貼り付けるだけです。
+
+image:SecurityAdmin_Encrypt_Key_API_Example.png["APIの例、width=600"]

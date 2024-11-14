@@ -1,0 +1,102 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_unisphere_rest.html 
+keywords: data collector, Unisphere, EMC 
+summary: Dell EMC Unisphere RESTデータコレクタの構成 
+---
+= Dell EMC Unisphere RESTデータコレクタの構成
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+このデータコレクタは、Dell EMC Unisphere for PowerMax/VMAX 3管理システムからインベントリデータとパフォーマンスデータを取得します。
+
+Dell/EMCでは、Unisphere 10.0までボリュームごとの統計情報を導入していませんでした。このデータコレクタは9.2.0以降をサポートしていますが、ボリューム統計情報が存在しないため、収集できません。
+
+1つのUnisphere for VMAX/PowerMaxインスタンスが1つ以上のSymmetrix VMAX 3以降のストレージアレイを管理している可能性があります。このコレクタは、そのUnisphereインスタンスに対して「ローカル」であるすべてのストレージアレイの検出をデフォルトで試行します。Unisphereインスタンスに「リモート」アレイ（SRDFレプリケーションを介して接続されているアレイなど）が表示される場合、これらのアレイは無視されます。検出するには、そのサイト内のいずれかのUnisphereインスタンスでローカルと認識されているUnisphereコレクタをData Infrastructure Insightsに追加で作成する必要があります。
+
+データコレクタを設定するには、UnisphereサーバのIPアドレス/FQDN、ポート8443へのTCP接続、およびユーザ名とパスワードが必要です。
+
+
+
+== 要件
+
+* UnisphereサーバのIPアドレス/完全修飾ドメイン名
+* ユーザ名とパスワード
+* ポート8443
+
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| UnisphereサーバのIPアドレス | UnisphereサーバのIPアドレスまたは完全修飾ドメイン名 
+
+
+| Unisphereポート | デフォルトは8443です 
+
+
+| ユーザー名 | Unisphereサーバのユーザー名 
+
+
+| パスワード | Unisphereサーバのパスワード 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| インベントリポーリング間隔（分） | デフォルトは40分です。 
+
+
+| パフォーマンスポーリング間隔（秒） | パフォーマンスのポーリング間隔 
+
+
+| 「除外」または「含める」を選択してリストを指定します | VM を含めるか除外するかを指定します 
+
+
+| インベントリフィルタデバイスリスト | フィルタリングするVMのリスト（カンマ区切り、または値にカンマが使用されている場合はセミコロンで区切った） 
+
+
+| Unisphereパフォーマンスポーリング間隔（秒） | デフォルトは300秒です 
+|===
+
+
+== トラブルシューティング
+
+このデータコレクタで問題が発生した場合の対処方法を次に示します。
+
+
+
+=== インベントリ
+
+[cols="2*"]
+|===
+| 問題 | 次の操作を実行します 
+
+
+| エラー：ユーザ認証に失敗しました。 | このデバイスのクレデンシャルが正しいことを確認してください。 
+
+
+| インベントリの最近のステータス：予期しないデータを取得しました-アレイが0個のボリュームを報告しました | 通常は認可（認証ではない）問題を示します。クレデンシャルが正しいこと、およびユーザ名にすべてのボリュームをリストして属性を表示できる権限があることを確認してください。 
+|===
+詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

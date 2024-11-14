@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: task_dc_hds_hcp.html 
+keywords: data collector, Hitachi HDS, HCP 
+summary: HDSデータコレクタの設定 
+---
+= Hitachi HCP データコレクタ
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+このデータコレクタは、 HCP 管理 API を使用して、 Hitachi Content Platform （ HCP ）をサポートします。
+
+
+NOTE: Hitachi Content Platformは'管理対象ユニットに対して異なるraw TBのメーターを使用しています未フォーマットのHCP容量40TBにつき1として課金されますlink:concept_subscribing_to_cloud_insights.html#pricing["管理ユニット (MU)"]。
+
+
+
+== 用語
+
+Data Infrastructure Insightsは、Hitachi HCPデータコレクタから次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+[cols="2*"]
+|===
+| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+
+
+| HCP クラスタです | ストレージ 
+
+
+| テナント | ストレージプール 
+
+
+|  | ネームスペース 
+
+
+| 内部ボリューム | ノード 
+|===
+注：これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているわけではありません。
+
+
+
+== インベントリの要件
+
+インベントリデータを収集するには、次の情報が必要です。
+
+* HCPサーバのIPアドレス
+* HCP ソフトウェアおよびピア特権の読み取り専用ユーザ名とパスワード
+
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| HCPホスト | HCP ホストの IP アドレスまたは完全修飾ドメイン名 
+
+
+| HCPポート | デフォルトは9090です 
+
+
+| HCPユーザーID | HCP ホストのユーザ名。 
+
+
+| HCPパスワード | HCP ホストに使用するパスワード。 
+
+
+| HCP 認証タイプ | HCP_LOCAL または active_directory を選択してください 
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| フィールド | 製品説明 
+
+
+| インベントリポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは60です。 
+
+
+| パフォーマンスポーリング間隔（秒） | パフォーマンスのポーリング間隔デフォルトは900です。 
+|===
+詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

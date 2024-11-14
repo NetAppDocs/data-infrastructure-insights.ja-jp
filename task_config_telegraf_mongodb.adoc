@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_mongodb.html 
+keywords: telegraf, installation, install, MongoDB 
+summary: MongoDB データコレクタの設定 
+---
+= MongoDB データコレクタ
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsは、このデータコレクタを使用してMongoDBから指標を収集します。
+
+
+
+== インストール
+
+. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。[MongoDB]を選択します。
++
+Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+
+. コレクション用エージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[_Show Instructions_]をクリックして手順を展開しlink:task_config_telegraf_agent.html["エージェントのインストール"]ます。
+. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
+. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+
+
+image:MongoDBDCConfigLinux.png["MongoDB の設定"]
+
+
+
+== セットアップ
+
+詳細については、を参照してlink:https://docs.mongodb.com/["MongoDB のドキュメント"]ください。
+
+
+
+== オブジェクトとカウンタ
+
+次のオブジェクトとそのカウンタが収集されます。
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+
+
+| MongoDB | ネームスペースホスト名 |  |  
+
+
+| MongoDB データベース | ネームスペースホスト名データベース名 |  |  
+|===
+
+
+== トラブルシューティング
+
+情報はページから見つけることができlink:concept_requesting_support.html["サポート"]ます。

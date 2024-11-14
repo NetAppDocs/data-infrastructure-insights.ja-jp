@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: reporting_overview.html 
+summary: Data Infrastructure Insightsを使用して、事前定義されたカスタムレポートを作成できます。 
+keywords: reporting, cognos, data warehouse, dwh 
+---
+= Data Infrastructure Insightsレポートの概要
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Data Infrastructure Insightsのレポート機能は、事前定義済みのレポートを表示したり、カスタムレポートを作成したりできるビジネスインテリジェンスツールです。
+
+
+NOTE: レポート機能はData Infrastructure Insightsで使用できlink:concept_subscribing_to_cloud_insights.html["Premium Edition の場合"]ます。
+
+Data Infrastructure Insightsのレポート作成機能では、次のタスクを実行できます。
+
+* 事前定義済みのレポートを実行します
+* カスタムレポートを作成する
+* レポートの形式と配信方法をカスタマイズする
+* レポートが自動的に実行されるようにスケジュールを設定する
+* レポートを E メールで送信
+* データのしきい値を色で表します
+
+
+Data Infrastructure Insights Reportingでは、チャージバック、消費分析、予測などの領域に関するカスタムレポートを生成でき、次のような質問に対する回答に役立ちます。
+
+* 所有しているインベントリ
+* インベントリの場所
+* アセットの使用者
+* ビジネスユニットに割り当てられているストレージのチャージバック
+* ストレージ容量の追加購入が必要になるまでの期間
+* ビジネスユニットが適切なストレージ階層に配置されているか。
+* 1 カ月、 1 四半期、 1 年のストレージ割り当ての変化
+
+
+
+
+== データインフラの分析情報レポートへのアクセス
+
+Data Infrastructure Insights Reportingにアクセスするには、メニューの*[レポート]*リンクをクリックします。
+
+Reporting インターフェイスに移動します。Data Infrastructure Insightsでは、レポートエンジンにIBM Cognos Analyticsを使用しています。
+
+
+
+== ETLとは
+
+Reporting では、「 Data Warehouse 」と「 ETL 」という用語が使用されます。ETL は、「抽出、変換、読み込み」の略です。ETLプロセスでは、Data Infrastructure Insightsで収集されたデータが取得され、レポートで使用する形式に変換されます。「 Data Warehouse 」は、レポートに使用できる収集データを表します。
+
+ETL プロセスは、次の個別プロセスで構成されます。
+
+* * Extract *：Data Infrastructure Insightsからデータを取得
+* *変換*：Data Infrastructure Insightsから抽出されるデータにビジネスロジックのルールや機能を適用します。
+* * ロード *: 変換されたデータをデータウェアハウスに保存して、レポート作成に使用します。
+

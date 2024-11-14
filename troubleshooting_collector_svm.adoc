@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: troubleshooting_collector_svm.html 
+keywords: data collector, ONTAP, NetApp, SVM, cloud ontap, firewall 
+summary: ワークロードセキュリティデータコレクタのトラブルシューティング 
+---
+= ONTAP SVM Data Collectorのトラブルシューティング
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ワークロードセキュリティでは、データコレクタを使用して、デバイスからファイルとユーザのアクセスデータを収集します。ここでは、このコレクタの問題をトラブルシューティングするためのヒントを紹介します。
+
+このコレクタの設定手順については、ページを参照してくださいlink:task_add_collector_svm.html["SVMコレクタの設定"]。
+
+
+
+== トラブルシューティング
+
+既知の問題とその解決策を次の表に示します。
+
+エラーの場合は、 _Status_column で _more detail_ をクリックしてエラーの詳細を確認します。
+
+image:CS_Data_Collector_Error.png["Workload Security Collector Error More Detailリンク"]
+
+[cols="2*"]
+|===
+| 問題 | 解決策： 
+
+
+| Data Collector はしばらくの間実行され、ランダムな時刻の後に停止します。 "Error message: connector is in error state" というエラーメッセージが表示されます。サービス名： audit 。エラーの理由：外部 FPolicy サーバが過負荷状態です。」 | ONTAP からのイベントレートは、 [ エージェント ] ボックスで処理できるイベントレートよりもはるかに高くなっています。そのため、接続が終了しました。切断が発生したときに、 CloudSecure でピークトラフィックを確認します。これは、 * CloudSecure > Activity Forensics > All Activity * ページで確認できます。集約されたトラフィックのピークが [ エージェント ] ボックスで処理できるトラフィックよりも大きい場合は、 [ エージェント ] ボックスでのコレクタ展開のサイズ設定方法に関する [ イベントレートチェッカー ] ページを参照してください。2021 年 3 月 4 日より前に Agent ボックスに Agent がインストールされた場合は、 Agent ボックスで次のコマンドを実行します。 echo 'net.core.rmem_max=8388608'>> /etc/sysctl.conf echo 'net.ipv4_rmem=4096 2097152 8388608'>> /etc/sysctl.conf コレクタ UI のサイズ変更後に再起動してください。 
+
+
+| コレクタから「 No local IP address found on the Connector that can reach the data interfaces of the SVM 」というエラーメッセージが報告されます。 | その理由としては、 ONTAP 側のネットワーク問題が考えられます。以下の手順に従ってください。 1.SVM のデータ LIF または SVM からの接続をブロックしている管理 LIF にファイアウォールがないことを確認します。2.クラスタ管理IPを使用してSVMを追加する場合は、SVMのデータLIFと管理LIFがAgent VMからping可能であることを確認してください。問題が発生した場合は、 LIF のゲートウェイ、ネットマスク、およびルートを確認してください。また、クラスタ管理 IP を使用して SSH 経由でクラスタにログインし、エージェント IP に ping を実行することもできます。エージェントの IP が ping 可能であることを確認します。 _network ping -vserver <vserver name> -destination <Agent ip> -lif <LIF Name> -show-detail_ping 不可能な場合は、 ONTAP のネットワーク設定が正しいことを確認して、エージェントマシンが ping 可能であることを確認します。3.クラスタIP経由で接続しようとしたが機能しない場合は、SVM IP経由で直接接続してみてください。SVM IP を使用して接続する手順については、上記を参照してください。4.SVM IPおよびvsadminのクレデンシャルを使用してコレクタを追加する際に、SVM LIFでData plus Mgmtロールが有効になっているかどうかを確認します。この場合、 SVM LIF に ping することは可能ですが、 SVM LIF への SSH は機能しません。「はい」の場合は、 SVM 管理のみの LIF を作成し、この SVM 管理のみの LIF を使用して接続してみてください。5.それでも動作しない場合は、新しいSVM LIFを作成して、そのLIF経由で接続を試してください。サブネットマスクが正しく設定されていることを確認します。6.高度なデバッグ：a）ONTAPでパケットトレースを開始します。b）CloudSecure UIからSVMにデータコレクタを接続してみます。c）エラーが表示されるまで待ちます。ONTAPでパケットトレースを停止します。d）ONTAPからパケットトレースを開きます。f)から<cluster_mgmt_ip>がない場合は、<clustername> ONTAPのファイアウォールの問題です。g) ONTAPでファイアウォールを開き、ONTAPがエージェントボックスに接続できるようにします。g) ONTAPでファイアウォールを開き、ONTAPがエージェントボックスに接続できるようにします。7.それでも動作しない場合は、ネットワークチームに問い合わせて、外部ファイアウォールがONTAPからエージェントボックスへの接続をブロックしていないことを確認してください。8.ポート7が開いていることを確認します。9.上記のいずれの方法でも問題が解決しない場合は、でケースをオープンしてサポートを依頼しlink:concept_requesting_support.html["ネットアップサポート"]ます。 
+
+
+| メッセージ： "[hostname:<IP Address>] の ONTAP タイプを特定できませんでした。理由：ストレージシステム <IP アドレス > への接続エラー：ホストに到達できません（ホストに到達できません） " | 1.正しいSVM IP管理アドレスまたはクラスタ管理IPが指定されていることを確認します。2.接続先のSVMまたはクラスタにSSH接続します。接続が完了したら、 SVM またはクラスタ名が正しいことを確認してください。 
+
+
+| エラーメッセージ：「コネクタにエラーがあります。service.name ：監査。失敗の理由：外部 FPolicy サーバが終了しました。」 | 1.ファイアウォールがエージェントマシン内の必要なポートをブロックしている可能性があります。エージェントマシンが SVM から接続するために、ポート範囲 35000-55000/TCP を開いていることを確認します。また、 ONTAP 側からエージェントマシンへの通信をブロックするファイアウォールが有効になっていないことを確認します。2.[エージェント]ボックスに次のコマンドを入力し、ポート範囲が開いていることを確認します。_sudo iptables -save | grep 3500 * _ Sample 出力は次のようになります。 _a in_public_allow -p tcp -m tcp - dport 35000 -m conntrack -ctstate new-j accept_3 。SVM にログインし、次のコマンドを入力して、 ONTAP との通信をブロックするファイアウォールが設定されていないことを確認します。ONTAP側の_system services firewall show __system services firewall policy show_onlink:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-nmg%2FGUID-969851BB-4302-4645-8DAC-1B059D81C5B2.html["ファイアウォールコマンドをチェックしてください"]4.監視するSVM /クラスタにSSHで接続します。SVM のデータ LIF から Agent ボックスに ping を送信し（ CIFS 、 NFS プロトコルのサポートあり）、 ping が動作していることを確認します。 network ping -vserver <vserver name> -destination <Agent ip> -lif <lif Name> -show-detail_ping 不可能な場合は、 ONTAP のネットワーク設定が正しいことを確認して、エージェントマシンから ping を実行できるようにします。5. 1 つの SVM を 2 つのデータコレクタを使用してテナントに 2 回追加すると、このエラーが表示されます。UI を使用して、いずれかのデータコレクタを削除します。次に、 UI を使用して他のデータコレクタを再起動します。次に、データコレクタのステータスが「 running 」と表示され、 SVM からのイベントの受信が開始されます。基本的に、テナントでは、 1 つのデータコレクタで 1 つの SVM を追加します。1 つの SVM を 2 つのデータコレクタを使用して 2 回追加しないで6.同じSVMを2つの異なるワークロードセキュリティ環境（テナント）に追加した場合、最後のSVMは常に成功します。2 つ目のコレクタは、独自の IP アドレスで FPolicy を設定し、最初の IP アドレスから開始します。そのため、最初のデータ収集ツールはイベントの受信を停止し、その「監査」サービスはエラー状態になります。これを回避するには、各 SVM を 1 つの環境に設定します。7.このエラーは、サービスポリシーが正しく設定されていない場合にも発生することがあります。ONTAP 9.8以降では、データソースコレクタに接続するために、データサービスdata-fse-clientサービス、またはdata-cifsが必要です。さらに、監視対象SVMのデータLIFにdata-fsFPolicyクライアントサービスを関連付ける必要があります。 
+
+
+| アクティビティページにイベントは表示されません。 | 1.ONTAPコレクタが「running」状態になっているかどうかを確認します。「はい」の場合は、一部のファイルを開いて、 CIFS クライアント VM 上で一部の CIFS イベントが生成されていることを確認します。2.処理が表示されない場合は、SVMにログインして次のコマンドを入力してください。_<svm> event log show -source fpolicy_fpolicy に関連するエラーがないことを確認してください。3.アクティビティが表示されない場合は、SVMにログインしてください。次の command_<svm> fpolicy show_Check を入力して、「 cloudsecure_」 というプレフィックスの付いた FPolicy ポリシーが設定され、ステータスが「 on 」になっていることを確認します。設定されていないと、 Agent が SVM でコマンドを実行できない可能性が高くなります。ページの先頭に記載されているすべての前提条件を満たしていることを確認してください。 
+
+
+| SVM Data Collector がエラー状態で、エラーメッセージ「 Agent failed to connect to the collector 」 | 1.エージェントが過負荷状態であり、データソースコレクタに接続できない可能性があります。2.Agentに接続されているデータソースコレクタの数を確認します。3.また、UIの[All Activity]ページでデータフローレートを確認します。4.1秒あたりのアクティビティ数が非常に多い場合は、別のエージェントをインストールし、一部のデータソースコレクタを新しいエージェントに移動します。 
+
+
+| SVM Data Collector で、「 fpolicy.server.connectError: Node failed to establish a connection with the FPolicy server "12.195.15.146" （ reason ： Select Timed Out" ）」というエラーメッセージが表示される | SVM / クラスタでファイアウォールが有効になっています。そのため、 FPolicy エンジンは FPolicy サーバに接続できません。ONTAP の CLI で詳細情報を取得できます。 event log show -source fpolicy ：エラーイベントログ show -source fpolicy-fields event 、 action 、 description の詳細を表示できます。link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-nmg%2FGUID-969851BB-4302-4645-8DAC-1B059D81C5B2.html["ファイアウォールコマンドをチェックしてください"]ONTAP側。 
+
+
+| エラーメッセージ : 「コネクタはエラー状態です。サービス名： audit 。失敗の理由： SVM で有効なデータインターフェイスが見つかりません（ロール：データ、データプロトコル： NFS か CIFS か、両方、ステータス：稼働）。」 | 動作インターフェイス（データプロトコルおよびデータプロトコルとして CIFS / NFS が設定されている）があることを確認してください。 
+
+
+| データコレクタが Error 状態になり、しばらくしてから running 状態になり、 Error に戻ります。このサイクルが繰り返されます。 | これは通常、次のシナリオで発生します。 1.データコレクタが複数追加されています。2.このような動作を示すデータコレクタでは、1つのSVMがこれらのデータコレクタに追加されます。つまり、 2 つ以上のデータコレクタが 1 つの SVM に接続されます。3.1つのデータコレクタを1つのSVMだけに接続する4.同じSVMに接続されている他のデータコレクタを削除します。 
+
+
+| コネクタでエラーが発生しています。サービス名： audit 。失敗の理由：（ SVM SVM 名のポリシー）を設定できませんでした。理由： 'fpolicy.scope-modify ： "federy" 内の 'shares-to-include' 要素に無効な値が指定されています | 共有名は、引用符を付けずに指定する必要があります。ONTAP SVM DSC 設定を編集して共有名を修正します。Include および exclude shares _ は、長い共有名のリストを対象としたものではありません。対象に含める共有や除外する共有が大量にある場合は、ボリュームでフィルタリングします。 
+
+
+| クラスタに未使用の既存のポリシーがあります。ワークロードセキュリティをインストールする前に、これらのワークロードに対して何を行う必要がありますか？ | 切断状態の場合でも、既存の未使用の FPolicy 設定をすべて削除することを推奨します。ワークロードセキュリティで、プレフィックス「cloudsecure_」を付けてFPolicyを作成します。その他の未使用の FPolicy 設定はすべて削除できます。fpolicy list ： _fpolicy show_steps を表示して FPolicy 設定を削除する場合の CLI コマンド： _fpolicy disable -vserver <svmname> -policy -name <policy_name> _fpolicy policy scope delete -vserver <svmname> -policy name <policy_name> _fpolicy policy delete -vserver <svmname > -policy_name <policy_name> -policy_name>fpolicy_fpolicy_name> 
+
+
+| ワークロードセキュリティを有効にすると、ONTAP のパフォーマンスが低下します。レイテンシは一時的に上昇し、IOPSは散発的に低下します。 | ワークロードセキュリティでONTAPを使用しているときに、ONTAPでレイテンシの問題が発生することがあります。これにはlink:https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1372994["1372994"]、、 https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1415152["1415152"] https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1438207["1438207"]、、 https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1479704["1479704"]に記載されているように、いくつかの理由が考えられます。 https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1354659["1354659"]これらの問題はすべてONTAP 9.13.1以降で解決されています。これらのいずれかのバージョンを使用することを強く推奨します。 
+
+
+| データコレクタでエラーが発生し、次のエラーメッセージが表示されます。「エラー：コネクタがエラー状態です。サービス名： audit 。失敗の理由： SVM svm_backup でポリシーを設定できませんでした。理由： ZAPI フィールド：イベントに対して値が指定されていません。「 | NFS サービスのみが設定された新しい SVM から開始します。ワークロードのセキュリティにONTAP SVMのデータコレクタを追加します。ワークロードセキュリティでONTAP SVMデータコレクタを追加する際、CIFSはSVMで許可されるプロトコルとして設定されます。ワークロードセキュリティのデータコレクタでエラーが表示されるまで待ちます。SVMでCIFSサーバが設定されていないため、左側にあるエラーはワークロードのセキュリティに表示されます。ONTAP SVM データコレクタを編集し、許可されたプロトコルとして CIFS のチェックを解除します。データコレクタを保存します。NFS プロトコルのみが有効な状態で実行が開始されます。 
+
+
+| Data Collector に、「 Error: Failed to Determine the collector within 2 retries 、 try restarting the collector again (Error Code: AGENT008) 」というエラーメッセージが表示されます。 | 1.[ データコレクタ ] ページで、エラーが表示されているデータコレクタの右にスクロールし、 3 つのドットメニューをクリックします。選択した編集 _ 。データコレクタのパスワードをもう一度入力します。[Save] ボタンを押して、データコレクタを保存します。Data Collector が再起動し、エラーが解決されます。2.Agentマシンに十分なCPUまたはRAMヘッドルームがない可能性があるため、DSCに障害が発生しています。マシンのエージェントに追加されているデータコレクタの数を確認してください。20を超える場合は、エージェントマシンのCPUとRAM容量を増やしてください。CPUとRAMが増加すると、DSCは初期化状態になり、その後自動的に実行状態になります。のサイジングガイドを参照してくださいlink:concept_cs_event_rate_checker.html["このページです"]。 
+
+
+| SVMモードが選択されている場合、Data Collectorはエラーアウトしています。 | SVMモードで接続中にSVM管理IPではなくクラスタ管理IPを使用して接続すると、接続エラーが発生します。正しいSVM IPが使用されていることを確認します。 
+|===
+それでも問題が解決しない場合は、 [ ヘルプ ]>[ サポート *] ページに記載されているサポートリンクにアクセスしてください。

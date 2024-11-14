@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: task_troubleshooting_linux_acquisition_unit_problems.html 
+summary: Acquisition Unit の問題に関するトラブルシューティングのヒント。 
+keywords: AU, acquisition unit, trioubleshooting 
+---
+= Linux での Acquisition Unit の問題のトラブルシューティング
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+ここでは、 Linux サーバの Acquisition Unit に関する問題のトラブルシューティングについて説明します。
+
+|===
+
+
+| * 問題： * | * これを試みなさい : * 
+
+
+| [Acquisition Units]タブの*[Observability]>[Collectors]*ページにあるAUのステータスには、[Certificate Expired]または[Certificate Revoked]と表示されます。 | AU の右側にあるメニューをクリックし、 * Restore Connection * （接続の復元）を選択します。指示に従って Acquisition Unit をリストアします。 1.Acquisition Unit （ AU ）サービスを停止します。_Copy Stop command_ ボタンをクリックすると、コマンドをクリップボードに簡単にコピーし、このコマンドを Acquisition Unit マシンのコマンドプロンプトに貼り付けることができます。2.AUの_/ var/lib/lib/cloudinsights/acq/conf_ NetAppフォルダに「token」という名前のファイルを作成します。3.[_Copy Token_]ボタンをクリックし、作成したファイルにこのトークンを貼り付けます。4.AUサービスを再開します。_Copy Restart command_ ボタンをクリックし、 AU のコマンドプロンプトにコマンドを貼り付けます。 
+
+
+| Acquisition Unitサーバサービスの開始時に権限が拒否されました | AUをSELinuxにインストールしている場合は、SEを_permissive_modeに設定する必要があります。Enforcing_modeはサポートされていませんSELinuxをPermissiveモードに設定したら、AUサービスを再起動します。link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights/Permission_denied_when_starting_the_Cloud_Insight_Acquisition_Unit_Server_Service["詳細"]です。 
+
+
+| サーバ要件が満たされていません | Acquisition UnitサーバまたはVMがlink:concept_acquisition_unit_requirements.html["要件"] 
+
+
+| ネットワーク要件が満たされていません | Acquisition Unitサーバ/ VMが、NetAppポート443経由で<environment-name>接続を介してData Infrastructure Insights環境（ssl.c01.cloudinsights.ssl.com）にアクセスできることを確認します。次のコマンドを実行してみてください。_ping <environment-name> insight.c01.cloudinsights.au com__traceroute <environment-name> NetApp NetApp .c01.cloudinsights.au com__curl\https：// NetApp <environment-name><environment-name> NetApp .c01.cloudinsights.auからの「アウトバウンドインフラストラクチャ」に、ポート443を開く必要があることに注意してください。 
+
+
+| プロキシサーバが正しく設定されていません | プロキシの設定を確認し、必要に応じて Acquisition Unit ソフトウェアをアンインストールして再インストールして、正しいプロキシの設定を入力します。1.「curl」を試してください。プロキシに関する "man curl " 情報 / ドキュメントを参照してください -- preproxy 、 --proxy-* (curl では多数のプロキシ設定がサポートされているため、これはワイルドカード "*" です ) 。2.「wget」を試してください。プロキシオプションについては、ドキュメントを参照してください。 
+
+
+| Acquisition Serviceの開始中にCredentialエラーが発生し、Data Infrastructure InsightsでAcquisition Unitのインストールが失敗しました（acq.logに表示されます）。 | これは、プロキシのクレデンシャルに特殊文字が含まれていることが原因で発生することがあります。AU （ _sudo cloudInsights - uninstall.sh ）をアンインストールし、特殊文字を使用せずに再インストールします。 
+
+
+| Linux ：見つからないライブラリ / ファイルが見つかりません | Linux Acquisition Unit サーバ / VM に必要なライブラリがすべてあることを確認します。たとえば、サーバに _unzip_library がインストールされている必要があります。_unzip_library をインストールするには、 Acquisition Unit のインストールスクリプトを実行する前に、 command_ * sudo yum install unzip * _ を実行します 
+
+
+| 権限の問題 | sudo 権限を持つユーザとしてログインしていることを確認します 
+
+
+| 収集が実行されていません | /opt/NetApp/cloudInsights /acq/logs （ Linux ） Restart the Acquisition Service ： sudo cloudinsights-service.sh restart acquisition acq.log 
+
+
+| データ収集の問題： | Data Collector のランディングページで [Send Error Report] ボタンをクリックして、エラーレポートを送信します 
+
+
+| ステータス：ハートビート失敗 | Acquisition Unit（AU）は、リースを更新するために60秒ごとにハートビートをData Infrastructure Insightsに送信します。ネットワークの問題やData Infrastructure Insightsの応答がないためにハートビートコールが失敗した場合、AUのリース時間は更新されません。AUのリース期限が切れると、Data Infrastructure Insightsのステータスは「Heartbeat Failed」と表示されます。トラブルシューティングの手順： Acquisition Unit サーバと CloudInsights 間のネットワーク接続を確認します。Acquisition Unit サービスが実行されているかどうかを確認します。サービスが実行されていない場合は、サービスを開始します。Acquisition Unit のログ（ /var/log/netapp/cloudInsights /acq/acq.log ）でエラーがないかどうかを確認します。 
+
+
+| 「ハートビートエラー：」というメッセージが表示される | このエラーは、ネットワークの中断によってAcquisition UnitとData Infrastructure Insights環境の間の通信が1分以上中断される場合に発生することがあります。AUとData Infrastructure Insightsの間の接続が安定してアクティブであることを確認します。 
+
+
+| Acquisition Unitを再インストールすると、「ValueError: NetApp / cloudinsights (/.*)? already defined」と表示されます。 | SELinuxを搭載したシステムでは、を実行してAcquisition Unitを再インストールすると、このエラーメッセージが表示されることがあります `cloudinsights-uninstall.sh -p`。コマンドを実行 `semanage fcontext -d -t usr_t "/opt/netapp/cloudinsights(/.*)?"`すると問題が解決し、メッセージが削除されます。 
+|===
+
+
+== プロキシとファイアウォールに関する考慮事項
+
+インターネットアクセスにプロキシを使用する必要がある場合は、組織のプロキシの動作を理解し、Data Infrastructure Insightsが機能するために特定の例外を探す必要があります。次の事項に注意してください。
+
+* まず、組織はデフォルトでアクセスをブロックしていますか。また、特定の Web サイト / ドメインへのアクセスのみを例外として許可していますか。その場合は、次のドメインを例外リストに追加する必要があります。
++
+ *.cloudinsights.netapp.com
++
+Data Infrastructure Insights Acquisition Unitのほか、WebブラウザでのData Infrastructure Insightsの操作はすべて、そのドメイン名を持つホストに送信されます。
+
+* 次に、一部のプロキシは、NetAppから生成されないデジタル証明書でデータインフラストラクチャインサイトのWebサイトを偽装することで、TLS/SSL検査を実行しようとします。Data Infrastructure Insights Acquisition Unitのセキュリティモデルは、これらのテクノロジと根本的に互換性がありません。Data Infrastructure Insights Acquisition UnitがData Infrastructure Insightsに正常にログインしてデータ検出を行えるようにするには、この機能以外の上記のドメイン名も必要です。
+
+
+トラフィック検査用にプロキシが設定されている場合は、プロキシ構成の例外リストにData Infrastructure Insights環境を追加する必要があります。この例外リストの形式と設定は、プロキシの環境やツールによって異なりますが、一般に、AUがこれらのサーバと適切に通信できるように、Data Infrastructure InsightsサーバのURLをこの例外リストに追加する必要があります。
+
+最も簡単な方法は、Data Infrastructure Insightsドメイン自体を例外リストに追加することです。
+
+ *.cloudinsights.netapp.com
+プロキシがトラフィック検査用に設定されていない場合は、例外リストが必要な場合と必要でない場合があります。Data Infrastructure Insightsを例外リストに追加する必要があるかどうかわからない場合、またはプロキシやファイアウォールの構成が原因でData Infrastructure Insightsのインストールや実行に問題がある場合は、プロキシ管理チームに相談して、プロキシによるSSL代行受信の処理を設定してください。
+
+
+
+=== プロキシエンドポイントの表示
+
+プロキシエンドポイントを表示するには、オンボーディング中にデータコレクタを選択するときに * Proxy Settings * リンクをクリックするか、 * Help > Support * ページの _Proxy Settings__ のリンクをクリックします。次のようなテーブルが表示されます。ワークロードセキュリティを使用している環境では、設定済みのエンドポイントURLもこのリストに表示されます。
+
+image:ProxyEndpoints_NewTable.png["プロキシエンドポイントテーブル"]
+
+
+
+== リソース
+
+その他のトラブルシューティングのヒントについては、を参照してlink:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights["NetAppナレッジベース"]ください（サポートへのサインインが必要です）。
+
+その他のサポート情報については、Data Infrastructure Insightsのページを参照してlink:concept_requesting_support.html["サポート"]ください。

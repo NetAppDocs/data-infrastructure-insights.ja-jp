@@ -1,0 +1,73 @@
+---
+sidebar: sidebar 
+permalink: task_dc_lenovo.html 
+keywords: data collector,Lenovo, HX Series 
+summary: Lenovo データコレクタの設定。 
+---
+= Lenovo データコレクタ
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsは、Lenovoデータコレクタを使用して、Lenovo HXストレージシステムのインベントリデータとパフォーマンスデータを検出します。
+
+注：これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているわけではありません。
+
+
+
+== 要件
+
+* プリズム外部 IP アドレス
+* 管理者のユーザ名とパスワード
+* TCP ポート要件： 9440
+
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| プリズム外部 IP アドレス | クラスタの外部データサービスの IP アドレス 
+
+
+| ユーザ名 | 管理者アカウントのユーザ名 
+
+
+| パスワード | 管理者アカウントのパスワード 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| TCP ポート | アレイへの接続に使用する TCP ポート。デフォルトは9440です。 
+
+
+| インベントリのポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは60分です。 
+
+
+| パフォーマンスのポーリング間隔（秒） | パフォーマンスのポーリング間隔デフォルトは300秒です。 
+|===
+
+
+== トラブルシューティング
+
+このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

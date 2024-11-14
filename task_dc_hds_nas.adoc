@@ -1,0 +1,115 @@
+---
+sidebar: sidebar 
+permalink: task_dc_hds_nas.html 
+keywords: data collector, HDS HNAS, HDS NAS 
+summary: HDS NAS （ HNAS ）データコレクタの設定。 
+---
+= Hitachi Vantara NAS データコレクタの設定
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Hitachi Vantara NAS データコレクタは、 HDS NAS クラスタの検出をサポートするインベントリおよび設定データコレクタです。Data Infrastructure Insightsは、NFS共有とCIFS共有、ファイルシステム（内部ボリューム）、スパン（ストレージプール）の検出をサポートします。
+
+
+
+== 用語
+
+Data Infrastructure Insightsは、HNASデータコレクタから次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+[cols="2*"]
+|===
+| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+
+
+| 階層 | ディスクグループ 
+
+
+| クラスタ | ストレージ 
+
+
+| ノード | ストレージノード 
+
+
+| スパン（ Span ） | ストレージプール 
+
+
+| システムドライブ | バックエンド LUN 
+
+
+| ファイルシステム | 内部ボリューム 
+|===
+注：これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているわけではありません。
+
+
+
+== 要件
+
+* デバイスの IP アドレス
+* ポート 22 、 SSH プロトコル
+* ユーザ名とパスワードの権限レベル： Supervisor
+* 注：このデータコレクタは SSH ベースであるため、ホストが HNAS 自体またはクラスタの接続先のシステム管理ユニット（ SMU ）の TCP 22 への SSH セッションを開始できるようにする必要があります。
+
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| HNASホスト | HNAS 管理ホストの IP アドレスまたは完全修飾ドメイン名 
+
+
+| ユーザー名 | HNAS CLIのユーザ名 
+
+
+| パスワード | HNAS CLIに使用するパスワード 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| インベントリポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは30分です。 
+|===
+
+
+== トラブルシューティング
+
+このデータコレクタで問題が発生した場合の対処方法を次に示します。
+
+
+
+=== インベントリ
+
+[cols="2*"]
+|===
+| 問題 | 次の操作を実行します 
+
+
+| 「 Error connecting 」 with error messages 「 Error setting up shell channel ：」または「 Error opening shell channel 」というエラーメッセージが表示されます。 | ネットワーク接続に問題があるか、 SSH の設定ミスが原因である可能性があります。代替 SSH クライアントとの接続を確認します 
+
+
+| 「 Command ： XXX has timed out 」というエラーメッセージが表示され、「 Timeout 」または「 Error Retrieving data 」というエラーが表示されます。 | * 代替 SSH クライアントでコマンドを実行してください * タイムアウトが増加します 
+
+
+| " 接続エラー " または " 無効なログイン認証情報 " のエラーメッセージ " デバイスと通信できませんでした： " | * IP アドレスの確認 * ユーザ名とパスワードの確認 * 代替 SSH クライアントとの接続を確認してください 
+|===
+詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

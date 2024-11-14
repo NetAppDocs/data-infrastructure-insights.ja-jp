@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: concept_preview_features.html 
+summary: プレビュー機能は限られた容量で利用でき、プライムタイムに備えていない機能を強調しています。 
+keywords: coming soon, preview, 
+---
+= フィーチャーと機能をプレビューします
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsでは、_ Preview_の方法で新機能に注目しています。プレビュー機能は、一部の環境または容量に限りがあります。
+
+これらの機能の1つまたは複数のプレビューをご希望の場合は、にお問い合わせくださいlink:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["ネットアップの営業チーム"]。
+
+|===
+
+
+| * 特徴 * | * 概要 * 
+
+
+| ONTAP コールドストレージを再利用します | コールド容量を使用するONTAP ボリュームワークロードやその他の関連指標を視覚化できます。 
+|===

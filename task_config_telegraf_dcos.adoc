@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_dcos.html 
+keywords: telegraf, installation, install, dcos 
+summary: DCOS コンフィギュレーション 
+---
+= DC/OS データコレクタ
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsは、このデータコレクタを使用してDC/OSから指標を収集します。
+
+
+
+== インストール
+
+. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。[*DC/OS*]を選択します。
++
+収集用にAgentを設定していない場合は、環境内で確認を求められlink:task_config_telegraf_agent.html["エージェントをインストールします"]ます。
+
++
+エージェントがすでに設定されている場合は、適切な OS またはプラットフォームを選択し、 [* Continue （続行） ] をクリックします。
+
+. データコレクタを設定するには、 [DC/OS Configuration] 画面の指示に従います。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+
+
+
+
+== セットアップ
+
+セットアップ情報については、を参照して https://docs.mesosphere.com["DC/OS のドキュメント"]ください。
+
+
+
+== オブジェクトとカウンタ
+
+次のオブジェクトとそのカウンタが収集されます。
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| オブジェクト | 識別子 | 属性 | 「 dataPoints 」： 
+
+
+| DCOS_node | DCOS_CONTAINER DCOS_APP | クラスタのホスト名パス（ファイルシステムフィールドのみ）インターフェイス（ネットワークフィールドのみ） container_id task_name | system_uptime （ float ） CPU_cores （ float ） cpu_total （ float ） cpu_user （ float ） cpu_idle （ float ） cpu_wait （ float ） LOAD_1min （ float ） LOAD_15min （ float ） LOAD_15min （ float ） LOAD_15min （ float ） FILE_TB_int bytes （ int bytes （ int_int ） network_in-packets （ float ） network_out_packets （ float ） network_in_dropped （ float ） network_out_dropped （ float ） network_in_errors （ float ） network_out_errors （ float ） process_count （ float ） 
+|===
+
+
+== トラブルシューティング
+
+詳細については、ページを参照してlink:concept_requesting_support.html["サポート"]ください。

@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: insights_reclaim_ontap_cold_storage.html 
+keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload 
+summary: この分析情報から、リソースが環境内の他のリソースにどのような影響を及ぼすかを確認できます。 
+---
+= 分析情報：ONTAP コールドストレージの再利用
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+ONTAP コールドストレージの再利用_Insightは、ONTAP システム上のボリュームについて、コールド容量、潜在的なコスト/電力削減、推奨される対処方法に関するデータを提供します。
+
+これらの分析情報を表示するには、*[Dashboards]>[Insights]*に移動し、_Reclaim ONTAP Cold Storage_Insightを確認します。このInsightでは、Data Infrastructure Insightsでコールドストレージが検出された場合にのみ、影響を受けるストレージが表示されます。検出されなかった場合は「すべてクリア」というメッセージが表示されます。
+
+30日前に作成されたコールドデータは表示されません。
+
+image:Cold_Data_Insight_List.png["コールドデータを含む3つのストレージを表示するInsightのリスト"]
+
+Insight概要 には、「コールド」として検出されたデータの量と、データが配置されているストレージがすぐに表示されます。このテーブルには、コールドデータを含むワークロードの数も表示されます。
+
+リストからInsightを選択すると、詳細を示すページが開きます。これには、クラウドへのデータの移動や未使用ディスクのサイクルダウンに関する推奨事項、推奨事項の実装によって実現できる可能性のあるコスト削減と電力削減の予測などが含まれます。ページにはへの便利なリンクもありlink:https://bluexp.netapp.com/cloud-tiering-service-tco["ネットアップのTCO試算ツール"]、数値を試すことができます。
+
+image:Cold_Data_Power_Info.png["コールドデータ電源情報"]
+
+
+
+=== 推奨事項
+
+[Insight]ページで、*[推奨事項]*を展開して次のオプションを確認します。
+
+* 未使用のワークロード（ゾンビ）を低コストのストレージ階層（HDD）に移動
++
+ゾンビフラグ、コールドストレージ、日数を使用して、最もコールドで最大のデータ量を特定し、低コストのストレージ階層（ハードディスクストレージを使用するストレージプールなど）にワークロードを移動します。が30日以上重大なIO要求を受信していない場合、ワークロードは「ゾンビ」とみなされます。
+
+* 未使用のワークロードを削除
++
+使用されていないワークロードを確認し、アーカイブするかストレージシステムから削除することを検討してください。
+
+* ネットアップのFabric Pool解決策 を検討してみましょう
++
+NetAppのはlink:https://docs.netapp.com/us-en/cloud-manager-tiering/concept-cloud-tiering.html#features["Fabric Pool解決策 の略"]、コールドデータを低コストのクラウドストレージに自動的に階層化することで、パフォーマンス階層の効率を高め、リモートデータ保護を実現します。
+
+
+
+
+
+=== 視覚化と探索
+
+グラフと表にはトレンドに関する追加情報が表示されるほか、個 々 のワークロードにドリルダウンすることもできます。
+
+image:Cold_Data_Storage_Trend.png["コールドデータサマリグラフ"] image:Cold_Data_Workload_Table.png["コールドデータワークロードテーブル"]

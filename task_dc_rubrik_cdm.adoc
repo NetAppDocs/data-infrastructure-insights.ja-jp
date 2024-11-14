@@ -1,0 +1,107 @@
+---
+sidebar: sidebar 
+permalink: task_dc_rubrik_cdm.html 
+keywords: data collector, Rubrik, 
+summary: Rubrik CDMデータコレクタを設定しています。 
+---
+= Rubrik CDM Data Collectorの略
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsは、Rubrikのデータコレクタを使用して、Rubrikストレージアプライアンスからインベントリとパフォーマンスのデータを取得します。
+
+
+
+== 用語
+
+Data Infrastructure Insightsでは、Rubrikのデータコレクタから次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+[cols="2*"]
+|===
+| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+
+
+| クラスタ | ストレージ、ストレージプール 
+
+
+| ノード | ストレージノード 
+
+
+| ディスク | ディスク 
+|===
+注：これらは一般的な用語の対応のみを示したものであり、このデータソースのすべてのケースを表しているとは限りません。
+
+
+
+== 要件
+
+このデータコレクタを設定するには、次のものが必要です。
+
+* Data Infrastructure Insights Acquisition Unitは、RubrikクラスタへのTCPポート443への接続を開始します。クラスタごとに1つのコレクタ。
+* RubrikクラスタのIPアドレス。
+* クラスタのユーザ名とパスワード。
+* RubrikクラスタのIPアドレスまたはホスト名。
+* Basic認証の場合は、クラスタのユーザ名とパスワード。サービスアカウントベースの認証を使用する場合は、サービスアカウント、シークレット、および組織IDが必要です。
+* ポート要件： HTTPS 443
+
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| IP | RubrikクラスタのIPアドレス 
+
+
+| ユーザ名 | クラスタのユーザ名 
+
+
+| パスワード | クラスタのパスワード 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| インベントリのポーリング間隔（分） | デフォルトは60です 
+
+
+| パフォーマンスポーリング間隔（秒） | デフォルトは300です 
+|===
+
+
+== トラブルシューティング
+
+このデータコレクタで問題が発生した場合の対処方法を次に示します。
+
+
+
+=== インベントリ
+
+[cols="2*"]
+|===
+| 問題 | 次の操作を実行します 
+
+
+| 複数のストレージが作成されているというメッセージを受け取りました。 | クラスタが正しく設定されており、コレクタが単一のクラスタを参照していることを確認します。 
+
+
+| ディスクAPIからより多くのデータが返されたという警告が表示されました | 追加のデータを取得するには、サポートに確認してください。 
+|===
+詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

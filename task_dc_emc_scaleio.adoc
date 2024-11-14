@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_scaleio.html 
+keywords: data collector, scaleIO, PowerFlex EMC, DELL 
+summary: Dell EMC ScaleIO/PowerFlexデータコレクタの設定 
+---
+= Dell EMC ScaleIO/PowerFlexデータコレクタ
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+ScaleIO/PowerFlexデータコレクタは、ScaleIOおよびPowerFlexストレージからインベントリ情報を収集します。このデータコレクタを設定するには、ScaleIO/PowerFlexゲートウェイアドレス、および管理者ユーザー名とパスワードが必要です。
+
+
+
+== 用語
+
+Data Infrastructure Insightsは、ScaleIO/PowerFlexデータコレクタから次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+[cols="2*"]
+|===
+| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+
+
+| MDM （ Meta Data Manager ）クラスタ | ストレージ 
+
+
+| SDS（ScaleIO/PowerFlexデータサーバー） | ストレージノード 
+
+
+| ストレージプール | ストレージプール 
+
+
+| ボリューム | ボリューム 
+
+
+| デバイス | ディスク 
+|===
+注：これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているわけではありません。
+
+
+
+== 要件
+
+* Admin ユーザアカウントへの読み取り専用アクセス
+* ポート要件： HTTPS ポート 443
+
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| ScaleIO/PowerFlexゲートウェイ | ScaleIO/PowerFlexゲートウェイのIPアドレスまたはFQDN（カンマ（,）またはセミコロン（;）で区切ったもの 
+
+
+| ユーザー名 | ScaleIO/PowerFlexデバイスへのログインに使用する管理者ユーザー名 
+
+
+| パスワード | ScaleIO/PowerFlexデバイスへのログインに使用するパスワード 
+|===
+
+
+== 高度な設定
+
+Inventory チェックボックスをクリックして、インベントリ収集を有効にします。
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| HTTPS ポート | 443 
+
+
+| インベントリのポーリング間隔（分） | デフォルトは60です。 
+
+
+| 接続タイムアウト（秒） | デフォルトは60です。 
+|===
+
+
+== トラブルシューティング
+
+詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

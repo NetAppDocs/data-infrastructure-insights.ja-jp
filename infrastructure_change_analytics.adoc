@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: infrastructure_change_analytics.html 
+keywords: changes, management, analysis, infra, infrastructure 
+summary: Cloud Insightsは、分析とトラブルシューティングを容易にするために、インフラストラクチャの変更を追跡します。 
+---
+= インフラの変更分析
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+インフラ変更分析では、環境内のインフラ（ストレージ、スイッチなど）に対する最近の変更をオールインワンで確認できます。変更分析を使用すると、構成の変更を追跡し、予想される問題と予期しない問題の両方を掘り下げることができます。
+
+
+
+== インフラの変更分析はどのように役立ちますか？
+
+どのような環境でも、変更の設定ミスや停電などにより、リソースの変更が発生する可能性があります。Change Analysisでは、リソースの健全性を1つのペインで表示し、停止や予定されている変更と関連付けることができます。変更は、（新しいコレクタに対する最初のポーリングの後に）各インベントリポーリングで計算されます。
+
+インフラの変更を分析するには、*オブザーバビリティ>変更分析*に移動します。現在の期間のアラートと設定変更が表示されます。[Alert]行には、現在のアラートステータス（ActiveまたはResolved）が表示されます。
+
+リソースのランディングページに移動することもできます。そのリソースまたは関連リソースに変更が加えられている場合は、ページの[Expert View]セクションに表示されます。ズームインして個 々 の変更を調査するか、ビューを広くしたままにして、選択した時間範囲内のすべての変更を確認します。変更にカーソルを合わせると、変更の概要が表示されます。変更をクリックすると、エキスパートビューがその変更時刻にフォーカスされます。
+
+image:change_analysis_on_a_landing_page.png["ランディング・ページでの変更分析"]
+
+リスト内のアイテムを選択すると、アラートまたは変更に関する詳細を示すスライドアウトペインが開きます。
+
+
+
+== フィルタリング
+
+Cloud Insightsのすべての機能と同様に、変更リストは直感的にフィルタリングできます。ページ上部で、特定のアセットタイプ（_triggered on：type_）でフィルタリングするか、必要に応じて特定の名前を持つアセットのみでフィルタリングするか（_triggered on：name_）、[+]ボタンを選択して独自のフィルタを追加できます。
+
+image:infraChange_filter_dropdown.png["[Infrastructure Change Filtering]ドロップダウン"]
+
+また、フィルタ設定の下にあるステータスセクションから[Key Alerts]または[Changes]に直接移動することもできます。これには、アラート数が最も多い現在の上位3つのリソースも含まれます。
+
+image:Change_Analysis_filters_and_status.png["ステータスとアラートや変更へのクイックリンク"]
+
+
+
+== 変更のために分析されるオブジェクト
+
+次の表に、インフラの変更分析に含まれるオブジェクトと属性を示します。
+
+|===
+
+
+| オブジェクトタイプ | 属性 
+
+
+| ディスク | disksize.total isVirtual diskGroup speed type location SerialNumber役割ステータスベンダーモデルstorage.name storagePools.name name isEncrypted 
+
+
+| ストレージ | ファミリーIP isActiveマイクロコードバージョンモデル名プロトコルSerialNumberベンダー 
+
+
+| ストレージノード | Name storage.name nodeVersion model SerialNumber Number OfProcessors state partner.nameキャッシュメモリ管理IpAddresses parentSerialNumber SiteName 
+
+
+| ストレージプール | 名前タイプisAutoTiering isVirtual redundancy vendorTier usesFlashPools storage.vendor storage.ip storage.model storage.family storage.name storageNodes.name capacity.total（動的属性）isCompactionSavingsEnabled isEncrypted objectStoreName objectStoreProviderType objectStoreSizeLimit objectStoreTieringFullnessThreshold objectStoreS3Name objectStoreServer 
+
+
+| qtree | securityStyle isOplocksEnabled shares.name storage.name internalVolume.name storageVirtualMachine.name simpleName statusText nameと入力します。 
+
+
+| StorageVirtualMachine | 名前storage.name状態タイプIPspaceプロトコルinternalVolumeLimit 
+
+
+| ボリューム | 名前simpleNameラベルタイプstorage.name storage.vendor storage.ip storage.model storage.family isAutoTiering isThinProvisioned diskGroup isMeta isReplicaSource isReplicaTarget isSnapshot isVirtual internalVolume.name internalVolume.virtualStorage storageNodes.name storageNodes.partner.name storagePools.name storageVirtualMachine.name storageGroups isEncrypted isCompressionEnabled qosBurstIOPS qosLimitMBPS qosLimitMBPS qosMinQosMinQOSポリシーqosMinQosLimitROSポリシーqosLimitROS 
+
+
+| 内部ボリューム | flashPoolEligibility name simpleNameスペース保証ステータスタイプvirtualStorage replicaSources.name storageNodes.name storageNodes.partner.name storage.name storage.vendor storage.ip storage.model storage.family storageVirtualMachine.name storagePool.name capacity.isThinProvisioned QOSPolicy qosLimitRaw qosLimitIOPS qosLimitMBPS isEncrypted adaptiveQosPolicy junctionPath objectStoreTieringMinimumingPolicy CoolingDays 
+
+
+| 仮想マシン | 名前dnsName ip os memory processors guestState PowerState host.name host.clusterName host.ip host.os datastore.name instanceType publicIps securityGroups virtualCenterIp 
+
+
+| データストア | name virtualCenterIp type 
+
+
+| ホスト | 名前モデルip isActive OSメーカーcpuCountメモリisHypervisor clusterName virtualCenterIp 
+
+
+| VMDK（VirtualMachineDisk） | 名前タイプdatastore.name isRdm virtualMachine.host.name virtualMachine.name isSnapshot 
+
+
+| ポート | name isActive WWN type portIndex blade speed gbicType connectedPorts.device.name connectedPorts.device.type connectedPorts.name connectedPorts.nodeWwn connectedPorts.wwn controller device.name device.type fabrics.name fabrics.vsanId nodeWwn説明 
+|===
+「Change Analysis」は、次の場合のアラートを追跡します。
+
+* ログタイプ_logs.vmware.events_and_logs.ems_のログモニタからのアラートNetApp。
+* 上記のオブジェクトタイプのメトリックモニタからのアラート。変更分析でそれらを追跡するには、_Group by_フィールドでこれらを選択する必要があります。
+

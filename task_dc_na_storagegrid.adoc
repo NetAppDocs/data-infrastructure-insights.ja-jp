@@ -1,0 +1,115 @@
+---
+sidebar: sidebar 
+permalink: task_dc_na_storagegrid.html 
+summary: NetApp StorageGRID のデータコレクタを設定する 
+keywords: data collector, queries, create, storagegrid 
+---
+= NetApp StorageGRID データコレクタ
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+NetApp StorageGRID データコレクタでは、 StorageGRID 構成からのインベントリやパフォーマンスの収集がサポートされます。
+
+
+NOTE: StorageGRID は、 raw TB から管理対象ユニットへのレートが異なる場合に測定されます。フォーマットされていないStorageGRIDの容量が40TBにつき1として課金されますlink:concept_subscribing_to_cloud_insights.html#pricing["管理ユニット (MU)"]。
+
+
+
+== 用語
+
+Data Infrastructure Insightsでは、NetApp StorageGRIDコレクタから次のインベントリ情報を取得します。取得したアセットのタイプごとに、そのアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+[cols="2*"]
+|===
+| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+
+
+| StorageGRID | ストレージ 
+
+
+| ノード | ノード 
+
+
+| テナント | ストレージプール 
+
+
+| バケット | 内部ボリューム 
+|===
+
+
+== 要件
+
+このデータソースの設定に関する要件は次のとおりです。
+
+* StorageGRID ホストの IP アドレス
+* Metric Query ロールとテナントアクセスロールが割り当てられているユーザのユーザ名とパスワード
+* ポート443
+
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| StorageGRID ホストの IP アドレス | StorageGRID アプライアンスの管理仮想 IP アドレス 
+
+
+| ユーザー名 | StorageGRID アプライアンスへのログインに使用する名前 
+
+
+| パスワード | StorageGRID アプライアンスへのログインに使用するパスワード 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| インベントリポーリング間隔（分） | デフォルトは60分です 
+
+
+| パフォーマンスポーリング間隔（秒） | デフォルトは900秒です 
+|===
+
+
+== シングルサインオン（ SSO ）
+
+link:https://docs.netapp.com/sgws-112/index.jsp["StorageGRID"]ファームウェアバージョンには対応するAPIバージョンがあり、3.0 API以降のバージョンではシングルサインオン（SSO）ログインがサポートされます。
+
+|===
+
+
+| ファームウェアバージョン | APIバージョン | シングルサインオン（ SSO ）のサポート 
+
+
+| 11.1 | 2 | いいえ 
+
+
+| 11.2 | 3.0 | はい 
+
+
+| 11.5 | 3.3 | はい 
+|===
+
+
+== トラブルシューティング
+
+このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

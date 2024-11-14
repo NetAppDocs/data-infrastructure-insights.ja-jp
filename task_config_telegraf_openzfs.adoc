@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_openzfs.html 
+keywords: telegraf, installation, install, openzfs 
+summary: OpenZFS データコレクタ設定 
+---
+= OpenZFS Data Collector を使用します
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsは、このデータコレクタを使用してOpenZFSから指標を収集します。
+
+
+
+== インストール
+
+. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。[OpenZFS]を選択します。
++
+Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+
+. コレクション用エージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[_Show Instructions_]をクリックして手順を展開しlink:task_config_telegraf_agent.html["エージェントのインストール"]ます。
+. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
+. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+
+
+image:OpenZFSDCConfigLinux.png["Linux OpenZFS 構成"]
+
+
+
+== セットアップ
+
+詳細については、を参照してlink:http://open-zfs.org/wiki/Documentation["OpenZFS のドキュメント"]ください。
+
+
+
+== トラブルシューティング
+
+詳細については、ページを参照してlink:concept_requesting_support.html["サポート"]ください。

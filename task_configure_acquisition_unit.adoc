@@ -1,0 +1,263 @@
+---
+sidebar: sidebar 
+permalink: task_configure_acquisition_unit.html 
+keywords: Acquisition Unit, AU, install, configure, Linux, add, remove, uninstall, delete, deleting, move, moving 
+summary: WindowsおよびLinuxでのAcquisition Unitのインストール、アンインストール、プロキシのサポートの設定などがあります。 
+---
+= Acquisition Unit の設定
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsは、ローカルサーバにインストールされている1つ以上のAcquisition Unitを使用してデバイスデータを収集します。各Acquisition Unitは複数のデータコレクタをホストでき、データコレクタはデバイスメトリックをData Infrastructure Insightsに送信して分析します。
+
+ここでは、 Acquisition Unit を追加する方法と、プロキシを使用する環境で必要な追加の手順について説明します。
+
+
+NOTE: 正確な監査およびデータレポートを作成するためには、 * Network Time Protocol （ NTP ；ネットワークタイムプロトコル） * または * Simple Network Time Protocol （ SNTP ） * を使用して Acquisition Unit マシンの時間を同期することを強く推奨します。
+
+Data Infrastructure Insightsのセキュリティについてはlink:security_overview.html["ここをクリック"]、こちらをご覧ください。
+
+
+
+== Linux Acquisition Unit の追加
+
+.開始する前に
+* プロキシを使用するシステムの場合は、 Acquisition Unit をインストールする前にプロキシ環境変数を設定する必要があります。詳細については、を参照してください <<プロキシ環境変数を設定しています>>。
+
+
+.Linux Acquisition Unit のインストール手順
+. Data Infrastructure Insights環境に管理者またはアカウント所有者としてログインします。
+. [Observability]>[Collectors]>[Acquisition Units]>[+Acquisition Unit]
++
+[Install Acquisition Unit_Dialog] が表示されます。Linux を選択します。
+
+
+
+[role="thumb"]
+image:NewLinuxAUInstall.png["Linux AU の手順"]
+
+. Acquisition Unit をホストしているサーバまたは VM が推奨されるシステム要件を満たしていることを確認する。
+. サーバでサポートされているバージョンの Linux が実行されていることを確認します。サポートされているバージョンのリストについては、「サポートされている OS バージョン」（ i ）をクリックしてください。
+. ダイアログ内の Installation コマンドスニペットを、 Acquisition Unit をホストするサーバまたは VM のターミナルウィンドウにコピーします。
+. Bash シェルにコマンドを貼り付けて実行します。
+
+
+.終了後
+* [Observability]>[Collectors]>[Acquisition Units]*をクリックして、Acquisition Unitのステータスを確認します。
+* Acquisition Unit のログには、 /var/log/netapp/cloudInsights /acq/ acq.log からアクセスできます
+* Acquisition Unit を制御するには、次のスクリプトを使用します。
++
+** cloudinsights-service.sh （ stop 、 start 、 restart 、 status を確認）
+
+
+* Acquisition Unit をアンインストールするには、次のスクリプトを使用します。
++
+** cloudinsights-uninstall.sh
+
+
+
+
+
+
+=== プロキシ環境変数を設定しています
+
+プロキシを使用する環境では、 Acquisition Unit を追加する前にプロキシ環境変数を設定する必要があります。プロキシの設定手順は、 _ Acquisition Unit の追加ダイアログに記載されています。
+
+. [+ in_ プロキシサーバを使用しますか ?_ ] をクリックします
+. コマンドをテキストエディタにコピーし、必要に応じてプロキシ変数を設定します。
++
+注：プロキシユーザ名とパスワードのフィールドでは、特殊文字に関する制限に注意してください。 ユーザ名フィールドに入力できます。' ： ' 、 % 、 ' ！ ' パスワードフィールドに入力できます。
+
+. Bash シェルを使用して、端末で編集したコマンドを実行します。
+. Acquisition Unit ソフトウェアをインストールします。
+
+
+
+
+=== プロキシ設定：
+
+Acquisition Unitは、双方向認証と相互認証を使用してData Infrastructure Insightsサーバに接続します。認証するには、クライアント証明書をData Infrastructure Insightsサーバに渡す必要があります。そのためには、データを復号化せずにHTTPS要求をData Infrastructure Insightsサーバに転送するようにプロキシを設定する必要があります。
+
+これを行う最も簡単な方法は、Data Infrastructure Insightsと通信するためにプロキシ/ファイアウォールでワイルドカード設定を指定することです。次に例を示します。
+
+ *.cloudinsights.netapp.com
+
+NOTE: ワイルドカードにアスタリスク（ * ）を使用するのは一般的ですが、プロキシ / ファイアウォールの設定では異なる形式を使用することがあります。プロキシのドキュメントで、ワイルドカードを正しく指定できることを確認してください。
+
+プロキシ設定の詳細については、NetAppを参照しlink:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["ナレッジベース（Knowledgbase）"]てください。
+
+
+
+==== プロキシ URL の表示
+
+オンボーディング中にデータコレクタを選択するときに [* プロキシ設定 * ] リンクをクリックするか、 [* ヘルプ > サポート * ] ページの [_ プロキシ設定 _ ] の下のリンクをクリックすると、プロキシエンドポイントの URL を表示できます。次のようなテーブルが表示されます。
+
+image:ProxyEndpoints_NewTable.png["プロキシエンドポイントテーブル"]
+
+ワークロードセキュリティを使用している環境では、設定済みのエンドポイントURLもこのリストに表示されます。
+
+
+
+== Windows Acquisition Unit の追加
+
+.Windows Acquisition Unit のインストールの手順
+. 管理者権限を持つユーザとして Acquisition Unit サーバ / VM にログインします。
+. そのサーバで、ブラウザウィンドウを開き、管理者またはアカウント所有者としてData Infrastructure Insights環境にログインします。
+. [Observability]>[Collectors]>[Acquisition Units]>[+Acquisition Unit]
++
+[Install Acquisition Unit_Dialog] が表示されます。Windows を選択します。
+
+
+
+image::NewWindowsAUInstall.png[Windows AU のインストール]
+
+. Acquisition Unit をホストしているサーバまたは VM が推奨されるシステム要件を満たしていることを確認する。
+. サーバでサポートされているバージョンの Windows が実行されていることを確認します。サポートされているバージョンのリストについては、「サポートされている OS バージョン」（ i ）をクリックしてください。
+. [ インストーラのダウンロード（ Windows 64 ビット） *] ボタンをクリックします。
+. アクセスキーをコピーします。インストール中にこのファイルが必要になります。
+. Acquisition Unit のサーバ / VM で、ダウンロードしたインストーラを実行します。
+. プロンプトが表示されたら、アクセスキーをインストールウィザードに貼り付けます。
+. インストール中に、プロキシサーバーの設定が表示されます。
+
+
+.終了後
+* [Observability]>[Collectors]>[Acquisition Units]*をクリックして、Acquisition Unitのステータスを確認します。
+* Acquisition Unit のログには、 <install dir>\Cloud Insights \Acquisition Unit \log\acq.log からアクセスできます
+* Acquisition Unit のステータスを確認するには、次のスクリプトを使用します。
++
+ cloudinsights-service.sh
+
+
+
+
+=== プロキシ設定：
+
+Acquisition Unitは、双方向認証と相互認証を使用してData Infrastructure Insightsサーバに接続します。認証するには、クライアント証明書をData Infrastructure Insightsサーバに渡す必要があります。そのためには、データを復号化せずにHTTPS要求をData Infrastructure Insightsサーバに転送するようにプロキシを設定する必要があります。
+
+これを行う最も簡単な方法は、Data Infrastructure Insightsと通信するためにプロキシ/ファイアウォールでワイルドカード設定を指定することです。次に例を示します。
+
+ *.cloudinsights.netapp.com
+
+NOTE: ワイルドカードにアスタリスク（ * ）を使用するのは一般的ですが、プロキシ / ファイアウォールの設定では異なる形式を使用することがあります。プロキシのドキュメントで、ワイルドカードを正しく指定できることを確認してください。
+
+プロキシ設定の詳細については、NetAppを参照しlink:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["ナレッジベース（Knowledgbase）"]てください。
+
+
+
+==== プロキシ URL の表示
+
+オンボーディング中にデータコレクタを選択するときに [* プロキシ設定 * ] リンクをクリックするか、 [* ヘルプ > サポート * ] ページの [_ プロキシ設定 _ ] の下のリンクをクリックすると、プロキシエンドポイントの URL を表示できます。次のようなテーブルが表示されます。
+
+image:ProxyEndpoints_NewTable.png["プロキシエンドポイントテーブル"]
+
+ワークロードセキュリティを使用している環境では、設定済みのエンドポイントURLもこのリストに表示されます。
+
+
+
+== Acquisition Unit のアンインストール
+
+Acquisition Unit ソフトウェアをアンインストールするには、次の手順を実行します。
+
+'''
+* Windows ： *
+
+Windows * Acquisition Unitをアンインストールする場合は、次の手順を実行します。
+
+. Acquisition Unit のサーバー /VM で、 Control Panel を開いて、「プログラムのアンインストール」を選択します。削除するData Infrastructure Insights Acquisition Unitプログラムを選択します。
+. [ アンインストール ] をクリックし、画面の指示に従います。
+
+
+'''
+* Linux ： *
+
+Linux* Acquisition Unitをアンインストールする場合は、次の手順を実行します。
+
+. Acquisition Unit サーバ / VM で、次のコマンドを実行します。
++
+ sudo cloudinsights-uninstall.sh -p
+. アンインストールのヘルプについては、次のコマンドを実行します。
++
+ sudo cloudinsights-uninstall.sh --help
+
+
+'''
+* WindowsおよびLinux：*
+
+* AUのアンインストール後：
+
+. Data Infrastructure Insightsで、*[Observability]>[Collectors]に移動し、*[Acquisition Units]*タブを選択します。
+. アンインストールする Acquisition Unit の右側にある Options ボタンをクリックし、 _Delete_を 選択します。Acquisition Unit は、その Acquisition Unit にデータコレクタが割り当てられていない場合にのみ削除できます。
+
+
+
+NOTE: データコレクタが接続されているAcquisition Unit（AU）は削除できません。元のAUを削除する前に、AUのすべてのデータコレクタを別のAUに移動します（コレクタを編集して別のAUを選択するだけです）。
+
+横に星印が付いたAcquisition Unitがデバイス解決に使用されています。このAUを削除する前に、デバイス解決に使用する別のAUを選択する必要があります。別のAUにカーソルを合わせ、「3つのドット」メニューを開き、「デバイス解像度に使用」を選択します。
+
+image:AU_for_Device_Resolution.png["デバイス解決に使用されるAU"]
+
+
+
+== Acquisition Unit の再インストール
+
+Acquisition Unit を同じサーバ / VM に再インストールするには、次の手順を実行する必要があります。
+
+.開始する前に
+Acquisition Unit を再インストールするには、あらかじめ別のサーバ / VM で一時的な Acquisition Unit を設定しておく必要があります。
+
+.手順
+. Acquisition Unit サーバ /VM にログインし、 AU ソフトウェアをアンインストールします。
+. Data Infrastructure Insights環境にログインし、*オブザーバビリティ>コレクタ*に移動します。
+. 各データコレクタについて、右側の [ オプション ] メニューをクリックし、 _Edit_ を選択します。一時収集ユニットにデータコレクタを割り当て、 * 保存 * をクリックします。
++
+同じタイプの複数のデータコレクタを選択し、 * 一括アクション * ボタンをクリックすることもできます。_Edit_ を選択し、データコレクタを一時 Acquisition Unit に割り当てます。
+
+. すべてのデータコレクタを一時的なAcquisition Unitに移動したら、*[Observability]>[Collectors]*に移動し、*[Acquisition Units]*タブを選択します。
+. 再インストールする Acquisition Unit の右側にある Options ボタンをクリックし、 _Delete_を 選択します。Acquisition Unit は、その Acquisition Unit にデータコレクタが割り当てられていない場合にのみ削除できます。
+. Acquisition Unit ソフトウェアを元のサーバ / VM に再インストールできるようになりました。+ Acquisition Unit * をクリックし、上記の手順に従って Acquisition Unit をインストールします。
+. Acquisition Unit を再インストールしたら、データコレクタを Acquisition Unit に再び割り当てます。
+
+
+
+
+== AU 詳細を表示しています
+
+Acquisition Unit （ AU ）の詳細ページには、 AU に関する有用な情報やトラブルシューティングに役立つ情報が表示されます。AU 詳細ページには、次のセクションがあります。
+
+* 以下を示す * サマリ * セクション：
++
+** * Acquisition Unit の名前 * と IP *
+** AU の現在の接続 * Status *
+** * 最終報告 * データコレクタのポーリング時間に成功
+** AU マシンの * オペレーティング・システム *
+** AU の現在の * 注 * 。このフィールドには、 AU のコメントを入力します。このフィールドには、最後に追加されたメモが表示されます。
+
+
+* 各データコレクタについて、 AU * Data Collectors * のテーブルが表示されます。
++
+** * 名前 *- このリンクをクリックすると、追加情報を使用してデータコレクタの詳細ページにドリルダウンできます
+** * Status * - 成功またはエラー情報
+** * タイプ * - ベンダー / モデル
+** * データコレクタの IP * アドレス
+** 現在の * 影響 * レベル
+** *Last Acquired * time ：データコレクタが最後に正常にポーリングされた時刻
+
+
+
+
+image:AU_Detail_Example.png["AU Detail Page の例"]
+
+データコレクタごとに、 [Three dots] メニューをクリックして、データコレクタの複製、編集、ポーリング、または削除を実行できます。このリストで複数のデータコレクタを選択して、それらに対して一括操作を実行することもできます。
+
+Acquisition Unit を再起動するには、ページ上部の「 * Restart * 」ボタンをクリックします。接続に問題が発生した場合に、このボタンをドロップダウンして、 AU への * 接続の復元 * を試行します。

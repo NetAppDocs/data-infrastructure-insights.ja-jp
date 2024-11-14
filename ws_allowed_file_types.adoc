@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: ws_allowed_file_types.html 
+keywords: workload security, cloud secure, include list, allowed, file types, ransomware 
+summary: 警告を減らすために、許可されたファイルタイプリストにファイル拡張子を追加します。 
+---
+= 許可されたファイルタイプポリシー
+:allow-uri-read: 
+
+
+[role="lead"]
+既知のファイル拡張子に対するランサムウェア攻撃が検出され、[Alerts]画面でアラートが生成されている場合は、そのファイル拡張子を_allowedファイルtypes_listに追加して不要なアラートを防ぐことができます。
+
+[Workload Security]>[Policies]*に移動し、[_Allowed File Type Policies]タブに移動します。
+
+image:WS_Allowed_File_Type_Policies.png["許可されたファイルタイプポリシー"]
+
+一度_allowedファイルtypes_listに追加されると、その許可されたファイルタイプに対してランサムウェア攻撃アラートは生成されません。_allowed File types_policyはランサムウェアの検出にのみ適用されることに注意してください。
+
+たとえば、_test.txt_という名前のファイルが_test.txt.abc_に変更され、_.abc_拡張子によってランサムウェア攻撃が検出された場合、_.abc_拡張子を_allowedファイルtypes_listに追加できます。リストに追加されると、拡張子が_.abc_のファイルに対するランサムウェア攻撃は生成されなくなります。
+
+許可されるファイルタイプには、完全一致（例：".abc"）または式（例：".*type"、".type*"、または"*type*"）を指定できます。タイプ「. a * c」、「. p * f」の式はサポートされていません。

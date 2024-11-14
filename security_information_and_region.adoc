@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: security_information_and_region.html 
+summary: Data Infrastructure Insightsは、リリースのライフサイクル全体を通じてセキュリティのベストプラクティスに準拠しています。 
+keywords: security, risk, protection 
+---
+= 情報と地域
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+ネットアップでは、お客様の情報のセキュリティを非常に重視しています。Data Infrastructure Insightsで情報を保存する方法と場所をご紹介します。
+
+
+
+== Data Infrastructure Insightsにはどのような情報が保存されますか？
+
+Data Infrastructure Insightsには次の情報が格納されます。
+
+* パフォーマンスデータ
++
+パフォーマンスデータは、監視対象のデバイス / ソースのパフォーマンスに関する情報を提供する時系列のデータです。たとえば、ストレージシステムによって配信される IOS の数、ファイバチャネルポートのスループット、 Web サーバによって配信されるページ数、データベースの応答時間などです。
+
+* インベントリデータ
++
+インベントリデータは、監視対象のデバイス / ソースを記述するメタデータと、その設定方法で構成されます。たとえば、インストールされているハードウェアとソフトウェアのバージョン、ストレージシステム内のディスクとLUN、CPUコア、RAMと仮想マシンのディスク、データベースの表領域、SANスイッチ上のポートの数とタイプ、ディレクトリとファイルの名前（ストレージワークロードのセキュリティが有効な場合）などです
+
+* 設定データ
++
+これは、顧客のインベントリや操作を管理するために使用される、顧客から提供された構成データの要約です。たとえば、監視対象デバイスのホスト名や IP アドレス、ポーリング間隔、タイムアウト値などです
+
+* 秘密
++
+シークレットは、Data Infrastructure Insights Acquisition Unitがお客様のデバイスやサービスにアクセスするために使用するクレデンシャルで構成されます。これらのクレデンシャルは強力な非対称暗号化を使用して暗号化され、秘密鍵はAcquisition Unitにのみ格納され、お客様の環境から離れることはありません。Privileged Data Infrastructure InsightsのSREであっても、この設計により、プレーンテキストで顧客シークレットにアクセスできません。
+
+* 機能データ
++
+このデータは、ネットアップがクラウドデータサービスを提供することで生成されます。このサービスは、クラウドデータサービスの開発、導入、運用、メンテナンス、セキュリティの各分野をネットアップに通知します。機能データには、顧客情報や個人情報は含まれません。
+
+* ユーザーアクセスデータ
++
+NetApp BlueXP  が各地域のData Infrastructure Insightsサイトと通信できるようにする認証およびアクセス情報（ユーザの承認に関連するデータなど）。
+
+* ストレージワークロードのセキュリティユーザディレクトリデータ
++
+ワークロードセキュリティ機能が有効になっていて、ユーザーディレクトリコレクタを有効にすることを選択した場合、ユーザー表示名、企業の電子メールアドレス、およびActive Directoryから収集されたその他の情報が保存されます。
+
+
+
+
+NOTE: ユーザディレクトリデータとは、ワークロードセキュリティユーザディレクトリデータコレクタによって収集されたユーザディレクトリ情報であり、データインフラインサイト/ワークロードセキュリティのユーザ自身に関するデータではありません。
+
+* 明示的な個人データは一切ありません。 * インフラストラクチャとサービスのリソースから収集されます。収集される情報は、パフォーマンス指標、設定情報、インフラメタデータのみで構成され、ネットアップの自動サポートや ActiveIQ など、多くのベンダーの電話ホームと同様です。ただし、お客様の命名規則に応じて、共有、ボリューム、 VM 、 qtree のデータ アプリケーションなどには、個人を特定できる情報が含まれる場合があります。
+
+ワークロードのセキュリティが有効になっている場合、システムはさらに、個人を特定可能な情報を含むSMBまたはその他の共有上のファイル名とディレクトリ名を調べます。お客様がWorkload Security User Directory Collector（Active Directoryを介してWindows SIDをユーザ名にマッピングする）を有効にした場合、表示名、企業のEメールアドレス、および選択したその他の属性がData Infrastructure Insightsによって収集され、保存されます。
+
+さらに、Data Infrastructure Insightsへのアクセスログは維持され、サービスへのログインに使用されたユーザのIPアドレスとEメールアドレスが記録されます。
+
+
+
+== 情報はどこに保存されますか？
+
+Data Infrastructure Insightsには、環境が作成されたリージョンに基づいて情報が格納されます。
+
+ホスト領域には、次の情報が格納されます。
+
+* カウンタやパフォーマンス指標などの計測情報と資産 / オブジェクト情報
+* Acquisition Unit の情報
+* 機能データ
+* Data Infrastructure Insights内のユーザアクティビティに関する情報を監査
+* ワークロードセキュリティActive Directoryの情報
+* ワークロードのセキュリティ監査情報
+
+
+以下の情報は、Data Infrastructure Insights環境をホストしているリージョンに関係なく、米国内に存在します。
+
+* サイト / アカウント所有者などの環境サイト（「テナント」とも呼ばれる）情報。
+* NetApp BlueXP  が各地域のData Infrastructure Insightsサイトと通信できるようにするための情報（ユーザの承認に関連する情報を含む）。
+* Data Infrastructure Insightsのユーザとテナントの関係に関連する情報。
+
+
+
+
+=== ホストリージョン
+
+ホスト領域は次のとおりです。
+
+* US ： us-east-1
+* EMEA ： EU-central -1
+* APAC ： AP-南東 部 -2
+
+
+
+
+== 詳細情報
+
+ネットアップのプライバシーとセキュリティの詳細については、次のリンクを参照してください。
+
+* link:https://www.netapp.com/us/company/trust-center/index.aspx["トラストセンター"]
+* link:https://www.netapp.com/us/company/trust-center/privacy/data-location-cross-border-transfers.aspx["クロスボーダーデータ転送"]
+* link:https://www.netapp.com/us/company/trust-center/privacy/bcr-binding-corporate-rules.aspx["企業規則の拘束"]
+* link:https://www.netapp.com/us/company/trust-center/transparency/third-party-data-requests.aspx["サードパーティのデータ要求への対応"]
+* link:https://www.netapp.com/us/company/trust-center/privacy/privacy-principles-security-safeguards.aspx["ネットアッププライバシーの原則"]
+

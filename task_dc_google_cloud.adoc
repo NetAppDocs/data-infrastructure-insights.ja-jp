@@ -1,0 +1,80 @@
+---
+sidebar: sidebar 
+permalink: task_dc_google_cloud.html 
+summary: Google Compute データコレクタを設定します 
+keywords: data collector, queries, create 
+---
+= NetApp Google Compute データコレクタ
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+このデータコレクタは、 Google Compute クラウドプラットフォーム構成からのインベントリとパフォーマンスの収集をサポートします。このコレクタは、 1 つの Google 組織内のすべてのプロジェクト内のすべてのコンピューティングリソースを検出しようとします。Data Infrastructure Insightsで検出したいGoogle組織が複数ある場合は、組織ごとにData Infrastructure Insightsコレクタを1つ導入します。
+
+
+
+== サービスアカウントの要件
+
+* の手順に従って、サービスアカウントを作成する必要がありますlink:https://cloud.google.com/iam/docs/creating-managing-service-accounts["サービスアカウントの作成/管理"]。このようなサービスアカウントは、ITS_ClientID_と呼ばれる一意のIDによって識別され、ユーザ名として使用されます。
+* さらに、の手順に従ってサービスアカウントキーを作成しますlink:https://cloud.google.com/iam/docs/creating-managing-service-account-keys["サービスアカウントキーの作成/管理"]。このキーはJSONファイルとしてダウンロードでき、そのコンテンツはパスワードとして使用されます。
+* サービスアカウントのスコープは、_compute.readonly_、_monitoring.read_、および_cloud-platform_である必要があります。
+
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| 組織 ID | このコレクタで検出する組織 ID 。サービスアカウントが複数の組織を表示できる場合は、このフィールドが必要です 
+
+
+| GCP プロジェクトを ID でフィルタリングするには、 [ 除外 ] または [ 含める ] を選択します | Data Infrastructure Insightsに取り込むプロジェクトのリソースを制限する場合は、 
+
+
+| プロジェクト ID | 「除外する」値の値に応じて、フィルタするプロジェクト ID または検出から除外するプロジェクト ID のリスト。デフォルトリストは空です 
+
+
+| クライアントID | Google Cloud Platform 構成のクライアント ID 
+
+
+| Google 資格情報ファイルの内容をここにコピーして貼り付けます | Cloud Platform アカウントの Google クレデンシャルをこのフィールドにコピーします 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| インベントリポーリング間隔（分） | デフォルトは60分です 
+
+
+| VM をラベルでフィルタリングするには、「除外」または「含める」を選択します | データの収集時に VM をラベルで含めるか除外するかを指定します。「含める」が選択されている場合は、「ラベルキー」フィールドを空白にすることはできません。 
+
+
+| VM をフィルタリングするキーと値を指定します | VM のキーとラベルの値に一致するキーと値でフィルタリングして、対象に含める VM （および関連するディスク）を選択するには、「 * + フィルタラベル * 」をクリックします。ラベルキーは必須です。ラベル値はオプションです。ラベル値が空の場合、 VM はラベルキーと一致するかぎりフィルタリングされます。 
+
+
+| パフォーマンスポーリング間隔（秒） | デフォルトは1800秒です 
+|===
+
+
+== トラブルシューティング
+
+このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

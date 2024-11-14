@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: kubernetes_landing_page.html 
+keywords: telegraf, installation, install, kubernetes, pods, clusters, filters, filtering, k8s 
+summary: Kubernetes のランディングページで 
+---
+= Kubernetes クラスタの概要
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights Kubernetes Explorerは、Kubernetesクラスタの全体的な健全性と使用状況を表示するための強力なツールであり、調査領域に簡単にドリルダウンできます。
+
+[Dashboards]>[Kubernetes Explorer]をクリックすると、[Kubernetes Cluster]リストページが開きます。この概要ページには、環境内のKubernetesクラスタの表が含まれています。
+
+image:Kubernetes_List_Page_new.png["Kubernetesリストページ"]
+
+
+
+=== クラスタリスト
+
+クラスタリストには、環境内の各クラスタについて次の情報が表示されます。
+
+* クラスタ*名*。クラスタ名をクリックすると、そのクラスタのが開きlink:kubernetes_cluster_detail.html["* 詳細ページ *"]ます。
+* *彩度*パーセンテージ。Overall Saturation（全体飽和）は、CPU、メモリ、またはストレージの飽和度の最大値です。
+* クラスタ内のノード数*。この番号をクリックすると、Node listページが開きます。
+* クラスタ内の* Pod*の数。この番号をクリックすると、ポッドリストページが開きます。
+* クラスタ内のネームスペースの数*。この番号をクリックすると、名前空間リストページが開きます。
+* クラスタ内のワークロードの数*。この数値をクリックすると、ワークロードリストページが開きます。
+
+
+
+
+== フィルタを調整しています
+
+フィルタ処理中に、入力を開始すると、現在のテキストに基づいて * ワイルドカードフィルタ * を作成するオプションが表示されます。このオプションを選択すると、ワイルドカード式に一致するすべての結果が返されます。NOTまたはANDを使用して*式*を作成することもできます。また、「なし」オプションを選択してフィールド内のnull値をフィルタリングすることもできます。
+
+image:Filter_Kubernetes_Explorer.png["K8S Explorer でワイルドカードを使用したフィルタリング"]
+
+ワイルドカードまたは式に基づくフィルタ（例 フィルタフィールドには、「なし」などは濃い青で表示されます。リストから直接選択した項目は、水色で表示されます。
+
+image:Filter_Kubernetes_Explorer_2.png["ワイルドカードおよび選択した項目を表示するフィルタ"]
+
+Kubernetes フィルタはコンテキストに応じて表示されます。つまり、特定のノードページ上にある場合、 pod _name フィルタはそのノードに関連するポッドのみをリストします。さらに、特定のネームスペースにフィルタを適用すると、名前空間の名前空間ではポッドのみが表示されます。
+
+ワイルドカードおよび式フィルタリングは、テキストまたはリストでは機能しますが、数値、日付、またはブール値では機能しません。

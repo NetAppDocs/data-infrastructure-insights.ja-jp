@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: concept_cs_integration_with_ontap_arp.html 
+summary: ワークロードセキュリティをONTAP の自動ランサムウェア防御と統合することで、ランサムウェアの検出を強化 
+keywords: ransomware, ARP, Protection, Security 
+---
+= ONTAP によるランサムウェア対策との統合
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+ONTAP の自律的ランサムウェア対策（ARP）機能は、NAS（NFSおよびSMB）環境におけるワークロード分析を使用して、ランサムウェア攻撃を示す可能性のある異常なインファイルアクティビティをプロアクティブに検出して警告します。
+
+ARPの詳細とライセンス要件についてはlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["ここをクリック"]、こちらを参照してください。
+
+ワークロードセキュリティは、ONTAP と統合してARPイベントを受信し、追加の分析と自動応答レイヤを提供します。
+
+ワークロードセキュリティは、ONTAP からARPイベントを受信し、次の処理を行います。
+
+. ボリューム暗号化イベントとユーザアクティビティを関連付けて、破損の原因となっているユーザを特定します。
+. 自動応答ポリシーを実装する（定義されている場合）
+. フォレンジック機能を提供：
++
+** お客様がデータ侵害の調査を実施できるようにします。
+** 影響を受けたファイルを特定し、迅速なリカバリとデータ侵害の調査に役立ちます。
+
+
+
+
+
+
+== 前提条件
+
+. ONTAPの最小バージョン：9.11.1
+. ARPが有効なボリューム。ARPのイネーブル化の詳細については、link:https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html["ここをクリック"]を参照してください。ARPは、OnCommand システムマネージャを介して有効にする必要があります。ワークロードセキュリティでARPを有効にすることはできませ
+. ワークロードセキュリティコレクタはクラスタIPを介して追加する必要があります。
+. この機能を使用するには、クラスタレベルのクレデンシャルが必要です。つまり、SVMを追加するときはクラスタレベルのクレデンシャルを使用する必要があります。
+
+
+
+
+== ユーザ権限が必要です
+
+クラスタ管理者のクレデンシャルを使用している場合、新しい権限は不要です。
+
+ユーザに付与された権限でカスタムユーザ（_csuser_など）を使用している場合は、次の手順に従ってワークロードセキュリティにアクセス許可を付与し、ONTAP からARP関連情報を収集します。
+
+クラスタクレデンシャルを使用する_csuser_withの場合、ONTAP コマンドラインから次の操作を実行します。
+
+....
+security login rest-role create -role arwrole -api /api/storage/volumes -access readonly -vserver <cluster_name>
+security login rest-role create -api /api/security/anti-ransomware -access readonly  -role arwrole -vserver <cluster_name>
+security login create -user-or-group-name csuser -application http -authmethod password -role arwrole
+....
+その他の設定について詳しくは、こちらをご覧くださいlink:task_add_collector_svm.html["ONTAPケンケン"]。
+
+
+
+== アラートの例
+
+ARPイベントにより生成されたアラートの例を次に示します。
+
+image:CS_Ransomware_Example_1.png["ランサムウェアアラートの上部セクション"] image:CS_Ransomware_Example_2.png["ランサムウェアアラートの上部セクション"] image:CS_Ransomware_Example_3.png["ランサムウェアアラートの上部セクション"]
+
+信頼性の高いバナーは、攻撃がランサムウェアの挙動とファイル暗号化のアクティビティを示していることを示しています。暗号化ファイルのグラフには、ARP解決策 によってボリューム暗号化アクティビティが検出されたタイムスタンプが示されます。
+
+
+
+== 制限事項
+
+SVMがワークロードセキュリティで監視されていないものの、ONTAP によって生成されたARPイベントがある場合、ワークロードセキュリティはイベントを受信して表示します。ただし、アラートに関連するフォレンジック情報およびユーザーマッピングはキャプチャまたは表示されません。
+
+
+
+== トラブルシューティング
+
+既知の問題とその解決策を次の表に示します。
+
+[cols="2*"]
+|===
+| 問題 | 解決策： 
+
+
+| 電子メールアラートは、攻撃が検出されてから24時間後に受信されます。UIでは、その24時間前にData Infrastructure Insights Workload SecurityがEメールを受信するとアラートが表示されます。 | ONTAPがData Infrastructure Insights Workload Security（ワークロードセキュリティ）に_Ransomware Detected_Eventを送信すると、Eメールが送信されます。イベントには、攻撃のリストとタイムスタンプが含まれます。Workload Security UIには、攻撃を受けた最初のファイルのアラートタイムスタンプが表示されます。ONTAPは、一定数のファイルがエンコードされると、_Ransomware Detected_EventをData Infrastructure Insightsに送信します。そのため、UIにアラートが表示される時間とEメールが送信される時間が異なる場合があります。 
+|===

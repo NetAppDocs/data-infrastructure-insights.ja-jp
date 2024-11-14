@@ -1,0 +1,127 @@
+---
+sidebar: sidebar 
+permalink: concept_cs_agent_requirements.html 
+summary: エージェントとして使用するサーバまたは VM が、最小要件を満たしている必要があります 
+keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cloud Secure 
+---
+= ワークロードセキュリティエージェントの要件
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+データコレクタから情報を取得するには、必要がありますlink:task_cs_add_agent.html["エージェントをインストールします"]。Agent をインストールする前に、お使いの環境がオペレーティングシステム、 CPU 、メモリ、およびディスクスペースの要件を満たしていることを確認してください。
+
+[cols="36,60"]
+|===
+| コンポーネント | Linux 要件 
+
+
+| オペレーティングシステム | * CentOS 8 Stream（64ビット）、CentOS 9 Stream、SELinux * openSUSE LEAP 15.3～15.5（64ビット）* Oracle Linux 8.6-8.8、9.1～9.4（64ビット）* Red Hat Enterprise Linux 8.6～9.4（64ビット）、9.1～9.4（64ビット）、SELinux * Rocky SP9.2-9.4専用のサーバを使用することを推奨します。 
+
+
+| コマンド | インストールには「unzip」が必要です。また、インストール、スクリプトの実行、およびアンインストールには、「sudo su–」コマンドが必要です。 
+
+
+| CPU | 4個のCPUコア 
+
+
+| メモリ | 16GBのRAM 
+
+
+| 使用可能なディスクスペース | ディスク領域は次のように割り当てる必要があります。/opt/ NetApp 36 GB (ファイルシステム作成後に35 GB以上の空き領域)注:ファイルシステムを作成できるように、少し余分なディスク領域を割り当てることをお勧めします。ファイルシステムに35GB以上の空きスペースがあることを確認します。/optがNASストレージからマウントされたフォルダである場合は、ローカルユーザーがこのフォルダにアクセスできることを確認してください。ローカルユーザーがこのフォルダへのアクセス権を持っていない場合、AgentまたはData Collectorのインストールに失敗することがあります。詳細については、を参照してください。link:task_cs_add_agent.html#troubleshooting-agent-errors["トラブルシューティング"] 
+
+
+| ネットワーク | 100 Mbps~1 Gbpsイーサネット接続、静的IPアドレス、すべてのデバイスへのIP接続、およびワークロードセキュリティインスタンスへの必要なポート（80または443） 
+|===
+注：ワークロードセキュリティエージェントは、Data Infrastructure Insights Acquisition Unitやエージェントと同じマシンにインストールできます。ただし、これらを別々のマシンにインストールすることを推奨します。これらが同じマシンにインストールされている場合は、次のようにディスク領域を割り当ててください。
+
+|===
+
+
+| 使用可能なディスクスペース | Linux では 50 ～ 55 GB 、ディスクスペースは次のように割り当てます。 /opt/netapp 25-30 GB /var/log/netapp 25 GB 
+|===
+
+
+== その他の推奨事項
+
+* ONTAP システムとエージェントマシンの両方の時刻を、 *Network Time Protocol （ NTP; ネットワークタイムプロトコル） * または *Simple Network Time Protocol （ SNTP ） * を使用して同期することを強くお勧めします。
+
+
+
+
+== Cloud Network Access Rules の略
+
+USベースの*ワークロード・セキュリティ環境の場合：
+
+[cols="5*"]
+|===
+| プロトコル | ポート | ソース | デスティネーション | 製品説明 
+
+
+| TCP | 443 | ワークロードセキュリティエージェント | < サイト名 > .cs01.cloudinsights.netapp.com < サイト名 > .c01.cloudinsights.netapp.com < サイト名 > .c02.cloudinsights.netapp.com | データインフラの分析情報へのアクセス 
+
+
+| TCP | 443 | ワークロードセキュリティエージェント | gateway.c01.cloudinsights.netapp.com agentlogin.cs01.cloudinsights.netapp.com | 認証サービスへのアクセス 
+|===
+欧州*ベースのワークロード・セキュリティー環境の場合：
+
+[cols="5*"]
+|===
+| プロトコル | ポート | ソース | デスティネーション | 製品説明 
+
+
+| TCP | 443 | ワークロードセキュリティエージェント | < サイト名 > .cs01-eu-1.cloudinsights.netapp.com < サイト名 > .c01-eu-1.cloudinsights.netapp.com < サイト名 > .c02-eu-1.cloudinsights.netapp.com | データインフラの分析情報へのアクセス 
+
+
+| TCP | 443 | ワークロードセキュリティエージェント | gateway.c01.cloudinsights.netapp.com agentlogin.cs01-eu-1.cloudinsights.netapp.com | 認証サービスへのアクセス 
+|===
+APACベースの*ワークロード・セキュリティ環境の場合：
+
+[cols="5*"]
+|===
+| プロトコル | ポート | ソース | デスティネーション | 製品説明 
+
+
+| TCP | 443 | ワークロードセキュリティエージェント | < サイト名 > .cs01-ap-1.cloudinsights.netapp.com < サイト名 > .c01-ap-1.cloudinsights.netapp.com < サイト名 > .c02-ap-1.cloudinsights.netapp.com | データインフラの分析情報へのアクセス 
+
+
+| TCP | 443 | ワークロードセキュリティエージェント | gateway.c01.cloudinsights.netapp.com agentlogin.cs01-ap-1.cloudinsights.netapp.com | 認証サービスへのアクセス 
+|===
+
+
+== ネットワーク内ルール
+
+[cols="5*"]
+|===
+| プロトコル | ポート | ソース | デスティネーション | 製品説明 
+
+
+| TCP | 389 （ LDAP ） 636 （ LDAPS / start-TLS ） | ワークロードセキュリティエージェント | LDAP サーバ URL | LDAP に接続します 
+
+
+| TCP | 443 | ワークロードセキュリティエージェント | クラスタまたはSVMの管理IPアドレス（SVMコレクタの設定に応じて） | ONTAP との API 通信 
+
+
+| TCP | 35000 ~ 55000 | SVM データ LIF の IP アドレス | ワークロードセキュリティエージェント | FPolicyイベントのONTAPからワークロードセキュリティエージェントへの通信。ONTAPがイベントをワークロードセキュリティエージェントに送信するには、これらのポートをワークロードセキュリティエージェントに対して開いておく必要があります。これには、ワークロードセキュリティエージェント自体のファイアウォールも含まれます（存在する場合）。これらのポートをすべて予約する必要はありませんが、予約するポートはこの範囲内である必要があります。最初に最大100個のポートを予約し、必要に応じて増やすことをお勧めします。 
+
+
+| TCP | 7 | ワークロードセキュリティエージェント | SVM データ LIF の IP アドレス | エージェントからSVMのデータLIFへのエコー 
+
+
+| SSH | 22 | ワークロードセキュリティエージェント | クラスタ管理 | CIFS / SMBユーザブロックに必要です。 
+|===
+
+
+== システムのサイジング
+
+サイジングの詳細については、のドキュメントを参照してlink:concept_cs_event_rate_checker.html["イベントレートチェッカー"]ください。

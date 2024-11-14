@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_kibana.html 
+keywords: telegraf, installation, install, kibana 
+summary: Kibana データコレクタの設定 
+---
+= Kibana データコレクタ
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsでは、このデータコレクタを使用してKibanaから指標データを収集します。
+
+
+
+== インストール
+
+. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。「きばな」を選択します。
++
+Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+
+. コレクション用エージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[_Show Instructions_]をクリックして手順を展開しlink:task_config_telegraf_agent.html["エージェントのインストール"]ます。
+. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
+. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+
+
+image:KibanaDCConfigLinux.png["Kibana の構成"]
+
+
+
+== セットアップ
+
+詳細については、を参照してlink:https://www.elastic.co/guide/index.html["Kibana のドキュメンテーション"]ください。
+
+
+
+== オブジェクトとカウンタ
+
+次のオブジェクトとそのカウンタが収集されます。
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+
+
+| キバナ | ネームスペースアドレス | ノード IP ノード名バージョンステータス | 同時接続ヒープ最大ヒープ使用要求 / 秒応答時間平均応答時間最大アップタイム 
+|===
+
+
+== トラブルシューティング
+
+詳細については、ページを参照してlink:concept_requesting_support.html["サポート"]ください。

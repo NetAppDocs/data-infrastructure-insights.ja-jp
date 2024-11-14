@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: task_identify_inactive_devices.html 
+keywords: inactive, device, 
+summary: 非アクティブなデバイスを識別すると、そのデバイスを削除するか、アクティブなロールに割り当てるかを選択できます。 
+---
+= 非アクティブなデバイスの識別
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+所有している資産とその使用者を特定することは、「適切なサイジング」を行い、使用していないインフラストラクチャを解放するために重要です。使用率の低いリソースを簡単に再割り当てしたり、運用を停止したりでき、不要な購入を回避できます
+
+次の手順に従って、アクセス頻度の低いアセットを特定します。
+
+.手順
+* [Explore]->[+New Metric Query]*に移動します。
+* ドロップダウンから[_Storage_]を選択します。
+* ギアをクリックし、_isActive_を 列として追加します。
++
+チェックを表示している行がアクティブです。「X」は非アクティブなデバイスを示します。
+
+

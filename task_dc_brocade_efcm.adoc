@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: task_dc_brocade_efcm.html 
+keywords: data collector, Brocade, EFCM, 
+summary: Brocade データコレクタの設定 
+---
+= Brocade Enterprise Fabric Connectivity Manager データコレクタの設定
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsは、Brocade Enterprise Fabric Connectivity Manager（EFCM）データコレクタを使用して、Brocade EFCMスイッチのインベントリを検出します。Data Infrastructure Insightsは、EFCMバージョン9.5、9.6、9.7をサポートしています。
+
+
+
+== 要件
+
+* EFCM サーバのネットワークアドレスまたは完全修飾ドメイン名
+* EFCM のバージョンは 9.5 、 9.6 、または 9.7 である必要があります
+* EFCMサーバのIPアドレス
+* EFCM サーバに対する読み取り専用のユーザ名とパスワード
+* ポート51512を介した読み取り専用のユーザ名とパスワードを使用して'Data Infrastructure InsightsサーバからConnectrixスイッチへのTelnetアクセスを検証
+
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| EFCサーバ | EFCサーバのIPアドレスまたは完全修飾ドメイン名 
+
+
+| ユーザー名 | スイッチのユーザ名 
+
+
+| パスワード | スイッチのパスワード 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| インベントリポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは15分です。 
+
+
+| ファブリック名 | EFCM データコレクタでレポートするファブリック名ファブリック名を WWN としてレポートする場合は、空白のままにします。 
+
+
+| 通信ポート | スイッチとの通信に使用するポート 
+
+
+| トラッピングを有効にします | デバイスからの SNMP トラップの受信時にデータ収集を有効にする場合に選択します。トラップを有効にするを選択した場合は、 SNMP も有効にする必要があります。 
+
+
+| トラップ間の最小時間（秒） | トラップでデータ収集を試行する最小間隔。デフォルトは15秒です。 
+
+
+| 非アクティブなゾーンセット | アクティブなゾーンセットに加えてデータ収集の対象に含める非アクティブなゾーンセットをカンマで区切ったリスト 
+
+
+| 使用する NIC | SAN デバイスをレポートする際に RAU で使用するネットワークインターフェイスを指定します 
+
+
+| デバイスを除外します | ポーリングの対象に含めるか除外するユニットの名前をカンマで区切ったリスト 
+
+
+| EFCM スイッチのニックネームをスイッチ名として使用します | EFCMスイッチのニックネームをData Infrastructure Insightsのスイッチ名として使用する場合に選択します。 
+
+
+| パフォーマンスポーリング間隔（秒） | パフォーマンスのポーリング間隔デフォルトは300秒です。 
+|===

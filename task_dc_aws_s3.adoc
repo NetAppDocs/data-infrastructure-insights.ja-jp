@@ -1,0 +1,152 @@
+---
+sidebar: sidebar 
+permalink: task_dc_aws_s3.html 
+keywords: data collector, S3, Storage 
+summary: AWS S3をストレージデータコレクタとして設定する。 
+---
+= AWS S3をストレージデータコレクタとして設定します
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsは、AWS S3をストレージデータコレクタとして使用して、AWS S3インスタンスからインベントリデータとパフォーマンスデータを取得します。
+
+
+
+== 要件
+
+AWS S3からストレージデバイスとしてデータを収集するには、次の情報が必要です。
+
+* 次のいずれかが必要です。
++
+** IAMロール認証を使用している場合は、AWSクラウドアカウント用の* IAMロール*。IAM ロールは、 Acquisition Unit が AWS インスタンスにインストールされている場合にのみ適用されます。
+** IAM Access Key認証を使用している場合は、AWSクラウドアカウントの* IAM Access Key * IDとSecret Access Key。
+
+
+* 「組織のリスト」権限が必要です
+* ポート443 HTTPS
+* AWS S3インスタンスは、仮想マシンまたは（自然に）ホストとしてレポートできます。EBS ボリュームは、 VM で使用されている仮想ディスクと、仮想ディスクの容量を提供するデータストアの両方として報告できます。
+
+
+アクセスキーは、アクセスキー ID （ AKIAIOSFODNN7EXAMPLE など）とシークレットアクセスキー（ wJalrXUtil/K7MDENG/bPxRfiCYEXAMPLEKEY など）で構成されます。AWS SDK、REST、またはクエリAPIの処理を使用している場合は、アクセスキーを使用して、AWSにプログラム経由で送信される要求に署名します。これらのキーは、 Amazon の契約に付属しています。
+
+
+
+== 構成
+
+次の表に従って、データコレクタフィールドにデータを入力します。
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| AWSリージョン | AWS リージョンを選択します 
+
+
+| IAMロール | AWS の AU で取得した場合にのみ使用します。の詳細については、以下を参照してください<<iam-role,IAMロール>>。 
+
+
+| AWS IAM Access Key ID | AWS IAM Access Key ID を入力します。IAM ロールを使用しない場合は必須です。 
+
+
+| AWS IAM Secret Access Key の略 | AWS IAM Secret Access Key を入力します。IAM ロールを使用しない場合は必須です。 
+
+
+| AWS が API 要求を課金することを理解している | このチェックボックスをオンにすると、Data Infrastructure Insightsのポーリングによって作成されたAPI要求に対してAWSから課金されることを理解しているかどうかを確認できます。 
+|===
+
+
+== 詳細設定
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| クロスアカウントロール | 異なる AWS アカウントのリソースにアクセスするためのロール。 
+
+
+| インベントリポーリング間隔（分） | デフォルトは60です 
+
+
+| 「除外」または「含める」を選択して、タグによる VM のフィルタリングに適用します | データの収集時にタグを使用して VM を含めるか除外するかを指定します。「含める」が選択されている場合、タグキーフィールドを空にすることはできません。 
+
+
+| パフォーマンスポーリング間隔（秒） | デフォルトは1800です 
+|===
+
+
+== IAMアクセスキー
+
+アクセスキーは、 IAM ユーザまたは AWS アカウントの root ユーザの長期的なクレデンシャルです。アクセスキーは、プログラムによる AWS CLI または AWS API への要求に（直接または AWS SDK を使用して）署名するために使用します。
+
+アクセスキーは、アクセスキー ID とシークレットアクセスキーの 2 つの部分で構成されます。IAM Role _authentication ではなく、 _IAM Access Key _authentication を使用する場合は、要求の認証にアクセスキー ID とシークレットアクセスキーの両方を一緒に使用する必要があります。詳細については、のAmazonドキュメントを参照してくださいlink:https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html["アクセスキー"]。
+
+
+
+== IAMロール
+
+IAM Access Key 認証ではなく、 _IAM Role_authentication を使用する場合は、作成または指定するロールにリソースへのアクセスに必要な適切な権限が割り当てられていることを確認する必要があります。
+
+たとえば、_InstanceS3ReadOnly_という名前のIAMロールを作成した場合は、このIAMロールのすべてのS3リソースにS3の読み取り専用リストへのアクセス権限を付与するようにポリシーを設定する必要があります。また、このロールがアカウント間でロールを引き受けることができるように、 STS （セキュリティトークンサービス）アクセスを許可する必要があります。
+
+IAMロールを作成したら、新しいS3インスタンスまたは既存のS3インスタンスを作成するときにIAMロールを関連付けることができます。
+
+IAMロール_InstanceS3ReadOnly_をS3インスタンスに接続すると、インスタンスメタデータから一時的なクレデンシャルをIAMロール名で取得できるようになり、このS3インスタンスで実行されているすべてのアプリケーションからAWSリソースにアクセスできるようになります。
+
+詳細については、Amazonのドキュメントを参照してくださいlink:https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html["IAM ロール"]。
+
+注： IAM ロールは、 AWS インスタンスで Acquisition Unit を実行している場合にのみ使用できます。
+
+
+
+== AmazonのタグをData Infrastructure Insightsのアノテーションにマッピング
+
+AWS S3 as Storageデータコレクタには、S3で設定されたタグを使用してData Infrastructure Insightsのアノテーションを入力できるオプションがあります。アノテーションにはAWSのタグとまったく同じ名前を付ける必要があります。Data Infrastructure Insightsでは、常に同じ名前のテキストタイプのアノテーションが入力され、他のタイプ（数値、ブール値など）のアノテーションが入力されるよう「最善の試み」が行われます。アノテーションのタイプが異なるためにデータコレクタにデータを入力できない場合は、アノテーションを削除してテキストタイプで再作成する必要があります。
+
+AWSでは大文字と小文字が区別され、Data Infrastructure Insightsでは大文字と小文字が区別されないことに注意してください。そのため、Data Infrastructure Insightsで「owner」という名前のアノテーションを作成し、S3で「owner」、「Owner」、「owner」という名前のタグを作成すると、S3で使用される「owner」のすべてのバリエーションがCloud Insightの「owner」アノテーションにマッピングされます。
+
+
+
+== 追加リージョンを含める
+
+AWS Data Collector * Advanced Configuration * セクションでは、 * Include extra regions * フィールドを設定して、カンマまたはセミコロンで区切って追加のリージョンを含めることができます。デフォルトでは、このフィールドは * _us-.*_* に設定されており、これによってすべての US AWS リージョンで収集されます。on_all_regions を収集するには、このフィールドを *_.*_* に設定します。「 * include extra regions * 」フィールドが空の場合、「 * Configuration * 」セクションの指定に従って、「 * AWS Region * 」フィールドに指定されたアセットについてデータコレクタが収集されます。
+
+
+
+== AWS の子アカウントから収集しています
+
+Data Infrastructure Insightsでは、1つのAWSデータコレクタ内でAWSの子アカウントを収集できます。この収集の設定は、 AWS 環境で実行されます。
+
+* 各子アカウントにAWSロールを設定して、メインアカウントIDに子アカウントのS3の詳細へのアクセスを許可する必要があります。
+* 各子アカウントには、同じ文字列としてロール名を設定する必要があります。
+* このロール名の文字列をData Infrastructure Insights AWS Data Collector * Advanced Configuration *セクションの* Cross account role *フィールドに入力します。
+* コレクタがインストールされているアカウントには、_delegateアクセス権administrator_deligate Privilegesが必要です。詳細については、link:https://docs.aws.amazon.com/accounts/latest/reference/using-orgs-delegated-admin.html["AWSのドキュメント"]を参照してください。
+
+
+ベストプラクティス：AWS Predefined_AmazonS3ReadOnlyAccess_policyをS3メインアカウントに割り当てることを強く推奨します。また、データソースで設定したユーザが AWS に照会するには、少なくとも、 Predefined_AWSOrganizationReadOnlyAccess_policy を割り当てる必要があります。
+
+Data Infrastructure InsightsがAWSの子アカウントからデータを収集できるように環境を構成する方法については、以下を参照してください。
+
+link:https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html["チュートリアル： IAM ロールを使用した AWS アカウント間でのアクセスの委譲"]
+
+link:https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_aws-accounts.html["AWS のセットアップ：自分が所有している別の AWS アカウントで IAM ユーザにアクセスを付与する"]
+
+link:https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html["IAM ユーザに権限を委任するためのロールを作成する"]
+
+
+
+== トラブルシューティング
+
+このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

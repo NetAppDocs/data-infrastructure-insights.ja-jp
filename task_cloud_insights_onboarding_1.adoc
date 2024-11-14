@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: task_cloud_insights_onboarding_1.html 
+summary: Data Infrastructure Insightsにサインアップして、環境を構築しましょう。 
+keywords: onboarding, new user 
+---
+= データインフラの分析情報をオンボーディング
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Data Infrastructure Insightsの使用を開始する前に、* NetApp BlueXP *ポータルにサインアップする必要があります。NetApp BlueXP  へのログインをすでにお持ちの場合は、いくつかの簡単な手順でData Infrastructure Insightsの無償トライアルを開始できます。
+
+
+toc::[]
+
+
+== NetApp BlueXPアカウントの作成
+
+NetAppのクラウドサービスを開始するには、に移動してlink:https://cloud.netapp.com["* NetApp BlueXP *"^]*[開始]*をクリックします。
+
+* まだサインアップしていない場合は、*サインアップ*を選択します
+* 有効なビジネス用 E メールアドレスを入力し、パスワードを選択してください。
+* 会社名と氏名を入力します。
+* 利用条件に同意し、* Continue（続行）*を選択します。
+* BlueXPのガイドに従って操作を開始します。
+
+
+
+
+=== NetApp BlueXPへのログインをすでにお持ちの場合はどうすればよいですか？
+
+NetApp BlueXP  アカウントを取得したら、ポータルページで「ログイン」を選択するだけですlink:https://cloud.netapp.com["* NetApp BlueXP *"^]。
+
+E メールアドレスとパスワードを入力します。その後、ネットアップのクラウドサービスに関するページに移動します。
+
+[Data Infrastructure Insights ]を選択します。
+
+image:BlueXP_CloudInsights.png["BlueXP  でのData Infrastructure Insights無償トライアル"]
+
+
+
+== Data Infrastructure Insights無償トライアルを開始する
+
+Data Infrastructure Insightsに初めてログインする場合は、[Data Infrastructure Insights Offering]で*[Start Free Trial]*をクリックします。Data Infrastructure Insightsでは、環境を配置する地域の選択など、企業の環境を作成する手順を順を追って説明します。
+
+image:trial_region_selector.png["Data Infrastructure Insights環境をホストするリージョンの選択"]
+
+環境の作成が完了したら、BlueXP  クレデンシャルを使用してログインし、30日間のData Infrastructure Insights無償トライアルを開始できます。このトライアルでは、Data Infrastructure Insightsが提供する機能を確認できます。
+
+無償トライアルでは、link:concept_subscribing_to_cloud_insights.html["サブスクリプションを開始します"]Data Infrastructure Insightsをいつでも試すことができます。サブスクリプションを購入すると、現在のサブスクリプションに基づいてData Infrastructure Insightsの機能を使用できます。
+
+
+
+== サインインして実行します
+
+環境の作成が完了したら、いつでもNetApp BlueXP  ポータルにログインし、*[Go to Data Infrastructure Insights（データインフラのインサイトに移動）]*をクリックするだけです。データインフラの分析情報環境が直接表示されます。
+
+ブラウザを開いて、Data Infrastructure Insights環境のURLに直接アクセスすることもできます。次に例を示します。
+
+ \https://<environment-prefix>.c01.cloudinsights.netapp.com/
+また、 URL は各ユーザーの招待メールにも含まれ、簡単にアクセスしたりブックマークを付けたりできます。BlueXPにまだログインしていない場合は、ログインするように求められます。
+
+
+NOTE: 新規ユーザが環境のURLにアクセスするには、引き続きBlueXPへのアクセスに登録する必要があります。
+
+新しい環境に初めてログインするときは、をセットアップする手順が表示されますlink:task_getting_started_with_cloud_insights.html["* データの収集を開始 *"]。
+
+
+
+== ログアウトしています
+
+Data Infrastructure Insightsからログアウトするには、*[ユーザ名]*をクリックし、*[ログアウト]*を選択します。BlueXPのサインイン画面に戻ります。
+
+
+NOTE: Data Infrastructure Insightsからログアウトすると、BlueXP  からログアウトされます。BlueXPサインインを使用する他のNetAppクラウドサービスからもログアウトされます。
+
+
+
+=== 非アクティブ時のタイムアウト
+
+操作がない状態が6時間（360分）続くと、デフォルトではBlueXPからユーザがログアウトされます。アクティビティに関係なく、ユーザは7日後にログアウトされます。

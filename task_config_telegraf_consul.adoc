@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_consul.html 
+keywords: telegraf, installation, install, consul 
+summary: 絶縁データコレクタの設定 
+---
+= 総領事データ収集
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsは、このデータコレクタを使用してConsulから指標を収集します。
+
+
+
+== インストール
+
+. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。Consulを選択します。
++
+収集用にAgentを設定していない場合は、環境内で確認を求められlink:task_config_telegraf_agent.html["エージェントをインストールします"]ます。
+
++
+エージェントがすでに設定されている場合は、適切な OS またはプラットフォームを選択し、 [* Continue （続行） ] をクリックします。
+
+. [Consul Configuration] 画面の指示に従って、データコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+
+
+
+
+== セットアップ
+
+詳細については、を参照してlink:https://www.consul.io/docs/index.html["総領事からのご説明"]ください。
+
+
+
+== 接続のためのオブジェクトとカウンタ
+
+次のオブジェクトとそのカウンタが収集されます。
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+
+
+| 総領事 | ネームスペースチェック ID サービスノード | ノード IP ノード OS ノード UUID ノードネームサービス名チェックネームサービス ID ステータス | 重大な合格警告 
+|===
+
+
+== トラブルシューティング
+
+詳細については、ページを参照してlink:concept_requesting_support.html["サポート"]ください。

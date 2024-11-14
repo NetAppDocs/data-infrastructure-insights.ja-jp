@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: task_dc_ibm_cleversafe.html 
+keywords: data collector, IBM Cleversafe 
+summary: IBM Cleversafe データコレクタの設定。 
+---
+= IBM Cleversafe データコレクタ
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsは、このデータコレクタを使用して、IBM Cleversafeストレージシステムのインベントリデータとパフォーマンスデータを検出します。
+
+
+NOTE: IBM Cleversafeは、管理ユニットに対して異なるRaw TBで測定されています。フォーマットされていないIBM Cleversafeの容量40TBごとに1として課金されますlink:concept_subscribing_to_cloud_insights.html#pricing["管理ユニット (MU)"]。
+
+
+
+== 用語
+
+Data Infrastructure Insightsは、IBM Cleversafeデータコレクタから次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+[cols="2*"]
+|===
+| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+
+
+| ストレージプール | ストレージプール 
+
+
+| コンテナ | 内部ボリューム 
+
+
+| コンテナ | ファイル共有 
+
+
+| NFS共有 | 共有 
+|===
+注：これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているわけではありません。
+
+
+
+== 要件
+
+* クラスタの外部データサービスの IP アドレス
+* 管理者のユーザ名とパスワード
+* ポート9440
+
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| Manager の IP 名またはホスト名 | 管理ノードの IP アドレスまたはホスト名 
+
+
+| ユーザ名 | スーパーユーザまたはシステム管理者のロールを持つユーザアカウントのユーザ名 
+
+
+| パスワード | スーパーユーザまたはシステム管理者のロールを持つユーザアカウントのパスワード 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| インベントリのポーリング間隔（分） | インベントリのポーリング間隔。 
+
+
+| HTTP 接続タイムアウト（秒） | HTTP タイムアウト（秒）。 
+|===
+
+
+== トラブルシューティング
+
+このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

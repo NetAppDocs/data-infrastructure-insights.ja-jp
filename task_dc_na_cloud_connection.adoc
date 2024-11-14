@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: task_dc_na_cloud_connection.html 
+summary: ONTAP 9.9 以上のデータコレクタ用にネットアップクラウド接続を設定します 
+keywords: data collector, NetApp, Cloud agent, ONTAP 
+---
+= ONTAP 9.9 以上のデータコレクタ向けのネットアップクラウド接続
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+このデータコレクタは、 ONTAP 9.9 以上の CVO 、 AFF 、 FAS システムからのデータ収集をサポートするクラウド接続を作成します。
+
+
+NOTE: このデータコレクタは、2023年4月4日をもってData Infrastructure Insightsにインストールできなくなり、2023年7月にインストールされたすべてのData Infrastructure Insightsから削除される予定です。AUベースのデータ収集への移行については、を参照してくださいlink:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights/How_to_transition_from_NetApp_Cloud_Connection_to_AU_based_data_collector["ナレッジベース"^]。

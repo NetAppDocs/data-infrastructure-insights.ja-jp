@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: task_dc_cohesity_smartfiles.html 
+keywords: data collector, cohesity 
+summary: Cohesity SmartFilesデータコレクタの構成。 
+---
+= Cohesity SmartFilesデータコレクタ
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+このREST APIベースのコレクタはCohesityクラスタを取得し、「ビュー」（Data Infrastructure Insightsの内部ボリューム）、各種ノードを検出し、パフォーマンス指標を収集します。
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| Cohesity Cluster IPの略 | CohesityクラスタのIPアドレス 
+
+
+| ユーザー名 | Cohesityクラスタのユーザ名 
+
+
+| パスワード | Cohesityクラスタに使用するパスワード 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| TCPポート | CohesityクラスタとのTCP通信に使用するポート 
+
+
+| インベントリポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは60分です。 
+
+
+| パフォーマンスポーリング間隔（分） | パフォーマンスのポーリング間隔デフォルトは900秒です。 
+|===
+
+
+== トラブルシューティング
+
+詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

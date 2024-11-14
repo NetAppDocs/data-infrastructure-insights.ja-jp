@@ -1,0 +1,173 @@
+---
+sidebar: sidebar 
+permalink: task_dc_brocade_fc_switch.html 
+keywords: data collector, Brocade, FC switch, 
+summary: Brocade FC スイッチデータコレクタの設定 
+---
+= Brocade FC スイッチデータコレクタ
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsでは、Brocade FC Switch（SSH）データソースを使用して、Factored Operating System（FOS）ファームウェア4.2以降を実行しているBrocadeまたはブランド名が変更されたスイッチデバイスのインベントリを検出します。FC スイッチとアクセスゲートウェイの両方のモードのデバイスがサポートされます。
+
+
+
+== 用語
+
+Data Infrastructure Insightsでは、Brocade FCスイッチデータコレクタから次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+[cols="2*"]
+|===
+| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+
+
+| スイッチ | スイッチ 
+
+
+| ポート | ポート 
+
+
+| 仮想ファブリック、物理ファブリック | ファブリック 
+
+
+| ゾーン | ゾーン 
+
+
+| Logical Switch の略 | Logical Switch の略 
+
+
+| 仮想ボリューム | ボリューム 
+
+
+| LSANゾーン | IVRゾーン 
+|===
+注：これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているわけではありません。
+
+
+
+== 要件
+
+* Data Infrastructure Insights Acquisition Unit（AU）は、BrocadeスイッチのTCPポート22への接続を開始してインベントリデータを収集します。AU は、パフォーマンスデータの収集用に UDP ポート 161 への接続も開始します。
+* ファブリック内のすべてのスイッチへのIP接続が確立されている必要があります。[Discover all switches in the fabric]チェックボックスを選択すると、Data Infrastructure Insightsによってファブリック内のすべてのスイッチが識別されますが、検出するにはこれらの追加スイッチへのIP接続が必要です。
+* ファブリック内のすべてのスイッチで、同じアカウントがグローバルに必要です。アクセスの確認には、 PuTTY （オープンソースの端末エミュレータ）を使用できます。
+* SNMP のパフォーマンスのポーリング用に、ファブリック内のすべてのスイッチでポート 161 および 162 を開いておく必要があります。
+* SNMP 読み取り専用コミュニティストリング
+
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| スイッチのIP | EFCサーバのIPアドレスまたは完全修飾ドメイン名 
+
+
+| ユーザー名 | スイッチのユーザ名 
+
+
+| パスワード | スイッチのパスワード 
+
+
+| SNMP | SNMPバージョン 
+
+
+| SNMP コミュニティストリング | スイッチへのアクセスに使用する SNMP の読み取り専用コミュニティストリング 
+
+
+| SNMPユーザー名 | SNMPユーザ名 
+
+
+| SNMPパスワード | SNMPパスワード 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| ファブリック名 | データコレクタによって報告されるファブリック名。ファブリック名を WWN としてレポートする場合は、空白のままにします。 
+
+
+| インベントリポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは15です。 
+
+
+| 除外されたデバイス | ポーリングの対象から除外するデバイスの ID をカンマで区切ったリスト 
+
+
+| 管理ドメインはアクティブです | 管理ドメインを使用する場合に選択します 
+
+
+| MPR データを取得する | マルチプロトコルルータからルーティングデータを取得する場合に選択します。 
+
+
+| トラッピングを有効にします | デバイスからの SNMP トラップの受信時にデータ収集を有効にする場合に選択します。トラップを有効にするを選択した場合は、 SNMP も有効にする必要があります。 
+
+
+| トラップ間の最小時間（秒） | トラップでデータ収集を試行する最小間隔。デフォルトは10です。 
+
+
+| ファブリック内のすべてのスイッチを検出します | ファブリック内のすべてのスイッチを検出する場合に選択します 
+
+
+| HBAとゾーンのエイリアスを優先 | HBA とゾーンエイリアスのどちらを優先するかを選択します 
+
+
+| パフォーマンスポーリング間隔（秒） | パフォーマンスのポーリング間隔デフォルトは300です。 
+
+
+| SNMP 認証プロトコル | SNMP 認証プロトコル（ SNMP v3 のみ） 
+
+
+| SNMP プライバシーパスワード | SNMP プライバシーパスワード（ SNMP v3 のみ） 
+
+
+| SNMP 再試行回数 | SNMPの再試行回数 
+|===
+
+
+== トラブルシューティング
+
+このデータコレクタで問題が発生した場合の対処方法を次に示します。
+
+
+
+=== インベントリ
+
+[cols="2*"]
+|===
+| 問題 | 次の操作を実行します 
+
+
+| Brocade データソースのインベントリ取得が失敗し、次のエラーが表示されます。 <date> <time> error [com.onaro.sanscreen.acquisition.framework.datasource.BaseDataSource] Error 2 out of 2 ： <datasource name> [Internal error] - Unable to generate the model for device<IP> 。プロンプトの検出エラー（ [Device name < name >] ：デバイス <IP> のモデルを生成できません。エラー検出プロンプト） | 問題 は、デフォルトのタイムアウトである 5 秒を超えてプロンプトが表示されるまでに Brocade スイッチが時間がかかりすぎる場合に発生することがあります。Data Infrastructure InsightsのデータコレクタのAdvanced Configuration設定で、_SSHバナー待機タイムアウト（秒）_の値を大きくしてみてください。 
+
+
+| エラー：「Data Infrastructure Insights Received Invalid Chassis Role」 | このデータソースで設定されているユーザにシャーシのロールの権限が付与されていることを確認します。 
+
+
+| エラー：「シャーシの IP アドレスが一致しません」 | シャーシの IP アドレスを使用するようにデータソース構成を変更します。 
+
+
+| 複数のノードが Access Gateway ポートにログインしているというメッセージを受信します | NPV デバイスが正しく動作していること、および接続されているすべての WWN が必要であることを確認します。NPV デバイスを直接取得しないでください。代わりに、コアファブリックスイッチを取得すると NPV デバイスデータが収集されます。 
+
+
+| パフォーマンスの収集が失敗し、「Timed out during sending SNMP request」というメッセージが表示されます。 | クエリー変数およびスイッチの設定によっては、一部のクエリーがデフォルトのタイムアウトを超える場合があります。link:https://kb.netapp.com/Cloud/BlueXP/Cloud_Insights/Cloud_Insight_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["詳細"]です。 
+|===
+詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

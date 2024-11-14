@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: cs_notifications_email.html 
+summary: ワークロードセキュリティアラートの通知用のEメールアドレスの追加 
+keywords: email, notifications, alerts, warnings, attacks 
+---
+= アラート、警告、およびエージェント / データソースコレクタの状態に関する電子メール通知の設定
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+ワークロードセキュリティアラートの受信者を設定するには、[*Admin]>[Notifications]をクリックし、受信者ごとに適切なセクションに電子メールアドレスを入力します。
+
+
+
+== 潜在的な攻撃アラートと警告
+
+Attack_alert 通知を送信するには、 _Send Potential Attack Alerts_Section に受信者の電子メールアドレスを入力します。アラートに対するすべてのアクションについて、 E メール通知がアラート受信者リストに送信されます。
+
+警告通知を送信するには、 _ 警告通知の送信 _ セクションに受信者の電子メールアドレスを入力します。
+
+
+
+== エージェントおよび Data Collector のヘルスモニタリング
+
+通知を使用して、エージェントとデータソースの状態を監視できます。
+
+エージェントまたはデータソースコレクタが機能していない場合に通知を受信するには、 _Data Collection Health Alerts_Section に受信者の電子メールアドレスを入力します。
+
+次の事項に注意してください。
+
+* ヘルスアラートは、エージェント / コレクタが少なくとも 1 時間レポートを停止した後にのみ送信されます。
+* エージェントまたはデータコレクタが長時間切断されている場合でも、指定された 24 時間以内に目的の受信者に送信される電子メール通知は 1 通だけです。
+* エージェントに障害が発生した場合は、 1 つのアラートが送信されます（コレクタごとに送信されるアラートではありません）。E メールには影響を受けるすべての SVM のリストが記載されます。
+* Active Directory による収集エラーは警告として報告されますが、ランサムウェアによる検出には影響しません。
+* [ はじめに ] セットアップリストに、新しい _ 電子メール通知の構成 _ 段階が追加されました。
+
+
+
+
+== エージェントおよびData Collectorのアップグレード通知を受信しています
+
+* [Data Collection Health Alerts]にEメールIDを入力します。
+* [Enable upgrade notifications]チェックボックスが有効になります。
+* エージェントおよびData CollectorのアップグレードのEメール通知は、予定されているアップグレードの1日前にEメールIDに送信されます。
+
+
+
+
+== トラブルシューティング
+
+|===
+| * 問題： * | * これを試みなさい : * 
+
+
+| 「Data Collector Health Alerts」にEメールIDが表示されていますが、通知を受信していません。 | 通知メールは、NetApp Data Infrastructure Insightsドメイン（_accounts@service.clou dinsights.jp NetApp .com_）から送信されます。一部の企業は、外部ドメインからの受信メールをブロックします。NetApp Data Infrastructure Insightsドメインからの外部通知がホワイトリストに登録されていることを確認します。 
+|===

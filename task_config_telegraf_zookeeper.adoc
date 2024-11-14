@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_zookeeper.html 
+keywords: telegraf, installation, install, apache, zookeeper 
+summary: Apache Zookeeper データコレクタの設定 
+---
+= Zookeeper データコレクタ
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsは、このデータコレクタを使用してApache Zookeeperから指標を収集します。
+
+
+
+== インストール
+
+. [*Admin] > [Data Collectors] で、 [*+[Data Collectors] をクリックします。[Apache Zookeeper]を選択します。
++
+Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+
+. コレクション用エージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[_Show Instructions_]をクリックして手順を展開しlink:task_config_telegraf_agent.html["エージェントのインストール"]ます。
+. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
+. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+
+
+image:ZookeeperDCConfigLinux.png["Zookeeper 構成"]
+
+
+
+== セットアップ
+
+少なくとも、 Zookeeper に 4 文字のサーバコマンド _Mntr_,_srvr_,_stat_ を許可する必要があります。これらのコマンドは、 _4lw.commands.whitelist=mntr 、 srvr 、 stat_in the _zoo .cfg file の形式で有効にできます。他にも、 4 文字のコマンドが必要になる場合があります。詳細については、のドキュメントを参照してくださいlink:https://zookeeper.apache.org/["Zookeeper の追加"]。
+
+
+
+== オブジェクトとカウンタ
+
+次のオブジェクトとそのカウンタが収集されます。
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+
+
+| Zookeeper の追加 | ネームスペースサーバ | State Node IP Node Name Port の略 | 概算データサイズ平均遅延平均遅延エ phemassals 数最大ファイル記述子数最大遅延アライブ接続オープンファイル記述子数未処理要求数ウォッチカウント Znode カウント 
+|===
+
+
+== トラブルシューティング
+
+詳細については、ページを参照してlink:concept_requesting_support.html["サポート"]ください。

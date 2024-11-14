@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: task_dc_na_db_host.html 
+keywords: data collector, generic db 
+summary: 汎用DBホストリゾルバコレクタ 
+---
+= NetApp汎用DBホストリゾルバ
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+このデータコレクタはインベントリを取得します。
+
+
+
+== 用語
+
+Data Infrastructure Insightsは、このコレクタからインベントリを取得します。
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| DBサーバのIPアドレス | DBサーバのIPアドレス 
+
+
+| DBサーバポート | デフォルトは3306です。 
+
+
+| 修飾ドライバクラス名 | ドライバのクラス名。 
+
+
+| JDBCドライバURL | ドライバのURL 
+
+
+| SQLクエリ | テーブルからデータを返すために使用されるクエリ 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| インベントリポーリング間隔（最小） | デフォルトは60分です 
+
+
+| SSL接続を有効にする | SSL経由の接続を有効にする場合に選択 
+
+
+| WWNエイリアスのレポート | WWNエイリアスをレポートする場合に選択します 
+|===
+詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

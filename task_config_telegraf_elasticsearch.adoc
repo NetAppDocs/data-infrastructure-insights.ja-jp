@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_elasticsearch.html 
+keywords: telegraf, installation, install, ElasticSearch 
+summary: Elasticsearch データコレクタの設定 
+---
+= Elasticsearch Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsは、このデータコレクタを使用してElasticsearchから指標を収集します。
+
+. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。[Elasticsearch]を選択します。
++
+Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+
+. コレクション用エージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[_Show Instructions_]をクリックして手順を展開しlink:task_config_telegraf_agent.html["エージェントのインストール"]ます。
+. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
+. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+
+
+image:ElasticsearchDCConfigLinux.png["Elasticsearch 設定"]
+
+
+
+== セットアップ
+
+詳細については、を参照してlink:https://www.elastic.co/guide/index.html["Elasticsearch のドキュメント"]ください。
+
+
+
+== オブジェクトとカウンタ
+
+次のオブジェクトとそのカウンタが収集されます。
+
+[cols="<.<,<.<,<.<"]
+|===
+| オブジェクト： | 識別子： | 属性： 
+
+
+| Elasticsearch クラスタ | ネームスペースクラスタ | ノード IP ノード名クラスタステータス 
+
+
+| Elasticsearch ノード | ネームスペースクラスタ ES ノード ID ES ノード IP ES ノードです | ゾーン ID 
+|===
+
+
+== トラブルシューティング
+
+詳細については、ページを参照してlink:concept_requesting_support.html["サポート"]ください。

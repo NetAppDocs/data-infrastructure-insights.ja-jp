@@ -1,0 +1,191 @@
+---
+sidebar: sidebar 
+permalink: concept_ontap_essentials.html 
+summary: ONTAP Essentialsは、環境の詳細な概要を提供するダッシュボードとワークフローのセットです。 
+keywords: dashboard, widget, ontap, overview, insight 
+---
+= ONTAP の基礎知識
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+ONTAP Essentialsは、ONTAP のインベントリとワークロードの詳細な概要を提供するダッシュボードとワークフローのセットです。ONTAP Essentialsで作業するときに使用される次の用語が表示されることがあります。
+
+* インフラ/インベントリ：ユーザデータにストレージ/ネットワークサービスを提供するオブジェクト
+* Workloads：ユーザにデータの読み取り/書き込みのインターフェイスを提供するオブジェクト。
+* データ保護：ネットアップのデータ保護テクノロジを使用して保護できるオブジェクト
+
+
+ONTAPに関連するその他の用語や定義については、のドキュメントを参照してlink:task_dc_na_cdot.html["ONTAP Data Collector （ JVM データ収集）"]ください。
+
+ONTAP Essentialsには、過去7日間に収集されたデータを含む、最低1つの動作中のONTAP データコレクタが必要です。
+
+
+
+== 概要
+
+データインフラのインサイトのメインメニューから*「ONTAP Essentials」*を選択して、データインフラの詳細を確認してください。
+
+image:OE_Overview.png["ONTAP Essentialsの概要ダッシュボード"]
+
+概要*ダッシュボードには、環境内のクラスタ数や全体的な容量とパフォーマンスの割合など、役立つ情報が表示されます。また、ストレージ容量またはパフォーマンス容量がスペース不足になるまでの想定日数に関する予測データも表示されます。また、インフラ内にCPU使用率が65%を超えて稼働しているコントローラがある場合（フェイルオーバー時にクラスタがリスクにさらされる可能性があるため）、ONTAP Essentialsでは「ホット」コントローラと表示されます。
+
+情報グラフは、時間の経過に伴うパフォーマンスの確認や、容量使用率の内訳を提供します。これらのグラフやデータポイントは、調査や調査の開始点として使用できます。
+
+注：「フルまでの日数」に0（ゼロ）を指定すると、フルまでの日数が90日を超えたと推定されます。つまり、システムがすぐにスペース不足になる危険性はありません。
+
+
+
+== データ保護
+
+[データ保護]ページには、* Snapshotコピー*または* SnapMirrorポリシー*で保護されているボリュームのステータスが表示されます。
+
+[_Local Protection Overview_]セクションのグラフには、Snapshotコピーで保護されているボリュームに関する次の情報が表示されます。
+
+* Snapshotコピーで保護されているボリュームと保護されていないボリュームの数。
+* Snapshotコピー用のリザーブスペースを使用しているボリューム、または超過しているボリュームの数。
+* Snapshotコピー数の特定の範囲（コピー数が10個未満、10~200個など）にあるボリュームの数。
+
+
+[_Remote Protection Overview_]セクションのグラフには、SnapMirrorポリシーで保護されているボリュームに関する情報が表示されます。
+
+* 正常なSnapMirror関係と正常でないSnapMirror関係の数。
+* 遅延ステータスに基づくRecovery Point Objective（RPO；目標復旧時点）の遅延が発生しているSnapMirror関係の数。
+* SnapMirrorボリューム保護タイプで保護される関係の数（ボリュームSnapMirror、SVMDR関係、FlexGroup SnapMirror関係、SnapMirrorビジネス継続性（SMBC）整合性グループ関係、保護されていないボリュームなど）。
+* SnapMirror関係タイプ（非同期ミラー、非同期バックアップ、非同期ミラーバックアップ、StrictSync、Syncなど）で保護されている関係の数。
+
+
+image:DataProtectionDashboard_OverviewWidgets_.png["[Data Protection Dashboard]ウィジェットには、ローカルとリモートの概要が表示されます"]
+
+ページ下部の_Clusters_gridには、次の項目に関する詳細が表示されます。
+
+* ボリュームがSnapshotで保護されていません。
+* ボリュームがSnapshotリザーブスペースを超過しています。
+* SnapMirrorポリシーで保護されていないボリューム、およびSnapMirror関係で遅延が発生しています。
+* 正常でないSnapMirror関係。
+
+
+image:DataProtectionDashboard_ClusterList.png["データ保護クラスタのリスト"]
+
+
+
+== セキュリティ
+
+[Security Dashboard]には、現在のセキュリティ状況が瞬時に表示され、ハードウェアとソフトウェアのボリューム暗号化、ランサムウェア対策ステータス、クラスタ認証方式のチャートが表示されます。セキュリティ基準は、で定義された推奨事項に基づいて評価されlink:https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf["* ONTAP 9向けネットアップセキュリティ強化ガイド*"]ます。
+
+暗号化やランサムウェア対策の中から必要なものを選択して、環境を詳しく調べます。
+
+image:OE_SecurityDashboard.png["ONTAP Essentialsセキュリティダッシュボード"]
+
+ONTAP Essentialsのセキュリティダッシュボードは、環境を監視して、クラスタのコンプライアンスステータスを判断します。詳細については、を参照してlink:https://docs.netapp.com/us-en/active-iq-unified-manager/health-checker/reference_cluster_compliance_categories.html["クラスタ準拠カテゴリ"]ください。ONTAP Essentialsでは、次のモニタを使用してコンプライアンスを判断します。
+
+|===
+| モニタ名 | 属性名（[Cluster Details]に表示） | 属性準拠値 
+
+
+| FIPSモードが無効 | FIPSモード | 有効 
+
+
+| SSH用のクラスタのセキュアでない暗号 | セキュアなSSH設定 | はい 
+
+
+| Telnetプロトコルが有効 | Telnet | 無効 
+
+
+| リモートシェルが有効です | リモートシェル | 無効 
+
+
+| デフォルトのローカル管理ユーザが有効 | デフォルトの管理ユーザ | 無効 
+
+
+| MD5ハッシュ化パスワード | MD5が使用中です | いいえ 
+
+
+| クラスタピア通信が暗号化されていません | クラスタピアリング | 暗号化/ピアなし 
+
+
+| AutoSupport HTTPS転送が無効 | HTTPSを使用するAutoSupport | はい 
+
+
+| NTPサーバが設定されていません | ネットワークタイムプロトコル | 設定済み 
+
+
+| NTPサーバ数が不足しています | ネットワークタイムプロトコル | 設定済み 
+
+
+| クラスタでログインバナーが無効になりました | ログインバナー | 有効 
+
+
+| ログ転送が暗号化されていない | ログ転送を暗号化 | はい 
+|===
+上記のモニタが無効になっている場合は、クラスタの詳細で対応するセキュリティ準拠属性の値が「Not checked」と表示されることに注意してください。
+
+image:OE_Cluster_Compliance_Example.png["クラスタの準拠ステータス"]
+
+SVMの場合、[Security]ダッシュボードでは次のモニタが表示されます。
+
+|===
+| モニタ名 | 属性名（Storage VM設定に表示） | 属性準拠値 
+
+
+| SSH用のStorage VMのセキュアでない暗号 | セキュアなSSH設定 | はい 
+
+
+| Storage VMのログインバナーが無効になっています | ログインバナー | 有効 
+
+
+| Storage VM監査ログが無効になりました | 監査ログ | 有効 
+|===
+クラスタリストで、各クラスタの[_View Details_]を選択してスライドアウトパネルを開き、_Cluster、Storage VM、_or_Anti-Ransomware_の現在の設定を確認します。
+
+クラスタの詳細には、接続ステータスや証明書情報などがあります。image:OE_Cluster_Slideout.png["クラスタの詳細スライドアウトパネル"]
+
+Storage VMの詳細には、監査とSSHの情報が表示されます。image:OE_Storage_Slideout.png["[Storage]タブ"]
+
+ランサムウェア対策の詳細では、Storage VMがONTAPのランサムウェア対策とデータインフラ分析情報のワークロードセキュリティのどちらで保護されているかを確認できます。ONTAP の[ARP]列には、ONTAP システムで設定されているONTAPのオンボードランサムウェア対策の現在のステータスが表示されます。Data Infrastructure Insightsワークロードセキュリティを有効にするには、列の[保護]を選択します。image:OE_Anti-Ransomware_Slideout.png["Anti-Ransomwareタブ"]
+
+
+
+== アラート
+
+ここでは、環境内のアクティブなアラートを表示し、潜在的な問題をすばやく詳細に把握できます。解決済みのアラートを表示するには、_Resolvedタブを選択します。
+
+image:OE_Alerts.png["ONTAP Essentialsアラートリスト"]
+
+
+
+== インフラ
+
+ONTAP Essential* Infrastructure *ページでは、すべての基本的なONTAP オブジェクトに対して事前に構築された（さらにカスタマイズ可能な）クエリーを使用して、クラスタの正常性とパフォーマンスを確認できます。確認するオブジェクトタイプ（クラスタ、ストレージプールなど）を選択し、健常性とパフォーマンスのどちらの情報を表示するかを選択します。フィルタを設定して、個々のシステムの詳細を調べます。
+
+image:ONTAP_Essentials_Health_Performance.png["ストレージプールのインフラストラクチャ選択"]
+
+クラスタの健全性を示す[Infrastructure]ページ：image:ONTAP_Essentials_Infrastructure_A.png["調査するインフラストラクチャオブジェクト"]
+
+
+
+== ネットワーク
+
+ONTAP Essentialsネットワーキングでは、FC、NVMe FC、イーサネット、およびiSCSIインフラストラクチャを確認できます。このページでは、クラスタ内のポートやクラスタ内のノードを確認できます。
+
+image:ONTAP_Essentials_Alerts_Menu.png["ONTAP Essentialsネットワーキングメニュー"] image:ONTAP_Essentials_Alerts_Page.png["ONTAP EssentialsのネットワークFCページに、クラスタノードへのポートが表示されます"]
+
+
+
+== ワークロード
+
+環境内のLUN /ボリューム、NFSまたはSMB共有、またはqtreeのワークロードを表示して確認できます。
+
+image:ONTAP_Essentials_Workloads_Menu.png["ワークロードメニュー"]
+
+image:ONTAP_Essentials_Workloads_Page.png["ワークロードリストページ"]

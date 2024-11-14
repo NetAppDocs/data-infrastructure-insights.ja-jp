@@ -1,0 +1,310 @@
+---
+sidebar: sidebar 
+permalink: task_dc_na_cdot.html 
+keywords: data collector, ontap, ontap, CDOT 
+summary: ONTAP Data Collector （ JVM データ収集） 
+---
+= NetApp ONTAP データ管理ソフトウェアのデータコレクタ
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+このデータコレクタは、 ONTAP アカウントからの読み取り専用の API 呼び出しを使用して、 ONTAP を実行しているストレージシステムからインベントリとパフォーマンスのデータを取得します。このデータコレクタは、サポートを高速化するために、クラスタアプリケーションレジストリにレコードを作成します。
+
+
+
+== 用語
+
+Data Infrastructure Insightsは、ONTAPデータコレクタからインベントリとパフォーマンスのデータを取得します。取得したアセットのタイプごとに、そのアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+[cols="2*"]
+|===
+| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+
+
+| ディスク | ディスク 
+
+
+| RAID グループ | ディスクグループ 
+
+
+| クラスタ | ストレージ 
+
+
+| ノード | ストレージノード 
+
+
+| アグリゲート | ストレージプール 
+
+
+| LUN | ボリューム 
+
+
+| ボリューム | 内部ボリューム 
+|===
+
+
+== ONTAP データ管理の用語
+
+ONTAP データ管理ストレージのアセットランディングページにあるオブジェクトや参考資料に関連する用語を次に示します。これらの用語の多くは、他のデータコレクタにも適用されます。
+
+
+
+=== ストレージ
+
+* model –このクラスタ内で一意のディスクリートノードのモデル名をカンマで区切って指定します。クラスタ内のすべてのノードのモデルタイプが同じ場合、表示されるモデル名は 1 つだけです。
+* Vendor –新しいデータソースを設定する場合に表示されるベンダー名と同じです。
+* Serial Number –アレイのシリアル番号。ONTAP データ管理などのクラスタアーキテクチャストレージシステムでは、このシリアル番号は個々の「ストレージノード」のシリアル番号よりも有用性が低い場合があります。
+* IP –一般に、データソースで設定されている IP またはホスト名です。
+* マイクロコードバージョン–ファームウェア。
+* raw 容量–システム内のすべての物理ディスクの合計 2 進数で、役割に関係なく加算されます。
+* レイテンシ–読み取りと書き込みの両方について、ワークロードが直面しているホストの状況が表示されます。理想的なのは、Data Infrastructure Insightsがこの価値を直接提供していることですが、そうではないことがよくあります。Data Infrastructure Insightsでは、この機能を提供するアレイの代わりに、個 々 の内部ボリュームの統計に基づいてIOPSの加重計算を実行します。
+* スループット–内部ボリュームから集約されたもの。管理–デバイスの管理インターフェイスのハイパーリンクが含まれている可能性があります。インベントリレポートの一部として、Data Infrastructure Insightsデータソースによってプログラムによって作成されます。
+
+
+
+
+=== ストレージプール
+
+* storage –このプールのストレージアレイの場所。必須。
+* Type –可能性のリストから説明的な値を入力します。最も一般的な構成は、「集約」または「 RAID グループ」です。
+* ノード：プールが特定のストレージノードに属するようなストレージアレイのアーキテクチャの場合、その名前は、そのストレージアレイのランディングページへのハイパーリンクとして表示されます
+* Flash Pool を使用–値はあり / いいえ–この SATA / SAS ベースのプールでは、 SSD をキャッシュ高速化に使用していますか？
+* 冗長性– RAID レベルまたは保護方式。raid_dp はデュアルパリティ、 raid_dp はトリプルパリティです。
+* 容量–使用済みの論理容量、使用可能な容量、および合計論理容量の値と、これらの要素で使用されている割合の値が表示されます。
+* オーバーコミット容量–効率化テクノロジを使用して、ストレージプールの論理容量よりも大きいボリュームまたは内部ボリュームの容量の合計を割り当てている場合、この割合は 0% よりも大きくなります。
+* スナップショット–スナップショット専用のセグメント領域にストレージプールアーキテクチャが容量の一部を割り当てている場合に使用されるスナップショット容量と合計容量。MetroCluster 構成の ONTAP はこのような構成を示しますが、それ以外の ONTAP 構成はそうではありません。
+* 利用率–このストレージプールに容量を追加しているディスクのビジー率の最大値を示した割合。ディスク利用率にアレイのパフォーマンスとの間に大きな相関関係があるとは限りません。ホストベースのワークロードがない場合は、ディスクのリビルドや重複排除処理などが原因で、利用率が高くなる可能性があります。また、多くのアレイのレプリケーション実装では、内部ボリュームやボリュームのワークロードとしては表示されずにディスク使用率が向上する場合があります。
+* IOPS –このストレージプールに容量の要因となっているすべてのディスクの合計 IOPS 。Throughput –このストレージプールの容量の要因となっているすべてのディスクの合計スループット。
+
+
+
+
+=== ストレージノード
+
+* Storage –このノードが属するストレージアレイ。必須。
+* HA パートナー–通常、一方のノードだけにフェイルオーバーするプラットフォームでは、この画面が表示されます。
+* State –ノードの健常性。アレイが正常な状態でデータソースでインベントリを作成できる場合にのみ使用できます。
+* model - ノードのモデル名。
+* Version ：デバイスのバージョン名。
+* シリアル番号–ノードのシリアル番号。
+* メモリ–ベース 2 のメモリがあればそれ。
+* 使用率– ONTAP では、これは独自のアルゴリズムのコントローラ応力インデックスです。パフォーマンスポーリングが行われるたびに、 WAFL ディスクの競合率または平均 CPU 利用率の値が 0 ～ 100% の範囲で報告されます。継続的に測定される値が 50% を超えている場合は、サイジングが不十分であることを示します。コントローラやノードのサイズが十分でないか、書き込みワークロードを吸収するのに十分な回転式ディスクが足りない可能性があります。
+* IOPS–ノードオブジェクトに対するONTAP ZAPI呼び出しから直接導出されます。
+* レイテンシ–ノードオブジェクトに対するONTAP ZAPI呼び出しから直接導出されます。
+* スループット–ノードオブジェクトに対するONTAP ZAPI呼び出しから直接導出されます。
+* プロセッサ– CPU 数。
+
+
+
+
+== 要件
+
+このデータコレクタを設定して使用するための要件は次のとおりです。
+
+* 読み取り専用の API 呼び出し用に設定された管理者アカウントへのアクセス権が必要です。
+* アカウントの詳細には、ユーザ名とパスワードが含まれます。
+* ポートの要件： 80 または 443
+* アカウントの権限：
++
+** デフォルトの SVM の ONTAPI アプリケーションに対する読み取り専用のロール名
+** オプションの書き込み権限が追加で必要になる場合があります。以下の「アクセス権に関する注意」を参照してください。
+
+
+* ONTAP ライセンスの要件：
++
+** ファイバチャネル検出に必要な FCP ライセンスおよびマッピング / マスクされたボリューム
+
+
+
+
+
+
+=== ONTAPスイッチメトリックを収集するための権限要件
+
+Data Infrastructure Insightsでは、コレクタ<<advanced-configuration,詳細設定>>設定のオプションとして、ONTAPクラスタスイッチのデータを収集できます。Data Infrastructure Insightsコレクタでこれを有効にするだけでなく、link:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["スイッチ情報"]<<a-note-about-permissions,権限>>スイッチデータをData Infrastructure Insightsに送信できるように、ONTAPシステム自体を構成して提供し、正しい設定を確認する必要があります。
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| ネットアップ管理 IP | NetAppクラスタのIPアドレスまたは完全修飾ドメイン名 
+
+
+| ユーザー名 | ネットアップクラスタのユーザ名 
+
+
+| パスワード | ネットアップクラスタのパスワード 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| 接続タイプ | HTTP （デフォルトポート 80 ）または HTTPS （デフォルトポート 443 ）を選択します。デフォルトは HTTPS です 
+
+
+| 通信ポートをオーバーライドします | デフォルト以外のポートを使用する場合は、別のポートを指定します 
+
+
+| インベントリポーリング間隔（分） | デフォルトは60分です。 
+
+
+| TLS では HTTPS を使用します | HTTPS を使用する場合にのみ TLS をプロトコルとして許可します 
+
+
+| ネットグループを自動的に検索する | エクスポートポリシールールのネットグループの自動検索を有効にします 
+
+
+| ネットグループの拡張 | ネットグループ拡張戦略：_FILE _ または _SHELL _ を選択します。デフォルトは _shell_ です。 
+
+
+| HTTP 読み取りタイムアウト秒数 | デフォルトは30です 
+
+
+| 応答を UTF-8 として強制実行します | データコレクタコードに、 CLI からの応答を UTF-8 であると解釈させます 
+
+
+| パフォーマンスポーリング間隔（秒） | デフォルトは900秒です。 
+
+
+| 高度なカウンタデータ収集 | ONTAP の統合を有効にします。ONTAP 詳細カウンタデータをポーリングに含める場合に選択します。リストから目的のカウンタを選択します。 
+
+
+| クラスタスイッチ指標 | Data Infrastructure Insightsでクラスタスイッチのデータを収集Data Infrastructure Insights側でこれを有効にするだけでなく、link:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["スイッチ情報"]<<a-note-about-permissions,権限>>スイッチのデータがData Infrastructure Insightsに送信されるように、ONTAPシステムで提供するように設定し、正しい設定が行われていることを確認する必要があります。下記の「権限に関する注意事項」を参照してください。 
+|===
+
+
+== ONTAPの電力メトリック
+
+いくつかのONTAPモデルは、監視やアラートに使用できるデータインフラインサイトの電力指標を提供します。以下のサポートされているモデルとサポートされていないモデルのリストは包括的ではありませんが、いくつかのガイダンスを提供する必要があります。一般的に、モデルがリストのものと同じファミリーに属している場合、サポートは同じである必要があります。
+
+サポートされるモデル：
+
+A200 A220 A250 A300 A320 A400 A700 A700s A800 A900 C190 FAS2240-4 FAS2552 FAS2650 FAS2720 FAS2750 FAS8200 FAS8300 FAS8700 FAS9000
+
+サポートされていないモデル：
+
+FAS2620 FAS3250 FAS3270 FAS500f FAS6280 FAS / AFF 8020 FAS / AFF 8040 FAS / AFF 8060 FAS / AFF 8080
+
+
+
+== アクセス権に関する注意事項
+
+Data Infrastructure InsightsのONTAPダッシュボードの多くは、高度なONTAPカウンタに依存しているため、データコレクタの高度な設定セクションで*高度なカウンタデータ収集*を有効にする必要があります。
+
+また、 ONTAP API への書き込み権限が有効になっていることも確認する必要があります。通常は、必要な権限を持つアカウントがクラスタレベルで必要になります。
+
+クラスタレベルでData Infrastructure Insights用のローカルアカウントを作成するには、クラスタ管理者のユーザ名とパスワードを使用してONTAPにログインし、ONTAPサーバで次のコマンドを実行します。
+
+. 作業を開始する前に、 _Administrator_account および _diagnostic-level コマンド _ を使用して ONTAP にサインインする必要があります。
+. 次のコマンドを使用して、読み取り専用ロールを作成します。
++
+....
+security login role create -role ci_readonly -cmddirname DEFAULT -access readonly
+security login role create -role ci_readonly -cmddirname security -access readonly
+security login role create -role ci_readonly -access all -cmddirname {cluster application-record create}
+....
+. 次のコマンドを使用して、読み取り専用ユーザを作成します。create コマンドを実行すると、このユーザのパスワードを入力するように求められます。
++
+ security login create -username ci_user -application ontapi -authentication-method password -role ci_readonly
+
+
+AD / LDAP アカウントを使用する場合は、コマンドをに設定します
+
+ security login create -user-or-group-name DOMAIN\aduser/adgroup -application ontapi -authentication-method domain -role ci_readonly
+クラスタスイッチのデータを収集する場合は、次の作業を行います。
+
+....
+security login rest-role create -role ci_readonly_rest -api /api/network/ethernet -access readonly
+security login create -user-or-group-name ci_user -application http -authmethod password -role ci_readonly_rest
+....
+作成されるロールとユーザログインは次のようになります。実際の出力は以下のように異なる場合があります
+
+....
+Role Command/ Access
+Vserver Name Directory Query Level
+---------- ------------- --------- ------------------ --------
+cluster1 ci_readonly DEFAULT read only
+cluster1 ci_readonly security readonly
+....
+....
+cluster1::security login> show
+Vserver: cluster1
+Authentication Acct
+UserName    Application   Method      Role Name      Locked
+---------   -------      ----------- -------------- --------
+ci_user     ontapi      password    ci_readonly   no
+....
+
+NOTE: ONTAPアクセス制御が正しく設定されていないと、Data Infrastructure InsightsのREST呼び出しが失敗し、デバイスのデータにギャップが生じる可能性があります。たとえば、Data Infrastructure Insightsコレクタでこの機能を有効にしていて、ONTAPに対する権限が設定されていない場合、データの取得は失敗します。また、ロールが以前にONTAPで定義されていて、残りのAPI機能を追加する場合は、_http_がロールに追加されていることを確認してください。
+
+
+
+== トラブルシューティング
+
+このデータコレクタで問題が発生した場合の対処方法を次に示します。
+
+
+
+=== インベントリ
+
+[cols="2*"]
+|===
+| 問題 | 次の操作を実行します 
+
+
+| 401 HTTP 応答または 13003 ZAPI エラーコードを受信し、 ZAPI から「 Insufficient privileges 」または「 Not authorized for this command 」が返される | ユーザ名とパスワード、およびユーザの権限と権限を確認してください。 
+
+
+| クラスタバージョンが 8.1 より前である必要があります | クラスタでサポートされる最小バージョンは 8.1 です。サポートされる最小バージョンにアップグレードしてください。 
+
+
+| ZAPI から「 cluster role is not cluster_mgmt LIF 」が返される | AU はクラスタ管理 IP と通信する必要があります。IP を確認し、必要に応じて別の IP に変更してください 
+
+
+| エラー：「 7-Mode のストレージシステムはサポートされていません」 | この問題は、このデータコレクタを使用して 7-Mode ファイラーを検出した場合に発生することがあります。IP を変更して、代わりに cdot クラスタを指すようにします。 
+
+
+| ZAPI コマンドの再試行後に失敗する | AU でクラスタとの通信に問題があります。ネットワーク、ポート番号、および IP アドレスを確認してください。また、 AU マシンのコマンドラインからもコマンドを実行しようとします。 
+
+
+| AU が HTTP 経由で ZAPI に接続できませんでした | ZAPI ポートでプレーンテキストが受け入れるかどうかを確認します。AU が SSL ソケットにプレーンテキストを送信しようとすると、通信に失敗します。 
+
+
+| SSLException で通信が失敗します | AU が Filer 上のプレーンテキストポートに SSL を送信しようとしています。ZAPI ポートで SSL を受け入れるか、別のポートを使用するかを確認します。 
+
+
+| その他の接続エラー： ZAPI 応答にはエラーコード 13001 、「 database is not open 」 ZAPI エラーコード 60 があり、応答に「 API did not finished on time 」という応答が含まれています。 ZAPI エラーコード 14007 では「 initialize_session() returned NULL environment 」が返され、応答に「 Node is not healthy 」が含まれます。 | ネットワーク、ポート番号、および IP アドレスを確認してください。また、 AU マシンのコマンドラインからもコマンドを実行しようとします。 
+|===
+
+
+=== パフォーマンス
+
+[cols="2*"]
+|===
+| 問題 | 次の操作を実行します 
+
+
+| 「 ZAPI からパフォーマンスを収集できませんでした」というエラーが表示される | これは通常、 perf stat が実行されていないことが原因です。各ノードで次のコマンドを実行します。 >_system node systemshell -node * command "spmcctl -h cmd – stop; spmcctl -h cmd – exec" _ 
+|===
+詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

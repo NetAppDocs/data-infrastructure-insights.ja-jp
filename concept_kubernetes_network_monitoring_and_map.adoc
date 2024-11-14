@@ -1,0 +1,141 @@
+---
+sidebar: sidebar 
+permalink: concept_kubernetes_network_monitoring_and_map.html 
+keywords: service map, workloads, 
+summary: Kubernetesワークロードの依存関係とフローを提示し、ネットワークとパフォーマンスの問題を明らかにします 
+---
+= Kubernetes Network Performance Monitoring and Mapの略
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+KubernetesのNetwork Performance Monitoring and Map機能は、サービス（ワークロードとも呼ばれます）間の依存関係をマッピングすることでトラブルシューティングを簡易化し、ネットワークパフォーマンスのレイテンシや異常をリアルタイムで可視化して、ユーザに影響を与える前にパフォーマンスの問題を特定します。この機能は、Kubernetesのトラフィックフローを分析、監査することで全体的なコストを削減するのに役立ちます。
+
+主な機能:•ワークロードマップはKubernetesワークロードの依存関係とフローを示し、ネットワークとパフォーマンスの問題を強調します。•Kubernetesポッド、ワークロード、ノード間のネットワークトラフィックを監視し、トラフィックとレイテンシの問題の原因を特定します。•入力、出力、リージョン間、ゾーン間のネットワークトラフィックを分析することで、全体的なコストを削減します。
+
+image:workload-map-animated.gif["ワークロードマップの例"]
+
+
+
+== 前提条件
+
+Kubernetes Network Performance Monitoring and Mapを使用する前に、このオプションを有効にするようにを設定しておく必要がありますlink:task_config_telegraf_agent_k8s.html["NetApp Kubernetes Monitoring Operator"]。オペレータの配備中に、[ネットワークパフォーマンスとマップ]チェックボックスをオンにして有効にします。このオプションを有効にするには、Kubernetesランディングページに移動して[Modify Deployment]を選択します。
+
+image:ServiceMap_NKMO_Deployment_Options.png["NKMO停止中にMapオプションを選択します"]
+
+
+
+== モニタ
+
+ワークロードマップは、を使用しlink:task_create_monitor.html["カンシ"]て情報を取得します。Data Infrastructure Insightsには、多数のデフォルトKubernetesモニタが用意されています（デフォルトでは、これらのモニタは_Paused_になっている場合があります）。必要なモニタを_Resume_(つまり有効化)することも、ワークロードマップでも使用されるKubernetesオブジェクト用のカスタムモニタを作成することもできます。
+
+Data Infrastructure Insightsの指標アラートは、以下のいずれかのオブジェクトタイプに対して作成できます。データがデフォルトのオブジェクトタイプでグループ化されていることを確認します。
+
+* kubernetes.workload
+* kubernetes.daemonset
+* kubernetes.deployment
+* kubernetes.cronjob
+* kutability.job
+* kubernetes.replicaset
+* kubernetes.statefulset
+* Kubernetesポッド
+* kubernetes.network_traffic_l4
+
+
+
+
+== 地図
+
+マップには、サービス/ワークロードとそれらの相互関係が表示されます。矢印は交通の方向を示しています。ワークロードにカーソルを合わせると、そのワークロードの概要情報が表示されます（次の例を参照）。
+
+image:ServiceMap_Simple_Example.png["ワークロードマップワークロードの例"]
+
+円の中のアイコンは、さまざまなサービスタイプを表します。アイコンは、基になるオブジェクトにがある場合にのみ表示され<<workload-labels,ラベル>>ます。
+
+image:ServiceMap_Icons.png["サービスアイコンの説明"]
+
+各円のサイズはノードサイズを示します。これらのサイズは相対的なものであることに注意してください。ブラウザのズームレベルまたは画面サイズは、実際の円のサイズに影響を与える可能性があります。同様に、トラフィックラインスタイルでは、接続サイズが一目でわかるようになっています。太字の実線は交通量が多く、点線は交通量が少ないです。
+
+円の中の数字は、サービスによって現在処理されている外部接続の数です。
+
+image:ServiceMap_Node_and_Connection_Legend.png["相対円（ノード）と接続サイズを示す凡例"]
+
+
+
+== ワークロードの詳細とアラート
+
+色の円は、ワークロードに関する警告レベルまたは重大レベルのアラートを示します。円にカーソルを合わせると問題 の概要が表示されます。円をクリックすると、より詳細なスライドアウトパネルが開きます。
+
+image:Workload_Map_Slideout_with_Alert.png["ワークロードのスライドアウトの詳細とアラート"]
+
+
+
+== 検索とフィルタ
+
+Data Infrastructure Insightsの他の機能と同様に、必要なオブジェクトやワークロードの属性に絞り込むフィルタを簡単に設定できます。
+
+image:Workload_Map_Filtering.png["ワークロードマップのフィルタリング"]
+
+同様に、_Find_フィールドに文字列を入力すると、一致するワークロードがハイライトされます。
+
+image:Workload_Map_Find_Highlighting.png["検索ボックスに入力すると、ワークロードがハイライトされます"]
+
+
+
+== ワークロードラベル
+
+表示されるワークロードのタイプ（円のアイコンなど）をマップで識別するには、ワークロードラベルが必要です。ラベルは次のように導出されます。
+
+* 一般的な用語で実行されているサービス/アプリケーションの名前
+* ソースがポッドの場合：
++
+** ラベルはポッドのワークロードラベルから取得されます
+** ワークロードの想定されるラベル：app.kubernetes.io/component
+** ラベル名参照： https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/[]
+** 推奨ラベル：
++
+*** フロントエンド
+*** バックエンド
+*** データベース
+*** キャッシュ
+*** キュー
+*** カフカ
+
+
+
+
+* ソースがKubernetesクラスタの外部にある場合は、次の手順を実行します。
++
+** Data Infrastructure Insightsは、DNS解決名を解析してサービスタイプを抽出しようとします。
++
+たとえば、DNS解決名が_s3.eu-north-1.amazonaws.comの場合、解決された名前はサービスタイプとしてget_s3_に解析されます。
+
+
+
+
+
+
+
+== 深海に潜る
+
+ワークロードを右クリックすると、さらに詳しく調べるための追加のオプションが表示されます。たとえば、ここからズームインして、そのワークロードの接続を表示できます。
+
+image:Workload_Map_Zoom_Into_Connections.png["ワークロードマップ[Zoom]を右クリックすると、ワークロードの接続が表示されます"]
+
+または、詳細スライドアウトパネルを開いて、_Summary_、_Network_、または_Pod & Storage_タブを直接表示することもできます。
+
+image:Workload_Map_Detail_Network_Slideout.png["詳細スライドアウトネットワークタブの例"]
+
+最後に、[_Go to Asset Page_]を選択すると、ワークロードの詳細なアセットランディングページが開きます。
+
+image:Workload_Map_Asset_Page.png["ワークロードアセットページ"]

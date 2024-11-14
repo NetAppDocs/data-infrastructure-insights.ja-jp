@@ -1,0 +1,178 @@
+---
+sidebar: sidebar 
+permalink: task_dc_vmware.html 
+keywords: data collector, VMware, 
+summary: VMware データコレクタの設定 
+---
+= VMware vSphere データコレクタの設定
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+VMware vSphereのデータコレクタは、VMゲストおよびESXiホストのパフォーマンスと構成に関する情報を収集します。vSphere内のすべてのオブジェクトに対して読み取り専用のPrivilegesが必要です。2024年8月以降、vSphereコレクタは、vSphere環境からのログメッセージと一部のVMware固有の指標も取り込みます。Data Infrastructure Insightsは、vSphere 8.0.1以降の環境からのみVMwareログ情報を取得できます。同様に、ベンダー固有の指標はvSphere 7以降の環境でのみサポートされます。そのため、特定のコレクタが古いvSphereインスタンスを参照している場合は、そのコレクタのログやベンダー固有のメトリックのチェックボックスを無効にすることができます。
+
+
+
+== 用語
+
+Data Infrastructure Insightsは、VMware vSphereデータコレクタから次のインベントリ情報を取得します。取得したアセットのタイプごとに、そのアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+[cols="2*"]
+|===
+| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+
+
+| 仮想ディスク | ディスク 
+
+
+| ホスト | ホスト 
+
+
+| 仮想マシン | 仮想マシン 
+
+
+| データストア | データストア 
+
+
+| LUN | ボリューム 
+
+
+| ファイバ・チャネル・ポート | ポート 
+|===
+これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているとは限りません
+
+
+
+== 要件
+
+このデータコレクタを設定するには、次の情報が必要です。
+
+* Virtual Center サーバの IP アドレス
+* Virtual Center の読み取り専用のユーザ名とパスワード
+* Virtual Center 内のすべてのオブジェクトに対する読み取り専用権限が必要です。
+* Virtual Center サーバの SDK へのアクセス - 通常はすでにセットアップされています。
+* ポート要件： http - 80 https-443
+* アクセスの検証：
++
+** 上記のユーザ名とパスワードを使用して、 Virtual Center Client にログインします
+** SDK が有効になっていることを確認します。 telnet <VC_IP> 443
+
+
+
+
+
+
+== セットアップと接続
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| 名前 | データコレクタの一意の名前 
+
+
+| Acquisition Unit の場合 | Acquisition Unit の名前 
+|===
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| 仮想センターの IP アドレス | Virtual Center の IP アドレス 
+
+
+| ユーザ名 | Virtual Center へのアクセスに使用するユーザ名 
+
+
+| パスワード | Virtual Center へのアクセスに使用するパスワード 
+|===
+
+
+== 高度な設定
+
+詳細設定画面で、 VM パフォーマンス * ボックスをオンにしてパフォーマンスデータを収集します。インベントリ収集は、デフォルトで有効になっています。次のフィールドを設定できます。
+
+[cols="2*"]
+|===
+
+
+| フィールド | 製品説明 
+
+
+| インベントリのポーリング間隔（分） | デフォルトは20です 
+
+
+| VM をフィルタリングします | クラスタ、データセンター、または ESX ホストを選択します 
+
+
+| 「除外」または「含める」を選択してリストを指定します | フィルタリストの作成（クラスタ、データセンター、 ESX_host ） 
+
+
+| 再試行回数 | デフォルトは3です 
+
+
+| 通信ポート | デフォルトは443です 
+
+
+| デバイスリストのフィルタ ... | このリストは、完全に一致する文字列で構成されている必要があります。esx_hostでフィルタリングする場合は、Data Infrastructure InsightsとvSphereの両方で報告されたESXホストの正確な「名前」をカンマで区切って作成する必要があります。「名前」には、 IP アドレス、単純なホスト名、または Fully Qualified Domain Name （ FQDN ；完全修飾ドメイン名）を指定できます。この名前は、これらのホストが vSphere に最初に追加されたときの命名方法によって決まります。クラスタでフィルタリングする場合は、ハイパーバイザーのCIによって報告されるData Infrastructure Insights形式のクラスタ名を使用します。Data Infrastructure Insightsでは、vSphereクラスタ名の前にvSphereデータセンター名が付加され、スラッシュが付きます。「DC1/clusterA」は、Data Infrastructure InsightsがデータセンターDC1内のclusterAのハイパーバイザーについて報告するクラスタ名です。 
+
+
+| パフォーマンスのポーリング間隔（秒） | デフォルトは300です 
+|===
+
+
+== VMwareのタグとData Infrastructure Insightsのアノテーションのマッピング
+
+VMwareデータコレクタを使用すると、VMwareで設定されているタグを使用してData Infrastructure Insightsのアノテーションを入力できます。アノテーションにはVMwareタグとまったく同じ名前を付ける必要があります。Data Infrastructure Insightsでは、常に同じ名前のテキストタイプのアノテーションが入力され、他のタイプ（数値、ブール値など）のアノテーションが入力されるよう「最善の試み」が行われます。アノテーションのタイプが異なるためにデータコレクタにデータを入力できない場合は、アノテーションを削除してテキストタイプで再作成する必要があります。
+
+VMwareタグでは大文字と小文字が区別され、Data Infrastructure Insightsタグでは大文字と小文字が区別されないことに注意してください。そのため、Data Infrastructure Insightsで「owner」という名前のアノテーションを作成し、VMwareで「owner」、「Owner」、「owner」という名前のタグを作成すると、これらすべての「owner」の変化形がCloud Insightの「owner」アノテーションにマッピングされます。
+
+次の事項に注意してください。
+
+* 現在のところ、Data Infrastructure Insightsでは、NetAppデバイスのサポート情報を自動で公開するだけです。
+* このサポート情報はアノテーション形式で保持されているため、クエリを実行したり、ダッシュボードで使用したりできます。
+* ユーザがアノテーション値を上書きまたは空にした場合、Data Infrastructure Insightsでアノテーションが更新されると再び値が自動入力されます。更新は1日に1回行われます。
+
+
+
+
+== トラブルシューティング
+
+このデータコレクタで問題が発生した場合の対処方法を次に示します。
+
+
+
+=== インベントリ
+
+[cols="2*"]
+|===
+| 問題 | 次の操作を実行します 
+
+
+| エラー：フィルタリングする VM をリストに含めることはできません | [Include List] を選択した場合は、有効なデータセンター、クラスタ、またはホスト名をリストして、 VM をフィルタリングしてください 
+
+
+| エラー： IP で VirtualCenter への接続をインスタンス化できませんでした | 解決策： * 入力された資格情報と IP アドレスを確認してください。* VMware Infrastructure Client を使用して、 Virtual Center との通信を試みます。* Managed Object Browser （ MOB など）を使用して Virtual Center と通信してみます。 
+
+
+| エラー： IP の VirtualCenter には、 JVM で必要な非準拠の証明書があります | 可能な解決策： * 推奨：強力な（など）を使用して、 Virtual Center の証明書を再生成します 1024 ビット） RSA キー。* 推奨されません。 JVM java.security 設定を変更して、 JDK.certPath.disableAlgorithms 制約を利用し、 512 ビット RSA キーを許可します。を参照して link:http://www.oracle.com/technetwork/java/javase/7u40-relnotes-2004172.html["JDK 7 Update 40リリースノート"] 
+
+
+| 「VMware Logs package is not supported on VMware below version 8.0.1」というメッセージが表示されます。 | 8.0.1より前のバージョンのVMwareでは、ログの収集はサポートされていません。Data Infrastructure Insightsのログ収集機能を使用する場合は、VI Center Infrastructureをバージョン8.0.1以降にアップグレードします。詳細については、こちらを参照してlink:https://kb.netapp.com/Cloud/BlueXP/Cloud_Insights/VMware_Logs_package_is_not_supported_on_VMware_below_version_8.0.1___Data_Infrastructure_Insights["KB記事"]ください。 
+|===
+詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
