@@ -193,12 +193,9 @@
   <block id="e0dc2ed956b3711e722d965954939344" category="list-text">この Acquisition Unit に合計 75 個以上のデータコレクタを導入しますか？</block>
   <block id="159904c45b61bfdda4989e18bf9891e8" category="paragraph">上記の「はい」回答ごとに、 8 GB のメモリと 50 GB のディスク容量を AU に追加することをお勧めします。たとえば、「はい」と答えた場合、 150GB 以上のディスクスペースを備えた 24GB のメモリシステムを導入する必要があります。Linux の場合、ログの場所に追加するディスクスペース。</block>
   <block id="11bb1da5c9cf0248245ce5b24119d183" category="paragraph">サイジングに関するその他の情報については、ネットアップサポートにお問い合わせください。</block>
-  <block id="da9f9625eb860a1ad92687973f4b6f55" category="section-title">Federal Editionの追加要件</block>
-  <block id="cde8307fb591a6c3934539dcb5919f06" category="list-text">Data Infrastructure Insights Federal EditionクラスタにAcquisition Unitをインストールする場合は、基盤となるオペレーティングシステムに十分なエントロピーがある必要があります。Linuxシステムでは、これは通常、_rng-tools_をインストールするか、ハードウェア乱数生成（RNG）を使用して行われます。Acquisition Unitマシンでこの要件が満たされていることを確認するのは、お客様の責任です。</block>
   <block id="96cb7682ad0362f3aff6ef6f90dd2520" category="summary">NetApp Active IQからリスクデータを収集するデータインフラ分析情報</block>
   <block id="b5fe3a41d32647f20f3b5ec96045d6d6" category="doc">Active IQ</block>
   <block id="df0ddcb04f0e5278d49d2c87dfa7f7fc" category="paragraph">NetAppは<block ref="5d418eb60d51fa035e4b287bd4191a07" category="inline-link-macro-rx"></block>、NetAppのお客様のハードウェア/ソフトウェアシステム向けに、一連の視覚化、分析、およびその他のサポート関連サービスを提供しています。Active IQ が報告するデータは、システム問題のトラブルシューティングを強化するとともに、デバイスに関する最適化と予測分析の情報も提供します。</block>
-  <block id="ace71aa31322ae1c7e3740649676adf8" category="admonition">ActiveIQは、Data Infrastructure Insights Federal Editionでは使用できません。</block>
   <block id="97ba27a6c978c304ea9138ee01781875" category="paragraph">Data Infrastructure Insightsは、Active IQによって監視およびレポートされるすべてのNetApp clustered Data ONTAPストレージシステムについて、*リスク*を収集します。ストレージシステムについて報告されたリスクは、Data Infrastructure Insightsによって、それらのデバイスからのデータ収集の一環として自動的に収集されます。Active IQリスク情報を収集するには、適切なデータコレクタをData Infrastructure Insightsに追加する必要があります。</block>
   <block id="bfdb97c5bb51966044d87207708e9888" category="paragraph">Data Infrastructure Insightsには、Active IQで監視およびレポートされていないONTAPシステムのリスクデータは表示されません。</block>
   <block id="a98980e7429cd68c3207593853e627fe" category="paragraph">レポートされるリスクは、Data Infrastructure Insightsの_storage_and_storage node_assetランディングページの「リスク」の表に表示されます。この表には、リスクの詳細、リスクのカテゴリ、潜在的な影響が表示されます。また、ストレージノードのすべてのリスクをまとめた Active IQ ページへのリンクも表示されます（ネットアップサポートアカウントのサインインが必要です）。</block>
@@ -1104,7 +1101,6 @@
   <block id="7cf514f5919cb28bfec05b4c4f4c46c6" category="paragraph">単一値ウィジェットまたはゲージウィジェットのリンクをクリックすると、ウィジェットの最初のクエリに対応するクエリページが表示されます。</block>
   <block id="643c94a9b7fa8044a23bb9cbc6ebffbe" category="section-title">表ウィジェットの書式設定</block>
   <block id="9e2381c8e7ac28deb699317b34df149b" category="paragraph">単一値ウィジェットやゲージウィジェットと同様に、表ウィジェットで条件付き書式を設定し、色や特殊アイコンでデータを強調表示することができます。</block>
-  <block id="5fd3ff776b149305fbc059482c2bb581" category="admonition">条件付き書式は、現在Data Infrastructure Insights Federal Editionでは使用できません。</block>
   <block id="84679b44186157278902037b722c7359" category="paragraph">条件付き書式を使用すると、表ウィジェットで警告レベルと重大レベルのしきい値を設定して強調表示し、異常なデータポイントを瞬時に可視化できます。</block>
   <block id="af857689eee998410c8a208e06da82aa" category="inline-image-macro">条件付き書式の例</block>
   <block id="07ee1acb2c120e65f59c1e4f6f6c04e9" category="paragraph"><block ref="07ee1acb2c120e65f59c1e4f6f6c04e9" category="inline-image-macro-rx" type="image"></block></block>
@@ -3716,7 +3712,6 @@
   <block id="58e92099c75821827b7a665f2931deb2" category="paragraph"><block ref="58e92099c75821827b7a665f2931deb2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b451cdd4206327fd0afecbb2df7b2bec" category="doc">ストレージワークロードのセキュリティについて</block>
   <block id="d91922a1bdba61ab374e14011d46cddf" category="paragraph">データインフラに関するインサイトStorage Workload Security（旧称Cloud Secure）は、内部の脅威に関する実用的な情報に基づいてデータを保護します。ハイブリッドクラウド環境全体にわたるすべての企業データへのアクセスを一元的に可視化および制御できるため、セキュリティとコンプライアンスの目標を確実に達成できます。</block>
-  <block id="f685e8c506c41657d74fe2fe7ec4ca60" category="admonition">Data Infrastructure Insights Federal Editionでは、ワークロードセキュリティは利用できません。</block>
   <block id="1729a56cfc89021478498fe0c89a843a" category="section-title">可視性</block>
   <block id="72afd90b781c569f0442e6e45c9f3193" category="paragraph">オンプレミスまたはクラウドに保存されている重要な企業データへのユーザアクセスを一元的に可視化し、制御できます。</block>
   <block id="6bb784bfbef2792b99ae322d0ce648b6" category="paragraph">データのアクセスと管理をタイムリーかつ正確に可視化できないツールや手動プロセスを置き換えます。ワークロードセキュリティは、クラウドストレージシステムとオンプレミスストレージシステムの両方で独自に動作し、悪意のあるユーザの行動をリアルタイムで警告します。</block>
@@ -6842,7 +6837,6 @@
   <block id="02230bab9788e4843408e124331bb1ca" category="cell">クラスタに存在するKubernetes CronJobsについて収集された指標が表示されません。</block>
   <block id="b3b6bea000b13acbfcb412bad49ee494" category="cell">Kubernetesのバージョンを確認します（例：<block ref="4fc58818ca77fb3a60cbd34a7f7d5071" prefix=" " category="inline-code"></block>）。v1.20.x以下の場合、これは想定される制限です。Kubernetes Monitoring Operatorで導入されたkube-state-metricsリリースでは、v1.cronjobのみがサポートされます。Kubernetes 1.20.x以前では、cronjobリソースはv1beta.cronjobにあります。その結果、kube-state-metricsはcronjobリソースを見つけることができません。</block>
   <block id="45698e13b1c2f7241751839133834506" category="cell">オペレータのインストール後、telegraf-DSポッドがCrashLoopBackOffに入り、PODログに「su：Authentication failure」と表示されます。</block>
-  <block id="f8c008ebe75bf3ef5a707b1a1565926f" category="cell">_AgentConfiguration_のtelegrafセクションを編集し、set_dockerMetricCollectionEnabled_をfalseに設定します。詳細については、オペレータのを参照して<block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>ください。注: Data Infrastructure Insights Federal Editionを使用している場合、_su_の使用が制限されているユーザーはDockerメトリクスを収集できません。Dockerソケットにアクセスするには、telegrafコンテナをrootとして実行するか、_su_を使用してtelegrafユーザーをDockerグループに追加する必要があるためです。Dockerメトリック収集と_su_の使用はデフォルトで有効になっています。両方を無効にするには、_AgentConfiguration_fileの_telegraf.docker_entryを削除します。...spec:...telegraf:...           -name：docker       run-mode：       -DaemonSet      置換：       -key：docker_unix_sock_placeholder        値：unix：//run/docker.sock......</block>
   <block id="802997bcb8e9581226b3000b8b611b1c" category="cell">Telegrafログに次のようなエラーメッセージが繰り返し表示されます。[agent]出力への書き込み中にエラーが発生しました。http：Post "\https：//&lt;tenant_url&gt;/rest/v1/lake/ingest/influxdb"：context deadline exceeded (Client. ヘッダー待機中にタイムアウトを超過しました）</block>
   <block id="5a581223d2fea6c45a7ac1278334f8c1" category="cell">_AgentConfiguration_およびincrease_outputTimeout_のtelegrafセクションを10秒に編集します。詳細については、オペレータのを参照して<block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>ください。</block>
   <block id="4f05106cca363b0f3c492314ab777534" category="cell">一部のイベントログの_involvedobject_dataが見つかりません。</block>
@@ -11824,4 +11818,5 @@
   <block id="399bd1ee587245ecac6f39beaa99886f" category="sidebar">PostgreSQL</block>
   <block id="14590850b4107a6f92feb1af739b82eb" category="sidebar">パペット</block>
   <block id="15ec8934d96530d4c5f4a3b0f701f745" category="sidebar">RethinkDB</block>
+  <block id="e77701e8957afb414a45ca434ef7f000" category="cell">_AgentConfiguration_のtelegrafセクションを編集し、set_dockerMetricCollectionEnabled_をfalseに設定します。詳細については、オペレータのを参照して<block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>ください。...spec:...telegraf:...           -name：docker       run-mode：       -DaemonSet      置換：       -key：docker_unix_sock_placeholder        値：unix：//run/docker.sock......</block>
 </blocks>

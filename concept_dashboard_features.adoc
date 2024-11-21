@@ -639,9 +639,6 @@ image:Single-ValueWidgets.png["書式設定あり / なしの単一値ウィジ�
 
 単一値ウィジェットやゲージウィジェットと同様に、表ウィジェットで条件付き書式を設定し、色や特殊アイコンでデータを強調表示することができます。
 
-
-NOTE: 条件付き書式は、現在Data Infrastructure Insights Federal Editionでは使用できません。
-
 条件付き書式を使用すると、表ウィジェットで警告レベルと重大レベルのしきい値を設定して強調表示し、異常なデータポイントを瞬時に可視化できます。
 
 image:ConditionalFormattingExample.png["条件付き書式の例"]

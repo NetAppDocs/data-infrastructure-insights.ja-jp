@@ -73,10 +73,3 @@ Data Infrastructure Insights Acquisition Unitの使用は、メモリが8GB、�
 上記の「はい」回答ごとに、 8 GB のメモリと 50 GB のディスク容量を AU に追加することをお勧めします。たとえば、「はい」と答えた場合、 150GB 以上のディスクスペースを備えた 24GB のメモリシステムを導入する必要があります。Linux の場合、ログの場所に追加するディスクスペース。
 
 サイジングに関するその他の情報については、ネットアップサポートにお問い合わせください。
-
-
-
-== Federal Editionの追加要件
-
-* Data Infrastructure Insights Federal EditionクラスタにAcquisition Unitをインストールする場合は、基盤となるオペレーティングシステムに十分なエントロピーがある必要があります。Linuxシステムでは、これは通常、_rng-tools_をインストールするか、ハードウェア乱数生成（RNG）を使用して行われます。Acquisition Unitマシンでこの要件が満たされていることを確認するのは、お客様の責任です。
-

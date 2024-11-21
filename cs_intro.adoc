@@ -22,9 +22,6 @@ summary: 概要
 データインフラに関するインサイトStorage Workload Security（旧称Cloud Secure）は、内部の脅威に関する実用的な情報に基づいてデータを保護します。ハイブリッドクラウド環境全体にわたるすべての企業データへのアクセスを一元的に可視化および制御できるため、セキュリティとコンプライアンスの目標を確実に達成できます。
 
 
-NOTE: Data Infrastructure Insights Federal Editionでは、ワークロードセキュリティは利用できません。
-
-
 
 == 可視性
 

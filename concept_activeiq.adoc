@@ -21,9 +21,6 @@ summary: NetApp Active IQからリスクデータを収集するデータイン�
 [role="lead"]
 NetAppはlink:https://www.netapp.com/us/products/data-infrastructure-management/active-iq.aspx["Active IQ"]、NetAppのお客様のハードウェア/ソフトウェアシステム向けに、一連の視覚化、分析、およびその他のサポート関連サービスを提供しています。Active IQ が報告するデータは、システム問題のトラブルシューティングを強化するとともに、デバイスに関する最適化と予測分析の情報も提供します。
 
-
-NOTE: ActiveIQは、Data Infrastructure Insights Federal Editionでは使用できません。
-
 Data Infrastructure Insightsは、Active IQによって監視およびレポートされるすべてのNetApp clustered Data ONTAPストレージシステムについて、*リスク*を収集します。ストレージシステムについて報告されたリスクは、Data Infrastructure Insightsによって、それらのデバイスからのデータ収集の一環として自動的に収集されます。Active IQリスク情報を収集するには、適切なデータコレクタをData Infrastructure Insightsに追加する必要があります。
 
 Data Infrastructure Insightsには、Active IQで監視およびレポートされていないONTAPシステムのリスクデータは表示されません。
