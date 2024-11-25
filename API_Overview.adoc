@@ -39,7 +39,7 @@ Data Infrastructure Insights APIを使用すると、NetAppのお客様や独立
 
 image:API_Swagger_Types.png["APIタイフ"]
 
-API ドキュメントは Swagger ベースです。 API の簡単な概要情報と使用方法を提供しており、環境内で試すことができます。ユーザロールやData Infrastructure Insightsのエディションによっては、使用できるAPIタイプが異なる場合があります。
+APIドキュメントはSwaggerベースです。APIの簡単な説明と使用方法が記載されており、テナントで試すことができます。ユーザロールやData Infrastructure Insightsのエディションによっては、使用できるAPIタイプが異なる場合があります。
 
 image:API_Swagger_Example.png["API Swagger の例"]
 
@@ -195,11 +195,9 @@ Performance Summary カウンタは、パフォーマンスカウンタの要約
 
 == オブジェクトのパフォーマンス指標
 
-API は、環境内のオブジェクトについて、次のような詳細な指標を返すことができます。
+APIからは、次のようなテナント上のオブジェクトの詳細な指標が返されます。
 
 * IOPS （ 1 秒あたりの入出力要求の数）、レイテンシ、スループットなどのストレージパフォーマンス指標。
-
-
 * スイッチのパフォーマンス指標：トラフィック利用率、 BB クレジットゼロデータ、ポートエラーなど。
 
 

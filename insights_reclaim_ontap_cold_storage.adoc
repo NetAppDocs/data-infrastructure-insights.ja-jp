@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: insights_reclaim_ontap_cold_storage.html 
 keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload 
-summary: この分析情報から、リソースが環境内の他のリソースにどのような影響を及ぼすかを確認できます。 
+summary: インサイトでは、リソースがテナントの他のリソースにどのように影響するかを確認できます。 
 ---
 = 分析情報：ONTAP コールドストレージの再利用
 :toc: macro

@@ -64,7 +64,7 @@ VMware などのハイパーバイザーは、 ESXi ホストとその仮想マ�
 
 == Data Infrastructure Insightsはファイバチャネルスイッチをサポートしていますか。
 
-はい。Data Infrastructure Insightsは、ストレージ資産からデータを収集するだけでなく、環境内のCisco、Brocade、QLogicスイッチからインベントリとパフォーマンスのデータも取得します。
+はい。Data Infrastructure Insightsは、ストレージ資産からデータを収集するだけでなく、テナントのCisco、Brocade、QLogicスイッチからインベントリとパフォーマンスのデータも取得します。
 
 
 

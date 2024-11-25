@@ -31,7 +31,7 @@ summary: 分析情報から、リソースの使用状況とトレンド分析�
 
 === 負荷のある共有リソース
 
-影響の大きいワークロードは、共有リソース内の他のワークロードのパフォーマンスを低下させる可能性があります。これにより、共有リソースに負荷がかかります。Data Infrastructure Insightsは、リソースの飽和状態や環境への影響を調査するのに役立つツールを提供します。link:insights_shared_resources_under_stress.html["詳細"]
+影響の大きいワークロードは、共有リソース内の他のワークロードのパフォーマンスを低下させる可能性があります。これにより、共有リソースに負荷がかかります。Data Infrastructure Insightsは、リソースの飽和状態とテナントへの影響を調査するのに役立つツールを提供します。link:insights_shared_resources_under_stress.html["詳細"]
 
 
 

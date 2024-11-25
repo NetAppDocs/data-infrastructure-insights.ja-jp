@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_high_consuming_workloads.html 
 keywords: insight, greedy, degraded, bully, victim, impacted, impacting, impactful, impact, resources, consuming, workload 
-summary: この分析情報から、リソースが環境内の他のリソースにどのような影響を及ぼすかを確認できます。 
+summary: インサイトでは、リソースがテナントの他のリソースにどのように影響するかを確認できます。 
 ---
 = 分析情報：負荷の高いワークロード
 :toc: macro
@@ -19,7 +19,7 @@ summary: この分析情報から、リソースが環境内の他のリソー�
 
 
 [role="lead"]
-影響の大きいワークロードは、共有リソース内の他のワークロードのパフォーマンスを低下させる可能性があります。Data Infrastructure Insightsは、リソースの飽和状態や環境への影響を調査するのに役立つツールを提供します。
+影響の大きいワークロードは、共有リソース内の他のワークロードのパフォーマンスを低下させる可能性があります。Data Infrastructure Insightsは、リソースの飽和状態とテナントへの影響を調査するのに役立つツールを提供します。
 
 
 
@@ -59,7 +59,7 @@ image:Insights_Demanding_Workload_Chart.png["要求の厳しいワークロー�
 
 === 飽和状態を解決するにはどうすればよいですか？
 
-環境内の飽和の可能性を減らすか、または排除するために、いくつかの手順を実行できます。いくつか試してみてください。
+テナントが飽和状態になる可能性を減らす、または排除するには、いくつかの手順を実行できます。いくつか試してみてください。
 
 * 高 IOPS の利用者を移動
 +

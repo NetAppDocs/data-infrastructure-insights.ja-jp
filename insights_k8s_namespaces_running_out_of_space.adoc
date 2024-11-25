@@ -19,7 +19,7 @@ summary: 分析情報は、Kubernetesスペースがいついっぱいになる�
 
 
 [role="lead"]
-環境のスペース不足は、決して良い状況ではありません。Data Infrastructure Insightsは、Kubernetes永続ボリュームがフルになるまでの時間を予測するのに役立ちます。
+テナントのスペース不足は決して良い状況ではありません。Data Infrastructure Insightsは、Kubernetes永続ボリュームがフルになるまでの時間を予測するのに役立ちます。
 
 Space_Insightで実行されている_ Kubernetes名前空間を使用すると、容量不足のリスクがあるKubernetes名前空間のワークロードを表示できます。各永続ボリュームがいっぱいになるまでに推定される残り日数を確認できます。
 

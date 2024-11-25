@@ -19,7 +19,7 @@ keywords: AU, acquisition unit, requirements, sizing
 
 
 [role="lead"]
-インフラのデータコレクタ（ストレージ、 VM 、ポート、 EC2 など）から情報を取得するには、 Acquisition Unit （ AU ）をインストールする必要があります。Acquisition Unit をインストールする前に、オペレーティングシステム、 CPU 、メモリ、およびディスクスペースが要件を満たしていることを確認してください。
+インフラのデータコレクタ（ストレージ、 VM 、ポート、 EC2 など）から情報を取得するには、 Acquisition Unit （ AU ）をインストールする必要があります。Acquisition Unitをインストールする前に、テナントがオペレーティングシステム、CPU、メモリ、およびディスクスペースの要件を満たしていることを確認する必要があります。
 
 
 
@@ -43,7 +43,7 @@ keywords: AU, acquisition unit, requirements, sizing
 | 使用可能なディスクスペース | 50GB（100GBを推奨）Linuxの場合は、次のようにディスクスペースを割り当てる必要があります。/opt/ NetApp 10GB（大規模環境では20GB）/var/log/ NetApp 40GB（大規模環境では80GB）/tmpインストール時に1GB以上利用可能 | 50GB 
 
 
-| ネットワーク | 100 Mbps/1 Gbpsイーサネット接続、静的IPアドレス、およびAcquisition Unitから*。NetApp .comまたはデータインフラストラクチャインサイト環境（\https：//<environment_id> NetApp .com）へのポート80または443（アウトバウンド）接続が必要です。Acquisition Unitと各Data Collectorの間の要件については、の手順を参照してくださいlink:data_collector_list.html["Data Collector"]。インターネットアクセスにプロキシを使用する必要がある場合は、組織のプロキシの動作を理解し、Data Infrastructure Insightsが機能するために特定の例外を探す必要があります。たとえば、デフォルトでアクセスがブロックされ、特定のWebサイト/ドメインへのアクセスのみが例外で許可されていますか。その場合は、次のドメインを例外リストに追加する必要があります。*。NetApp .com詳細については、プロキシlink:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["こちら（Linux）"]またはを参照してください。link:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["ここ（Windows）"] | 同じ 
+| ネットワーク | 100 Mbps/1 Gbpsイーサネット接続、静的IPアドレス、およびAcquisition Unitから*.cloudinsights.accom/Data Infrastructure NetAppテナント（\https：//<tenant_id>.c01.cloudinsights.c01.cloudinsights.c.com NetApp）へのポート80または443（アウトバウンド）接続が必要です。Acquisition Unitと各Data Collectorの間の要件については、の手順を参照してくださいlink:data_collector_list.html["Data Collector"]。インターネットアクセスにプロキシを使用する必要がある場合は、組織のプロキシの動作を理解し、Data Infrastructure Insightsが機能するために特定の例外を探す必要があります。たとえば、デフォルトでアクセスがブロックされ、特定のWebサイト/ドメインへのアクセスのみが例外で許可されていますか。その場合は、次のドメインを例外リストに追加する必要があります。*。NetApp .com詳細については、プロキシlink:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["こちら（Linux）"]またはを参照してください。link:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["ここ（Windows）"] | 同じ 
 
 
 | 権限 | Acquisition Unit サーバに対する sudo 権限/tmp は EXEC 機能でマウントする必要があります。 | Acquisition Unit サーバに対する管理者権限が必要です 

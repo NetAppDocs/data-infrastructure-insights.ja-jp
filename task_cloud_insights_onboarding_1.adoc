@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_cloud_insights_onboarding_1.html 
-summary: Data Infrastructure Insightsにサインアップして、環境を構築しましょう。 
+summary: Data Infrastructure Insightsにサインアップしてテナントを作成しましょう。 
 keywords: onboarding, new user 
 ---
 = データインフラの分析情報をオンボーディング
@@ -49,11 +49,11 @@ image:BlueXP_CloudInsights.png["BlueXP  でのData Infrastructure Insights無�
 
 == Data Infrastructure Insights無償トライアルを開始する
 
-Data Infrastructure Insightsに初めてログインする場合は、[Data Infrastructure Insights Offering]で*[Start Free Trial]*をクリックします。Data Infrastructure Insightsでは、環境を配置する地域の選択など、企業の環境を作成する手順を順を追って説明します。
+Data Infrastructure Insightsに初めてログインする場合は、[Data Infrastructure Insights Offering]で*[Start Free Trial]*をクリックします。Data Infrastructure Insightsでは、テナントを配置する地域の選択など、企業のテナントを作成する手順を説明します。
 
-image:trial_region_selector.png["Data Infrastructure Insights環境をホストするリージョンの選択"]
+image:trial_region_selector.png["Data Infrastructure Insightsテナントをホストするリージョンの選択"]
 
-環境の作成が完了したら、BlueXP  クレデンシャルを使用してログインし、30日間のData Infrastructure Insights無償トライアルを開始できます。このトライアルでは、Data Infrastructure Insightsが提供する機能を確認できます。
+テナントの作成が完了したら、BlueXP  クレデンシャルを使用してログインし、Data Infrastructure Insightsの30日間無償トライアルを開始できます。このトライアルでは、Data Infrastructure Insightsが提供する機能を確認できます。
 
 無償トライアルでは、link:concept_subscribing_to_cloud_insights.html["サブスクリプションを開始します"]Data Infrastructure Insightsをいつでも試すことができます。サブスクリプションを購入すると、現在のサブスクリプションに基づいてData Infrastructure Insightsの機能を使用できます。
 
@@ -61,17 +61,17 @@ image:trial_region_selector.png["Data Infrastructure Insights環境をホスト�
 
 == サインインして実行します
 
-環境の作成が完了したら、いつでもNetApp BlueXP  ポータルにログインし、*[Go to Data Infrastructure Insights（データインフラのインサイトに移動）]*をクリックするだけです。データインフラの分析情報環境が直接表示されます。
+テナントが作成されたら、いつでもNetApp BlueXP  ポータルにログインして*[Go to Data Infrastructure Insights（データインフラのインサイトに移動）]*をクリックするだけです。Data Infrastructure Insightsのテナントに直接移動します。
 
-ブラウザを開いて、Data Infrastructure Insights環境のURLに直接アクセスすることもできます。次に例を示します。
+ブラウザを開いて、Data Infrastructure InsightsのテナントURLに直接アクセスすることもできます。次に例を示します。
 
- \https://<environment-prefix>.c01.cloudinsights.netapp.com/
+ \https://<tenant-prefix>.c01.cloudinsights.netapp.com/
 また、 URL は各ユーザーの招待メールにも含まれ、簡単にアクセスしたりブックマークを付けたりできます。BlueXPにまだログインしていない場合は、ログインするように求められます。
 
 
-NOTE: 新規ユーザが環境のURLにアクセスするには、引き続きBlueXPへのアクセスに登録する必要があります。
+NOTE: 新規ユーザがテナントURLにアクセスするには、引き続きBlueXP  へのアクセスにサインアップする必要があります。
 
-新しい環境に初めてログインするときは、をセットアップする手順が表示されますlink:task_getting_started_with_cloud_insights.html["* データの収集を開始 *"]。
+新しいテナントに初めてログインするときは、をセットアップする手順が表示されますlink:task_getting_started_with_cloud_insights.html["* データの収集を開始 *"]。
 
 
 

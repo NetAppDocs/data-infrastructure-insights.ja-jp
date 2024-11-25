@@ -17,7 +17,7 @@ summary: フォレンジックエンティティページ
 
 
 [role="lead"]
-フォレンジックエンティティページには、環境内のエンティティアクティビティに関する詳細情報が表示されます。
+[Forensics Entities]ページには、テナントのエンティティアクティビティに関する詳細情報が表示されます。
 
 
 
@@ -25,7 +25,7 @@ summary: フォレンジックエンティティページ
 
 * Forensics > Activity Forensics * をクリックし、 _Entities_ タブをクリックして Entities ページにアクセスします。
 
-このページでは、環境内のエンティティのアクティビティの概要を示し、次の情報を強調表示します。 * 1 分間に _ 一意のエンティティ _ アクセスされた状態を示すグラフ * _ エンティティタイプアクセスされた状態のグラフ _ * 共通パスの内訳 _ * エンティティ総数の _ 上位 50 エンティティ _ のリスト
+このページには、テナントのエンティティアクティビティの概要が表示され、次の情報が強調表示されます。*グラフに_Unique Entities_accessed per minute *エンティティタイプのグラフaccessed _* A chart of _ Entity types accessed _* A breakdown of the _Common Paths_*エンティティの総数のうち_Top 50 Entities_outのリスト
 
 image:CS-Entities-Page.png["エンティティページ（ Entities Page ）"]
 

@@ -21,7 +21,7 @@ summary: Kubernetes のランディングページで
 [role="lead"]
 Data Infrastructure Insights Kubernetes Explorerは、Kubernetesクラスタの全体的な健全性と使用状況を表示するための強力なツールであり、調査領域に簡単にドリルダウンできます。
 
-[Dashboards]>[Kubernetes Explorer]をクリックすると、[Kubernetes Cluster]リストページが開きます。この概要ページには、環境内のKubernetesクラスタの表が含まれています。
+[Dashboards]>[Kubernetes Explorer]をクリックすると、[Kubernetes Cluster]リストページが開きます。この概要ページには、テナント上のKubernetesクラスタのテーブルが含まれます。
 
 image:Kubernetes_List_Page_new.png["Kubernetesリストページ"]
 
@@ -29,7 +29,7 @@ image:Kubernetes_List_Page_new.png["Kubernetesリストページ"]
 
 === クラスタリスト
 
-クラスタリストには、環境内の各クラスタについて次の情報が表示されます。
+クラスタリストには、テナント上の各クラスタについて次の情報が表示されます。
 
 * クラスタ*名*。クラスタ名をクリックすると、そのクラスタのが開きlink:kubernetes_cluster_detail.html["* 詳細ページ *"]ます。
 * *彩度*パーセンテージ。Overall Saturation（全体飽和）は、CPU、メモリ、またはストレージの飽和度の最大値です。

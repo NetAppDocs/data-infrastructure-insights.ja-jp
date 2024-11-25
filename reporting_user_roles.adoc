@@ -16,7 +16,7 @@ keywords: reporting, cognos, data warehouse, dwh, users, roles, user roles
 
 
 [role="lead"]
-Data Infrastructure Insights Premium Edition with Reportingを使用している場合は、環境内のすべてのData Infrastructure Insightsユーザが、レポートアプリケーション（Cognosなど）へのシングルサインオン（SSO）ログインも利用できます。メニューの * Reports * リンクをクリックすると、自動的に Reporting にログインします。
+Data Infrastructure Insights Premium Edition with Reportingを使用している場合は、テナントのすべてのData Infrastructure Insightsユーザは、Reportingアプリケーション（Cognosなど）へのシングルサインオン（SSO）ログインも持っています。メニューの * Reports * リンクをクリックすると、自動的に Reporting にログインします。
 
 Reportingユーザのロールは、Data Infrastructure Insightsのユーザロールによって決まります。
 
@@ -91,7 +91,7 @@ NOTE: Data Infrastructure Insights Reporting（Cognosアプリケーション）
 
 === SSO を有効にするために既存の環境を準備するには、どのような手順を実行する必要がありますか。
 
-レポートを確実に保持するには、次の手順を使用して、 _My Content_to _Team Content_ からすべてのレポートを移行します。この作業は、環境で SSO を有効にする前に行う必要があります。
+レポートを確実に保持するには、次の手順を使用して、 _My Content_to _Team Content_ からすべてのレポートを移行します。テナントでSSOを有効にする前に、次の手順を実行する必要があります。
 
 . [メニュー]>[コンテンツ]*に移動します
 

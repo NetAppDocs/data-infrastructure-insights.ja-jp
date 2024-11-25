@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_install_manual_au.html 
 keywords: Acquisition Unit, AU, install, configure, Linux, add, remove, uninstall, delete, deleting, move, moving, manual, AU, Patch 
-summary: Data Infrastructure Insightsでは、AUソフトウェアを手動で更新するように設定できるため、環境にインストールされているソフトウェアをより細かく制御できます。 
+summary: Data Infrastructure Insightsでは、AUソフトウェアを手動で更新するように設定できるため、テナントにインストールされているソフトウェアをより細かく制御できます。 
 ---
 = Acquisition Unitソフトウェアを手動でインストールする
 :hardbreaks:
@@ -16,7 +16,7 @@ summary: Data Infrastructure Insightsでは、AUソフトウェアを手動で�
 
 
 [role="lead"]
-デフォルトでは、Data Infrastructure Insightsは、更新が導入されるとAcquisition Unit（AU）ソフトウェアを自動的に更新します。ただし、安全に管理された環境では、自動更新が不可能または望まれない場合があります。このような場合は、AUソフトウェアを手動で更新するようにData Infrastructure Insightsを設定して、環境にインストールされているソフトウェアをより細かく制御できます。
+デフォルトでは、Data Infrastructure Insightsは、更新が導入されるとAcquisition Unit（AU）ソフトウェアを自動的に更新します。ただし、安全に管理された環境では、自動更新が不可能または望まれない場合があります。このような場合は、AUソフトウェアを手動で更新するようにData Infrastructure Insightsを設定して、テナントにインストールされているソフトウェアをより細かく制御できます。
 
 AUソフトウェアを手動でダウンロードしてインストールするには、次の手順に従います。Data Infrastructure Insightsには、これらの手順の多くに役立つSwaggerのドキュメントページが用意されています。また、独自のAPIスクリプト/コマンドを使用することもできます。[Admin]>[API Access]に移動し、[API Documentation]リンクをクリックします。
 

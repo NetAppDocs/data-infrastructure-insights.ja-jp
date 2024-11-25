@@ -182,7 +182,7 @@ Kube-State-Metricsの詳細については、を参照してくださいlink:tas
 
 === プロキシサポートを設定しています
 
-Kubernetes Monitoring Operatorをインストールするために、環境内でプロキシを使用できる場所は2つあります。同じプロキシシステムでも、別のプロキシシステムでもかまいません。
+Kubernetes Monitoring Operatorをインストールするために、テナントでプロキシを使用できる場所は2つあります。同じプロキシシステムでも、別のプロキシシステムでもかまいません。
 
 * インストールコードスニペット（「curl」を使用）の実行中に、スニペットが実行されるシステムをData Infrastructure Insights環境に接続するために必要なプロキシ
 * ターゲットのKubernetesクラスタがData Infrastructure Insights環境と通信するために必要なプロキシ

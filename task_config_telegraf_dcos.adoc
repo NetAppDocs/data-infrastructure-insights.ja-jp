@@ -27,7 +27,7 @@ Data Infrastructure Insightsは、このデータコレクタを使用してDC/O
 
 . [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。[*DC/OS*]を選択します。
 +
-収集用にAgentを設定していない場合は、環境内で確認を求められlink:task_config_telegraf_agent.html["エージェントをインストールします"]ます。
+収集用のエージェントを設定していない場合は、テナントで要求されlink:task_config_telegraf_agent.html["エージェントをインストールします"]ます。
 
 +
 エージェントがすでに設定されている場合は、適切な OS またはプラットフォームを選択し、 [* Continue （続行） ] をクリックします。

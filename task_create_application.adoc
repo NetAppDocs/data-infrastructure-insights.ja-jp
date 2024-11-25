@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_create_application.html 
-summary: アプリケーションを定義し、必要に応じて環境内のアセットに適用します。 
+summary: アプリケーションを定義し、必要に応じてテナントのアセットに適用します。 
 keywords: application, create application, 
 ---
 = アプリケーションの作成
@@ -16,7 +16,7 @@ keywords: application, create application,
 
 
 [role="lead"]
-環境で実行されている特定のアプリケーションに関連するデータを追跡するには、Data Infrastructure Insightsでアプリケーションを定義します。
+テナントで実行されている特定のアプリケーションに関連するデータを追跡するには、Data Infrastructure Insightsでアプリケーションを定義します。
 
 .開始する前に
 アプリケーションをビジネスエンティティに関連付ける場合は、アプリケーションを定義する前にビジネスエンティティを作成する必要があります。
