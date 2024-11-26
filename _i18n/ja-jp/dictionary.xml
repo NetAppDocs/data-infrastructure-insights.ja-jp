@@ -11819,4 +11819,8 @@
   <block id="0967b055354d8d340dcc9aacf450c7f9" category="cell">永続ボリュームの IOPS しきい値を使用すると、永続ボリュームが事前に定義されたパフォーマンスの期待値を超えたときに管理者に通知することができます。このモニタをアクティブにすると、永続ボリュームの一般的な IOPS プロファイルに適したアラートが生成されます。このモニタはテナントのすべての永続ボリュームに対応します。警告および重大のしきい値は、このモニタを複製し、ワークロードに適したしきい値を設定することで、監視の目標に基づいて調整できます。</block>
   <block id="3ee2ba16702e3b406dd125b347f5f30b" category="summary">ワークロードセキュリティエージェントは手動でインストールまたは更新できるため、テナントにインストールされているソフトウェアをより詳細に制御できます。</block>
   <block id="17a311772e6362d1e9dd73c324273dcc" category="paragraph">デフォルトでは、ワークロードセキュリティエージェントまたはコレクタの新しいバージョンが使用可能になると、アップグレード前の通知が送信され、エージェントとコレクタがテナントで自動的に更新されます。ただし、セキュリティで保護された環境では、自動アップグレードは望ましくない場合があります。このような場合、エージェントとコレクタを手動でインストール/アップグレードするようにワークロードセキュリティを設定できます。これにより、システムにインストールされているソフトウェアをより詳細に制御できます。</block>
+  <block id="6a6cf662ae6f91c127da69e22956cc12" category="section-title">プロトタイプモード</block>
+  <block id="e60c852a7a4c8de70f56c1772db9c0f5" category="paragraph">コレクタの_Advanced Configuration_settingsでこのオプションを有効にすると、ワークロードセキュリティによってFPolicyエンジンがprotobufモードで設定されます。ProtobufモードはONTAPバージョン9.15以降でサポートされています。</block>
+  <block id="502f573701c400ca3de6252b1c8e6e9e" category="paragraph">この機能の詳細については、を参照して<block ref="5c3d3ed23ecd4e0a61ac3e8d31f3a637" category="inline-link-macro-rx"></block>ください。</block>
+  <block id="e28cace0b0e193aac1db472078caa8fb" category="paragraph">protobufには特定の権限が必要です（これらの一部またはすべてがすでに存在する場合があります）。</block>
 </blocks>

@@ -149,6 +149,28 @@ security login create -user-or-group-name csuser -application http -authmethod p
 ....
 
 
+=== プロトタイプモード
+
+コレクタの_Advanced Configuration_settingsでこのオプションを有効にすると、ワークロードセキュリティによってFPolicyエンジンがprotobufモードで設定されます。ProtobufモードはONTAPバージョン9.15以降でサポートされています。
+
+この機能の詳細については、を参照してlink:https://docs.netapp.com/us-en/ontap/nas-audit/steps-setup-fpolicy-config-concept.html["ONTAPのドキュメント"]ください。
+
+protobufには特定の権限が必要です（これらの一部またはすべてがすでに存在する場合があります）。
+
+クラスタモード：
+
+....
+security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <cluster_name>
+security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole
+....
+SVMモード：
+
+....
+security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <svm_name>
+security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole -vserver <svm_name>
+....
+
+
 === ONTAP Autonomous Ransomware Protectionの権限とONTAPへのアクセス拒否
 
 クラスタ管理者のクレデンシャルを使用している場合、新しい権限は不要です。
