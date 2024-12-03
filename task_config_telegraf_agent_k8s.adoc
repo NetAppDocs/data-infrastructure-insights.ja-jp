@@ -294,6 +294,16 @@ OpenShiftは、一部のKubernetesコンポーネントへのアクセスをブ�
 
 
 
+=== 公差と接線（Tolerations and Taints）
+
+NetApp-ci-telegraf-ds_、_NetApp-CI-fluent-bit-ds_、および_NetApp-CI-net-observer-l4-DS_DaemonSetsは、すべてのノードのデータを正しく収集するために、クラスタ内のすべてのノードでポッドをスケジュールする必要があります。オペレータは、いくつかの既知の*テイント*に耐えられるように設定されています。ノードにカスタムのtaintsを設定して、すべてのノードでポッドが実行されないようにしている場合は、それらのtaintsに* toleration *を作成できますlink:telegraf_agent_k8s_config_options.html["（_AgentConfiguration_）をクリックします"]。クラスタ内のすべてのノードにカスタムテイントを適用した場合は、オペレータの導入に必要な許容範囲を追加して、オペレータポッドをスケジュールおよび実行できるようにする必要があります。
+
+Kubernetesの詳細はこちらlink:https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/["塗料および耐性"]をご覧ください。
+
+に戻ります。link:task_config_telegraf_agent_k8s.html["* NetApp Kubernetes監視オペレータのインストール*ページ"]
+
+
+
 == 秘密に関する注意事項
 
 Kubernetes Monitoring Operatorのシークレットをクラスタ全体で表示する権限を削除するには、インストール前に_operator-setup.yaml_fileから次のリソースを削除します。
@@ -323,61 +333,29 @@ Kubernetes Monitoring Operatorのシークレットをクラスタ全体で表�
 ....
 
 
-== Kubernetes のチェックサムの検証
+== Kubernetes Monitoring Operatorイメージシグネチャの確認
 
-Data Infrastructure Insightsエージェントインストーラは整合性チェックを実行しますが、ダウンロードしたアーティファクトをインストールまたは適用する前に独自の検証を実行することもできます。デフォルトのダウンロードおよびインストールではなく、ダウンロードのみの操作を実行するには、 UI から取得したエージェントインストールコマンドを編集し、末尾の「インストール」オプションを削除します。
+オペレータ用のイメージと、展開するすべての関連イメージは、NetAppによって署名されています。インストール前にcosignツールを使用してイメージを手動で検証するか、Kubernetesアドミッションコントローラを設定できます。詳細については、を参照してくださいlink:https://kubernetes.io/docs/tasks/administer-cluster/verify-signed-artifacts/#verifying-image-signatures["Kubernetes のドキュメント"]。
 
-次の手順を実行します。
+イメージシグネチャの検証に使用する公開キーは、Monitoring Operatorインストールタイルの_オプションで使用できます。オペレータイメージをプライベートリポジトリにアップロード> Image Signature Public Key_
 
-. 指示に従ってエージェントインストーラスニペットをコピーします。
-. スニペットをコマンドウィンドウに貼り付ける代わりに、テキストエディタに貼り付けます。
-. コマンドから末尾の「--install」を削除します。
-. コマンド全体をテキストエディタからコピーします。
-. 次に、コマンドウィンドウ（作業ディレクトリ内）に貼り付けて実行します。
-+
-** Download and install （デフォルト）：
-+
- installerName=cloudinsights-rhel_centos.sh … && sudo -E -H ./$installerName --download –-install
-** ダウンロードのみ：
-+
- installerName=cloudinsights-rhel_centos.sh … && sudo -E -H ./$installerName --download
+画像折丁を手動で確認するには、次の手順に従います。
+
+. 画像プルスニペットをコピーして実行する
+. プロンプトが表示されたら、リポジトリパスワードをコピーして入力します。
+. イメージ署名公開キーを保存します（この例ではdii-image-signing.pub）。
+. コサインを使用して画像を確認します。次のcosignの使用例を参照してください。
 
 
-
-
-download-onlyコマンドを実行すると、必要なすべてのアーティファクトがData Infrastructure Insightsから作業ディレクトリにダウンロードされます。アーティファクトには次のものがありますが、これらに限定することはできません。
-
-* インストールスクリプト
-* 環境ファイル
-* YAMLファイル
-* 署名済みチェックサムファイル（ SHA256 署名）
-* 署名の検証に使用する PEM ファイル（ NetApp_cert.pem ）
-
-
-インストールスクリプト、環境ファイル、 YAML ファイルは、目視検査を使用して検証できます。
-
-PEM ファイルは、フィンガープリントが次のようになっていることを確認することで検証できます。
-
- 1A918038E8E127BB5C87A202DF173B97A05B4996
-具体的には、
-
- openssl x509 -fingerprint -sha1 -noout -inform pem -in netapp_cert.pem
-署名済みチェックサムファイルは、 PEM ファイルを使用して確認できます。
-
- openssl smime -verify -in sha256.signed -CAfile netapp_cert.pem -purpose any
-すべてのアーティファクトが正常に検証されたら、次のコマンドを実行してエージェントのインストールを開始できます。
-
- sudo -E -H ./<installation_script_name> --install
-
-
-=== 公差と接線（Tolerations and Taints）
-
-NetApp-ci-telegraf-ds_、_NetApp-CI-fluent-bit-ds_、および_NetApp-CI-net-observer-l4-DS_DaemonSetsは、すべてのノードのデータを正しく収集するために、クラスタ内のすべてのノードでポッドをスケジュールする必要があります。オペレータは、いくつかの既知の*テイント*に耐えられるように設定されています。ノードにカスタムのtaintsを設定して、すべてのノードでポッドが実行されないようにしている場合は、それらのtaintsに* toleration *を作成できますlink:telegraf_agent_k8s_config_options.html["（_AgentConfiguration_）をクリックします"]。クラスタ内のすべてのノードにカスタムテイントを適用した場合は、オペレータの導入に必要な許容範囲を追加して、オペレータポッドをスケジュールおよび実行できるようにする必要があります。
-
-Kubernetesの詳細はこちらlink:https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/["塗料および耐性"]をご覧ください。
-
-に戻ります。link:task_config_telegraf_agent_k8s.html["* NetApp Kubernetes監視オペレータのインストール*ページ"]
-
+[listing]
+----
+$ cosign verify --key dii-image-signing.pub --insecure-ignore-sct --insecure-ignore-tlog <repository>/<image>:<tag>
+Verification for <repository>/<image>:<tag> --
+The following checks were performed on each of these signatures:
+  - The cosign claims were validated
+  - The signatures were verified against the specified public key
+[{"critical":{"identity":{"docker-reference":"<repository>/<image>"},"image":{"docker-manifest-digest":"sha256:<hash>"},"type":"cosign container image signature"},"optional":null}]
+----
 
 
 == トラブルシューティング

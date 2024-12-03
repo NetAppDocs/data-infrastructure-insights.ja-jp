@@ -6721,15 +6721,6 @@
   <block id="bd0f62d92c7b0e5d6e74b4447418c58b" category="paragraph">Kubernetes Monitoring Operatorのシークレットをクラスタ全体で表示する権限を削除するには、インストール前に_operator-setup.yaml_fileから次のリソースを削除します。</block>
   <block id="1790cdbccc4ddd4389eb90d73e043f4b" category="paragraph">アップグレードの場合は、クラスタからリソースも削除します。</block>
   <block id="a66e68a20b3b94a700f3a3b9baa06764" category="paragraph">変更分析が有効になっている場合は、_AgentConfiguration_or_operator -config.yaml_を変更して、変更管理セクションのコメントを解除し、変更管理セクションの下に_kindsToIgnoreFromWatch：'"secrets"'_を含めます。この行の一重引用符と二重引用符の存在と位置に注意してください。</block>
-  <block id="342761835c95d3618833ced82b6260ac" category="section-title">Kubernetes のチェックサムの検証</block>
-  <block id="db313a156e59a943eb317e556df6b532" category="paragraph">Data Infrastructure Insightsエージェントインストーラは整合性チェックを実行しますが、ダウンロードしたアーティファクトをインストールまたは適用する前に独自の検証を実行することもできます。デフォルトのダウンロードおよびインストールではなく、ダウンロードのみの操作を実行するには、 UI から取得したエージェントインストールコマンドを編集し、末尾の「インストール」オプションを削除します。</block>
-  <block id="8ff498fedef16be83cafa8d00c04dd6d" category="list-text">コマンドから末尾の「--install」を削除します。</block>
-  <block id="facc439433117841a75e83541c8f2373" category="paragraph">download-onlyコマンドを実行すると、必要なすべてのアーティファクトがData Infrastructure Insightsから作業ディレクトリにダウンロードされます。アーティファクトには次のものがありますが、これらに限定することはできません。</block>
-  <block id="700459827d4941a6a127bc7de7938d5d" category="list-text">署名済みチェックサムファイル（ SHA256 署名）</block>
-  <block id="e1f4fa985535cfb2dd4b3f50c918b7eb" category="list-text">署名の検証に使用する PEM ファイル（ NetApp_cert.pem ）</block>
-  <block id="7c9f5399bb10652ab7e06778c4de02e1" category="paragraph">PEM ファイルは、フィンガープリントが次のようになっていることを確認することで検証できます。</block>
-  <block id="7a2babd4fa48c9b0c07e4b865ff53efa" category="paragraph">具体的には、</block>
-  <block id="76dfc651463ab4e67ce2140b8aadb473" category="paragraph">署名済みチェックサムファイルは、 PEM ファイルを使用して確認できます。</block>
   <block id="ae233b4bee0ed9f611ffe211f5804e00" category="section-title">公差と接線（Tolerations and Taints）</block>
   <block id="6aae913b976c156306d8a5cbbbc06ad5" category="inline-link-macro">（_AgentConfiguration_）をクリックします</block>
   <block id="d6f0c62217650cf8ede1bd5e1e862b5a" category="paragraph">NetApp-ci-telegraf-ds_、_NetApp-CI-fluent-bit-ds_、および_NetApp-CI-net-observer-l4-DS_DaemonSetsは、すべてのノードのデータを正しく収集するために、クラスタ内のすべてのノードでポッドをスケジュールする必要があります。オペレータは、いくつかの既知の*テイント*に耐えられるように設定されています。ノードにカスタムのtaintsを設定して、すべてのノードでポッドが実行されないようにしている場合は、それらのtaintsに* toleration *を作成できます<block ref="dc90f93af5ccf5020646213d9b7d2c3d" category="inline-link-macro-rx"></block>。クラスタ内のすべてのノードにカスタムテイントを適用した場合は、オペレータの導入に必要な許容範囲を追加して、オペレータポッドをスケジュールおよび実行できるようにする必要があります。</block>
@@ -11823,4 +11814,13 @@
   <block id="e60c852a7a4c8de70f56c1772db9c0f5" category="paragraph">コレクタの_Advanced Configuration_settingsでこのオプションを有効にすると、ワークロードセキュリティによってFPolicyエンジンがprotobufモードで設定されます。ProtobufモードはONTAPバージョン9.15以降でサポートされています。</block>
   <block id="502f573701c400ca3de6252b1c8e6e9e" category="paragraph">この機能の詳細については、を参照して<block ref="5c3d3ed23ecd4e0a61ac3e8d31f3a637" category="inline-link-macro-rx"></block>ください。</block>
   <block id="e28cace0b0e193aac1db472078caa8fb" category="paragraph">protobufには特定の権限が必要です（これらの一部またはすべてがすでに存在する場合があります）。</block>
+  <block id="435f137980b3b041bbc191c90260bf28" category="section-title">Kubernetes Monitoring Operatorイメージシグネチャの確認</block>
+  <block id="d9348d075dc7b3c91cff99d56dfc327b" category="inline-link-macro">Kubernetes のドキュメント</block>
+  <block id="d4f8460ff8f7a6b9a2f0fa99bf9124dd" category="paragraph">オペレータ用のイメージと、展開するすべての関連イメージは、NetAppによって署名されています。インストール前にcosignツールを使用してイメージを手動で検証するか、Kubernetesアドミッションコントローラを設定できます。詳細については、を参照してください<block ref="1aa503106da392b948a493e0ecf5782d" category="inline-link-macro-rx"></block>。</block>
+  <block id="c26df34b044a0a427be188b6e37d45c2" category="paragraph">イメージシグネチャの検証に使用する公開キーは、Monitoring Operatorインストールタイルの_オプションで使用できます。オペレータイメージをプライベートリポジトリにアップロード&gt; Image Signature Public Key_</block>
+  <block id="0bc181a97045ca85d89be70b124298b4" category="paragraph">画像折丁を手動で確認するには、次の手順に従います。</block>
+  <block id="b08a05b2c1b7cc9bf90ee55d748a813c" category="list-text">画像プルスニペットをコピーして実行する</block>
+  <block id="2e9d4d6615af62102584a57c2c8ddacd" category="list-text">プロンプトが表示されたら、リポジトリパスワードをコピーして入力します。</block>
+  <block id="2cea2fa4f716d1fa2efbffe877eb702c" category="list-text">イメージ署名公開キーを保存します（この例ではdii-image-signing.pub）。</block>
+  <block id="55d6bfb079ee69230d07a9a9c1c17b66" category="list-text">コサインを使用して画像を確認します。次のcosignの使用例を参照してください。</block>
 </blocks>
