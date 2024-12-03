@@ -6665,9 +6665,6 @@
   <block id="4a8935a67aadaec6ba4fbfd58e9329b9" category="inline-image-macro">Kubernetes CollectorリストページのModify deploymentメニュー</block>
   <block id="7a9e68f513e02f6f4993d88781b49637" category="paragraph"><block ref="7a9e68f513e02f6f4993d88781b49637" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e1ab0e7895c9df2539e36203b84c90d1" category="paragraph">画面には各コンポーネントの現在の状態が表示され、必要に応じてそのコレクタのコンポーネントを無効または有効にすることができます。</block>
-  <block id="9cef0071e460e946beaa92e847eee7a2" category="inline-image-macro">MODY展開オプション,700</block>
-  <block id="680dda670e97a05d2baca651224019c6" category="paragraph"><block ref="680dda670e97a05d2baca651224019c6" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="edcc6d64ff09289fd7b549c0265f3ea6" category="section-title">アップグレード</block>
   <block id="8b54cfbc7f4622be8f18ef9e6b323931" category="section-title">最新のKubernetes Monitoring Operatorへのアップグレード</block>
   <block id="59f9e8b92a6bc55e991031f0b5fea324" category="paragraph">既存のOperatorにAgentConfigurationが存在するかどうかを確認します（ネームスペースがdefault_netapp-monitoring_でない場合は、適切なネームスペースに置き換えてください）。</block>
   <block id="bb5c0afa0b80550de02b1ac19c1226b4" category="paragraph">AgentConfigurationが存在する場合：</block>
@@ -11823,4 +11820,6 @@
   <block id="2e9d4d6615af62102584a57c2c8ddacd" category="list-text">プロンプトが表示されたら、リポジトリパスワードをコピーして入力します。</block>
   <block id="2cea2fa4f716d1fa2efbffe877eb702c" category="list-text">イメージ署名公開キーを保存します（この例ではdii-image-signing.pub）。</block>
   <block id="55d6bfb079ee69230d07a9a9c1c17b66" category="list-text">コサインを使用して画像を確認します。次のcosignの使用例を参照してください。</block>
+  <block id="f0eddc4fb4218ed4ec07da7604fbc1c8" category="inline-image-macro">展開オプションの変更、幅= 700</block>
+  <block id="593e78308f625f4551ee5b44b6d582e5" category="paragraph"><block ref="593e78308f625f4551ee5b44b6d582e5" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
