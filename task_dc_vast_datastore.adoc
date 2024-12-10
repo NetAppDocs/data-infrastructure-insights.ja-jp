@@ -1,0 +1,135 @@
+---
+sidebar: sidebar 
+permalink: task_dc_vast_datastore.html 
+keywords: data collector, VAST storage, VAST data 
+summary: Vast Dataデータストアストレージデータコレクタを設定しています 
+---
+= 膨大なデータストアデータコレクタ
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsは、膨大なデータストアデータコレクタを使用してインベントリとパフォーマンスのデータを収集します。
+
+
+
+== 用語
+
+Data Infrastructure Insightsで取得したアセットタイプごとに、そのアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+[cols="2*"]
+|===
+| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+
+
+| キヤリア | disks（locationフィールドのディスクシェルフ部分） 
+
+
+| クラスタ | ストレージ 
+
+
+| cnodes | ストレージノード（type=cnode） 
+
+
+| dNode | ストレージノード（type=dnode） 
+
+
+| NVRAM | ディスク 
+
+
+| 保護されたパス | 内部ボリューム同期 
+
+
+| QoSポリシー | 内部ボリューム（QoS制限） 
+
+
+| クォータ | クォータ 
+
+
+| SSD | ディスク 
+
+
+| テナント | Storage Virtual Machine 
+
+
+| ポリシーの表示 | FileShare（権限用） 
+
+
+| ビュー | 内部ボリューム 
+|===
+注：これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているわけではありません。
+
+
+
+== 要件
+
+* VASTデータストアシステムのIPアドレスまたは完全修飾ドメイン名
+* VASTシステムにアクセスするためのユーザ名/パスワード
+* ポート要件：HTTPS 443
+
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| VASTデータストアストレージIP/ホスト名 | ストレージシステムのIPアドレスまたはFQDN 
+
+
+| ユーザ | VASTストレージのユーザ名 
+
+
+| パスワード | VASTストレージパスワード 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 製品説明 
+
+
+| 接続タイプ | HTTP または HTTPS を選択します。デフォルトのポートも表示されます。 
+
+
+| TCP ポートを上書きします | 空白の場合は、 [Connection Type] フィールドでデフォルトのポートを使用します。それ以外の場合は、使用する接続ポートを入力します 
+
+
+| インベントリのポーリング間隔（分） | デフォルトは 60 分です。 
+
+
+| パフォーマンスポーリング間隔（秒） | デフォルトは300です 
+|===
+
+
+== トラブルシューティング
+
+このデータコレクタで問題が発生した場合の対処方法を次に示します。
+
+
+
+=== インベントリ
+
+[cols="2*"]
+|===
+| 問題 | 次の操作を実行します 
+
+
+| 「 Invalid login credentials 」というエラーメッセージが表示され、「 Policy does not allow 」または「 you are not authorized 」が表示されます。 | Pure http インターフェイスで Pure のユーザアカウントとパスワードを検証します 
+|===
+詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

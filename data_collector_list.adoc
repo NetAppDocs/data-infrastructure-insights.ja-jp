@@ -250,6 +250,9 @@ Data Infrastructure Insightsでサポートされているデータコレクタ�
 | link:task_dc_na_ontap_rest.html["NetApp ONTAP RESTコレクタ"] | インフラ 
 
 
+| link:task_dc_na_ontap_all_san_array.html["NetApp ONTAP All-SAN Array（ASA）コレクタ"] | インフラ 
+
+
 | link:task_dc_na_cdot.html["NetApp ONTAP Select の略"] | インフラ 
 
 
@@ -305,6 +308,9 @@ Data Infrastructure Insightsでサポートされているデータコレクタ�
 
 
 | link:task_config_telegraf_agent.html#ubuntu-and-debian["Ubuntu Debian"] | サービス 
+
+
+| link:task_dc_vast_datastore.html["膨大なデータストア"] | インフラ 
 
 
 | link:task_dc_vmware.html["VMware vSphere"] | インフラ 
