@@ -119,12 +119,6 @@ AWSでは大文字と小文字が区別され、Data Infrastructure Insightsで�
 
 
 
-== 追加リージョンを含める
-
-AWS Data Collector * Advanced Configuration * セクションでは、 * Include extra regions * フィールドを設定して、カンマまたはセミコロンで区切って追加のリージョンを含めることができます。デフォルトでは、このフィールドは * _us-.*_* に設定されており、これによってすべての US AWS リージョンで収集されます。on_all_regions を収集するには、このフィールドを *_.*_* に設定します。「 * include extra regions * 」フィールドが空の場合、「 * Configuration * 」セクションの指定に従って、「 * AWS Region * 」フィールドに指定されたアセットについてデータコレクタが収集されます。
-
-
-
 == AWS の子アカウントから収集しています
 
 Data Infrastructure Insightsでは、1つのAWSデータコレクタ内でAWSの子アカウントを収集できます。この収集の設定は、 AWS 環境で実行されます。
