@@ -6554,10 +6554,7 @@
   <block id="b5648f15565fb8185bfc83aaabee9577" category="paragraph">オペレーティングシステムが systemd を使用していない場合は、次の手順を実行します。</block>
   <block id="936ff88b3ce432ac2624f7f2bb4998a4" category="paragraph">Ubuntu または Debian でエージェントをアンインストールするには、 Bash ターミナルで次のコマンドを実行します。</block>
   <block id="7f3a9bda6122a676154f73d5edf02232" category="list-text"><block ref="760050cb55c606cd7ef0af21f798bf45" category="inline-link-macro-rx"></block>です。</block>
-  <block id="99b7973dda927022b1a7232d7b78e926" category="section-title">チェックサムを検証する</block>
-  <block id="6a9aa39bb342c83778b90096fb82f44f" category="paragraph">Data Infrastructure Insightsエージェントインストーラは整合性チェックを実行しますが、ダウンロードしたアーティファクトをインストールまたは適用する前に独自の検証を実行することもできます。これを行うには、インストーラをダウンロードしてダウンロードしたパッケージのチェックサムを生成し、チェックサムをインストール手順に示されている値と比較します。</block>
   <block id="1078df24543dad61e1b5b51f611f5b0f" category="section-title">インストールせずにインストーラパッケージをダウンロードします</block>
-  <block id="48feb91430f93bd8ac9740e9cdc40c75" category="paragraph">デフォルトのダウンロードおよびインストールではなく、ダウンロードのみの操作を実行するには、UIから取得したエージェントインストールコマンドを編集し、末尾の「インストール」オプションを削除します。</block>
   <block id="deadee5e2cfce7600cfd5def40a7d618" category="paragraph">次の手順を実行します。</block>
   <block id="8c386e0a7a8cfc20ef9a26dacd925e69" category="list-text">指示に従ってエージェントインストーラスニペットをコピーします。</block>
   <block id="225b18b0098145b352b8fbf6c04e8098" category="list-text">スニペットをコマンドウィンドウに貼り付ける代わりに、テキストエディタに貼り付けます。</block>
@@ -6571,14 +6568,8 @@
   <block id="37756806bad02e3e8fb3d5413278c336" category="paragraph">download-onlyコマンドを実行すると、必要なすべてのアーティファクトがData Infrastructure Insightsから作業ディレクトリにダウンロードされます。アーティファクトには次のものがありますが、これらに限定することはできません。</block>
   <block id="8d4a361a3f25b78818c569d8f15cf4a6" category="list-text">インストールスクリプト</block>
   <block id="b015398c226e1e3576258432ece31819" category="list-text">環境ファイル</block>
-  <block id="004cac3ce7d67014b5fadcffaf9b5b70" category="list-text">YAMLファイル</block>
-  <block id="9f32134bbefffdc9df70a2d73c2df6a6" category="list-text">チェックサムファイル（末尾がSHA256.signedまたはSHA256.ps1）</block>
-  <block id="4f1c754cd67cd57cebe0be2f5e8638a4" category="paragraph">インストールスクリプト、環境ファイル、 YAML ファイルは、目視検査を使用して検証できます。</block>
-  <block id="d8f6d626cfe2a4f97d97ff93d95db51b" category="section-title">チェックサム値を生成します</block>
   <block id="d1703bc5bb53c90ffbbae52dfe829603" category="paragraph">チェックサム値を生成するには、使用するプラットフォームに応じて次のコマンドを実行します。</block>
   <block id="9374ddadb9776b458a2963573b22f63d" category="list-text">RHEL / Ubuntu：</block>
-  <block id="aacd43790bd404cab1a350cb047a9a9d" category="section-title">チェックサムを検証</block>
-  <block id="43e3c65a555911ad6d7235d9e9206e4c" category="paragraph">チェックサムファイルから期待されるチェックサムを抽出する</block>
   <block id="47a6cd89e04d0d805a75aa0fe5822c20" category="list-text">Windows 以外：</block>
   <block id="b59ea01f26635c31c3c1df660848f6c8" category="section-title">ダウンロードしたパッケージをインストールします</block>
   <block id="6c32334bfce9f857b0fdbdca68040a0b" category="paragraph">すべてのアーティファクトが正常に検証されたら、次のコマンドを実行してエージェントのインストールを開始できます。</block>
@@ -11888,4 +11879,12 @@
   <block id="d932f771e537d16693bed2e69269a746" category="paragraph"><block ref="d932f771e537d16693bed2e69269a746" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ee0b2f1c8ad7945cf603e8d752a5e7b5" category="inline-link-macro">Data Infrastructure Insightsのエディション</block>
   <block id="bbf9080a1bf1fb2f62558ce683d64be0" category="paragraph">Data Infrastructure InsightsのBasicエディションとPremiumエディションで使用できる機能の完全な比較については、<block ref="49bb501f6c401ae5b06c3dbe5fc987bd" category="inline-link-macro-rx"></block>ページを参照してください。</block>
+  <block id="3bbdd1e5a1fbf0d58680e594b8806722" category="section-title">Telegrafパッケージチェックサムの確認</block>
+  <block id="7ff5578ba477d9e2321cffdc188dd439" category="paragraph">Data Infrastructure Insightsエージェントインストーラは整合性チェックを実行しますが、ダウンロードしたTelegrafバイナリをインストールする前に独自の検証を実行したい場合もあります。これを行うには、インストーラをダウンロードしてダウンロードしたパッケージのチェックサムを生成し、チェックサムをインストール手順に示されている値と比較します。</block>
+  <block id="741ebc51b7127a27c632897c49b71ad3" category="paragraph">（デフォルトのダウンロードおよびインストールではなく）ダウンロード専用の操作を実行するには、UIから取得したエージェントインストールコマンドを編集して、「install」オプションを削除します。</block>
+  <block id="8b5391cb0617a6870147a0c34743013d" category="list-text">Telegrafバイナリ</block>
+  <block id="6b15d8f349fa2e771a92e4131bcae2d2" category="list-text">Telegrafバイナリのシグネチャ</block>
+  <block id="b7e85347cdffb5889c57e4b1ad785a2e" category="list-text">バイナリ署名を検証するパブリック証明書</block>
+  <block id="bfc63dcde995168de645c7c0b1b67357" category="paragraph">DIIからダウンロードおよびコピーされたインストールスニペットは、インストールスクリプトを自動的にチェックサムし、Telegrafバイナリの署名はインストールスクリプトによって検証されます。</block>
+  <block id="26f2872f4049fcba9927c1b41d6502d3" category="section-title">チェックサム値の検証</block>
 </blocks>

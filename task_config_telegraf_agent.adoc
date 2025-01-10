@@ -29,7 +29,7 @@ Kubernetesへのインストールの詳細については、ページを参照�
 NOTE: 正確な監査およびデータレポートを作成するためには、 * Network Time Protocol （ NTP; ネットワークタイムプロトコル） * または * Simple Network Time Protocol （ SNTP ） * を使用して、 Agent マシンの時刻を同期することを強くお勧めします。
 
 
-NOTE: Agentをインストールする前にインストールファイルを確認する場合は、の次のセクションを参照してください<<チェックサムを検証する>>。
+NOTE: Agentをインストールする前にインストールファイルを確認する場合は、の次のセクションを参照してください<<Verifying Checksums>>。
 
 
 
@@ -364,15 +364,15 @@ systemctl stop telegraf (If your operating system is using systemd)
 
 
 
-== チェックサムを検証する
+== Telegrafパッケージチェックサムの確認
 
-Data Infrastructure Insightsエージェントインストーラは整合性チェックを実行しますが、ダウンロードしたアーティファクトをインストールまたは適用する前に独自の検証を実行することもできます。これを行うには、インストーラをダウンロードしてダウンロードしたパッケージのチェックサムを生成し、チェックサムをインストール手順に示されている値と比較します。
+Data Infrastructure Insightsエージェントインストーラは整合性チェックを実行しますが、ダウンロードしたTelegrafバイナリをインストールする前に独自の検証を実行したい場合もあります。これを行うには、インストーラをダウンロードしてダウンロードしたパッケージのチェックサムを生成し、チェックサムをインストール手順に示されている値と比較します。
 
 
 
 === インストールせずにインストーラパッケージをダウンロードします
 
-デフォルトのダウンロードおよびインストールではなく、ダウンロードのみの操作を実行するには、UIから取得したエージェントインストールコマンドを編集し、末尾の「インストール」オプションを削除します。
+（デフォルトのダウンロードおよびインストールではなく）ダウンロード専用の操作を実行するには、UIから取得したエージェントインストールコマンドを編集して、「install」オプションを削除します。
 
 次の手順を実行します。
 
@@ -387,35 +387,36 @@ Windows 以外（ Kubernetes の場合は次の例を使用します。実際の
 
 * Download and install （デフォルト）：
 +
- installerName=cloudinsights-kubernetes.sh … && sudo -E -H ./$installerName --download –-install
+ installerName=cloudinsights-ubuntu_debian.sh … && ./$installerName --download --verify && sudo -E -H ./$installerName --install
 * ダウンロードのみ：
 +
- installerName=cloudinsights-kubernetes.sh … && sudo -E -H ./$installerName --download
+ installerName=cloudinsights-ubuntu_debian.sh … && ./$installerName --download --verify
 
 
 Windows：
 
 * Download and install （デフォルト）：
 +
- !$($installerName=".\cloudinsights-windows.ps1") … -and $(&$installerName -download -install)
+ !$($installerName=".\cloudinsights-windows.ps1") … -and $(if(((Get-FileHash $installerName).Hash).ToLower() -eq "INSTALLER_CHECKSUM ") { &$installerName -download -verify -install } else { Write-Host "Install script checksum does not match"})"
 * ダウンロードのみ：
 +
- !$($installerName=".\cloudinsights-windows.ps1") … -and $(&$installerName -download)
+ !$($installerName=".\cloudinsights-windows.ps1") … -and $(if(((Get-FileHash $installerName).Hash).ToLower() -eq "INSTALLER_CHECKSUM ") { &$installerName -download -verify } else { Write-Host "Install script checksum does not match"})"
 
 
 download-onlyコマンドを実行すると、必要なすべてのアーティファクトがData Infrastructure Insightsから作業ディレクトリにダウンロードされます。アーティファクトには次のものがありますが、これらに限定することはできません。
 
 * インストールスクリプト
 * 環境ファイル
-* YAMLファイル
-* チェックサムファイル（末尾がSHA256.signedまたはSHA256.ps1）
+* Telegrafバイナリ
+* Telegrafバイナリのシグネチャ
+* バイナリ署名を検証するパブリック証明書
 
 
-インストールスクリプト、環境ファイル、 YAML ファイルは、目視検査を使用して検証できます。
+DIIからダウンロードおよびコピーされたインストールスニペットは、インストールスクリプトを自動的にチェックサムし、Telegrafバイナリの署名はインストールスクリプトによって検証されます。
 
 
 
-=== チェックサム値を生成します
+=== チェックサム値の検証
 
 チェックサム値を生成するには、使用するプラットフォームに応じて次のコマンドを実行します。
 
@@ -425,20 +426,6 @@ download-onlyコマンドを実行すると、必要なすべてのアーティ�
 * Windows：
 +
  Get-FileHash telegraf.zip -Algorithm SHA256 | Format-List
-
-
-
-
-=== チェックサムを検証
-
-チェックサムファイルから期待されるチェックサムを抽出する
-
-* Windows 以外：
-+
- openssl smime -verify -in telegraf*.sha256.signed -CAfile netapp_cert.pem -purpose any -nosigs -noverify
-* Windows：
-+
- (Get-Content telegraf.zip.sha256.ps1 -First 1).toUpper()
 
 
 
