@@ -1,21 +1,18 @@
 ---
 sidebar: sidebar 
 permalink: task_identify_inactive_devices.html 
-keywords: inactive, device, 
-summary: 非アクティブなデバイスを識別すると、そのデバイスを削除するか、アクティブなロールに割り当てるかを選択できます。 
+keywords: inactive, device, remove, removing, identify, identifying 
+summary: 非アクティブなデバイスを識別すると、デバイスを削除するか、アクティブなロールに割り当てるかを選択できます。 
 ---
 = 非アクティブなデバイスの識別
-:toc: macro
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
-:toc: 
 :toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -24,10 +21,12 @@ summary: 非アクティブなデバイスを識別すると、そのデバイ�
 次の手順に従って、アクセス頻度の低いアセットを特定します。
 
 .手順
-* [Explore]->[+New Metric Query]*に移動します。
+* [Observability]>[Explore]->[+New Metric Query]*に移動します。
 * ドロップダウンから[_Storage_]を選択します。
 * ギアをクリックし、_isActive_を 列として追加します。
 +
 チェックを表示している行がアクティブです。「X」は非アクティブなデバイスを示します。
 
 
+
+非アクティブなデバイスを削除するには、削除するデバイスを選択し、* Bulk Actions *ドロップダウンで_Delete Inactive Devices_を選択します。

@@ -10128,11 +10128,9 @@
   <block id="14af2cecff51d4bd977845145cc871e8" category="list-text">*Deleted *:削除され、使用できなくなったデータコレクタ。</block>
   <block id="b92e6e167ffd0f1968a046d49559d1cd" category="list-text">Acquisition Unit：データコレクタをホストする専用のコンピュータ。通常は仮想マシンです。通常、このコンピュータは、監視対象の項目と同じデータセンター/VPC内にあります。</block>
   <block id="c5b4625b23c5673b268b9b686102faa0" category="list-text">データソース：ハードウェアまたはソフトウェアスタックと通信するためのモジュール。デバイスと通信するためにAUコンピュータで実行される設定とコードで構成されます。</block>
-  <block id="14f8a78e828f1a5ed0a16f4eb166171e" category="summary">非アクティブなデバイスを識別すると、そのデバイスを削除するか、アクティブなロールに割り当てるかを選択できます。</block>
   <block id="ee5c6c936b3e5e6b3191a941d5161f88" category="doc">非アクティブなデバイスの識別</block>
   <block id="dedb4128ca8f8589aeee2da1198fdc45" category="paragraph">所有している資産とその使用者を特定することは、「適切なサイジング」を行い、使用していないインフラストラクチャを解放するために重要です。使用率の低いリソースを簡単に再割り当てしたり、運用を停止したりでき、不要な購入を回避できます</block>
   <block id="89335488274d94cea3defd958dbbabbe" category="paragraph">次の手順に従って、アクセス頻度の低いアセットを特定します。</block>
-  <block id="62a2ac40719f6cb31d5e1ad43d9d8a19" category="list-text">[Explore]-&gt;[+New Metric Query]*に移動します。</block>
   <block id="9ec73c52f582999e7cc8d920ca844c81" category="list-text">ドロップダウンから[_Storage_]を選択します。</block>
   <block id="4c6af067d4990a4c05731f55b8095467" category="list-text">ギアをクリックし、_isActive_を 列として追加します。</block>
   <block id="49eec5d17a233960170b22a7e35d15a7" category="paragraph">チェックを表示している行がアクティブです。「X」は非アクティブなデバイスを示します。</block>
@@ -11891,4 +11889,26 @@
   <block id="39dfb1596c6a6cd5efc77677cffa9f47" category="cell">パス値が/home/userX/nested1/testと一致する完全一致</block>
   <block id="67796eee76b434ba7f714f24fce77a4c" category="cell">正確な検索は、ディレクトリ検索と比較して検索に時間がかかります。</block>
   <block id="ee884ab6f8aeb5114dc04fcb169533de" category="section-title">パス検索</block>
+  <block id="2cc37e7dae91aa6d162030f273b8b089" category="section-title">APIアクセストークンの作成と使用</block>
+  <block id="f7e5cf33ae8a7c09bd73c6eb95b3e017" category="paragraph">Telegrafデータ取り込み用のAPIアクセストークンを作成するには、次のいずれかを実行してください。</block>
+  <block id="8ddcacd36bfaa54f9de9d8d1c6d98ca9" category="section-title">Data Collectorのインストールページを使用した作成</block>
+  <block id="394d78dd95d6065caac482adbe22a898" category="list-text">使用するプラットフォーム（Windows、Linux）のData Collectorインストールページに移動します。</block>
+  <block id="7db0aa7259305c6d7d0e72d5ca0ebe3e" category="list-text">[+API Access Token]ボタンを使用してトークンを作成します。</block>
+  <block id="eaaf6f42e491bead6370a5960ab7260c" category="list-text">名前を入力し、[保存]をクリックします。</block>
+  <block id="0972f446b6a6a91283e10881d0cd5cf0" category="list-text">これで、ドロップダウンでトークン名が選択され、コレクタのインストール時に使用されます。</block>
+  <block id="4cb3c725652f3200a0496010ad323294" category="section-title">APIアクセストークンを手動で作成する</block>
+  <block id="cc7ffe0790f9f9e2c594de1ca95da934" category="list-text">[Admin]&gt;[API Access]に移動します。</block>
+  <block id="f567a7e9fa5b6ea07dfbcb1f10ba898f" category="list-text">[+API Access Token]をクリックします。</block>
+  <block id="da2b1a111c6e52a8a048f3f7d02e27f5" category="list-text">名前を入力し、必要に応じて説明を入力します。</block>
+  <block id="2a5f374bd17838390e94539cf1c9edc6" category="list-text">[What type of APIs will this token be used to calling]で[Data ingestion only]を選択し、[Acquisition Unit]を選択解除します。</block>
+  <block id="bde31c4af787b8aa67aa8f46d9927e06" category="list-text">[Permissions]で[Read/Write]を選択します。</block>
+  <block id="47513702e119e549693050eff5813577" category="list-text">[Automatically rotate tokens for Kubernetes ]の選択を解除します。</block>
+  <block id="e1fda48afafafca9c77b96f3325e10f1" category="paragraph">新しく作成したAPIアクセストークンを使用するには、インストーラページの[Select Existing API Access Token or create a new one]ドロップダウンから選択します。使用できるのは、次のプロパティを持つトークンのみです。</block>
+  <block id="9533e239d3608e18a0887fa1e16eeb68" category="list-text">APIタイプ：「データの取り込み」のみ</block>
+  <block id="80ca9e629a03eaeba4e8aee7e74f24d0" category="list-text">権限：読み取り/書き込み</block>
+  <block id="4b6539abc7c077e53508d1262f8b50a0" category="list-text">Kubernetesの自動ローテーション：オフ</block>
+  <block id="dc404ee30c75f557f651d109560394f2" category="summary">非アクティブなデバイスを識別すると、デバイスを削除するか、アクティブなロールに割り当てるかを選択できます。</block>
+  <block id="ca351e1a429ee72dbdb2061c22743ef6" category="list-text">[Observability]&gt;[Explore]-&gt;[+New Metric Query]*に移動します。</block>
+  <block id="5e7f24385025eba3461014d3d964455b" category="paragraph">非アクティブなデバイスを削除するには、削除するデバイスを選択し、* Bulk Actions *ドロップダウンで_Delete Inactive Devices_を選択します。</block>
+  <block id="72a442c57900f55848aa4acb856a507d" category="sidebar">非アクティブなデバイスの識別</block>
 </blocks>

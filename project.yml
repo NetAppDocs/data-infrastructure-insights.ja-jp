@@ -87,6 +87,8 @@ sidebar:
         url: "/task_query_copy_table_values.html"
       - title: ログを照会しています
         url: "/concept_log_explorer.html"
+      - title: 非アクティブなデバイスの識別
+        url: "/task_identify_inactive_devices.html"
     - title: 分析
       entries:
       - title: 概要

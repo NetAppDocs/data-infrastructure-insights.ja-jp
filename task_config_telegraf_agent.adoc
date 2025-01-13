@@ -442,6 +442,41 @@ Windows：
  .\cloudinsights-windows.ps1 -install
 
 
+== APIアクセストークンの作成と使用
+
+Telegrafデータ取り込み用のAPIアクセストークンを作成するには、次のいずれかを実行してください。
+
+
+
+=== Data Collectorのインストールページを使用した作成
+
+. 使用するプラットフォーム（Windows、Linux）のData Collectorインストールページに移動します。
+. [+API Access Token]ボタンを使用してトークンを作成します。
+. 名前を入力し、[保存]をクリックします。
+. これで、ドロップダウンでトークン名が選択され、コレクタのインストール時に使用されます。
+
+
+
+
+=== APIアクセストークンを手動で作成する
+
+. [Admin]>[API Access]に移動します。
+. [+API Access Token]をクリックします。
+. 名前を入力し、必要に応じて説明を入力します。
+. [What type of APIs will this token be used to calling]で[Data ingestion only]を選択し、[Acquisition Unit]を選択解除します。
+. [Permissions]で[Read/Write]を選択します。
+. [Automatically rotate tokens for Kubernetes ]の選択を解除します。
+
+
+新しく作成したAPIアクセストークンを使用するには、インストーラページの[Select Existing API Access Token or create a new one]ドロップダウンから選択します。使用できるのは、次のプロパティを持つトークンのみです。
+
+* APIタイプ：「データの取り込み」のみ
+* 権限：読み取り/書き込み
+* Kubernetesの自動ローテーション：オフ
+
+
+
+
 == トラブルシューティング
 
 エージェントの設定で問題が発生した場合の対処方法を次に示します。
