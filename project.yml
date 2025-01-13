@@ -245,8 +245,6 @@ sidebar:
       entries:
       - title: アクティビティフォレンジック - すべてのアクティビティ
         url: "/forensic_activity_history.html"
-      - title: アクティビティフォレンジック - エンティティ
-        url: "/forensic_entity_detail.html"
       - title: ユーザ
         url: "/forensic_user_overview.html"
     - title: 自動応答ポリシー
