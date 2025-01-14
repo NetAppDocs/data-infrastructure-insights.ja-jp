@@ -484,5 +484,8 @@ Fluent-bitを再起動します。
  fs.inotify.max_user_instances=<something larger than current setting>
  fs.inotify.max_user_watches=<something larger than current setting>
 ----
+
+
+| Telegraf DSポッドは、Kubernetes入力プラグインがTLS証明書を検証できないためにHTTP要求を実行できないことに関連するエラーを報告しています。例：E! [inputs.kubernetes]プラグインのエラー：TLSを取得する"https://<kubelet_IP>:10250/stats/summary":[]ためのHTTP要求の作成中にエラーが発生し"https://<kubelet_IP>:10250/stats/summary":[]ました：証明書の検証に失敗しました：x509：IP SANが含まれていないため、<kubelet_IP>の証明書を検証できません。 | これは、kubeletが自己署名証明書を使用している場合、または指定した証明書がcertificates_Subject Alternative Name_listに<kubelet_IP>を含まない場合に発生します。これを解決するにはlink:telegraf_agent_k8s_config_options.html["エージェントの設定"]、およびset_telegraf:insecureK8sSkipVerify_to_true_を変更します。これにより、telegraf入力プラグインが検証をスキップするように設定されます。または、ユーザがkubeletを設定することもできますlink:https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/["serverTLSBootstrap serverTLSBootstrap"]。kubeletは、「certificates.k8s.io」APIからの証明書要求をトリガーします。 
 |===
 詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

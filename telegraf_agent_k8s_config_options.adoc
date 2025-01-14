@@ -112,7 +112,10 @@ link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Ku
 |  | skipProcessorsAfterAggregators | を参照し link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf設定ドキュメント"] 
 
 
-|  | 保護なし | これを見てくださいlink:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["既知のTelegraf問題"]。setting_unprotected_は、Kubernetes Monitoring Operatorにフラグを指定してTelegrafを実行するように指示し `--unprotected`ます。 
+|  | 保護なし | えっこれlink:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["既知のTelegraf問題"]。setting_unprotected_は、Kubernetes Monitoring Operatorにフラグを指定してTelegrafを実行するように指示し `--unprotected`ます。 
+
+
+|  | insecureK8sSkipVerify | IP SANが不足しているためにtelegrafで証明書を検証できない場合は、検証スキップを有効にしてみてください。 
 
 
 | kube-state-metricsの略 |  | Operatorのkube状態メトリックのインストールをカスタマイズできる設定オプション 
