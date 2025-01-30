@@ -1942,8 +1942,6 @@
   <block id="f887dd4c6ffb2d6fd67813bccd44e611" category="paragraph">Data Infrastructure Insightsは、次の3つの簡単なステップで開始できます。</block>
   <block id="21a763771df4e64b083a2b050ce81f09" category="inline-link-macro">* NetApp BlueXP *</block>
   <block id="6341e61d6dc641d29b3f2e7300137ea9" category="list-text">でアカウントを登録し<block ref="e0b3e45a049f223d3b91d005d1e31db5" category="inline-link-macro-rx"></block>て、NetAppのすべてのクラウドサービスにアクセスしてください。</block>
-  <block id="3f6b1218c41eefc30536db7e39f979df" category="inline-link-macro">* 無償トライアル *</block>
-  <block id="58a9488c98ac9fb8c65fad02e5e29a2b" category="list-text"><block ref="82b0fa617f1dfb2e34805f2626cf97a5" category="inline-link-macro-rx"></block>Data Infrastructure Insightsのに登録して、利用可能な機能を確認してください。</block>
   <block id="2ef085adce795622c057ad2ea6c13059" category="inline-link-macro">ネットアップの営業担当者</block>
   <block id="cab27dc53edb571cac663ce2e16450dc" category="inline-link-macro">AWSマーケットプレイス</block>
   <block id="f2b5d43aba260933c552d69977b7274d" category="list-text">* Data Infrastructure Insightsにサブスクライブ*すると、<block ref="ae0970f4d06315494d31beaa05a7be05" category="inline-link-macro-rx"></block>直接または経由でデータに中断なく継続的にアクセスできます。<block ref="e91d3f98f4b43abdea3c839a7777954c" category="inline-link-macro-rx"></block></block>
@@ -6286,7 +6284,6 @@
   <block id="4cb8e0d8b1d299b402fd5ddce7d39cd5" category="paragraph">ONTAP *バージョン9.9.1以降*でサービスポリシーを使用している場合、データソースコレクタに接続するには、データservice_data-nfs_、および/または_data-cifs_とともに_data-fpolicy-client_serviceが必要です。</block>
   <block id="ee22588534e4e3b699a85e968f56f4a7" category="paragraph">9.6.1より前のバージョンのONTAP では、_data -fpolicy-client_need not be set」を実行します。</block>
   <block id="27f986eca60850ba6afaf4deb6c8be29" category="section-title">Data Collectorの再生-一時停止</block>
-  <block id="fc0a37407f79a45598558116e07830ba" category="paragraph">2つの新しい操作がコレクタのkebabメニューに表示されるようになりました(一時停止と再開)。</block>
   <block id="37387a4cc8252dafbc2c17f057568ef6" category="paragraph">Data Collectorがin_running_stateの場合は、収集を一時停止できます。コレクターの「3つのドット」メニューを開き、一時停止を選択します。コレクタが一時停止している間は、ONTAPからデータが収集されず、コレクタからONTAPにデータが送信されません。つまり、ONTAPからデータコレクタへ、およびそこからデータインフラストラクチャインサイトへのFPolicyイベントは流れません。</block>
   <block id="12a77ef251456c14c7516a531e07f62b" category="paragraph">コレクタの一時停止中に新しいボリュームなどがONTAPに作成されると、ワークロードセキュリティでデータが収集されず、それらのボリュームなどがダッシュボードやテーブルに反映されないことに注意してください。</block>
   <block id="ac08b45e1e6b3f3cb0a5ffc7cb738447" category="list-text">スナップショットのパージは、一時停止中のコレクタに設定されている設定に従って実行されません。</block>
@@ -11915,4 +11912,15 @@
   <block id="3a6957a9f0cd14c98be3bfcbf85db668" category="paragraph"><block ref="3a6957a9f0cd14c98be3bfcbf85db668" category="inline-link-macro-rx"></block></block>
   <block id="9e43104f0687bd3a308759c5411641d7" category="paragraph"><block ref="9e43104f0687bd3a308759c5411641d7" category="inline-link-macro-rx"></block></block>
   <block id="348fd8f652c33b1be14b9b2f000cff0d" category="cell">その理由としては、 ONTAP 側のネットワーク問題が考えられます。以下の手順に従ってください。 1.SVM のデータ LIF または SVM からの接続をブロックしている管理 LIF にファイアウォールがないことを確認します。2.クラスタ管理IPを使用してSVMを追加する場合は、SVMのデータLIFと管理LIFがAgent VMからping可能であることを確認してください。問題が発生した場合は、 LIF のゲートウェイ、ネットマスク、およびルートを確認してください。また、クラスタ管理 IP を使用して SSH 経由でクラスタにログインし、エージェント IP に ping を実行することもできます。エージェントの IP が ping 可能であることを確認します。 _network ping -vserver &lt;vserver name&gt; -destination &lt;Agent ip&gt; -lif &lt;LIF Name&gt; -show-detail_ping 不可能な場合は、 ONTAP のネットワーク設定が正しいことを確認して、エージェントマシンが ping 可能であることを確認します。3.クラスタIP経由で接続しようとしたが機能しない場合は、SVM IP経由で直接接続してみてください。SVM IP を使用して接続する手順については、上記を参照してください。4.SVM IPおよびvsadminのクレデンシャルを使用してコレクタを追加する際に、SVM LIFでData plus Mgmtロールが有効になっているかどうかを確認します。この場合、 SVM LIF に ping することは可能ですが、 SVM LIF への SSH は機能しません。「はい」の場合は、 SVM 管理のみの LIF を作成し、この SVM 管理のみの LIF を使用して接続してみてください。5.それでも動作しない場合は、新しいSVM LIFを作成して、そのLIF経由で接続を試してください。サブネットマスクが正しく設定されていることを確認します。6.高度なデバッグ：a）ONTAPでパケットトレースを開始します。b）CloudSecure UIからSVMにデータコレクタを接続してみます。c）エラーが表示されるまで待ちます。ONTAPでパケットトレースを停止します。d）ONTAPからパケットトレースを開きます。f)から&lt;cluster_mgmt_ip&gt;がない場合は、&lt;clustername&gt; ONTAPのファイアウォールの問題です。g) ONTAPでファイアウォールを開き、ONTAPがエージェントボックスに接続できるようにします。g) ONTAPでファイアウォールを開き、ONTAPがエージェントボックスに接続できるようにします。7.それでも動作しない場合は、ネットワークチームに問い合わせて、外部ファイアウォールがONTAPからエージェントボックスへの接続をブロックしていないことを確認してください。9.上記のいずれの方法でも問題が解決しない場合は、でケースをオープンしてサポートを依頼し<block ref="d0162286c59c67bf86d01f060ee7cd04" category="inline-link-macro-rx"></block>ます。</block>
+  <block id="2b8272217b69f1c5b5ad5968f0bc0945" category="list-text">Data Infrastructure Insightsの無償トライアルにご登録いただき、利用可能な機能をご確認ください。無償トライアルに登録するには：</block>
+  <block id="6d2404e5699069be70636f65562fe693" category="list-text">に移動<block ref="66922be03d9fc23a3ec9641b7884c8f2" category="inline-link-rx"></block></block>
+  <block id="e78fd759357c2a61f07ddc6a902f9270" category="list-text">ページ上部の*購入方法*を選択します。</block>
+  <block id="7070fd1d7b5d144bd3131c3c2b7ee1ca" category="list-text">[Request trial]*を選択します。BlueXP  にまだ登録していない場合は、詳細を入力してサインアップしてください。それ以外の場合は、サインインします。</block>
+  <block id="e461fd437885ee63b7f00e77ade6b3cb" category="list-text">会議をスケジュールするか、担当者からトライアルについての連絡をお待ちください。</block>
+  <block id="44d2017272b4664ce749afa3c1fc2785" category="summary">SAN Analyzerは'テナント上の資産のトポロジーを提供</block>
+  <block id="916cfef6f81652d81c744e0537c656b2" category="doc">SAN Analyzerの概要</block>
+  <block id="a720fce5b3da4c111f19c80487c269cf" category="paragraph">SANは重要なワークロードの処理に非常に重要な役割を果たしますが、その複雑さは、大規模なシステム停止や顧客の業務停止を招く可能性があります。DIIのSAN Analyzer*により'SANの管理がよりシンプルかつ効率的になりますこの強力なツールは、エンドツーエンドの可視化を提供し、VM /ホストからネットワーク、LUN、ストレージまでの依存関係をマッピングします。</block>
+  <block id="b03a68ce04fd31de1bf167d4c6537d2f" category="paragraph">SAN Analyzerは'対話型のトポロジマップを提供することにより'問題を特定し'変更を理解し'データ・フローの理解を向上させることができますSAN Analyzerを使用して複雑なIT環境におけるSAN管理を合理化し、ブロックワークロードの可視性を高めます。</block>
+  <block id="9c6601cca8cd67405c34e4897bb272f1" category="section-title">アセット間のつながりを確認する</block>
+  <block id="14fe64769d4df689f51e13f60c5ec439" category="admonition">ユーザが制限されているコレクタは一時停止できません。コレクタを一時停止する前にユーザアクセスを復元します。</block>
 </blocks>

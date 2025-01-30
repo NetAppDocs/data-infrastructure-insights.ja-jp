@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: san_anayzer_overview.html 
+summary: 'SAN Analyzerは"テナント上の資産のトポロジーを提供' 
+keywords: topology, analyze, analysis, map 
+---
+= SAN Analyzerの概要
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SANは重要なワークロードの処理に非常に重要な役割を果たしますが、その複雑さは、大規模なシステム停止や顧客の業務停止を招く可能性があります。DIIのSAN Analyzer*により'SANの管理がよりシンプルかつ効率的になりますこの強力なツールは、エンドツーエンドの可視化を提供し、VM /ホストからネットワーク、LUN、ストレージまでの依存関係をマッピングします。
+
+SAN Analyzerは'対話型のトポロジマップを提供することにより'問題を特定し'変更を理解し'データ・フローの理解を向上させることができますSAN Analyzerを使用して複雑なIT環境におけるSAN管理を合理化し、ブロックワークロードの可視性を高めます。
+
+image:san_analyzer_example_with_panel.png["ストレージ・システムのSAN Analyzerトポロジー・マップ"]
+
+
+
+== アセット間のつながりを確認する
