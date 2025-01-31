@@ -25,3 +25,11 @@ image:san_analyzer_example_with_panel.png["ストレージ・システムのSAN 
 
 
 == アセット間のつながりを確認する
+
+SAN Analyzerを表示するには、*オブザーバビリティ>分析> SAN Analyzer *を選択します。アプリケーション、ホスト、ファブリック、ストレージのフィルタを設定します。オブジェクトのマップが表示され、接続されているオブジェクトが示されます。オブジェクトにカーソルを合わせると、それらの接続のトラフィックメトリックが表示されます。
+
+image:san_analyzer_traffic_metrics.png[""]
+
+オブジェクトまたはグループをクリックすると、スライドアウトパネルが開き、オブジェクトとその接続に関する詳細情報が表示されます。スライドアウトには、[Summary]、[Port details]、および[Zone]情報が表示されるタブがあります（該当する場合）。
+
+image:san_analyzer_slideout_example.png[""]

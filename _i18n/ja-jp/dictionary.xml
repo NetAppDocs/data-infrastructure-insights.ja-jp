@@ -11923,4 +11923,8 @@
   <block id="b03a68ce04fd31de1bf167d4c6537d2f" category="paragraph">SAN Analyzerは'対話型のトポロジマップを提供することにより'問題を特定し'変更を理解し'データ・フローの理解を向上させることができますSAN Analyzerを使用して複雑なIT環境におけるSAN管理を合理化し、ブロックワークロードの可視性を高めます。</block>
   <block id="9c6601cca8cd67405c34e4897bb272f1" category="section-title">アセット間のつながりを確認する</block>
   <block id="14fe64769d4df689f51e13f60c5ec439" category="admonition">ユーザが制限されているコレクタは一時停止できません。コレクタを一時停止する前にユーザアクセスを復元します。</block>
+  <block id="81c776ec15386302abf1c34d317e3393" category="paragraph">SAN Analyzerを表示するには、*オブザーバビリティ&gt;分析&gt; SAN Analyzer *を選択します。アプリケーション、ホスト、ファブリック、ストレージのフィルタを設定します。オブジェクトのマップが表示され、接続されているオブジェクトが示されます。オブジェクトにカーソルを合わせると、それらの接続のトラフィックメトリックが表示されます。</block>
+  <block id="fde6f74861c217b576ec5d769f2467c3" category="paragraph"><block ref="fde6f74861c217b576ec5d769f2467c3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3cfbb427bd17b95ae08e5597561217ef" category="paragraph">オブジェクトまたはグループをクリックすると、スライドアウトパネルが開き、オブジェクトとその接続に関する詳細情報が表示されます。スライドアウトには、[Summary]、[Port details]、および[Zone]情報が表示されるタブがあります（該当する場合）。</block>
+  <block id="7512260392fef04bf211fab22007addd" category="paragraph"><block ref="7512260392fef04bf211fab22007addd" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
