@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: dashboard_access_management.html 
+summary: 作成するダッシュボードがパブリックかプライベートかを決定します。 
+keywords: dashboard, public, shared, private 
+---
+= ダッシュボードアクセス管理
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:nofooter: 
+:toclevels: 1
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsでは、作成したダッシュボードへのアクセスをより細かく制御できるようになりました。グラフを変更できるユーザを選択します。潜在的に機密性の高い情報への暴露を制御します。ダッシュボードを非公開にすることで、組織内の他のユーザーが使用できるようになるまで、ビジュアライゼーションを完成させることができます。
+
+image:Dashboard_Sharing_Options.png["ダッシュボード共有オプション、幅= 300"]
+
+デフォルトでは、新しいダッシュボードを作成すると、そのダッシュボードは作成者である自分にのみ表示されます。他のユーザはダッシュボードを表示または変更できません。
+
+ダッシュボードを確定したら、組織内の他のユーザーに表示を許可することができます。ダッシュボードを共有するには、ダッシュボードリストで、右側のメニューから_Share_を選択します。
+
+image:dashboard_access_share_menu.png["メニューからのダッシュボードアクセス共有"]
+
+ダッシュボードをすべてのユーザと共有するか、編集権限または読み取り専用権限でユーザを選択できます。
+
+image:dashboard_access_share_drop-down.png["ダッシュボードを編集または読み取り権限で共有する場合のドロップダウン"]

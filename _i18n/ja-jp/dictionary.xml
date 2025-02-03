@@ -11927,4 +11927,16 @@
   <block id="fde6f74861c217b576ec5d769f2467c3" category="paragraph"><block ref="fde6f74861c217b576ec5d769f2467c3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3cfbb427bd17b95ae08e5597561217ef" category="paragraph">オブジェクトまたはグループをクリックすると、スライドアウトパネルが開き、オブジェクトとその接続に関する詳細情報が表示されます。スライドアウトには、[Summary]、[Port details]、および[Zone]情報が表示されるタブがあります（該当する場合）。</block>
   <block id="7512260392fef04bf211fab22007addd" category="paragraph"><block ref="7512260392fef04bf211fab22007addd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="18082cdb9388e2686e081dd6012e47b8" category="summary">作成するダッシュボードがパブリックかプライベートかを決定します。</block>
+  <block id="cc5c681651d638257ae03658c963c7c6" category="doc">ダッシュボードアクセス管理</block>
+  <block id="571ad98bb1054a211a5d3fa3a3240265" category="paragraph">Data Infrastructure Insightsでは、作成したダッシュボードへのアクセスをより細かく制御できるようになりました。グラフを変更できるユーザを選択します。潜在的に機密性の高い情報への暴露を制御します。ダッシュボードを非公開にすることで、組織内の他のユーザーが使用できるようになるまで、ビジュアライゼーションを完成させることができます。</block>
+  <block id="505e6238dfdc62d1b4bbdf930fa887b8" category="inline-image-macro">ダッシュボード共有オプション、幅= 300</block>
+  <block id="43b5d7a5affce9056fb3d7ec4b82fe17" category="paragraph"><block ref="43b5d7a5affce9056fb3d7ec4b82fe17" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="547a803d844f9925f62c57d49f10caf6" category="paragraph">デフォルトでは、新しいダッシュボードを作成すると、そのダッシュボードは作成者である自分にのみ表示されます。他のユーザはダッシュボードを表示または変更できません。</block>
+  <block id="78d12ef818f574226b0780765511e2d5" category="paragraph">ダッシュボードを確定したら、組織内の他のユーザーに表示を許可することができます。ダッシュボードを共有するには、ダッシュボードリストで、右側のメニューから_Share_を選択します。</block>
+  <block id="8e561a2090f27ed80a24e59dff11dcce" category="inline-image-macro">メニューからのダッシュボードアクセス共有</block>
+  <block id="5fc6afe4cfc7bc7e58ad6e7119812663" category="paragraph"><block ref="5fc6afe4cfc7bc7e58ad6e7119812663" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="16442b20a2319083af65dedb2d7e942e" category="paragraph">ダッシュボードをすべてのユーザと共有するか、編集権限または読み取り専用権限でユーザを選択できます。</block>
+  <block id="1dcba5cd7d6049883623c0653a2031f6" category="inline-image-macro">ダッシュボードを編集または読み取り権限で共有する場合のドロップダウン</block>
+  <block id="ac0466f21ebde71eed9f3673b4c7da1b" category="paragraph"><block ref="ac0466f21ebde71eed9f3673b4c7da1b" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
