@@ -3977,7 +3977,6 @@
   <block id="58ecb418298e803c7a0ae49007466440" category="paragraph">すべてのアクティビティページは'ワークロードセキュリティ環境でエンティティに対して実行されるアクションを理解するのに役立ちます</block>
   <block id="33a203d3623a54e6d264ebf5af5db210" category="section-title">すべてのアクティビティデータを確認しています</block>
   <block id="dde100b78d6d436ad1c738fca1b98fc6" category="paragraph">グラフの四角形をドラッグすると、グラフをズームできます。ページ全体がロードされ、ズームした時間範囲が表示されます。ズームインすると、ユーザーがズームアウトできるボタンが表示されます。</block>
-  <block id="be2a0bbd0e52bd10107615bcddc56fba" category="paragraph">すべてのアクティビティ *_table には、次の情報が表示されます。デフォルトでは、すべての列が表示されるわけではありません。歯車アイコンをクリックすると、表示する列を選択できます。</block>
   <block id="10b85952c1ec4b6508b7012df066ef83" category="list-text">エンティティがアクセスされた時間（年、月、日、最終アクセス時刻を含む）。</block>
   <block id="38d1b0982212e47a2dd73e4c40793793" category="inline-link-macro">ユーザ情報</block>
   <block id="6bf51f11b7d2354b7c099ad162d81b7a" category="list-text">ユーザーが実行した * アクティビティ * 。サポートされるタイプは次のとおりです</block>
@@ -3988,11 +3987,9 @@
   <block id="dc1663562fc43061ff1040783cb4e9d2" category="list-text">* 作成 * - ファイルまたはフォルダを作成します。</block>
   <block id="6bcfc6d0ddd3e857bf7ff9d50a1aad07" category="list-text">* 削除 * - ファイルまたはフォルダを削除します。フォルダを削除すると、そのフォルダおよびサブフォルダ内のすべてのファイルについて、 _delete_events が取得されます。</block>
   <block id="865fb9ac996b45282ae7a37ddf907748" category="list-text">* 読み取り *- ファイルが読み取られています。</block>
-  <block id="63342c59c5eab274a4129fdce2de1067" category="list-text">* 読み取りメタデータ * - フォルダ監視オプションを有効にした場合のみ。Windows でフォルダを開くか、 Linux のフォルダ内で「 ls 」を実行すると、が生成されます。</block>
   <block id="3ee2cb44fd1180239223a95847150e56" category="list-text">* 名前の変更 * - ファイルまたはフォルダの名前を変更します。</block>
   <block id="ccf535ac132e169591e0c8835e83f80f" category="list-text">* Write * - データはファイルに書き込まれます。</block>
   <block id="bc2e1628223bbd57334a725f0401d199" category="list-text">* メタデータの書き込み * - ファイルのメタデータが書き込まれます。たとえば、権限が変更された場合などです。</block>
-  <block id="d05ab97003568ddbd1e124e280eff44d" category="list-text">* その他の変更 * - 上記に記載されていないその他のイベント。マッピングされていないイベントはすべて、「その他の変更」アクティビティタイプにマッピングされます。ファイルおよびフォルダに適用されます。</block>
   <block id="d97c308acbc0f0d3e5a290abc82e12a0" category="inline-link-macro">エンティティ詳細データ</block>
   <block id="5d7a5f24f08d7baa937ba58212dc4cb3" category="list-text">イベントの取得に使用される * プロトコル * 。</block>
   <block id="760b2221e00b39c02b810e7c86cb4944" category="list-text">元のファイルの名前を変更したときに名前変更イベントに使用された * 元のパス * 。デフォルトでは、この列はテーブルに表示されません。列セレクタを使用して、この列をテーブルに追加します。</block>
@@ -4000,28 +3997,22 @@
   <block id="119f264c2e26701f999cacca54ff6a5a" category="section-title">フォレンジックアクティビティ履歴データのフィルタリング</block>
   <block id="e2dc5b88c4f53d2a648a9f81fdc77ecb" category="paragraph">データのフィルタリングに使用できる方法は 2 つあります。</block>
   <block id="b44d27d7b6b6912f12597adc1f9fa486" category="list-text">次のフィールドに「 _Filter By_field 」と入力して、データをフィルタリングします。</block>
-  <block id="94d39d472f5515f9137731ff36ee8221" category="paragraph">[+]* ボタンをクリックして、 [ フィルタ基準 ] ウィジェットから適切なフィルタを選択します。</block>
   <block id="9aca188b05e6e40de4b37c9a1ae88452" category="inline-image-macro">エンティティー Filer 、幅 = 500</block>
   <block id="7b4254d6ca4c36d3c1912bda6433d382" category="paragraph"><block ref="7b4254d6ca4c36d3c1912bda6433d382" category="inline-image-macro-rx" type="image"></block></block>
   <block id="37fccc39126a22f07b06f0552cde9c16" category="paragraph">検索テキストを入力します</block>
   <block id="e35ab2c794348db93821f8e7eafc7960" category="paragraph">Enter キーを押すか、フィルタボックスの外側をクリックしてフィルタを適用します。</block>
   <block id="bf0bfb79a81a231f0f04666c3569da3f" category="paragraph">フォレンジックアクティビティデータは、次のフィールドでフィルタできます。</block>
   <block id="85e0179872301e1053d45f643b6899c5" category="list-text">* アクティビティ * タイプ。</block>
-  <block id="1dc677ce29033ce9855fe2699237c9a1" category="list-text">* エンティティがアクセスされたソース IP * 。有効な送信元 IP アドレスを二重引用符で囲んで指定する必要があります（例：「 10.1.1.1 」）。「 10.1.1.* 」、「 10.1.*.* 」などの不完全な IP は機能しません。</block>
   <block id="993bee13d79883a291c5bf94757d27d8" category="list-text">* プロトコル * 。プロトコル固有のアクティビティを取得します。</block>
-  <block id="c3d430182436845185c1ac182ba51c05" category="list-text">* アクティビティを実行しているユーザーのユーザー名 * 。フィルタリングするユーザ名を正確に指定する必要があります。部分的なユーザ名で検索したり、プレフィックスやサフィックスの付いたユーザ名の一部を検索したりすることはできません。</block>
   <block id="15ac0cdbe87a38b3f0c5588fd122123c" category="list-text">* ユーザーが過去 2 時間に作成したファイルをフィルタリングするためのノイズリダクション * 。また、ユーザがアクセスする一時ファイル（ .tmp ファイルなど）をフィルタするためにも使用されます。</block>
   <block id="3a6aae5bc174d27a503441e1d24d0c68" category="list-text">アクティビティを実行しているユーザーの*ドメイン*。フィルタするには、* exact domain *を指定する必要があります。部分ドメイン、または部分ドメインの先頭または末尾にワイルドカード('*')が付いている部分ドメインを検索することはできません。_None_を指定すると、見つからないドメインを検索できます。</block>
   <block id="5e5226f8443d6c79a977ffd6e71a8d9d" category="paragraph">次のフィールドには、特別なフィルタルールが適用されます。</block>
-  <block id="28894211649d8f9f99c54dc12f77784e" category="list-text">*エンティティタイプ*（エンティティ（ファイル）拡張子を使用）-引用符で正確なエンティティタイプを指定することをお勧めします。例：「txt」_。</block>
   <block id="0d97b222b080d69a549c4eb4a4bfe399" category="list-text">*ユーザー*アクティビティの実行-引用符で正確なユーザーを指定することをお勧めします。たとえば、_"Administrator"_などです。</block>
   <block id="793b0425edef55b10657fd6cc2a5ab5a" category="list-text">* エンティティが存在するデバイス * （ SVM ）</block>
   <block id="6bbd4f26d0615caf6a29b9c2d238dad2" category="list-text">* 体積 * エンティティが存在する場所</block>
   <block id="6edcb8abb66cf4a0700d1ea8dac389e5" category="list-text">元のファイルの名前を変更したときに名前変更イベントに使用された * 元のパス * 。</block>
   <block id="ac27cb91c44714292702bc3eb4cf63af" category="paragraph">フィルタリングを行う場合、上記のフィールドは次のようになります。</block>
   <block id="9f5698d8ff9580fb0292b0180a70711f" category="list-text">正確な値は引用符で囲む必要があります。例： "searchtext"</block>
-  <block id="ae908dd27651e4f543cd1488054f03ce" category="list-text">ワイルドカード文字列には引用符は含まれていません。例： searchtext 、 \* searchtext * は、 'earchtext ' を含む文字列をフィルタします。</block>
-  <block id="6de2a99ab7d1b49c0d30165b7f923bde" category="list-text">プレフィックスが付いた文字列、たとえば searchtext* は、「 earchtext 」で始まる文字列を検索します。</block>
   <block id="98979e670bd293d9570a2b24562e08a2" category="section-title">アクティビティフォレンジックフィルタの例：</block>
   <block id="0930b50f995b3a6af46dc5f205e5c2be" category="cell">ユーザが適用したフィルタ式</block>
   <block id="13876d45cb0b459833e4aebb72877939" category="cell">予想される結果</block>
@@ -4043,8 +4034,6 @@
   <block id="5addbd908b76e38709a3256b2eba74c5" category="list-text">*エクスポートが完了するのを待ちます*：処理時間は数分から数時間の範囲で指定できます。フォレンジックページを数回更新する必要がある場合があります。エクスポートジョブが完了すると、[Download last export CSV file]ボタンが有効になります。</block>
   <block id="fb56822932e96a02d5b71841b0bb86a7" category="list-text">*ダウンロード*:「最後に作成したエクスポートファイルをダウンロード」ボタンをクリックして、エクスポートされたデータを.zip形式で取得します。このデータは、ユーザーが別の非同期エクスポートを開始するまで、または3日が経過するまで（いずれか早い方）ダウンロードできます。このボタンは、別の非同期エクスポートが開始されるまで有効のままです。</block>
   <block id="8ab0a5a1cd44cd0d41ee8657d513b901" category="list-text">*制限事項*：</block>
-  <block id="60ace3612e0acf6a0941aadafd7b24ab" category="list-text">非同期ダウンロードの数は、現在、ユーザあたり1つ、テナントあたり3つに制限されています。</block>
-  <block id="db0adf696c53371ef4510888d244f184" category="list-text">エクスポートされるデータは、最大100万レコードに制限されます。</block>
   <block id="f61af81d2b9edda67ad225742bd8e959" category="paragraph">APIを介してフォレンジックデータを抽出するサンプルスクリプトは、NetAppエージェントの_/ opt/apl/cloudsecure/agent/export-script /_にあります。スクリプトの詳細については、この場所にあるreadmeを参照してください。</block>
   <block id="db7f539a64befdbef8a36c1e95be3922" category="section-title">すべてのアクティビティの列を選択します</block>
   <block id="2c196fb6f976fd067f518fa5198011f3" category="paragraph">すべての activity テーブルには ' デフォルトで SELECT カラムが表示されます列を追加、削除、または変更するには、テーブルの右側にある歯車アイコンをクリックし、使用可能な列のリストから選択します。</block>
@@ -4055,18 +4044,15 @@
   <block id="19d8a8363cc18927f8f792b40e752c60" category="section-title">Forensicsページのフィルタの適用性</block>
   <block id="5ac805f98623b1f23909793e4ff3a262" category="cell">これらのフィルタに適用可能</block>
   <block id="b1b275726951e4adc620b69d947baf49" category="cell">これらのフィルタには適用されません</block>
-  <block id="0a3087cfc2ea9ac71095f821d14ee027" category="cell">Auto * 03172022検索テキストにハイフンまたはアンダースコアが含まれている場合は、角かっこで式を指定します。例：SVM-123の検索には（SVM*）を使用します。</block>
   <block id="3518217f55c95e834c4ea7984f8aa0cd" category="cell">AutoSabotageUser1_03172022</block>
   <block id="a28771ee6ad9a7771a86f5d6ceeed78e" category="cell">AutoSabotageUser1_03172022A、AutoSabotageUser1_03172022B、AutoSabotageUser1_031720225などを返します</block>
   <block id="3adefd54fc738f8196af6304ed8929ac" category="cell">AutoSabotageUser1_03172022またはAutoRansomUser4_03162022</block>
   <block id="0a01700b4705c6c47c24699ad7d4a4cb" category="cell">AutoSabotageUser1_03172022またはAutoRansomUser4_03162022のいずれかを返します</block>
   <block id="0ca071eb91357e8d4685daee24bd3360" category="cell">NOT AutoRansomUser4_03162022</block>
   <block id="e0ac20adce6ffee48c7151b070aa5737" category="cell">デバイス</block>
-  <block id="e0c965c954b5a9fdc33c5b0516799f7d" category="cell">"AutoRansomUser4_03162022 "で始まるものをすべて返します。</block>
   <block id="eae639a70006feff484a39363c977e24" category="cell">ドメイン</block>
   <block id="3c16a1572c295ef2bbd770516679c559" category="cell">ターゲットフィールドが空の場合に結果を返します</block>
   <block id="64048c881c93933680d02730e9d9ce63" category="paragraph">検索結果は、の有無によって異なります</block>
-  <block id="53ca5edb3205aa3468395e1789114a60" category="cell">壊れています</block>
   <block id="1d7531d059e4088a0878ea4eb94d32b6" category="cell">"/AutoDir1/AutoFile032420222022"</block>
   <block id="888f8ecf6256a9875ff5de4f10099453" category="cell">/AutoDir1/AutoFile03242022または/AutoDir1/AutoFile03242022</block>
   <block id="d87dd477d16107bb862f99dedbcacce4" category="cell">/AutoDir1/AutoFile03242022ではありません</block>
@@ -4079,7 +4065,6 @@
   <block id="189e8f8cb6dcbc5db679c602980ce869" category="list-text">SVM-1がワークロードセキュリティによって監視されていて、そのSVMのrootユーザがIPアドレスが10.197.12.40のクライアントに共有をマウントした場合、フォレンジックアクティビティページに表示されるユーザ名は_root@10.197.12.40_になります。</block>
   <block id="9a7b0be436e968c987b9d5f84ae815c4" category="list-text">IPアドレスが10.197.12.41の別のクライアントに同じSVM-1がマウントされている場合、フォレンジックアクティビティページに表示されるユーザ名は_root@10.197.12.41_になります。</block>
   <block id="8ef0cd5e57c1bad7b905d070f6b527a2" category="paragraph">*•これは、NFS rootユーザーのアクティビティをIPアドレスごとに分離するために行われます。以前は、すべてのアクティビティは_root_userによってのみ実行され、IPの区別はありませんでした。</block>
-  <block id="92232e830756517d2e51d25331f14f25" category="cell">[ すべてのアクティビティ ] テーブルの [ ユーザー ] 列には、「 LDAP: HQ.COMPANYNAME.COM:S-1-5-21-3577637-1906459482-1437260136-1831817” 」または「 LDAP: デフォルト : 80038003 」というユーザー名が表示されます。</block>
   <block id="0c4a0e9a569be65e94908f9222457694" category="inline-link-macro">User Directory Collector のトラブルシューティング</block>
   <block id="fa754fd7176d2dbf75086e702bb8e0ba" category="cell">考えられる原因は次のとおりです。 1.ユーザディレクトリコレクタがまだ設定されていません。追加するには、*[ワークロードセキュリティ]&gt;[コレクタ]&gt;[ユーザディレクトリコレクタ]*に移動し、*[+ユーザディレクトリコレクタ]*をクリックします。Active Directory_or_LDAP ディレクトリサーバー _ を選択します。2.User Directory Collectorが設定されましたが、停止しているか、エラー状態です。[コレクタ]&gt;[ユーザディレクトリコレクタ]*に移動し、ステータスを確認してください。トラブルシューティングのヒントについては、のマニュアルのセクションを参照して<block ref="700dae282c67631ab7fef060d50fba0f" category="inline-link-macro-rx"></block>ください。適切に設定すると、 24 時間以内に名前が自動的に解決されます。それでも解決されない場合は、正しい User Data Collector を追加しているかどうかを確認します。追加した Active Directory / LDAP ディレクトリサーバにユーザが実際に含まれていることを確認します。</block>
   <block id="65524feb61d50c77bb7ba2638a763f8e" category="cell">一部の NFS イベントが UI に表示されません。</block>
@@ -11833,29 +11818,17 @@
   <block id="80662c9452da0395efcb752fc6efd791" category="list-text">アクティビティ数はハイパーリンクとして表示されます。これを選択すると、選択したグループがフィルタとして追加されます。アクティビティのテーブルは、そのフィルタに基づいて更新されます。</block>
   <block id="f5048103eec701282d4bd47edb30c0dd" category="list-text">フィルタを変更したり、時間範囲を変更したり、画面を更新したりすると、フィルタを再度設定しないとフィルタ結果に戻ることはできません。</block>
   <block id="a7b9ef6a74f521c07a42dfe2b3ba5984" category="list-text">フィルタは、スライドアウトパネルから追加できます。この値は、 top_Filter by_list の適切なフィルタに追加されます。</block>
-  <block id="abc9548bbf938c1b00d7d7943eea69c6" category="list-text">第1レベルフォルダ(ルート)-フィルタとしてのエンティティパスのルートディレクトリ。たとえば、エンティティパスが/home/userX/nested1/nested2/の場合、homeまたは"home"を使用できます。</block>
-  <block id="ef05d086fd7703f59da830094683f26b" category="list-text">2nd Level Folder -エンティティパスフィルタの2ndレベルディレクトリ。たとえば、エンティティのパスが/home/userX/nested1/nested2/の場合、userXまたは"userX"を使用できます。</block>
   <block id="d09c77be27888e5715284768b4b56a37" category="list-text">3rd Level Folder -エンティティパスフィルタの3rdレベルディレクトリ。</block>
-  <block id="af2e930a257c8313695f9a6d5e9c587c" category="list-text">たとえば、エンティティパスが/home/userX/nested1/nested2/の場合、nested1または「nested1」を使用できます。</block>
-  <block id="73563b05b63d5f6abf9aac631e04c7b1" category="list-text">第4レベルフォルダ-ディレクトリエンティティパスフィルタの第4レベルディレクトリ。たとえば、エンティティパスが/home/userX/nested1/nested2/の場合、nested2または「nested2」を使用できます。</block>
   <block id="4f1f0488f8878a68e5eb50610b690092" category="cell">path="/home/userX/nested1/nested2/"</block>
   <block id="bd12893dcbe3201853dc72f0c6467347" category="cell">path="/home/userX/nested1/"</block>
-  <block id="1d0c26b23985cb45609efc05c13c3294" category="cell">パス="/home/userX/nested1/test"</block>
   <block id="735bdb9fe63d4b5dcefb1fab563b1783" category="cell">path="/home/userX/nested1/nested2/nested3/"</block>
   <block id="fa9485df6d085377bf71d0ebb0343af0" category="list-text">同様に、選択した期間が3日を超える場合は、[Activity History]グラフに表示されるカウント指標も30分に切り捨てられます。</block>
   <block id="20b023807d41f295e71a0807936532d8" category="paragraph">アクティビティ履歴データは、_Time、User、Source IP、Activity、_、_Entity Type _、1st Level Folder（ルート）、2nd Level Folder、3rd Level Folder、4th Level Folderでソートできます。デフォルトでは、テーブルは descending _Time_order でソートされます。つまり、最新のデータが最初に表示されます。_Device_Field と _Protocol_fields に対してソートが無効になっています。</block>
-  <block id="3ba465c35d8b2ac685818d0b9a9ba4f7" category="cell">ユーザー、エンティティタイプ、デバイス、ボリューム、元のパス、1stLevelフォルダ、2ndLevelフォルダ、3rdLevelフォルダ、4thLevelフォルダ</block>
-  <block id="6273bbd8f9632e4d401abdeec82c9a39" category="cell">「Auto」で始まり「03172022」で終わるすべてのリソースを返します。</block>
-  <block id="3917b61839732c75ca8202af25ad4257" category="cell">ユーザー、エンティティタイプ、デバイス、ボリューム、1stLevelフォルダ、2ndLevelフォルダ、3rdLevelフォルダ、4thLevelフォルダ</block>
-  <block id="18575a59bc1468900953267afdfc5c81" category="cell">ユーザ、ドメイン、エンティティタイプ、元のパス</block>
-  <block id="7c76f178211d14484e376bc483bd1077" category="cell">ユーザー、ドメイン、エンティティタイプ、元のパス、1stLevelフォルダ、2ndLevelフォルダ、3rdLevelフォルダ、4thLevelフォルダ</block>
   <block id="44144cdf07fe03ca4c4d71ecf2ee830c" category="cell">完全一致検索のみが機能します。正確なパスが/AutoDir1/AutoFile03242022であるすべてのアクティビティが返されます（大文字と小文字は区別されません）。</block>
   <block id="f7bf447e3a19a294d681133f069ea62c" category="cell">"/AutoDir1/"</block>
   <block id="8431be8aa2f333f025452fc93c584143" category="cell">AutoDir1と一致する第1レベルディレクトリを持つすべてのアクティビティを返します（大文字と小文字は区別されません）。</block>
   <block id="dac09bc6942369c2d0f8d36f26d2e201" category="cell">"/AutoDir1/AutoFile03242022 /"</block>
   <block id="17411e5191f440928552bd359518e697" category="cell">機能します。第1レベルのディレクトリがAutoDir1と一致し、第2レベルのディレクトリがAutoFile03242022と一致するすべてのアクティビティを返します（大文字と小文字は区別されません）。</block>
-  <block id="a874dae9695be1c2a6ef02373776f7b7" category="cell">検索文字列にアスタリスク（\*）を付けると、すべてが検索されます。ただし、_*&lt;searchTerm&gt;_ or _*&lt;searchTerm&gt;*_のような先頭のワイルドカード文字列は、クエリに時間がかかります。パフォーマンスを向上させるには、代わりに_&lt;searchTerm&gt;*_という形式でプレフィックス文字列を使用します（つまり、検索用語としてアスタリスク(*)_after_aを追加します）。例：_* testvolume_or_* test * volume__ではなく、文字列_testvolume *_を使用します。ディレクトリ検索を使用して、指定したフォルダの下にあるすべてのアクティビティを再帰的に表示します(階層検索)。たとえば、"/path1/path2/path3/"は、/path1/path2/path3の下にあるすべてのアクティビティを再帰的にリストします。または、[すべてのアクティビティ]タブの[フィルタに追加]オプションを使用します。</block>
-  <block id="980f8b6539b7c131f66cdde66f81a98f" category="cell">ディレクトリパスフィルタ(/で終わるパス文字列)より高速な結果を得るには、最大4つのディレクトリの深さが推奨されます。たとえば、ディレクトリパスが/Aaa/Bbb/Ccc/Dddの場合は、「/Aaa/Bbb/Ccc/Ddd/」を検索してデータをより高速にロードしてみてください。</block>
   <block id="ee0b2f1c8ad7945cf603e8d752a5e7b5" category="inline-link-macro">Data Infrastructure Insightsのエディション</block>
   <block id="bbf9080a1bf1fb2f62558ce683d64be0" category="paragraph">Data Infrastructure InsightsのBasicエディションとPremiumエディションで使用できる機能の完全な比較については、<block ref="49bb501f6c401ae5b06c3dbe5fc987bd" category="inline-link-macro-rx"></block>ページを参照してください。</block>
   <block id="3bbdd1e5a1fbf0d58680e594b8806722" category="section-title">Telegrafパッケージチェックサムの確認</block>
@@ -11875,8 +11848,6 @@
   <block id="84229233ad61c44b8e53075992f6c8a5" category="paragraph">Data Infrastructure Insightsでは、作成したダッシュボードへのアクセスをより細かく制御できるようになりました。グラフを変更できるユーザを選択します。潜在的に機密性の高い情報への暴露を制御します。一般的な可視化の準備ができていないダッシュボードにまだ取り組んでいますか？共有する準備ができるまで、非公開にしておくことができます。</block>
   <block id="f916d734e48a8724b0f8c434b43a06a7" category="inline-image-macro">ダッシュボード共有オプション</block>
   <block id="e2d1989486babbb3dc0993863f9f4ef8" category="paragraph"><block ref="e2d1989486babbb3dc0993863f9f4ef8" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c278bdd917e4f32f7d8a13861d3c1a43" category="list-text">Path * is_entity_path。これは、完全なエンティティパス（例："_/home/userX/nested1/nested2/abc.txt_"）または再帰検索用のパスのディレクトリ部分（例："_/home/userX/nested1/nested2/_"）である必要があります。注意:正規表現パスパターン(_userX_など)はここでは使用できません。または、以下に示す個別のパスフォルダレベルフィルタをパスフィルタに指定することもできます。</block>
-  <block id="09cde459dc94ebcdb7fb39e8a2b6e65f" category="list-text">*エンティティのパス*-これは完全なエンティティパス（例："_/home/userX/nested1/nested2/abc.txt_"）または再帰検索用のパスのディレクトリ部分（例："_/home/userX/nested1/nested2/_"）である必要があります。注意:正規表現のパスパターン(例:*userX*)はここでは許可されていません。ディレクトリパスフィルタ(/で終わるパス文字列)結果を高速化するには、最大4つのディレクトリの深さが推奨されます。たとえば、「_/home/userX/nested1/nested2/_」と入力します。詳細については、次の表を参照してください。</block>
   <block id="39dfb1596c6a6cd5efc77677cffa9f47" category="cell">パス値が/home/userX/nested1/testと一致する完全一致</block>
   <block id="67796eee76b434ba7f714f24fce77a4c" category="cell">正確な検索は、ディレクトリ検索と比較して検索に時間がかかります。</block>
   <block id="ee884ab6f8aeb5114dc04fcb169533de" category="section-title">パス検索</block>
@@ -11950,4 +11921,57 @@
   <block id="0dc236d363c2d7f668f1ee1391ffab69" category="paragraph">[VM Reclamation]タブには、アイドル状態または電源オフ状態が30日、60日、90日以上続いたVMの詳細と、潜在的な容量、メモリ、vCPUの削減量が表示されます。リストからVMを選択すると、そのVMの詳細ページが開きます。</block>
   <block id="5edbd52aee44c2dfb6c01abc4128600a" category="inline-image-macro">[VM Reclaimation]タブ</block>
   <block id="e2e66b001cd3f2f1481c4b23049ca899" category="paragraph"><block ref="e2e66b001cd3f2f1481c4b23049ca899" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7c0e2b6958fb0cb284c1950d13dd92b7" category="paragraph">「すべてのアクティビティ」表には、次の情報が表示されます。デフォルトでは、すべての列が表示されるわけではありません。歯車アイコンをクリックすると、表示する列を選択できます。</block>
+  <block id="44263fc9b1d7463adb10ca9afc45060e" category="list-text">* 読み取りメタデータ * - フォルダ監視オプションを有効にした場合のみ。Windowsでフォルダを開いたとき、またはLinuxでフォルダ内の「ls」を実行したときに生成されます。</block>
+  <block id="296d30798995d9503c7e56e6937dc7e1" category="list-text">* その他の変更 * - 上記に記載されていないその他のイベント。マッピングされていないすべてのイベントは、「その他の変更」アクティビティタイプにマッピングされます。ファイルおよびフォルダに適用されます。</block>
+  <block id="18b2404a514ba0df8811a1ef18ce21c8" category="list-text">Path * is_entity_path。これは、完全なエンティティパス（例："_/home/userX/nested1/nested2/abc.txt_"）または再帰検索用のパスのディレクトリ部分（例："_/home/userX/nested1/nested2/_"）である必要があります。注意:正規表現パスパターン(例:\*nested*)はここでは使用できません。または、以下に示す個別のパスフォルダレベルフィルタをパスフィルタに指定することもできます。</block>
+  <block id="ff7a8d750ff46de2529a38c020e55d07" category="list-text">*エンティティ名*はエンティティパスの最後のコンポーネントであり、ファイルとしてのエンティティタイプの場合はファイル名です。</block>
+  <block id="4ec2ab8548d402ce5e2a202a8ea0a5dc" category="list-text">フィルタとしてエンティティ名を選択すると、[グループ化]ドロップダウンが無効になります。また、ユーザーがすでに[グループ化]画面に表示されている場合は、フィルタとしてのエンティティ名が無効になります。</block>
+  <block id="34c71ee0e2f7ee568a6fba85dbe3f12c" category="paragraph">[+]*ボタンをクリックして、上部の[Filter by]ウィジェットから適切なフィルタを選択します。</block>
+  <block id="593a62c8da056fafb6ac6651ffc0bf77" category="list-text">* アクティビティを実行しているユーザーのユーザー名 * 。フィルタリングするユーザ名を正確に指定する必要があります。ユーザ名の一部、またはユーザ名の一部をプレフィックスまたはサフィックスとして「*」で検索することはできません。</block>
+  <block id="9db7dc70a2e0452d843a040725d27f0c" category="list-text">*エンティティタイプ*（エンティティ（ファイル）拡張子を使用）-引用符で正確なエンティティタイプを指定することをお勧めします。例：「txt」_。</block>
+  <block id="f1354a51722f5f69bac39634de675af5" category="list-text">*エンティティのパス*-これは完全なエンティティパス（例："_/home/userX/nested1/nested2/abc.txt_"）または再帰検索用のパスのディレクトリ部分（例："_/home/userX/nested1/nested2/_"）である必要があります。注意:正規表現パスパターン(例:\*nested*)はここでは使用できません。ディレクトリパスフィルタ(/で終わるパス文字列)結果を高速化するには、最大4つのディレクトリの深さが推奨されます。たとえば、「_/home/userX/nested1/nested2/_」と入力します。詳細については、次の表を参照してください。</block>
+  <block id="6911c153f3664c18429e8ec40b2a767b" category="list-text">第1レベルフォルダ(ルート)-フィルタとしてのエンティティパスのルートディレクトリ。例えば、エンティティのパスが/home/userX/nested1/nested2/の場合、homeまたは"home"を使用できます。</block>
+  <block id="23e3dfc154773a88f3b9923c80ec7481" category="list-text">2nd Level Folder -エンティティパスフィルタの2ndレベルディレクトリ。たとえば、エンティティのパスが/home/userX/nested1/nested2/の場合、userXまたは"userX"を使用できます。</block>
+  <block id="857d0e5023171871c119ae87aeee53bc" category="list-text">たとえば、エンティティパスが/home/userX/nested1/nested2/の場合、nested1または"nested1"を使用できます。</block>
+  <block id="3781ad6dba415c69a08c1285b1b7d3df" category="list-text">第4レベルフォルダ-ディレクトリエンティティパスフィルタの第4レベルディレクトリ。たとえば、エンティティパスが/home/userX/nested1/nested2/の場合、nested2または"nested2"を使用できます。</block>
+  <block id="84fe991275e24aba0f251415516a1e6c" category="list-text">* エンティティがアクセスされたソース IP * 。</block>
+  <block id="902172441eece016fa20a235ed73347b" category="list-text">ワイルドカード*および?を使用できます。例：10.0.0.*、10.0?.0.10、10.10*</block>
+  <block id="86ef89dbeec61182083cf6530ee135bc" category="list-text">完全に一致する必要がある場合は、有効な送信元IPアドレスを二重引用符で囲んで指定する必要があります（例：「10.1.1.1」）。「10.1.1.」、「10.1..*」などの二重引用符を含む不完全なIPは機能しません。</block>
+  <block id="905b0c69ef1c6841cf8c0b1791011328" category="list-text">*エンティティ名*-フィルタとしてのエンティティパスのファイル名。たとえば、エンティティパスが/home/userX/nested1/testfile.txtの場合、エンティティ名はtestfile.txtです。引用符で正確なファイル名を指定することをお勧めします。ワイルドカード検索は避けるようにしてください。たとえば、「testfile.txt」と入力します。また、このエンティティ名フィルタは、より短い時間範囲（最大3日）に推奨されることに注意してください。</block>
+  <block id="7534d146e70223d1303533e0a14fe154" category="list-text">ワイルドカード文字列には引用符を含めることはできません。例: searchtext ,\* searchtext *は'searchtext'を含む文字列をフィルタリングします。</block>
+  <block id="b37486cde222fa7d4db54c7f9079af41" category="list-text">プレフィックスが付いた文字列（例：searchtext*）は、「searchtext」で始まる文字列を検索します。</block>
+  <block id="c1b9a95df28615d752861a653c912165" category="paragraph">すべてのフィルタフィールドで大文字と小文字が区別されることに注意してください。たとえば、適用されたフィルタがエンティティタイプで値が「サーチテキスト」の場合、エンティティタイプが「サーチテキスト」、「サーチテキスト」、「サーチテキスト」、「サーチテキスト」の結果が返されます。</block>
+  <block id="96e29af4c73b1b900742b35d78410d0d" category="cell">path="/home/userX/nested1/test"</block>
+  <block id="8e14529189c6a9e30ee446b642210f06" category="cell">エンティティ名="test.log"</block>
+  <block id="d291397dc1bcc71a7246b56b5ad13661" category="cell">完全一致（ファイル名はtest.log）</block>
+  <block id="aff71f671afca7db5dcb5abeb1e94258" category="cell">完全一致なので</block>
+  <block id="fbff2043925d9da26087de5d55841c19" category="cell">エンティティ名=* test.log</block>
+  <block id="b3b4c0809900611c37d77a422fd3b157" category="cell">test.logで終わるファイル名</block>
+  <block id="efa5397985b8609a5dbeb430a4bcadd3" category="cell">遅い</block>
+  <block id="b17c9447397dcc3e6e0040513674b0eb" category="cell">ワイルドカードのために、それは遅くなる可能性があります。</block>
+  <block id="c24b132e995cb587464672369f22193b" category="cell">エンティティ名= test *。log</block>
+  <block id="b31f3dcbb2229f44061bd4d79f2d4c1d" category="cell">testで始まり.logで終わるファイル名</block>
+  <block id="8ef87bc62946324375ce0406cffecb74" category="cell">エンティティ名= test.lo</block>
+  <block id="18f0f6a0abceaaff775f56b818d4f9c5" category="cell">test.loで始まるファイル名例: test.log、test.log.1、test.log1に一致します。</block>
+  <block id="b832139a74c071bbfe5bd133e3c47185" category="cell">最後のワイルドカードのために、それは遅くなる可能性があります。</block>
+  <block id="f9648e2415808590c79ee96c5f4d0e66" category="cell">エンティティ名= test</block>
+  <block id="c71da0649fb7712d7e74ce581db70fb3" category="cell">testで始まるファイル名</block>
+  <block id="53ad658aa3b68ee6f8ac34262f27efc5" category="cell">最も遅い</block>
+  <block id="c4583cc10f343a12230f1e643aa9907a" category="cell">最後にワイルドカードが使用され、より一般的な値が使用されるため、最も遅くなる可能性があります。</block>
+  <block id="88a78f0edb8b7d91fe9b9c8fb2e4bc6b" category="list-text">非同期ダウンロードの数は、現在、Activities and Activities Analytics Tableごとにユーザーごとに1つ、テナントごとに3つに制限されています。</block>
+  <block id="e4435ba88bd58079d0501884e2cdce27" category="list-text">エクスポートされるデータは、Activities Tableでは最大100万件のレコードに制限されますが、Group Byでは最大50万件のレコードに制限されます。</block>
+  <block id="19f35db392e49cb7f3cff5327114daf2" category="cell">Auto * 03172022検索テキストにハイフンまたはアンダースコアが含まれている場合は、角かっこで式を指定します。例：SVM-123の検索には（SVM*）を使用します。</block>
+  <block id="8745a33435e7e88bd4e44ad19ea05b34" category="cell">ユーザー、エンティティタイプ、デバイス、ボリューム、元のパス、1stLevelフォルダ、2ndLevelフォルダ、3rdLevelフォルダ、4thLevelフォルダ、エンティティ名、ソースIP</block>
+  <block id="470d04a7c99630dbe5d3f0c2b95291fd" category="cell">「Auto」で始まり「03172022」で終わるすべてのリソースを返します。</block>
+  <block id="8f04371c9eb330d35f4fd429b3a6b70b" category="cell">ユーザー、エンティティタイプ、デバイス、ボリューム、1stLevelフォルダ、2ndLevelフォルダ、3rdLevelフォルダ、4thLevelフォルダ、エンティティ名、ソースIP</block>
+  <block id="b12f964a7d4b88d6b12b49acaa4e8da5" category="cell">ユーザ、ドメイン、エンティティタイプ、元のパス、エンティティ名、ソースIP</block>
+  <block id="46b8cf2bc3a5a3834c08eec497d3eaaa" category="cell">ユーザー、ドメイン、エンティティタイプ、元のパス、1stLevelフォルダ、2ndLevelフォルダ、3rdLevelフォルダ、4thLevelフォルダ、エンティティ名、ソースIP</block>
+  <block id="71fdd823af8d6c227f786362616494a5" category="cell">「AutoRansomUser4_03162022」で始まらないものをすべて返します。</block>
+  <block id="aaa6685e24d0d36fa7036ff4fe31a74e" category="cell">機能しない</block>
+  <block id="f43bb0cf54d8d5e402232117f3654e92" category="cell">[All Activities]テーブルの[User]列に、ユーザ名が「ldap：HQ.COMPANYNAME.COM:S-1-5-21-3577637-1906459482-1437260136-1831817"」または「ldap：default：80038003」と表示されます。</block>
+  <block id="5ee73cc203856368d4c788cc5e4c2b86" category="cell">検索文字列にアスタリスク（\*）を付けると、すべてが検索されます。ただし、_*&lt;searchTerm&gt;_ or _*&lt;searchTerm&gt;*_のような先頭のワイルドカード文字列は、クエリに時間がかかります。パフォーマンスを向上させるには、代わりに_&lt;searchTerm&gt;*_という形式でプレフィックス文字列を使用します（つまり、検索用語としてアスタリスク(*)_after_aを追加します）。例：_* testvolume_or_* test * volume__ではなく、文字列_testvolume *_を使用します。ディレクトリ検索を使用して、特定のフォルダの下にあるすべてのアクティビティを再帰的に表示します(階層検索)。たとえば、"/path1/path2/path3/"は、/path1/path2/path3の下にあるすべてのアクティビティを再帰的にリストします。または、[すべてのアクティビティ（All Activity）]タブの[フィルタに追加（Add to Filter）]オプションを使用します。</block>
+  <block id="43bfa97b37a997b631be2c5c6423c5fc" category="cell">ディレクトリパスフィルタ(/で終わるパス文字列)より高速な結果を得るためには、最大4つのディレクトリの深さが推奨されます。例えば、ディレクトリパスが/Aaa/Bbb/Ccc/Dddの場合は、データをより高速に読み込むために「/Aaa/Bbb/Ccc/Ddd/」を検索してみてください。</block>
+  <block id="76b6bb11709d612b89ea4e85c1289694" category="cell">Forensics UIがデータのロードに時間がかかり、エンティティ名フィルタを使用するとエラーが発生します。</block>
+  <block id="9047530966d5f017f54aa4479b25a938" category="cell">時間範囲を小さくし、値を正確に二重引用符で検索してみてください。たとえば、entityPathが"/home/userX/nested1/nested2/nested3/testfile.txt"の場合は、エンティティ名フィルタとして"testfile.txt"を使用してみてください。</block>
 </blocks>
