@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: cvm_optimization_overview.html 
+summary: VMの最適化 
+keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll up, grouping, aggregate, aggregation, filter, axis, group by, expressions, timeseries, exact match, theme, visibility, formatting, conditional, hide, collapse, expand 
+---
+= VMの最適化
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:nofooter: 
+:toclevels: 1
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insightsを使用すると、環境の過去の動作を分析し、短期および長期の予測を確立し、ホストの運用停止や電源がオフになっていてアイドル状態のVMの再利用に関する詳細な推奨事項を生成して、インフラとライセンスのコストを管理できます。これらの推奨事項は、パフォーマンスの安定性を確保し、未使用の容量を解放し、メモリとCPUの割り当てを削減するのに役立ちます。
+
+image:vm_optimization_summary.png["VM Optimization Summary画面"]
+
+まず、[Observability]>[Analyze]>[VM Optimization]に移動します。潜在的な削減効果の概要がコア数とストレージ削減効果別に表示されます。フィルタをデータセンター、仮想センターIP、またはクラスタ別に設定したり、独自のフィルタを設定して絞り込んだりすることができます。
+
+image:vm_optimization_overview.png["VM最適化の概要"]
+
+[Hypervisor Decommissioning]タブには、選択した最適化戦略に基づいて削減可能なコストが表示されます。各戦略では、さまざまなしきい値を使用して潜在的な削減効果を判断
+
+リストからクラスタを選択すると、そのクラスタのCPUおよびメモリ利用率に関する詳細を示すスライドアウトパネルが開きます。
+
+image:vm_optimization_hypervisor_decommissioning_tab.png["ハイパーバイザー最適化タブ"]
+
+[VM Reclamation]タブには、アイドル状態または電源オフ状態が30日、60日、90日以上続いたVMの詳細と、潜在的な容量、メモリ、vCPUの削減量が表示されます。リストからVMを選択すると、そのVMの詳細ページが開きます。
+
+image:vm_optimization_reclamation_tab.png["[VM Reclaimation]タブ"]
