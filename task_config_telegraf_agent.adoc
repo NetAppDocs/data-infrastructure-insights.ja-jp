@@ -29,7 +29,7 @@ Kubernetesへのインストールの詳細については、ページを参照�
 NOTE: 正確な監査およびデータレポートを作成するためには、 * Network Time Protocol （ NTP; ネットワークタイムプロトコル） * または * Simple Network Time Protocol （ SNTP ） * を使用して、 Agent マシンの時刻を同期することを強くお勧めします。
 
 
-NOTE: Agentをインストールする前にインストールファイルを確認する場合は、の次のセクションを参照してください<<Verifying Checksums>>。
+NOTE: Agentをインストールする前にインストールファイルを確認する場合は、の次のセクションを参照してください<<Telegrafパッケージチェックサムの確認>>。
 
 
 

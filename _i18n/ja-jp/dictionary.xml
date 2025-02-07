@@ -6445,7 +6445,6 @@
   <block id="da7e75e5407636a24c1c7cce20e7d225" category="paragraph">Data Infrastructure Insightsの現在のTelegrafバージョンは* 1.24.0 *です。</block>
   <block id="2041337c363c1ecaeb2a1aa9c8999494" category="paragraph">Kubernetesへのインストールの詳細については、ページを参照して<block ref="f0d3e43e41da35ba651820db811551cd" category="inline-link-macro-rx"></block>ください。</block>
   <block id="ae2f2b5e87a12f1cd650f0e46b92e4ec" category="admonition">正確な監査およびデータレポートを作成するためには、 * Network Time Protocol （ NTP; ネットワークタイムプロトコル） * または * Simple Network Time Protocol （ SNTP ） * を使用して、 Agent マシンの時刻を同期することを強くお勧めします。</block>
-  <block id="f97f94f0ff0c35a96686e2fd00940ac8" category="admonition">Agentをインストールする前にインストールファイルを確認する場合は、の次のセクションを参照してください<block ref="1d9f3d6343939e76574c60762a7f2fae" category="inline-xref-macro-rx"></block>。</block>
   <block id="137bac1c26ca6d0b61bc783c9a2fcbbd" category="section-title">エージェントをインストールしています</block>
   <block id="a4c0f3c4bd8931418c028fb88c45e72f" category="paragraph">サービスデータコレクタをインストールしていて、エージェントをまだ設定していない場合は、最初に適切なオペレーティングシステム用のエージェントをインストールするように求められます。このトピックでは、 Tegraf エージェントを次のオペレーティングシステムにインストールする手順について説明します。</block>
   <block id="8d6f7baf6fd8e47d9316fcc507ab0f85" category="list-text"><block ref="85415f26af88eac138de6f713927df0c" category="inline-xref-macro-rx"></block></block>
@@ -11974,4 +11973,5 @@
   <block id="43bfa97b37a997b631be2c5c6423c5fc" category="cell">ディレクトリパスフィルタ(/で終わるパス文字列)より高速な結果を得るためには、最大4つのディレクトリの深さが推奨されます。例えば、ディレクトリパスが/Aaa/Bbb/Ccc/Dddの場合は、データをより高速に読み込むために「/Aaa/Bbb/Ccc/Ddd/」を検索してみてください。</block>
   <block id="76b6bb11709d612b89ea4e85c1289694" category="cell">Forensics UIがデータのロードに時間がかかり、エンティティ名フィルタを使用するとエラーが発生します。</block>
   <block id="9047530966d5f017f54aa4479b25a938" category="cell">時間範囲を小さくし、値を正確に二重引用符で検索してみてください。たとえば、entityPathが"/home/userX/nested1/nested2/nested3/testfile.txt"の場合は、エンティティ名フィルタとして"testfile.txt"を使用してみてください。</block>
+  <block id="af8cb62c8a34ba6726d4859a2c8c7e95" category="admonition">Agentをインストールする前にインストールファイルを確認する場合は、の次のセクションを参照してください<block ref="bf4e2f55c3503e0739d2135298b462c7" category="inline-xref-macro-rx"></block>。</block>
 </blocks>
