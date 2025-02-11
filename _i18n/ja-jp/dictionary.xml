@@ -6323,14 +6323,12 @@
   <block id="9be58f2fc8b11ec837406376ca6b3e2a" category="doc">データインフラの分析情報をオンボーディング</block>
   <block id="c9c452240be4db82e89f010124f3c4a2" category="paragraph">Data Infrastructure Insightsの使用を開始する前に、* NetApp BlueXP *ポータルにサインアップする必要があります。NetApp BlueXP  へのログインをすでにお持ちの場合は、いくつかの簡単な手順でData Infrastructure Insightsの無償トライアルを開始できます。</block>
   <block id="5bff30d13ce98c505187872963af1f25" category="section-title">NetApp BlueXPアカウントの作成</block>
-  <block id="b73a83fb453d4638343c31abb0f03dfc" category="paragraph">NetAppのクラウドサービスを開始するには、に移動して<block ref="b4c824fcd8d5915314065a3371563411" category="inline-link-macro-rx"></block>*[開始]*をクリックします。</block>
   <block id="1e26781b207fa848ce81c7268cf016a7" category="list-text">まだサインアップしていない場合は、*サインアップ*を選択します</block>
   <block id="05d2a837df7692f0d65e4466b2fb05bd" category="list-text">有効なビジネス用 E メールアドレスを入力し、パスワードを選択してください。</block>
   <block id="ad66d403ef43ddd58a7b527874c51878" category="list-text">会社名と氏名を入力します。</block>
   <block id="895a961645c5f6456e2cc43102e1de8a" category="list-text">利用条件に同意し、* Continue（続行）*を選択します。</block>
   <block id="027e58ebcf59f73bde476a8af6584584" category="list-text">BlueXPのガイドに従って操作を開始します。</block>
   <block id="6670eac4232d1c66e6c936fe67e52aff" category="section-title">NetApp BlueXPへのログインをすでにお持ちの場合はどうすればよいですか？</block>
-  <block id="71292a4043ee880f4b2810b42954372c" category="paragraph">NetApp BlueXP  アカウントを取得したら、ポータルページで「ログイン」を選択するだけです<block ref="b4c824fcd8d5915314065a3371563411" category="inline-link-macro-rx"></block>。</block>
   <block id="a46b8a484704b65f978247cb9b3901aa" category="paragraph">E メールアドレスとパスワードを入力します。その後、ネットアップのクラウドサービスに関するページに移動します。</block>
   <block id="a255e7df64ed3494ccf094bd8b25822f" category="paragraph">[Data Infrastructure Insights ]を選択します。</block>
   <block id="ce69050591300865b670a02cda814df2" category="inline-image-macro">BlueXP  でのData Infrastructure Insights無償トライアル</block>
@@ -11985,4 +11983,6 @@
   <block id="1677cd7abeaa8f0a0514a964c0c2bda6" category="paragraph"><block ref="1677cd7abeaa8f0a0514a964c0c2bda6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0b7788a77d5d76748437f02599d4ffbf" category="paragraph"><block ref="0b7788a77d5d76748437f02599d4ffbf" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e4d6c49d3ae18aca7ed82f5ef2ab8266" category="paragraph"><block ref="e4d6c49d3ae18aca7ed82f5ef2ab8266" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1158d69294406edc67b8de2b5ed02647" category="paragraph">NetAppのクラウドサービスを開始するには、に移動して<block ref="40ad5c1f57b9131d3640bb640a07e49e" category="inline-link-macro-rx"></block>*[開始]*をクリックします。</block>
+  <block id="90aa9e4cd4632612b7635f2c366a8948" category="paragraph">NetApp BlueXP  アカウントを取得したら、ポータルページで「ログイン」を選択するだけです<block ref="40ad5c1f57b9131d3640bb640a07e49e" category="inline-link-macro-rx"></block>。</block>
 </blocks>

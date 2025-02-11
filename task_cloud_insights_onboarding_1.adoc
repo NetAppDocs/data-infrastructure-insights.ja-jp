@@ -24,7 +24,7 @@ toc::[]
 
 == NetApp BlueXPアカウントの作成
 
-NetAppのクラウドサービスを開始するには、に移動してlink:https://cloud.netapp.com["* NetApp BlueXP *"^]*[開始]*をクリックします。
+NetAppのクラウドサービスを開始するには、に移動してlink:https://bluexp.netapp.com/["* NetApp BlueXP *"^]*[開始]*をクリックします。
 
 * まだサインアップしていない場合は、*サインアップ*を選択します
 * 有効なビジネス用 E メールアドレスを入力し、パスワードを選択してください。
@@ -37,7 +37,7 @@ NetAppのクラウドサービスを開始するには、に移動してlink:htt
 
 === NetApp BlueXPへのログインをすでにお持ちの場合はどうすればよいですか？
 
-NetApp BlueXP  アカウントを取得したら、ポータルページで「ログイン」を選択するだけですlink:https://cloud.netapp.com["* NetApp BlueXP *"^]。
+NetApp BlueXP  アカウントを取得したら、ポータルページで「ログイン」を選択するだけですlink:https://bluexp.netapp.com/["* NetApp BlueXP *"^]。
 
 E メールアドレスとパスワードを入力します。その後、ネットアップのクラウドサービスに関するページに移動します。
 
