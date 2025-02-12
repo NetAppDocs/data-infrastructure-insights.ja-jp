@@ -11985,4 +11985,16 @@
   <block id="e4d6c49d3ae18aca7ed82f5ef2ab8266" category="paragraph"><block ref="e4d6c49d3ae18aca7ed82f5ef2ab8266" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1158d69294406edc67b8de2b5ed02647" category="paragraph">NetAppのクラウドサービスを開始するには、に移動して<block ref="40ad5c1f57b9131d3640bb640a07e49e" category="inline-link-macro-rx"></block>*[開始]*をクリックします。</block>
   <block id="90aa9e4cd4632612b7635f2c366a8948" category="paragraph">NetApp BlueXP  アカウントを取得したら、ポータルページで「ログイン」を選択するだけです<block ref="40ad5c1f57b9131d3640bb640a07e49e" category="inline-link-macro-rx"></block>。</block>
+  <block id="e6652e28190651190702622512d6199d" category="section-title">最新世代のASAシステム向けのONTAP Essentials</block>
+  <block id="b7b46ce5d1a547db89c0bc615ff272a5" category="inline-link-macro">ASA</block>
+  <block id="e4d6d8fa32272beabde4921e66b643d2" category="paragraph">ONTAP Essentialsには、最新世代のデバイスの管理機能がすぐに使えるようになりました<block ref="a86d3d554a7f4851edc0f19a9e8accf3" category="inline-link-macro-rx"></block>。これには、ONTAPで実行されるワークロードのVMからLUNへのトポロジを実現するSAN Analyzerが含まれています。この機能は、Data Infrastructure Insights Basicエディションの一部としてNetAppサポートでも利用できるようになりました。</block>
+  <block id="8af8d6d7603eec1cb34086e9cf6e2055" category="inline-image-macro">ASAがユニファイドとは異なることを示すONTAP Essentialsドロップダウン</block>
+  <block id="5fe97e7e7c561aa4a8199e55d380aadb" category="paragraph"><block ref="5fe97e7e7c561aa4a8199e55d380aadb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bd255743216cfae20f87e84a9cd8e7e1" category="section-title">DII API使用状況の追跡：セキュリティと効率の向上</block>
+  <block id="0be262a01ffd53cb1827d924de37e376" category="paragraph">管理者ユーザが利用できる強化されたREST API使用状況の追跡機能により、セキュリティ体制を強化し、リソース管理を合理化できます。APIの使用状況を追跡することで、使用されているAPIトークン、使用元のIPアドレス、生成されるトラフィック量を確認できます。トークンを特定のIPアドレスと使用レベルにリンクすることで、システムアクセスと使用傾向に関する強力なインサイトが得られ、安全で効率的な環境を維持し、スムーズな運用を維持するために必要な制御が可能になります。</block>
+  <block id="864d5cf863bc1474afd3f84717104d24" category="paragraph">APIの使用状況を表示するには、* Observability &gt; Admin &gt; API Access *に移動し、_View API Usage_を選択します。このAPIは、DIIオブザーバビリティAPIでのみ使用できます。ワークロードセキュリティAPIまたはレポートAPIには適用されません。</block>
+  <block id="320be4cb0a9128705d37286f8afff816" category="inline-image-macro">API使用状況分析の例</block>
+  <block id="d7f696b40402f5f6c5dc60d881af09a0" category="paragraph"><block ref="d7f696b40402f5f6c5dc60d881af09a0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="811a069713a14c7b8c3b0333afcedfff" category="section-title">ワークロードセキュリティAPIによるユーザの制限</block>
+  <block id="4c68ec61ca843531d828d448eb135006" category="paragraph">ワークロードセキュリティのユーザ制限を管理するための新しいAPIが追加されました。APIを使用すると、ユーザをブロックまたはブロック解除したり、ユーザのアクセス制限の期間を変更したりできます。_cloudsecure_actions.block_apiについては、[Admin]&gt;[API Access]&gt;[API Documentation]ページを参照してください。</block>
 </blocks>
