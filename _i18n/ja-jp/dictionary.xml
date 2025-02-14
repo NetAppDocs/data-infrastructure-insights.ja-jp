@@ -11864,7 +11864,6 @@
   <block id="14fe64769d4df689f51e13f60c5ec439" category="admonition">ユーザが制限されているコレクタは一時停止できません。コレクタを一時停止する前にユーザアクセスを復元します。</block>
   <block id="81c776ec15386302abf1c34d317e3393" category="paragraph">SAN Analyzerを表示するには、*オブザーバビリティ&gt;分析&gt; SAN Analyzer *を選択します。アプリケーション、ホスト、ファブリック、ストレージのフィルタを設定します。オブジェクトのマップが表示され、接続されているオブジェクトが示されます。オブジェクトにカーソルを合わせると、それらの接続のトラフィックメトリックが表示されます。</block>
   <block id="fde6f74861c217b576ec5d769f2467c3" category="paragraph"><block ref="fde6f74861c217b576ec5d769f2467c3" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3cfbb427bd17b95ae08e5597561217ef" category="paragraph">オブジェクトまたはグループをクリックすると、スライドアウトパネルが開き、オブジェクトとその接続に関する詳細情報が表示されます。スライドアウトには、[Summary]、[Port details]、および[Zone]情報が表示されるタブがあります（該当する場合）。</block>
   <block id="7512260392fef04bf211fab22007addd" category="paragraph"><block ref="7512260392fef04bf211fab22007addd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="18082cdb9388e2686e081dd6012e47b8" category="summary">作成するダッシュボードがパブリックかプライベートかを決定します。</block>
   <block id="cc5c681651d638257ae03658c963c7c6" category="doc">ダッシュボードアクセス管理</block>
@@ -11997,4 +11996,10 @@
   <block id="d7f696b40402f5f6c5dc60d881af09a0" category="paragraph"><block ref="d7f696b40402f5f6c5dc60d881af09a0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="811a069713a14c7b8c3b0333afcedfff" category="section-title">ワークロードセキュリティAPIによるユーザの制限</block>
   <block id="4c68ec61ca843531d828d448eb135006" category="paragraph">ワークロードセキュリティのユーザ制限を管理するための新しいAPIが追加されました。APIを使用すると、ユーザをブロックまたはブロック解除したり、ユーザのアクセス制限の期間を変更したりできます。_cloudsecure_actions.block_apiについては、[Admin]&gt;[API Access]&gt;[API Documentation]ページを参照してください。</block>
+  <block id="49467730a5826d8dc222a2fe6fe8f9ad" category="admonition">ほとんどのSAN Analyzerフィルタ（追加可能なフィルタを含む）はコンテキストに依存していますこれらのフィルタのいずれかでオブジェクトを選択すると'他のフィルタのドロップダウンに表示される選択肢は'選択したオブジェクトのコンテキストに応じて更新されますただし、アプリケーション、ポート、およびスイッチは例外です。これらのフィルタはコンテキストに依存しません。</block>
+  <block id="6ce5d5cf78dd02f70416bdf28a2785a2" category="paragraph">オブジェクトまたはグループをクリックすると、スライドアウトパネルが開き、オブジェクトとその接続に関する詳細情報が表示されます。スライドアウトパネルには、選択したオブジェクトの詳細（オブジェクトのタイプに応じてIP、ハイパーバイザー、接続されているファブリックなど）の概要と、レイテンシやIOPSなどのオブジェクトの指標を示すグラフ、および関連する場合は変更とアラートが表示されます。必要に応じて、関連性の高い上位オブジェクトの指標をグラフに表示することもできます。</block>
+  <block id="0e83da7d6fe40d6888d88d1a5caca1e4" category="paragraph">[Summary]タブに加えて、スライドアウトパネルには、選択したオブジェクトに該当するポートの詳細やゾーン情報などのタブが表示されます。</block>
+  <block id="6b240be76b07166c90df4dd3d8870b5f" category="paragraph">環境にiSCSIデバイスが含まれている場合は、_iscsi_objectにカーソルを合わせると、関連するiSCSIデバイスに関連する接続が強調表示されます。</block>
+  <block id="f922b3837a16ba3a595d03fafff3c0c6" category="inline-image-macro">iSCSIトラフィックを強調表示</block>
+  <block id="30a8ce61ff74633c5fba361b87bb964a" category="paragraph"><block ref="30a8ce61ff74633c5fba361b87bb964a" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
