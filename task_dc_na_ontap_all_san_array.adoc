@@ -34,6 +34,11 @@ summary: ONTAPオールSANアレイデータコレクタ
 
 
 
+NOTE: ASA R2は、ONTAP ASAストレージプラットフォームの最新世代モデルです。これには、アレイモデルASA A1K、A90、A70、A50、A30、A20が含まれます。
+
+旧世代のすべてのASAシステムでは、コレクタを使用してくださいlink:task_dc_na_ontap_rest.html["ONTAP REST"]。
+
+
 
 == アクセス権に関する注意事項
 
