@@ -1964,10 +1964,8 @@
   <block id="c66bd552dea63071ad19e124c869ab2e" category="paragraph">AWS Marketplaceの無償トライアルを延長することはできません。試用期間中はいつでも、* Admin -&gt; Subscription *ページからData Infrastructure Insights Basic Editionサブスクリプションにダウングレードしたり、Data Infrastructure Insightsの有料サブスクリプションに変更したりできます。</block>
   <block id="03742c91392961db83c5540550a3500a" category="section-title">トライアル期間が終了した場合はどうなりますか？</block>
   <block id="55b44e6cb866667b35e33325e5f2b246" category="paragraph">無償トライアルの有効期限が切れていて、Data Infrastructure Insightsにまだサブスクライブしていない場合は、サブスクライブするまで機能が制限されます。データの取り込みが中止される場合があり、数週間後にデータ保持ポリシーに従ってデータが削除されます。</block>
-  <block id="b3aa21e2b7855df7d2d86e0bcb7a55d9" category="section-title">サブスクリプションの有効期限が切れた場合はどうなりますか？</block>
   <block id="35b65825e5ac5124cb47e8b94e7e203a" category="paragraph">Data Infrastructure Insightsのサブスクリプションをお持ちで、そのサブスクリプションの有効期限が切れている場合は、サブスクリプションを更新するために5日間の猶予期間が与えられます。Data Infrastructure Insightsのすべての機能は、この猶予期間中もアクティブなままです。</block>
   <block id="60e8665be02d68c6c89f05f0f7865a28" category="paragraph">猶予期間が経過すると、更新するまでData Infrastructure Insightsの機能は一時停止されます。更新については、*[Admin]&gt;[Subscription]*ページを参照するか、NetAppセールスにお問い合わせください。</block>
-  <block id="4d1fc9b1363bc3a01af741ec16cbe749" category="admonition">猶予期間終了までに収集されたData Infrastructure Insightsデータは、猶予期間後30日間はそのまま維持されます。この時間内にサブスクリプションを更新すると、猶予期間が経過するまでのすべてのデータが利用可能になります。</block>
   <block id="267ff18a74a9df19266142dc71925a29" category="section-title">サブスクリプション*の有効期限が切れた場合はどうなりますか？</block>
   <block id="5ee83dda0a980eba56098446eee3b5e4" category="admonition">Data Infrastructure Insightsのデータは、猶予期間後30日間そのまま維持されます。この時間内にサブスクリプションを更新すると、猶予期間が経過するまでのすべてのデータが利用可能になります。</block>
   <block id="76064df620f99261dce25de296d7e769" category="paragraph">また、*モジュール評価*もご利用いただけます。たとえば、インフラオブザーバビリティにすでにサブスクライブしていて、Kubernetesを環境に追加する場合は、NetApp Kubernetes監視オペレータのインストール時から、Kubernetesオブザーバビリティの30日間の評価が自動的に行われます。評価期間の終了時に、Kubernetes Observability Managed Unitの使用料金のみが請求されます。</block>
@@ -5720,8 +5718,6 @@
   <block id="27daabf1c454d33595dbe589aefcd6e0" category="list-text">左側のナビゲーションペインで、*コンテンツ&gt;チームコンテンツ*を選択します。</block>
   <block id="4049f6107bd22bd909a404599ebeacd6" category="list-text">事前定義済みのレポートにアクセスするには、*[レポート]*を選択します。</block>
   <block id="ee3a0672263c3995fe8e38b6cfe439c4" category="inline-image-macro">[Reporting]メニュー</block>
-  <block id="81a9f8ce382fd16358d56245a66220a4" category="inline-image-macro">レポートが強調表示されているチームコンテンツ</block>
-  <block id="48bcae107d50992efecf85a6c4736dba" category="paragraph"><block ref="042d6428eca469dceeec3a1b4202ab56" category="inline-image-macro-rx" type="image"></block> <block ref="9aede4345f2bc9132f2c99c71d833e20" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a75b8fc33414d692d111110189a35f09" category="section-title">事前定義済みのレポートを使用した回答に関する一般的な質問への</block>
   <block id="e89ec6ed2e5ec193067c2a247878a526" category="paragraph">次の事前定義済みレポートは、 * チームコンテンツ &gt; レポート * で使用できます。</block>
   <block id="1c3be015eacffb807e30cff683e0ab59" category="section-title">アプリケーションサービスレベルの容量とパフォーマンス</block>
@@ -12009,4 +12005,6 @@
   <block id="3e70b4412d3a3b92cd10a9e1453fc282" category="section-title">以前に実行していたバージョンへのロールバック</block>
   <block id="4d8704d77f12b96a935cdf09de6c94be" category="paragraph">プッシュボタンアップグレード機能を使用してアップグレードし、アップグレードから7日以内に現在のバージョンのオペレータで問題が発生した場合は、アップグレードプロセス中に作成されたスナップショットを使用して、以前に実行していたバージョンにダウングレードできます。ロールバックするクラスタの横にあるメニューをクリックし、_Roll back_を選択します。</block>
   <block id="95168a3a05a80c7b596b36a7ec8218c4" category="section-title">手動アップグレード</block>
+  <block id="92e9b9412f142b06bb1d5b741604efd6" category="inline-image-macro">レポートが強調表示されているチームコンテンツ、幅= 800</block>
+  <block id="d7daabce37094cca59c57db4ac298a14" category="paragraph"><block ref="042d6428eca469dceeec3a1b4202ab56" category="inline-image-macro-rx" type="image"></block> <block ref="5880297252ec23e342670c23021aaf20" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

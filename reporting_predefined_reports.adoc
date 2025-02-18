@@ -40,7 +40,7 @@ Reportingポータルを開くと、Data Infrastructure Insightsのレポート�
 . 事前定義済みのレポートにアクセスするには、*[レポート]*を選択します。
 
 
-image:Reporting_Menu.png["[Reporting]メニュー"] image:Reporting_Team_Content.png["レポートが強調表示されているチームコンテンツ"]
+image:Reporting_Menu.png["[Reporting]メニュー"] image:Reporting_Team_Content.png["レポートが強調表示されているチームコンテンツ、幅= 800"]
 
 
 
