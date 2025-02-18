@@ -69,6 +69,34 @@ image:KubernetesModifyDeploymentScreen.png["展開オプションの変更、幅
 
 == 最新のKubernetes Monitoring Operatorへのアップグレード
 
+
+
+=== DIIプッシュボタンアップグレード
+
+Kubernetes Monitoring Operatorは、DII Kubernetes Collectorsページからアップグレードできます。アップグレードするクラスタの横にあるメニューをクリックし、_Upgrade_を選択します。オペレータは、イメージシグネチャを確認し、現在のインストールのスナップショットを実行し、アップグレードを実行します。数分以内に、[Upgrade in Progress to Latest]（処理中から最新へのアップグレード）の進行状況が表示されます。エラーが発生した場合は、[エラー]ステータスを選択して詳細を確認し、下の[プッシュボタンアップグレードのトラブルシューティング]の表を参照してください。
+
+
+
+==== プライベートリポジトリを使用したプッシュボタンアップグレード
+
+オペレータがプライベートリポジトリを使用するように設定されている場合は、オペレータの実行に必要なすべてのイメージとその署名がリポジトリにあることを確認してください。アップグレードプロセス中に不足しているイメージに関するエラーが発生した場合は、それらのイメージをリポジトリに追加して、アップグレードを再試行してください。画像シグネチャをリポジトリにアップロードするには、次のようにcosignツールを使用してください。3オプションで指定されているすべての画像のシグネチャをアップロードしてください。オペレータ画像をプライベートリポジトリにアップロード>画像プルスニペット
+
+[listing]
+----
+cosign copy example.com/src:v1 example.com/dest:v1
+#Example
+cosign copy <DII container registry>/netapp-monitoring:<image version> <private repository>/netapp-monitoring:<image version>
+----
+
+
+==== 以前に実行していたバージョンへのロールバック
+
+プッシュボタンアップグレード機能を使用してアップグレードし、アップグレードから7日以内に現在のバージョンのオペレータで問題が発生した場合は、アップグレードプロセス中に作成されたスナップショットを使用して、以前に実行していたバージョンにダウングレードできます。ロールバックするクラスタの横にあるメニューをクリックし、_Roll back_を選択します。
+
+
+
+=== 手動アップグレード
+
 既存のOperatorにAgentConfigurationが存在するかどうかを確認します（ネームスペースがdefault_netapp-monitoring_でない場合は、適切なネームスペースに置き換えてください）。
 
  kubectl -n netapp-monitoring get agentconfiguration netapp-monitoring-configuration

@@ -12002,4 +12002,11 @@
   <block id="6b240be76b07166c90df4dd3d8870b5f" category="paragraph">環境にiSCSIデバイスが含まれている場合は、_iscsi_objectにカーソルを合わせると、関連するiSCSIデバイスに関連する接続が強調表示されます。</block>
   <block id="f922b3837a16ba3a595d03fafff3c0c6" category="inline-image-macro">iSCSIトラフィックを強調表示</block>
   <block id="30a8ce61ff74633c5fba361b87bb964a" category="paragraph"><block ref="30a8ce61ff74633c5fba361b87bb964a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="581ba4a57638d5498f99aafb2b6402c9" category="section-title">DIIプッシュボタンアップグレード</block>
+  <block id="433d081988851966788ba677d938d07d" category="paragraph">Kubernetes Monitoring Operatorは、DII Kubernetes Collectorsページからアップグレードできます。アップグレードするクラスタの横にあるメニューをクリックし、_Upgrade_を選択します。オペレータは、イメージシグネチャを確認し、現在のインストールのスナップショットを実行し、アップグレードを実行します。数分以内に、[Upgrade in Progress to Latest]（処理中から最新へのアップグレード）の進行状況が表示されます。エラーが発生した場合は、[エラー]ステータスを選択して詳細を確認し、下の[プッシュボタンアップグレードのトラブルシューティング]の表を参照してください。</block>
+  <block id="03875270ab1c6cff042b492ee14233c4" category="section-title">プライベートリポジトリを使用したプッシュボタンアップグレード</block>
+  <block id="e54a7171ef187b31ad82e9367e9488f8" category="paragraph">オペレータがプライベートリポジトリを使用するように設定されている場合は、オペレータの実行に必要なすべてのイメージとその署名がリポジトリにあることを確認してください。アップグレードプロセス中に不足しているイメージに関するエラーが発生した場合は、それらのイメージをリポジトリに追加して、アップグレードを再試行してください。画像シグネチャをリポジトリにアップロードするには、次のようにcosignツールを使用してください。3オプションで指定されているすべての画像のシグネチャをアップロードしてください。オペレータ画像をプライベートリポジトリにアップロード&gt;画像プルスニペット</block>
+  <block id="3e70b4412d3a3b92cd10a9e1453fc282" category="section-title">以前に実行していたバージョンへのロールバック</block>
+  <block id="4d8704d77f12b96a935cdf09de6c94be" category="paragraph">プッシュボタンアップグレード機能を使用してアップグレードし、アップグレードから7日以内に現在のバージョンのオペレータで問題が発生した場合は、アップグレードプロセス中に作成されたスナップショットを使用して、以前に実行していたバージョンにダウングレードできます。ロールバックするクラスタの横にあるメニューをクリックし、_Roll back_を選択します。</block>
+  <block id="95168a3a05a80c7b596b36a7ec8218c4" category="section-title">手動アップグレード</block>
 </blocks>
