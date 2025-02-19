@@ -20,6 +20,10 @@ keywords: features
 
 
 
+== 2025年2月
+
+
+
 === 最新世代のASAシステム向けのONTAP Essentials
 
 ONTAP Essentialsには、最新世代のデバイスの管理機能がすぐに使えるようになりましたlink:task_dc_na_ontap_all_san_array.html["ASA"]。これには、ONTAPで実行されるワークロードのVMからLUNへのトポロジを実現するSAN Analyzerが含まれています。この機能は、Data Infrastructure Insights Basicエディションの一部としてNetAppサポートでも利用できるようになりました。
