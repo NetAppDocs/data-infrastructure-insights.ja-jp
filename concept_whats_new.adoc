@@ -36,7 +36,7 @@ image:ontap_essentials_asa_views.png["ASAがユニファイドとは異なるこ
 
 管理者ユーザが利用できる強化されたREST API使用状況の追跡機能により、セキュリティ体制を強化し、リソース管理を合理化できます。APIの使用状況を追跡することで、使用されているAPIトークン、使用元のIPアドレス、生成されるトラフィック量を確認できます。トークンを特定のIPアドレスと使用レベルにリンクすることで、システムアクセスと使用傾向に関する強力なインサイトが得られ、安全で効率的な環境を維持し、スムーズな運用を維持するために必要な制御が可能になります。
 
-APIの使用状況を表示するには、* Observability > Admin > API Access *に移動し、_View API Usage_を選択します。このAPIは、DIIオブザーバビリティAPIでのみ使用できます。ワークロードセキュリティAPIまたはレポートAPIには適用されません。
+APIの使用状況を表示するには、* Observability > Admin > API Access *に移動し、_View API Usage_を選択します。このAPIは、DII Observability APIでのみ使用できます。ワークロードセキュリティには適用されません。
 
 image:api_usage_analytics_screenshot.png["API使用状況分析の例"]
 
