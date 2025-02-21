@@ -56,6 +56,15 @@ image:Notifications_email_list.png["E メール通知"]
 
 | トライアルまたはサブスクリプションの有効期限が切れたアカウントは、 48 時間以内にアカウントの収集を停止し、 48 時間後にアカウントが削除されます | サブスクリプションの購入については、までお問い合わせください。link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["ネットアップの営業担当者"] 
 |===
+[NOTE]
+====
+受信者がData Infrastructure Insightsからの通知を受信できるようにするには、「許可」リストに次のEメールアドレスを追加します。
+
+* \ accounts@service.cloudinsights.netapp.com
+* \ DoNotReply@cloudinsights.netapp.com
+
+
+====
 
 
 == アラートのグローバル受信者リスト
