@@ -11627,7 +11627,6 @@
   <block id="a5692a71664d8513828d30dad7c829ca" category="list-text">テナントの命名規則はどのくらいの頻度で変更されますか。</block>
   <block id="71ff3a9d48edc0f7244689324f167d1b" category="paragraph">通常、テナント上のデバイスを識別するには、次のようなワークフローを使用します。識別は反復的なプロセスであり、ルールの計画や調整が何度も必要になることがあります。</block>
   <block id="6923128dfebc9b724f26745512b0b891" category="admonition">テナントに未識別のデバイス（不明または汎用デバイスとも呼ばれる）がある場合、ポーリング時にそれらのデバイスを識別するデータソースをあとから設定すると、それらのデバイスは汎用デバイスとして表示またはカウントされなくなります。</block>
-  <block id="3283326b105a290a6a4699e952c4bb7a" category="paragraph">Data Infrastructure Insightsには、これらの機能を理解し、ビジネス分析戦略を効果的に実装するのに役立つビデオチュートリアルが多数用意されています。Data Infrastructure Insightsテナントにアクセスできるすべてのユーザが、このチュートリアルを利用できます。</block>
   <block id="555fd4883eff42c3c7a47a8af5c0d4c2" category="summary">インサイトでは、リソースがテナントの他のリソースにどのように影響するかを確認できます。</block>
   <block id="e59c6b6bc918194e22abd3fa59a5ca7d" category="paragraph">影響の大きいワークロードは、共有リソース内の他のワークロードのパフォーマンスを低下させる可能性があります。Data Infrastructure Insightsは、リソースの飽和状態とテナントへの影響を調査するのに役立つツールを提供します。</block>
   <block id="509083e073a2e0f15ee1570b73d69d00" category="paragraph">テナントが飽和状態になる可能性を減らす、または排除するには、いくつかの手順を実行できます。いくつか試してみてください。</block>
@@ -12014,4 +12013,5 @@
   <block id="bcaea0fa3a691efcd767e69c0bf6c611" category="paragraph">受信者がData Infrastructure Insightsからの通知を受信できるようにするには、「許可」リストに次のEメールアドレスを追加します。</block>
   <block id="920ab4b11a04d50637a16a5c9699b3ba" category="list-text">\ accounts@service.cloudinsights.netapp.com</block>
   <block id="b68146f7d3be586c34e5b6d021541f50" category="list-text">\ DoNotReply@cloudinsights.netapp.com</block>
+  <block id="b496ede8f397a48079afe818e67e759f" category="paragraph">Data Infrastructure Insightsには、これらの機能を理解し、ビジネス分析戦略を効果的に実装するのに役立つビデオチュートリアルが多数用意されています。</block>
 </blocks>

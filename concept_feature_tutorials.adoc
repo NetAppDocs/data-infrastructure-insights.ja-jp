@@ -21,7 +21,7 @@ keywords: onboarding, getting started, video, tutorial, resolution, dashboard, q
 [role="lead"]
 Data Infrastructure Insightsには、データの迅速かつ簡単な検索、問題のトラブルシューティング、企業環境に関する分析情報の提供を可能にする便利な機能が搭載されています。強力なクエリでデータを簡単に検索し、ダッシュボードでデータを視覚化し、設定したデータしきい値の E メールアラートを送信します。
 
-Data Infrastructure Insightsには、これらの機能を理解し、ビジネス分析戦略を効果的に実装するのに役立つビデオチュートリアルが多数用意されています。Data Infrastructure Insightsテナントにアクセスできるすべてのユーザが、このチュートリアルを利用できます。
+Data Infrastructure Insightsには、これらの機能を理解し、ビジネス分析戦略を効果的に実装するのに役立つビデオチュートリアルが多数用意されています。
 
 
 
