@@ -1437,11 +1437,7 @@
   <block id="bf3f7ef872246f009e37d0a4c0951049" category="paragraph">* フォーマット： * US-BV-\1</block>
   <block id="08b3c5691f5c3cb584dc1a3ec5321962" category="summary">Data Infrastructure Insightsには、さまざまなタスクの実行方法を示すチュートリアルが用意されています。</block>
   <block id="5b425cd08035f29c3dad5d45f1d2ea6e" category="doc">機能チュートリアル</block>
-  <block id="c11546e49fdd67698723459cc158d58e" category="paragraph">Data Infrastructure Insightsには、データの迅速かつ簡単な検索、問題のトラブルシューティング、企業環境に関する分析情報の提供を可能にする便利な機能が搭載されています。強力なクエリでデータを簡単に検索し、ダッシュボードでデータを視覚化し、設定したデータしきい値の E メールアラートを送信します。</block>
-  <block id="0b79795d3efc95b9976c7c5b933afce2" category="section-title">はじめに</block>
-  <block id="1a2d0d51ce048c550f58a12da3a8a0b7" category="paragraph">Data Infrastructure Insightsの仕組みを説明する簡単なチュートリアルをご覧ください。</block>
   <block id="7dc1d63676b307452b778906ec63a727" category="section-title">チェックリストとビデオチュートリアル</block>
-  <block id="bb32edd6cfeb5b70b9425ab7efaffc7d" category="paragraph">Data Infrastructure Insightsサイトに表示される「スタートアップチェックリスト」*には、いくつかの便利なタスクと概念が記載されています。チェックリストの項目を選択すると、その概念に適した[Data Infrastructure Insights ]ページが表示されます。たとえば、_Create a Dashboard_itemをクリックすると、Data Infrastructure Insights * Dashboards *ページが開きます。</block>
   <block id="06bc4be9452f8162d26f7cb4b4d2e0b2" category="inline-image-macro">チュートリアルチェックリストの進行状況</block>
   <block id="8d72a33fb7e1e81326ed633058c4c3c6" category="paragraph"><block ref="8d72a33fb7e1e81326ed633058c4c3c6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="76139ab832813477c275f09a383293c0" category="paragraph">ページの上部には、ダッシュボードの作成方法を示すビデオチュートリアルへのリンクがあります。ビデオは、 [got it （取得） ] をクリックするまで何度でも表示できます。このビデオには、この Again_link を表示しないでください。ビデオは、 [ ダッシュボード ] ページを閉じるまで、 [ ダッシュボード ] ページに移動するたびに使用できます。</block>
@@ -1450,10 +1446,6 @@
   <block id="0aac9dc0b59278dac24dcb96f42f6674" category="paragraph">ビデオを少なくとも 1 回見た後、チェックリストの _ ダッシュボード項目の作成 _ がオフになり、チュートリアルが完了したことを示します。次のチュートリアルに進むことができます。</block>
   <block id="02bf91ef19eb660db8593e97292dde1c" category="admonition">チュートリアルは好きな順番で表示できます。終了するまで何度でも表示できます。</block>
   <block id="2d7a0a906729c332280875fa9c1ea09c" category="section-title">チェックリストを削除します</block>
-  <block id="9fd687d950079f0d903acce7d665006e" category="paragraph">チェックリストの下部にある [ この項目を今後表示しない ] リンクをクリックするまで、 [ スタートアップチェックリスト ] がサイトに表示されます。このチェックリストを却下しても、メッセージヘッダーバーから各チュートリアルを却下するまでは、該当するData Infrastructure Insightsの各ページでチュートリアルを使用できます。</block>
-  <block id="ec7cecc5c967770303bd0879fae9fa97" category="section-title">チュートリアルを表示します</block>
-  <block id="dd0d7945a3c6cc8c8a340c913a130d8d" category="section-title">データを照会しています</block>
-  <block id="730fe644f1d87eaec727a65945705b30" category="section-title">デバイスを解決します</block>
   <block id="e8cdc72b15f2eb76eb1815f526758f2e" category="doc">分析情報：負荷の高いワークロード</block>
   <block id="e182a8a3f2adf774fb1c959df71b8600" category="section-title">用語</block>
   <block id="7f595b1ef82026007f2533413106e7d8" category="paragraph">ワークロードやリソースへの影響について話すときは、次の定義が役立ちます。</block>
@@ -12013,5 +12005,7 @@
   <block id="bcaea0fa3a691efcd767e69c0bf6c611" category="paragraph">受信者がData Infrastructure Insightsからの通知を受信できるようにするには、「許可」リストに次のEメールアドレスを追加します。</block>
   <block id="920ab4b11a04d50637a16a5c9699b3ba" category="list-text">\ accounts@service.cloudinsights.netapp.com</block>
   <block id="b68146f7d3be586c34e5b6d021541f50" category="list-text">\ DoNotReply@cloudinsights.netapp.com</block>
-  <block id="b496ede8f397a48079afe818e67e759f" category="paragraph">Data Infrastructure Insightsには、これらの機能を理解し、ビジネス分析戦略を効果的に実装するのに役立つビデオチュートリアルが多数用意されています。</block>
+  <block id="f96c0cb8e557b8c2286592a385c5fd6e" category="paragraph">Data Infrastructure Insightsには、問題を迅速かつ簡単にトラブルシューティングし、企業環境に関する分析情報を提供するための便利な機能が搭載されています。強力なクエリでデータを簡単に検索し、ダッシュボードでデータを視覚化し、設定したデータしきい値の E メールアラートを送信します。</block>
+  <block id="9a3ddb6d99b9ffb5f7473690abc9fb52" category="paragraph">Data Infrastructure Insightsテナントに表示される*スタートアップチェックリスト*には、いくつかの便利なタスクと概念のリストが含まれています。チェックリストの項目を選択すると、その概念に適した[Data Infrastructure Insights ]ページが表示されます。たとえば、_Create a Dashboard_itemをクリックすると、Data Infrastructure Insights * Dashboards *ページが開きます。</block>
+  <block id="363b2b401698741ed946f685265f5dc1" category="paragraph">スタートアップチェックリストは、チェックリストの下部にある_don't Show this again_linkをクリックするまで表示されます。このチェックリストを却下しても、メッセージヘッダーバーから各チュートリアルを却下するまでは、該当するData Infrastructure Insightsの各ページでチュートリアルを使用できます。</block>
 </blocks>

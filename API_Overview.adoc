@@ -273,7 +273,7 @@ API アクセストークンには有効期限があります。API アクセス
 
 * NetApp Kubernetes Monitoring Operatorを編集します。
 +
- kubectl -n netapp-monitoring edit agent agent-monitoring-netapp
+ kubectl -n netapp-monitoring edit agent netapp-ci-agent-monitoring-netapp
 * 古いAPIトークンを新しいAPIトークンに置き換えて、_spec.output-sink.api-key_valueを変更します。
 +
 ....
