@@ -568,7 +568,7 @@ image:StorageNodeSupportData.png["ストレージノードのサポート情報"
 
 === VMwareタグをCloud Insightsアノテーションにマッピング
 
-link:task_dc_vmware.html#mapping-vmware-tags-to-cloud-insights-annotations["VMware"]データコレクタを使用すると、VMwareで設定されている同名タグを使用してCloud Insightsのテキスト注釈を入力できます。
+link:task_dc_vmware.html["VMware"]データコレクタを使用すると、VMwareで設定されている同名タグを使用してCloud Insightsのテキスト注釈を入力できます。
 
 
 
@@ -1387,7 +1387,7 @@ Cloud Insights Acquisition Unitでサポートされるオペレーティング�
 
 === フィーチャーのプレビュー（ Preview Features
 
-Cloud Insights では、多数のエキサイティングなプレビュー機能が定期的にハイライトされています。これらの機能の1つまたは複数のプレビューをご希望の場合は、にお問い合わせくださいlink:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["ネットアップの営業チーム"]。
+Cloud Insights では、多数のエキサイティングなプレビュー機能が定期的にハイライトされています。これらの機能の1つまたは複数のプレビューをご希望の場合は、にお問い合わせくださいlink:https://bluexp.netapp.com/contact-cds["ネットアップの営業チーム"]。
 
 |===
 
@@ -1452,7 +1452,7 @@ ONTAP システムでFlexVol、ノード、およびSVMの変更や削除が検�
 
 === フィーチャーのプレビュー（ Preview Features
 
-Cloud Insights では、多数のエキサイティングなプレビュー機能が定期的にハイライトされています。これらの機能の1つまたは複数のプレビューをご希望の場合は、にお問い合わせくださいlink:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["ネットアップの営業チーム"]。
+Cloud Insights では、多数のエキサイティングなプレビュー機能が定期的にハイライトされています。これらの機能の1つまたは複数のプレビューをご希望の場合は、にお問い合わせくださいlink:https://bluexp.netapp.com/contact-cds["ネットアップの営業チーム"]。
 
 |===
 
@@ -1511,7 +1511,7 @@ Cloud Insights では、ポッド、デモ onset 、 ReplicaSets が作成また
 
 === フィーチャーのプレビュー（ Preview Features
 
-Cloud Insights では、多数のエキサイティングなプレビュー機能が定期的にハイライトされています。これらの機能の1つまたは複数のプレビューをご希望の場合は、にお問い合わせくださいlink:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["ネットアップの営業チーム"]。
+Cloud Insights では、多数のエキサイティングなプレビュー機能が定期的にハイライトされています。これらの機能の1つまたは複数のプレビューをご希望の場合は、にお問い合わせくださいlink:https://bluexp.netapp.com/contact-cds["ネットアップの営業チーム"]。
 
 |===
 
@@ -2386,7 +2386,7 @@ Cloud Insightsでのユーザロールによってlink:reporting_user_roles.html
 NOTE: Cloud Insights レポートは 500 MU 以上の環境で使用できます。
 
 
-IMPORTANT: 現在Premium Editionをお使いで、レポートを保持したい場合は、こちらをお読みくださいlink:reporting_user_roles.html#important-note-for-existing-customers["既存のお客様にとって重要な注意事項です"]。
+IMPORTANT: 現在Premium Editionをお使いで、レポートを保持したい場合は、こちらをお読みくださいlink:reporting_user_roles.html["既存のお客様にとって重要な注意事項です"]。
 
 
 
@@ -2992,7 +2992,7 @@ Cloud Insights は、ネットアップのお客様とそのハードウェア /
 
 === Cloud Insights エディション
 
-Cloud Insights には、予算とビジネスニーズに合わせて、さまざまなエディションが用意されています。ネットアップサポートアカウントをお持ちの既存のお客様は、 7 日間のデータ保持期間をご利用いただけます。また、無料の * Basic Edition * をご利用いただくことで、ネットアップのデータ収集ツールへのアクセス、専門的なテクニカルサポートなどのデータ保持期間を延長できます。 * Standard Edition * をご利用ください。使用可能な機能の詳細については、NetAppのサイトを参照してくださいlink:https://cloud.netapp.com/cloud-insights["Cloud Insights"]。
+Cloud Insights には、予算とビジネスニーズに合わせて、さまざまなエディションが用意されています。ネットアップサポートアカウントをお持ちの既存のお客様は、 7 日間のデータ保持期間をご利用いただけます。また、無料の * Basic Edition * をご利用いただくことで、ネットアップのデータ収集ツールへのアクセス、専門的なテクニカルサポートなどのデータ保持期間を延長できます。 * Standard Edition * をご利用ください。使用可能な機能の詳細については、NetAppのサイトを参照してくださいlink:https://www.netapp.com/cloud-services/cloud-insights/["Cloud Insights"]。
 
 
 

@@ -10,7 +10,7 @@ summary: ワークロードセキュリティを使用すると、破壊の疑�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]

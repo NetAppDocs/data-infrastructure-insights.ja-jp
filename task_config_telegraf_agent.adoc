@@ -21,8 +21,6 @@ summary: Data Infrastructure Insightsは、統合データ収集のエージェ�
 [role="lead"]
 Data Infrastructure Insightsは、link:https://docs.influxdata.com/telegraf["Tegraf"]統合データ収集のエージェントとしてを使用します。Telegraf はプラグインベースのサーバエージェントで、指標、イベント、ログの収集とレポートに使用できます。入力プラグインは、システム /OS に直接アクセスするか、サードパーティ API を呼び出すか、設定されたストリームをリスニングすることによって、エージェントに必要な情報を収集するために使用されます（例：） Kafka や StatsD など）を参照してください。出力プラグインは、収集されたメトリック、イベント、ログをエージェントからData Infrastructure Insightsに送信するために使用されます。
 
-Data Infrastructure Insightsの現在のTelegrafバージョンは* 1.24.0 *です。
-
 Kubernetesへのインストールの詳細については、ページを参照してlink:task_config_telegraf_agent_k8s.html["NetApp Kubernetes Monitoring Operator"]ください。
 
 

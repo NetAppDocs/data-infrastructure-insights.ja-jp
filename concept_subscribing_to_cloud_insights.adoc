@@ -27,7 +27,7 @@ Data Infrastructure Insightsは、次の3つの簡単なステップで開始で
 ** 会議をスケジュールするか、担当者からトライアルについての連絡をお待ちください。
 
 
-* * Data Infrastructure Insightsにサブスクライブ*すると、link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["ネットアップの営業担当者"]直接または経由でデータに中断なく継続的にアクセスできます。link:https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["AWSマーケットプレイス"]
+* * Data Infrastructure Insightsにサブスクライブ*すると、link:https://bluexp.netapp.com/contact-cds["ネットアップの営業担当者"]直接または経由でデータに中断なく継続的にアクセスできます。link:https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["AWSマーケットプレイス"]
 
 
 登録プロセスでは、Data Infrastructure Insights環境をホストするグローバルリージョンを選択できます。詳細については、『Data Infrastructure Insights』をご覧link:security_information_and_region.html["情報と地域"]ください。
@@ -185,7 +185,7 @@ Managed Unitの数が1、000未満の場合は、NetApp SalesまたはAWS Market
 
 === ネットアップの営業担当者にサブスクライブ
 
-想定されるManaged Unitの数が1、000以上の場合は、ボタンをクリックしlink:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["* 販売担当者 * にお問い合わせください"]てNetApp営業チームから登録してください。
+想定されるManaged Unitの数が1、000以上の場合は、ボタンをクリックしlink:https://bluexp.netapp.com/contact-cds["* 販売担当者 * にお問い合わせください"]てNetApp営業チームから登録してください。
 
 有償のサブスクリプションをデータインフラ分析環境に適用できるように、Data Infrastructure Insights *のシリアル番号*をNetApp営業担当者に提出する必要があります。シリアル番号は、Data Infrastructure Insightsのトライアル環境を一意に識別するもので、*[Admin]>[Subscription]*ページで確認できます。
 

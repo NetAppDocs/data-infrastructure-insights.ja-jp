@@ -1644,12 +1644,8 @@
   <block id="787ad0b7a17de4ad6b1711bbf8d79fcb" category="inline-link-macro">配信登録</block>
   <block id="e3f7fb4cb907310317d00ec805d579f0" category="cell">ページでサブスクリプションの詳細を確認する<block ref="1270e27ca8ec5d3dff21c492e4b5c786" category="inline-link-macro-rx"></block></block>
   <block id="1670271ef2e024b3bd83b4667cfad9f1" category="cell">サブスクリプションの有効期限は 90 日ですサブスクリプションの有効期限は 30 日です</block>
-  <block id="9f1787a10e1ab4246b75150fda98b7f6" category="inline-link-macro">ネットアップの営業担当者</block>
-  <block id="56e2a36f9711ac801f182c46e593a905" category="cell">[Auto Renewal]が有効な場合、アクションは不要です。サブスクリプションを更新するには、担当者にお問い合わせください。<block ref="24745b642cc0706e7f0bffb600ab0d70" category="inline-link-macro-rx"></block></block>
   <block id="a8e16db6b3540132d03fdb273b982975" category="cell">トライアルは 2 日で終了します</block>
-  <block id="ca668270291dd570712b6adc1ce8923f" category="cell">ページからトライアルを更新し<block ref="1270e27ca8ec5d3dff21c492e4b5c786" category="inline-link-macro-rx"></block>ます。試用版は 1 回更新できます。サブスクリプションの購入については、までお問い合わせください。<block ref="24745b642cc0706e7f0bffb600ab0d70" category="inline-link-macro-rx"></block></block>
   <block id="1e520752d3100399ac52c71e449da882" category="cell">トライアルまたはサブスクリプションの有効期限が切れたアカウントは、 48 時間以内にアカウントの収集を停止し、 48 時間後にアカウントが削除されます</block>
-  <block id="e89ae227607d5f04ef37a542e59758d5" category="cell">サブスクリプションの購入については、までお問い合わせください。<block ref="24745b642cc0706e7f0bffb600ab0d70" category="inline-link-macro-rx"></block></block>
   <block id="8e93b1e0d1805d8655a5ef72cc4c1f73" category="section-title">アラートのグローバル受信者リスト</block>
   <block id="f80a3af59189fad5d417cb3684841b2f" category="paragraph">アラートの E メール通知は、アラートに対するすべての対処方法についてアラート受信者リストに送信されます。アラート通知をグローバル受信者リストに送信することもできます。</block>
   <block id="df43b72d848c482dd610f8178005dbe4" category="paragraph">グローバルアラート受信者を設定するには、 [* Global Monitor Notification Recipients] セクションで目的の受信者を選択します。</block>
@@ -1776,7 +1772,6 @@
   <block id="b865b0f0f94674aa0d7878e2253f2c1b" category="doc">フィーチャーと機能をプレビューします</block>
   <block id="8a0d14c15291ab894b50ee0f241e5564" category="paragraph">Data Infrastructure Insightsでは、_ Preview_の方法で新機能に注目しています。プレビュー機能は、一部の環境または容量に限りがあります。</block>
   <block id="2240ee7d4e56b8ba7ac49b14311cdeed" category="inline-link-macro">ネットアップの営業チーム</block>
-  <block id="1faeb81be1b403bf2b660e33e3c7e5f7" category="paragraph">これらの機能の1つまたは複数のプレビューをご希望の場合は、にお問い合わせください<block ref="16ff11ed878ec2cb7f479192bb9f1a7d" category="inline-link-macro-rx"></block>。</block>
   <block id="5fa0ef8fc40e60003288942e2da3e300" category="cell">* 特徴 *</block>
   <block id="d972e288b86634fdb9a758828b4d511a" category="cell">ONTAP コールドストレージを再利用します</block>
   <block id="e1f1a8af4cedab3466112b828b25b73f" category="cell">コールド容量を使用するONTAP ボリュームワークロードやその他の関連指標を視覚化できます。</block>
@@ -1857,7 +1852,6 @@
   <block id="1ce9a43d63998783a781596de13b0965" category="list-text"><block ref="fa5b9c38e8e5b8e1f4e408b08ce16532" category="inline-link-macro-rx"></block></block>
   <block id="2911a8a094a0fc515bf83ad1a0cf9eba" category="list-text">*チャット*- NetAppサポート担当者に連絡してサポートを受けます（平日のみ）。チャットは、Data Infrastructure Insights画面の右上にある* Help（ヘルプ）&gt; Live Chat（ライブチャット）*メニューオプションで利用できます。</block>
   <block id="ac2ae10a8c7bd50e80c93d5e57fc84da" category="inline-link-macro">* 販売担当者 * にお問い合わせください</block>
-  <block id="5c0e6c90408c98d6eca3e09416c4ee77" category="paragraph">リンクをクリックしてセールスサポートをリクエストすることもできます<block ref="57d2406fdd9ad62e0bb0722bd44749df" category="inline-link-macro-rx"></block>。</block>
   <block id="30a12dfd5908adfdb9f06395cb4b5c34" category="paragraph">Data Infrastructure Insightsのシリアル番号は、サービス内で*[ヘルプ]&gt;[サポート]*メニューから確認できます。サービスへのアクセスで問題が発生し、以前にNetAppにシリアル番号を登録したことがある場合は、NetAppサポートサイトでData Infrastructure Insightsのシリアル番号のリストを次のように確認することもできます。</block>
   <block id="290bf19e1ed3fabfc80a0ac6d77f6466" category="list-text">mysupport.netapp.com にログインします</block>
   <block id="77cb462f113aa28274c4c9d4a0bd4124" category="list-text">[Products]&gt;[My Products]メニュータブで、製品ファミリーの[SaaS Data Infrastructure Insights ]を使用して登録済みのすべてのシリアル番号を確認します。</block>
@@ -1936,7 +1930,6 @@
   <block id="6341e61d6dc641d29b3f2e7300137ea9" category="list-text">でアカウントを登録し<block ref="e0b3e45a049f223d3b91d005d1e31db5" category="inline-link-macro-rx"></block>て、NetAppのすべてのクラウドサービスにアクセスしてください。</block>
   <block id="2ef085adce795622c057ad2ea6c13059" category="inline-link-macro">ネットアップの営業担当者</block>
   <block id="cab27dc53edb571cac663ce2e16450dc" category="inline-link-macro">AWSマーケットプレイス</block>
-  <block id="f2b5d43aba260933c552d69977b7274d" category="list-text">* Data Infrastructure Insightsにサブスクライブ*すると、<block ref="ae0970f4d06315494d31beaa05a7be05" category="inline-link-macro-rx"></block>直接または経由でデータに中断なく継続的にアクセスできます。<block ref="e91d3f98f4b43abdea3c839a7777954c" category="inline-link-macro-rx"></block></block>
   <block id="7bc1d8b07dfc0e98950abc0c7f3979a5" category="inline-link-macro">情報と地域</block>
   <block id="6c36c3c54c4f691f7ed13a16d49bbde7" category="paragraph">登録プロセスでは、Data Infrastructure Insights環境をホストするグローバルリージョンを選択できます。詳細については、『Data Infrastructure Insights』をご覧<block ref="286a302a1ee50fd59eb368d3d9779037" category="inline-link-macro-rx"></block>ください。</block>
   <block id="ef66b5abbe1e0b79e23deb05dd2d11a9" category="admonition">Inactive Data Infrastructure Insights Basic Edition環境が削除され、そのリソースが再利用されます。連続する 30 日間のユーザアクティビティがない場合、 7 日間にわたってデータが取り込まれていない場合、環境は非アクティブとみなされます。Data Infrastructure Insightsは、環境が削除される4日前に通知を送信し、猶予期間を設定します。</block>
@@ -2002,7 +1995,6 @@
   <block id="99d34ca2583ae7363bd4e07f9b2d98cc" category="inline-xref">セルフサブスクライブ</block>
   <block id="ab5e9545afec38b9d4cc8cb1f64b1a59" category="paragraph">Managed Unitの数が1、000未満の場合は、NetApp SalesまたはAWS Marketplaceでサブスクライブできます<block ref="5ef09ccc45a6e1ddce52b5a69393ce8f" category="inline-xref-macro-rx"></block>。</block>
   <block id="61951f38f686ce7c31ccc7f65173062c" category="section-title">ネットアップの営業担当者にサブスクライブ</block>
-  <block id="e3b70cffc25d522a4137f9cafd0f3c50" category="paragraph">想定されるManaged Unitの数が1、000以上の場合は、ボタンをクリックし<block ref="57d2406fdd9ad62e0bb0722bd44749df" category="inline-link-macro-rx"></block>てNetApp営業チームから登録してください。</block>
   <block id="0313fe3f07d732172e3b8700c1cea6f1" category="paragraph">有償のサブスクリプションをデータインフラ分析環境に適用できるように、Data Infrastructure Insights *のシリアル番号*をNetApp営業担当者に提出する必要があります。シリアル番号は、Data Infrastructure Insightsのトライアル環境を一意に識別するもので、*[Admin]&gt;[Subscription]*ページで確認できます。</block>
   <block id="ba16017252787d62326108ae062b54b0" category="section-title">AWS Marketplace でセルフサブスクライブ</block>
   <block id="75df7bd83cb6391af3c2bb23c74cb72d" category="admonition">AWS Marketplaceサブスクリプションを既存のData Infrastructure Insightsトライアルアカウントに適用するには、アカウント所有者または管理者である必要があります。さらに、 Amazon Web Services （ AWS ）アカウントが必要です。</block>
@@ -2428,7 +2420,6 @@
   <block id="135a3d8d94bbc8eb1cd03dbd8fa28277" category="paragraph"><block ref="135a3d8d94bbc8eb1cd03dbd8fa28277" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ad437072c1980f7cddeaf25e082880bb" category="section-title">VMwareタグをCloud Insightsアノテーションにマッピング</block>
   <block id="7f8b37715b940736bc29a71b2f98126d" category="inline-link-macro">VMware</block>
-  <block id="b67ffcdf52573a01af5e6400d8043174" category="paragraph"><block ref="eb8043f75c4f74e4780785affa0e63c3" category="inline-link-macro-rx"></block>データコレクタを使用すると、VMwareで設定されている同名タグを使用してCloud Insightsのテキスト注釈を入力できます。</block>
   <block id="02892541231ed9b9797890da851659d1" category="section-title">FOS 9.1.1c以降のファームウェアに対するBrocade CLIコレクタの信頼性の向上</block>
   <block id="f451a3db1d946e0e6f7a6faff75241f4" category="paragraph">9.1.1cファームウェアを実行している一部のBrocadeファイバチャネルスイッチでは、特定のCLIコマンドの出力の先頭に「motd」ログインバナーテキストが付加されたり、ユーザがデフォルトのパスワードを変更するように警告が表示されたりすることがあります。Brocade CLIコレクタが拡張され、これら2種類の無関係なテキストが無視されるようになりました。</block>
   <block id="08cc9fe40f6d675ceb9852acf6cb4d2d" category="paragraph">この機能拡張以前は、仮想ファブリックが存在しないFOS 9.1.1cスイッチだけがこのコレクタタイプで検出されていました。</block>
@@ -2775,7 +2766,6 @@
   <block id="9a3185d3dd699a74f8c315584250a80c" category="inline-link-macro">エージェントのインストール</block>
   <block id="c41fe2272c9ff38bed21d6e67f9945cc" category="paragraph">テレグラム統合データの取り込みのためのエージェントがバージョン*1.22.3*に更新され、性能とセキュリティが向上しました。アップデートを希望する場合は、マニュアルの該当するアップグレードのセクションを参照して<block ref="7eca75c9707898b05c3a8b3fe84d7968" category="inline-link-macro-rx"></block>ください。以前のバージョンのエージェントは、ユーザの操作を必要とせずに引き続き機能します。</block>
   <block id="ecf4e9e3c38358de05561be5ed03f5d0" category="section-title">フィーチャーのプレビュー（ Preview Features</block>
-  <block id="876a3f6e99a6a623eff957c61ab96f8a" category="paragraph">Cloud Insights では、多数のエキサイティングなプレビュー機能が定期的にハイライトされています。これらの機能の1つまたは複数のプレビューをご希望の場合は、にお問い合わせください<block ref="16ff11ed878ec2cb7f479192bb9f1a7d" category="inline-link-macro-rx"></block>。</block>
   <block id="2ad48475868a5acf715f48e45c20d2d1" category="cell">Cloud Secure –攻撃に対するユーザアクセスをブロックします</block>
   <block id="4e28671aa760c1ba504510846bdf520c" category="cell">攻撃が検出されたときにユーザーアクセスをブロックする機能により、ビジネスクリティカルなデータの保護を強化できます。アクセスは、自動応答ポリシーを使用して自動的にブロックすることも、アラートまたはユーザーの詳細ページから手動でブロックすることもできます。<block ref="e8dc9c29c76388404a63bbf729dac2fd" category="inline-link-macro-rx"></block></block>
   <block id="b56a5394775a9f077c12cb3e770d913c" category="section-title">2022年5月</block>
@@ -3209,7 +3199,6 @@
   <block id="2a6de53195a3acc5f7d30058cb96c7b0" category="cell">レポートの構成やレポートタスクのシャットダウンおよび再起動など、すべての管理タスクだけでなく、作成者のすべての機能も実行できます。</block>
   <block id="6ba491c2b785c6d3b29438ccaae4be23" category="admonition">Cloud Insights レポートは 500 MU 以上の環境で使用できます。</block>
   <block id="9e1a95c1bf70be97bddc1d6d3b0fd7bf" category="inline-link-macro">既存のお客様にとって重要な注意事項です</block>
-  <block id="bbe0f3f4b15751e0fe172352be87e28a" category="admonition">現在Premium Editionをお使いで、レポートを保持したい場合は、こちらをお読みください<block ref="def308f247292b766d2c9907f94474d4" category="inline-link-macro-rx"></block>。</block>
   <block id="788f4763779031fd7bb3241cdf39ad5b" category="section-title">データ取り込み用の新しい API カテゴリ</block>
   <block id="facfa3abb0f333223d77bb5c23d49f72" category="paragraph">Cloud Insights では、 * データの取り込み * API カテゴリが追加され、カスタムデータとエージェントをより詳細に制御できるようになりました。この API カテゴリおよびその他の API カテゴリの詳細なドキュメントは、 Cloud Insights で * Admin &gt; API Access * に移動し、 _API Documentation_link をクリックすると参照できます。AU 詳細ページおよび AU リストページに表示される Note フィールドの AU にコメントを追加することもできます。</block>
   <block id="ea6b0fa25e3cb324da39980f6290f837" category="section-title">2020年8月</block>
@@ -3466,7 +3455,6 @@
   <block id="e289ad98e91a5c5e09b44d6006fba214" category="section-title">2019年6月</block>
   <block id="b5288703cf95cb2a528be0fe38299786" category="section-title">Cloud Insights エディション</block>
   <block id="b4f83b03956523a39e8bbbd0895f0f29" category="inline-link-macro">Cloud Insights</block>
-  <block id="39627bb9ad7910603c9a7a558b721eed" category="paragraph">Cloud Insights には、予算とビジネスニーズに合わせて、さまざまなエディションが用意されています。ネットアップサポートアカウントをお持ちの既存のお客様は、 7 日間のデータ保持期間をご利用いただけます。また、無料の * Basic Edition * をご利用いただくことで、ネットアップのデータ収集ツールへのアクセス、専門的なテクニカルサポートなどのデータ保持期間を延長できます。 * Standard Edition * をご利用ください。使用可能な機能の詳細については、NetAppのサイトを参照してください<block ref="90b37a6f19d0c9cebf9cb98c49d719f7" category="inline-link-macro-rx"></block>。</block>
   <block id="076961e5ebe9ba19944f1e07d39a3734" category="section-title">新しいインフラストラクチャデータコレクタ： NetApp HCI</block>
   <block id="ee295f6adf0fba3513382450efd2d056" category="inline-link-macro">NetApp HCI 仮想センター</block>
   <block id="40d7c8ab2c54cab8d61c485a80cdd6c0" category="list-text"><block ref="d2237560e4b0257aaba680703e5b6009" category="inline-link-macro-rx"></block>インフラストラクチャデータコレクタとして追加されました。HCI Virtual Center データコレクタは、 NetApp HCI ホスト情報を収集します。 Virtual Center 内のすべてのオブジェクトに対する読み取り専用の権限が必要です。</block>
@@ -6399,7 +6387,6 @@
   <block id="2ddc4416c197500bc7619829b98c8b77" category="doc">データを収集するためのエージェントの設定(Windows/Linux)</block>
   <block id="bdb9a31f361d8d3be1c6915647e92d4d" category="inline-link-macro">Tegraf</block>
   <block id="5f021f72cc2bb955c838ed30118dbef0" category="paragraph">Data Infrastructure Insightsは、<block ref="eed175bcf32f20f81ea47b9c982c2797" category="inline-link-macro-rx"></block>統合データ収集のエージェントとしてを使用します。Telegraf はプラグインベースのサーバエージェントで、指標、イベント、ログの収集とレポートに使用できます。入力プラグインは、システム /OS に直接アクセスするか、サードパーティ API を呼び出すか、設定されたストリームをリスニングすることによって、エージェントに必要な情報を収集するために使用されます（例：） Kafka や StatsD など）を参照してください。出力プラグインは、収集されたメトリック、イベント、ログをエージェントからData Infrastructure Insightsに送信するために使用されます。</block>
-  <block id="da7e75e5407636a24c1c7cce20e7d225" category="paragraph">Data Infrastructure Insightsの現在のTelegrafバージョンは* 1.24.0 *です。</block>
   <block id="2041337c363c1ecaeb2a1aa9c8999494" category="paragraph">Kubernetesへのインストールの詳細については、ページを参照して<block ref="f0d3e43e41da35ba651820db811551cd" category="inline-link-macro-rx"></block>ください。</block>
   <block id="ae2f2b5e87a12f1cd650f0e46b92e4ec" category="admonition">正確な監査およびデータレポートを作成するためには、 * Network Time Protocol （ NTP; ネットワークタイムプロトコル） * または * Simple Network Time Protocol （ SNTP ） * を使用して、 Agent マシンの時刻を同期することを強くお勧めします。</block>
   <block id="137bac1c26ca6d0b61bc783c9a2fcbbd" category="section-title">エージェントをインストールしています</block>
@@ -11850,8 +11837,6 @@
   <block id="9c6601cca8cd67405c34e4897bb272f1" category="section-title">アセット間のつながりを確認する</block>
   <block id="14fe64769d4df689f51e13f60c5ec439" category="admonition">ユーザが制限されているコレクタは一時停止できません。コレクタを一時停止する前にユーザアクセスを復元します。</block>
   <block id="81c776ec15386302abf1c34d317e3393" category="paragraph">SAN Analyzerを表示するには、*オブザーバビリティ&gt;分析&gt; SAN Analyzer *を選択します。アプリケーション、ホスト、ファブリック、ストレージのフィルタを設定します。オブジェクトのマップが表示され、接続されているオブジェクトが示されます。オブジェクトにカーソルを合わせると、それらの接続のトラフィックメトリックが表示されます。</block>
-  <block id="fde6f74861c217b576ec5d769f2467c3" category="paragraph"><block ref="fde6f74861c217b576ec5d769f2467c3" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7512260392fef04bf211fab22007addd" category="paragraph"><block ref="7512260392fef04bf211fab22007addd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="18082cdb9388e2686e081dd6012e47b8" category="summary">作成するダッシュボードがパブリックかプライベートかを決定します。</block>
   <block id="cc5c681651d638257ae03658c963c7c6" category="doc">ダッシュボードアクセス管理</block>
   <block id="571ad98bb1054a211a5d3fa3a3240265" category="paragraph">Data Infrastructure Insightsでは、作成したダッシュボードへのアクセスをより細かく制御できるようになりました。グラフを変更できるユーザを選択します。潜在的に機密性の高い情報への暴露を制御します。ダッシュボードを非公開にすることで、組織内の他のユーザーが使用できるようになるまで、ビジュアライゼーションを完成させることができます。</block>
@@ -12008,4 +11993,20 @@
   <block id="f96c0cb8e557b8c2286592a385c5fd6e" category="paragraph">Data Infrastructure Insightsには、問題を迅速かつ簡単にトラブルシューティングし、企業環境に関する分析情報を提供するための便利な機能が搭載されています。強力なクエリでデータを簡単に検索し、ダッシュボードでデータを視覚化し、設定したデータしきい値の E メールアラートを送信します。</block>
   <block id="9a3ddb6d99b9ffb5f7473690abc9fb52" category="paragraph">Data Infrastructure Insightsテナントに表示される*スタートアップチェックリスト*には、いくつかの便利なタスクと概念のリストが含まれています。チェックリストの項目を選択すると、その概念に適した[Data Infrastructure Insights ]ページが表示されます。たとえば、_Create a Dashboard_itemをクリックすると、Data Infrastructure Insights * Dashboards *ページが開きます。</block>
   <block id="363b2b401698741ed946f685265f5dc1" category="paragraph">スタートアップチェックリストは、チェックリストの下部にある_don't Show this again_linkをクリックするまで表示されます。このチェックリストを却下しても、メッセージヘッダーバーから各チュートリアルを却下するまでは、該当するData Infrastructure Insightsの各ページでチュートリアルを使用できます。</block>
+  <block id="fcef7a70b7e9119c20e30e9ab1556015" category="paragraph">会社の環境で使用されているアプリケーションを把握しておくと、アセットの使用状況やコストを追跡しやすくなります。</block>
+  <block id="0e7f6af549f009474555d1625059e6d7" category="cell">[Auto Renewal]が有効な場合、対応は不要です。NetAppセールスに連絡してサブスクリプションを更新してください。</block>
+  <block id="2e9dbda35cab3bb298214da257ad124f" category="cell">ページからトライアルを更新し<block ref="1270e27ca8ec5d3dff21c492e4b5c786" category="inline-link-macro-rx"></block>ます。試用版は 1 回更新できます。サブスクリプションの購入については、NetApp営業担当にお問い合わせください</block>
+  <block id="a25c3f0a67375ee45e02e2a95818cfb5" category="cell">サブスクリプションの購入については、NetApp営業担当にお問い合わせください</block>
+  <block id="670521a1846ad94b7cc140e2678df21c" category="paragraph">これらの機能の1つまたは複数のプレビューをご希望の場合は、にお問い合わせください<block ref="02af545fedbe237243dabe2f44648f4d" category="inline-link-macro-rx"></block>。</block>
+  <block id="16630d72023cbbf23b8ab69cac2b3ff7" category="paragraph">リンクをクリックしてセールスサポートをリクエストすることもできます<block ref="6193a07b36740b6aedc4527702e204e2" category="inline-link-macro-rx"></block>。</block>
+  <block id="3fcd9845b26dde701c891681edc7b769" category="list-text">* Data Infrastructure Insightsにサブスクライブ*すると、<block ref="326364f658f4dbd53be7e9aa308d8ef9" category="inline-link-macro-rx"></block>直接または経由でデータに中断なく継続的にアクセスできます。<block ref="e91d3f98f4b43abdea3c839a7777954c" category="inline-link-macro-rx"></block></block>
+  <block id="5d42f131ad60489240ed184620da0559" category="paragraph">想定されるManaged Unitの数が1、000以上の場合は、ボタンをクリックし<block ref="6193a07b36740b6aedc4527702e204e2" category="inline-link-macro-rx"></block>てNetApp営業チームから登録してください。</block>
+  <block id="a42decca1d15ec644d4c66c06689344e" category="paragraph"><block ref="a4e343c69e2eae514016d98dfce8b36b" category="inline-link-macro-rx"></block>データコレクタを使用すると、VMwareで設定されている同名タグを使用してCloud Insightsのテキスト注釈を入力できます。</block>
+  <block id="0d0549b05d1645d38baa1a6cedaa7190" category="paragraph">Cloud Insights では、多数のエキサイティングなプレビュー機能が定期的にハイライトされています。これらの機能の1つまたは複数のプレビューをご希望の場合は、にお問い合わせください<block ref="02af545fedbe237243dabe2f44648f4d" category="inline-link-macro-rx"></block>。</block>
+  <block id="6230fc6d3836bf964eb587a1b21b5c48" category="admonition">現在Premium Editionをお使いで、レポートを保持したい場合は、こちらをお読みください<block ref="85f8206314043d7dd91d050def6a5cd1" category="inline-link-macro-rx"></block>。</block>
+  <block id="76a42951dc5d3e54f25d85112bcaa111" category="paragraph">Cloud Insights には、予算とビジネスニーズに合わせて、さまざまなエディションが用意されています。ネットアップサポートアカウントをお持ちの既存のお客様は、 7 日間のデータ保持期間をご利用いただけます。また、無料の * Basic Edition * をご利用いただくことで、ネットアップのデータ収集ツールへのアクセス、専門的なテクニカルサポートなどのデータ保持期間を延長できます。 * Standard Edition * をご利用ください。使用可能な機能の詳細については、NetAppのサイトを参照してください<block ref="67d94682b6b1dd7a9ae6ec194255c574" category="inline-link-macro-rx"></block>。</block>
+  <block id="238195bd1c59d39a21a833f68ecd7a0c" category="inline-image-macro">SAN Analyzerのトラフィックメトリックの例</block>
+  <block id="5620b4a9c0487779fe08be37f85948ac" category="paragraph"><block ref="5620b4a9c0487779fe08be37f85948ac" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="905f3e264909d9cdcfa3de883e22e115" category="inline-image-macro">SAN Analyzerのスライドアウト・パネル</block>
+  <block id="16e072902d4155747f40acc51a5aa5a3" category="paragraph"><block ref="16e072902d4155747f40acc51a5aa5a3" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

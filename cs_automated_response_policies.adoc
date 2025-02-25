@@ -10,7 +10,7 @@ summary: 潜在的な攻撃（ランサムウェアなど）やアクティビ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]
