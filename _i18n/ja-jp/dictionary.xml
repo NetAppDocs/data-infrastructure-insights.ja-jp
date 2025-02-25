@@ -1830,8 +1830,6 @@
   <block id="3b2314bf0168715cc6642c0246916477" category="paragraph">多くのNetAppサービスには、パッケージにData Infrastructure Insights Basicエディションが含まれています。Premium Editionへのアップグレードをご希望の場合は、営業担当者にお問い合わせください。</block>
   <block id="0ead5de583924ac8d48848b85f68e778" category="section-title">セルフサービスサポート：</block>
   <block id="6c0afebc7e7822e3ca22734d7b5d42c0" category="paragraph">これらのサポートオプションはトライアルモードで利用でき、 24 時間 365 日無料でご利用いただけます。</block>
-  <block id="e3072490c4d1e9d415ba1bcef5c7bdb1" category="list-text">* https://kb。NetApp .com /スペシャル：検索？query=cloud + insights [KnowledgeBase]*</block>
-  <block id="3926b94c4a8e59d9d045fe99d237163b" category="paragraph">+このセクションのリンクをクリックすると、NetAppナレッジベースに移動し、関連記事やハウツーなどを検索できます。</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="inline-link-macro">ドキュメント</block>
   <block id="7cef246d709d34533b9dea3e15d3f5a2" category="list-text"><block ref="2ecfa39652ed0f06ca436cc3b19d2bbb" category="inline-link-macro-rx"></block>**</block>
   <block id="15d10c3fd39c9846221b3ea9c93b55e0" category="paragraph">[Documentation] リンクをクリックすると、このドキュメントセンターに移動します。</block>
@@ -2624,7 +2622,6 @@
   <block id="eefa6cd78e40f4194cf842026e05a215" category="section-title">Cloud Connection for ONTAP 9.9以降は廃止されました</block>
   <block id="2589e2b6868c0dfc4223608ad37b1ecf" category="paragraph">Cloud Connection for ONTAP 9.9以降のデータコレクタは廃止されました。2023年4月4日以降、環境内のCloud Connectionデータコレクタでデータが収集されなくなり、ポーリング時にエラーが表示されます。Cloud Connectionデータコレクタは、次回の更新でCloud Insights から完全に削除されます。</block>
   <block id="f5395c9793af8a11b406ca7c1ac70da9" category="inline-link-macro">詳細</block>
-  <block id="8ae386dae67728714e42ae37acbde665" category="paragraph">2023年4月4日より前のリリースでは、クラウド接続で現在収集されているすべてのONTAP システムについて、新しいNetApp ONTAP データ管理ソフトウェアデータコレクタを設定する必要があります。<block ref="61bbaeff08609910a4a5c1401ada9f16" category="inline-link-macro-rx"></block>です。</block>
   <block id="abb14d21829ba186172f6e1d0b64b55b" category="section-title">2023年1月</block>
   <block id="636b18f0d68407e346d028a8211fb724" category="section-title">新しいログモニタ</block>
   <block id="497c0ee717343a5ba95064eaf970a772" category="inline-link-macro">追加のシステムモニタ</block>
@@ -7275,7 +7272,6 @@
   <block id="3fde2c923d9dcbf8f73ec0e80dc74d75" category="paragraph">これを行う最も簡単な方法は、Data Infrastructure Insightsと通信するためにプロキシ/ファイアウォールでワイルドカード設定を指定することです。次に例を示します。</block>
   <block id="7011d12128c7027c0a5ef0db2c274300" category="admonition">ワイルドカードにアスタリスク（ * ）を使用するのは一般的ですが、プロキシ / ファイアウォールの設定では異なる形式を使用することがあります。プロキシのドキュメントで、ワイルドカードを正しく指定できることを確認してください。</block>
   <block id="347129195bfdcce2fcf0d362a84ed033" category="inline-link-macro">ナレッジベース（Knowledgbase）</block>
-  <block id="6ad0fb78b8821fe632ae6653b56991b5" category="paragraph">プロキシ設定の詳細については、NetAppを参照し<block ref="9ee959d13eb0fcadf2047adb8fe84539" category="inline-link-macro-rx"></block>てください。</block>
   <block id="042f2a856726ac957ea57dbbe84766ca" category="section-title">プロキシ URL の表示</block>
   <block id="ab7992748e11f14996bdc2646a49e293" category="paragraph">オンボーディング中にデータコレクタを選択するときに [* プロキシ設定 * ] リンクをクリックするか、 [* ヘルプ &gt; サポート * ] ページの [_ プロキシ設定 _ ] の下のリンクをクリックすると、プロキシエンドポイントの URL を表示できます。次のようなテーブルが表示されます。</block>
   <block id="2d606071517d0747fae04dd73f7f6408" category="inline-image-macro">プロキシエンドポイントテーブル</block>
@@ -8057,7 +8053,6 @@
   <block id="e73a974e5f64b7f2d040fb59fd2aafcd" category="cell">シャーシの IP アドレスを使用するようにデータソース構成を変更します。</block>
   <block id="04eb81d16943e8c8a6314aaac38a4f4b" category="cell">複数のノードが Access Gateway ポートにログインしているというメッセージを受信します</block>
   <block id="17f6f686e23fbca9f92a7a9926136c2d" category="cell">パフォーマンスの収集が失敗し、「Timed out during sending SNMP request」というメッセージが表示されます。</block>
-  <block id="212277044ae3f4c8673a76ebbe182cbd" category="cell">クエリー変数およびスイッチの設定によっては、一部のクエリーがデフォルトのタイムアウトを超える場合があります。<block ref="0374e985eaa396deda9975ede578752d" category="inline-link-macro-rx"></block>です。</block>
   <block id="e04ebf98a9012bb6a191a7804699c68b" category="summary">Brocade FOS RESTデータコレクタを設定しています。</block>
   <block id="706579d23b1ddf6c6ff6115a0f9271b4" category="doc">Brocade FOS RESTデータコレクタ</block>
   <block id="eff72425072b480bbbaf5cf932ce0c52" category="paragraph">Data Infrastructure Insightsでは、Brocade FOS RESTコレクタを使用して、FabricOS（FOS）ファームウェア8.2以降を実行しているBrocadeスイッチデバイスのインベントリとパフォーマンスを検出します。</block>
@@ -9353,8 +9348,6 @@
   <block id="a9d11491cdc145dca25e537c123d978b" category="summary">ONTAP 9.9 以上のデータコレクタ用にネットアップクラウド接続を設定します</block>
   <block id="34727dd01aaa3e0d53fd68d429bbff53" category="doc">ONTAP 9.9 以上のデータコレクタ向けのネットアップクラウド接続</block>
   <block id="0803ffc49bb5d009027ad578d29858b8" category="paragraph">このデータコレクタは、 ONTAP 9.9 以上の CVO 、 AFF 、 FAS システムからのデータ収集をサポートするクラウド接続を作成します。</block>
-  <block id="35799672184c185a5b76dc14b0e32aa7" category="inline-link-macro">ナレッジベース</block>
-  <block id="0de86890c2f317ce1ead6727d6bff886" category="admonition">このデータコレクタは、2023年4月4日をもってData Infrastructure Insightsにインストールできなくなり、2023年7月にインストールされたすべてのData Infrastructure Insightsから削除される予定です。AUベースのデータ収集への移行については、を参照してください<block ref="334c0315e59c6351d5f9bac4d495b3ee" category="inline-link-macro-rx"></block>。</block>
   <block id="aa660f33d4c20ae2b92aa73acb4c5828" category="summary">NetApp Cloud Volume Services for AWS データコレクタを設定します</block>
   <block id="6d719c7976115879cdcafb7922e7e5fd" category="doc">NetApp Cloud Volume Services for AWS データコレクタ</block>
   <block id="85930060216df642a21fd8c262d1cc6c" category="paragraph">このデータコレクタは、 NetApp Cloud Volume Services for AWS 構成からのインベントリ収集をサポートします。</block>
@@ -9366,7 +9359,6 @@
   <block id="9447267c06cce84dba179c481872fb16" category="cell">Cloud Volume シークレットキー</block>
   <block id="36d35d8bdb33f254c1406a404bc7c125" category="cell">「Failed to execute request：Connect to &lt;AWS region endpoint &gt;：8080 [&lt;AWS region endpoint &gt;/AWS region endpoint IP &gt;] failed：connect timed out：GET \https://&lt;AWS Region Endpoint FQDN &gt;：8080/v1/Storage/IPRanges HTTP/1.1'」というエラーが表示されました。</block>
   <block id="ef756d1229bc6f51e983884d984a03f3" category="inline-link-macro">ネットアップの技術情報アーティクル</block>
-  <block id="babd9d09d01450e3fe3a53819529d6f5" category="cell"><block ref="588cebdad26ee4a9a3bb08c290310eb7" category="inline-link-macro-rx"></block>Data Infrastructure InsightsがAcquisition Unitとの通信に使用するは、Data Infrastructure InsightsとData Collector自体との間の通信は行いません。以下にいくつかの方法で試してみましょう。Acquisition UnitでFQDNを解決して、必要なポートに到達できることを確認してください。エラーメッセージに示されたエンドポイントにアクセスするためにプロキシが必要でないことを確認します。cURLを使用して、Acquisition Unitとエンドポイント間の通信をテストできます。このテストにプロキシを使用していない*ことを確認してください。例: root@acquisitionunit#curl -s -H accept: application/json -H "Content-type: application/json"-H api-key:&lt;データコレクタの資格情報で使用されるAPIキー-H secret-key:&lt;データコレクタの資格情報で使用されるシークレットキー&gt;-X Get \https://&lt;AWS Regional Endpoint &gt;: 808080/v1/Storage/IPRanges参照。<block ref="776b569bb4fd625ede408f144a17e02c" category="inline-link-macro-rx"></block></block>
   <block id="47407ceeb441f7c5d1eac8ca6060c4b7" category="summary">NetApp Cloud Volumes ONTAP のデータコレクタを設定する</block>
   <block id="a7544b3f9e0cc7c642c8b55af45cc192" category="doc">NetApp Cloud Volumes ONTAP データコレクタ</block>
   <block id="2285e08ef18a1a3f2e02b335409147d7" category="paragraph">このデータコレクタは、 Cloud Volumes ONTAP 構成からのインベントリ収集をサポートします。</block>
@@ -10842,7 +10834,6 @@
   <block id="05b4ddcb7946bd7615ac3f1458e51d47" category="cell">「AM」または「PM」の文字を完全に入力しないように注意して、スケジュール時刻を再入力します。「AM」は「A」、「PM」は「P」と入力するだけで十分です。余分な文字が表示されない場合は、スケジュール時刻が正しく設定されます。</block>
   <block id="ddcf50c29294d4414f3f7c1bbc892cb5" category="section-title">リソース</block>
   <block id="55d00560611b7ac6ad1fbc07da675be3" category="inline-link-macro">NetAppナレッジベース</block>
-  <block id="b4bfb3ce4e8b9e9d62106cb32011d02d" category="paragraph">その他のトラブルシューティングのヒントについては、を参照して<block ref="15447e468ec3e05469147de69518b15c" category="inline-link-macro-rx"></block>ください（サポートへのサインインが必要です）。</block>
   <block id="5b54c3b04831265b1d859da4050ad35f" category="paragraph">その他のサポート情報については、Data Infrastructure Insightsのページを参照して<block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block>ください。</block>
   <block id="90c8925e0cc3bad3ddb84b5af67af65a" category="paragraph">Data Infrastructure Insightsのアクティブなサブスクリプションをお持ちの場合は、次のサポートオプションをご利用いただけます。</block>
   <block id="0af89698bf5d1150026d4fcbbcf784a6" category="inline-link-macro">サポートチケット</block>
@@ -10855,7 +10846,6 @@
   <block id="7ef7f61ee5433c00d6e2bd93b6a72b5f" category="cell">[Acquisition Units]タブの*[Observability]&gt;[Collectors]*ページにあるAUのステータスには、[Certificate Expired]または[Certificate Revoked]と表示されます。</block>
   <block id="a56fa9c38676d6ae98991340b46ca3ad" category="cell">AU の右側にあるメニューをクリックし、 * Restore Connection * （接続の復元）を選択します。指示に従って Acquisition Unit をリストアします。 1.Acquisition Unit （ AU ）サービスを停止します。_Copy Stop command_ ボタンをクリックすると、コマンドをクリップボードに簡単にコピーし、このコマンドを Acquisition Unit マシンのコマンドプロンプトに貼り付けることができます。2.AUの_/ var/lib/lib/cloudinsights/acq/conf_ NetAppフォルダに「token」という名前のファイルを作成します。3.[_Copy Token_]ボタンをクリックし、作成したファイルにこのトークンを貼り付けます。4.AUサービスを再開します。_Copy Restart command_ ボタンをクリックし、 AU のコマンドプロンプトにコマンドを貼り付けます。</block>
   <block id="ba5ed4798f807b143761ea5211f06ea2" category="cell">Acquisition Unitサーバサービスの開始時に権限が拒否されました</block>
-  <block id="abb32e1da1ad856744ba53e096ef4ba3" category="cell">AUをSELinuxにインストールしている場合は、SEを_permissive_modeに設定する必要があります。Enforcing_modeはサポートされていませんSELinuxをPermissiveモードに設定したら、AUサービスを再起動します。<block ref="a82c78a8c8abe174de58c3bb493cbdd3" category="inline-link-macro-rx"></block>です。</block>
   <block id="f8c1f64e9a97f83b0f209268bdd07bcb" category="cell">サーバ要件が満たされていません</block>
   <block id="b4851e92b19af0c5c82447fc0937709d" category="inline-link-macro">要件</block>
   <block id="1b30be776a2009c2060ad54316282f2f" category="cell">Acquisition UnitサーバまたはVMが<block ref="e5b1973153b9956f66244f44dc226837" category="inline-link-macro-rx"></block></block>
@@ -12009,4 +11999,13 @@
   <block id="5620b4a9c0487779fe08be37f85948ac" category="paragraph"><block ref="5620b4a9c0487779fe08be37f85948ac" category="inline-image-macro-rx" type="image"></block></block>
   <block id="905f3e264909d9cdcfa3de883e22e115" category="inline-image-macro">SAN Analyzerのスライドアウト・パネル</block>
   <block id="16e072902d4155747f40acc51a5aa5a3" category="paragraph"><block ref="16e072902d4155747f40acc51a5aa5a3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1eaf65163d0a898b5a6a94771ef2cf69" category="list-text">* https://kb.netapp.com/Cloud/BlueXP/DII[KnowledgeBase]*</block>
+  <block id="0e8f78366da6895d9cdeb4b8ed117539" category="paragraph">このセクション内のリンクをクリックすると、ネットアップナレッジベースに移動し、関連する記事、ハウツーなどを検索できます。</block>
+  <block id="bf404f6bed29d85c3f6e00ca198b64e2" category="paragraph">2023年4月4日より前のリリースでは、クラウド接続で現在収集されているすべてのONTAP システムについて、新しいNetApp ONTAP データ管理ソフトウェアデータコレクタを設定する必要があります。</block>
+  <block id="bf82f4272c116f4033743ef9a8d2db15" category="paragraph">プロキシ設定の詳細については、NetAppを参照し<block ref="b348c1aae834cf0cd466b9787dfa5acf" category="inline-link-macro-rx"></block>てください。</block>
+  <block id="a7cf74afe22d08d0531dde90555aadbd" category="cell">クエリー変数およびスイッチの設定によっては、一部のクエリーがデフォルトのタイムアウトを超える場合があります。<block ref="fd40aed016519dab72e69cf2e3342cb9" category="inline-link-macro-rx"></block>です。</block>
+  <block id="fb915b764f3baecfa629ff22686e14ee" category="admonition">このデータコレクタは、2023年4月4日をもってData Infrastructure Insightsにインストールできなくなり、2023年7月にインストールされたすべてのData Infrastructure Insightsから削除される予定です。</block>
+  <block id="1f1f9d998591f96c2653327f9004b1a9" category="cell"><block ref="588cebdad26ee4a9a3bb08c290310eb7" category="inline-link-macro-rx"></block>Data Infrastructure InsightsがAcquisition Unitとの通信に使用するは、Data Infrastructure InsightsとData Collector自体との間の通信は行いません。以下にいくつかの方法で試してみましょう。Acquisition UnitでFQDNを解決して、必要なポートに到達できることを確認してください。エラーメッセージに示されたエンドポイントにアクセスするためにプロキシが必要でないことを確認します。cURLを使用して、Acquisition Unitとエンドポイント間の通信をテストできます。このテストにプロキシを使用していない*ことを確認してください。例: root@acquisitionunit#curl -s -H accept: application/json -H "Content-type: application/json"-H api-key:&lt;データコレクタの資格情報で使用されるAPIキー-H secret-key:&lt;データコレクタの資格情報で使用されるシークレットキー&gt;-X Get \https://&lt;AWS Regional Endpoint &gt;: 808080/v1/Storage/IPRanges参照。<block ref="ee10e7e073fdf55fff4a0c77a9c435fc" category="inline-link-macro-rx"></block></block>
+  <block id="1ec51096f7cea66fb872ea91910e89b9" category="paragraph">その他のトラブルシューティングのヒントについては、を参照して<block ref="6fe211aef2305839bd4b415ac3b03770" category="inline-link-macro-rx"></block>ください（サポートへのサインインが必要です）。</block>
+  <block id="9e6e19182965cf2820f2a5f8cce84e8b" category="cell">AUをSELinuxにインストールしている場合は、SEを_permissive_modeに設定する必要があります。Enforcing_modeはサポートされていませんSELinuxをPermissiveモードに設定したら、AUサービスを再起動します。<block ref="2aa71c1262c825b4349ce4125965fabb" category="inline-link-macro-rx"></block>です。</block>
 </blocks>

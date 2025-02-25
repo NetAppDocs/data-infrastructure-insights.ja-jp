@@ -168,6 +168,6 @@ Data Infrastructure Insightsでは、Brocade FCスイッチデータコレクタ
 | 複数のノードが Access Gateway ポートにログインしているというメッセージを受信します | NPV デバイスが正しく動作していること、および接続されているすべての WWN が必要であることを確認します。NPV デバイスを直接取得しないでください。代わりに、コアファブリックスイッチを取得すると NPV デバイスデータが収集されます。 
 
 
-| パフォーマンスの収集が失敗し、「Timed out during sending SNMP request」というメッセージが表示されます。 | クエリー変数およびスイッチの設定によっては、一部のクエリーがデフォルトのタイムアウトを超える場合があります。link:https://kb.netapp.com/Cloud/BlueXP/Cloud_Insights/Cloud_Insight_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["詳細"]です。 
+| パフォーマンスの収集が失敗し、「Timed out during sending SNMP request」というメッセージが表示されます。 | クエリー変数およびスイッチの設定によっては、一部のクエリーがデフォルトのタイムアウトを超える場合があります。link:https://kb.netapp.com/Cloud/BlueXP/DII/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["詳細"]です。 
 |===
 詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

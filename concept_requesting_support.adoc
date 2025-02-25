@@ -87,10 +87,9 @@ NetAppは、データインフラの分析情報をさまざまな方法でサ�
 
 これらのサポートオプションはトライアルモードで利用でき、 24 時間 365 日無料でご利用いただけます。
 
-* * https://kb。NetApp .com /スペシャル：検索？query=cloud + insights [KnowledgeBase]*
-
-
-+このセクションのリンクをクリックすると、NetAppナレッジベースに移動し、関連記事やハウツーなどを検索できます。
+* * https://kb.netapp.com/Cloud/BlueXP/DII[KnowledgeBase]*
++
+このセクション内のリンクをクリックすると、ネットアップナレッジベースに移動し、関連する記事、ハウツーなどを検索できます。
 
 * link:https://docs.netapp.com/us-en/cloudinsights/["ドキュメント"]**
 +

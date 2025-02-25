@@ -1037,7 +1037,7 @@ APIメーターは、[サブスクリプション]ページから*[管理者]>[A
 
 Cloud Connection for ONTAP 9.9以降のデータコレクタは廃止されました。2023年4月4日以降、環境内のCloud Connectionデータコレクタでデータが収集されなくなり、ポーリング時にエラーが表示されます。Cloud Connectionデータコレクタは、次回の更新でCloud Insights から完全に削除されます。
 
-2023年4月4日より前のリリースでは、クラウド接続で現在収集されているすべてのONTAP システムについて、新しいNetApp ONTAP データ管理ソフトウェアデータコレクタを設定する必要があります。link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights/How_to_transition_from_NetApp_Cloud_Connection_to_AU_based_data_collector["詳細"]です。
+2023年4月4日より前のリリースでは、クラウド接続で現在収集されているすべてのONTAP システムについて、新しいNetApp ONTAP データ管理ソフトウェアデータコレクタを設定する必要があります。
 
 '''
 

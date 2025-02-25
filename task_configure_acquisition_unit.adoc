@@ -95,7 +95,7 @@ Acquisition Unitは、双方向認証と相互認証を使用してData Infrastr
 
 NOTE: ワイルドカードにアスタリスク（ * ）を使用するのは一般的ですが、プロキシ / ファイアウォールの設定では異なる形式を使用することがあります。プロキシのドキュメントで、ワイルドカードを正しく指定できることを確認してください。
 
-プロキシ設定の詳細については、NetAppを参照しlink:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["ナレッジベース（Knowledgbase）"]てください。
+プロキシ設定の詳細については、NetAppを参照しlink:https://kb.netapp.com/Cloud/BlueXP/DII/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["ナレッジベース（Knowledgbase）"]てください。
 
 
 
@@ -151,7 +151,7 @@ Acquisition Unitは、双方向認証と相互認証を使用してData Infrastr
 
 NOTE: ワイルドカードにアスタリスク（ * ）を使用するのは一般的ですが、プロキシ / ファイアウォールの設定では異なる形式を使用することがあります。プロキシのドキュメントで、ワイルドカードを正しく指定できることを確認してください。
 
-プロキシ設定の詳細については、NetAppを参照しlink:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["ナレッジベース（Knowledgbase）"]てください。
+プロキシ設定の詳細については、NetAppを参照しlink:https://kb.netapp.com/Cloud/BlueXP/DII/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["ナレッジベース（Knowledgbase）"]てください。
 
 
 
