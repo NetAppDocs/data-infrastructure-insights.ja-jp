@@ -547,7 +547,6 @@
   <block id="a7ef8f0bed1d94220b7abd3877b10643" category="doc">ワークロードセキュリティエージェントの要件</block>
   <block id="b6818f4aea164eb8b94acf9d70d2e034" category="inline-link-macro">エージェントをインストールします</block>
   <block id="36bb58d4c9e71b2c4ea1af277d7e3a81" category="paragraph">データコレクタから情報を取得するには、必要があります<block ref="8c7f43ef892529523b024d4c41e5a1ca" category="inline-link-macro-rx"></block>。Agent をインストールする前に、お使いの環境がオペレーティングシステム、 CPU 、メモリ、およびディスクスペースの要件を満たしていることを確認してください。</block>
-  <block id="9624d517bb67d29503e5054b415313cf" category="cell">* CentOS 8 Stream（64ビット）、CentOS 9 Stream、SELinux * openSUSE LEAP 15.3～15.5（64ビット）* Oracle Linux 8.6-8.8、9.1～9.4（64ビット）* Red Hat Enterprise Linux 8.6～9.4（64ビット）、9.1～9.4（64ビット）、SELinux * Rocky SP9.2-9.4専用のサーバを使用することを推奨します。</block>
   <block id="c441ee50c88f6e5e3a7c69fc69dad8b8" category="cell">コマンド</block>
   <block id="92094f10227c0d6e4da9a65b1cc23700" category="cell">インストールには「unzip」が必要です。また、インストール、スクリプトの実行、およびアンインストールには、「sudo su–」コマンドが必要です。</block>
   <block id="805053e0ff5abb1e01f2d2ce7d07ad96" category="cell">4個のCPUコア</block>
@@ -12008,4 +12007,5 @@
   <block id="1f1f9d998591f96c2653327f9004b1a9" category="cell"><block ref="588cebdad26ee4a9a3bb08c290310eb7" category="inline-link-macro-rx"></block>Data Infrastructure InsightsがAcquisition Unitとの通信に使用するは、Data Infrastructure InsightsとData Collector自体との間の通信は行いません。以下にいくつかの方法で試してみましょう。Acquisition UnitでFQDNを解決して、必要なポートに到達できることを確認してください。エラーメッセージに示されたエンドポイントにアクセスするためにプロキシが必要でないことを確認します。cURLを使用して、Acquisition Unitとエンドポイント間の通信をテストできます。このテストにプロキシを使用していない*ことを確認してください。例: root@acquisitionunit#curl -s -H accept: application/json -H "Content-type: application/json"-H api-key:&lt;データコレクタの資格情報で使用されるAPIキー-H secret-key:&lt;データコレクタの資格情報で使用されるシークレットキー&gt;-X Get \https://&lt;AWS Regional Endpoint &gt;: 808080/v1/Storage/IPRanges参照。<block ref="ee10e7e073fdf55fff4a0c77a9c435fc" category="inline-link-macro-rx"></block></block>
   <block id="1ec51096f7cea66fb872ea91910e89b9" category="paragraph">その他のトラブルシューティングのヒントについては、を参照して<block ref="6fe211aef2305839bd4b415ac3b03770" category="inline-link-macro-rx"></block>ください（サポートへのサインインが必要です）。</block>
   <block id="9e6e19182965cf2820f2a5f8cce84e8b" category="cell">AUをSELinuxにインストールしている場合は、SEを_permissive_modeに設定する必要があります。Enforcing_modeはサポートされていませんSELinuxをPermissiveモードに設定したら、AUサービスを再起動します。<block ref="2aa71c1262c825b4349ce4125965fabb" category="inline-link-macro-rx"></block>です。</block>
+  <block id="a0549e61b3931f3ffafdfcc909b88bf8" category="cell">次のいずれかのライセンスバージョンを実行しているコンピューター：* CentOS 9 Stream（64ビット）* openSUSE LEAP 15.3～15.5（64ビット）* Oracle Linux 8.10（64ビット）、9.1～9.4（64ビット）、SELinux * Red Hat Enterprise Linux 8.10（64ビット）、9.1～9.5（64ビット）、SELinux * Rocky 9.4およびSP9.4専用のサーバを使用することを推奨します。</block>
 </blocks>
