@@ -1942,7 +1942,6 @@
   <block id="de41af8028b5287cc6d65bb0e73cae11" category="section-title">AWS Marketplaceで試用</block>
   <block id="bc8745f374e91204332a0cd070e3c20c" category="inline-xref">管理ユニット</block>
   <block id="a1aea5576cb96c98e98a9642fc30f4b0" category="paragraph">また、AWS Marketplaceで無料トライアルに登録することもできます。AWS Marketplaceの無償トライアルでは、33日間の試用期間でData Infrastructure Insightsにアクセスでき、最大499<block ref="74100db5c6c154a5b13e17b29feeccc3" category="inline-xref-macro-rx"></block>（MU）まで利用できます。</block>
-  <block id="54cf8a50b1cedbeedf2404d21702105e" category="paragraph">注：499 MUを超える値を設定すると、「違反」状態になります。トライアルが違反状態の間は、違反が解決されるまで、設定されているMUの数を減らすか、Data Infrastructure Insightsにサブスクライブすることで、一部のData Infrastructure Insights機能にアクセスできなくなります。</block>
   <block id="c66bd552dea63071ad19e124c869ab2e" category="paragraph">AWS Marketplaceの無償トライアルを延長することはできません。試用期間中はいつでも、* Admin -&gt; Subscription *ページからData Infrastructure Insights Basic Editionサブスクリプションにダウングレードしたり、Data Infrastructure Insightsの有料サブスクリプションに変更したりできます。</block>
   <block id="03742c91392961db83c5540550a3500a" category="section-title">トライアル期間が終了した場合はどうなりますか？</block>
   <block id="55b44e6cb866667b35e33325e5f2b246" category="paragraph">無償トライアルの有効期限が切れていて、Data Infrastructure Insightsにまだサブスクライブしていない場合は、サブスクライブするまで機能が制限されます。データの取り込みが中止される場合があり、数週間後にデータ保持ポリシーに従ってデータが削除されます。</block>
@@ -1973,7 +1972,6 @@
   <block id="c3a44b5ae4d0db1da47414cf32828287" category="list-text">物理オブジェクト</block>
   <block id="49a22ea7d938494c1ed0f89b1259e69d" category="list-text">クラウド消費</block>
   <block id="9530a67a23d320926f20ff19d1667b8c" category="paragraph">各ティアは異なるレートで計測され、全体が合計されて_Effectiveエンタイトルメント_が付与されます。実効使用量の計算式は次のとおりです。</block>
-  <block id="f00305fde34ce30d58eb994d36b91d7f" category="admonition">管理対象ユニットの合計は、サマリセクションのデータコレクタ数とは若干異なる場合があります。これは、管理対象ユニットの数が最も近い管理対象ユニットに切り上げられるためです。データコレクタリストのこれらの数値の合計は、ステータスセクションの管理対象ユニットの合計よりも少し高くなる場合があります。サマリセクションには、サブスクリプションの実際の管理ユニット数が表示されます。これを容易にするために、DIIは、_ subscribed_quantitiesに基づいて1つの*実効使用権*数を計算し、_ discovered_storageに基づいて同じ数を計算し、検出された実効容量が実効使用権より大きい場合にのみ違反を宣言します。これにより、検出されたストレージの合計が、サブスクライブされた有効なエンタイトルメント内にある限り、階層ごとにサブスクライブされた金額とは異なる数量を柔軟に監視できます。</block>
   <block id="f2dddeb36ea97f1d320b0c83ef58c28c" category="paragraph">Data Infrastructure InsightsインフラオブザーバビリティとKubernetesオブザーバビリティメーターの使用量（* Managed Unit *あたり）。管理対象ユニットの使用量は、 * ホストまたは仮想マシン * の数と、インフラ環境で管理されている * フォーマットされていない容量 * の量に基づいて計算されます。</block>
   <block id="0b8e651376aa14f43ba4123bb6c8d139" category="list-text">1 台の管理対象ユニット = 2 台のホスト（任意の仮想マシンまたは物理マシン）</block>
   <block id="dc3f15e1a26ca80a17b59bb6db783b8a" category="list-text">1 管理ユニット = 物理ディスクまたは仮想ディスクのフォーマットされていない容量の 4TiB</block>
@@ -12037,4 +12035,5 @@
   <block id="1c21a303d962b5c2aaa6a1cf83f62414" category="list-text">VMware vCenter Server 8.0.3ビルド-24262322</block>
   <block id="5136d67ed194c95ea9a2710028034652" category="list-text">VMware vCenter Server 8.0.3ビルド-24305161</block>
   <block id="24820d2348a2986c54e81b6bc96fb06f" category="list-text">VMware vCenter Server 8.0.3ビルド-24322831</block>
+  <block id="c0e4c1840494e97bdd3774c6b4983211" category="admonition">管理対象ユニットの合計は、サマリセクションのデータコレクタ数とは若干異なる場合があります。これは、管理対象ユニットの数が最も近い管理対象ユニットに切り上げられるためです。データコレクタリストのこれらの数値の合計は、ステータスセクションの管理対象ユニットの合計よりも少し高くなる場合があります。サマリセクションには、サブスクリプションの実際の管理ユニット数が表示されます。これを容易にするために、DIIは_ subscribed_quantitiesに基づいて1つの*有効なエンタイトルメント*数を計算し、_ discovered_storageに基づいて同じ数を計算します。これにより、検出されたストレージの合計が、サブスクライブされた有効なエンタイトルメント内にある限り、階層ごとにサブスクライブされた金額とは異なる数量を柔軟に監視できます。</block>
 </blocks>
