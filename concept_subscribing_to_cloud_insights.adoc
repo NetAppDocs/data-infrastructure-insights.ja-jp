@@ -158,8 +158,6 @@ Data Infrastructure InsightsインフラオブザーバビリティとKubernetes
 
 
 
-1 、 000 台以上の管理対象ユニットが含まれている、または含まれる予定の環境では、 * ボリューム価格設定 * の対象となり、ネットアップ営業に登録を依頼するように求められます。詳細については、を参照してください<<how-do-i-subscribe,下>>。
-
 
 
 === ワークロードのセキュリティ計測
@@ -183,7 +181,7 @@ Managed Unitの数が1、000未満の場合は、NetApp SalesまたはAWS Market
 
 === ネットアップの営業担当者にサブスクライブ
 
-想定されるManaged Unitの数が1、000以上の場合は、ボタンをクリックしlink:https://bluexp.netapp.com/contact-cds["* 販売担当者 * にお問い合わせください"]てNetApp営業チームから登録してください。
+想定されるManaged Unitの数が1、000以上の場合は、ボタンをクリックしlink:https://www.netapp.com/forms/cloud-insights-contact-us["* 販売担当者 * にお問い合わせください"]てNetApp営業チームから登録してください。
 
 有償のサブスクリプションをデータインフラ分析環境に適用できるように、Data Infrastructure Insights *のシリアル番号*をNetApp営業担当者に提出する必要があります。シリアル番号は、Data Infrastructure Insightsのトライアル環境を一意に識別するもので、*[Admin]>[Subscription]*ページで確認できます。
 

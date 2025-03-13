@@ -1978,8 +1978,6 @@
   <block id="1c5c258274f71ebb61b16a0e0935d305" category="list-text">1 Managed Unit = 40TiBの未フォーマット容量（AWS S3、Cohesity SmartFiles、Dell EMC Data Domain、Dell EMC ECS、Hitachi Content Platform、IBM Cleversafe、NetApp StorageGRID、 ルブリク</block>
   <block id="1552a022e1b90a3bc06148ff722ce4a0" category="list-text">1 Managed Unit = KubernetesのvCPU 4台。</block>
   <block id="959487d08cec8dfae823bcdea09da795" category="list-text">1 Managed Unit（K8s）の調整=インフラでも監視されるノードまたはホスト×2</block>
-  <block id="6cede1cfde12fc6d88ad1d8b6636a977" category="inline-xref">下</block>
-  <block id="d8be2988f45df4b59f1cfe2e32869556" category="paragraph">1 、 000 台以上の管理対象ユニットが含まれている、または含まれる予定の環境では、 * ボリューム価格設定 * の対象となり、ネットアップ営業に登録を依頼するように求められます。詳細については、を参照してください<block ref="e38bca6fb8f053d6cea5cce9993ed45c" category="inline-xref-macro-rx"></block>。</block>
   <block id="f057d707b9d5c17f0fad56f8204f6bff" category="section-title">ワークロードのセキュリティ計測</block>
   <block id="c3ef097c271469a3ca9718d35396087c" category="paragraph">ワークロードのセキュリティは、オブザーバビリティの計測と同じアプローチを使用してクラスタごとに計測されます。</block>
   <block id="3943920606f23b23925f15408e26cae2" category="paragraph">ワークロードセキュリティの使用状況は、*[管理者]&gt;[サブスクリプション]*ページの*[ワークロードセキュリティ]*タブで確認できます。</block>
@@ -11829,7 +11827,6 @@
   <block id="670521a1846ad94b7cc140e2678df21c" category="paragraph">これらの機能の1つまたは複数のプレビューをご希望の場合は、にお問い合わせください<block ref="02af545fedbe237243dabe2f44648f4d" category="inline-link-macro-rx"></block>。</block>
   <block id="16630d72023cbbf23b8ab69cac2b3ff7" category="paragraph">リンクをクリックしてセールスサポートをリクエストすることもできます<block ref="6193a07b36740b6aedc4527702e204e2" category="inline-link-macro-rx"></block>。</block>
   <block id="3fcd9845b26dde701c891681edc7b769" category="list-text">* Data Infrastructure Insightsにサブスクライブ*すると、<block ref="326364f658f4dbd53be7e9aa308d8ef9" category="inline-link-macro-rx"></block>直接または経由でデータに中断なく継続的にアクセスできます。<block ref="e91d3f98f4b43abdea3c839a7777954c" category="inline-link-macro-rx"></block></block>
-  <block id="5d42f131ad60489240ed184620da0559" category="paragraph">想定されるManaged Unitの数が1、000以上の場合は、ボタンをクリックし<block ref="6193a07b36740b6aedc4527702e204e2" category="inline-link-macro-rx"></block>てNetApp営業チームから登録してください。</block>
   <block id="a42decca1d15ec644d4c66c06689344e" category="paragraph"><block ref="a4e343c69e2eae514016d98dfce8b36b" category="inline-link-macro-rx"></block>データコレクタを使用すると、VMwareで設定されている同名タグを使用してCloud Insightsのテキスト注釈を入力できます。</block>
   <block id="0d0549b05d1645d38baa1a6cedaa7190" category="paragraph">Cloud Insights では、多数のエキサイティングなプレビュー機能が定期的にハイライトされています。これらの機能の1つまたは複数のプレビューをご希望の場合は、にお問い合わせください<block ref="02af545fedbe237243dabe2f44648f4d" category="inline-link-macro-rx"></block>。</block>
   <block id="6230fc6d3836bf964eb587a1b21b5c48" category="admonition">現在Premium Editionをお使いで、レポートを保持したい場合は、こちらをお読みください<block ref="85f8206314043d7dd91d050def6a5cd1" category="inline-link-macro-rx"></block>。</block>
@@ -12036,4 +12033,5 @@
   <block id="5136d67ed194c95ea9a2710028034652" category="list-text">VMware vCenter Server 8.0.3ビルド-24305161</block>
   <block id="24820d2348a2986c54e81b6bc96fb06f" category="list-text">VMware vCenter Server 8.0.3ビルド-24322831</block>
   <block id="c0e4c1840494e97bdd3774c6b4983211" category="admonition">管理対象ユニットの合計は、サマリセクションのデータコレクタ数とは若干異なる場合があります。これは、管理対象ユニットの数が最も近い管理対象ユニットに切り上げられるためです。データコレクタリストのこれらの数値の合計は、ステータスセクションの管理対象ユニットの合計よりも少し高くなる場合があります。サマリセクションには、サブスクリプションの実際の管理ユニット数が表示されます。これを容易にするために、DIIは_ subscribed_quantitiesに基づいて1つの*有効なエンタイトルメント*数を計算し、_ discovered_storageに基づいて同じ数を計算します。これにより、検出されたストレージの合計が、サブスクライブされた有効なエンタイトルメント内にある限り、階層ごとにサブスクライブされた金額とは異なる数量を柔軟に監視できます。</block>
+  <block id="ce70e0ca30a003d9df6c2c5bf545464a" category="paragraph">想定されるManaged Unitの数が1、000以上の場合は、ボタンをクリックし<block ref="a9a75603ab8aac3033fb50ea01ab50c4" category="inline-link-macro-rx"></block>てNetApp営業チームから登録してください。</block>
 </blocks>
