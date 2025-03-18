@@ -31,7 +31,7 @@ keywords: AU, acquisition unit, requirements, sizing
 | コンポーネント | Linux 要件 | Windows 要件 
 
 
-| オペレーティングシステム | 次のいずれかのライセンスバージョンを実行しているコンピューター：* CentOS（64ビット）：7.2～7.9、8.1～8.4、Stream 8、AlmaLinux 9.3および9.4 * Debian（64ビット）：9および10 * openSUSE LEAP 15.1～15.5 * Oracle Enterprise Linux（64ビット）：7.5～7.9、8.1～8.8 * Red Hat Enterprise Linux（7.9、8.9、8.4、8.4、9.4、9.4以上の他の他のソフトウェアを実行しているコンピューター上のバージョン* Red Hat Enterprise Server * Linux *では、9.4～9.4まで、9.4まで。専用のサーバを使用することを推奨します。SELinuxを使用している場合は、Acquisition Unitシステムで次のコマンドを実行することを推奨します。sudo semanage fcontext -a -t usr_t "/opt/ NetApp /cloudinsights（/.*）？"sudo restorecon -R /opt/ NetApp /cloudinsights | ライセンス版の次のいずれかを実行しているコンピュータ。 * Microsoft Windows 10 64ビット* Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows 11このコンピュータは、他のアプリケーションレベルのソフトウェアを実行していない必要があります。専用のサーバを使用することを推奨します。 
+| オペレーティングシステム | 次のいずれかのライセンスバージョンを実行しているコンピューター：* AlmaLinux 9.3～9.5 * CentOS（64ビット）：7.2～7.9、8.1～8.4、Stream 8、Stream 9 * Debian（64ビット）：9～11 * openSUSE LEAP 15.1～15.6 * Oracle Enterprise Linux（64ビット）：7.5～7.9、8.1～8.10、9.3～9.5 ky *専用のサーバを使用することを推奨します。SELinuxを使用している場合は、Acquisition Unitシステムで次のコマンドを実行することを推奨します。sudo semanage fcontext -a -t usr_t "/opt/ NetApp /cloudinsights（/.*）？"sudo restorecon -R /opt/ NetApp /cloudinsights | 次のいずれかのライセンスバージョンを実行しているコンピューター。* Microsoft Windows 10 64ビット* Microsoft Windows 11 * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025このコンピューターは、他のアプリケーションレベルのソフトウェアを実行していない必要があります。専用のサーバを使用することを推奨します。 
 
 
 | CPU | 2個のCPUコア | 同じ 
