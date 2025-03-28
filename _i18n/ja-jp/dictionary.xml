@@ -3891,8 +3891,6 @@
   <block id="d4df4178129288e74d306d474f41121d" category="cell"><block ref="d4df4178129288e74d306d474f41121d" category="inline-link-macro-rx"></block></block>
   <block id="c7a56e9ede426bcb6ef8adebfa167f5b" category="inline-link-macro">Nutanix NX シリーズ</block>
   <block id="9935d13e4384b8045cffd7789defe14c" category="cell"><block ref="9935d13e4384b8045cffd7789defe14c" category="inline-link-macro-rx"></block></block>
-  <block id="f2cf54cfab756c7cdb0f16c0ed5cda12" category="inline-link-macro">OpenStack</block>
-  <block id="d2c9f580641c4ac421cd1184c444c1e6" category="cell"><block ref="d2c9f580641c4ac421cd1184c444c1e6" category="inline-link-macro-rx"></block></block>
   <block id="a1b8b82e2c6dab4ba2762641402e6184" category="inline-link-macro">OpenZFS の場合</block>
   <block id="f5a800ee25a815f4c8c0d66efcf7438d" category="cell"><block ref="f5a800ee25a815f4c8c0d66efcf7438d" category="inline-link-macro-rx"></block></block>
   <block id="a2c92312bc8a9e692141bc61305782f3" category="inline-link-macro">Oracle ZFS Storage Appliance の略</block>
@@ -9415,51 +9413,6 @@
   <block id="5b02fb8f86f33e62862c6886dbbe655e" category="list-text">volume_groups が使用されていないかぎり、読み取り専用のユーザ名とパスワード。この場合は、 Admin ユーザ名とパスワードが必要です</block>
   <block id="bf61ff29d8ff867a7727b034a7efa26f" category="list-text">ポート要件： HTTPS 443</block>
   <block id="b8b0b769d3e3395123e9c6b52b36b840" category="cell">Nutanix アレイへの接続に使用する TCP ポート。デフォルトは9440です。</block>
-  <block id="6e831c008aae70e3aac84aff192fcea2" category="summary">OpenStack データコレクタ</block>
-  <block id="2f186f5eedfe86b735c206f6be34f9a7" category="doc">OpenStack データコレクタ</block>
-  <block id="1affaa3c0d19c2e084afa700debb8740" category="paragraph">OpenStack （ REST API / KVM ）データコレクタは、すべての OpenStack インスタンスのインベントリデータ、および必要に応じて VM のパフォーマンスデータを取得します。</block>
-  <block id="ee627d472fc6df1e0c1367deb7ee0063" category="list-text">OpenStack コントローラの IP アドレス</block>
-  <block id="280f91bd66acb7cf04ec960fca75f64a" category="list-text">OpenStack admin ロールのクレデンシャルと Linux KVM ハイパーバイザーへの sudo アクセス。admin アカウントや admin 相当の権限を使用していない場合は、データコレクタユーザ ID に基づいて緩和するデフォルトポリシーを特定するために、トライアルとエラーを使用する必要があります。</block>
-  <block id="c0ea429a2fadacc206fdc8f17cfa492c" category="list-text">パフォーマンス収集用にOpenStack Gnocchiモジュールをインストールして設定する必要があります。Gnocchiの設定は、各ハイパーバイザーのNova.confファイルを編集し、各ハイパーバイザーでNova Computeサービスを再起動することで行います。オプション名は、 OpenStack の各リリースで変更されています。</block>
-  <block id="8beeeec38dbc6258291f2e47130835d8" category="list-text">Icehouse のあるホテル</block>
-  <block id="291b02b25fbb9789119d2383e9f08e29" category="list-text">Juno 社</block>
-  <block id="3afe87a2a8c61f8023e56883b9baccb8" category="list-text">キロ</block>
-  <block id="84e1da9e55480128662cfdfe79cb8923" category="list-text">リバティー</block>
-  <block id="89042bafc0f1c8153060574c3895f44b" category="list-text">三鷹</block>
-  <block id="1c8b97c83b0726216cd5dbc88a64b0ed" category="list-text">ニュートン</block>
-  <block id="baba8cba1a3c4596919404471ad4d0d8" category="list-text">八幡市</block>
-  <block id="43ec0ba7025c8d3dfc798f09c6fb36d2" category="list-text">CPU の統計情報の場合、コンピューティングノードの /etc/nova/nover.conf で [compute_monitors = ComputeDriverCPUMonitor] をオンにする必要があります。</block>
-  <block id="30d248ff55e04656a0bc13e82c28ca89" category="list-text">ポート要件</block>
-  <block id="4931562219172e126d11a20bd2ee6af3" category="list-text">HTTP は 5000 、 Keystone サービスは 13000 、 HTTPS は 13000 です</block>
-  <block id="5829ef3d89411d46f0a05f6867ff2efd" category="list-text">KVM SSH の場合は 22</block>
-  <block id="a58963a7c2c9eafce2ab09ca28270ee0" category="list-text">Nova Compute Service の場合は 8774</block>
-  <block id="745b1ee1989bc6dd0ac838e4dcb448e5" category="list-text">Cinder ブロックサービスの場合は 8776</block>
-  <block id="dfe1b74026ff6682b451240881e76be4" category="list-text">8777（ニョッキ・パフォーマンス・サービス用）</block>
-  <block id="ca3d2d05f916b41d8f53f506ace2e80e" category="list-text">9292 for Glance Image Service* 注 * ポートは特定のサービスにバインドされており、大規模な環境ではコントローラまたは別のホストでサービスを実行できます。</block>
-  <block id="9be07620e581c90b777b5fef1296cc28" category="cell">OpenStack Controller の IP アドレス</block>
-  <block id="c5e968faf75175530ec61fb1846cfdce" category="cell">OpenStack Controller の IP アドレスまたは完全修飾ドメイン名</block>
-  <block id="60f987e0e1dafdb918779f7224cd3aaf" category="cell">OpenStack 管理者</block>
-  <block id="963b85b5fea0fb25d7f739d70b488f08" category="cell">OpenStack 管理者のユーザ名</block>
-  <block id="702c22fcd705ed77553d755f22f3966a" category="cell">OpenStack パスワード</block>
-  <block id="79db7b7c9e06d7a21d6a84e5efacf631" category="cell">OpenStack 管理に使用するパスワード</block>
-  <block id="97564e1a26ba1c694feebd9a3f2d9f38" category="cell">OpenStack 管理者のテナント</block>
-  <block id="5d24fef3e48bfdbcdc47e96414966a56" category="cell">OpenStack 管理者のテナント名</block>
-  <block id="80fd569cda415ce2714eede8209d7eb3" category="cell">KVM sudo ユーザー</block>
-  <block id="7014ddc89480575c89e23a7982c7c0ac" category="cell">KVM Sudo ユーザー名</block>
-  <block id="aab8d1693141a32bece39aa945271b85" category="cell">クレデンシャルタイプを指定するには、「 Password 」または「 OpenSSH Key File 」を選択してください</block>
-  <block id="31deddc69cd96113632a3ab17e5cd93e" category="cell">SSH 経由でデバイスに接続するために使用されるクレデンシャルのタイプ</block>
-  <block id="b6593f79d3306be8166f8e92e7cb4a65" category="cell">Inventory Private Key への完全パス</block>
-  <block id="dba54b8be33cd375b2f9f38a66dd55b4" category="cell">KVM sudo パスワード</block>
-  <block id="dfe35b8b294b35971918582bb405c7a8" category="cell">SSH を使用してハイパーバイザーのインベントリ検出を有効にし</block>
-  <block id="8bc6def4f9968da03c00d5a791ff25b3" category="cell">SSH を使用してハイパーバイザーインベントリの検出を有効にする場合は、このチェックボックス</block>
-  <block id="724bdc3d08a628510ac4b35391f971e9" category="cell">OpenStack 管理 URL のポート</block>
-  <block id="93dc129787d356e23553d69cfe40511e" category="cell">HTTPS を使用する</block>
-  <block id="1e435f995c73427ccb198051f1f58881" category="cell">セキュア HTTP を使用する場合に選択します</block>
-  <block id="6b9dc11d780e38196cc7f712ba7d8f5c" category="cell">SSH に使用するポート</block>
-  <block id="19f99c5f7ed3601984d9068bcacd7fa8" category="cell">SSH プロセスの再試行回数</block>
-  <block id="b65a95e1edb457db54d2696cdde74458" category="cell">インベントリのポーリング間隔。デフォルトは20分です。</block>
-  <block id="ebe11f389d67e77cfd3d461ac635ac57" category="cell">「 Configuration error 」と表示され、「 Policy does not allow 」または「 You are not authorized 」というエラーメッセージが表示されます。</block>
-  <block id="98a8b66b2a474494c50e1594ce9331b1" category="cell">* IP アドレスを確認 * ユーザー名とパスワードを確認してください</block>
   <block id="298831ffa37c3339463b0927313f5324" category="summary">Oracle ZFS データコレクタを設定しています</block>
   <block id="12aa4229d08c65b7528cfd8184ed0f2b" category="doc">Oracle ZFS Storage Appliance データコレクタ</block>
   <block id="19a548e7f1d623a2cebfcbb03e92f222" category="paragraph">Data Infrastructure Insightsは、Oracle ZFS Storage Applianceデータコレクタを使用してインベントリとパフォーマンスのデータを収集します。</block>
@@ -11383,7 +11336,6 @@
   <block id="8f4063b3e2653e9f3c560f79c771819b" category="sidebar">EシリーズREST</block>
   <block id="c106fc8dee70ab4a9453d7ed9a891bd7" category="sidebar">NetApp HCI 管理サーバ</block>
   <block id="bb88c75c573c51be16c7d85804e7a9fe" category="sidebar">Nutanix</block>
-  <block id="7ff6cc997b141399bcdf2c338fb4031c" category="sidebar">OpenStack</block>
   <block id="30162ed78b6c10f731411f2fc440c24f" category="sidebar">Oracle</block>
   <block id="d30973809f2e4238b7eb2bac9241674c" category="sidebar">ピュア</block>
   <block id="1d9fc183665bd1e195391190be506894" category="sidebar">Red Hat</block>
@@ -11646,7 +11598,6 @@
   <block id="2f461803a8b3a27284482a32459a1078" category="cell">えっこれ<block ref="0dcd3ea27696029fecb8ccd7e247f633" category="inline-link-macro-rx"></block>。setting_unprotected_は、Kubernetes Monitoring Operatorにフラグを指定してTelegrafを実行するように指示し<block ref="3a41393afb053a415e6dc30cf704d899" prefix=" " category="inline-code"></block>ます。</block>
   <block id="0860569a69c3584507ee09f4be585418" category="cell">insecureK8sSkipVerify</block>
   <block id="3008cd3125cccc003fa13335717e556e" category="cell">IP SANが不足しているためにtelegrafで証明書を検証できない場合は、検証スキップを有効にしてみてください。</block>
-  <block id="3a6957a9f0cd14c98be3bfcbf85db668" category="paragraph"><block ref="3a6957a9f0cd14c98be3bfcbf85db668" category="inline-link-macro-rx"></block></block>
   <block id="9e43104f0687bd3a308759c5411641d7" category="paragraph"><block ref="9e43104f0687bd3a308759c5411641d7" category="inline-link-macro-rx"></block></block>
   <block id="348fd8f652c33b1be14b9b2f000cff0d" category="cell">その理由としては、 ONTAP 側のネットワーク問題が考えられます。以下の手順に従ってください。 1.SVM のデータ LIF または SVM からの接続をブロックしている管理 LIF にファイアウォールがないことを確認します。2.クラスタ管理IPを使用してSVMを追加する場合は、SVMのデータLIFと管理LIFがAgent VMからping可能であることを確認してください。問題が発生した場合は、 LIF のゲートウェイ、ネットマスク、およびルートを確認してください。また、クラスタ管理 IP を使用して SSH 経由でクラスタにログインし、エージェント IP に ping を実行することもできます。エージェントの IP が ping 可能であることを確認します。 _network ping -vserver &lt;vserver name&gt; -destination &lt;Agent ip&gt; -lif &lt;LIF Name&gt; -show-detail_ping 不可能な場合は、 ONTAP のネットワーク設定が正しいことを確認して、エージェントマシンが ping 可能であることを確認します。3.クラスタIP経由で接続しようとしたが機能しない場合は、SVM IP経由で直接接続してみてください。SVM IP を使用して接続する手順については、上記を参照してください。4.SVM IPおよびvsadminのクレデンシャルを使用してコレクタを追加する際に、SVM LIFでData plus Mgmtロールが有効になっているかどうかを確認します。この場合、 SVM LIF に ping することは可能ですが、 SVM LIF への SSH は機能しません。「はい」の場合は、 SVM 管理のみの LIF を作成し、この SVM 管理のみの LIF を使用して接続してみてください。5.それでも動作しない場合は、新しいSVM LIFを作成して、そのLIF経由で接続を試してください。サブネットマスクが正しく設定されていることを確認します。6.高度なデバッグ：a）ONTAPでパケットトレースを開始します。b）CloudSecure UIからSVMにデータコレクタを接続してみます。c）エラーが表示されるまで待ちます。ONTAPでパケットトレースを停止します。d）ONTAPからパケットトレースを開きます。f)から&lt;cluster_mgmt_ip&gt;がない場合は、&lt;clustername&gt; ONTAPのファイアウォールの問題です。g) ONTAPでファイアウォールを開き、ONTAPがエージェントボックスに接続できるようにします。g) ONTAPでファイアウォールを開き、ONTAPがエージェントボックスに接続できるようにします。7.それでも動作しない場合は、ネットワークチームに問い合わせて、外部ファイアウォールがONTAPからエージェントボックスへの接続をブロックしていないことを確認してください。9.上記のいずれの方法でも問題が解決しない場合は、でケースをオープンしてサポートを依頼し<block ref="d0162286c59c67bf86d01f060ee7cd04" category="inline-link-macro-rx"></block>ます。</block>
   <block id="2b8272217b69f1c5b5ad5968f0bc0945" category="list-text">Data Infrastructure Insightsの無償トライアルにご登録いただき、利用可能な機能をご確認ください。無償トライアルに登録するには：</block>
@@ -11786,7 +11737,6 @@
   <block id="8af8d6d7603eec1cb34086e9cf6e2055" category="inline-image-macro">ASAがユニファイドとは異なることを示すONTAP Essentialsドロップダウン</block>
   <block id="5fe97e7e7c561aa4a8199e55d380aadb" category="paragraph"><block ref="5fe97e7e7c561aa4a8199e55d380aadb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bd255743216cfae20f87e84a9cd8e7e1" category="section-title">DII API使用状況の追跡：セキュリティと効率の向上</block>
-  <block id="0be262a01ffd53cb1827d924de37e376" category="paragraph">管理者ユーザが利用できる強化されたREST API使用状況の追跡機能により、セキュリティ体制を強化し、リソース管理を合理化できます。APIの使用状況を追跡することで、使用されているAPIトークン、使用元のIPアドレス、生成されるトラフィック量を確認できます。トークンを特定のIPアドレスと使用レベルにリンクすることで、システムアクセスと使用傾向に関する強力なインサイトが得られ、安全で効率的な環境を維持し、スムーズな運用を維持するために必要な制御が可能になります。</block>
   <block id="320be4cb0a9128705d37286f8afff816" category="inline-image-macro">API使用状況分析の例</block>
   <block id="d7f696b40402f5f6c5dc60d881af09a0" category="paragraph"><block ref="d7f696b40402f5f6c5dc60d881af09a0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="811a069713a14c7b8c3b0333afcedfff" category="section-title">ワークロードセキュリティAPIによるユーザの制限</block>
@@ -11810,7 +11760,6 @@
   <block id="8429b607073457ee8f7513c9b33f2b47" category="inline-link-macro">ONTAP REST</block>
   <block id="9813cb21933d9e535322d83efc9b8d25" category="paragraph">旧世代のすべてのASAシステムでは、コレクタを使用してください<block ref="75bdda54644cc13465ab7acc10710396" category="inline-link-macro-rx"></block>。</block>
   <block id="6cc5c9e930ea3d3b8bff4367c60ceea4" category="section-title">2025年2月</block>
-  <block id="8261d0e1521d30da1b36761d508cb245" category="paragraph">APIの使用状況を表示するには、* Observability &gt; Admin &gt; API Access *に移動し、_View API Usage_を選択します。このAPIは、DII Observability APIでのみ使用できます。ワークロードセキュリティには適用されません。</block>
   <block id="bcaea0fa3a691efcd767e69c0bf6c611" category="paragraph">受信者がData Infrastructure Insightsからの通知を受信できるようにするには、「許可」リストに次のEメールアドレスを追加します。</block>
   <block id="920ab4b11a04d50637a16a5c9699b3ba" category="list-text">\ accounts@service.cloudinsights.netapp.com</block>
   <block id="b68146f7d3be586c34e5b6d021541f50" category="list-text">\ DoNotReply@cloudinsights.netapp.com</block>
@@ -12049,4 +11998,7 @@
   <block id="bc23aa0997542e15a65a21a96991960a" category="paragraph">The user can go to the add/edit collector page, enter the cluster level details (in Cluster Mode) or SVM level details (in SVM Mode), and click on the *Test Connection* button. Workload Security will then process the request and display an appropriate success or failure message.</block>
   <block id="e8f41baace36619af4a7292787a17936" category="inline-image-macro">Workload Security 'Test Connection' success message</block>
   <block id="e6ea93198fd78cbc89b93053e0d0b573" category="paragraph"><block ref="e6ea93198fd78cbc89b93053e0d0b573" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ca873110efddef67beadcfe5f8a4ca84" category="paragraph">管理者ユーザが利用できる強化されたREST API使用状況の追跡機能により、セキュリティ体制を強化し、リソース管理を合理化できます。APIの使用状況を追跡することで、使用されているAPIトークン、使用元のIPアドレス、生成されるトラフィック量を確認できます。トークンを特定のIPアドレスと使用レベルにリンクすることで、システムアクセスと使用傾向に関する強力なインサイトが得られ、安全で効率的な環境を維持し、スムーズな運用を維持するために必要な制御が可能になります。管理者ユーザが利用できる強化されたREST API使用状況の追跡機能により、セキュリティ体制を強化し、リソース管理を合理化できます。APIの使用状況を追跡することで、使用されているAPIトークン、使用元のIPアドレス、生成されるトラフィック量を確認できます。トークンを特定のIPアドレスと使用レベルにリンクすることで、システムアクセスと使用傾向に関する強力なインサイトが得られ、安全で効率的な環境を維持し、スムーズな運用を維持するために必要な制御が可能になります。</block>
+  <block id="24f17d3ee72bb2738ceb12180ec2fa71" category="paragraph">APIの使用状況を表示するには、* Observability &gt; Admin &gt; API Access *に移動し、_View API Usage_を選択します。このAPIは、DII Observability APIでのみ使用できます。ワークロードセキュリティには適用されません。APIの使用状況を表示するには、* Observability &gt; Admin &gt; API Access *に移動し、_View API Usage_を選択します。このAPIは、DII Observability APIでのみ使用できます。ワークロードセキュリティには適用されません。</block>
+  <block id="c033c9dce9a48cc67d3409bab6aab6ba" category="paragraph"><block ref="c033c9dce9a48cc67d3409bab6aab6ba" category="inline-link-macro-rx"></block></block>
 </blocks>

@@ -47,6 +47,6 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。
 
-link:media/Data_Infrastructure_InsightsOn-prem_ComponentsNOTICE-1.pdf["データインフラに関する分析情報（旧称Cloud Insights）に関するお知らせ"]
+link:media/Data_Infrastructure_Insights-On-prem-Components-ReleaseNotice1.pdf["データインフラに関する分析情報（旧称Cloud Insights）に関するお知らせ"]
 
 link:media/Data_Infrastructure_Insights_Workload_SecurityOn-prem_ComponentsNOTICE-1.pdf["ワークロードのセキュリティに関する通知（旧称Cloud Secure ）"]
