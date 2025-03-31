@@ -19,7 +19,7 @@ keywords: reporting, cognos, data warehouse, dwh, managing, customizing, copying
 
 
 [role="lead"]
-レポートの出力形式と配信のカスタマイズ、レポートのプロパティまたはスケジュールの設定、およびレポートの電子メール送信を行うことができます。
+レポートの出力形式と配信のカスタマイズ、レポートのプロパティまたはスケジュールの設定、レポートのEメール送信を行うことができます。
 
 
 NOTE: レポート機能はData Infrastructure Insightsで使用できlink:concept_subscribing_to_cloud_insights.html["Premium Edition の場合"]ます。
@@ -39,8 +39,6 @@ IMPORTANT: レポートの権限やセキュリティを変更する前に、「
 image:Reporting_Output_and_Delivery.png["レポートの出力と配信"]
 
 . [ プロパティ ] 、 [ スケジュール ] の順にクリックします
-
-
 . 次のオプションを設定できます。
 +
 ** *レポートを実行するスケジュール*。

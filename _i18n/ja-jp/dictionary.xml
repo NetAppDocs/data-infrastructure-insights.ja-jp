@@ -5465,7 +5465,6 @@
   <block id="b91bb54d5249b7797f071b75dfcc2669" category="cell">1 日（または次の ETL まで）</block>
   <block id="96cfad9bf45103ee0ef58fa25c0cfa6b" category="summary">レポートの出力と配信のカスタマイズ、クリップボードへのレポートのコピー、レポートの開き方（ XML ）。</block>
   <block id="e1039935b082dfd38ef43eb7fef4b452" category="doc">レポートの管理</block>
-  <block id="ce2ce538c48e429c8dc98553649f3bbd" category="paragraph">レポートの出力形式と配信のカスタマイズ、レポートのプロパティまたはスケジュールの設定、およびレポートの電子メール送信を行うことができます。</block>
   <block id="11ad95cf52a6f6d0f02121ba7f3398ce" category="admonition">レポートの権限やセキュリティを変更する前に、「マイコンテンツ」レポートを「チームコンテンツ」フォルダにコピーして、レポートを確実に保存する必要があります。</block>
   <block id="b4c2efa32144f8c7f6fa5513ac1c7e55" category="section-title">レポートの出力形式と配信方法のカスタマイズ</block>
   <block id="8bee38bef7beb0158135e68890b6cc17" category="paragraph">レポートの形式と配信方法をカスタマイズできます。</block>
@@ -11998,7 +11997,37 @@
   <block id="bc23aa0997542e15a65a21a96991960a" category="paragraph">The user can go to the add/edit collector page, enter the cluster level details (in Cluster Mode) or SVM level details (in SVM Mode), and click on the *Test Connection* button. Workload Security will then process the request and display an appropriate success or failure message.</block>
   <block id="e8f41baace36619af4a7292787a17936" category="inline-image-macro">Workload Security 'Test Connection' success message</block>
   <block id="e6ea93198fd78cbc89b93053e0d0b573" category="paragraph"><block ref="e6ea93198fd78cbc89b93053e0d0b573" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ca873110efddef67beadcfe5f8a4ca84" category="paragraph">管理者ユーザが利用できる強化されたREST API使用状況の追跡機能により、セキュリティ体制を強化し、リソース管理を合理化できます。APIの使用状況を追跡することで、使用されているAPIトークン、使用元のIPアドレス、生成されるトラフィック量を確認できます。トークンを特定のIPアドレスと使用レベルにリンクすることで、システムアクセスと使用傾向に関する強力なインサイトが得られ、安全で効率的な環境を維持し、スムーズな運用を維持するために必要な制御が可能になります。管理者ユーザが利用できる強化されたREST API使用状況の追跡機能により、セキュリティ体制を強化し、リソース管理を合理化できます。APIの使用状況を追跡することで、使用されているAPIトークン、使用元のIPアドレス、生成されるトラフィック量を確認できます。トークンを特定のIPアドレスと使用レベルにリンクすることで、システムアクセスと使用傾向に関する強力なインサイトが得られ、安全で効率的な環境を維持し、スムーズな運用を維持するために必要な制御が可能になります。</block>
-  <block id="24f17d3ee72bb2738ceb12180ec2fa71" category="paragraph">APIの使用状況を表示するには、* Observability &gt; Admin &gt; API Access *に移動し、_View API Usage_を選択します。このAPIは、DII Observability APIでのみ使用できます。ワークロードセキュリティには適用されません。APIの使用状況を表示するには、* Observability &gt; Admin &gt; API Access *に移動し、_View API Usage_を選択します。このAPIは、DII Observability APIでのみ使用できます。ワークロードセキュリティには適用されません。</block>
   <block id="c033c9dce9a48cc67d3409bab6aab6ba" category="paragraph"><block ref="c033c9dce9a48cc67d3409bab6aab6ba" category="inline-link-macro-rx"></block></block>
+  <block id="88c55c9f00e518db40a6c680728b787f" category="section-title">2025年3月</block>
+  <block id="27e5c5c33051ef47e145b432e9e357db" category="section-title">効率的なインフラ管理のための強化されたコンテキストナビゲーション</block>
+  <block id="ca3a08b4a664d3460c1afb17ce14a0ca" category="paragraph">データインフラの分析情報を活用して優れた運用性を実現することで、時間を節約できます。現在、任意のオブジェクトからアセットランディングページに直接ジャンプしてデバイスのパフォーマンスを把握できるコンテキストメニューリンク、ネットワークトポロジを可視化できるSAN Analyzer、運用を認識できるログ、構成管理用のChange Analyzerを追加しています。</block>
+  <block id="45e1277af0993d1c08727056083474c9" category="paragraph">複数のビューにまたがって重要なデータに瞬時にアクセスできるため、オブジェクトの関係をより迅速に把握できます。この合理化されたワークフローは、意思決定と問題解決を迅速化し、最終的に時間を節約し、全体的な分析機能を強化します。</block>
+  <block id="d27d64bffed25c10a892bc8f660ba7f7" category="inline-image-macro">コンテキストメニューの例、width=500</block>
+  <block id="6dd26781bf3123977fae6dbb9f75427c" category="paragraph"><block ref="6dd26781bf3123977fae6dbb9f75427c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="27fca6aa6301d8c72a523105d0dfaa1a" category="section-title">削除されたアセットの履歴の保持</block>
+  <block id="586eb9e16a0ec8ad28e277e9d196f2dd" category="paragraph">インフラ変更機能が強化され、移動して使用できなくなったqtreeやボリュームなど、削除された資産の履歴が保持されるようになりました。</block>
+  <block id="a79d807cd6c977273077bb3d4a51e1b2" category="paragraph">トラブルシューティングパズルで何かが欠けていませんか? もうやめて! 取り消し線でマークされた削除済みオブジェクトも含め、すべてが表示され、アセットが削除された後でも完全なコンテキストが提供されるため、エンドツーエンドのパス全体で過去の変更やアラートから重要な要素を見逃すことはありません。</block>
+  <block id="d8da5ac928748682c768408271223f18" category="paragraph">結果は？問題の資産が存在しなくなった場合でも、解決時間が短縮され、インフラに関する意思決定が自信を持って行えるようになります。</block>
+  <block id="a0b5ff2e6cd6a9740be797a7a6b34997" category="inline-image-macro">インフラの変更で削除されたアセットに取り消し線が表示され、幅が300であることが示されている</block>
+  <block id="f3c74d92e889a4bd4cbd4388efc65fdb" category="paragraph"><block ref="f3c74d92e889a4bd4cbd4388efc65fdb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f09332c5a7acdbdfd43f130781181079" category="section-title">Kubernetes Operatorプッシュボタンアップグレード</block>
+  <block id="d72c7a2edae9e6c8ab8d1527df9217ff" category="paragraph">最新のKubernetes Operatorがあることを確認したい場合は、DII Kubernetes Collectorsクラスタメニューからオペレータをオンデマンドでアップグレードします。メニューから[アップグレード]を選択するだけで、オペレータはイメージシグネチャを確認し、現在のインストールのスナップショットをキャプチャして、アップグレードを実行します。</block>
+  <block id="abdd6f2e7e9f2361861772c2c29f98fb" category="paragraph">プッシュボタンアップグレードはオプション機能であり、アクティブ化はクラスタ単位で管理できます。</block>
+  <block id="b0fc14520e77d6941197ef450ea7eaae" category="inline-image-macro">クラスタメニューからのプッシュボタン式オペレータアップグレード、幅= 600</block>
+  <block id="e3f059356a2fbfebca83fcdf9910b3d2" category="paragraph"><block ref="e3f059356a2fbfebca83fcdf9910b3d2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4ed46393b3a0412ddf1eae5c48a6d652" category="section-title">ストレージワークロードセキュリティデータコレクタの接続テスト</block>
+  <block id="fe66903c02341817b7eae46d6cef7796" category="paragraph">接続テスト機能は、Data Infrastructure Insights（DII）ワークロードセキュリティでデータコレクタを設定する際に、エンドユーザが障害の具体的な原因を特定できるようにすることを目的としています。これにより、ユーザはネットワーク通信またはロールの欠落に関連する問題を自己修正できます。</block>
+  <block id="701f9e4af7f2f002d1df02722e85bb9c" category="paragraph"><block ref="28ccd88a9589dac6de50156682ee8b05" category="inline-image-macro-rx" type="image"></block> <block ref="e6ea93198fd78cbc89b93053e0d0b573" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f8af8f12dc05f5482c3f4fd82b8cdae2" category="paragraph">Data Infrastructure Insights Acquisition Unitでサポートされるオペレーティングシステムは次のとおり<block ref="e27610920cf83f6a88b088882e8c727e" category="inline-link-macro-rx"></block>です。</block>
+  <block id="fcf95cfc7074058539f2dddb1953e304" category="list-text">AlmaLinux 9.5</block>
+  <block id="a4d1a1b0fcd0ad5c982e632c20fe46c7" category="list-text">Debian（64ビット）11</block>
+  <block id="d2eddc9906197e8402324c9aa4cd553c" category="list-text">openSUSE Leap 15.6</block>
+  <block id="d3720f74b5a7e492d19484a99dc4099a" category="list-text">Oracle Enterprise Linux（64ビット）8.9、8.10、9.5</block>
+  <block id="62cdf3cf4f8add1aca2819c46ff9a420" category="list-text">Red Hat（64ビット）8.9、8.10、9.5</block>
+  <block id="4e80b0ab552791c676018d06a8ab1a7c" category="list-text">ロッキー9.5</block>
+  <block id="ef436eeff254793f46443f71b4c3e50d" category="list-text">SUSE Linux Enterprise Server 15 SP6</block>
+  <block id="7ce4625168ff8cf506188a346ab739ac" category="list-text">Ubuntu Server 24.04 LTS</block>
+  <block id="0be262a01ffd53cb1827d924de37e376" category="paragraph">管理者ユーザが利用できる強化されたREST API使用状況の追跡機能により、セキュリティ体制を強化し、リソース管理を合理化できます。APIの使用状況を追跡することで、使用されているAPIトークン、使用元のIPアドレス、生成されるトラフィック量を確認できます。トークンを特定のIPアドレスと使用レベルにリンクすることで、システムアクセスと使用傾向に関する強力なインサイトが得られ、安全で効率的な環境を維持し、スムーズな運用を維持するために必要な制御が可能になります。</block>
+  <block id="8261d0e1521d30da1b36761d508cb245" category="paragraph">APIの使用状況を表示するには、* Observability &gt; Admin &gt; API Access *に移動し、_View API Usage_を選択します。このAPIは、DII Observability APIでのみ使用できます。ワークロードセキュリティには適用されません。</block>
+  <block id="2613b3928d7ae4e00e8610b858e67528" category="paragraph">レポートの出力形式と配信のカスタマイズ、レポートのプロパティまたはスケジュールの設定、レポートのEメール送信を行うことができます。</block>
 </blocks>
