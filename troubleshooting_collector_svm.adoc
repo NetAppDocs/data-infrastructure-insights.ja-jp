@@ -78,5 +78,8 @@ image:CS_Data_Collector_Error.png["Workload Security Collector Error More Detail
 
 
 | SVMモードが選択されている場合、Data Collectorはエラーアウトしています。 | SVMモードで接続中にSVM管理IPではなくクラスタ管理IPを使用して接続すると、接続エラーが発生します。正しいSVM IPが使用されていることを確認します。 
+
+
+| アクセス拒否機能が有効になっている場合、データコレクタに「コネクタがエラー状態です。サービス名： audit 。失敗理由：SVM test_svmでfpolicyを設定できませんでした。理由：ユーザーは許可されていません。" | アクセス拒否機能に必要なREST権限がユーザにない可能性があります。の手順に従って権限を設定してくださいlink:concept_ws_integration_with_ontap_access_denied.html["このページです"]。権限が設定されたら、コレクタを再起動します。 
 |===
 それでも問題が解決しない場合は、 [ ヘルプ ]>[ サポート *] ページに記載されているサポートリンクにアクセスしてください。
