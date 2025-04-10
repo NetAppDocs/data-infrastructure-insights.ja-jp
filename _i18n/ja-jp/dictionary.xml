@@ -10982,28 +10982,21 @@
   <block id="9308a4a251c0b6f099fc32506e41c24d" category="inline-image-macro">Workload Security Collector Error More Detailリンク</block>
   <block id="6a6fcf99d83d56b2429dfa3ef83b50a0" category="paragraph"><block ref="6a6fcf99d83d56b2429dfa3ef83b50a0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d7a4e713cb63e4db8a2b51e171793fb0" category="cell">Data Collector はしばらくの間実行され、ランダムな時刻の後に停止します。 "Error message: connector is in error state" というエラーメッセージが表示されます。サービス名： audit 。エラーの理由：外部 FPolicy サーバが過負荷状態です。」</block>
-  <block id="6b6d7f0bb3be3abde199877bf4398807" category="cell">ONTAP からのイベントレートは、 [ エージェント ] ボックスで処理できるイベントレートよりもはるかに高くなっています。そのため、接続が終了しました。切断が発生したときに、 CloudSecure でピークトラフィックを確認します。これは、 * CloudSecure &gt; Activity Forensics &gt; All Activity * ページで確認できます。集約されたトラフィックのピークが [ エージェント ] ボックスで処理できるトラフィックよりも大きい場合は、 [ エージェント ] ボックスでのコレクタ展開のサイズ設定方法に関する [ イベントレートチェッカー ] ページを参照してください。2021 年 3 月 4 日より前に Agent ボックスに Agent がインストールされた場合は、 Agent ボックスで次のコマンドを実行します。 echo 'net.core.rmem_max=8388608'&gt;&gt; /etc/sysctl.conf echo 'net.ipv4_rmem=4096 2097152 8388608'&gt;&gt; /etc/sysctl.conf コレクタ UI のサイズ変更後に再起動してください。</block>
   <block id="7dc1f3b50a6e66da2ae31d89467342c4" category="cell">コレクタから「 No local IP address found on the Connector that can reach the data interfaces of the SVM 」というエラーメッセージが報告されます。</block>
   <block id="dfb48a2f78b82c90165015b0e73f7e58" category="inline-link-macro">ネットアップサポート</block>
   <block id="17f836aa8a8fb1af2d3360f0ff3cda15" category="cell">メッセージ： "[hostname:&lt;IP Address&gt;] の ONTAP タイプを特定できませんでした。理由：ストレージシステム &lt;IP アドレス &gt; への接続エラー：ホストに到達できません（ホストに到達できません） "</block>
-  <block id="e5f53b94e30dcc1b62ef059336b700c9" category="cell">1.正しいSVM IP管理アドレスまたはクラスタ管理IPが指定されていることを確認します。2.接続先のSVMまたはクラスタにSSH接続します。接続が完了したら、 SVM またはクラスタ名が正しいことを確認してください。</block>
   <block id="17a99211f689747ad8a030b9a5329d3f" category="cell">エラーメッセージ：「コネクタにエラーがあります。service.name ：監査。失敗の理由：外部 FPolicy サーバが終了しました。」</block>
   <block id="92803a6fb12b06142e6654f883c9c782" category="inline-link-macro">ファイアウォールコマンドをチェックしてください</block>
-  <block id="94748ec62c100ce45c97bda6d69f9969" category="cell">1.ファイアウォールがエージェントマシン内の必要なポートをブロックしている可能性があります。エージェントマシンが SVM から接続するために、ポート範囲 35000-55000/TCP を開いていることを確認します。また、 ONTAP 側からエージェントマシンへの通信をブロックするファイアウォールが有効になっていないことを確認します。2.[エージェント]ボックスに次のコマンドを入力し、ポート範囲が開いていることを確認します。_sudo iptables -save | grep 3500 * _ Sample 出力は次のようになります。 _a in_public_allow -p tcp -m tcp - dport 35000 -m conntrack -ctstate new-j accept_3 。SVM にログインし、次のコマンドを入力して、 ONTAP との通信をブロックするファイアウォールが設定されていないことを確認します。ONTAP側の_system services firewall show __system services firewall policy show_on<block ref="c2f863dc8aacfc5c321b626bd2f4e2b3" category="inline-link-macro-rx"></block>4.監視するSVM /クラスタにSSHで接続します。SVM のデータ LIF から Agent ボックスに ping を送信し（ CIFS 、 NFS プロトコルのサポートあり）、 ping が動作していることを確認します。 network ping -vserver &lt;vserver name&gt; -destination &lt;Agent ip&gt; -lif &lt;lif Name&gt; -show-detail_ping 不可能な場合は、 ONTAP のネットワーク設定が正しいことを確認して、エージェントマシンから ping を実行できるようにします。5. 1 つの SVM を 2 つのデータコレクタを使用してテナントに 2 回追加すると、このエラーが表示されます。UI を使用して、いずれかのデータコレクタを削除します。次に、 UI を使用して他のデータコレクタを再起動します。次に、データコレクタのステータスが「 running 」と表示され、 SVM からのイベントの受信が開始されます。基本的に、テナントでは、 1 つのデータコレクタで 1 つの SVM を追加します。1 つの SVM を 2 つのデータコレクタを使用して 2 回追加しないで6.同じSVMを2つの異なるワークロードセキュリティ環境（テナント）に追加した場合、最後のSVMは常に成功します。2 つ目のコレクタは、独自の IP アドレスで FPolicy を設定し、最初の IP アドレスから開始します。そのため、最初のデータ収集ツールはイベントの受信を停止し、その「監査」サービスはエラー状態になります。これを回避するには、各 SVM を 1 つの環境に設定します。7.このエラーは、サービスポリシーが正しく設定されていない場合にも発生することがあります。ONTAP 9.8以降では、データソースコレクタに接続するために、データサービスdata-fse-clientサービス、またはdata-cifsが必要です。さらに、監視対象SVMのデータLIFにdata-fsFPolicyクライアントサービスを関連付ける必要があります。</block>
   <block id="3ff8715e3293a7f6a746ae2f5903e6fc" category="cell">アクティビティページにイベントは表示されません。</block>
-  <block id="57cb6cf5756643ef9f1a5fc9914bed03" category="cell">1.ONTAPコレクタが「running」状態になっているかどうかを確認します。「はい」の場合は、一部のファイルを開いて、 CIFS クライアント VM 上で一部の CIFS イベントが生成されていることを確認します。2.処理が表示されない場合は、SVMにログインして次のコマンドを入力してください。_&lt;svm&gt; event log show -source fpolicy_fpolicy に関連するエラーがないことを確認してください。3.アクティビティが表示されない場合は、SVMにログインしてください。次の command_&lt;svm&gt; fpolicy show_Check を入力して、「 cloudsecure_」 というプレフィックスの付いた FPolicy ポリシーが設定され、ステータスが「 on 」になっていることを確認します。設定されていないと、 Agent が SVM でコマンドを実行できない可能性が高くなります。ページの先頭に記載されているすべての前提条件を満たしていることを確認してください。</block>
   <block id="bf7317c42b788373d4a9473aa1cc851b" category="cell">SVM Data Collector がエラー状態で、エラーメッセージ「 Agent failed to connect to the collector 」</block>
-  <block id="1522f1e2edee0ebe89de50e47b32f4a7" category="cell">1.エージェントが過負荷状態であり、データソースコレクタに接続できない可能性があります。2.Agentに接続されているデータソースコレクタの数を確認します。3.また、UIの[All Activity]ページでデータフローレートを確認します。4.1秒あたりのアクティビティ数が非常に多い場合は、別のエージェントをインストールし、一部のデータソースコレクタを新しいエージェントに移動します。</block>
   <block id="3650ca0390cbe1b7b56c0868bc3472e8" category="cell">SVM Data Collector で、「 fpolicy.server.connectError: Node failed to establish a connection with the FPolicy server "12.195.15.146" （ reason ： Select Timed Out" ）」というエラーメッセージが表示される</block>
   <block id="19fbc1da6cc1d96ccb997d120b2a91eb" category="cell">SVM / クラスタでファイアウォールが有効になっています。そのため、 FPolicy エンジンは FPolicy サーバに接続できません。ONTAP の CLI で詳細情報を取得できます。 event log show -source fpolicy ：エラーイベントログ show -source fpolicy-fields event 、 action 、 description の詳細を表示できます。<block ref="c2f863dc8aacfc5c321b626bd2f4e2b3" category="inline-link-macro-rx"></block>ONTAP側。</block>
   <block id="9075128206bc41797fb7dcbcce601bd5" category="cell">エラーメッセージ : 「コネクタはエラー状態です。サービス名： audit 。失敗の理由： SVM で有効なデータインターフェイスが見つかりません（ロール：データ、データプロトコル： NFS か CIFS か、両方、ステータス：稼働）。」</block>
   <block id="5e50a9740093f324176ef9cdd483d732" category="cell">動作インターフェイス（データプロトコルおよびデータプロトコルとして CIFS / NFS が設定されている）があることを確認してください。</block>
   <block id="42c19ac69d2315e69adceb5440ce4cbe" category="cell">データコレクタが Error 状態になり、しばらくしてから running 状態になり、 Error に戻ります。このサイクルが繰り返されます。</block>
-  <block id="9c1397faec00b5e5c1414c787d14358e" category="cell">これは通常、次のシナリオで発生します。 1.データコレクタが複数追加されています。2.このような動作を示すデータコレクタでは、1つのSVMがこれらのデータコレクタに追加されます。つまり、 2 つ以上のデータコレクタが 1 つの SVM に接続されます。3.1つのデータコレクタを1つのSVMだけに接続する4.同じSVMに接続されている他のデータコレクタを削除します。</block>
   <block id="2d964cb606454cdebb2ea12ed310dbab" category="cell">コネクタでエラーが発生しています。サービス名： audit 。失敗の理由：（ SVM SVM 名のポリシー）を設定できませんでした。理由： 'fpolicy.scope-modify ： "federy" 内の 'shares-to-include' 要素に無効な値が指定されています</block>
   <block id="82e15291d012761eb5c9c9dc7f78a45f" category="cell">共有名は、引用符を付けずに指定する必要があります。ONTAP SVM DSC 設定を編集して共有名を修正します。Include および exclude shares _ は、長い共有名のリストを対象としたものではありません。対象に含める共有や除外する共有が大量にある場合は、ボリュームでフィルタリングします。</block>
   <block id="195474d2c18505993c684349168eca84" category="cell">クラスタに未使用の既存のポリシーがあります。ワークロードセキュリティをインストールする前に、これらのワークロードに対して何を行う必要がありますか？</block>
-  <block id="a991a3dd31c71b0054aa7140c8d25b9a" category="cell">切断状態の場合でも、既存の未使用の FPolicy 設定をすべて削除することを推奨します。ワークロードセキュリティで、プレフィックス「cloudsecure_」を付けてFPolicyを作成します。その他の未使用の FPolicy 設定はすべて削除できます。fpolicy list ： _fpolicy show_steps を表示して FPolicy 設定を削除する場合の CLI コマンド： _fpolicy disable -vserver &lt;svmname&gt; -policy -name &lt;policy_name&gt; _fpolicy policy scope delete -vserver &lt;svmname&gt; -policy name &lt;policy_name&gt; _fpolicy policy delete -vserver &lt;svmname &gt; -policy_name &lt;policy_name&gt; -policy_name&gt;fpolicy_fpolicy_name&gt;</block>
   <block id="63deecc7a53992db1697a520a67af0bd" category="cell">ワークロードセキュリティを有効にすると、ONTAP のパフォーマンスが低下します。レイテンシは一時的に上昇し、IOPSは散発的に低下します。</block>
   <block id="25de52ee95bc069e80aae94425213b53" category="inline-link-macro">1372994</block>
   <block id="a23b44fdff4bcafe023f18c4c11815e0" category="inline-link">1415152</block>
@@ -11014,7 +11007,6 @@
   <block id="723f73d5b4ee441851ae64cbfe823522" category="cell">データコレクタでエラーが発生し、次のエラーメッセージが表示されます。「エラー：コネクタがエラー状態です。サービス名： audit 。失敗の理由： SVM svm_backup でポリシーを設定できませんでした。理由： ZAPI フィールド：イベントに対して値が指定されていません。「</block>
   <block id="0631a8aa5414db88c4ba11ffa8ff89e8" category="cell">NFS サービスのみが設定された新しい SVM から開始します。ワークロードのセキュリティにONTAP SVMのデータコレクタを追加します。ワークロードセキュリティでONTAP SVMデータコレクタを追加する際、CIFSはSVMで許可されるプロトコルとして設定されます。ワークロードセキュリティのデータコレクタでエラーが表示されるまで待ちます。SVMでCIFSサーバが設定されていないため、左側にあるエラーはワークロードのセキュリティに表示されます。ONTAP SVM データコレクタを編集し、許可されたプロトコルとして CIFS のチェックを解除します。データコレクタを保存します。NFS プロトコルのみが有効な状態で実行が開始されます。</block>
   <block id="1b852bd0522bb1e9abdc5b85f45b2eff" category="cell">Data Collector に、「 Error: Failed to Determine the collector within 2 retries 、 try restarting the collector again (Error Code: AGENT008) 」というエラーメッセージが表示されます。</block>
-  <block id="c54f0cb7ebe859ae013e2a39e57b38c0" category="cell">1.[ データコレクタ ] ページで、エラーが表示されているデータコレクタの右にスクロールし、 3 つのドットメニューをクリックします。選択した編集 _ 。データコレクタのパスワードをもう一度入力します。[Save] ボタンを押して、データコレクタを保存します。Data Collector が再起動し、エラーが解決されます。2.Agentマシンに十分なCPUまたはRAMヘッドルームがない可能性があるため、DSCに障害が発生しています。マシンのエージェントに追加されているデータコレクタの数を確認してください。20を超える場合は、エージェントマシンのCPUとRAM容量を増やしてください。CPUとRAMが増加すると、DSCは初期化状態になり、その後自動的に実行状態になります。のサイジングガイドを参照してください<block ref="830ad31fe88c5bf31dcfcc5f15ccdf0e" category="inline-link-macro-rx"></block>。</block>
   <block id="f4635255d83c947a8f5c0873878fce73" category="cell">SVMモードが選択されている場合、Data Collectorはエラーアウトしています。</block>
   <block id="e01a5196bbb9ef19ecab5eb2b9c9a7a8" category="cell">SVMモードで接続中にSVM管理IPではなくクラスタ管理IPを使用して接続すると、接続エラーが発生します。正しいSVM IPが使用されていることを確認します。</block>
   <block id="489efd89349dbbe0899a6a7b922044da" category="paragraph">それでも問題が解決しない場合は、 [ ヘルプ ]&gt;[ サポート *] ページに記載されているサポートリンクにアクセスしてください。</block>
@@ -11592,7 +11584,6 @@
   <block id="0860569a69c3584507ee09f4be585418" category="cell">insecureK8sSkipVerify</block>
   <block id="3008cd3125cccc003fa13335717e556e" category="cell">IP SANが不足しているためにtelegrafで証明書を検証できない場合は、検証スキップを有効にしてみてください。</block>
   <block id="9e43104f0687bd3a308759c5411641d7" category="paragraph"><block ref="9e43104f0687bd3a308759c5411641d7" category="inline-link-macro-rx"></block></block>
-  <block id="348fd8f652c33b1be14b9b2f000cff0d" category="cell">その理由としては、 ONTAP 側のネットワーク問題が考えられます。以下の手順に従ってください。 1.SVM のデータ LIF または SVM からの接続をブロックしている管理 LIF にファイアウォールがないことを確認します。2.クラスタ管理IPを使用してSVMを追加する場合は、SVMのデータLIFと管理LIFがAgent VMからping可能であることを確認してください。問題が発生した場合は、 LIF のゲートウェイ、ネットマスク、およびルートを確認してください。また、クラスタ管理 IP を使用して SSH 経由でクラスタにログインし、エージェント IP に ping を実行することもできます。エージェントの IP が ping 可能であることを確認します。 _network ping -vserver &lt;vserver name&gt; -destination &lt;Agent ip&gt; -lif &lt;LIF Name&gt; -show-detail_ping 不可能な場合は、 ONTAP のネットワーク設定が正しいことを確認して、エージェントマシンが ping 可能であることを確認します。3.クラスタIP経由で接続しようとしたが機能しない場合は、SVM IP経由で直接接続してみてください。SVM IP を使用して接続する手順については、上記を参照してください。4.SVM IPおよびvsadminのクレデンシャルを使用してコレクタを追加する際に、SVM LIFでData plus Mgmtロールが有効になっているかどうかを確認します。この場合、 SVM LIF に ping することは可能ですが、 SVM LIF への SSH は機能しません。「はい」の場合は、 SVM 管理のみの LIF を作成し、この SVM 管理のみの LIF を使用して接続してみてください。5.それでも動作しない場合は、新しいSVM LIFを作成して、そのLIF経由で接続を試してください。サブネットマスクが正しく設定されていることを確認します。6.高度なデバッグ：a）ONTAPでパケットトレースを開始します。b）CloudSecure UIからSVMにデータコレクタを接続してみます。c）エラーが表示されるまで待ちます。ONTAPでパケットトレースを停止します。d）ONTAPからパケットトレースを開きます。f)から&lt;cluster_mgmt_ip&gt;がない場合は、&lt;clustername&gt; ONTAPのファイアウォールの問題です。g) ONTAPでファイアウォールを開き、ONTAPがエージェントボックスに接続できるようにします。g) ONTAPでファイアウォールを開き、ONTAPがエージェントボックスに接続できるようにします。7.それでも動作しない場合は、ネットワークチームに問い合わせて、外部ファイアウォールがONTAPからエージェントボックスへの接続をブロックしていないことを確認してください。9.上記のいずれの方法でも問題が解決しない場合は、でケースをオープンしてサポートを依頼し<block ref="d0162286c59c67bf86d01f060ee7cd04" category="inline-link-macro-rx"></block>ます。</block>
   <block id="2b8272217b69f1c5b5ad5968f0bc0945" category="list-text">Data Infrastructure Insightsの無償トライアルにご登録いただき、利用可能な機能をご確認ください。無償トライアルに登録するには：</block>
   <block id="6d2404e5699069be70636f65562fe693" category="list-text">に移動<block ref="66922be03d9fc23a3ec9641b7884c8f2" category="inline-link-rx"></block></block>
   <block id="e78fd759357c2a61f07ddc6a902f9270" category="list-text">ページ上部の*購入方法*を選択します。</block>
@@ -12265,28 +12256,6 @@
   <block id="f4a2db329e641047bab00d72f457a0f3" category="list-text">NetappRelease 9.15.1RC2：2024年6月24日（月）04:49:55 UTC</block>
   <block id="5fe3118f15f475a13fd3a59f91a58a73" category="list-text">NetappRelease 9.16.1：2025年1月18日（土）19：31：15 UTC</block>
   <block id="4563b8f0209cbd3757ef3f8f3d6c367f" category="list-text">NetappRelease 9.16.1P1：2025年2月14日（金）03：53：50 UTC</block>
-  <block id="13c188199456123504d0930e6edccf66" category="list-text">NetappRelease 9.16.1RC1：2024年11月04日（月）10:39:46 UTC</block>
-  <block id="927116b17b6232240f2cc99957abd403" category="list-text">NetappRelease 9.16.1X26：2024年12月9日（月）10:27:42 UTC</block>
-  <block id="8cb7f86014f2d6bda751cf0e082275c4" category="list-text">NetappRelease 9.16.1X29：2025年1月12日（日）11:18:25 UTC</block>
-  <block id="5eec4f4fc503f273dc57f81c785f16c3" category="list-text">NetappRelease 9.17.1X7：2025年2月14日（金）11：21：52 UTC</block>
-  <block id="a0bc92ae017a4e0e0a13659b431fc42d" category="list-text">NetappRelease Clawhammer__9.14.1：2024年5月18日（土）09:23:49 UTC</block>
-  <block id="fa6d9e41cb8e0bd2024eb96981de90c9" category="list-text">NetappRelease Cloudstream__9.16.1：（月）11月04日05：51：46 UTC 2024</block>
-  <block id="2b502da97c49bc44393f3b7c7aafca3e" category="list-text">NetappRelease Cloudstream__9.16.1:木3月13日20:55:54 UTC</block>
-  <block id="a8b5083dc41617e1bacd6620dc927aa0" category="list-text">NetappRelease電気クラゲ__9.17.1：月3日05：57：49 UTC</block>
-  <block id="92c42ca1290614a185bb02c4f23335c8" category="list-text">NetappRelease Electricjellyfish__9.17.1:2025年3月09日05:56:14 UTC</block>
-  <block id="99029aed0cba02f0824cac1d518ac99f" category="list-text">NetappRelease電気クラゲ__9.17.1:2025年3月16日04:54:53 UTC</block>
-  <block id="a32af6f189d23263de1a0cfec5082285" category="list-text">NetappRelease電気クラゲ__9.17.1：2025年1月28日（火）11:48:14 UTC</block>
-  <block id="62e0b141f79e75f42ea91d2ddccb00f2" category="list-text">NetappRelease電気クラゲ__9.17.1:火曜日3月18日04:59:54 UTC</block>
-  <block id="103ad6f426f1d9f3c02da81162ac306f" category="list-text">NetappRelease電気クラゲ__9.17.1：2025年3月12日（水）04：42：03 UTC</block>
-  <block id="8d214b10b4e20c8dad6b99000f400107" category="list-text">NetappRelease Mightysquirrel__9.15.1：2024年5月24日（金）05：03：10 UTC</block>
-  <block id="dbfa8b38c97072999ba8dd2a8d949e07" category="list-text">NetappRelease Mightysquirrel__9.15.1：2025年1月18日（土）11:39:42 UTC</block>
-  <block id="929f9fa6cd0ae41268bbd0b894f135ec" category="list-text">NetappRelease Tropicallightning__9.18.0: 2025年2月21日(金)14:02:58 UTC</block>
-  <block id="ac078df1e94c19c055159c17167ec9ab" category="list-text">NetappRelease Tropicallightning__9.18.0: 2025年2月17日(月)08:18:14 UTC</block>
-  <block id="c6b8b835cb977e6f8d89f3990b1a487f" category="list-text">NetappRelease Tropicallightning__9.18.0:2025年2月20日(木)08:11:55 UTC</block>
-  <block id="c27a7fb3263ce1ab5d41e70d47792d8e" category="list-text">NetappRelease Tropicallightning__9.18.0:2025年2月27日(木) 04:15:40 UTC</block>
-  <block id="3445568e749f9040a732e4bc50c56b7d" category="list-text">NetappRelease Tropicallightning__9.18.0: 2025年2月18日(火)14:00:54 UTC</block>
-  <block id="3c2856eb22a7e7c8fd4ed89747776984" category="list-text">NetappRelease Tropicallightning__9.18.0: 2025年2月26日(水) 08:19:21 UTC</block>
-  <block id="e03be4af19268d6e10fe7d727e849386" category="list-text">NetappRelease Tropicallightning__9.18.0: 2025年1月29日(水) 08:34:06 UTC</block>
   <block id="12017dd49435719b25983ccf8856826d" category="cell">H410S-2 H610S-2 H610S-4 SF19210 SF2405 SF4805 SF9605 SF9608 H410S-0 H410S-1 H410S-2 H500S H610S-1 H610S-2 H610S-4 SF19210 SF38410 SF4805 SF9605 SF9608</block>
   <block id="b8fe9bf283a2aa8fb31a26d93fefe962" category="cell">11.1.0.72 11.7.0.76 12.0.0.333 12.2.0.777 12.3.0.958 12.3.1.103 12.3.1.165 12.3.2.3 12.5.0.897 12.7.0.380</block>
   <block id="fc8e016a41c4109eeb75bb9795abff5c" category="cell">11.4.0 11.5.0.11 11.5.0.6 11.5.0.7 11.5.0.9 11.6.0 11.6.0.10 11.6.0.11 11.6.0.12 11.6.0.13 11.6.0.14 11.6.0.15 11.6.0.16 11.6.0.4 11.6.0.7 11.6.0.8 11.6.0.9 11.7.0.3 11.7.0.</block>
@@ -12311,4 +12280,58 @@
   <block id="06450b55dd990fe8530bcc47f2e2c522" category="list-text">VMware vCenter Server 8.0.0ビルド-21457384</block>
   <block id="97603db27713a81e2c84405a5352db03" category="cell">アクセス拒否機能が有効になっている場合、データコレクタに「コネクタがエラー状態です。サービス名： audit 。失敗理由：SVM test_svmでfpolicyを設定できませんでした。理由：ユーザーは許可されていません。"</block>
   <block id="56cad8f9ba4de10172f57856721882b0" category="cell">アクセス拒否機能に必要なREST権限がユーザにない可能性があります。の手順に従って権限を設定してください<block ref="acf32226210d6c3eeee22de70798517f" category="inline-link-macro-rx"></block>。権限が設定されたら、コレクタを再起動します。</block>
+  <block id="7f4e990617f489c9ef64bd60d50bbe6b" category="paragraph">ONTAP からのイベントレートは、 [ エージェント ] ボックスで処理できるイベントレートよりもはるかに高くなっています。そのため、接続が終了しました。</block>
+  <block id="6cbdb7b222e25139b815f11a8bf316b0" category="paragraph">切断が発生したときに、 CloudSecure でピークトラフィックを確認します。これは、 * CloudSecure &gt; Activity Forensics &gt; All Activity * ページで確認できます。</block>
+  <block id="fb318561d723fea4bf5cfc32c9f76869" category="paragraph">集約されたトラフィックのピークが [ エージェント ] ボックスで処理できるトラフィックよりも大きい場合は、 [ エージェント ] ボックスでのコレクタ展開のサイズ設定方法に関する [ イベントレートチェッカー ] ページを参照してください。</block>
+  <block id="df5d9f6706ba32a91dad936fdd8c31ec" category="paragraph">2021年3月4日より前にAgentがAgentボックスにインストールされている場合は、Agentボックスで次のコマンドを実行します。</block>
+  <block id="00b9b87b6684a6049795f956c8ffb2a5" category="paragraph">サイズ変更後にUIからコレクタを再起動します。</block>
+  <block id="190f101017d4849e32ad24c85a037484" category="paragraph">その理由としては、 ONTAP 側のネットワーク問題が考えられます。次の手順を実行してください。</block>
+  <block id="b2e0ae5db392da4135a0d6d4c1790759" category="list-text">SVM のデータ LIF または SVM からの接続をブロックしている管理 LIF にファイアウォールがないことを確認します。</block>
+  <block id="1750d9cfda79066e3c52899aa692608a" category="list-text">クラスタ管理IPを使用してSVMを追加する場合は、SVMのデータLIFと管理LIFがAgent VMからping可能であることを確認してください。問題が発生した場合は、 LIF のゲートウェイ、ネットマスク、およびルートを確認してください。</block>
+  <block id="391d354d5b5d9326eec673c4983e3e05" category="paragraph">また、クラスタ管理 IP を使用して SSH 経由でクラスタにログインし、エージェント IP に ping を実行することもできます。エージェントIPがping可能であることを確認します。</block>
+  <block id="e7ba86f45d7d15de38f2537adf2afd68" category="paragraph">_network ping -vserver &lt;vserver name&gt;-destination &lt;Agent IP&gt;-lif &lt;Lif Name&gt;-show-detail_</block>
+  <block id="ed6479f97f72e2c84fce83c6e84134fa" category="paragraph">pingできない場合は、ONTAPのネットワーク設定が正しいことを確認して、エージェントマシンにpingできるようにします。</block>
+  <block id="83d96b0695c5db59120643aeaf92968a" category="list-text">クラスタIP経由で接続しようとしたが機能しない場合は、SVM IP経由で直接接続してみてください。SVM IP を使用して接続する手順については、上記を参照してください。</block>
+  <block id="e91b7ee623b377e0be2de8ac35124ec3" category="list-text">SVM IPおよびvsadminのクレデンシャルを使用してコレクタを追加する際に、SVM LIFでData plus Mgmtロールが有効になっているかどうかを確認します。この場合、 SVM LIF に ping することは可能ですが、 SVM LIF への SSH は機能しません。「はい」の場合は、 SVM 管理のみの LIF を作成し、この SVM 管理のみの LIF を使用して接続してみてください。</block>
+  <block id="b020b89cfb4132620fce8c763d4e5f43" category="list-text">それでも動作しない場合は、新しいSVM LIFを作成して、そのLIF経由で接続を試してください。サブネットマスクが正しく設定されていることを確認します。</block>
+  <block id="38d9f61eb71e00630fe95685c679f545" category="list-text">高度なデバッグ：</block>
+  <block id="9ea7967a350a4c316eef82d40d89255d" category="list-text">ONTAPでパケットトレースを開始します。</block>
+  <block id="46ec79d0768a6d0a100a8c413f2bf2e1" category="list-text">CloudSecure UIからSVMにデータコレクタを接続してみます。</block>
+  <block id="2f58d7381ad7f7f030c921ce2c9f8cf8" category="list-text">エラーが表示されるまで待ちます。ONTAP でパケットトレースを停止します。</block>
+  <block id="d1222ca7babc8de42ebd32afdc47c19e" category="list-text">ONTAPからパケットトレースを開きます。この場所で入手できます</block>
+  <block id="01282ac850154ef88f6a2c9c98c72d86" category="list-text">ONTAPから[Agent]ボックスにSYNがあることを確認します。</block>
+  <block id="af3c0fb88b84cfd9cc8ca65f34e57ba7" category="list-text">ONTAPからSYNがない場合は、ONTAPのファイアウォールに問題があります。</block>
+  <block id="bb2dad639d0be16200439eaf0f1271fd" category="list-text">ONTAPでファイアウォールを開き、ONTAPがエージェントボックスに接続できるようにします。</block>
+  <block id="1abacfdd7dee433fff13b8711376db1e" category="list-text">それでも動作しない場合は、ネットワークチームに問い合わせて、外部ファイアウォールがONTAPからエージェントボックスへの接続をブロックしていないことを確認してください。</block>
+  <block id="489bafc46aa7866b520261897d22b678" category="list-text">上記のいずれの方法でも問題が解決しない場合は、でケースをオープンしてサポートを依頼し<block ref="d0162286c59c67bf86d01f060ee7cd04" category="inline-link-macro-rx"></block>ます。</block>
+  <block id="ba6e4156573da1d7fd83deff708c619a" category="list-text">正しいSVM IP管理アドレスまたはクラスタ管理IPが指定されていることを確認します。</block>
+  <block id="c6ee5bc9438aec5cca325db3a8c1c1cd" category="list-text">接続先のSVMまたはクラスタにSSH接続します。接続が完了したら、 SVM またはクラスタ名が正しいことを確認してください。</block>
+  <block id="f75d363acbf8cf70fefffb53b3da571a" category="list-text">ファイアウォールがエージェントマシン内の必要なポートをブロックしている可能性があります。エージェントマシンが SVM から接続するために、ポート範囲 35000-55000/TCP を開いていることを確認します。また、 ONTAP 側からエージェントマシンへの通信をブロックするファイアウォールが有効になっていないことを確認します。</block>
+  <block id="3e37349ce90b03d4001880c0fe9ad301" category="list-text">[エージェント]ボックスに次のコマンドを入力し、ポート範囲が開いていることを確認します。</block>
+  <block id="31778181eddc9131a7464e3f7ffa4c64" category="paragraph">出力例は次のようになります。</block>
+  <block id="f294b3b3851a69f25c2946aa296d638a" category="list-text">SVM にログインし、次のコマンドを入力して、 ONTAP との通信をブロックするファイアウォールが設定されていないことを確認します。</block>
+  <block id="afa095cfe4f919dd17ad75565b75c881" category="paragraph"><block ref="c2f863dc8aacfc5c321b626bd2f4e2b3" category="inline-link-macro-rx"></block>ONTAP側。</block>
+  <block id="e786ac643c38b800614aa1d0e4d3319c" category="list-text">監視するSVM /クラスタにSSHで接続します。SVMデータLIFから[Agent]ボックスにpingを送信し（CIFSプロトコルとNFSプロトコルをサポート）、pingが動作していることを確認します。</block>
+  <block id="6f26cda33d7241c6a94f8ffbfeab11be" category="list-text">1つのSVMが2つのデータコレクタを使用してテナントに2回追加された場合、このエラーが表示されます。UI を使用して、いずれかのデータコレクタを削除します。次に、 UI を使用して他のデータコレクタを再起動します。次に、データコレクタのステータスが「 running 」と表示され、 SVM からのイベントの受信が開始されます。</block>
+  <block id="633321786e7e07f94e52b4d73df28b1f" category="paragraph">基本的に、テナントでは、 1 つのデータコレクタで 1 つの SVM を追加します。1 つの SVM を 2 つのデータコレクタを使用して 2 回追加しないで</block>
+  <block id="cf2a826b3dbe4d26f14753b4a312c007" category="list-text">同じSVMを2つの異なるワークロードセキュリティ環境（テナント）に追加した場合、最後のSVMは常に成功します。2 つ目のコレクタは、独自の IP アドレスで FPolicy を設定し、最初の IP アドレスから開始します。そのため、最初のデータ収集ツールはイベントの受信を停止し、その「監査」サービスはエラー状態になります。これを回避するには、各 SVM を 1 つの環境に設定します。</block>
+  <block id="5db652447c417b7edd8a6faf30683ee0" category="list-text">このエラーは、サービスポリシーが正しく設定されていない場合にも発生することがあります。ONTAP 9.8以降では、データソースコレクタに接続するために、データサービスdata-fse-clientサービス、またはdata-cifsが必要です。さらに、監視対象SVMのデータLIFにdata-fsFPolicyクライアントサービスを関連付ける必要があります。</block>
+  <block id="9fbb9e6888c2aef7254ccac7160ec144" category="list-text">ONTAPコレクタが「running」状態になっているかどうかを確認します。「はい」の場合は、一部のファイルを開いて、 CIFS クライアント VM 上で一部の CIFS イベントが生成されていることを確認します。</block>
+  <block id="30eacabf37bbb4653e7ca981b2801051" category="list-text">処理が表示されない場合は、SVMにログインして次のコマンドを入力してください。_&lt;svm&gt; event log show -source fpolicy_fpolicy に関連するエラーがないことを確認してください。</block>
+  <block id="a936f63883c022699e3a5ae08232ef26" category="list-text">アクティビティが表示されない場合は、SVMにログインしてください。次のコマンドを入力します。</block>
+  <block id="c838f9e60ab91d3bf9f4ae53696f31dc" category="paragraph">プレフィックスが「cloudsecure_」であるという名前のFPolicyポリシーが設定され、ステータスが「on」になっているかどうかを確認します。設定されていないと、 Agent が SVM でコマンドを実行できない可能性が高くなります。ページの先頭に記載されているすべての前提条件を満たしていることを確認してください。</block>
+  <block id="2b7249a3eb66724971d86b79578b4015" category="list-text">エージェントが過負荷状態であり、データソースコレクタに接続できない可能性があります。</block>
+  <block id="4df741dad2f6a6c39f5a70a091533287" category="list-text">Agentに接続されているデータソースコレクタの数を確認します。</block>
+  <block id="d3def8792ee2d2f60ea9dd540351d13c" category="list-text">また、UIの[All Activity]ページでデータフローレートを確認します。</block>
+  <block id="99a207238eac17ccccaa337b350f2c5e" category="list-text">1秒あたりのアクティビティ数が非常に多い場合は、別のエージェントをインストールし、一部のデータソースコレクタを新しいエージェントに移動します。</block>
+  <block id="bf084a2e9e043e416efdf5762e90830e" category="paragraph">これは通常、次のシナリオで発生します。</block>
+  <block id="15e5b3ba5eaf37b26361f3e2a868ae94" category="list-text">データコレクタが複数追加されています。</block>
+  <block id="e7b379f8d8ee16ec17e9758c65babb58" category="list-text">このような動作を示すデータコレクタでは、1つのSVMがこれらのデータコレクタに追加されます。つまり、 2 つ以上のデータコレクタが 1 つの SVM に接続されます。</block>
+  <block id="778e500175319f00ec332bd346fedb28" category="list-text">1つのデータコレクタを1つのSVMだけに接続する</block>
+  <block id="12a944dc1d44e8ee8192cd638cb95cb4" category="list-text">同じSVMに接続されている他のデータコレクタを削除します。</block>
+  <block id="5c81db005bfd2b3f9c22268bec51a515" category="paragraph">切断状態の場合でも、既存の未使用の FPolicy 設定をすべて削除することを推奨します。ワークロードセキュリティで、プレフィックス「cloudsecure_」を付けてFPolicyを作成します。その他の未使用の FPolicy 設定はすべて削除できます。</block>
+  <block id="ac5c1a90c90193c22745b697a0f6d000" category="paragraph">fpolicy listを表示するCLIコマンド：</block>
+  <block id="7c275595b37d9736259910a2cee23932" category="paragraph">FPolicy設定を削除する手順は次のとおりです。</block>
+  <block id="f2e1c8f11a6d114e56889c093ddb4738" category="list-text">[ データコレクタ ] ページで、エラーが表示されているデータコレクタの右にスクロールし、 3 つのドットメニューをクリックします。選択した編集 _ 。データコレクタのパスワードをもう一度入力します。[Save] ボタンを押して、データコレクタを保存します。Data Collector が再起動し、エラーが解決されます。</block>
+  <block id="96f9921aa76d3057450b4f8f037c88c6" category="list-text">Agentマシンに十分なCPUまたはRAMヘッドルームがない可能性があるため、DSCに障害が発生しています。マシンのエージェントに追加されているデータコレクタの数を確認してください。20を超える場合は、エージェントマシンのCPUとRAM容量を増やしてください。CPUとRAMが増加すると、DSCは初期化状態になり、その後自動的に実行状態になります。のサイジングガイドを参照してください<block ref="830ad31fe88c5bf31dcfcc5f15ccdf0e" category="inline-link-macro-rx"></block>。</block>
 </blocks>

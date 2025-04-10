@@ -22049,28 +22049,6 @@ Data Collector Support Matrixには、ベンダーやモデルの情報など、
 * NetappRelease 9.15.1RC2：2024年6月24日（月）04:49:55 UTC
 * NetappRelease 9.16.1：2025年1月18日（土）19：31：15 UTC
 * NetappRelease 9.16.1P1：2025年2月14日（金）03：53：50 UTC
-* NetappRelease 9.16.1RC1：2024年11月04日（月）10:39:46 UTC
-* NetappRelease 9.16.1X26：2024年12月9日（月）10:27:42 UTC
-* NetappRelease 9.16.1X29：2025年1月12日（日）11:18:25 UTC
-* NetappRelease 9.17.1X7：2025年2月14日（金）11：21：52 UTC
-* NetappRelease Clawhammer__9.14.1：2024年5月18日（土）09:23:49 UTC
-* NetappRelease Cloudstream__9.16.1：（月）11月04日05：51：46 UTC 2024
-* NetappRelease Cloudstream__9.16.1:木3月13日20:55:54 UTC
-* NetappRelease電気クラゲ__9.17.1：月3日05：57：49 UTC
-* NetappRelease Electricjellyfish__9.17.1:2025年3月09日05:56:14 UTC
-* NetappRelease電気クラゲ__9.17.1:2025年3月16日04:54:53 UTC
-* NetappRelease電気クラゲ__9.17.1：2025年1月28日（火）11:48:14 UTC
-* NetappRelease電気クラゲ__9.17.1:火曜日3月18日04:59:54 UTC
-* NetappRelease電気クラゲ__9.17.1：2025年3月12日（水）04：42：03 UTC
-* NetappRelease Mightysquirrel__9.15.1：2024年5月24日（金）05：03：10 UTC
-* NetappRelease Mightysquirrel__9.15.1：2025年1月18日（土）11:39:42 UTC
-* NetappRelease Tropicallightning__9.18.0: 2025年2月21日(金)14:02:58 UTC
-* NetappRelease Tropicallightning__9.18.0: 2025年2月17日(月)08:18:14 UTC
-* NetappRelease Tropicallightning__9.18.0:2025年2月20日(木)08:11:55 UTC
-* NetappRelease Tropicallightning__9.18.0:2025年2月27日(木) 04:15:40 UTC
-* NetappRelease Tropicallightning__9.18.0: 2025年2月18日(火)14:00:54 UTC
-* NetappRelease Tropicallightning__9.18.0: 2025年2月26日(水) 08:19:21 UTC
-* NetappRelease Tropicallightning__9.18.0: 2025年1月29日(水) 08:34:06 UTC
 
 
 |===
