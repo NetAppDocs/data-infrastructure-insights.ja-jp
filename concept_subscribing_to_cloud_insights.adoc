@@ -6,13 +6,7 @@ keywords: subscribe, trial, subscription, contract, raw capacity, region, data r
 ---
 = Data Infrastructure Insightsのサブスクライブ
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]
@@ -136,11 +130,10 @@ Data Infrastructure Insightsのオブザーバビリティでは、テナント�
 * クラウド消費
 
 
-各ティアは異なるレートで計測され、全体が合計されて_Effectiveエンタイトルメント_が付与されます。実効使用量の計算式は次のとおりです。
+各ティアは異なるレートで計測され、全体が一緒に計算されて重み付けされたエンタイトルメントが提供されます。加重使用量の計算式は次のとおりです。
 
- Effective usage = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioning TiB)
-
-NOTE: 管理対象ユニットの合計は、サマリセクションのデータコレクタ数とは若干異なる場合があります。これは、管理対象ユニットの数が最も近い管理対象ユニットに切り上げられるためです。データコレクタリストのこれらの数値の合計は、ステータスセクションの管理対象ユニットの合計よりも少し高くなる場合があります。サマリセクションには、サブスクリプションの実際の管理ユニット数が表示されます。これを容易にするために、DIIは_ subscribed_quantitiesに基づいて1つの*有効なエンタイトルメント*数を計算し、_ discovered_storageに基づいて同じ数を計算します。これにより、検出されたストレージの合計が、サブスクライブされた有効なエンタイトルメント内にある限り、階層ごとにサブスクライブされた金額とは異なる数量を柔軟に監視できます。
+ Weighted usage = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioning TiB)
+これを容易にするために、DIIは_ subscribed _ quantitiesに基づいて1つの*加重使用権*数を計算し、_ discovered _ storageに基づいて同じ数を計算し、検出された容量が加重使用権より大きい場合にのみ違反を宣言します。これにより、各ティアのサブスクライブされた金額とは異なる数量を柔軟に監視できます。検出されたストレージの合計がサブスクライブされた加重使用権の範囲内である限り、DIIではその数量を監視できます。
 
 
 
