@@ -5,17 +5,8 @@ keywords: API, customer API, premium, JSON, Swagger, Access Token, token, rotate
 summary: Data Infrastructure Insights APIを使用すると、システムの監視やレポート作成など、他のアプリケーションと統合できます。 
 ---
 = データインフラ分析情報API
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -230,8 +221,7 @@ image:DiskPerformanceExample.png["ディスクパフォーマンス JSON"]
 
 CapacityItem は、容量の単一の論理ユニットです。親オブジェクトで定義された単位には「値」と「高しきい値」があります。また、容量値の構成方法を説明するオプションの内訳マップもサポートしています。たとえば、 100TB の StoragePool の総容量は、 1 、 000 の CapacityItem になります。この内訳では、「データ」に 60 TB 、「スナップショット」に 40 TB が割り当てられています。
 
-メモ:: 「 highThreshold 」は、対応するメトリックのシステム定義のしきい値を表します。このしきい値を使用すると、クライアントは、許容範囲外の設定された値に関するアラートや視覚的なキューを生成できます。
-
+注:「highThreshold」は、対応するメトリックのシステム定義のしきい値を表します。クライアントは、このしきい値を使用して、設定可能な範囲外の値についてアラートや視覚的な手がかりを生成できます。
 
 次に、複数の容量カウンタがある StoragePools の容量を示します。
 

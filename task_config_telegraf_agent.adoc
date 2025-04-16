@@ -5,17 +5,8 @@ keywords: telegraf, agent, telegraf agent
 summary: Data Infrastructure Insightsは、統合データ収集のエージェントとしてTelegrafをサポートしており、WindowsまたはLinux上で構成できます。 
 ---
 = データを収集するためのエージェントの設定(Windows/Linux)
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -93,7 +84,7 @@ NOTE: 次の手順は '_http_proxy/https_proxy_environment 変数を設定する
 
 プロキシの背後にあるシステムの場合、 Telegraf エージェントをインストールする前に _https_proxy_ および /or_http_proxy_environment 変数 * を設定するには、次の手順を実行します。
 
- [System.Environment]::SetEnvironmentVariable(“https_proxy”, “<proxy_server>:<proxy_port>”, [System.EnvironmentVariableTarget]::Machine)
+ [System.Environment]:SetEnvironmentVariable(“https_proxy”, “<proxy_server>:<proxy_port>”, [System.EnvironmentVariableTarget]:Machine)
 
 
 ==== エージェントをインストールしています

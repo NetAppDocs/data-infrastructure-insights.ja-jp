@@ -5,17 +5,8 @@ keywords: agent, Workload Security, installation, Cloud Secure
 summary: ワークロードセキュリティエージェントの追加 
 ---
 = ワークロードセキュリティエージェントのインストール
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -40,7 +31,7 @@ summary: ワークロードセキュリティエージェントの追加
 [ エージェントの追加 ] ページが表示されます。
 
 +
-image::Add-agent-1.png[ワークロードセキュリティエージェントの追加]
+image:Add-agent-1.png["ワークロードセキュリティエージェントの追加"]
 
 . エージェントサーバが最小システム要件を満たしていることを確認します。
 . エージェントサーバでサポートされているバージョンの Linux が実行されていることを確認するには、 _ サポートされているバージョン（ i ） _ をクリックします。
@@ -52,7 +43,7 @@ image:CloudSecureAgentWithProxy_Instructions.png["エージェントのインス
 . ターミナルウィンドウでインストールコマンドを実行します。
 . インストールが正常に完了すると、次のメッセージが表示されます。
 +
-image::new-agent-detect.png[エージェントのインストールが成功したことを示すメッセージ]
+image:new-agent-detect.png["エージェントのインストールが成功したことを示すメッセージ"]
 
 
 

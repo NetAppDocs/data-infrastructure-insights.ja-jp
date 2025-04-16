@@ -5,17 +5,8 @@ keywords: data collector, Brocade, EFCM,
 summary: Brocade データコレクタの設定 
 ---
 = Brocade Enterprise Fabric Connectivity Manager データコレクタの設定
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

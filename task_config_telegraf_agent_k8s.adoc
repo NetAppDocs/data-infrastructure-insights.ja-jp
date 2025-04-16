@@ -6,13 +6,8 @@ summary: Kubernetes Monitoring Operatorは、Data Infrastructure Insightsで使�
 ---
 = Kubernetes Monitoring Operatorのインストールと設定
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
 :nofooter: 
-:toclevels: 2
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

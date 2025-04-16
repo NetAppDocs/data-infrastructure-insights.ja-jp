@@ -5,17 +5,8 @@ keywords: data collector, cisco, FC, cisco FC
 summary: Cisco MDS Ablic Switch データコレクタの設定。 
 ---
 = Cisco MDS ファブリックスイッチデータコレクタ
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

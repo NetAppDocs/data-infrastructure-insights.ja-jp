@@ -5,17 +5,8 @@ summary: 高度な検索手法を使用すると、探しているアセット�
 keywords: asset page, objects, search, advanced, alerts 
 ---
 = 資産とアラートを検索するためのヒントとヒント
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

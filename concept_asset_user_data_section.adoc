@@ -5,17 +5,8 @@ summary: アセットページの User Data セクションでは、アノテー
 keywords: asset page, user data, applications, annotations 
 ---
 = User Data セクション
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

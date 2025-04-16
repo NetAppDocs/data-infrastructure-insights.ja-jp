@@ -5,7 +5,12 @@ summary: Data Infrastructure Insightsオブジェクトアイコン
 keywords: icons, assets, objects, reference, map 
 ---
 = オブジェクトアイコンリファレンス
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

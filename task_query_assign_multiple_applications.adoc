@@ -5,17 +5,8 @@ summary: クエリを使用して、複数のアプリケーションやアノ�
 keywords: query, queries, application, annotation, multiple 
 ---
 = アセットに対する複数のアプリケーションの割り当てと削除
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

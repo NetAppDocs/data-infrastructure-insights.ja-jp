@@ -5,17 +5,8 @@ summary: モニタによってトリガーされたアラートを表示する
 keywords: monitor, alert, viewing 
 ---
 = モニタからのアラートの表示と管理
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

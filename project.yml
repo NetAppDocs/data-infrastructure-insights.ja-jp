@@ -267,6 +267,8 @@ sidebar:
       url: "/cs_notifications_email.html"
     - title: ワークロードセキュリティAPI
       url: "/concept_cs_api.html"
+    - title: SVMコレクタのトラブルシューティング
+      url: "/troubleshooting_collector_svm.html"
   - title: トラブルシューティング
     entries:
     - title: 全般的なトラブルシューティング

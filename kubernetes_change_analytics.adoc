@@ -5,17 +5,8 @@ keywords: changes, management, analysis
 summary: Kubernetesの変更の追跡がかつてないほど簡単になりました。 
 ---
 = Kubernetesの変更分析
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

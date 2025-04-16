@@ -5,17 +5,8 @@ keywords: monitors, alerts, log, metric
 summary: パフォーマンスやインベントリのしきい値、およびメトリックやログの条件に関するアラートを生成するモニタを作成します。 
 ---
 = システムモニタ
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -24,8 +15,8 @@ Data Infrastructure Insightsには、指標とログの両方について、シ�
 
 NOTE: 多くのシステムモニタは、デフォルトでIN_PAUSED_STATEになっています。システムモニタを有効にするには、モニタの_Resume_optionを選択します。Data Collectorで_Advanced Counter Data Collection_and_Enable ONTAP EMSログcollection_が有効になっていることを確認します。これらのオプションは、ONTAP Data Collectorの_Advanced Configuration_にあります。image:Enable_Log_Monitor_Collection.png["ONTAP の Advanced Counter および EMS Log Collection を有効にします"]
 
+目次：[]
 
-toc::[]
 
 
 == モニタの説明

@@ -5,17 +5,8 @@ summary: 通知用の E メールアドレスの追加
 keywords: email, notifications, signature, recipient, list, subscription 
 ---
 = 電子メール通知を設定しています
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

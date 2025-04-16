@@ -5,17 +5,8 @@ keywords: telegraf, installation, install, flink
 summary: Flink データコレクタの設定 
 ---
 = Flink Data Collector の使用
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

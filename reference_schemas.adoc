@@ -6,13 +6,7 @@ keywords: dwh, data warehouse, schema, reporting
 ---
 = レポート作成のためのデータインフラ分析情報スキーマ
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

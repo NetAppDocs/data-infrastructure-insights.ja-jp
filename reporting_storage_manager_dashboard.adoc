@@ -5,17 +5,8 @@ summary: ストレージサービスの日々の管理には、 Storage Manager 
 keywords: reporting, cognos, data warehouse, dwh, smd, storage manager dashboard 
 ---
 = Storage Manager のダッシュボード
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

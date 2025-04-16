@@ -5,17 +5,8 @@ keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, res
 summary: インサイトでは、リソースがテナントの他のリソースにどのように影響するかを確認できます。 
 ---
 = 分析情報：ONTAP コールドストレージの再利用
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

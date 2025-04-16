@@ -5,17 +5,8 @@ keywords: data collector, Hitachi Ops Center
 summary: HDS Ops Center データコレクタの設定 
 ---
 = Hitachi Ops Center データコレクタ
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ summary: Data Infrastructure Insightsの導入
 keywords: invite, roles, data collector, acquisition unit, AU 
 ---
 = データの収集を開始しています
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

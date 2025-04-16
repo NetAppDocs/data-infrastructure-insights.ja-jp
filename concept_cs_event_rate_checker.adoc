@@ -5,17 +5,8 @@ summary: ONTAP SVM DSC をインストールする前に、このスクリプト
 keywords: event, checker, rate, sizing, cloud secure 
 ---
 = SVMイベントレートチェッカー（エージェントサイジングガイド）
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

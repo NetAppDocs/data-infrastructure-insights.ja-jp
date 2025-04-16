@@ -5,17 +5,8 @@ summary: ワークロードセキュリティは、ONTAPと統合してアクセ
 keywords: ransomware, ARP, Protection, Security, access 
 ---
 = ONTAPアクセス拒否との統合
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

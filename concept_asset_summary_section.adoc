@@ -5,17 +5,8 @@ summary: 'Data Infrastructure Insightsのアセットページの[Summary]セク
 keywords: asset, summary, landing page, topology, auto, refresh 
 ---
 = アセットページの概要セクション
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

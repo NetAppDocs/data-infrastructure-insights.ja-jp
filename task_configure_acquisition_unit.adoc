@@ -5,17 +5,8 @@ keywords: Acquisition Unit, AU, install, configure, Linux, add, remove, uninstal
 summary: WindowsおよびLinuxでのAcquisition Unitのインストール、アンインストール、プロキシのサポートの設定などがあります。 
 ---
 = Acquisition Unit の設定
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -120,7 +111,8 @@ image:ProxyEndpoints_NewTable.png["プロキシエンドポイントテーブル
 
 
 
-image::NewWindowsAUInstall.png[Windows AU のインストール]
+[role="thumb"]
+image:NewWindowsAUInstall.png["Windows AU のインストール"]
 
 . Acquisition Unit をホストしているサーバまたは VM が推奨されるシステム要件を満たしていることを確認する。
 . サーバでサポートされているバージョンの Windows が実行されていることを確認します。サポートされているバージョンのリストについては、「サポートされている OS バージョン」（ i ）をクリックしてください。

@@ -5,17 +5,8 @@ keywords: ransomware, simulation, simulator, restrict, attack
 summary: スクリプトを使用して、ランサムウェア攻撃をシミュレートし、ワークロードセキュリティのテストやデモを実施できます 
 ---
 = ワークロードのセキュリティ：攻撃のシミュレーション
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

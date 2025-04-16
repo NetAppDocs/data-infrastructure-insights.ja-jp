@@ -5,17 +5,8 @@ summary: クエリを変更または削除する
 keywords: query, queries, modify, edit, delete, remove 
 ---
 = クエリの変更または削除
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

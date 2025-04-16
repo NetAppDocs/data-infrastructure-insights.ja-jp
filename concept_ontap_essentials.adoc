@@ -5,17 +5,8 @@ summary: ONTAP Essentialsは、環境の詳細な概要を提供するダッシ�
 keywords: dashboard, widget, ontap, overview, insight 
 ---
 = ONTAP の基礎知識
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -6,13 +6,7 @@ summary: 非アクティブなデバイスを識別すると、デバイスを�
 ---
 = 非アクティブなデバイスの識別
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

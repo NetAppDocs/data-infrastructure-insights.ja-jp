@@ -5,17 +5,9 @@ keywords: Anomalies, anomaly, patterns, monitor, alert
 summary: 異常の指標を監視 
 ---
 = 異常検出モニタ
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
 :nofooter: 
-:toclevels: 1
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

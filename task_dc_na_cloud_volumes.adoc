@@ -5,17 +5,8 @@ summary: NetApp Cloud Volume Services for AWS データコレクタを設定し�
 keywords: data collector, NetApp, Cloud, AWS 
 ---
 = NetApp Cloud Volume Services for AWS データコレクタ
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

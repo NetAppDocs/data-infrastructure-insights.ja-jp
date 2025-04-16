@@ -5,24 +5,16 @@ summary: ダッシュボードの機能と概念
 keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll up, grouping, aggregate, aggregation, filter, axis, group by, expressions, timeseries, exact match, theme, visibility, formatting, conditional, hide, collapse, expand 
 ---
 = ダッシュボードの機能
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
 :nofooter: 
-:toclevels: 1
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
 ダッシュボードとウィジェットでは、データの表示方法を柔軟に変更することができます。ここでは、カスタムダッシュボードを最大限に活用するのに役立つ概念をいくつか紹介します。
 
+目次：[]
 
-toc::[]
 
 
 == ウィジェットの命名
@@ -66,13 +58,17 @@ image:WidgetNamingExample-C.png["ウィジェットの命名例"]
 
 Data Infrastructure Insightsでは、ウィジェットの特定のメトリック(特に、Kubernetes、ONTAP Advanced Data、Telegrafプラグインなどの「カスタム」または統合メトリックと呼ばれるメトリック)にさまざまな* transform *オプションを提供しており、さまざまな方法でデータを表示できます。変換可能なメトリックをウィジェットに追加する場合は、ドロップダウンから次のトランスフォームの選択肢を選択できます。
 
-なし:: データはそのまま表示され、操作は行われません。
-レート:: 現在の値を前回の観察以降の時間範囲で割った値。
-累計:: 前の値と現在の値の合計の累積値。
-デルタ:: 前回の観察値と現在の値の差。
-デルタレート:: デルタ値を前回の観察からの時間範囲で割った値。
-累積レート:: 累積値を前回の観察以降の時間範囲で割った値。
+なし（None）：データはそのまま表示され、操作は行われません。
 
+Rate：前回の観測からの時間範囲で割った現在の値。
+
+累積：前の値と現在の値の合計。
+
+デルタ：前回の観測値と現在の値の差。
+
+Delta rate（デルタ率）：前回の観測からのデルタ値を時間範囲で除算した値。
+
+累積率：前回の観察からの累積値を時間範囲で除算した値。
 
 指標を変換しても、基盤となるデータ自体は変わりませんが、表示されるのはデータの表示方法だけです。
 
@@ -401,7 +397,7 @@ image:OverrideTimeOnWidget.png["ウィジェットのダッシュボードの期
 
 
 
-image::SecondaryAxisExplained.png[2 次軸の例]
+image:SecondaryAxisExplained.png["2 次軸の例"]
 
 
 

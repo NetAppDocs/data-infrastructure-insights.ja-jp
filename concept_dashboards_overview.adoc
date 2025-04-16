@@ -6,13 +6,7 @@ keywords: dashboard, widget, custom, view, data
 ---
 = ダッシュボードの概要
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]
@@ -21,8 +15,8 @@ Data Infrastructure Insightsでは、インフラデータの運用ビューを�
 
 IMPORTANT: これらのセクションの例は、説明のみを目的としたものであり、想定されるすべてのシナリオを網羅しているわけではありません。ここに記載されている概念や手順を参考にしながら、実際のニーズに応じたデータ用のダッシュボードを作成してください。
 
+目次：[]
 
-toc::[]
 
 
 == ダッシュボードの作成

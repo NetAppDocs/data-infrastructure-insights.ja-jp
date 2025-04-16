@@ -5,17 +5,8 @@ keywords: data collector, isilon, EMC, DELL, PowerScale
 summary: Dell EMC Isilon / PowerScale RESTデータコレクタの設定 
 ---
 = Dell EMC Isilon / PowerScale RESTデータコレクタ
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

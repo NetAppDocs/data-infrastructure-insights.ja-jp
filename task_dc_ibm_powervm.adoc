@@ -5,17 +5,8 @@ keywords: IBM, powerVM,
 summary: IBM PowerVM データコレクタを設定しています。 
 ---
 = IBM PowerVM データコレクタの設定
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

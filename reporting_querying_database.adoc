@@ -5,17 +5,8 @@ summary: Data Infrastructure InsightsのAPIを使用して、Reporting DBに直�
 keywords: reporting, cognos, data warehouse, dwh, API 
 ---
 = API 経由で Reporting Database にアクセスします
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

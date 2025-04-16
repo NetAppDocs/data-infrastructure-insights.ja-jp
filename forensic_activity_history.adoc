@@ -5,15 +5,12 @@ keywords: Forensic, activity history, activity data, history
 summary: フォレンジックアクティビティ履歴データ 
 ---
 = 法医学 - すべての活動
-:toc: macro
 :hardbreaks:
 :allow-uri-read: 
-:toc: 
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ keywords: data collector, Brocade, FC switch,
 summary: Brocade FC スイッチデータコレクタの設定 
 ---
 = Brocade FC スイッチデータコレクタ
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

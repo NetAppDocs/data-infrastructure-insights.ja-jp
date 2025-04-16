@@ -6,10 +6,11 @@ summary: ワークロードセキュリティデータコレクタのトラブ�
 ---
 = ONTAP SVM Data Collectorのトラブルシューティング
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
+:firstname: :nofooter:yml
+:author: :nofooter:yml
+:authorinitials: :
+:authors: :nofooter:yml
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
@@ -20,11 +21,11 @@ summary: ワークロードセキュリティデータコレクタのトラブ�
 
 このコレクタの設定手順については、ページを参照してくださいlink:task_add_collector_svm.html["SVMコレクタの設定"]。
 
-既知の問題とその解決策を次の表に示します。
-
-エラーの場合は、 _Status_column で _more detail_ をクリックしてエラーの詳細を確認します。
+エラーが発生した場合は、[Installed Data Collectors]ページの[_Status_]列にある[_More detail_]をクリックして、エラーの詳細を確認できます。
 
 image:CS_Data_Collector_Error.png["Workload Security Collector Error More Detailリンク"]
+
+既知の問題とその解決策を次の表に示します。
 
 [cols="2*"]
 |===

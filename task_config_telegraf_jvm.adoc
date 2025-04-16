@@ -5,17 +5,8 @@ keywords: telegraf, installation, install, jvm
 summary: JVMデータコレクタの設定 
 ---
 = JVM Data Collector （ JVM データ収集）
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

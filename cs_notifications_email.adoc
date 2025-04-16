@@ -5,17 +5,8 @@ summary: ワークロードセキュリティアラートの通知用のEメー�
 keywords: email, notifications, alerts, warnings, attacks 
 ---
 = アラート、警告、およびエージェント / データソースコレクタの状態に関する電子メール通知の設定
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ summary: Acquisition Unitとして使用するサーバまたはVMが最小要�
 keywords: AU, acquisition unit, requirements, sizing 
 ---
 = Acquisition Unit の要件
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

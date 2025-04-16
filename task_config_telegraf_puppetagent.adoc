@@ -5,17 +5,8 @@ keywords: telegraf, installation, install, Puppet
 summary: Puppet データコレクタの設定 
 ---
 = Puppet Agent データコレクタ
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

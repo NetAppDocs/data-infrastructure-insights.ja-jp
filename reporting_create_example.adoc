@@ -5,17 +5,8 @@ summary: 事前定義済みのData Infrastructure Insightsレポートを使用�
 keywords: reporting, cognos, data warehouse, dwh, create, report 
 ---
 = レポートの作成（例）
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

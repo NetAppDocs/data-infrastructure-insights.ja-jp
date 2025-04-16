@@ -5,17 +5,8 @@ keywords: Automatic, AR, AHR, Host, automatic device resolution
 summary: デバイス解決は、環境内のパフォーマンスとインベントリを正確に追跡するのに役立ちます。 
 ---
 = デバイス解決ルール
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

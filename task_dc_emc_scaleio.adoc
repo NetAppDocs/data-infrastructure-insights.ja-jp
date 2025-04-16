@@ -5,17 +5,8 @@ keywords: data collector, scaleIO, PowerFlex EMC, DELL
 summary: Dell EMC ScaleIO/PowerFlexデータコレクタの設定 
 ---
 = Dell EMC ScaleIO/PowerFlexデータコレクタ
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

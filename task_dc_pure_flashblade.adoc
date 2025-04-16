@@ -5,17 +5,8 @@ keywords: data collector, Pure Storage, pure, FlashBlade
 summary: Pure Storage データコレクタの設定 
 ---
 = Pure Storage FlashBladeデータコレクタ
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

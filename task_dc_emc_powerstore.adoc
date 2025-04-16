@@ -5,17 +5,8 @@ keywords: data collector, PowerStore, EMC, DELL
 summary: Dell EMC PowerStore データコレクタの設定 
 ---
 = Dell EMC PowerStore データコレクタ
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

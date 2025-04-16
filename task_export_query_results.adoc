@@ -5,17 +5,8 @@ summary: クエリの結果を .csv ファイルにエクスポートする方�
 keywords: query, queries, export, csv 
 ---
 = クエリ結果を .csv ファイルにエクスポートしています
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

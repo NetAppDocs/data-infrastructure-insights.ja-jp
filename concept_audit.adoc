@@ -5,17 +5,8 @@ keywords: audit, users, activities
 summary: '[Audit]では、Data Infrastructure Insightsシステムでのシステムとユーザのアクティビティを確認できます。' 
 ---
 = 監査
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

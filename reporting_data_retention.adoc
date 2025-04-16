@@ -5,17 +5,8 @@ summary: レポート作成のためのData Infrastructure Insightsのデータ�
 keywords: reporting, cognos, data warehouse, dwh, managing, customizing, copying, retention 
 ---
 = レポート用に履歴データを保持する方法
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

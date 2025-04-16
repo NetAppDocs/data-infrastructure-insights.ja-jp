@@ -5,17 +5,8 @@ summary: Windows で Acquisition Unit の問題に関するトラブルシュー
 keywords: AU, acquisition unit, trioubleshooting 
 ---
 = Windows での Acquisition Unit の問題のトラブルシューティング
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

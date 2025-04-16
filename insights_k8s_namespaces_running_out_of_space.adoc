@@ -5,17 +5,8 @@ keywords: insight, pv, persistent volume, backend
 summary: 分析情報は、Kubernetesスペースがいついっぱいになるかを予測するのに役立ちます。 
 ---
 = 分析情報：Kubernetesネームスペースのスペースが不足しています
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

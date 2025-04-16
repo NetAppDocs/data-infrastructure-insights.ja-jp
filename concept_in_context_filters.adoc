@@ -5,17 +5,8 @@ summary: 現在のアセットに直接関連するオブジェクトをフィ�
 keywords: Assets, landing page, filtering, context, related 
 ---
 = コンテキスト内のオブジェクトのフィルタリング
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

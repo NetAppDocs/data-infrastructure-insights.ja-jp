@@ -5,17 +5,8 @@ summary: クエリを使用すると、対象の資産や指標をすばやく�
 keywords: query, queries 
 ---
 = クエリの作成
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -6,18 +6,55 @@ keywords: features
 ---
 = Data Infrastructure Insightsの最新情報
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]
 ネットアップは、製品やサービスの改善と強化を継続的に行っています。Data Infrastructure Insights（旧称Cloud Insights）で利用できる最新の機能をいくつか紹介します。
 
+
+
+== 2025年4月
+
+
+
+=== ML-Powered Anomaly Bounds In Lineウィジェットによるプロアクティブな問題解決
+
+折れ線グラフまたはスプライングラフウィジェットでパフォーマンスの問題をトラブルシューティングするために、想定される動作の境界を実際の指標と一緒に表示できるようになりました。これにより、指標の正常な傾向と異常な傾向を区別できるようになりました。
+
+季節データ分析によるDII機械学習は、履歴パターンに基づいてインテリジェントなしきい値を確立します。指標が想定範囲から逸脱した場合、システムはこれらを異常としてハイライトし、問題を迅速に特定し、平均問題解決時間を短縮して、運用に影響が及ぶ前に問題に対処します。
+
+image:expected_bounds_example_showing_spike.png["上のスパイクを示す期待される境界、幅= 400"]
+
+
+
+=== vSANストレージのサポートでVMwareのコストを最適化
+
+ネットアップのVM最適化機能に、vSANストレージを使用するVMware環境がサポートされるようになりました。この分析では、CPUとメモリの使用量に加えて、再利用の推奨事項としてローカルvSANストレージが考慮されるようになり、ライセンスコストをさらに削減できるようになりました。
+
+image:vm_optimization_with_vsan.png["vSANを使用したVM最適化の例"]
+
+
+
+=== アラートの詳細を簡単に確認
+
+新しいスライドアウトパネルで、アラートの調査がこれまで以上に簡単になりました。アラートを選択すると、そのアラートの詳細が表示され、問題の調査中に場所を失うことなくアラートを簡単に切り替えることができます。
+
+image:alert_slideout_example.png["ナビゲーションを容易にするアラートのスライドアウト"]
+
+
+
+=== ワークロードセキュリティフォレンジック非同期エクスポート
+
+フォレンジックデータのエクスポートには、エクスポートするデータの量に応じて、数秒から数時間かかる場合があります。Workload Securityはそのデータを非同期でエクスポートするため、.csvのコンパイル中も作業を継続できます。
+
+
+
+=== ルールにグループ化されたData Collector通知
+
+データコレクタに通知を設定した場合、4月15日以降、これらの通知は通知ルールで処理され、受信者が同一のコレクタには単一のルールが適用されます。受信者が異なるコレクタには、別 々 のルールがあります。既存のコレクタ通知は通知ルールに移行されます。
+
+'''
 
 
 == 2025年3月
@@ -64,6 +101,14 @@ image:ws_test_connection_button.png["workload security test connection button"] 
 
 
 
+=== ストレージワークロードセキュリティデータコレクタの接続テスト
+
+接続テスト機能は、Data Infrastructure Insights（DII）ワークロードセキュリティでデータコレクタを設定する際に、エンドユーザが障害の具体的な原因を特定できるようにすることを目的としています。これにより、ユーザはネットワーク通信またはロールの欠落に関連する問題を自己修正できます。
+
+image:ws_test_connection_button.png["workload security test connection button"] image:ws_test_connection_success_example.png["Workload Security 'Test Connection' success message"]
+
+
+
 === オペレーティングシステムのサポート
 
 Data Infrastructure Insights Acquisition Unitでサポートされるオペレーティングシステムは次のとおりlink:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["すでにサポートされています"]です。
@@ -93,13 +138,25 @@ image:ontap_essentials_asa_views.png["ASAがユニファイドとは異なるこ
 
 
 
+=== 最新世代のASAシステム向けのONTAP Essentials
+
+ONTAP Essentialsには、最新世代のデバイスの管理機能がすぐに使えるようになりましたlink:task_dc_na_ontap_all_san_array.html["ASA"]。これには、ONTAPで実行されるワークロードのVMからLUNへのトポロジを実現するSAN Analyzerが含まれています。この機能は、Data Infrastructure Insights Basicエディションの一部としてNetAppサポートでも利用できるようになりました。
+
+image:ontap_essentials_asa_views.png["ASAがユニファイドとは異なることを示すONTAP Essentialsドロップダウン"]
+
+
+
 === DII API使用状況の追跡：セキュリティと効率の向上
 
-管理者ユーザが利用できる強化されたREST API使用状況の追跡機能により、セキュリティ体制を強化し、リソース管理を合理化できます。APIの使用状況を追跡することで、使用されているAPIトークン、使用元のIPアドレス、生成されるトラフィック量を確認できます。トークンを特定のIPアドレスと使用レベルにリンクすることで、システムアクセスと使用傾向に関する強力なインサイトが得られ、安全で効率的な環境を維持し、スムーズな運用を維持するために必要な制御が可能になります。
+管理者ユーザが利用できる強化されたREST API使用状況の追跡機能により、セキュリティ体制を強化し、リソース管理を合理化できます。APIの使用状況を追跡することで、使用されているAPIトークン、使用元のIPアドレス、生成されるトラフィック量を確認できます。トークンを特定のIPアドレスと使用レベルにリンクすることで、システムアクセスと使用傾向に関する強力なインサイトが得られ、安全で効率的な環境を維持し、スムーズな運用を維持するために必要な制御が可能になります。管理者ユーザが利用できる強化されたREST API使用状況の追跡機能により、セキュリティ体制を強化し、リソース管理を合理化できます。APIの使用状況を追跡することで、使用されているAPIトークン、使用元のIPアドレス、生成されるトラフィック量を確認できます。トークンを特定のIPアドレスと使用レベルにリンクすることで、システムアクセスと使用傾向に関する強力なインサイトが得られ、安全で効率的な環境を維持し、スムーズな運用を維持するために必要な制御が可能になります。
 
-APIの使用状況を表示するには、* Observability > Admin > API Access *に移動し、_View API Usage_を選択します。このAPIは、DII Observability APIでのみ使用できます。ワークロードセキュリティには適用されません。
+APIの使用状況を表示するには、* Observability > Admin > API Access *に移動し、_View API Usage_を選択します。このAPIは、DII Observability APIでのみ使用できます。ワークロードセキュリティには適用されません。APIの使用状況を表示するには、* Observability > Admin > API Access *に移動し、_View API Usage_を選択します。このAPIは、DII Observability APIでのみ使用できます。ワークロードセキュリティには適用されません。
 
 image:api_usage_analytics_screenshot.png["API使用状況分析の例"]
+
+
+
+=== ワークロードセキュリティAPIによるユーザの制限
 
 
 

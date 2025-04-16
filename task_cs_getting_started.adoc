@@ -5,17 +5,8 @@ keywords: collectors, data collectors, configure, introduction, browsers , Cloud
 summary: ワークロードセキュリティを使用する簡単な手順をいくつか紹介します 
 ---
 = ワークロードセキュリティの導入
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

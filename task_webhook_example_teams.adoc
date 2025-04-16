@@ -5,17 +5,8 @@ keywords: webhook, notification, Microsoft, Teams, integration
 summary: Microsoft チームのパフォーマンスやインベントリのしきい値を通知するためのウェブフックを作成します 
 ---
 = Microsoft チームの Web フックの例
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

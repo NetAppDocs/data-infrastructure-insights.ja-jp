@@ -5,17 +5,8 @@ keywords: data collector, RecoverPoint, EMC, DELL
 summary: Dell EMC RecoverPoint データコレクタの構成 
 ---
 = Dell EMC RecoverPoint データコレクタ
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

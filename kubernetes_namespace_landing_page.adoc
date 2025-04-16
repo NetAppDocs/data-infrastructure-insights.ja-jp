@@ -5,17 +5,8 @@ keywords: telegraf, installation, install, kubernetes, pods, clusters, filters, 
 summary: Kubernetes のネームスペースランディングページについて説明しました 
 ---
 = Kubernetes のネームスペースの詳細ページ
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

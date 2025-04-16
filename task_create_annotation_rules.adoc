@@ -5,17 +5,8 @@ summary: アノテーションルールを作成して、複数のアセット�
 keywords: annotate, annotation, rules 
 ---
 = アノテーションルールの作成
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

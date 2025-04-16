@@ -5,17 +5,9 @@ summary: 作成するダッシュボードがパブリックかプライベー�
 keywords: dashboard, public, shared, private 
 ---
 = ダッシュボードアクセス管理
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
 :nofooter: 
-:toclevels: 1
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

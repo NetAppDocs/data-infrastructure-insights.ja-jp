@@ -5,17 +5,8 @@ summary: プレビュー機能は限られた容量で利用でき、プライ�
 keywords: coming soon, preview, 
 ---
 = フィーチャーと機能をプレビューします
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

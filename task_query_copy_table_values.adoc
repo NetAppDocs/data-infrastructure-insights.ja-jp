@@ -5,17 +5,8 @@ summary: テーブルからクリップボードに値をコピーして、他�
 keywords: query, queries, copy, values, clipboard 
 ---
 = テーブル値をコピーしています
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
