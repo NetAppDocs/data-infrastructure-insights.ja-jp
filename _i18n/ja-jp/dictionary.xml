@@ -999,7 +999,6 @@
   <block id="d4c39c48f7a7f001c1903155c3db9ac7" category="paragraph"><block ref="d4c39c48f7a7f001c1903155c3db9ac7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="03df896fc71cd516fdcf44aa699c4933" category="section-title">変数</block>
   <block id="b4b0f4b96c62f1b25f5e8866a7d69ab6" category="paragraph">変数を使用すると、ダッシュボードの一部またはすべてのウィジェットに表示するデータを一度に変更できます。1 つ以上原因のウィジェットで共通の変数を使用するように設定すると、 1 箇所で変更を加え、各ウィジェットに表示されるデータが自動的に更新されます。</block>
-  <block id="45430f654166211a655017eedb515347" category="paragraph">ダッシュボードの変数にはいくつかの種類があり、さまざまなフィールドで使用できます。また、命名規則もあります。ここでは、これらの概念について説明します。</block>
   <block id="e8196d2aa0d7c28cd131d991850f1cea" category="section-title">変数の型</block>
   <block id="f39814a3ff54979da6b688b16b8244e2" category="paragraph">変数には、次のタイプがあります。</block>
   <block id="1634ed475d7378ae8b2f149b1a4c43e3" category="list-text">* 属性 * ：オブジェクトの属性またはメトリックを使用してフィルタリングします</block>
@@ -10952,34 +10951,13 @@
   <block id="7dd7d734df8f68ee69beae1fdbd5a09e" category="paragraph">このコレクタの設定手順については、ページを参照してください<block ref="22f03f06815cacacef516ef1743c2ffa" category="inline-link-macro-rx"></block>。</block>
   <block id="9308a4a251c0b6f099fc32506e41c24d" category="inline-image-macro">Workload Security Collector Error More Detailリンク</block>
   <block id="6a6fcf99d83d56b2429dfa3ef83b50a0" category="paragraph"><block ref="6a6fcf99d83d56b2429dfa3ef83b50a0" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d7a4e713cb63e4db8a2b51e171793fb0" category="cell">Data Collector はしばらくの間実行され、ランダムな時刻の後に停止します。 "Error message: connector is in error state" というエラーメッセージが表示されます。サービス名： audit 。エラーの理由：外部 FPolicy サーバが過負荷状態です。」</block>
-  <block id="7dc1f3b50a6e66da2ae31d89467342c4" category="cell">コレクタから「 No local IP address found on the Connector that can reach the data interfaces of the SVM 」というエラーメッセージが報告されます。</block>
   <block id="dfb48a2f78b82c90165015b0e73f7e58" category="inline-link-macro">ネットアップサポート</block>
-  <block id="17f836aa8a8fb1af2d3360f0ff3cda15" category="cell">メッセージ： "[hostname:&lt;IP Address&gt;] の ONTAP タイプを特定できませんでした。理由：ストレージシステム &lt;IP アドレス &gt; への接続エラー：ホストに到達できません（ホストに到達できません） "</block>
-  <block id="17a99211f689747ad8a030b9a5329d3f" category="cell">エラーメッセージ：「コネクタにエラーがあります。service.name ：監査。失敗の理由：外部 FPolicy サーバが終了しました。」</block>
   <block id="92803a6fb12b06142e6654f883c9c782" category="inline-link-macro">ファイアウォールコマンドをチェックしてください</block>
-  <block id="3ff8715e3293a7f6a746ae2f5903e6fc" category="cell">アクティビティページにイベントは表示されません。</block>
-  <block id="bf7317c42b788373d4a9473aa1cc851b" category="cell">SVM Data Collector がエラー状態で、エラーメッセージ「 Agent failed to connect to the collector 」</block>
-  <block id="3650ca0390cbe1b7b56c0868bc3472e8" category="cell">SVM Data Collector で、「 fpolicy.server.connectError: Node failed to establish a connection with the FPolicy server "12.195.15.146" （ reason ： Select Timed Out" ）」というエラーメッセージが表示される</block>
-  <block id="19fbc1da6cc1d96ccb997d120b2a91eb" category="cell">SVM / クラスタでファイアウォールが有効になっています。そのため、 FPolicy エンジンは FPolicy サーバに接続できません。ONTAP の CLI で詳細情報を取得できます。 event log show -source fpolicy ：エラーイベントログ show -source fpolicy-fields event 、 action 、 description の詳細を表示できます。<block ref="c2f863dc8aacfc5c321b626bd2f4e2b3" category="inline-link-macro-rx"></block>ONTAP側。</block>
-  <block id="9075128206bc41797fb7dcbcce601bd5" category="cell">エラーメッセージ : 「コネクタはエラー状態です。サービス名： audit 。失敗の理由： SVM で有効なデータインターフェイスが見つかりません（ロール：データ、データプロトコル： NFS か CIFS か、両方、ステータス：稼働）。」</block>
-  <block id="5e50a9740093f324176ef9cdd483d732" category="cell">動作インターフェイス（データプロトコルおよびデータプロトコルとして CIFS / NFS が設定されている）があることを確認してください。</block>
-  <block id="42c19ac69d2315e69adceb5440ce4cbe" category="cell">データコレクタが Error 状態になり、しばらくしてから running 状態になり、 Error に戻ります。このサイクルが繰り返されます。</block>
-  <block id="2d964cb606454cdebb2ea12ed310dbab" category="cell">コネクタでエラーが発生しています。サービス名： audit 。失敗の理由：（ SVM SVM 名のポリシー）を設定できませんでした。理由： 'fpolicy.scope-modify ： "federy" 内の 'shares-to-include' 要素に無効な値が指定されています</block>
-  <block id="82e15291d012761eb5c9c9dc7f78a45f" category="cell">共有名は、引用符を付けずに指定する必要があります。ONTAP SVM DSC 設定を編集して共有名を修正します。Include および exclude shares _ は、長い共有名のリストを対象としたものではありません。対象に含める共有や除外する共有が大量にある場合は、ボリュームでフィルタリングします。</block>
-  <block id="195474d2c18505993c684349168eca84" category="cell">クラスタに未使用の既存のポリシーがあります。ワークロードセキュリティをインストールする前に、これらのワークロードに対して何を行う必要がありますか？</block>
-  <block id="63deecc7a53992db1697a520a67af0bd" category="cell">ワークロードセキュリティを有効にすると、ONTAP のパフォーマンスが低下します。レイテンシは一時的に上昇し、IOPSは散発的に低下します。</block>
   <block id="25de52ee95bc069e80aae94425213b53" category="inline-link-macro">1372994</block>
   <block id="a23b44fdff4bcafe023f18c4c11815e0" category="inline-link">1415152</block>
   <block id="1728bd23561a7ad8c0a5ece1af1fc9e1" category="inline-link">1438207</block>
   <block id="36e30a439910e67f76754ab0874aef1b" category="inline-link">1479704</block>
   <block id="7e18cc81c15bd72df03b7461c26d6e4a" category="inline-link">1354659</block>
-  <block id="40e2d40b31fb9557e4b0f6ca0bff37f3" category="cell">ワークロードセキュリティでONTAPを使用しているときに、ONTAPでレイテンシの問題が発生することがあります。これには<block ref="5b7caa0ef6cc830703e594488c525913" category="inline-link-macro-rx"></block>、、<block ref="b861ec6ca06b8e18b9d090dd75b00a26" category="inline-link-rx"></block><block ref="a5fade3ab29d18b9b976189fcb9919ed" category="inline-link-rx"></block>、、<block ref="8899da2205eee6e62b28641da3533e12" category="inline-link-rx"></block>に記載されているように、いくつかの理由が考えられます。<block ref="c9d1d03c1b92a8bbffc617ad493e8619" category="inline-link-rx"></block>これらの問題はすべてONTAP 9.13.1以降で解決されています。これらのいずれかのバージョンを使用することを強く推奨します。</block>
-  <block id="723f73d5b4ee441851ae64cbfe823522" category="cell">データコレクタでエラーが発生し、次のエラーメッセージが表示されます。「エラー：コネクタがエラー状態です。サービス名： audit 。失敗の理由： SVM svm_backup でポリシーを設定できませんでした。理由： ZAPI フィールド：イベントに対して値が指定されていません。「</block>
-  <block id="0631a8aa5414db88c4ba11ffa8ff89e8" category="cell">NFS サービスのみが設定された新しい SVM から開始します。ワークロードのセキュリティにONTAP SVMのデータコレクタを追加します。ワークロードセキュリティでONTAP SVMデータコレクタを追加する際、CIFSはSVMで許可されるプロトコルとして設定されます。ワークロードセキュリティのデータコレクタでエラーが表示されるまで待ちます。SVMでCIFSサーバが設定されていないため、左側にあるエラーはワークロードのセキュリティに表示されます。ONTAP SVM データコレクタを編集し、許可されたプロトコルとして CIFS のチェックを解除します。データコレクタを保存します。NFS プロトコルのみが有効な状態で実行が開始されます。</block>
-  <block id="1b852bd0522bb1e9abdc5b85f45b2eff" category="cell">Data Collector に、「 Error: Failed to Determine the collector within 2 retries 、 try restarting the collector again (Error Code: AGENT008) 」というエラーメッセージが表示されます。</block>
-  <block id="f4635255d83c947a8f5c0873878fce73" category="cell">SVMモードが選択されている場合、Data Collectorはエラーアウトしています。</block>
-  <block id="e01a5196bbb9ef19ecab5eb2b9c9a7a8" category="cell">SVMモードで接続中にSVM管理IPではなくクラスタ管理IPを使用して接続すると、接続エラーが発生します。正しいSVM IPが使用されていることを確認します。</block>
   <block id="489efd89349dbbe0899a6a7b922044da" category="paragraph">それでも問題が解決しない場合は、 [ ヘルプ ]&gt;[ サポート *] ページに記載されているサポートリンクにアクセスしてください。</block>
   <block id="f998abe6d6e1433185e617432fa562a7" category="summary">警告を減らすために、許可されたファイルタイプリストにファイル拡張子を追加します。</block>
   <block id="2b38e4e9371e68c324f4d975aeec0b8b" category="doc">許可されたファイルタイプポリシー</block>
@@ -12246,14 +12224,10 @@
   <block id="3d9254358b13bcf7d44afcf258f73fd7" category="list-text">VMware ESXi 6.5.0 build-5310538</block>
   <block id="f1bbfc67a175810e7ac8c661d6b4a2cc" category="list-text">VMware ESXi 8.0.1 build-21495797</block>
   <block id="06450b55dd990fe8530bcc47f2e2c522" category="list-text">VMware vCenter Server 8.0.0ビルド-21457384</block>
-  <block id="97603db27713a81e2c84405a5352db03" category="cell">アクセス拒否機能が有効になっている場合、データコレクタに「コネクタがエラー状態です。サービス名： audit 。失敗理由：SVM test_svmでfpolicyを設定できませんでした。理由：ユーザーは許可されていません。"</block>
-  <block id="56cad8f9ba4de10172f57856721882b0" category="cell">アクセス拒否機能に必要なREST権限がユーザにない可能性があります。の手順に従って権限を設定してください<block ref="acf32226210d6c3eeee22de70798517f" category="inline-link-macro-rx"></block>。権限が設定されたら、コレクタを再起動します。</block>
-  <block id="7f4e990617f489c9ef64bd60d50bbe6b" category="paragraph">ONTAP からのイベントレートは、 [ エージェント ] ボックスで処理できるイベントレートよりもはるかに高くなっています。そのため、接続が終了しました。</block>
   <block id="6cbdb7b222e25139b815f11a8bf316b0" category="paragraph">切断が発生したときに、 CloudSecure でピークトラフィックを確認します。これは、 * CloudSecure &gt; Activity Forensics &gt; All Activity * ページで確認できます。</block>
   <block id="fb318561d723fea4bf5cfc32c9f76869" category="paragraph">集約されたトラフィックのピークが [ エージェント ] ボックスで処理できるトラフィックよりも大きい場合は、 [ エージェント ] ボックスでのコレクタ展開のサイズ設定方法に関する [ イベントレートチェッカー ] ページを参照してください。</block>
   <block id="df5d9f6706ba32a91dad936fdd8c31ec" category="paragraph">2021年3月4日より前にAgentがAgentボックスにインストールされている場合は、Agentボックスで次のコマンドを実行します。</block>
   <block id="00b9b87b6684a6049795f956c8ffb2a5" category="paragraph">サイズ変更後にUIからコレクタを再起動します。</block>
-  <block id="190f101017d4849e32ad24c85a037484" category="paragraph">その理由としては、 ONTAP 側のネットワーク問題が考えられます。次の手順を実行してください。</block>
   <block id="b2e0ae5db392da4135a0d6d4c1790759" category="list-text">SVM のデータ LIF または SVM からの接続をブロックしている管理 LIF にファイアウォールがないことを確認します。</block>
   <block id="1750d9cfda79066e3c52899aa692608a" category="list-text">クラスタ管理IPを使用してSVMを追加する場合は、SVMのデータLIFと管理LIFがAgent VMからping可能であることを確認してください。問題が発生した場合は、 LIF のゲートウェイ、ネットマスク、およびルートを確認してください。</block>
   <block id="391d354d5b5d9326eec673c4983e3e05" category="paragraph">また、クラスタ管理 IP を使用して SSH 経由でクラスタにログインし、エージェント IP に ping を実行することもできます。エージェントIPがping可能であることを確認します。</block>
@@ -12292,12 +12266,10 @@
   <block id="4df741dad2f6a6c39f5a70a091533287" category="list-text">Agentに接続されているデータソースコレクタの数を確認します。</block>
   <block id="d3def8792ee2d2f60ea9dd540351d13c" category="list-text">また、UIの[All Activity]ページでデータフローレートを確認します。</block>
   <block id="99a207238eac17ccccaa337b350f2c5e" category="list-text">1秒あたりのアクティビティ数が非常に多い場合は、別のエージェントをインストールし、一部のデータソースコレクタを新しいエージェントに移動します。</block>
-  <block id="bf084a2e9e043e416efdf5762e90830e" category="paragraph">これは通常、次のシナリオで発生します。</block>
   <block id="15e5b3ba5eaf37b26361f3e2a868ae94" category="list-text">データコレクタが複数追加されています。</block>
   <block id="e7b379f8d8ee16ec17e9758c65babb58" category="list-text">このような動作を示すデータコレクタでは、1つのSVMがこれらのデータコレクタに追加されます。つまり、 2 つ以上のデータコレクタが 1 つの SVM に接続されます。</block>
   <block id="778e500175319f00ec332bd346fedb28" category="list-text">1つのデータコレクタを1つのSVMだけに接続する</block>
   <block id="12a944dc1d44e8ee8192cd638cb95cb4" category="list-text">同じSVMに接続されている他のデータコレクタを削除します。</block>
-  <block id="5c81db005bfd2b3f9c22268bec51a515" category="paragraph">切断状態の場合でも、既存の未使用の FPolicy 設定をすべて削除することを推奨します。ワークロードセキュリティで、プレフィックス「cloudsecure_」を付けてFPolicyを作成します。その他の未使用の FPolicy 設定はすべて削除できます。</block>
   <block id="ac5c1a90c90193c22745b697a0f6d000" category="paragraph">fpolicy listを表示するCLIコマンド：</block>
   <block id="7c275595b37d9736259910a2cee23932" category="paragraph">FPolicy設定を削除する手順は次のとおりです。</block>
   <block id="f2e1c8f11a6d114e56889c093ddb4738" category="list-text">[ データコレクタ ] ページで、エラーが表示されているデータコレクタの右にスクロールし、 3 つのドットメニューをクリックします。選択した編集 _ 。データコレクタのパスワードをもう一度入力します。[Save] ボタンを押して、データコレクタを保存します。Data Collector が再起動し、エラーが解決されます。</block>
@@ -12347,4 +12319,45 @@
   <block id="d41b70ca456515e9579f88a5bc4b81f5" category="paragraph">[番号（Number）]：アノテーションを割り当てるユーザが番号を入力できるフィールドを作成します。たとえば、アノテーションタイプが「 floor 」の場合は、値タイプとして「 number 」を選択し、フロア番号を入力できます。</block>
   <block id="9dc3b5c01c2c832a96e1c6c19e498029" category="paragraph">テキスト:自由形式のテキストを許可するフィールドを作成します。たとえば、アノテーションタイプとして「 Language 」と入力し、値のタイプとして「 Text 」を選択し、言語を値として入力できます。</block>
   <block id="bf446d389b04278c2780f587bb4b6e54" category="paragraph">エラーが発生した場合は、[Installed Data Collectors]ページの[_Status_]列にある[_More detail_]をクリックして、エラーの詳細を確認できます。</block>
+  <block id="18ecc77d71add8ff4b0a4dd5d38432a5" category="section-title">時間範囲へのズームイン</block>
+  <block id="b8a17d6bb00e8b3257bbc4ccce8f2aeb" category="paragraph">時系列ウィジェット（[Line]、[Spline]、[Area]、[Stacked Area]）またはランディングページのグラフを表示しているときに、グラフの上にマウスをドラッグしてズームインできます。画面の右上で、その時間範囲をロックして、他のページのグラフにそのロックされた時間範囲のデータが反映されるようにすることができます。ロックを解除するには、リストから別の時間範囲を選択します。</block>
+  <block id="f4d7fcf5873b7a09e82de6fe44f2a436" category="section-title">ラインウィジェットの異常境界</block>
+  <block id="d3e0c8a1ecd8c84ddaa334c2d9827e7f" category="paragraph">ダッシュボードまたはランディングページに折れ線グラフまたはスプライングラフウィジェットを含める場合は、データの*予想される範囲*のコンテキストでグラフを表示するように選択できます。これは、データのパターンの異常を探すと考えることができます。</block>
+  <block id="01b92f51612a1570641a4accf27354f1" category="paragraph">DIIでは、季節データ(時間単位または日単位)を使用して、特定の時刻にデータが格納される場所の上限と下限を設定します。データのスパイクが予想される範囲を超えているか下回っている場合、グラフでは異常として強調表示されます。</block>
+  <block id="99c3329d5d99881331bb15f97799f6be" category="inline-image-macro">異常境界の例-実際のデータスパイクが予想される境界を超えているスパイクを示しています。幅= 600</block>
+  <block id="47a7aeee60dd8a61f9f66ca35aeae7f9" category="paragraph"><block ref="47a7aeee60dd8a61f9f66ca35aeae7f9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6e98803189caf8d600ac277ee26488e8" category="paragraph">異常境界を表示するには、ウィジェットを編集して_Show Anomaly Bounds_を選択します。次の2つの検出アルゴリズムから選択できます。</block>
+  <block id="4516a972134716668d9d005af29ef139" category="list-text">*適応型検出器*変化に迅速に適応し、詳細な調査に役立ちます。</block>
+  <block id="7e7aac57571a8828ad25658e8d2d2521" category="list-text">*スムースディテクタ*ノイズと誤検出を最小限に抑え、短期間の変動を除去しながらも大きなシフトを検出します。</block>
+  <block id="6cb8858a82e1e2e2845f25162ba82f87" category="paragraph">また、_Hourly_or_Daily_Seasonalityを表示したり、検出感度を設定したりすることもできます。_High_sensitivityはより多くの境界交差を検出し、_Low_sensitivityはより少なく検出します</block>
+  <block id="31187a5ee059290053d0f82340837242" category="inline-image-macro">異常境界の設定（検出アルゴリズム、季節性、感度など）</block>
+  <block id="2ffe23ad54a8e26e74e3f37be728dbeb" category="paragraph"><block ref="2ffe23ad54a8e26e74e3f37be728dbeb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ef5c52fd00b778503c506ad346c37295" category="paragraph">グラフが単一の線を表示するように設定されている場合にのみ、予想される境界を表示できます。グループ化の設定またはフィルターに複数の行が表示されている場合、またはウィジェットに複数のクエリを設定している場合は、期待される境界を表示するオプションが無効になります。</block>
+  <block id="793246caa2d17de182541cbff17fbabd" category="inline-image-macro">上のスパイクを示す期待される境界、幅= 300</block>
+  <block id="ea696d4ab8fb62865dfbe3741a7a5d98" category="paragraph"><block ref="ea696d4ab8fb62865dfbe3741a7a5d98" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="182ce87180fe5b09fa1710d1b249ecf0" category="paragraph">ここでは、既知の問題とその解決策について説明します。</block>
+  <block id="23d35f04a6305a542c62e0793452c9ad" category="paragraph">*問題：* Data Collectorがしばらく実行され、ランダムな時間が経過すると停止し、「エラーメッセージ：コネクタがエラー状態です。サービス名： audit 。エラーの理由：外部 FPolicy サーバが過負荷状態です。」</block>
+  <block id="85501d33ecd840c5761971c7b55e894c" category="paragraph">*これを試してみてください:* ONTAPからのイベントレートは、[エージェント]ボックスで処理できる値よりもはるかに高くなりました。そのため、接続が終了しました。</block>
+  <block id="8dec88cb91cbe8919968ad8546e29d29" category="paragraph">*問題：*コレクタから、「SVMのデータインターフェイスにアクセスできるコネクタにローカルIPアドレスが見つかりません」というエラーメッセージが報告されます。*これを試してみてください：*これは、ONTAP側のネットワークの問題が原因である可能性が高いです。次の手順を実行してください。</block>
+  <block id="d14f3c628a090f279b8f9c00766e85cc" category="paragraph">*問題：*メッセージ：「[hostname:&lt;IP Address&gt;のONTAPタイプを特定できませんでした。理由：ストレージシステム&lt;IP Address&gt;への接続エラー：ホストに到達できません（ホストに到達できません）"*この方法を試してください：*</block>
+  <block id="4a8da97869c1ccb5f0c010bc73fcb940" category="paragraph">*問題：*エラーメッセージ："コネクタがエラー状態です。service.name ：監査。失敗の理由：外部 FPolicy サーバが終了しました。」* これを試みなさい : *</block>
+  <block id="4b198a0cd43be6fc081b4995826e7672" category="paragraph">*問題：*アクティビティページにイベントが表示されません。* これを試みなさい : *</block>
+  <block id="e45fdd2145016f7fcc29b179b255183e" category="paragraph">*問題：* SVM Data Collectorがエラー状態で、エラーメッセージが「Agent failed to connect to the collector」*次を試してください：*</block>
+  <block id="8a1416995d314617de12ed7aa4bd2467" category="paragraph">*問題：* SVM Data Collectorに、「fpolicy.server.connectError: Node failed to establish a connection with the FPolicy server」12.195.15.146（理由：「Select Timed Out」）というエラーメッセージが表示される*試してみてください：*ファイアウォールはSVM /クラスタで有効になっています。そのため、 FPolicy エンジンは FPolicy サーバに接続できません。詳細情報の取得に使用できるONTAPのCLIは次のとおりです。</block>
+  <block id="0b0c14625851c63aa1977699a0bb729f" category="paragraph">*問題：*エラーメッセージ：「コネクタがエラー状態です。サービス名： audit 。失敗の理由： SVM で有効なデータインターフェイスが見つかりません（ロール：データ、データプロトコル： NFS か CIFS か、両方、ステータス：稼働）。」*これを試してみてください。*動作可能なインターフェイス（データおよびデータプロトコルとしての役割を持つCIFS/NFS）があることを確認してください。</block>
+  <block id="b36fd6f11853dfd44a57310a6054c451" category="paragraph">*問題：*データコレクタがエラー状態になり、しばらくすると実行状態になり、再びエラーに戻ります。このサイクルが繰り返されます。*これを試してみてください：**これは通常、次のシナリオで発生します。</block>
+  <block id="5e34f5db201b138420b061f08cbe11af" category="paragraph">*問題：*コネクターがエラー状態です。サービス名： audit 。失敗の理由：（ SVM SVM 名のポリシー）を設定できませんでした。理由：「fpolicy.policy.scope-modify」内の「shares-to-include」要素に無効な値が指定されています：「Federal」*試用：**共有名は引用符なしで指定する必要があります。ONTAP SVM DSC 設定を編集して共有名を修正します。</block>
+  <block id="af601d5fafb52a70ba0c4c8d49f7d8ad" category="paragraph">Include および exclude shares _ は、長い共有名のリストを対象としたものではありません。対象に含める共有や除外する共有が大量にある場合は、ボリュームでフィルタリングします。</block>
+  <block id="e89b27e0a4f2f1144fe6db2c891631a7" category="paragraph">*問題：*クラスタに未使用の既存のFPolicyポリシーがあります。ワークロードセキュリティをインストールする前に、これらのワークロードに対して何を行う必要がありますか？*使用してみてください：*未使用の既存のfpolicy設定は、切断された状態であってもすべて削除することを推奨します。ワークロードセキュリティで、プレフィックス「cloudsecure_」を付けてFPolicyを作成します。その他の未使用の FPolicy 設定はすべて削除できます。</block>
+  <block id="fde38d88f8244f8a7b724b900bd7e422" category="paragraph">|ワークロードセキュリティを有効にすると、ONTAPのパフォーマンスが低下します。レイテンシが散発的に高くなり、IOPSが散発的に低くなります。|ワークロードセキュリティでONTAPを使用しているときに、ONTAPでレイテンシの問題が発生することがあります。これには<block ref="5b7caa0ef6cc830703e594488c525913" category="inline-link-macro-rx"></block>、、<block ref="b861ec6ca06b8e18b9d090dd75b00a26" category="inline-link-rx"></block><block ref="a5fade3ab29d18b9b976189fcb9919ed" category="inline-link-rx"></block>、、<block ref="8899da2205eee6e62b28641da3533e12" category="inline-link-rx"></block>に記載されているように、いくつかの理由が考えられます。<block ref="c9d1d03c1b92a8bbffc617ad493e8619" category="inline-link-rx"></block>これらの問題はすべてONTAP 9.13.1以降で解決されています。これらのいずれかのバージョンを使用することを強く推奨します。</block>
+  <block id="392c3c278e79c8048452de58dff9fd56" category="paragraph">*問題：*データコレクタにエラーがあり、このエラーメッセージが表示されます。「エラー：コネクタがエラー状態です。サービス名： audit 。失敗の理由： SVM svm_backup でポリシーを設定できませんでした。理由： ZAPI フィールド：イベントに対して値が指定されていません。“*これを試してみてください：*</block>
+  <block id="bcb838cbc5adbbb585ffd4e501e4b07b" category="list-text">NFS サービスのみが設定された新しい SVM から開始します。</block>
+  <block id="55007273037aed04d07e70999d5153b2" category="list-text">ワークロードのセキュリティにONTAP SVMのデータコレクタを追加します。ワークロードセキュリティでONTAP SVMデータコレクタを追加する際、CIFSはSVMで許可されるプロトコルとして設定されます。</block>
+  <block id="c5e48108c2128269b181c77142f6e2c0" category="list-text">ワークロードセキュリティのデータコレクタでエラーが表示されるまで待ちます。</block>
+  <block id="bc71f49bfafa6a1dbe64216acd61b88e" category="list-text">SVMでCIFSサーバが設定されていないため、左側にあるエラーはワークロードのセキュリティに表示されます。</block>
+  <block id="10b2e2acac1b3fff1d033229848652e2" category="list-text">ONTAP SVM データコレクタを編集し、許可されたプロトコルとして CIFS のチェックを解除します。データコレクタを保存します。NFS プロトコルのみが有効な状態で実行が開始されます。</block>
+  <block id="c6ac5b768bf8fa1cdc43218fe66da4f4" category="paragraph">*問題：* Data Collectorに「Error: Failed to determine the health of the collector within 2 retries, try restarting the collector again（エラーコード：AGENT008）」というエラーメッセージが表示される。* thiを試してみてください：*</block>
+  <block id="8c5a140b8e26d5573c3346f7da21fdd0" category="paragraph">*問題：* SVMモードを選択するとData Collectorがエラー終了します。*試してみてください：* SVMモードで接続中に、SVM管理IPではなくクラスタ管理IPを使用して接続すると接続エラーが発生します。正しいSVM IPが使用されていることを確認します。</block>
+  <block id="55be0ee113a903248473234512ad1ba6" category="paragraph">*問題：*アクセス拒否機能が有効になっていると、データコレクタにエラーメッセージが表示される：「コネクタがエラー状態です。サービス名： audit 。失敗理由：SVM test_svmでfpolicyを設定できませんでした。理由：ユーザーは許可されていません。"*試してみてください：*アクセス拒否機能に必要なREST権限がユーザにない可能性があります。の手順に従って権限を設定してください<block ref="acf32226210d6c3eeee22de70798517f" category="inline-link-macro-rx"></block>。</block>
+  <block id="c9d2ff4bbf3f4496b0b55e66133b6e56" category="paragraph">権限が設定されたら、コレクタを再起動します。</block>
 </blocks>
