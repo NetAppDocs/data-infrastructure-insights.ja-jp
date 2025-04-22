@@ -22,6 +22,8 @@ userconfig -- add NetAppCIUser -r user -l 1-128 -c user -p QWERTY！
 
 デフォルトでは、このコレクタは、スイッチが属するすべてのファブリックの一部であるすべてのFOSデバイスの検出を試みます。
 
+注意：FOSのデフォルトの読み取り専用ユーザ「user」には、すべての仮想ファブリックに対する表示権限がなく、「chassis role」権限もありません。これは、FOSデバイスの物理構成と論理構成の両方を理解する必要があるData Infrastructure Insightsで「ユーザ」を使用して成功する可能性が低いことを意味します。
+
 
 
 == 用語
