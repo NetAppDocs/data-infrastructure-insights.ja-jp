@@ -52,8 +52,7 @@ sysctl -p
 また、クラスタ管理 IP を使用して SSH 経由でクラスタにログインし、エージェント IP に ping を実行することもできます。エージェントIPがping可能であることを確認します。
 
 +
-_network ping -vserver <vserver name>-destination <Agent IP>-lif <Lif Name>-show-detail_
-
+ network ping -vserver <vserver name> -destination <Agent IP> -lif <Lif Name> -show-detail
 +
 pingできない場合は、ONTAPのネットワーク設定が正しいことを確認して、エージェントマシンにpingできるようにします。
 
@@ -67,7 +66,7 @@ pingできない場合は、ONTAPのネットワーク設定が正しいこと�
 .. エラーが表示されるまで待ちます。ONTAP でパケットトレースを停止します。
 .. ONTAPからパケットトレースを開きます。この場所で入手できます
 +
- \https://<cluster_mgmt_ip>/spi/<clustername>/etc/log/packet_traces/
+ https://<cluster_mgmt_ip>/spi/<clustername>/etc/log/packet_traces/
 .. ONTAPから[Agent]ボックスにSYNがあることを確認します。
 .. ONTAPからSYNがない場合は、ONTAPのファイアウォールに問題があります。
 .. ONTAPでファイアウォールを開き、ONTAPがエージェントボックスに接続できるようにします。
@@ -92,7 +91,7 @@ pingできない場合は、ONTAPのネットワーク設定が正しいこと�
 . ファイアウォールがエージェントマシン内の必要なポートをブロックしている可能性があります。エージェントマシンが SVM から接続するために、ポート範囲 35000-55000/TCP を開いていることを確認します。また、 ONTAP 側からエージェントマシンへの通信をブロックするファイアウォールが有効になっていないことを確認します。
 . [エージェント]ボックスに次のコマンドを入力し、ポート範囲が開いていることを確認します。
 +
- sudo iptables-save \| grep 3500*
+ sudo iptables-save | grep 3500*
 +
 出力例は次のようになります。
 
@@ -109,7 +108,7 @@ link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-nm
 
 . 監視するSVM /クラスタにSSHで接続します。SVMデータLIFから[Agent]ボックスにpingを送信し（CIFSプロトコルとNFSプロトコルをサポート）、pingが動作していることを確認します。
 +
- _network ping -vserver <vserver name> -destination <Agent IP> -lif <Lif Name> -show-detail_
+ network ping -vserver <vserver name> -destination <Agent IP> -lif <Lif Name> -show-detail
 +
 pingできない場合は、ONTAPのネットワーク設定が正しいことを確認して、エージェントマシンにpingできるようにします。
 
@@ -126,7 +125,12 @@ pingできない場合は、ONTAPのネットワーク設定が正しいこと�
 *問題：*アクティビティページにイベントが表示されません。* これを試みなさい : *
 
 . ONTAPコレクタが「running」状態になっているかどうかを確認します。「はい」の場合は、一部のファイルを開いて、 CIFS クライアント VM 上で一部の CIFS イベントが生成されていることを確認します。
-. 処理が表示されない場合は、SVMにログインして次のコマンドを入力してください。_<svm> event log show -source fpolicy_fpolicy に関連するエラーがないことを確認してください。
+. 処理が表示されない場合は、SVMにログインして次のコマンドを入力してください。
++
+ <SVM>event log show -source fpolicy
++
+fpolicyに関連するエラーがないことを確認してください。
+
 . アクティビティが表示されない場合は、SVMにログインしてください。次のコマンドを入力します。
 +
  <SVM>fpolicy show
@@ -161,7 +165,7 @@ link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-nm
 
 ****
 ****
-*問題：*データコレクタがエラー状態になり、しばらくすると実行状態になり、再びエラーに戻ります。このサイクルが繰り返されます。*これを試してみてください：**これは通常、次のシナリオで発生します。
+*問題：*データコレクタがエラー状態になり、しばらくすると実行状態になり、再びエラーに戻ります。このサイクルが繰り返されます。*これを試してみてください：*これは通常、次のシナリオで発生します。
 
 . データコレクタが複数追加されています。
 . このような動作を示すデータコレクタでは、1つのSVMがこれらのデータコレクタに追加されます。つまり、 2 つ以上のデータコレクタが 1 つの SVM に接続されます。
@@ -206,7 +210,7 @@ fpolicy policy external-engine delete -vserver <svmname> -engine-name <engine_na
 
 ****
 ****
-*問題：* Data Collectorに「Error: Failed to determine the health of the collector within 2 retries, try restarting the collector again（エラーコード：AGENT008）」というエラーメッセージが表示される。* thiを試してみてください：*
+*問題：* Data Collectorに「Error: Failed to determine the health of the collector within 2 retries, try restarting the collector again（エラーコード：AGENT008）」というエラーメッセージが表示される。* これを試みなさい : *
 
 . [ データコレクタ ] ページで、エラーが表示されているデータコレクタの右にスクロールし、 3 つのドットメニューをクリックします。選択した編集 _ 。データコレクタのパスワードをもう一度入力します。[Save] ボタンを押して、データコレクタを保存します。Data Collector が再起動し、エラーが解決されます。
 . Agentマシンに十分なCPUまたはRAMヘッドルームがない可能性があるため、DSCに障害が発生しています。マシンのエージェントに追加されているデータコレクタの数を確認してください。20を超える場合は、エージェントマシンのCPUとRAM容量を増やしてください。CPUとRAMが増加すると、DSCは初期化状態になり、その後自動的に実行状態になります。のサイジングガイドを参照してくださいlink:concept_cs_event_rate_checker.html["このページです"]。

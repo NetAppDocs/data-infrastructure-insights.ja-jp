@@ -1206,10 +1206,7 @@
   <block id="0c934902725716ff33a000cef8df7331" category="section-title">ダッシュボードコントロール</block>
   <block id="d1a06af586beabfef382d9a9a1b7cbe4" category="paragraph">ダッシュボード画面には、次のような複数のコントロールがあります</block>
   <block id="e1cee0b7833b8d6d0c9830c0c359d32a" category="list-text">* 期間セレクタ * ：過去 15 分間から過去 30 日間、またはカスタムの期間である最大 31 日間のデータをダッシュボードに表示できます。ウィジェットごとにこのグローバルな期間を無効にすることができます。</block>
-  <block id="3f5ac045dae0be24b305231f2e8120a3" category="list-text">* 編集 * ボタン：これを選択すると編集モードが有効になり、ダッシュボードに変更を加えることができます。新しいダッシュボードは、デフォルトで編集モードで開きます。</block>
   <block id="d8de249d2c603118f28d5a4a162472de" category="list-text">* 保存 * ボタン：ダッシュボードを保存または削除できます。</block>
-  <block id="2d9c0480416024820f428b9656ea2e60" category="paragraph">[ 保存（ Save ） ] をクリックする前に新しい名前を入力することで、現在のダッシュボードの名前を変更できます。</block>
-  <block id="4c91165c490e5fa72e8f2d18eb8d690c" category="list-text">* 表、グラフ、その他のウィジェットをいくつでもダッシュボードに追加できる [ ウィジェットの追加 ] ボタン。</block>
   <block id="9b07dfa776e7e85e1de7a9e7a5c3bb2b" category="paragraph">ウィジェットは、サイズを変更したり、ダッシュボード内で別の位置に移動したりすることで、現在のニーズに合わせてデータを見やすくすることができます。</block>
   <block id="e861414ecdd46ceedcfd68cb18af35a1" category="section-title">ウィジェットタイプ</block>
   <block id="241e81a1429afe00dffbd10c52eb5d1a" category="paragraph">次のタイプのウィジェットから選択できます。</block>
@@ -12229,7 +12226,6 @@
   <block id="b2e0ae5db392da4135a0d6d4c1790759" category="list-text">SVM のデータ LIF または SVM からの接続をブロックしている管理 LIF にファイアウォールがないことを確認します。</block>
   <block id="1750d9cfda79066e3c52899aa692608a" category="list-text">クラスタ管理IPを使用してSVMを追加する場合は、SVMのデータLIFと管理LIFがAgent VMからping可能であることを確認してください。問題が発生した場合は、 LIF のゲートウェイ、ネットマスク、およびルートを確認してください。</block>
   <block id="391d354d5b5d9326eec673c4983e3e05" category="paragraph">また、クラスタ管理 IP を使用して SSH 経由でクラスタにログインし、エージェント IP に ping を実行することもできます。エージェントIPがping可能であることを確認します。</block>
-  <block id="e7ba86f45d7d15de38f2537adf2afd68" category="paragraph">_network ping -vserver &lt;vserver name&gt;-destination &lt;Agent IP&gt;-lif &lt;Lif Name&gt;-show-detail_</block>
   <block id="ed6479f97f72e2c84fce83c6e84134fa" category="paragraph">pingできない場合は、ONTAPのネットワーク設定が正しいことを確認して、エージェントマシンにpingできるようにします。</block>
   <block id="83d96b0695c5db59120643aeaf92968a" category="list-text">クラスタIP経由で接続しようとしたが機能しない場合は、SVM IP経由で直接接続してみてください。SVM IP を使用して接続する手順については、上記を参照してください。</block>
   <block id="e91b7ee623b377e0be2de8ac35124ec3" category="list-text">SVM IPおよびvsadminのクレデンシャルを使用してコレクタを追加する際に、SVM LIFでData plus Mgmtロールが有効になっているかどうかを確認します。この場合、 SVM LIF に ping することは可能ですが、 SVM LIF への SSH は機能しません。「はい」の場合は、 SVM 管理のみの LIF を作成し、この SVM 管理のみの LIF を使用して接続してみてください。</block>
@@ -12257,7 +12253,6 @@
   <block id="cf2a826b3dbe4d26f14753b4a312c007" category="list-text">同じSVMを2つの異なるワークロードセキュリティ環境（テナント）に追加した場合、最後のSVMは常に成功します。2 つ目のコレクタは、独自の IP アドレスで FPolicy を設定し、最初の IP アドレスから開始します。そのため、最初のデータ収集ツールはイベントの受信を停止し、その「監査」サービスはエラー状態になります。これを回避するには、各 SVM を 1 つの環境に設定します。</block>
   <block id="5db652447c417b7edd8a6faf30683ee0" category="list-text">このエラーは、サービスポリシーが正しく設定されていない場合にも発生することがあります。ONTAP 9.8以降では、データソースコレクタに接続するために、データサービスdata-fse-clientサービス、またはdata-cifsが必要です。さらに、監視対象SVMのデータLIFにdata-fsFPolicyクライアントサービスを関連付ける必要があります。</block>
   <block id="9fbb9e6888c2aef7254ccac7160ec144" category="list-text">ONTAPコレクタが「running」状態になっているかどうかを確認します。「はい」の場合は、一部のファイルを開いて、 CIFS クライアント VM 上で一部の CIFS イベントが生成されていることを確認します。</block>
-  <block id="30eacabf37bbb4653e7ca981b2801051" category="list-text">処理が表示されない場合は、SVMにログインして次のコマンドを入力してください。_&lt;svm&gt; event log show -source fpolicy_fpolicy に関連するエラーがないことを確認してください。</block>
   <block id="a936f63883c022699e3a5ae08232ef26" category="list-text">アクティビティが表示されない場合は、SVMにログインしてください。次のコマンドを入力します。</block>
   <block id="c838f9e60ab91d3bf9f4ae53696f31dc" category="paragraph">プレフィックスが「cloudsecure_」であるという名前のFPolicyポリシーが設定され、ステータスが「on」になっているかどうかを確認します。設定されていないと、 Agent が SVM でコマンドを実行できない可能性が高くなります。ページの先頭に記載されているすべての前提条件を満たしていることを確認してください。</block>
   <block id="2b7249a3eb66724971d86b79578b4015" category="list-text">エージェントが過負荷状態であり、データソースコレクタに接続できない可能性があります。</block>
@@ -12339,7 +12334,6 @@
   <block id="e45fdd2145016f7fcc29b179b255183e" category="paragraph">*問題：* SVM Data Collectorがエラー状態で、エラーメッセージが「Agent failed to connect to the collector」*次を試してください：*</block>
   <block id="8a1416995d314617de12ed7aa4bd2467" category="paragraph">*問題：* SVM Data Collectorに、「fpolicy.server.connectError: Node failed to establish a connection with the FPolicy server」12.195.15.146（理由：「Select Timed Out」）というエラーメッセージが表示される*試してみてください：*ファイアウォールはSVM /クラスタで有効になっています。そのため、 FPolicy エンジンは FPolicy サーバに接続できません。詳細情報の取得に使用できるONTAPのCLIは次のとおりです。</block>
   <block id="0b0c14625851c63aa1977699a0bb729f" category="paragraph">*問題：*エラーメッセージ：「コネクタがエラー状態です。サービス名： audit 。失敗の理由： SVM で有効なデータインターフェイスが見つかりません（ロール：データ、データプロトコル： NFS か CIFS か、両方、ステータス：稼働）。」*これを試してみてください。*動作可能なインターフェイス（データおよびデータプロトコルとしての役割を持つCIFS/NFS）があることを確認してください。</block>
-  <block id="b36fd6f11853dfd44a57310a6054c451" category="paragraph">*問題：*データコレクタがエラー状態になり、しばらくすると実行状態になり、再びエラーに戻ります。このサイクルが繰り返されます。*これを試してみてください：**これは通常、次のシナリオで発生します。</block>
   <block id="5e34f5db201b138420b061f08cbe11af" category="paragraph">*問題：*コネクターがエラー状態です。サービス名： audit 。失敗の理由：（ SVM SVM 名のポリシー）を設定できませんでした。理由：「fpolicy.policy.scope-modify」内の「shares-to-include」要素に無効な値が指定されています：「Federal」*試用：**共有名は引用符なしで指定する必要があります。ONTAP SVM DSC 設定を編集して共有名を修正します。</block>
   <block id="af601d5fafb52a70ba0c4c8d49f7d8ad" category="paragraph">Include および exclude shares _ は、長い共有名のリストを対象としたものではありません。対象に含める共有や除外する共有が大量にある場合は、ボリュームでフィルタリングします。</block>
   <block id="e89b27e0a4f2f1144fe6db2c891631a7" category="paragraph">*問題：*クラスタに未使用の既存のFPolicyポリシーがあります。ワークロードセキュリティをインストールする前に、これらのワークロードに対して何を行う必要がありますか？*使用してみてください：*未使用の既存のfpolicy設定は、切断された状態であってもすべて削除することを推奨します。ワークロードセキュリティで、プレフィックス「cloudsecure_」を付けてFPolicyを作成します。その他の未使用の FPolicy 設定はすべて削除できます。</block>
@@ -12350,7 +12344,6 @@
   <block id="c5e48108c2128269b181c77142f6e2c0" category="list-text">ワークロードセキュリティのデータコレクタでエラーが表示されるまで待ちます。</block>
   <block id="bc71f49bfafa6a1dbe64216acd61b88e" category="list-text">SVMでCIFSサーバが設定されていないため、左側にあるエラーはワークロードのセキュリティに表示されます。</block>
   <block id="10b2e2acac1b3fff1d033229848652e2" category="list-text">ONTAP SVM データコレクタを編集し、許可されたプロトコルとして CIFS のチェックを解除します。データコレクタを保存します。NFS プロトコルのみが有効な状態で実行が開始されます。</block>
-  <block id="c6ac5b768bf8fa1cdc43218fe66da4f4" category="paragraph">*問題：* Data Collectorに「Error: Failed to determine the health of the collector within 2 retries, try restarting the collector again（エラーコード：AGENT008）」というエラーメッセージが表示される。* thiを試してみてください：*</block>
   <block id="8c5a140b8e26d5573c3346f7da21fdd0" category="paragraph">*問題：* SVMモードを選択するとData Collectorがエラー終了します。*試してみてください：* SVMモードで接続中に、SVM管理IPではなくクラスタ管理IPを使用して接続すると接続エラーが発生します。正しいSVM IPが使用されていることを確認します。</block>
   <block id="55be0ee113a903248473234512ad1ba6" category="paragraph">*問題：*アクセス拒否機能が有効になっていると、データコレクタにエラーメッセージが表示される：「コネクタがエラー状態です。サービス名： audit 。失敗理由：SVM test_svmでfpolicyを設定できませんでした。理由：ユーザーは許可されていません。"*試してみてください：*アクセス拒否機能に必要なREST権限がユーザにない可能性があります。の手順に従って権限を設定してください<block ref="acf32226210d6c3eeee22de70798517f" category="inline-link-macro-rx"></block>。</block>
   <block id="c9d2ff4bbf3f4496b0b55e66133b6e56" category="paragraph">権限が設定されたら、コレクタを再起動します。</block>
@@ -12360,4 +12353,30 @@
   <block id="c7ce8523ab71d2ab79f0a54681bde5c6" category="paragraph">ZFSアレイが古すぎてREST APIをサポートできない可能性があります。AK 2013.1.3.0はREST API対応の最初のZFS OSリリースであり、すべてのZFSアプライアンスをアップグレードできるわけではありません。</block>
   <block id="0be262a01ffd53cb1827d924de37e376" category="paragraph">管理者ユーザが利用できる強化されたREST API使用状況の追跡機能により、セキュリティ体制を強化し、リソース管理を合理化できます。APIの使用状況を追跡することで、使用されているAPIトークン、使用元のIPアドレス、生成されるトラフィック量を確認できます。トークンを特定のIPアドレスと使用レベルにリンクすることで、システムアクセスと使用傾向に関する強力なインサイトが得られ、安全で効率的な環境を維持し、スムーズな運用を維持するために必要な制御が可能になります。</block>
   <block id="8261d0e1521d30da1b36761d508cb245" category="paragraph">APIの使用状況を表示するには、* Observability &gt; Admin &gt; API Access *に移動し、_View API Usage_を選択します。このAPIは、DII Observability APIでのみ使用できます。ワークロードセキュリティには適用されません。</block>
+  <block id="d4e6618283d16f29ba2c9d35766c45a1" category="paragraph">[保存]メニューの*[名前の変更]*をクリックすると、現在のダッシュボードの名前を変更できます。</block>
+  <block id="e29fd9e1d666ef26240aa2b0ed0fc1eb" category="list-text">*+ウィジェットの追加*ボタン。任意の数の表、グラフ、またはその他のウィジェットをダッシュボードに追加できます。</block>
+  <block id="62f5739cc82c405ea8357b692b14edbe" category="list-text">*+変数の追加*ボタン。変数を使用してダッシュボードデータをアクティブにフィルタリングできます。</block>
+  <block id="76eae0a751a898b7502d367e62b8fd6d" category="list-text">*時間棒グラフ*:時間の経過に伴うログまたはメトリックデータを表示します。</block>
+  <block id="671839ef7e8bf30120d054f860c84021" category="inline-image-macro">ログデータを示す時間棒グラフの例（width=200）</block>
+  <block id="7fec05b71ec732e9bd7bdcbdbd94e7f8" category="paragraph"><block ref="7fec05b71ec732e9bd7bdcbdbd94e7f8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8b4b69c36bee3b088919c3e43a80f18c" category="section-title">コレクタの移行</block>
+  <block id="d801c228c66c7fa487f2a8b7e96d562d" category="paragraph">ワークロードセキュリティコレクタをエージェント間で簡単に移行できるため、エージェント間でコレクタの負荷を効率的に分散できます。</block>
+  <block id="e360b039f3620c4847b5b84d78e80480" category="list-text">ソースエージェントは_connected_stateである必要があります。</block>
+  <block id="6ac92a202fa1f4747631bdcddfe6dd36" category="list-text">移行するコレクタは、_running_stateである必要があります。</block>
+  <block id="fc9d3df613063ee57906c461320744e2" category="paragraph">注：</block>
+  <block id="c4da4d3440b598c8edf40d69f984f009" category="list-text">移行は、データコレクタとユーザディレクトリコレクタの両方でサポートされています。</block>
+  <block id="47e78491de9a67f5836acba0100229fe" category="list-text">コレクタの移行は、手動で管理するテナントではサポートされていません。</block>
+  <block id="8d7cc88bc7151c6f89c782e846c2e794" category="section-title">移行コレクタ</block>
+  <block id="754f58ec9179e0d0a95d7cfbd792e670" category="paragraph">コレクタを移行するには、次の手順を実行します。</block>
+  <block id="213d23bd03074c84906851a840c802f5" category="list-text">「コレクタの編集」ページに移動します。</block>
+  <block id="df217418f3f92028ed4fc80e60e917a6" category="list-text">エージェントのドロップダウンから宛先エージェントを選択します。</block>
+  <block id="20085de2d7ac8fc18785d6450ab167e3" category="list-text">「Save Collector」ボタンをクリックしてください。</block>
+  <block id="d86dd741c6543921b9b4bc3d1da7d642" category="paragraph">ワークロードセキュリティが要求を処理します。移行が成功すると、ユーザーはコレクタリストページにリダイレクトされます。失敗した場合は、編集ページに適切なメッセージが表示されます。</block>
+  <block id="bff6d170f0b8edf07af035d6c7a0785f" category="paragraph">注:以前に[Edit Collector]ページで行った設定変更は、コレクタが移行先エージェントに正常に移行されても適用されたままになります。</block>
+  <block id="92f3bb936d162eca89372102e441a55c" category="inline-image-macro">別のエージェントを選択してコレクタを移行する</block>
+  <block id="db4125d1ded8b7b828eabf0eeb986b37" category="paragraph"><block ref="db4125d1ded8b7b828eabf0eeb986b37" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="84f0533755d1a33e5cc67c5d1108baa6" category="list-text">処理が表示されない場合は、SVMにログインして次のコマンドを入力してください。</block>
+  <block id="839fd302fc2dc5dee66803e94e9f95dc" category="paragraph">fpolicyに関連するエラーがないことを確認してください。</block>
+  <block id="6e393b37e77fb2093e24fb776c6faf55" category="paragraph">*問題：*データコレクタがエラー状態になり、しばらくすると実行状態になり、再びエラーに戻ります。このサイクルが繰り返されます。*これを試してみてください：*これは通常、次のシナリオで発生します。</block>
+  <block id="8202c6a36256606217ad100be587d707" category="paragraph">*問題：* Data Collectorに「Error: Failed to determine the health of the collector within 2 retries, try restarting the collector again（エラーコード：AGENT008）」というエラーメッセージが表示される。* これを試みなさい : *</block>
 </blocks>
