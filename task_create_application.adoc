@@ -12,9 +12,6 @@ keywords: application, create application,
 [role="lead"]
 テナントで実行されている特定のアプリケーションに関連するデータを追跡するには、Data Infrastructure Insightsでアプリケーションを定義します。
 
-.開始する前に
-アプリケーションをビジネスエンティティに関連付ける場合は、アプリケーションを定義する前にビジネスエンティティを作成する必要があります。
-
 .タスクの内容
 Data Infrastructure Insightsを使用すると、アプリケーションに関連付けられたアセットのデータを追跡し、使用状況やコストレポートなどを作成できます。
 

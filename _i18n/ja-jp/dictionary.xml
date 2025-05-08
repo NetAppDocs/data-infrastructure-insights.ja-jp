@@ -6361,7 +6361,6 @@
   <block id="12deeaac5f633c54b730f8c247dbf7e0" category="paragraph">新しいバージョンの監視オペレータは、次のコマンドを使用してアンインストールできます。</block>
   <block id="aee5f180cc531b30ec6cf8dcf509d9b8" category="paragraph">監視オペレータが専用のネームスペースに配置されている場合は、ネームスペースを削除します。</block>
   <block id="97e76f0c81cc1c26b3d8ffe0d972c5af" category="paragraph">最初のコマンドが「リソースが見つかりません」を返した場合は、次の手順に従って古いバージョンの監視オペレータをアンインストールします。</block>
-  <block id="0b14d0fbc4256c7ec7c3bb39b2c28854" category="paragraph">次の各コマンドを順番に実行します。現在のインストール状況によっては、これらのコマンドの一部で「オブジェクトが見つかりません」というメッセージが返される場合があります。これらのメッセージは無視してかまいません。</block>
   <block id="82a8cca794947463478c2f08445a8ff4" category="paragraph">セキュリティコンテキスト制約が事前に作成されている場合は、次の手順を実行します。</block>
   <block id="a945216a5c61e628c867b8948c797454" category="section-title">Kubeステートメトリックについて</block>
   <block id="951a50d1b55837ddb5ff4cb5af4ebc8a" category="paragraph">NetApp Kubernetes Monitoring Operatorは、他のインスタンスとの競合を回避するために独自のkube-state-metricsをインストールします。</block>
@@ -7238,7 +7237,6 @@
   <block id="9931bdf1120e743a2d938e061f7df898" category="paragraph">ルールを削除するかどうかを確認するメッセージが表示されます。</block>
   <block id="b101d3b5c8c4309f4cffa3adfd387b6b" category="list-text">[OK] をクリックします。</block>
   <block id="e42dae64f8e80d611352315992a2460d" category="doc">アプリケーションの作成</block>
-  <block id="598c4639acaf0f3c5a419f9cf865ef56" category="paragraph">アプリケーションをビジネスエンティティに関連付ける場合は、アプリケーションを定義する前にビジネスエンティティを作成する必要があります。</block>
   <block id="ba52eab802a385ced7d6e9782614bf0b" category="paragraph">Data Infrastructure Insightsを使用すると、アプリケーションに関連付けられたアセットのデータを追跡し、使用状況やコストレポートなどを作成できます。</block>
   <block id="91ee28fc3faa982ecdc71598fe7ce8b9" category="list-text">[Data Infrastructure Insights ]メニューで、*[Observability]&gt;[Enrich]&gt;[Applications]*をクリックします。選択</block>
   <block id="8358341ae527ee11b5b1dc8e8f22edea" category="paragraph">[アプリケーションの追加]ダイアログボックスが表示されます。</block>
@@ -12379,4 +12377,5 @@
   <block id="839fd302fc2dc5dee66803e94e9f95dc" category="paragraph">fpolicyに関連するエラーがないことを確認してください。</block>
   <block id="6e393b37e77fb2093e24fb776c6faf55" category="paragraph">*問題：*データコレクタがエラー状態になり、しばらくすると実行状態になり、再びエラーに戻ります。このサイクルが繰り返されます。*これを試してみてください：*これは通常、次のシナリオで発生します。</block>
   <block id="8202c6a36256606217ad100be587d707" category="paragraph">*問題：* Data Collectorに「Error: Failed to determine the health of the collector within 2 retries, try restarting the collector again（エラーコード：AGENT008）」というエラーメッセージが表示される。* これを試みなさい : *</block>
+  <block id="c073fe7a74166cd5d73ec57ce2d1f76e" category="paragraph">次の各コマンドを順番に実行します。現在のインストール環境によっては、これらのコマンドの一部が「object not found」メッセージを返す場合があります。これらのメッセージは無視してかまいません。</block>
 </blocks>
