@@ -1962,8 +1962,6 @@
   <block id="f057d707b9d5c17f0fad56f8204f6bff" category="section-title">ワークロードのセキュリティ計測</block>
   <block id="c3ef097c271469a3ca9718d35396087c" category="paragraph">ワークロードのセキュリティは、オブザーバビリティの計測と同じアプローチを使用してクラスタごとに計測されます。</block>
   <block id="3943920606f23b23925f15408e26cae2" category="paragraph">ワークロードセキュリティの使用状況は、*[管理者]&gt;[サブスクリプション]*ページの*[ワークロードセキュリティ]*タブで確認できます。</block>
-  <block id="36e75837cd661882faf4ce93d35cafea" category="inline-image-macro">'Admin&amp;gt; Subscription&amp;gt; Workload Security（管理&amp;gt;サブスクリプション&amp;gt;ワークロードセキュリティ）タブには、ハイエンド、ミッドレンジ、エントリレベルのノード数が表示されます。'</block>
-  <block id="78770d4128ce656a56bd8e8ecd580a0e" category="paragraph"><block ref="9d3e296bb7e7c4cf7ec09d1ec6e96740" category="inline-image-macro-rx" type="image"></block></block>
   <block id="daba1c6ff8590913bcb10d43d3bfcf13" category="admonition">既存のワークロードセキュリティサブスクリプションでは、ノードの使用量がManaged Unitを消費しないように、MU使用量が調整されます。Data Infrastructure Insightsは、使用量を測定して、ライセンスされた使用量に確実に準拠します。</block>
   <block id="c015ba02347af3d8c00ede570637622a" category="section-title">登録方法を教えてください。</block>
   <block id="99d34ca2583ae7363bd4e07f9b2d98cc" category="inline-xref">セルフサブスクライブ</block>
@@ -12378,4 +12376,6 @@
   <block id="6e393b37e77fb2093e24fb776c6faf55" category="paragraph">*問題：*データコレクタがエラー状態になり、しばらくすると実行状態になり、再びエラーに戻ります。このサイクルが繰り返されます。*これを試してみてください：*これは通常、次のシナリオで発生します。</block>
   <block id="8202c6a36256606217ad100be587d707" category="paragraph">*問題：* Data Collectorに「Error: Failed to determine the health of the collector within 2 retries, try restarting the collector again（エラーコード：AGENT008）」というエラーメッセージが表示される。* これを試みなさい : *</block>
   <block id="c073fe7a74166cd5d73ec57ce2d1f76e" category="paragraph">次の各コマンドを順番に実行します。現在のインストール環境によっては、これらのコマンドの一部が「object not found」メッセージを返す場合があります。これらのメッセージは無視してかまいません。</block>
+  <block id="d873c97dd6dca1c7bd30ed50b82bee0f" category="inline-image-macro">ハイエンド、ミッドレンジ、エントリレベルのノード数を表示する[Admin&amp;gt; Subscription&amp;gt; Workload Security]タブ</block>
+  <block id="a2efde4371837d491f7f2d093cb687a2" category="paragraph"><block ref="6239b49ee0db956af965dd1ce0c92bfa" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
