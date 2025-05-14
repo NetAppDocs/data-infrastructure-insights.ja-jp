@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: ws_webhook_example_pagerduty.html 
+keywords: webhook, notification, PagerDuty, integration 
+summary: PagerDutyのワークロードセキュリティWebhookを作成してセキュリティを警告 
+---
+= PagerDutyのワークロードセキュリティWebhookの例
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Webhook を使用すると、ユーザーはカスタマイズされた webhook チャネルを使用して、さまざまなアプリケーションにアラート通知を送信できます。このページでは、 PagerDuty のウェブフックの設定例を示します。
+
+
+NOTE: このページはサードパーティの指示を参照していますが、これらは変更される可能性があります。最新の情報については、を参照してlink:https://support.pagerduty.com/docs/services-and-integrations["PagerDuty のドキュメント"]ください。
+
+
+
+== PagerDuty 設定：
+
+. PagerDutyで*[サービス]>[サービスディレクトリ]*に移動し、*+[新しいサービス]*ボタンをクリックします。
+. [Name]に「_」と入力し、[_ Use our API directly_」を選択します。[サービスの追加]を選択します。
++
+image:Webhooks_PagerDutyScreen1.png["PagerDuty 画面"]
+
+. Integrations_tabを選択して* Integration Key *を表示します。このキーは、以下のData Infrastructure Insights Webフックを作成する際に必要になります。
+
+
+. [ インシデント *] または [ サービス *] に移動して、アラートを表示します。
++
+image:ws_pagerduty_incidents_list.png["PagerDutyインシデントリストの例、width=700"]
+
+
+
+
+
+== ワークロードセキュリティページの作成デューティWebhook：
+
+* [Admin]>[Notifications]に移動し、[_Workload Security webhooks_tab]を選択します。「+ Webhook」を選択して、新しいWebhookを作成します。
+* Webhookにわかりやすい名前を付けます。
+* [_Template Type_]ドロップダウンで、[_PagerDuty Trigger_]を選択します。
+* _routingKey_という名前のカスタムパラメータシークレットを作成し、その値を上記のPagerDuty_Integration Key_createdに設定します。
+
+
+image:Webhooks_Custom_Secret_Routing_Key.png["ルーティングキーの設定、width=300"]
+
+image:ws_webhook_pagerduty_example.png["ワークロードセキュリティPagerDuty Webhookの例、width=400"]
+
+
+
+== Webhook で通知します
+
+* Webhookでイベントを通知するには、_Workload Security > Policies_に移動します。[_+Attack Policy_]または[_+Warning Policy_]を選択します。
+* わかりやすいポリシー名を入力します。
+* [Required Attack Type(s)]、[Devices to which the policy should be attached、および[Required Actions]を選択します。
+* _webhooks Notifications_dropdownで、必要なPagerDuty Webhookを選択します。ポリシーを保存します。
+
+
+注: Webhookは、既存のポリシーを編集して適用することもできます。
+
+image:ws_add_attack_policy.png["［Add Attack Policy］ダイアログにWebhook、width=400が表示されます。"]

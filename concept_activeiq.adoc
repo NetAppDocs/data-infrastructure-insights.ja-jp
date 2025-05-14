@@ -1,50 +1,50 @@
 ---
 sidebar: sidebar 
 permalink: concept_activeiq.html 
-keywords: Active IQ, risks, svm, AIQ, risk 
-summary: NetApp Active IQからリスクデータを収集するデータインフラ分析情報 
+keywords: Active IQ, risks, svm, AIQ, risk, ADigital Advisor 
+summary: Data Infrastructure Insightsは、NetApp Active IQデジタルアドバイザ（デジタルアドバイザとも呼ばれる）からリスクデータを収集します。 
 ---
-= Active IQ
+= Active IQ Digital Advisor
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
 
 
 [role="lead"]
-NetAppはlink:https://www.netapp.com/us/products/data-infrastructure-management/active-iq.aspx["Active IQ"]、NetAppのお客様のハードウェア/ソフトウェアシステム向けに、一連の視覚化、分析、およびその他のサポート関連サービスを提供しています。Active IQ が報告するデータは、システム問題のトラブルシューティングを強化するとともに、デバイスに関する最適化と予測分析の情報も提供します。
+NetApplink:https://www.netapp.com/us/products/data-infrastructure-management/active-iq.aspx["Active IQ Digital Advisor"]（デジタルアドバイザとも呼ばれます）は、NetAppのお客様のハードウェア/ソフトウェアシステムに対して、一連の視覚化、分析、およびその他のサポート関連サービスを提供します。Digital Advisorによって報告されるデータは、システムの問題のトラブルシューティングを強化し、デバイスに関連する最適化および予測分析のインサイトを提供します。
 
-Data Infrastructure Insightsは、Active IQによって監視およびレポートされるすべてのNetApp clustered Data ONTAPストレージシステムについて、*リスク*を収集します。ストレージシステムについて報告されたリスクは、Data Infrastructure Insightsによって、それらのデバイスからのデータ収集の一環として自動的に収集されます。Active IQリスク情報を収集するには、適切なデータコレクタをData Infrastructure Insightsに追加する必要があります。
+Data Infrastructure Insightsは、デジタルアドバイザによって監視およびレポートされるすべてのNetApp clustered Data ONTAPストレージシステムの*リスク*を収集します。ストレージシステムについて報告されたリスクは、Data Infrastructure Insightsによって、それらのデバイスからのデータ収集の一環として自動的に収集されます。Digital Advisorのリスク情報を収集するには、適切なデータコレクタをData Infrastructure Insightsに追加する必要があります。
 
-Data Infrastructure Insightsには、Active IQで監視およびレポートされていないONTAPシステムのリスクデータは表示されません。
+Data Infrastructure Insightsには、Digital Advisorによって監視およびレポートされていないONTAPシステムのリスクデータは表示されません。
 
-レポートされるリスクは、Data Infrastructure Insightsの_storage_and_storage node_assetランディングページの「リスク」の表に表示されます。この表には、リスクの詳細、リスクのカテゴリ、潜在的な影響が表示されます。また、ストレージノードのすべてのリスクをまとめた Active IQ ページへのリンクも表示されます（ネットアップサポートアカウントのサインインが必要です）。
+レポートされるリスクは、Data Infrastructure Insightsの_storage_and_storage node_assetランディングページの「リスク」の表に表示されます。この表には、リスクの詳細、リスクのカテゴリ、リスクの潜在的な影響が表示されます。また、ストレージノードのすべてのリスクをまとめた[Digital Advisor]ページへのリンクも記載されています（NetAppサポートアカウントのサインインが必要です）。
 
-image:AIQ_Risks_Table_Example.png["Active IQ Risks テーブル"]
+image:AIQ_Risks_Table_Example.png["Digital Advisorのリスク一覧"]
 
-ランディングページの概要ウィジェットにも報告されたリスクの数が表示され、該当する Active IQ ページへのリンクが表示されます。a_storage_landing ページの数は、基盤となるすべてのストレージノードのリスクの合計です。
+レポートされたリスクの数は、ランディングページの[Summary]ウィジェットにも表示され、Digital Advisorの該当するページへのリンクが表示されます。a_storage_landing ページの数は、基盤となるすべてのストレージノードのリスクの合計です。
 
 image:AIQ_Summary_Example.png["ストレージページの概要"]
 
 
 
-== Active IQ ページを開きます
+== Digital Advisorページを開く
 
-Active IQ ページへのリンクをクリックして、現在 Active IQ アカウントにサインインしていない場合は、次の手順を実行してストレージノードの Active IQ ページを表示する必要があります。
+Digital Advisorのページへのリンクをクリックして現在Digital Advisorアカウントにサインインしていない場合は、次の手順を実行してストレージノードのDigital Advisorページを表示する必要があります。
 
-. [Data Infrastructure Insights Summary]ウィジェットまたは[Risks]テーブルで、Active IQリンクをクリックします。
-. ネットアップサポートアカウントにサインインします。Active IQ のストレージノードのページに直接移動します。
+. [Data Infrastructure Insights Summary]ウィジェットまたは[Risks]テーブルで、[Digital Advisor]リンクをクリックします。
+. ネットアップサポートアカウントにサインインします。Digital Advisorの[ストレージノード]ページに直接移動します。
 
 
 
 
 == リスクを照会しています
 
-Data Infrastructure Insightsでは、ストレージまたはストレージノードのクエリに* monitoring.count *列を追加できます。返される結果にActive IQ監視対象のストレージシステムが含まれる場合は、monitor.count列にストレージシステムまたはノードのリスク数が表示されます。
+Data Infrastructure Insightsでは、ストレージまたはストレージノードのクエリに* monitoring.count *列を追加できます。返された結果にDigital Advisorで監視されているストレージシステムが含まれている場合は、monitoring.count列にストレージシステムまたはノードのリスク数が表示されます。
 
 
 
 == ダッシュボード
 
-ウィジェット（円グラフ、表ウィジェット、棒グラフ、列、散布図、 および単一価値ウィジェット）： Active IQ によって監視される NetApp clustered Data ONTAP システムのストレージノードとストレージノードのオブジェクトリスクを可視化します。これらのウィジェットでは、「オブジェクトリスク」を列または指標として選択できます。各ウィジェットでは、ストレージノードまたはストレージノードがオブジェクトとなります。
+デジタルアドバイザが監視するNetApp clustered Data ONTAPシステムのストレージノードとストレージノードに関するオブジェクトのリスクを可視化するために、ウィジェット（円グラフ、表ウィジェット、バー、列、散布図、単一値ウィジェットなど）を構築できます。これらのウィジェットでは、「オブジェクトリスク」を列または指標として選択できます。各ウィジェットでは、ストレージノードまたはストレージノードがオブジェクトとなります。
 
 image:ObjectRiskWidgets.png["ウィジェットのオブジェクトリスク"]

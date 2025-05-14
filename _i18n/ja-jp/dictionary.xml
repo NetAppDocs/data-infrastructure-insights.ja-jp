@@ -184,25 +184,11 @@
   <block id="e0dc2ed956b3711e722d965954939344" category="list-text">この Acquisition Unit に合計 75 個以上のデータコレクタを導入しますか？</block>
   <block id="159904c45b61bfdda4989e18bf9891e8" category="paragraph">上記の「はい」回答ごとに、 8 GB のメモリと 50 GB のディスク容量を AU に追加することをお勧めします。たとえば、「はい」と答えた場合、 150GB 以上のディスクスペースを備えた 24GB のメモリシステムを導入する必要があります。Linux の場合、ログの場所に追加するディスクスペース。</block>
   <block id="11bb1da5c9cf0248245ce5b24119d183" category="paragraph">サイジングに関するその他の情報については、ネットアップサポートにお問い合わせください。</block>
-  <block id="96cb7682ad0362f3aff6ef6f90dd2520" category="summary">NetApp Active IQからリスクデータを収集するデータインフラ分析情報</block>
   <block id="b5fe3a41d32647f20f3b5ec96045d6d6" category="doc">Active IQ</block>
-  <block id="df0ddcb04f0e5278d49d2c87dfa7f7fc" category="paragraph">NetAppは<block ref="5d418eb60d51fa035e4b287bd4191a07" category="inline-link-macro-rx"></block>、NetAppのお客様のハードウェア/ソフトウェアシステム向けに、一連の視覚化、分析、およびその他のサポート関連サービスを提供しています。Active IQ が報告するデータは、システム問題のトラブルシューティングを強化するとともに、デバイスに関する最適化と予測分析の情報も提供します。</block>
-  <block id="97ba27a6c978c304ea9138ee01781875" category="paragraph">Data Infrastructure Insightsは、Active IQによって監視およびレポートされるすべてのNetApp clustered Data ONTAPストレージシステムについて、*リスク*を収集します。ストレージシステムについて報告されたリスクは、Data Infrastructure Insightsによって、それらのデバイスからのデータ収集の一環として自動的に収集されます。Active IQリスク情報を収集するには、適切なデータコレクタをData Infrastructure Insightsに追加する必要があります。</block>
-  <block id="bfdb97c5bb51966044d87207708e9888" category="paragraph">Data Infrastructure Insightsには、Active IQで監視およびレポートされていないONTAPシステムのリスクデータは表示されません。</block>
-  <block id="a98980e7429cd68c3207593853e627fe" category="paragraph">レポートされるリスクは、Data Infrastructure Insightsの_storage_and_storage node_assetランディングページの「リスク」の表に表示されます。この表には、リスクの詳細、リスクのカテゴリ、潜在的な影響が表示されます。また、ストレージノードのすべてのリスクをまとめた Active IQ ページへのリンクも表示されます（ネットアップサポートアカウントのサインインが必要です）。</block>
-  <block id="44def9cfd3c785a71c36d95e24981147" category="inline-image-macro">Active IQ Risks テーブル</block>
-  <block id="253139fff686e1ef9f39ced79055cc70" category="paragraph"><block ref="253139fff686e1ef9f39ced79055cc70" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8887b934719a6de0be9e0e43f0ab23d0" category="paragraph">ランディングページの概要ウィジェットにも報告されたリスクの数が表示され、該当する Active IQ ページへのリンクが表示されます。a_storage_landing ページの数は、基盤となるすべてのストレージノードのリスクの合計です。</block>
   <block id="96caf84605c76fdc8e4cec8734853381" category="inline-image-macro">ストレージページの概要</block>
   <block id="1be3faf6a174e90a1b900868f94e4600" category="paragraph"><block ref="1be3faf6a174e90a1b900868f94e4600" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="4a45597eae979dc62d93cd1d748058bd" category="section-title">Active IQ ページを開きます</block>
-  <block id="487f4fcccb6a34d5590990b8e54ace74" category="paragraph">Active IQ ページへのリンクをクリックして、現在 Active IQ アカウントにサインインしていない場合は、次の手順を実行してストレージノードの Active IQ ページを表示する必要があります。</block>
-  <block id="ae19f5b6992b8d45f55c8e5baa5492c8" category="list-text">[Data Infrastructure Insights Summary]ウィジェットまたは[Risks]テーブルで、Active IQリンクをクリックします。</block>
-  <block id="cd2403e73e741b8001cced6aa04fa472" category="list-text">ネットアップサポートアカウントにサインインします。Active IQ のストレージノードのページに直接移動します。</block>
   <block id="62fcdd34f555d8c4a7cdda3b94732063" category="section-title">リスクを照会しています</block>
-  <block id="32a5da80264ae98c83852181734d819d" category="paragraph">Data Infrastructure Insightsでは、ストレージまたはストレージノードのクエリに* monitoring.count *列を追加できます。返される結果にActive IQ監視対象のストレージシステムが含まれる場合は、monitor.count列にストレージシステムまたはノードのリスク数が表示されます。</block>
   <block id="0ba8adc53c16a6ffe145978e834b02f8" category="section-title">ダッシュボード</block>
-  <block id="88773c59e894d8416f71b9658d5a03fc" category="paragraph">ウィジェット（円グラフ、表ウィジェット、棒グラフ、列、散布図、 および単一価値ウィジェット）： Active IQ によって監視される NetApp clustered Data ONTAP システムのストレージノードとストレージノードのオブジェクトリスクを可視化します。これらのウィジェットでは、「オブジェクトリスク」を列または指標として選択できます。各ウィジェットでは、ストレージノードまたはストレージノードがオブジェクトとなります。</block>
   <block id="e0ca94f4a4b2b9a6b7968e11a7757d03" category="inline-image-macro">ウィジェットのオブジェクトリスク</block>
   <block id="4a7b46f5ae3d121fb437f8755e468f60" category="paragraph"><block ref="4a7b46f5ae3d121fb437f8755e468f60" category="inline-image-macro-rx" type="image"></block></block>
   <block id="be2f9224b979c292cb15fb8ca6626094" category="summary">異常の指標を監視</block>
@@ -12378,4 +12364,64 @@
   <block id="c073fe7a74166cd5d73ec57ce2d1f76e" category="paragraph">次の各コマンドを順番に実行します。現在のインストール環境によっては、これらのコマンドの一部が「object not found」メッセージを返す場合があります。これらのメッセージは無視してかまいません。</block>
   <block id="d873c97dd6dca1c7bd30ed50b82bee0f" category="inline-image-macro">ハイエンド、ミッドレンジ、エントリレベルのノード数を表示する[Admin&amp;gt; Subscription&amp;gt; Workload Security]タブ</block>
   <block id="a2efde4371837d491f7f2d093cb687a2" category="paragraph"><block ref="6239b49ee0db956af965dd1ce0c92bfa" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="67cdd97ee57ecbb8d5397980e2f337b2" category="summary">Data Infrastructure Insightsは、NetApp Active IQデジタルアドバイザ（デジタルアドバイザとも呼ばれる）からリスクデータを収集します。</block>
+  <block id="dab2edf9eaac3950e92c281ce358af01" category="doc">Active IQ Digital Advisor</block>
+  <block id="c68ffc18976c6478ceba645cdcfe3ad4" category="paragraph">NetApp<block ref="cbe8da543274ee624cafab4e3c376bb9" category="inline-link-macro-rx"></block>（デジタルアドバイザとも呼ばれます）は、NetAppのお客様のハードウェア/ソフトウェアシステムに対して、一連の視覚化、分析、およびその他のサポート関連サービスを提供します。Digital Advisorによって報告されるデータは、システムの問題のトラブルシューティングを強化し、デバイスに関連する最適化および予測分析のインサイトを提供します。</block>
+  <block id="bb4ab99c035d10d75227562a13f30fbd" category="paragraph">Data Infrastructure Insightsは、デジタルアドバイザによって監視およびレポートされるすべてのNetApp clustered Data ONTAPストレージシステムの*リスク*を収集します。ストレージシステムについて報告されたリスクは、Data Infrastructure Insightsによって、それらのデバイスからのデータ収集の一環として自動的に収集されます。Digital Advisorのリスク情報を収集するには、適切なデータコレクタをData Infrastructure Insightsに追加する必要があります。</block>
+  <block id="5b3f4c933f6bb8b2000bc2d18617bf70" category="paragraph">Data Infrastructure Insightsには、Digital Advisorによって監視およびレポートされていないONTAPシステムのリスクデータは表示されません。</block>
+  <block id="512f021ba1976438e7134e934898c5bd" category="paragraph">レポートされるリスクは、Data Infrastructure Insightsの_storage_and_storage node_assetランディングページの「リスク」の表に表示されます。この表には、リスクの詳細、リスクのカテゴリ、リスクの潜在的な影響が表示されます。また、ストレージノードのすべてのリスクをまとめた[Digital Advisor]ページへのリンクも記載されています（NetAppサポートアカウントのサインインが必要です）。</block>
+  <block id="29a84751efa30791c464febff54612dd" category="inline-image-macro">Digital Advisorのリスク一覧</block>
+  <block id="b10eb84d2e981f75c16c48813937b3b7" category="paragraph"><block ref="b10eb84d2e981f75c16c48813937b3b7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1a6627262063d4ee7cc3abb758c1fcf6" category="paragraph">レポートされたリスクの数は、ランディングページの[Summary]ウィジェットにも表示され、Digital Advisorの該当するページへのリンクが表示されます。a_storage_landing ページの数は、基盤となるすべてのストレージノードのリスクの合計です。</block>
+  <block id="0a341d745c345ab59da1ff09230bf0f5" category="section-title">Digital Advisorページを開く</block>
+  <block id="d6749e879d62d77cbfe2a4f30aa6f3ca" category="paragraph">Digital Advisorのページへのリンクをクリックして現在Digital Advisorアカウントにサインインしていない場合は、次の手順を実行してストレージノードのDigital Advisorページを表示する必要があります。</block>
+  <block id="61c06e5830878d055d855182425d292e" category="list-text">[Data Infrastructure Insights Summary]ウィジェットまたは[Risks]テーブルで、[Digital Advisor]リンクをクリックします。</block>
+  <block id="5570e484e2050414e7ae0efcb7989c8c" category="list-text">ネットアップサポートアカウントにサインインします。Digital Advisorの[ストレージノード]ページに直接移動します。</block>
+  <block id="21c1dac7b79e4e1279824cc10d71d738" category="paragraph">Data Infrastructure Insightsでは、ストレージまたはストレージノードのクエリに* monitoring.count *列を追加できます。返された結果にDigital Advisorで監視されているストレージシステムが含まれている場合は、monitoring.count列にストレージシステムまたはノードのリスク数が表示されます。</block>
+  <block id="bd27458945df244cb55045b52a24310c" category="paragraph">デジタルアドバイザが監視するNetApp clustered Data ONTAPシステムのストレージノードとストレージノードに関するオブジェクトのリスクを可視化するために、ウィジェット（円グラフ、表ウィジェット、バー、列、散布図、単一値ウィジェットなど）を構築できます。これらのウィジェットでは、「オブジェクトリスク」を列または指標として選択できます。各ウィジェットでは、ストレージノードまたはストレージノードがオブジェクトとなります。</block>
+  <block id="88ebaf1e13c1e098d9a4a73a9242d56d" category="summary">PagerDutyのワークロードセキュリティWebhookを作成してセキュリティを警告</block>
+  <block id="a423930cfe0734579ae74f4cb828cdc6" category="doc">PagerDutyのワークロードセキュリティWebhookの例</block>
+  <block id="d50bb41906d2f733d067c591f51e4963" category="admonition">このページはサードパーティの指示を参照していますが、これらは変更される可能性があります。最新の情報については、を参照して<block ref="4cf6cb20b95cded724b319964a5ce815" category="inline-link-macro-rx"></block>ください。</block>
+  <block id="40a77f4bbfd0ca63ed510e92b9833d67" category="list-text">PagerDutyで*[サービス]&gt;[サービスディレクトリ]*に移動し、*+[新しいサービス]*ボタンをクリックします。</block>
+  <block id="7d26cc043fbfb2e53a18d31fea52c7e8" category="list-text">[Name]に「_」と入力し、[_ Use our API directly_」を選択します。[サービスの追加]を選択します。</block>
+  <block id="d4eb5fdef857fa235821f3033fa67762" category="list-text">Integrations_tabを選択して* Integration Key *を表示します。このキーは、以下のData Infrastructure Insights Webフックを作成する際に必要になります。</block>
+  <block id="a3e8d0a78049eabf2c286c14c55b54f2" category="inline-image-macro">PagerDutyインシデントリストの例、width=700</block>
+  <block id="5d7dc3b4dea14491b2bd2a77d44d3906" category="paragraph"><block ref="5d7dc3b4dea14491b2bd2a77d44d3906" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="742b9235199c630d771bdfddb2c88611" category="section-title">ワークロードセキュリティページの作成デューティWebhook：</block>
+  <block id="ac3971f28a80367895637f2a7baff2b9" category="list-text">[Admin]&gt;[Notifications]に移動し、[_Workload Security webhooks_tab]を選択します。「+ Webhook」を選択して、新しいWebhookを作成します。</block>
+  <block id="1d87d3a9dea9aa3897a6eae95a91d36a" category="list-text">Webhookにわかりやすい名前を付けます。</block>
+  <block id="2f1454968ee4b9454d180e309715be49" category="list-text">[_Template Type_]ドロップダウンで、[_PagerDuty Trigger_]を選択します。</block>
+  <block id="3fbd0a1ea55bc616095344f3e328a58e" category="list-text">_routingKey_という名前のカスタムパラメータシークレットを作成し、その値を上記のPagerDuty_Integration Key_createdに設定します。</block>
+  <block id="69976b733a7e722341855c38d322daf8" category="inline-image-macro">ルーティングキーの設定、width=300</block>
+  <block id="59429acf87914c20fdad5f135b01c652" category="paragraph"><block ref="59429acf87914c20fdad5f135b01c652" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a5d9118ea338b5d8a10b75a82d2b1af4" category="inline-image-macro">ワークロードセキュリティPagerDuty Webhookの例、width=400</block>
+  <block id="3d72322f92053aca22220d16d1e96147" category="paragraph"><block ref="3d72322f92053aca22220d16d1e96147" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="30eb5b55a445f5f9ecc59318a74aca4d" category="list-text">Webhookでイベントを通知するには、_Workload Security &gt; Policies_に移動します。[_+Attack Policy_]または[_+Warning Policy_]を選択します。</block>
+  <block id="4637fc3950065ad14b9030eccdbb419f" category="list-text">わかりやすいポリシー名を入力します。</block>
+  <block id="a5cb6f5849887e301a555c444584e1c2" category="list-text">[Required Attack Type(s)]、[Devices to which the policy should be attached、および[Required Actions]を選択します。</block>
+  <block id="267bb94f071c1cc48b24df7711f00add" category="list-text">_webhooks Notifications_dropdownで、必要なPagerDuty Webhookを選択します。ポリシーを保存します。</block>
+  <block id="d3982edf8ee2e9d64dff417d32932263" category="paragraph">注: Webhookは、既存のポリシーを編集して適用することもできます。</block>
+  <block id="ed8719c17bf4a6b47a6788c4a3556656" category="inline-image-macro">［Add Attack Policy］ダイアログにWebhook、width=400が表示されます。</block>
+  <block id="ebc41e374ce79e003d0fdbca5ff78a65" category="paragraph"><block ref="ebc41e374ce79e003d0fdbca5ff78a65" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="95833a73b3e45da13788f4fcafa6cccb" category="summary">SlackのワークロードセキュリティWebhookを作成してセキュリティを警告</block>
+  <block id="4c41f7a846a2313609fc27e816292120" category="doc">SlackのワークロードセキュリティWebhookの例</block>
+  <block id="2a07da088af04bdad7b7af04058988d0" category="paragraph">このページはサードパーティの指示を参照していますが、これらは変更される可能性があります。最新の情報については、Slackのドキュメントを参照してください。</block>
+  <block id="5862c65b8f7019053c2c8608553da8b0" category="section-title">たわみ率の例</block>
+  <block id="3a3bfcc3b5ed3df4a3c05a7b1bf64859" category="list-text">に移動<block ref="895c0cedff8a42203a3dd912da834bde" category="inline-link-rx"></block>し、新しいアプリを作成します。わかりやすい名前を付けて、ワークスペースを選択します。</block>
+  <block id="22c69d9725266703049e6aa276638f1c" category="inline-image-macro">Slackアプリケーションを作成します。width=400</block>
+  <block id="247e1031c7df77d7e892f04e3d981f15" category="paragraph"><block ref="247e1031c7df77d7e892f04e3d981f15" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cfd6657a0c61826500cdfc6129ca5675" category="list-text">[Incoming Webhooks]に移動し、[_Activate Incoming Webhooks_]をクリックし、[_Add New Webhook_]を選択して、投稿するチャネルを選択します。</block>
+  <block id="6156beaa30eb28272c612e8f6354b961" category="list-text">Webhook URL をコピーします。このURLは、ワークロードセキュリティWebフックを作成するときに指定されます。</block>
+  <block id="6b7df77372799e1a695a1ded8374a011" category="section-title">ワークロードセキュリティSlack Webhookの作成</block>
+  <block id="722b5451130fff18e8af3cc06455619f" category="list-text">[Admin]&gt;[Notifications]に移動し、[_Workload Security webhooks_tab]を選択します。[_+Webhook_]を選択して、新しいWebhookを作成します。</block>
+  <block id="c6474368b7cd8a2778b616cf4905ae3d" category="list-text">[_Template Type_]ドロップダウンで、[_Slack_]を選択します。</block>
+  <block id="fc2a3346b6fec59f8cff07a6f8aade93" category="list-text">上からコピーしたURLを貼り付けます。</block>
+  <block id="a03c7cdbfcc4b139a6c388264157965d" category="inline-image-macro">ワークロードセキュリティのWebhook Slackの例、width=400</block>
+  <block id="6e4b68c24aaef9b8e2d3cb4e2669fabc" category="paragraph"><block ref="6e4b68c24aaef9b8e2d3cb4e2669fabc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2f5eb341673ba105f1383f2b750ad3b0" category="section-title">Webhook経由の通知</block>
+  <block id="2d7c71390213ca5b29909f9995d38c22" category="list-text">Webhookでイベントを通知するには、_Workload Security &gt; Policies_に移動します。[__+Attack Policy_]または[__+Warning Policy_]をクリックします。</block>
+  <block id="5c91d93f01617de1c11eee11259b389d" category="list-text">[Required Attack Type(s)]、[Devices which the policy should be attached、および[Required Actions]を選択します。</block>
+  <block id="91229a6bb91ad336076b839006d6f3d8" category="list-text">_webhooks Notifications_dropdownで、必要なWebhookを選択します。ポリシーを保存します。</block>
+  <block id="ed3289eb0a2d31b7eb1d54764da04491" category="inline-image-macro">[Add Attack Policy]ダイアログ、width=400</block>
+  <block id="f91815c8aac9f13a54e97684dfd7a4bf" category="paragraph"><block ref="f91815c8aac9f13a54e97684dfd7a4bf" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
