@@ -28,7 +28,7 @@ NOTE: このページはサードパーティの指示を参照しています�
 +
 image:Webhooks_PagerDutyScreen1.png["PagerDuty 画面"]
 
-. Integrations_tabを選択して* Integration Key *を表示します。このキーは、以下のData Infrastructure Insights Webフックを作成する際に必要になります。
+. Integrations_tabを選択して* Integration Key *を表示します。このキーは、以下のワークロードセキュリティWebフックを作成するときに必要になります。
 
 
 . [ インシデント *] または [ サービス *] に移動して、アラートを表示します。

@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: ws_webhook_example_discord.html 
+keywords: webhook, notification, Discord, integration 
+summary: DiscordのワークロードセキュリティWebhookを作成してセキュリティを警告 
+---
+= DiscordのワークロードセキュリティWebhookの例
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Webhook を使用すると、ユーザーはカスタマイズされた webhook チャネルを使用して、さまざまなアプリケーションにアラート通知を送信できます。このページでは、 Discord 用のウェブフックを設定する例を示します。
+
+
+NOTE: このページはサードパーティの指示を参照していますが、これらの指示は変更される場合があります。最新の情報については、を参照してlink:https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks["ディスコードの説明"]ください。
+
+
+
+== ディスコード設定：
+
+* Discord （コード解除）でサーバーを選択し、 Text Channels （テキストチャンネル）で Edit Channel （チャネルの編集）（歯車アイコン）を選択します。
+* 「統合」＞「 Web フックの表示」と選択し、「新規 Webhook 」をクリックします
+* Webhook URL をコピーします。これをワークロードセキュリティのWebhook設定に貼り付ける必要があります。
+
+
+
+
+== ワークロードセキュリティWebhookの作成：
+
+. [Admin]>[Notifications]に移動し、[_Workload Security webhooks_tab]を選択します。「+ Webhook」をクリックして、新しいWebhookを作成します。
+. Webhookに意味のある名前を付けます。
+. [_Template Type_] ドロップダウンで、 [* Discore] を選択します。
+. 上記のDiscord URLを_URL_フィールドに貼り付けます。
+
+
+image:ws_webhook_discord_example.png["ワークロードセキュリティWebhook Discordの例"]
+
+Webhookをテストするには、メッセージ本文の値を任意の有効なURL（_ https://netapp.com_)など）に一時的に置き換えてから、_Test Webhook_ボタンをクリックします。Discordでは、Test Webhook機能が動作するために、有効なURLが提供されている必要があります。
+
+テストが完了したら、必ずメッセージの本文を元に戻してください。
+
+
+
+== Webhook で通知します
+
+Webhookでイベントを通知するには、_Workload Security > Policies_に移動します。[__+Attack Policy_]または[__+Warning Policy_]をクリックします。
+
+* わかりやすいポリシー名を入力します。
+* 必要な攻撃タイプ、ポリシーを適用するデバイス、および必要なアクションを選択します。
+* _webhooks Notifications_Dropdownで、必要なDiscord Webhookを選択して保存します。
+
+
+注: Webhookは、既存のポリシーを編集して適用することもできます。
+
+image:ws_add_attack_policy.png["Webhookドロップダウンを示す攻撃ポリシーダイアログ"]

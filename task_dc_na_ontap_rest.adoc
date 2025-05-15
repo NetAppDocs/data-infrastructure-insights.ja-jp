@@ -49,9 +49,7 @@ security login rest-role create -role {role name} -api /api -access readonly
 security login rest-role create -role {role name} -api /api/cluster/agents -access all
 vserver services web access create -name spi -role {role name} -vserver {vserver name as retrieved above}
 ....
-
-
-. 次のコマンドを使用して、読み取り専用ユーザを作成します。create コマンドを実行すると、このユーザのパスワードを入力するように求められます。
+. 次のコマンドを使用して、読み取り専用ユーザを作成します。create コマンドを実行すると、このユーザのパスワードを入力するように求められます。次のコマンドでは、ロールが_ci_readonly_に 設定されていることに注意してください。上記の手順3で別の名前のロールを作成する場合は、代わりにそのカスタムロール名を使用します。
 
 
  security login create -user-or-group-name {username} -application http -authentication-method password -role {role name}

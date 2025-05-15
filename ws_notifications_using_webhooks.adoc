@@ -1,0 +1,136 @@
+---
+sidebar: sidebar 
+permalink: ws_notifications_using_webhooks.html 
+keywords: alert, webhook, notification 
+summary: ワークロードセキュリティアラート通知用のWebhookを作成します。 
+---
+= Webhookを使用したワークロードセキュリティ通知
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Webhookを使用すると、ユーザーはカスタマイズされたWebhookチャネルを使用して、クリティカルまたは警告のアラート通知をさまざまなアプリケーションに送信できます。
+
+多くの商用アプリケーションは、Slack、PagerDuty、Teams、Discordなどの標準入力インターフェイスとしてWebhookをサポートしています。一般的でカスタマイズ可能なWebhookチャネルをサポートすることで、Workload Securityはこれらの配信チャネルの多くをサポートできます。Webhookの設定については、各アプリケーションのWebサイトを参照してください。たとえば、Slackにはlink:https://api.slack.com/messaging/webhooks["この便利なガイドです"]次のような機能があります。
+
+複数のWebhookチャネルを作成できます。各チャネルは異なる目的、個別のアプリケーション、異なる受信者などを対象としています。
+
+Webhookチャネルインスタンスは、次の要素で構成されます。
+
+|===
+| 名前 | 製品説明 
+
+
+| URL | WebhookターゲットURL（http：//またはhttps：//プレフィックスとURLパラメータを含む） 
+
+
+| 方法 | GET /POST -デフォルトはPOST 
+
+
+| カスタムヘッダー | ここでカスタムヘッダーを指定します 
+
+
+| メッセージ本文 | メッセージの本文をここに入力します 
+
+
+| デフォルトのアラートパラメータ | に、 webhook のデフォルトパラメータを示します 
+
+
+| カスタムパラメータとシークレット | カスタムパラメータとシークレットを使用すると、一意のパラメータを追加したり、パスワードなどの要素を保護したりできます。 
+|===
+
+
+== Webhookの作成
+
+ワークロードセキュリティWebhookを作成するには、[Admin]>[Notifications]の順に選択し、[Workload Security Webhooks]タブを選択します。次の図は、slack Webhook作成画面の例を示しています。
+
+注:ワークロードセキュリティWebフックを作成および管理するには、ユーザーがWorkload Security_Admin_である必要があります。
+
+image:ws_webhook_slack_example.png["ワークロードセキュリティのWebhook Slackの例、width=500"]
+
+* 各フィールドに適切な情報を入力し、[保存]をクリックします。
+* また、[ Webフックのテスト]ボタンをクリックして、接続をテストすることもできます。これにより、選択されたメソッドに従って、定義されたURLに「Message Body」（置換なし）が送信されます。
+* SWS Webhookは、多数のデフォルトパラメータで構成されています。また、独自のカスタムパラメータまたはシークレットを作成することもできます。
+
+
+
+
+== パラメータ:それらは何ですか、そしてそれらの使用方法は?
+
+アラートパラメータは、アラートごとに動的に設定される値です。たとえば、_%%severity%%_パラメータはアラートの重大度タイプに置き換えられます。
+
+「Webhookのテスト」ボタンをクリックしても置換は実行されないことに注意してください。テストでは、パラメータのプレースホルダー（_%%<param-name>%%_）を示すペイロードが送信されますが、データでは置換されません。
+
+
+
+=== カスタムパラメータとシークレット
+
+このセクションでは、任意のカスタムパラメータやシークレットを追加できます。カスタムパラメータまたはシークレットは、URLまたはメッセージ本文に含めることができます。シークレットを使用すると、パスワード、apiKeyなどのセキュアなカスタムパラメータを設定できます。
+
+次のサンプル画像は、Webhook作成でカスタムパラメータがどのように使用されるかを示しています。
+
+image:ws_webhook_parameters_example.png["パラメータを指定したワークロードセキュリティWebhook、width=800"]
+
+
+
+== ワークロードセキュリティのWebhookリストページ
+
+Webhookのリストページには、Name、Created By、Created On、Status、Secure、 およびLast Reportedフィールド。注意:「ステータス」列の値は、最後のWebhookトリガーの結果に基づいて変化し続けます。ステータス結果の例を次に示します。
+
+|===
+
+
+| ステータス | 製品説明 
+
+
+| OK | 通知が送信されました。 
+
+
+| 403 | 禁止されています。 
+
+
+| 404 | URLが見つかりません。 
+
+
+| 400  a| 
+無効な要求です。このステータスは、メッセージ本文に次のようなエラーがある場合に表示されます。
+
+* JSONの形式が正しくありません。
+* 指定した予約済みキーの値が無効です。たとえば、PagerDutyは「Severity」のcritical/warning/error/infoのみを受け入れます。その他の結果は400ステータスになります。
+* アプリケーション固有の検証エラー。たとえば、Slackではセクション内で最大10個のフィールドを使用できます。10以上を含めると、400ステータスになる可能性があります。
+
+
+
+
+| 410 | リソースは使用できなくなりました 
+|===
+[Last Reported]列は、Webhookが最後にトリガーされた時刻を示します。
+
+Webhookリストページから、ユーザーはWebhookを編集/複製/削除することもできます。
+
+
+
+== アラートポリシーでのWebhook通知の設定
+
+アラートポリシーにWebhook通知を追加するには、[Workload Security]>[Policies]に移動し、既存のポリシーを選択するか、新しいポリシーを追加します。[_Actions_Section>_Webhook Notifications_]ドロップダウンで、必要なWebhookを選択します。
+
+image:ws_edit_attack_policy.png["[Edit Attack Policy]ダイアログにWebhookドロップダウンが表示されます。幅=500"]
+
+Webhook通知はポリシーに関連付けられています。攻撃（rw/dd/warn）が発生すると、設定されたアクション（スナップショットの取得/ユーザーブロック）が実行され、関連するWebhook通知がトリガーされます。
+
+注：Eメール通知はポリシーに依存せず、通常どおりトリガーされます。
+
+* ポリシーが一時停止されると、Webhook通知はトリガーされません。
+* 1つのポリシーに複数のWebhookを追加できますが、1つのポリシーに追加できるWebhookは5つまでにすることをお勧めします。
+
+
+
+
+=== ワークロードセキュリティWebhookの例
+
+Webhook用Webhook link:ws_webhook_example_pagerduty.html["PagerDuty"]用Webhook用Webhook用Webhook用Webhook用Webhooklink:ws_webhook_example_slack.html["Slack"]用link:ws_webhook_example_teams.html["チーム"]link:ws_webhook_example_discord.html["切断"]

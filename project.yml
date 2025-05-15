@@ -105,12 +105,22 @@ sidebar:
         url: "/task_create_monitor.html"
       - title: アラートの表示と管理
         url: "/task_view_and_manage_alerts.html"
-      - title: 通知受信者の設定
-        url: "/concept_notifications_email.html"
       - title: システム定義のモニター
         url: "/task_system_monitors.html"
+      - title: 通知受信者の設定
+        url: "/concept_notifications_email.html"
       - title: Webhook 通知
-        url: "/task_create_webhook.html"
+        entries:
+        - title: Webhookの設定
+          url: "/task_create_webhook.html"
+        - title: Webhookの例- Discord
+          url: "/task_webhook_example_discord.html"
+        - title: Webhookの例- PagerDuty
+          url: "/task_webhook_example_pagerduty.html"
+        - title: Webhookの例- Slack
+          url: "/task_webhook_example_slack.html"
+        - title: Webhookの例-チーム
+          url: "/task_webhook_example_teams.html"
     - title: アノテーションの使用
       entries:
       - title: アノテーションの定義
@@ -263,8 +273,20 @@ sidebar:
       url: "/cs_restrict_user_access.html"
     - title: ランサムウェア攻撃のシミュレーション
       url: "/concept_cs_attack_simulator.html"
-    - title: 通知
+    - title: E メール通知
       url: "/cs_notifications_email.html"
+    - title: Webhook 通知
+      entries:
+      - title: Webhookの作成
+        url: "/ws_notifications_using_webhooks.html"
+      - title: Discord Webhookの例
+        url: "/ws_webhook_example_discord.html"
+      - title: PagerDuty Webhookの例
+        url: "/ws_webhook_example_pagerduty.html"
+      - title: Slack Webhookの例
+        url: "/ws_webhook_example_slack.html"
+      - title: チームWebhookの例
+        url: "/ws_webhook_example_teams.html"
     - title: ワークロードセキュリティAPI
       url: "/concept_cs_api.html"
     - title: SVMコレクタのトラブルシューティング
