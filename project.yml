@@ -157,14 +157,6 @@ sidebar:
         url: "/concept_asset_page_overview.html"
       - title: オブジェクトのコンテキスト内フィルタリング
         url: "/concept_in_context_filters.html"
-      - title: "[Summary]セクションと[Topology]セクション"
-        url: "/concept_asset_summary_section.html"
-      - title: Expert View セクシヨン
-        url: "/concept_asset_expert_view_section.html"
-      - title: User Data セクション
-        url: "/concept_asset_user_data_section.html"
-      - title: 関連アラートセクション
-        url: "/concept_asset_alerts_section.html"
       - title: ストレージ仮想化
         url: "/concept_storage_virtualization.html"
       - title: 資産を検索するためのヒントとヒント
