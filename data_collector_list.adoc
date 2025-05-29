@@ -130,6 +130,9 @@ Data Infrastructure Insightsでサポートされているデータコレクタ�
 | link:task_dc_google_cloud.html["Google コンピューティングとストレージ"] | インフラ 
 
 
+| link:task_dc_google_cloud_netapp_volumes.html["Google Cloud NetAppボリューム"] | インフラ 
+
+
 | link:task_config_telegraf_hadoop.html["Hadoop"] | サービス 
 
 

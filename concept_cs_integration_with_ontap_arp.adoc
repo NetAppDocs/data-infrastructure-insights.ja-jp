@@ -49,9 +49,8 @@ ARPの詳細とライセンス要件についてはlink:https://docs.netapp.com/
 クラスタクレデンシャルを使用する_csuser_withの場合、ONTAP コマンドラインから次の操作を実行します。
 
 ....
-security login rest-role create -role arwrole -api /api/storage/volumes -access readonly -vserver <cluster_name>
-security login rest-role create -api /api/security/anti-ransomware -access readonly  -role arwrole -vserver <cluster_name>
-security login create -user-or-group-name csuser -application http -authmethod password -role arwrole
+security login role create -role csrole -cmddirname "volume" -access readonly
+security login role create -role csrole -cmddirname "security anti-ransomware volume" -access readonly
 ....
 その他の設定について詳しくは、こちらをご覧くださいlink:task_add_collector_svm.html["ONTAPケンケン"]。
 

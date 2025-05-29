@@ -7,6 +7,10 @@ summary: パフォーマンスまたはインベントリのしきい値をア�
 = webhook を使用した通知
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -64,6 +68,8 @@ image:Webhook_Default_Parameters.png["Data Infrastructure Insightsのデフォ�
 === パラメータ：パラメータとは何ですか？また、パラメータの使用方法を教えてください。
 
 アラートパラメータは、アラートごとに動的に設定される値です。たとえば、 %%TriggeredOn%% の _Parameter はアラートがトリガーされたオブジェクトで置き換えられます。
+
+任意のオブジェクト属性（ストレージ名など）をパラメータとしてWebhookに追加できます。たとえば、Webhookの説明でボリューム名とストレージ名のパラメータを次のように設定できます。"High Latency for Volume：_%%relatedObject.volume.name%%_、Storage：_%%relatedObject.storage.name%%_"
 
 このセクションでは、置換は「Test Webhook」ボタンをクリックしたときに_not_performedになります。このボタンは、_%_substitionsを示すペイロードを送信しますが、これらをデータに置き換えません。
 

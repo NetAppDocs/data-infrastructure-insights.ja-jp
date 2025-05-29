@@ -7,6 +7,10 @@ keywords: ransomware, ARP, Protection, Security, access
 = ONTAPアクセス拒否との統合
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -14,7 +18,9 @@ ONTAPアクセス拒否機能は、NAS環境（NFSおよびSMB）のワークロ
 
 データインフラストラクチャインサイトワークロードセキュリティは、ONTAPと統合してアクセス拒否イベントを受信し、追加の分析および自動応答レイヤを提供します。
 
-前提条件
+
+
+== 前提条件
 
 * ONTAPの最小バージョン：9.13.0
 * ワークロードセキュリティ管理者は、新しいコレクタの追加時または既存のコレクタの編集時に、[Advanced Configuration]の下にある[_Monitor Access Denied Events_]チェックボックスをオンにして、アクセス拒否機能を有効にする必要があります。
@@ -30,20 +36,12 @@ image:WS_Access_Denied_Enable_in_Collector.png["ONTAPコレクタの詳細設定
 
 ユーザに付与された権限を持つカスタムユーザ（_csuser_など）を使用してコレクタを追加する場合は、次の手順に従って、ONTAPでアクセス拒否イベントに登録するために必要な権限をワークロードセキュリティに付与します。
 
-CSUSER WITH_CLUSTER_CREDENTIALの場合は、ONTAPコマンドラインから次のコマンドを実行します。_csrestrole_はカスタムロールで、_csuser_はONTAPカスタムユーザです。
+CSUSER WITH_CLUSTER_CREDENTIALの場合は、ONTAPコマンドラインから次のコマンドを実行します。この権限はすでに存在する可能性があることに注意してください。
 
-[listing]
-----
- security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <cluster_name>
- security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole
-----
-csuser with _svm_credentialsの場合は、ONTAPコマンドラインから次のコマンドを実行します。
+ security login role create -role csrole -cmddirname "vserver fpolicy" -access all
+csuser with _svm_credentialsの場合は、ONTAPコマンドラインから次のコマンドを実行します。この権限はすでに存在する可能性があることに注意してください。
 
-[listing]
-----
- security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <svm_name>
- security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole -vserver <svm_name>
-----
+ security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
 その他の設定について詳しくは、こちらをご覧くださいlink:task_add_collector_svm.html["ONTAPケンケン"]。
 
 

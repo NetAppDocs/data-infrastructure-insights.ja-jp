@@ -133,4 +133,6 @@ Webhook通知はポリシーに関連付けられています。攻撃（rw/dd/w
 
 === ワークロードセキュリティWebhookの例
 
-Webhook用Webhook link:ws_webhook_example_pagerduty.html["PagerDuty"]用Webhook用Webhook用Webhook用Webhook用Webhooklink:ws_webhook_example_slack.html["Slack"]用link:ws_webhook_example_teams.html["チーム"]link:ws_webhook_example_discord.html["切断"]
+Webhooklink:ws_webhook_example_slack.html["Slack"]
+
+Webhook for Webhook for Webhook for Webhook for link:ws_webhook_example_teams.html["チーム"]Webhook  for Webhook link:ws_webhook_example_pagerduty.html["PagerDuty"] for link:ws_webhook_example_discord.html["切断"]
