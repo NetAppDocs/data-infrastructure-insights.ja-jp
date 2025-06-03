@@ -59,10 +59,13 @@ Data Infrastructure Insightsでは、Rubrikのデータコレクタから次の�
 | IP | RubrikクラスタのIPアドレス 
 
 
-| ユーザ名 | クラスタのユーザ名 
+| ユーザー名 / サービスアカウント | クラスタのユーザ名 
 
 
-| パスワード | クラスタのパスワード 
+| パスワード/シークレット | クラスタのパスワード 
+
+
+| サービスアカウントの組織ID | これは、「Organization:::nnnnnn-nnnn.....」のような完全な文字列である必要があります。 
 |===
 
 
@@ -93,6 +96,6 @@ Data Infrastructure Insightsでは、Rubrikのデータコレクタから次の�
 | 複数のストレージが作成されているというメッセージを受け取りました。 | クラスタが正しく設定されており、コレクタが単一のクラスタを参照していることを確認します。 
 
 
-| ディスクAPIからより多くのデータが返されたという警告が表示されました | 追加のデータを取得するには、サポートに確認してください。 
+| ポーリングが 400 [Bad Request] で失敗しました....ManagedId が無効です.... | 組織 ID フィールドに値を入力しましたが、Rubrik からのエラー メッセージで「ManagedId」と表示されているにもかかわらず、Rubrik クラスターではそれが有効な組織 ID であると認識されません。 
 |===
 詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

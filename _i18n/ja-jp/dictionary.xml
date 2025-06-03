@@ -9338,8 +9338,6 @@
   <block id="e41f6efeb9a8c29ac8077a1348b68078" category="cell">クラスタのパスワード</block>
   <block id="444301801d58f01b1fb488fe224bb8c5" category="cell">複数のストレージが作成されているというメッセージを受け取りました。</block>
   <block id="7de7475f4bb973126434d7c3f9801f08" category="cell">クラスタが正しく設定されており、コレクタが単一のクラスタを参照していることを確認します。</block>
-  <block id="fc971fc699329bc531b4d65ff180a629" category="cell">ディスクAPIからより多くのデータが返されたという警告が表示されました</block>
-  <block id="3cd62817285774be5e17bfa3b11a6309" category="cell">追加のデータを取得するには、サポートに確認してください。</block>
   <block id="aa7bcff87c480aa90d0e5d1001e89590" category="summary">VMware データコレクタの設定</block>
   <block id="3642158841a114e36a8c869b919b1091" category="doc">VMware vSphere データコレクタの設定</block>
   <block id="2c2ae7694a57522d5f3200005b67fffd" category="paragraph">VMware vSphereのデータコレクタは、VMゲストおよびESXiホストのパフォーマンスと構成に関する情報を収集します。vSphere内のすべてのオブジェクトに対して読み取り専用のPrivilegesが必要です。2024年8月以降、vSphereコレクタは、vSphere環境からのログメッセージと一部のVMware固有の指標も取り込みます。Data Infrastructure Insightsは、vSphere 8.0.1以降の環境からのみVMwareログ情報を取得できます。同様に、ベンダー固有の指標はvSphere 7以降の環境でのみサポートされます。そのため、特定のコレクタが古いvSphereインスタンスを参照している場合は、そのコレクタのログやベンダー固有のメトリックのチェックボックスを無効にすることができます。</block>
@@ -10535,9 +10533,6 @@
   <block id="29e29650476f773b7c44149e72a13e69" category="list-text">* Dismiss * を選択すると、アクティブなアラートのリストからアラートが削除されます。</block>
   <block id="e8638926499f5e7bec918a2f4d6dc36a" category="paragraph">各アラートの左側にあるチェックボックスをオンにして、 [ 選択したアラートステータスの変更 ] をクリックすると、複数のアラートを管理できます。</block>
   <block id="70a18f3fbffa69fc35378e4b2e87f766" category="paragraph">アラート ID をクリックすると、アラート詳細ページが開きます。</block>
-  <block id="f7e83685d25e3038170e83ca19c3cbf0" category="section-title">アラートの詳細ページ</block>
-  <block id="b254b175b71c2c7dca19ba0dcbc5da07" category="paragraph">Alert Detail ページには ' アラートの詳細情報が表示されますこれには 'a_Summary_'a_Expert View_Showing Graphs related to the object' any_related Assets_'_Comments_entered by alert 博士が含まれます</block>
-  <block id="1b489429111564ed0ac0109b22575d28" category="paragraph"><block ref="1b489429111564ed0ac0109b22575d28" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0dc88092036f29d0c951123c9b9f932e" category="section-title">データが見つからない場合に警告します</block>
   <block id="ffbb059fbd1b72fd858ad1db288acd16" category="paragraph">Data Infrastructure Insightsなどのリアルタイムシステムでは、監視の分析をトリガーしてアラートを生成するかどうかを判断するには、次の2つの要素のいずれかを使用します。</block>
   <block id="9f76cab36d38af05dce74499497c7b3b" category="list-text">次のデータポイントに到達します</block>
@@ -12579,4 +12574,17 @@
   <block id="25663750e3a92ca79621844d9a055d8a" category="paragraph"><block ref="25663750e3a92ca79621844d9a055d8a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="44c7c3a77a122ce29cb93ab53513f83f" category="section-title">資産名内のカンマ</block>
   <block id="4d53c0239522855d4d60019758390f70" category="section-title">時刻形式か、それとも時刻形式ではないのか?</block>
+  <block id="3756ac460c094adc890ad7f26460010b" category="cell">35000-55000</block>
+  <block id="0e948943e8277507eeeec08bbb91d3b4" category="cell">クラスタ管理IP</block>
+  <block id="8ad596bfbf4c5161efe95c1bf071f052" category="cell">ONTAPクラスタ管理IPからWorkload Security Agentへの*EMSイベント*用の通信。ONTAPがWorkload Security Agentに*EMSイベント*を送信するには、これらのポートをWorkload Security Agentに向けて開く必要があります。Workload Security Agent自体のファイアウォール（存在する場合）も対象となります。これらのポートをすべて予約する必要はありませんが、予約するポートはこの範囲内である必要があります。最初に最大100個のポートを予約し、必要に応じて増やすことをお勧めします。</block>
+  <block id="ab1259588b3e1ad3b770e413f8408667" category="cell">ユーザー名 / サービスアカウント</block>
+  <block id="2fde62a7ecea2efe8b301312f6a6b292" category="cell">パスワード/シークレット</block>
+  <block id="8ec2e527e4b860bd5119c6e2816e5f0e" category="cell">サービスアカウントの組織ID</block>
+  <block id="30993e7595c12ab5f7aa162f78a59c3b" category="cell">これは、「Organization:::nnnnnn-nnnn.....」のような完全な文字列である必要があります。</block>
+  <block id="2ce06c7c6b7a3d5ec1168fa41dc94826" category="cell">ポーリングが 400 [Bad Request] で失敗しました....ManagedId が無効です....</block>
+  <block id="59e8601d861464a8b5978359c99a89b2" category="cell">組織 ID フィールドに値を入力しましたが、Rubrik からのエラー メッセージで「ManagedId」と表示されているにもかかわらず、Rubrik クラスターではそれが有効な組織 ID であると認識されません。</block>
+  <block id="a6d988d681ec5a2ac741001e80c67bbc" category="section-title">アラート詳細パネル</block>
+  <block id="bb9284d1e6e1080190597d2d9826cc87" category="paragraph">アラートの行を選択すると、アラートの詳細パネルが開きます。アラートの詳細パネルには、アラートに関する詳細情報（_概要_、オブジェクトのデータに関連するグラフを表示する_エキスパートビュー_、_関連アセット_、アラート調査担当者が入力した_コメント_など）が表示されます。</block>
+  <block id="ce2f8058fa83417353b52945b6bfd42f" category="inline-image-macro">メトリックアラートの詳細パネル</block>
+  <block id="8f9a1f05fd3f7e730fd077aaaac2e6f0" category="paragraph"><block ref="8f9a1f05fd3f7e730fd077aaaac2e6f0" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

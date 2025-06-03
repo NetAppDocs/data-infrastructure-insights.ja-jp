@@ -52,11 +52,11 @@ TIP: 監視とアラートは、Data Infrastructure Insights Standard Edition以
 
 
 
-== アラートの詳細ページ
+== アラート詳細パネル
 
-Alert Detail ページには ' アラートの詳細情報が表示されますこれには 'a_Summary_'a_Expert View_Showing Graphs related to the object' any_related Assets_'_Comments_entered by alert 博士が含まれます
+アラートの行を選択すると、アラートの詳細パネルが開きます。アラートの詳細パネルには、アラートに関する詳細情報（_概要_、オブジェクトのデータに関連するグラフを表示する_エキスパートビュー_、_関連アセット_、アラート調査担当者が入力した_コメント_など）が表示されます。
 
-image:alert_detail_page.png["アラートの詳細ページ"]
+image:metric_alert_detail_pane.png["メトリックアラートの詳細パネル"]
 
 
 
