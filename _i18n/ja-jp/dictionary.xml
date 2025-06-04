@@ -6396,21 +6396,8 @@
   <block id="bc781ab763b71df7b975bbfe7c860bba" category="paragraph">詳細については、を参照して<block ref="3147fac008aa304c440ef0d367c93828" category="inline-link-macro-rx"></block>ください。</block>
   <block id="dea8b0c01ac3c8f22d85423d187ec3d2" category="cell">CouchDB</block>
   <block id="64f2993184c14c565d6ba3100a20ca05" category="cell">認証キャッシュヒット認証キャッシュミスデータベースの読み取りデータベース書き込みデータベースオープン OS ファイル最大要求時間最小要求時間 httpd 要求メソッドのコピー httpd 要求メソッドの削除 httpd 要求メソッドの削除 httpd 要求メソッドの取得 httpd 要求メソッドのヘッド httpd 要求メソッドの POST httpd 要求メソッドのステータスコード 200 201 ステータスコード 202 ステータスコード 301 ステータスコード 304 ステータスコード 400 ステータスコード 401 ステータスコード 403 ステータスコード 404 ステータスコード 405 ステータスコード 409 ステータスコード 412 ステータスコード 500</block>
-  <block id="d1f2d0eb68a6b45c8dc6a6dba792539e" category="summary">DCOS コンフィギュレーション</block>
-  <block id="072a17ceb11d2f7027c8a1539261d0b0" category="doc">DC/OS データコレクタ</block>
-  <block id="bba9e01ebd689f9c44999482a5a64c33" category="paragraph">Data Infrastructure Insightsは、このデータコレクタを使用してDC/OSから指標を収集します。</block>
-  <block id="ada6106f548a6369154652d4ea69d9a1" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。[*DC/OS*]を選択します。</block>
-  <block id="906f9dd57fb2872473e89e09bf5bf50e" category="list-text">データコレクタを設定するには、 [DC/OS Configuration] 画面の指示に従います。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。</block>
-  <block id="169d74d7790e089aeca58cb836db2fcc" category="inline-link">DC/OS のドキュメント</block>
-  <block id="b0f77e8918eef13e0142c8675b792231" category="paragraph">セットアップ情報については、を参照して<block ref="bcf6b27a44ba394f1a86a682cd050dc1" category="inline-link-rx"></block>ください。</block>
   <block id="497031794414a552435f90151ac3b54b" category="cell">オブジェクト</block>
   <block id="e2da36de4fe1aaf514aaef4ecca2c8ec" category="cell">識別子</block>
-  <block id="90fd43f146814c9c0cb1e9040b914fa0" category="cell">「 dataPoints 」：</block>
-  <block id="c43575a6656a31d36fd3cee9520b5838" category="cell">DCOS_node</block>
-  <block id="a675bd36bf3917644534c43b4ba2e55f" category="cell">DCOS_CONTAINER DCOS_APP</block>
-  <block id="022435a7e2f917aa3bce64222061f83d" category="cell">クラスタのホスト名パス（ファイルシステムフィールドのみ）インターフェイス（ネットワークフィールドのみ） container_id task_name</block>
-  <block id="2cf0eab79c0db36a5df9e2deeba2b2c2" category="cell">system_uptime （ float ） CPU_cores （ float ） cpu_total （ float ） cpu_user （ float ） cpu_idle （ float ） cpu_wait （ float ） LOAD_1min （ float ） LOAD_15min （ float ） LOAD_15min （ float ） LOAD_15min （ float ） FILE_TB_int bytes （ int bytes （ int_int ） network_in-packets （ float ） network_out_packets （ float ） network_in_dropped （ float ） network_out_dropped （ float ） network_in_errors （ float ） network_out_errors （ float ） process_count （ float ）</block>
-  <block id="bc9c01f26c422a397298e3d733c43cb5" category="paragraph">詳細については、ページを参照して<block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block>ください。</block>
   <block id="0982f7ddf38c72531e91321d3b4e198e" category="summary">Docker データコレクタの設定</block>
   <block id="d80788e8d22d139775039533ead6bae8" category="doc">Docker Data Collector</block>
   <block id="7ab1583e1a436a4f564958859dce5c00" category="paragraph">Data Infrastructure Insightsは、このデータコレクタを使用してDockerから指標を収集します。</block>
@@ -11381,7 +11368,6 @@
   <block id="7070fd1d7b5d144bd3131c3c2b7ee1ca" category="list-text">[Request trial]*を選択します。BlueXP  にまだ登録していない場合は、詳細を入力してサインアップしてください。それ以外の場合は、サインインします。</block>
   <block id="e461fd437885ee63b7f00e77ade6b3cb" category="list-text">会議をスケジュールするか、担当者からトライアルについての連絡をお待ちください。</block>
   <block id="44d2017272b4664ce749afa3c1fc2785" category="summary">SAN Analyzerは'テナント上の資産のトポロジーを提供</block>
-  <block id="916cfef6f81652d81c744e0537c656b2" category="doc">SAN Analyzerの概要</block>
   <block id="a720fce5b3da4c111f19c80487c269cf" category="paragraph">SANは重要なワークロードの処理に非常に重要な役割を果たしますが、その複雑さは、大規模なシステム停止や顧客の業務停止を招く可能性があります。DIIのSAN Analyzer*により'SANの管理がよりシンプルかつ効率的になりますこの強力なツールは、エンドツーエンドの可視化を提供し、VM /ホストからネットワーク、LUN、ストレージまでの依存関係をマッピングします。</block>
   <block id="b03a68ce04fd31de1bf167d4c6537d2f" category="paragraph">SAN Analyzerは'対話型のトポロジマップを提供することにより'問題を特定し'変更を理解し'データ・フローの理解を向上させることができますSAN Analyzerを使用して複雑なIT環境におけるSAN管理を合理化し、ブロックワークロードの可視性を高めます。</block>
   <block id="9c6601cca8cd67405c34e4897bb272f1" category="section-title">アセット間のつながりを確認する</block>
@@ -12587,4 +12573,10 @@
   <block id="bb9284d1e6e1080190597d2d9826cc87" category="paragraph">アラートの行を選択すると、アラートの詳細パネルが開きます。アラートの詳細パネルには、アラートに関する詳細情報（_概要_、オブジェクトのデータに関連するグラフを表示する_エキスパートビュー_、_関連アセット_、アラート調査担当者が入力した_コメント_など）が表示されます。</block>
   <block id="ce2f8058fa83417353b52945b6bfd42f" category="inline-image-macro">メトリックアラートの詳細パネル</block>
   <block id="8f9a1f05fd3f7e730fd077aaaac2e6f0" category="paragraph"><block ref="8f9a1f05fd3f7e730fd077aaaac2e6f0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5a71b3e73a269322067fedef6352832a" category="doc">SANアナライザの概要</block>
+  <block id="308d93e3f78b9236fe8462a038df9e71" category="paragraph">環境に異なるプロトコルがある場合は、iSCSI または FC でフィルタリングできます。</block>
+  <block id="d0cb407e54552661d276105ea643b822" category="inline-image-macro">SANアナライザプロトコル</block>
+  <block id="1ba02fc2bd769c9cff9ca39f38c94497" category="paragraph"><block ref="1ba02fc2bd769c9cff9ca39f38c94497" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="69903a755173d1c4699b4fdd2f6091ea" category="paragraph">いくつかのONTAPモデルは、監視やアラートに使用できるデータインフラインサイトの電力指標を提供します。</block>
+  <block id="dad21edfb3c02cb57e392a9d9a2e3eed" category="admonition">これらのリストは包括的なものではなく、変更される可能性があります。一般的に、モデルがリストに記載されているモデルと同じファミリーに属している場合、サポート内容は同じですが、必ずしも同じであるとは限りません。お使いのモデルが電力メトリックをサポートしているかどうか不明な場合は、ONTAPサポートにお問い合わせください。</block>
 </blocks>

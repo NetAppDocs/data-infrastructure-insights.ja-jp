@@ -4,9 +4,13 @@ permalink: san_analyzer_overview.html
 summary: 'SAN Analyzerは"テナント上の資産のトポロジーを提供' 
 keywords: topology, analyze, analysis, map 
 ---
-= SAN Analyzerの概要
+= SANアナライザの概要
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -32,6 +36,10 @@ NOTE: ほとんどのSAN Analyzerフィルタ（追加可能なフィルタを�
 [Summary]タブに加えて、スライドアウトパネルには、選択したオブジェクトに該当するポートの詳細やゾーン情報などのタブが表示されます。
 
 image:san_analyzer_slideout_example.png["SAN Analyzerのスライドアウト・パネル"]
+
+環境に異なるプロトコルがある場合は、iSCSI または FC でフィルタリングできます。
+
+image:san_analyzer_protocols.png["SANアナライザプロトコル"]
 
 環境にiSCSIデバイスが含まれている場合は、_iscsi_objectにカーソルを合わせると、関連するiSCSIデバイスに関連する接続が強調表示されます。
 
