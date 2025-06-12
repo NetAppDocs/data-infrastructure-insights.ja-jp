@@ -7,11 +7,39 @@ keywords: features
 = Data Infrastructure Insightsの最新情報
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 ネットアップは、製品やサービスの改善と強化を継続的に行っています。Data Infrastructure Insights（旧称Cloud Insights）で利用できる最新の機能をいくつか紹介します。
 
+
+
+== 2025年6月
+
+
+
+=== VMアナライザー: VMからストレージまでの包括的な可視性とトラブルシューティング
+
+DIIの*VM Analyzer*機能は、仮想化環境の包括的なエンドツーエンドビューを提供します。VMAnalyzerは、仮想マシンからストレージまでのパス全体をマッピングすることでトラブルシューティングを効率化し、仮想ディスク、VM、ホスト、データストア、ボリューム、ストレージ全体のパフォーマンス問題を迅速に特定できるようにします。直感的なトポロジビュー、フィルタリング、詳細なパフォーマンスメトリックにより、管理者はボトルネックを容易に特定し、トラフィックの不均衡を分析し、ストレージ全体のパフォーマンスを最適化できます。
+
+image:vm_analyzer_example_with_panel.png["ストレージ・システムのVM Analyzerトポロジー・マップ"]
+
+
+
+=== オペレーティングシステムのサポート
+
+Data Infrastructure Insights Acquisition Unitでサポートされるオペレーティングシステムは次のとおりlink:concept_acquisition_unit_requirements.html["すでにサポートされています"]です。
+
+* Debian（64ビット）12
+* Oracle Enterprise Linux （ 64 ビット） 9.6
+* Red Hat (64 ビット) 9.6
+
+
+'''
 
 
 == 2025年5月

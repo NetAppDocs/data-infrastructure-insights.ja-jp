@@ -12581,4 +12581,13 @@
   <block id="f551ca729032aed761417786181395c8" category="paragraph">Data Infrastructure Insightsでは、Brocade FOS RESTコレクタを使用して、FabricOS（FOS）ファームウェア8.2以降を実行しているBrocadeスイッチデバイスのインベントリとパフォーマンスを検出します。初期の 8.2 FOS リリースには REST API のバグがある可能性があるので注意してください。プラットフォームがサポートする可能な限り最新の FOS リリースを実行することを強くお勧めします。</block>
   <block id="882ec11eef2cffbd43db944e6046b98d" category="cell">エラー: 401 不正アクセスによりインベントリが失敗しました...無効なセッション キーです...</block>
   <block id="fcad57aa5101382922e3f8fe687cf7b0" category="cell">これは、HTTP基本認証を適切にサポートしていない、初期の8.2 FOSリリース（8.2.1cなど）に特有のバグです。8.2以降のリリースまたは9.*にアップグレードしてください。</block>
+  <block id="94d267f658e04734eb2e098127293a89" category="section-title">2025年6月</block>
+  <block id="b792c127dc9f478a7930f4bc0161feba" category="section-title">VMアナライザー: VMからストレージまでの包括的な可視性とトラブルシューティング</block>
+  <block id="2d1fb0b32df39d06f41d0fd035211a2a" category="paragraph">DIIの*VM Analyzer*機能は、仮想化環境の包括的なエンドツーエンドビューを提供します。VMAnalyzerは、仮想マシンからストレージまでのパス全体をマッピングすることでトラブルシューティングを効率化し、仮想ディスク、VM、ホスト、データストア、ボリューム、ストレージ全体のパフォーマンス問題を迅速に特定できるようにします。直感的なトポロジビュー、フィルタリング、詳細なパフォーマンスメトリックにより、管理者はボトルネックを容易に特定し、トラフィックの不均衡を分析し、ストレージ全体のパフォーマンスを最適化できます。</block>
+  <block id="8c044a5eedd54f1f8fba795eed42e6a6" category="inline-image-macro">ストレージ・システムのVM Analyzerトポロジー・マップ</block>
+  <block id="a3c3da49bc8b32e34a738f7438c8a53d" category="paragraph"><block ref="a3c3da49bc8b32e34a738f7438c8a53d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d7633d5867fc4c2291155ab5b8e0b0f0" category="paragraph">Data Infrastructure Insights Acquisition Unitでサポートされるオペレーティングシステムは次のとおり<block ref="6afa3e3eb626ea3ea6592dfd126d0ce7" category="inline-link-macro-rx"></block>です。</block>
+  <block id="b25b84328544405f6b0ef29d21ec179a" category="list-text">Debian（64ビット）12</block>
+  <block id="fc4f76c3c67141253726c8c6550bc344" category="list-text">Oracle Enterprise Linux （ 64 ビット） 9.6</block>
+  <block id="3f9083673db59761ee75134079acb794" category="list-text">Red Hat (64 ビット) 9.6</block>
 </blocks>
