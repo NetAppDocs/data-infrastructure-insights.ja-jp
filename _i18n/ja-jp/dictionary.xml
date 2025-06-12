@@ -7715,7 +7715,6 @@
   <block id="17f6f686e23fbca9f92a7a9926136c2d" category="cell">パフォーマンスの収集が失敗し、「Timed out during sending SNMP request」というメッセージが表示されます。</block>
   <block id="e04ebf98a9012bb6a191a7804699c68b" category="summary">Brocade FOS RESTデータコレクタを設定しています。</block>
   <block id="706579d23b1ddf6c6ff6115a0f9271b4" category="doc">Brocade FOS RESTデータコレクタ</block>
-  <block id="eff72425072b480bbbaf5cf932ce0c52" category="paragraph">Data Infrastructure Insightsでは、Brocade FOS RESTコレクタを使用して、FabricOS（FOS）ファームウェア8.2以降を実行しているBrocadeスイッチデバイスのインベントリとパフォーマンスを検出します。</block>
   <block id="8712a2bc3286760646a66b8eaaabacac" category="paragraph">注意：FOSのデフォルトの「ユーザー」レベルでは、Data Infrastructure Insightsでデバイスのすべての論理的側面を表示するには不十分です。「シャーシロール」が有効になっているユーザーアカウントと、スイッチに設定されているすべての仮想ファブリックに対する権限が必要です。</block>
   <block id="2266e1fc2ce062b23521f809220d83a2" category="paragraph">FOSデバイスへのSSHセッションでData Infrastructure Insightsを使用するための「最小権限」ユーザアカウントを作成する方法の例を次に示します。</block>
   <block id="87acb0f928436de44c10589e7dfad434" category="paragraph">userconfig -- add NetAppCIUser -r user -l 1-128 -c user -p QWERTY！</block>
@@ -11684,7 +11683,6 @@
   <block id="5136d67ed194c95ea9a2710028034652" category="list-text">VMware vCenter Server 8.0.3ビルド-24305161</block>
   <block id="24820d2348a2986c54e81b6bc96fb06f" category="list-text">VMware vCenter Server 8.0.3ビルド-24322831</block>
   <block id="ce70e0ca30a003d9df6c2c5bf545464a" category="paragraph">想定されるManaged Unitの数が1、000以上の場合は、ボタンをクリックし<block ref="a9a75603ab8aac3033fb50ea01ab50c4" category="inline-link-macro-rx"></block>てNetApp営業チームから登録してください。</block>
-  <block id="dde5131249fb4fdf0bb4b08bbcba4943" category="cell">次のいずれかのライセンスバージョンを実行しているコンピューター：* AlmaLinux 9.3～9.5 * CentOS（64ビット）：7.2～7.9、8.1～8.4、Stream 8、Stream 9 * Debian（64ビット）：9～11 * openSUSE LEAP 15.1～15.6 * Oracle Enterprise Linux（64ビット）：7.5～7.9、8.1～8.10、9.3～9.5 ky *専用のサーバを使用することを推奨します。SELinuxを使用している場合は、Acquisition Unitシステムで次のコマンドを実行することを推奨します。sudo semanage fcontext -a -t usr_t "/opt/ NetApp /cloudinsights（/.*）？"sudo restorecon -R /opt/ NetApp /cloudinsights</block>
   <block id="31192200d4ffdcb773965b28dbfbe0fd" category="cell">次のいずれかのライセンスバージョンを実行しているコンピューター。* Microsoft Windows 10 64ビット* Microsoft Windows 11 * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025このコンピューターは、他のアプリケーションレベルのソフトウェアを実行していない必要があります。専用のサーバを使用することを推奨します。</block>
   <block id="7f09a101a37de5c76c92d5d4c88ddd83" category="paragraph">VMwareデータコレクタを使用すると、VMwareで設定されているタグを使用してData Infrastructure Insightsのアノテーションを入力できます。DIIアノテーション名はVMware * CATEGORY *名と同じである必要があります。タグは、カテゴリと同じ名前のDIIアノテーションのアノテーション値として適用されます。Data Infrastructure Insightsでは、常に同じ名前のテキストタイプのアノテーションが入力され、他のタイプ（数値、ブール値など）のアノテーションが入力されるよう「最善の試み」が行われます。アノテーションのタイプが異なるためにデータコレクタにデータを入力できない場合は、アノテーションを削除してテキストタイプで再作成する必要があります。</block>
   <block id="a45c25e047c23be206aa7b3a16363223" category="section-title">Test Connectivity for Data Collectors</block>
@@ -12579,4 +12577,8 @@
   <block id="1ba02fc2bd769c9cff9ca39f38c94497" category="paragraph"><block ref="1ba02fc2bd769c9cff9ca39f38c94497" category="inline-image-macro-rx" type="image"></block></block>
   <block id="69903a755173d1c4699b4fdd2f6091ea" category="paragraph">いくつかのONTAPモデルは、監視やアラートに使用できるデータインフラインサイトの電力指標を提供します。</block>
   <block id="dad21edfb3c02cb57e392a9d9a2e3eed" category="admonition">これらのリストは包括的なものではなく、変更される可能性があります。一般的に、モデルがリストに記載されているモデルと同じファミリーに属している場合、サポート内容は同じですが、必ずしも同じであるとは限りません。お使いのモデルが電力メトリックをサポートしているかどうか不明な場合は、ONTAPサポートにお問い合わせください。</block>
+  <block id="cd016f59e3bce345c5a22a0c73b84bc2" category="cell">次のいずれかのライセンス版を実行しているコンピュータ: * AlmaLinux 9.3 ～ 9.5 * Centos (64 ビット): 7.2 ～ 7.9、8.1 ～ 8.4、Stream 8、Stream 9 * Debian (64 ビット): 9 ～ 12 * OpenSUSE Leap 15.1 ～ 15.6 * Oracle Enterprise Linux (64 ビット): 7.5 ～ 7.9、8.1 ～ 8.10、9.3 ～ 9.6 * Red Hat (64 ビット): 7.2 ～ 7.9、8.1 ～ 8.10、9.1 ～ 9.6 * Rocky 9.0 ～ 9.5 * SUSE Linux Enterprise Server 15、15 SP2 ～ 15 SP6 * Ubuntu Server: 18.04、20.04、22.04、24.04 LTS * SELinux on上記のプラットフォーム このコンピューターでは、他のアプリケーション レベルのソフトウェアは実行しないでください。専用のサーバを使用することを推奨します。SELinuxを使用している場合は、Acquisition Unitシステムで次のコマンドを実行することを推奨します。sudo semanage fcontext -a -t usr_t "/opt/ NetApp /cloudinsights（/.*）？"sudo restorecon -R /opt/ NetApp /cloudinsights</block>
+  <block id="f551ca729032aed761417786181395c8" category="paragraph">Data Infrastructure Insightsでは、Brocade FOS RESTコレクタを使用して、FabricOS（FOS）ファームウェア8.2以降を実行しているBrocadeスイッチデバイスのインベントリとパフォーマンスを検出します。初期の 8.2 FOS リリースには REST API のバグがある可能性があるので注意してください。プラットフォームがサポートする可能な限り最新の FOS リリースを実行することを強くお勧めします。</block>
+  <block id="882ec11eef2cffbd43db944e6046b98d" category="cell">エラー: 401 不正アクセスによりインベントリが失敗しました...無効なセッション キーです...</block>
+  <block id="fcad57aa5101382922e3f8fe687cf7b0" category="cell">これは、HTTP基本認証を適切にサポートしていない、初期の8.2 FOSリリース（8.2.1cなど）に特有のバグです。8.2以降のリリースまたは9.*にアップグレードしてください。</block>
 </blocks>
