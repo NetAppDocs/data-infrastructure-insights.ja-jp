@@ -58,8 +58,8 @@ NOTE: トークンは、クリップボードにコピーして作成プロセ�
 
 たとえば、次のようにしてストレージアセットを取得します。
 
- curl https://<tenant_host_name>/rest/v1/cloudsecure/activities -H 'X-CloudInsights-ApiKey: <API_Access_Token>'
-_<API_Access_Token> _ は、 API アクセスキーの作成時に保存したトークンです。
+ curl https://<Workload Security tenant>/rest/v1/cloudsecure/activities -H 'X-CloudInsights-ApiKey: <API_Access_Token>'
+ここで、_<API_Access_Token>_ は API アクセス キーの作成中に保存したトークンであり、_<Workload Security Tenant>_ は Workload Security 環境のテナント URL です。
 
 詳細については、 _API Documentation_link の * Admin > API Access * を参照してください。
 
@@ -75,6 +75,6 @@ _<API_Access_Token> _ は、 API アクセスキーの作成時に保存した�
 
 [source]
 ----
-python3 data-export.py --tenant_url <tenant id>.cs01.cloudinsights.netapp.com --access_key %ACCESS_KEY% --path_filter "<dir path>" --user_name "<user>" --from_time "01-08-2024 00:00:00" --to_time "31-08-2024 23:59:59" --iteration_interval 12 --num_workers 3
+python3 data-export.py --tenant_url <Workload Security tenant> --access_key %ACCESS_KEY% --path_filter "<dir path>" --user_name "<user>" --from_time "01-08-2024 00:00:00" --to_time "31-08-2024 23:59:59" --iteration_interval 12 --num_workers 3
 ----
 キーパラメータ:-: `--iteration_interval 12`要求された時間範囲を12時間の間隔に分割します。 `--num_workers 3`-: 3つのスレッドを使用して、これらの間隔を並行してフェッチします。

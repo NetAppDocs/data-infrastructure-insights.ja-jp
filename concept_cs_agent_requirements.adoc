@@ -62,7 +62,7 @@ USベースの*ワークロード・セキュリティ環境の場合：
 | TCP | 443 | ワークロードセキュリティエージェント | < サイト名 > .cs01.cloudinsights.netapp.com < サイト名 > .c01.cloudinsights.netapp.com < サイト名 > .c02.cloudinsights.netapp.com | データインフラの分析情報へのアクセス 
 
 
-| TCP | 443 | ワークロードセキュリティエージェント | gateway.c01.cloudinsights.netapp.com agentlogin.cs01.cloudinsights.netapp.com | 認証サービスへのアクセス 
+| TCP | 443 | ワークロードセキュリティエージェント | エージェントログイン.cs01.cloudinsights.netapp.com | 認証サービスへのアクセス 
 |===
 欧州*ベースのワークロード・セキュリティー環境の場合：
 
@@ -74,7 +74,7 @@ USベースの*ワークロード・セキュリティ環境の場合：
 | TCP | 443 | ワークロードセキュリティエージェント | < サイト名 > .cs01-eu-1.cloudinsights.netapp.com < サイト名 > .c01-eu-1.cloudinsights.netapp.com < サイト名 > .c02-eu-1.cloudinsights.netapp.com | データインフラの分析情報へのアクセス 
 
 
-| TCP | 443 | ワークロードセキュリティエージェント | gateway.c01.cloudinsights.netapp.com agentlogin.cs01-eu-1.cloudinsights.netapp.com | 認証サービスへのアクセス 
+| TCP | 443 | ワークロードセキュリティエージェント | agentlogin.cs01-eu-1.cloudinsights.netapp.com | 認証サービスへのアクセス 
 |===
 APACベースの*ワークロード・セキュリティ環境の場合：
 
@@ -86,7 +86,7 @@ APACベースの*ワークロード・セキュリティ環境の場合：
 | TCP | 443 | ワークロードセキュリティエージェント | < サイト名 > .cs01-ap-1.cloudinsights.netapp.com < サイト名 > .c01-ap-1.cloudinsights.netapp.com < サイト名 > .c02-ap-1.cloudinsights.netapp.com | データインフラの分析情報へのアクセス 
 
 
-| TCP | 443 | ワークロードセキュリティエージェント | gateway.c01.cloudinsights.netapp.com agentlogin.cs01-ap-1.cloudinsights.netapp.com | 認証サービスへのアクセス 
+| TCP | 443 | ワークロードセキュリティエージェント | agentlogin.cs01-ap-1.cloudinsights.netapp.com | 認証サービスへのアクセス 
 |===
 
 

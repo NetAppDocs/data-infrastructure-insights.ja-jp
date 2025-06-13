@@ -7,6 +7,10 @@ summary: スクリプトを使用して、ランサムウェア攻撃をシミ�
 = ワークロードのセキュリティ：攻撃のシミュレーション
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -16,149 +20,196 @@ summary: スクリプトを使用して、ランサムウェア攻撃をシミ�
 
 == 始める前に注意してください
 
-* ランサムウェアシミュレーションスクリプトは Linux でのみ動作します。
+* ランサムウェアシミュレーションスクリプトは Linux でのみ動作します。シミュレーション スクリプトは、ユーザーが ONTAP ARP を Workload Security と統合した場合に、高信頼度アラートも生成する必要があります。
+* Workload Security は、ONTAP バージョンが 9.15 以上の場合にのみ、NFS 4.1 で生成されたイベントとアラートを検出します。
 * このスクリプトは、Workload Securityエージェントのインストールファイルとともに提供されます。ワークロードセキュリティエージェントがインストールされているすべてのマシンで使用できます。
 * このスクリプトは、Workload Securityエージェントマシン自体で実行できます。他のLinuxマシンを準備する必要はありません。ただし、スクリプトを別のシステムで実行する場合は、スクリプトをコピーしてそこで実行するだけです。
+* ユーザーは、自分の好みやシステム要件に応じて、Python スクリプトまたはシェル スクリプトのいずれかを選択できます。
+* Pythonスクリプトには前提条件となるインストールが必要です。Pythonを使用しない場合は、シェルスクリプトを使用してください。
 
 
 
 
-== サンプルファイルを 1 、 000 個以上用意してください
+== ガイドライン:
 
-このスクリプトは、暗号化するファイルが格納されたフォルダを含む SVM で実行する必要があります。フォルダとサブフォルダには、少なくとも 1 、 000 個のファイルを含めることをお勧めします。ファイルは空にできません。ファイルを作成したり、同じユーザを使用して暗号化したりしないでください。ワークロードセキュリティでは、これはリスクの低いアクティビティとみなされるため、アラートは生成されません（つまり、同じユーザが作成したファイルを変更した場合）。
+このスクリプトは、暗号化対象となる多数のファイル（サブフォルダ内のファイルも含め、理想的には100個以上）を含むフォルダを含むSVMで実行する必要があります。ファイルが空でないことを確認してください。
 
-の手順については、以下を参照してくださいlink:#create-files-programmatically["プログラムによって空でないファイルを作成します"]。
-
-
-
-== シミュレータを実行する前のガイドライン：
-
-. 暗号化されたファイルが空でないことを確認します。
-. 必ず50を超えるファイルを暗号化してください。少数のファイルは無視されます。
-. 同じユーザで何度も攻撃を実行しないでください。数回後、ワークロードセキュリティはこのユーザの動作を学習し、それがユーザの通常の動作であると想定します。
-. 同じユーザが作成したファイルは暗号化しないでください。ユーザが作成したばかりのファイルを変更しても、リスクのあるアクティビティとは見なされません。別のユーザが作成したファイルを使用するか、ファイルの作成から暗号化まで数時間かかります。
+アラートを生成するには、テストデータを作成する前にコレクターを一時停止します。サンプルファイルが生成されたら、コレクターを再開し、暗号化プロセスを開始します。
 
 
 
+== 手順：
 
-== システムを準備
 
-まず、ターゲットボリュームをマシンにマウントします。NFS マウントまたは CIFS エクスポートをマウントできます。
 
-Linux で NFS エクスポートをマウントするには、次の手順を実行
+=== システムを準備します。
 
-....
+まず、ターゲットボリュームをマシンにマウントします。NFSまたはCIFSエクスポートのいずれかをマウントできます。
+
+
+
+==== Linux で NFS エクスポートをマウントするには、次の手順を実行
+
+[listing]
+----
 mount -t nfs -o vers=4.0 10.193.177.158:/svmvol1 /mntpt
 mount -t nfs -o vers=4.0 Vserver data IP>:/nfsvol /destinationlinuxfolder
-....
+----
 NFS バージョン 4.1 はマウントしないでください。 FPolicy ではサポートされていません。
 
-Linux で CIFS をマウントするには、次の手順を
 
- mount -t cifs //10.193.77.91/sharedfolderincluster /root/destinationfolder/ -o username=raisa
+
+==== Linux で CIFS をマウントするには、次の手順を
+
+[listing]
+----
+mount -t cifs //10.193.77.91/sharedfolderincluster /root/destinationfolder/ -o username=raisa
+----
+
+
+==== ONTAP Autonomous ランサムウェア保護を有効にする（オプション）:
+
+ONTAP クラスタのバージョンが 9.11.1 以上の場合は、ONTAP コマンド コンソールで次のコマンドを実行して、ONTAP ランサムウェア保護サービスを有効にできます。
+
+ security anti-ransomware volume enable -volume [volume_name] -vserver [svm_name]
 次に、 Data Collector をセットアップします。
 
 . ワークロードセキュリティエージェントがまだ構成されていない場合は構成します。
-. SVM データコレクタが設定されていない場合は設定します。
+. まだ行っていない場合は、SVM データ コレクターを構成します。
+. データ コレクターを構成するときに、マウント プロトコルが選択されていることを確認します。
 
+
+
+
+== プログラムでサンプル ファイルを生成します。
+
+ファイルを作成する前に、まず停止するか、 link:task_add_collector_svm.html#play-pause-data-collector["データ収集装置を一時停止する"]処理。
+
+シミュレーションを実行する前に、暗号化するファイルを追加する必要があります。暗号化するファイルを手動でターゲットフォルダにコピーするか、付属のスクリプトのいずれかを使用してプログラム的にファイルを作成することができます。どちらの方法を使用する場合でも、暗号化するファイルが少なくとも100個あることを確認してください。
+
+プログラムでファイルを作成する場合は、シェルまたは Python を使用できます。
+
+
+
+=== シェル：
+
+. [ エージェント ] ボックスにログインします。
+. ファイラーの SVM からエージェント マシンに NFS または CIFS 共有をマウントします。CD をそのフォルダに移動します。
+. エージェントのインストール ディレクトリ (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/shell/create_dataset.sh) からスクリプトをターゲットのマウント場所にコピーします。
+. マウントされたディレクトリ (例: /root/demo) 内のスクリプトを使用して次のコマンドを実行し、テスト データセット フォルダーとファイルを作成します。
++
+ './create_dataset.sh'
+. これにより、「test_dataset」というディレクトリの下のマウント フォルダー内に、さまざまな拡張子を持つ空でないファイル 100 個が作成されます。
+
+
+
+
+=== パイソン:
+
+
+
+==== Python スクリプトの前提条件:
+
+* Python をインストールします (まだインストールされていない場合)。
++
+** Python 3.5.2以上をダウンロード https://www.python.org/[] 。
+** Pythonのインストールを確認するには、  `python --version` 。
+** Python スクリプトはバージョン 3.5.2 以降でテストされています。
+
+
+* まだインストールされていない場合は pip をインストールします。
++
+** get-pip.pyスクリプトを以下からダウンロードしてください。  https://bootstrap.pypa.io/[] 。
+** pipをインストールするには `python get-pip.py` 。
+** pipのインストールを確認する `pip --version` 。
+
+
+* PyCryptodome ライブラリ:
++
+** このスクリプトは PyCryptodome ライブラリを使用します。
+** PyCryptodomeをインストールする `pip install pycryptodome` 。
+** PyCryptodomeのインストールを確認するには、  `pip show pycryptodome` 。
+
+
+
+
+
+
+==== Python ファイル作成スクリプト:
+
+. [ エージェント ] ボックスにログインします。
+. ファイラーの SVM からエージェント マシンに NFS または CIFS 共有をマウントします。CD をそのフォルダに移動します。
+. エージェントのインストール ディレクトリ (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/python/create_dataset.py) からターゲットのマウント場所にスクリプトをコピーします。
+. マウントされたディレクトリ (例: /root/demo) 内のスクリプトを使用して次のコマンドを実行し、テスト データセット フォルダーとファイルを作成します。
++
+ 'python create_dataset.py'
+. これにより、「test_dataset」というディレクトリの下のマウントフォルダ内に、さまざまな拡張子を持つ空でないファイル100個が作成されます。
+
+
+
+
+== コレクターを再開する
+
+これらの手順を実行する前にコレクターを一時停止した場合は、サンプル ファイルが作成されたら必ずコレクターを再開してください。
 
 
 
 == ランサムウェアシミュレータスクリプトを実行します
 
-. ワークロードセキュリティエージェントマシンにログイン（ssh）します。
-. /opt/NetApp/cloudsecure/agent/install_に 移動します
-. パラメータを指定せずにシミュレータスクリプトを呼び出し、使用状況を確認します。
+ランサムウェアアラートを生成するには、Workload Security でランサムウェアアラートをシミュレートする付属のスクリプトを実行します。
+
+
+
+=== シェル：
+
+. エージェントのインストール ディレクトリ (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/shell/simulate_attack.sh) からスクリプトをターゲットのマウント場所にコピーします。
+. マウントされたディレクトリ (例: /root/demo) 内のスクリプトを使用して次のコマンドを実行し、テスト データセットを暗号化します。
 +
-....
-# pwd
-/opt/netapp/cloudsecure/agent/install
-# ./ransomware_simulator.sh
-Error: Invalid directory  provided.
-Usage: ./ransomware_simulator.sh [-e] [-d] [-i <input_directory>]
-       -e to encrypt files (default)
-       -d to restore files
-       -i <input_directory> - Files under the directory to be encrypted
-....
+ './simulate_attack.sh'
+. これにより、「test_dataset」ディレクトリの下に作成されたサンプル ファイルが暗号化されます。
+
+
+
+
+=== パイソン:
+
+. エージェントのインストール ディレクトリ (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/python/simulate_attack.py) からスクリプトをターゲットのマウント場所にコピーします。
+. Pythonの前提条件は、Pythonスクリプトの前提条件セクションに従ってインストールされていることに注意してください。
+. マウントされたディレクトリ (例: /root/demo) 内のスクリプトを使用して次のコマンドを実行し、テスト データセットを暗号化します。
 +
-....
-Encrypt command example: ./ransomware_simulator.sh -e -i /mnt/audit/reports/
-Decrypt command example: ./ransomware_simulator.sh -d -i /mnt/audit/reports/
-....
+ 'python simulate_attack.py'
+. これにより、「test_dataset」ディレクトリの下に作成されたサンプル ファイルが暗号化されます。
 
 
 
 
-== テストファイルを暗号化します
+== ワークロードセキュリティでアラートを生成する
 
-ファイルを暗号化するには、次のコマンドを実行します。
+シミュレータ スクリプトの実行が終了すると、数分以内に Web UI にアラートが表示されます。
 
-....
-# ./ransomware_simulator.sh -e -i /root/for/
-Encryption key is saved in /opt/netapp/cloudsecure/cloudsecure-agent-1.251.0/install/encryption-key,
-which can be used for restoring the files.
-Encrypted /root/for/File000.txt
-Encrypted /root/for/File001.txt
-Encrypted /root/for/File002.txt
-...
-....
+注意: 以下の条件がすべて満たされた場合、高信頼度アラートが生成されます。
+
+. 監視対象SVMのONTAPバージョンが9.11.1以上
+. ONTAP自律ランサムウェア保護が設定されている
+. Workload Security データ コレクターがクラスター モードに追加されました。
 
 
-== ファイルのリストア
+Workload Security はユーザーの行動に基づいてランサムウェアのパターンを検出し、ONTAP ARP はファイル内の暗号化アクティビティに基づいてランサムウェアのアクティビティを検出します。
 
-復号化するには、次のコマンドを実行します。
+条件が満たされた場合、Workload Security はアラートを高信頼度アラートとしてマークします。
 
-....
-[root@scspa2527575001 install]# ./ransomware_simulator.sh -d -i /root/for/
-File /root/for/File000.txt is restored.
-File /root/for/File001.txt is restored.
-File /root/for/File002.txt is restored.
-...
-....
+アラート リスト ページの高信頼度アラートの例:
 
+image:ws_high_confidence_alert.png["高信頼度アラートの例、リストページ"]
 
-== スクリプトを複数回実行します
+高信頼度アラートの詳細の例:
 
-ユーザがランサムウェア攻撃を受けた場合は、別のユーザに切り替えて攻撃を受けます。Workload Securityはユーザの動作を学習し、同じユーザに対してランサムウェア攻撃が繰り返し発生してもアラートを生成しません。
+image:ws_high_confidence_alert_detail.png["高信頼度アラートの例、詳細ページ"]
 
 
 
-== プログラムでファイルを作成します
+== アラートを複数回トリガーする
 
-ファイルを作成する前に、データコレクタの処理を停止または一時停止する必要があります。データコレクタをエージェントに追加する前に、次の手順を実行します。データコレクタをすでに追加している場合は、データコレクタを編集し、無効なパスワードを入力して保存します。これにより、データコレクタが一時的にエラー状態になります。注意：元のパスワードを必ずメモしてください。
+Workload Security はユーザーの行動を学習し、24 時間以内に同じユーザーに対して繰り返しランサムウェア攻撃が行われた場合、アラートを生成しません。
 
-
-NOTE: ファイルを作成する前にをお勧めしlink:task_add_collector_svm.html#play-pause-data-collector["コレクターの一時停止"]ます</Z1>.]</</Z1>
-
-シミュレーションを実行する前に、暗号化するファイルを追加する必要があります。暗号化するファイルを手動でターゲットフォルダにコピーするか、スクリプト（以下の例を参照）を使用してプログラムでファイルを作成することができます。どちらの方法を使用した場合も、 1 、 000 個以上のファイルをコピーしてください。
-
-プログラムでファイルを作成する場合は、次の手順を実行します。
-
-. [ エージェント ] ボックスにログインします。
-. Filer の SVM から Agent マシンに NFS エクスポートをマウントします。CD をそのフォルダに移動します。
-. このフォルダに、 createfiles.sh という名前のファイルを作成します
-. 次の行をそのファイルにコピーします。
-+
-....
-for i in {000..1000}
-do
-   echo hello > "File${i}.txt"
-done
-echo 3 > /proc/sys/vm/drop_caches ; sync
-....
-. ファイルを保存します。
-. ファイルに対する実行権限を確認します。
-+
- chmod 777 ./createfiles.sh
-. スクリプトを実行します。
-+
- ./createfiles.sh
-+
-現在のフォルダには 1000 個のファイルが作成されます。
-
-. データコレクタを再度有効にします
-+
-手順 1 でデータコレクタを無効にした場合は、データコレクタを編集し、正しいパスワードを入力して保存します。データコレクタが running 状態であることを確認します。
-
-. これらの手順を実行する前にコレクタを一時停止した場合は、を確認してlink:task_add_collector_svm.html#play-pause-data-collector["コレクタの再開"]ください。
-
+別のユーザーで新しいアラートを生成するには、同じ手順 (テスト データを作成し、テスト データを暗号化する) を再度実行してください。
