@@ -12626,4 +12626,6 @@
   <block id="34d4df065e8cb474864212e7cbd25aab" category="list-text">_cloudsecure_installers.collector_ &gt; _/v1/cloudsecure/collector-types/installers/{collectorTypeUUID}_ API に移動します。前の手順でコピーした _collectorTypeUUID_ を入力します。インストーラーを _/{agent-install-path}/cloudsecure/tmp/collectors_ ディレクトリにダウンロードします。</block>
   <block id="875ee097a763d140a4468d57aabb8d80" category="list-text">コレクターのアップグレードが成功した場合は、ディレクトリ _/{agent-install-path}/cloudsecure/tmp/collectors_ 内のすべてのファイルを削除できます。</block>
   <block id="f7185660114f7b999956b1355a59005c" category="paragraph">このエラーは、コレクターインストーラーファイルが_/{agent-install-path}/cloudsecure/tmp/collectors_ディレクトリに存在しないか、アクセスできない場合に発生します。インストーラーファイルがダウンロードされていること、_collectors_ディレクトリ構造とインストーラーzipファイルの所有者がcssys:cssysであることを確認した上で、エージェントサービスを再起動してください：_systemctl restart cloudsecure-agent.service_</block>
+  <block id="7d7553997a3a5a75a3b0c10d87de471a" category="inline-link-macro">NetAppの営業担当者にお問い合わせください</block>
+  <block id="9cff751c63b93d5cf30de3f9b1c5ae37" category="admonition">レポート機能はData Infrastructure Insightsで使用でき<block ref="e53fcfe2d8e430963458770e616738bd" category="inline-link-macro-rx"></block>ます。レポート機能の利用には、最小フットプリント要件が適用されます。<block ref="1609ad57ad0e13d165eb8d59f42fcd45" category="inline-link-macro-rx"></block>詳細についてはこちらをご覧ください。</block>
 </blocks>

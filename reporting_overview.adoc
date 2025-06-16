@@ -13,7 +13,7 @@ keywords: reporting, cognos, data warehouse, dwh
 Data Infrastructure Insightsのレポート機能は、事前定義済みのレポートを表示したり、カスタムレポートを作成したりできるビジネスインテリジェンスツールです。
 
 
-NOTE: レポート機能はData Infrastructure Insightsで使用できlink:concept_subscribing_to_cloud_insights.html["Premium Edition の場合"]ます。
+NOTE: レポート機能はData Infrastructure Insightsで使用できlink:concept_subscribing_to_cloud_insights.html["Premium Edition の場合"]ます。レポート機能の利用には、最小フットプリント要件が適用されます。link:https://www.netapp.com/forms/cloud-insights-contact-us/["NetAppの営業担当者にお問い合わせください"]詳細についてはこちらをご覧ください。
 
 Data Infrastructure Insightsのレポート作成機能では、次のタスクを実行できます。
 
