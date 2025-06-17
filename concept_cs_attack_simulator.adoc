@@ -59,7 +59,7 @@ NFS バージョン 4.1 はマウントしないでください。 FPolicy で�
 
 
 
-==== Linux で CIFS をマウントするには、次の手順を
+==== Linux で CIFS をマウントするには:
 
 [listing]
 ----

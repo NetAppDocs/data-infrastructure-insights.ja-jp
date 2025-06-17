@@ -17,7 +17,7 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 | コンポーネント | Linux 要件 
 
 
-| オペレーティングシステム | 次のいずれかのライセンスバージョンを実行しているコンピューター：* CentOS 9 Stream（64ビット）* openSUSE LEAP 15.3～15.5（64ビット）* Oracle Linux 8.10（64ビット）、9.1～9.4（64ビット）、SELinux * Red Hat Enterprise Linux 8.10（64ビット）、9.1～9.5（64ビット）、SELinux * Rocky 9.4およびSP9.4専用のサーバを使用することを推奨します。 
+| オペレーティングシステム | 次のいずれかのライセンス版を実行しているコンピュータ: * AlmaLinux 9.4 および 9.5 (64 ビット) (SELinux を含む) * CentOS 9 Stream (64 ビット) * Debian 11(64 ビット) および 12 (64 ビット) (SELinux を含む) * OpenSUSE Leap 15.3(64 ビット) ～ 15.6 (64 ビット) * Oracle Linux 8.10 (64 ビット)、および 9.1(64 ビット) ～ 9.6 (64 ビット) (SELinux を含む) * Red Hat Enterprise Linux 8.10 (64 ビット)、および 9.1(64 ビット) ～ 9.6 (64 ビット) (SELinux を含む) * Rocky 9.4(64 ビット) および 9.5 (64 ビット) (SELinux を含む) * SUSE Linux Enterprise Server 15 SP4(64 ビット) ～ 15 SP6 (64 ビット) (SELinux を含む) * Ubuntu 20.04 LTS (64 ビット)、22.04 LTS (64 ビット)、および 24.04 LTS (64 ビット) このコンピューターでは、他のアプリケーション レベルのソフトウェアを実行しないでください。専用のサーバを使用することを推奨します。 
 
 
 | コマンド | インストールには「unzip」が必要です。また、インストール、スクリプトの実行、およびアンインストールには、「sudo su–」コマンドが必要です。 
