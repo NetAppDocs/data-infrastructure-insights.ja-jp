@@ -37,6 +37,12 @@ image:QuerySelectColumns.png["列を選択します"]
 
 
 
+== 実際に動作を見てみましょう
+
+link:https://media.netapp.com/video-detail/d0530e0b-a222-52e7-92b1-dbeeee41b712/explore-and-analyze-with-queries-in-data-infrastructure-insights["Data Infrastructure Insights のクエリを使用して探索および分析する (ビデオ)"]
+
+
+
 == [集計]、[単位]、[条件付き書式]の順に選択します
 
 

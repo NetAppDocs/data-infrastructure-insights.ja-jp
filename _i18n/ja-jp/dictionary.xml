@@ -596,7 +596,6 @@
   <block id="dd94533008fec4ee5889a56fd78e2a26" category="paragraph">NFS バージョン 4.1 はマウントしないでください。 FPolicy ではサポートされていません。</block>
   <block id="a22c6eb3597528c16b0d46880ae4b1ae" category="paragraph">次に、 Data Collector をセットアップします。</block>
   <block id="5e7fe8c41f8a34a29dc01b5eced565e8" category="list-text">ワークロードセキュリティエージェントがまだ構成されていない場合は構成します。</block>
-  <block id="79e81469dc70b00e14fd266807fa2813" category="section-title">ランサムウェアシミュレータスクリプトを実行します</block>
   <block id="1ccbd3884a5f46ebee24ea2d455e82c6" category="list-text">[ エージェント ] ボックスにログインします。</block>
   <block id="b3431d54476e0f70ea6fc00bae48572b" category="summary">ONTAP SVM DSC をインストールする前に、このスクリプトを実行して SVM のイベントレートを確認できます</block>
   <block id="2723c4d559ff96bb42870d86c109708e" category="doc">SVMイベントレートチェッカー（エージェントサイジングガイド）</block>
@@ -12538,7 +12537,6 @@
   <block id="29acd3d3cfc5f8e3cb650abeb2622a68" category="cell">agentlogin.cs01-eu-1.cloudinsights.netapp.com</block>
   <block id="012f0abca78822d24d27455403c3d089" category="cell">agentlogin.cs01-ap-1.cloudinsights.netapp.com</block>
   <block id="5638f0cd643e22827b55eec8b52ab7e4" category="paragraph">ここで、_&lt;API_Access_Token&gt;_ は API アクセス キーの作成中に保存したトークンであり、_&lt;Workload Security Tenant&gt;_ は Workload Security 環境のテナント URL です。</block>
-  <block id="9e2b8018039d7d99b04df272bce4aba9" category="list-text">ランサムウェアシミュレーションスクリプトは Linux でのみ動作します。シミュレーション スクリプトは、ユーザーが ONTAP ARP を Workload Security と統合した場合に、高信頼度アラートも生成する必要があります。</block>
   <block id="61622ea1d4086909bd90c0efc1d6a2e5" category="list-text">Workload Security は、ONTAP バージョンが 9.15 以上の場合にのみ、NFS 4.1 で生成されたイベントとアラートを検出します。</block>
   <block id="18ce72511b1d5c5efd6fbe69db6d9b27" category="list-text">ユーザーは、自分の好みやシステム要件に応じて、Python スクリプトまたはシェル スクリプトのいずれかを選択できます。</block>
   <block id="9efded9e764f04e1a9d0996a56b10881" category="list-text">Pythonスクリプトには前提条件となるインストールが必要です。Pythonを使用しない場合は、シェルスクリプトを使用してください。</block>
@@ -12628,4 +12626,23 @@
   <block id="9cff751c63b93d5cf30de3f9b1c5ae37" category="admonition">レポート機能はData Infrastructure Insightsで使用でき<block ref="e53fcfe2d8e430963458770e616738bd" category="inline-link-macro-rx"></block>ます。レポート機能の利用には、最小フットプリント要件が適用されます。<block ref="1609ad57ad0e13d165eb8d59f42fcd45" category="inline-link-macro-rx"></block>詳細についてはこちらをご覧ください。</block>
   <block id="49efdacfb2c6deb2da842846699cf1e7" category="cell">次のいずれかのライセンス版を実行しているコンピュータ: * AlmaLinux 9.4 および 9.5 (64 ビット) (SELinux を含む) * CentOS 9 Stream (64 ビット) * Debian 11(64 ビット) および 12 (64 ビット) (SELinux を含む) * OpenSUSE Leap 15.3(64 ビット) ～ 15.6 (64 ビット) * Oracle Linux 8.10 (64 ビット)、および 9.1(64 ビット) ～ 9.6 (64 ビット) (SELinux を含む) * Red Hat Enterprise Linux 8.10 (64 ビット)、および 9.1(64 ビット) ～ 9.6 (64 ビット) (SELinux を含む) * Rocky 9.4(64 ビット) および 9.5 (64 ビット) (SELinux を含む) * SUSE Linux Enterprise Server 15 SP4(64 ビット) ～ 15 SP6 (64 ビット) (SELinux を含む) * Ubuntu 20.04 LTS (64 ビット)、22.04 LTS (64 ビット)、および 24.04 LTS (64 ビット) このコンピューターでは、他のアプリケーション レベルのソフトウェアを実行しないでください。専用のサーバを使用することを推奨します。</block>
   <block id="edf63ae7e3cf0cd744884c156cab7abb" category="section-title">Linux で CIFS をマウントするには:</block>
+  <block id="ee817f2b2a73b759041de15700c640ab" category="list-text">ランサムウェアシミュレーションスクリプトは Linux でのみ動作します。シミュレーション スクリプトは、ユーザーが ONTAP ARP を Workload Security と統合した場合に、高信頼度アラートも生成する必要があります。</block>
+  <block id="aeb28c68bc1dab765c30f59d6d996ff2" category="section-title">実際に動作を見てみましょう</block>
+  <block id="c8d448b9409555cf2e8422b8c3317946" category="inline-link-macro">Data Infrastructure Insights のクエリを使用して探索および分析する (ビデオ)</block>
+  <block id="e0d2c40c23e890868e573da2463ab970" category="paragraph"><block ref="e0d2c40c23e890868e573da2463ab970" category="inline-link-macro-rx"></block></block>
+  <block id="dc144dad3008fbf761d88b6231252fe9" category="summary">VM Analyzer は、テナント上の仮想資産のトポロジを提供します。</block>
+  <block id="12a96e4209d40670da1501e5ae32f7c1" category="doc">VMアナライザの概要</block>
+  <block id="90184485963d030ad4dd7567d71584f9" category="paragraph">DIIの*VM Analyzer*を使えば、仮想資産の管理がよりシンプルかつ効率的になります。この強力なツールは、VMDK/VMからホスト、データストア、内部ボリューム/ボリューム、ストレージに至るまでの依存関係をマッピングし、エンドツーエンドの可視性を提供します</block>
+  <block id="28966c9414b6884efd36e8984f749976" category="paragraph">VM Analyzerは'対話型のトポロジマップを提供することにより'問題を特定し'変更を理解し'データ・フローの理解を向上させることができますVM 管理を合理化し、仮想ワークロードの可視性を向上させます。</block>
+  <block id="38bb6439d9226f9f886c24401bfc4271" category="paragraph"><block ref="38bb6439d9226f9f886c24401bfc4271" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f9b7a93ca7c70a47d59513eb8fc49881" category="paragraph">VM Analyzerを表示するには、*オブザーバビリティ&gt;分析&gt; VM Analyzer *を選択します。アプリケーション、仮想マシン、ボリューム、内部ボリュームのフィルターを設定するか、独自のフィルターを追加します。オブジェクトのマップが表示され、接続されているオブジェクトが示されます。オブジェクトにカーソルを合わせると、それらの接続のトラフィックメトリックが表示されます。</block>
+  <block id="7485c59fee0f1341e68427d50b2c0b5f" category="inline-image-macro">VMアナライザーのパフォーマンスメトリックの例</block>
+  <block id="09562317f0e4300c8d530df45c626200" category="paragraph"><block ref="09562317f0e4300c8d530df45c626200" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fdbcd622aeb7794a55d5a3c57f4ed433" category="admonition">ほとんどのVM Analyzerフィルタ（追加可能なフィルタを含む）はコンテキストに依存していますこれらのフィルタのいずれかでオブジェクトを選択すると'他のフィルタのドロップダウンに表示される選択肢は'選択したオブジェクトのコンテキストに応じて更新されます</block>
+  <block id="86975522d809db49e0c205d536440123" category="paragraph">オブジェクトまたはグループをクリックすると、スライドアウトパネルが開き、オブジェクトとその接続に関する詳細情報が表示されます。スライドアウトパネルには、選択したオブジェクトの詳細（オブジェクトの種類に応じてスループットや使用率など）を示すサマリーと、レイテンシやIOPSなどのオブジェクトのメトリクスを示すチャートが表示されます。追加のタブでは、関連するリソースや変更、アラートを確認できます。必要に応じて、上位の相関オブジェクトや競合オブジェクトのメトリクスもチャートに表示するように選択できます。</block>
+  <block id="d2471c4bc746eeea68ab17452321a403" category="inline-link-macro">VM Analyzer によるトラブルシューティングの簡素化 (ビデオ)</block>
+  <block id="6e27a8c95ed5ddbd5bf8c70b3cdcde35" category="paragraph"><block ref="6e27a8c95ed5ddbd5bf8c70b3cdcde35" category="inline-link-macro-rx"></block></block>
+  <block id="f463cb1a5df7d729d273f46c1e5cb861" category="sidebar">データの分析</block>
+  <block id="c917a46858bc7b65af2e1c90ee0a1453" category="sidebar">SANアナライザー</block>
+  <block id="2e2565dd8910383ad2b3626e2b5d37b2" category="sidebar">VMアナライザー</block>
 </blocks>

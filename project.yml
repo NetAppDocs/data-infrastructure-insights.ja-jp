@@ -161,6 +161,12 @@ sidebar:
         url: "/concept_storage_virtualization.html"
       - title: 資産を検索するためのヒントとヒント
         url: "/concept_searching_assets.html"
+    - title: データの分析
+      entries:
+      - title: SANアナライザー
+        url: "/san_analyzer_overview.html"
+      - title: VMアナライザー
+        url: "/vm_analyzer_overview.html"
     - title: レポート作成
       entries:
       - title: レポート概要
