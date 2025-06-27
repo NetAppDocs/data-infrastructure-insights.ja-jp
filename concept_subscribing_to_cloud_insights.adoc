@@ -12,8 +12,8 @@ keywords: subscribe, trial, subscription, contract, raw capacity, region, data r
 [role="lead"]
 Data Infrastructure Insightsは、次の3つの簡単なステップで開始できます。
 
-* でアカウントを登録しlink:https://bluexp.netapp.com//["* NetApp BlueXP *"]て、NetAppのすべてのクラウドサービスにアクセスしてください。
-* Data Infrastructure Insightsの無償トライアルにご登録いただき、利用可能な機能をご確認ください。無償トライアルに登録するには：
+. でアカウントを登録しlink:https://bluexp.netapp.com//["* NetApp BlueXP *"]て、NetAppのすべてのクラウドサービスにアクセスしてください。
+. Data Infrastructure Insightsの無償トライアルにご登録いただき、利用可能な機能をご確認ください。無償トライアルに登録するには：
 +
 ** に移動 https://netapp.com[]
 ** ページ上部の*購入方法*を選択します。
@@ -21,7 +21,19 @@ Data Infrastructure Insightsは、次の3つの簡単なステップで開始で
 ** 会議をスケジュールするか、担当者からトライアルについての連絡をお待ちください。
 
 
-* * Data Infrastructure Insightsにサブスクライブ*すると、link:https://bluexp.netapp.com/contact-cds["ネットアップの営業担当者"]直接または経由でデータに中断なく継続的にアクセスできます。link:https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["AWSマーケットプレイス"]
+. さまざまな柔軟なサブスクリプション オプションを通じて、データへの継続的かつ中断のないアクセスを実現するには、Data Infrastructure Insights に*サブスクライブ*してください。
++
+** link:https://bluexp.netapp.com/contact-cds["NetAppセールスダイレクト"]
+** AWS マーケットプレイス:
++
+*** link:https://aws.amazon.com/marketplace/pp/prodview-axhuy7muvzfx2["固定期間サブスクリプション"]
+*** link:https://aws.amazon.com/marketplace/pp/prodview-rn4qwencpjpge["従量課金制のサブスクリプション"]
+*** link:https://aws.amazon.com/marketplace/pp/prodview-nku57vjsqdwzu["固定ベース + 従量課金超過サブスクリプション"]
+
+
+** link:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.dii_premium["Azure Marketplace で入手できます"] （すべてのサブスクリプションオプション）
+
+
 
 
 登録プロセスでは、Data Infrastructure Insights環境をホストするグローバルリージョンを選択できます。詳細については、『Data Infrastructure Insights』をご覧link:security_information_and_region.html["情報と地域"]ください。
@@ -50,7 +62,7 @@ NOTE: Data Infrastructure Insightsの評価期間が4日以内に終了するよ
 
 === AWS Marketplaceで試用
 
-また、AWS Marketplaceで無料トライアルに登録することもできます。AWS Marketplaceの無償トライアルでは、33日間の試用期間でData Infrastructure Insightsにアクセスでき、最大499<<observability-metering,管理ユニット>>（MU）まで利用できます。
+また、AWS Marketplaceで無料トライアルに登録することもできます。AWS Marketplace の無料トライアルでは、33 日間の試用期間中、Data Infrastructure Insights にアクセスできます。
 
 AWS Marketplaceの無償トライアルを延長することはできません。試用期間中はいつでも、* Admin -> Subscription *ページからData Infrastructure Insights Basic Editionサブスクリプションにダウングレードしたり、Data Infrastructure Insightsの有料サブスクリプションに変更したりできます。
 
