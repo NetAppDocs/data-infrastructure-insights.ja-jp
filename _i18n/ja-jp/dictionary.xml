@@ -12654,5 +12654,5 @@
   <block id="eaf0150fe02dfa14aeba907403d82430" category="list-text"><block ref="fbbacee6d384df67d0c4b258087bb5d8" category="inline-link-macro-rx"></block> （すべてのサブスクリプションオプション）</block>
   <block id="fbcb8e05bba1155469592f550e005cf6" category="paragraph">登録プロセスでは、Data Infrastructure Insights環境をホストするグローバルリージョンを選択できます。詳細については、『Data Infrastructure Insights』をご覧<block ref="286a302a1ee50fd59eb368d3d9779037" category="inline-link-macro-rx"></block>ください。</block>
   <block id="48a6157894b0b86c589decc577da9409" category="paragraph">また、AWS Marketplaceで無料トライアルに登録することもできます。AWS Marketplace の無料トライアルでは、33 日間の試用期間中、Data Infrastructure Insights にアクセスできます。</block>
-  <block id="fc51886cff6ff32716f8675890366527" category="admonition">DIIは、監視作成前の1週間の既存データを確認し、30分以上続くデータの急上昇または急降下を検出します。これらは異常とみなされます。2週目（「学習」フェーズ）では、より多くのデータポイントが収集・分析されるため、アラートの「ノイズ」が増加する可能性があります。この「ノイズ」は、その後数週間にわたってより多くのデータが分析されるにつれて、通常は減少します。</block>
+  <block id="1f06ee3cbbfb94c83d737186b4f510ac" category="admonition">モニターが作成されると、DII は前週の既存データを確認し、顕著なデータの急上昇または急降下がないか確認します。これらは異常とみなされます。モニター作成後の最初の 1 週間（「学習」フェーズ）は、アラートの「ノイズ」が増加する可能性があります。このノイズを軽減するため、30 分以上続く急上昇または急降下のみが異常とみなされ、アラートが生成されます。次の週には、より多くのデータが分析されるにつれて、通常はノイズが減少し、その後に発生した顕著な急上昇または急降下のみが異常とみなされます。</block>
 </blocks>
