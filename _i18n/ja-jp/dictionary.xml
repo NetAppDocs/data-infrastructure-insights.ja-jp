@@ -12151,7 +12151,6 @@
   <block id="a2efde4371837d491f7f2d093cb687a2" category="paragraph"><block ref="6239b49ee0db956af965dd1ce0c92bfa" category="inline-image-macro-rx" type="image"></block></block>
   <block id="67cdd97ee57ecbb8d5397980e2f337b2" category="summary">Data Infrastructure Insightsは、NetApp Active IQデジタルアドバイザ（デジタルアドバイザとも呼ばれる）からリスクデータを収集します。</block>
   <block id="dab2edf9eaac3950e92c281ce358af01" category="doc">Active IQ Digital Advisor</block>
-  <block id="c68ffc18976c6478ceba645cdcfe3ad4" category="paragraph">NetApp<block ref="cbe8da543274ee624cafab4e3c376bb9" category="inline-link-macro-rx"></block>（デジタルアドバイザとも呼ばれます）は、NetAppのお客様のハードウェア/ソフトウェアシステムに対して、一連の視覚化、分析、およびその他のサポート関連サービスを提供します。Digital Advisorによって報告されるデータは、システムの問題のトラブルシューティングを強化し、デバイスに関連する最適化および予測分析のインサイトを提供します。</block>
   <block id="bb4ab99c035d10d75227562a13f30fbd" category="paragraph">Data Infrastructure Insightsは、デジタルアドバイザによって監視およびレポートされるすべてのNetApp clustered Data ONTAPストレージシステムの*リスク*を収集します。ストレージシステムについて報告されたリスクは、Data Infrastructure Insightsによって、それらのデバイスからのデータ収集の一環として自動的に収集されます。Digital Advisorのリスク情報を収集するには、適切なデータコレクタをData Infrastructure Insightsに追加する必要があります。</block>
   <block id="5b3f4c933f6bb8b2000bc2d18617bf70" category="paragraph">Data Infrastructure Insightsには、Digital Advisorによって監視およびレポートされていないONTAPシステムのリスクデータは表示されません。</block>
   <block id="512f021ba1976438e7134e934898c5bd" category="paragraph">レポートされるリスクは、Data Infrastructure Insightsの_storage_and_storage node_assetランディングページの「リスク」の表に表示されます。この表には、リスクの詳細、リスクのカテゴリ、リスクの潜在的な影響が表示されます。また、ストレージノードのすべてのリスクをまとめた[Digital Advisor]ページへのリンクも記載されています（NetAppサポートアカウントのサインインが必要です）。</block>
@@ -12655,4 +12654,18 @@
   <block id="fbcb8e05bba1155469592f550e005cf6" category="paragraph">登録プロセスでは、Data Infrastructure Insights環境をホストするグローバルリージョンを選択できます。詳細については、『Data Infrastructure Insights』をご覧<block ref="286a302a1ee50fd59eb368d3d9779037" category="inline-link-macro-rx"></block>ください。</block>
   <block id="48a6157894b0b86c589decc577da9409" category="paragraph">また、AWS Marketplaceで無料トライアルに登録することもできます。AWS Marketplace の無料トライアルでは、33 日間の試用期間中、Data Infrastructure Insights にアクセスできます。</block>
   <block id="0fb60d67e2b52b6e6bca8533e617e698" category="admonition">モニターが作成されると、DII は前週の既存データを確認し、顕著なデータの急上昇または急降下がないか確認します。これらは異常とみなされます。モニター作成後の最初の 1 週間（「学習」フェーズ）は、アラートの「ノイズ」が増加する可能性があります。このノイズを軽減するため、30 分以上続く急上昇または急降下のみが異常とみなされ、アラートが生成されます。次の週には、より多くのデータが分析されるにつれて、通常、ノイズは減少し、一定期間続く大幅な急上昇または急降下は異常とみなされます。</block>
+  <block id="7a20b5e6e74635b92f5666cd649ddfcc" category="paragraph">NetApp<block ref="f2ce28f6c068a59381fa4a12e4e21d63" category="inline-link-macro-rx"></block>（デジタルアドバイザとも呼ばれます）は、NetAppのお客様のハードウェア/ソフトウェアシステムに対して、一連の視覚化、分析、およびその他のサポート関連サービスを提供します。Digital Advisorによって報告されるデータは、システムの問題のトラブルシューティングを強化し、デバイスに関連する最適化および予測分析のインサイトを提供します。</block>
+  <block id="75aa1464e2cc1e0b9a103a1ed29b926c" category="cell">DIIは、原則として、収集ユニットとデバイス間のネットワークアドレス変換（NAT）またはポートアドレス変換（PORT）をサポートしていません。DIIは、コレクター設定内のホスト名/IPアドレスが、デバイスが認識しているアドレスと一致しないことを検出している可能性があります。</block>
+  <block id="9591ee2075b3837328ec834b9318e6fd" category="cell">エラー: ....ログインの最大リモート セッション数...</block>
+  <block id="9c157f91c84bf6ed98e9e4dc1f4e93da" category="cell">FOSでは、ユーザーロールごとにサポートされる同時SSHセッション数の制限が異なります。DIIのこのデバイスへのSSHセッションは、これらの制限に違反しているため、ログイン時に拒否されています。これは、同じアセットを重複して検出するコレクターが存在することを示している可能性があり、回避する必要があります。</block>
+  <block id="8f11f053224e09627ccc999dee93a80d" category="cell">パフォーマンス収集が失敗し、「...SNMP テーブルに行の重複が見つかりました...」</block>
+  <block id="467d1dc00ef5f225297dd855ea67d851" category="cell">DII が不正な SNMP 応答を検出しました。FOS8.2.3e を使用している可能性があります。8.2.3e2 以降にアップグレードしてください。</block>
+  <block id="f42d37ad24590fafdd93dde1ee7e6f79" category="cell">パフォーマンス収集が「...不明なユーザー名...」で失敗しました</block>
+  <block id="c2bcfc128dfe47b6cf1fb0bb2692cd17" category="cell">DIIコレクターに「SNMPユーザー名」の値が設定されていますが、これはSNMPv3ユーザースロットのいずれにも割り当てられていません。BrocadeFOSでユーザーを作成しただけでは、必ずしもSNMPv3ユーザーとして有効になるわけではありません。v3ユーザースロットのいずれにも割り当てる必要があります。</block>
+  <block id="8861809df1f65f69315eda11de0ed238" category="cell">パフォーマンス収集が「...サポートされていないセキュリティ レベル...」で失敗します</block>
+  <block id="8b5084d74c95a6be4f7e840c45b1bb75" category="cell">DII コレクターを SNMPv3 を使用するように構成しましたが、問題のデバイスでは暗号化 (プライバシーとも呼ばれます) や認証の設定が有効になっていません。</block>
+  <block id="52fd100dcb3cd52b2b71dcd8d77edfca" category="cell">パフォーマンス収集が失敗しました...空のプライバシー パスワードは、プライバシー プロトコル NONE でのみ許可されます</block>
+  <block id="871dd9472775ddbfdce3884fbc6130a5" category="cell">DIIコレクターを暗号化またはプライバシープロトコル（AESなど）を使用してSNMPv3を使用するように構成しましたが、「SNMPプライバシーパスワード」値が空であるため、DIIはこのデバイスと暗号化されたSNMPv3データフローをネゴシエートできません。</block>
+  <block id="5fc13cc8fea1e8f6d7dfd8f19d75023f" category="cell">パフォーマンス収集が .....VF:nn、エラー: アクセスなし... で失敗しました</block>
+  <block id="cda70acc46e3d1a4dc1d0f11bb28b33f" category="cell">複数の仮想ファブリックが有効になっているデバイスでSNMPv3を使用するようにDIIコレクターを設定しましたが、SNMPv3ユーザーにはVF NNの権限がありません。DIIは物理資産の部分的な検出をサポートしていません。DIIは常に特定の物理デバイス上の既存のVFのパフォーマンスデータを取得しようとするため、DIIには128個すべてのVFへのアクセスを事前に許可する必要があります。</block>
 </blocks>

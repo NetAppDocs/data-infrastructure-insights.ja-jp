@@ -11,7 +11,7 @@ summary: Data Infrastructure Insightsは、NetApp Active IQデジタルアドバ
 
 
 [role="lead"]
-NetApplink:https://www.netapp.com/us/products/data-infrastructure-management/active-iq.aspx["Active IQ Digital Advisor"]（デジタルアドバイザとも呼ばれます）は、NetAppのお客様のハードウェア/ソフトウェアシステムに対して、一連の視覚化、分析、およびその他のサポート関連サービスを提供します。Digital Advisorによって報告されるデータは、システムの問題のトラブルシューティングを強化し、デバイスに関連する最適化および予測分析のインサイトを提供します。
+NetApplink:https://docs.netapp.com/us-en/active-iq/["Active IQ Digital Advisor"]（デジタルアドバイザとも呼ばれます）は、NetAppのお客様のハードウェア/ソフトウェアシステムに対して、一連の視覚化、分析、およびその他のサポート関連サービスを提供します。Digital Advisorによって報告されるデータは、システムの問題のトラブルシューティングを強化し、デバイスに関連する最適化および予測分析のインサイトを提供します。
 
 Data Infrastructure Insightsは、デジタルアドバイザによって監視およびレポートされるすべてのNetApp clustered Data ONTAPストレージシステムの*リスク*を収集します。ストレージシステムについて報告されたリスクは、Data Infrastructure Insightsによって、それらのデバイスからのデータ収集の一環として自動的に収集されます。Digital Advisorのリスク情報を収集するには、適切なデータコレクタをData Infrastructure Insightsに追加する必要があります。
 
