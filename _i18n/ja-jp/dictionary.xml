@@ -6241,8 +6241,6 @@
   <block id="2d9b30e80afc5eb380c508d14b4f0676" category="list-text">準備ができたら、kubectl Applyスニペットをコピーしてダウンロードし、実行してOperatorをデプロイします。</block>
   <block id="cc56bec82b2c1d802e942018b5923042" category="list-text">インストールが自動的に開始されます。完了したら、[_Next_]ボタンをクリックします。</block>
   <block id="512795526de87931c50ae79cb1cb0a2b" category="list-text">インストールが完了したら、[_Next_]ボタンをクリックします。また、_operator-secrets.yaml_fileを削除するか、安全に保存してください。</block>
-  <block id="faaf8961a729f548e51c3b9f1af0f7e8" category="inline-xref">プロキシを設定します</block>
-  <block id="2954bdba102f234c90367d1425951c86" category="paragraph">プロキシを使用している場合は、「について」を参照してください<block ref="1a6ccc12a618fccf7330b5bee5bca7b7" category="inline-xref-macro-rx"></block>。</block>
   <block id="c149af672528f58d22f99809653add8a" category="inline-xref">カスタム/プライベートDockerリポジトリを使用する</block>
   <block id="84cce7a55f3a5c0926f355d54120bd4b" category="paragraph">カスタムリポジトリがある場合は、を参照してください<block ref="5616d0aefbf2e33b5f6c94a93c02e259" category="inline-xref-macro-rx"></block>。</block>
   <block id="ce4c84a03d990672d77b5332c35eaada" category="section-title">Kubernetes監視コンポーネント</block>
@@ -12414,7 +12412,6 @@
   <block id="0ccd64b2e6202fbb544d22cd48a872b2" category="inline-link-macro">この GitHub の記事</block>
   <block id="8f176f657f418586c2a4828045ab0c37" category="cell">これは問題と呼ばれています。<block ref="23bd9a1f0b26414ad35f4299a95464f0" category="inline-link-macro-rx"></block>詳細については、を参照してください。Tegraf が起動して動作している限り、ユーザはこのエラーメッセージを無視できます。</block>
   <block id="9aab00e938cede2932654042bc507309" category="cell">Kubernetes で、 Telegraf ポッドが次のエラーを報告しています。 "Error in processing mountstats info: failed to open mountstats file: /hostfs /proc/1/mountstats 、 error: open /hostfs /proc/1/mountstats ： permission denied"</block>
-  <block id="4123cf4f6521073cef46192908207644" category="cell">SELinuxを有効にして強制すると、TelegrafポッドがKubernetesノードの/proc/1/mountstatsファイルにアクセスできなくなる可能性があります。この制限を克服するには、agentconfigurationを編集し、runPrivileged設定を有効にします。詳細については、を参照して<block ref="f28efb863bb7dfcdf91b1badf5c0c340" category="inline-link-macro-rx"></block>ください。</block>
   <block id="f997e79142f159c33823b9deeab809eb" category="cell">Kubernetes で、 Telegraf ReplicaSet ポッドから次のエラーが報告されています。 [ プラグインの inputs.prometheus] エラー： Could not load keypair /etc/Kubernetes /pki/ etcd/server.crt ： /etc/Kubernetes /pki/ etcd/server.key ： open /etc/Kubernetes /pki/ etcd/server.key ：特定のディレクトリまたは crt ファイルをロードできませんでした</block>
   <block id="9df12d675c4f61381132e45173ef90d0" category="cell">Telegraf ReplicaSet ポッドは、マスターまたは etcd 用に指定されたノード上で実行することを目的としています。これらのノードのいずれかで ReplicaSet ポッドが実行されていない場合は、これらのエラーが発生します。マスター / etcd ノードに汚染があるかどうかを確認します。その場合は、 Telegraf ReplicaSet 、テレグラム af-RS に必要な忍容を追加します。たとえば、 ReplicaSet...kubectl を編集して RS テレグラムを編集し、仕様に適切な公差を追加します。次に、 ReplicaSet ポッドを再起動します。</block>
   <block id="7f213685ee85ff84e10c6c9b9c633789" category="cell">PSP/PSA環境があります。これはモニタリングオペレータに影響しますか？</block>
@@ -12668,4 +12665,5 @@
   <block id="871dd9472775ddbfdce3884fbc6130a5" category="cell">DIIコレクターを暗号化またはプライバシープロトコル（AESなど）を使用してSNMPv3を使用するように構成しましたが、「SNMPプライバシーパスワード」値が空であるため、DIIはこのデバイスと暗号化されたSNMPv3データフローをネゴシエートできません。</block>
   <block id="5fc13cc8fea1e8f6d7dfd8f19d75023f" category="cell">パフォーマンス収集が .....VF:nn、エラー: アクセスなし... で失敗しました</block>
   <block id="cda70acc46e3d1a4dc1d0f11bb28b33f" category="cell">複数の仮想ファブリックが有効になっているデバイスでSNMPv3を使用するようにDIIコレクターを設定しましたが、SNMPv3ユーザーにはVF NNの権限がありません。DIIは物理資産の部分的な検出をサポートしていません。DIIは常に特定の物理デバイス上の既存のVFのパフォーマンスデータを取得しようとするため、DIIには128個すべてのVFへのアクセスを事前に許可する必要があります。</block>
+  <block id="8ff9d3e7325b20dc214cb38b6233f6c6" category="cell">SELinuxを有効にして強制すると、TelegrafポッドがKubernetesノードの/proc/1/mountstatsファイルにアクセスできなくなる可能性があります。この制限を克服するには、agentconfigurationを編集し、runPrivileged設定を有効にします。詳細については、OpenShift の手順を参照してください。</block>
 </blocks>
