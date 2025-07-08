@@ -7,12 +7,14 @@ keywords: onboarding, new user
 = データインフラの分析情報をオンボーディング
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Data Infrastructure Insightsの使用を開始する前に、* NetApp BlueXP *ポータルにサインアップする必要があります。NetApp BlueXP  へのログインをすでにお持ちの場合は、いくつかの簡単な手順でData Infrastructure Insightsの無償トライアルを開始できます。
-
-目次：[]
 
 
 
