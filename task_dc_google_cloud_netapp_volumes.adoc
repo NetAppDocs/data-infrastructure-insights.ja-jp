@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_google_cloud_netapp_volumes.html 
-summary: Google Cloud NetApp Volumesデータコレクタの設定 
+summary: Google Cloud NetApp Volumesデータコレクターを構成します。 
 keywords: data collector, queries, create, google, cloud, volumes, 
 ---
-= NetApp Google Cloud NetApp Volumeデータコレクタ
+= Google Cloud NetApp Volumesデータコレクター
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ keywords: data collector, queries, create, google, cloud, volumes,
 
 
 [role="lead"]
-このデータコレクタは、Google NetApp Cloud Volumesクラウドプラットフォーム構成からのインベントリとパフォーマンスの収集をサポートします。このコレクタは、1つのGoogle組織内のすべてのプロジェクト内のすべてのコンピューティングリソースを検出しようとします。Data Infrastructure Insightsで検出したいGoogle組織が複数ある場合は、組織ごとにData Infrastructure Insightsコレクタを1つ導入します。
+このデータコレクタは、Google Cloud NetApp Volumes構成からのインベントリとパフォーマンスの収集をサポートします。このコレクタは、Google 組織内のすべてのプロジェクトにわたってNetAppボリュームとストレージリソースを検出します。DataData Infrastructure Insightsでモニタリングする Google 組織が複数ある場合は、組織ごとに 1 つのコレクタをデプロイしてください。
 
 
 
 == サービスアカウントの要件
 
-* の手順に従って、サービスアカウントを作成する必要がありますlink:https://cloud.google.com/iam/docs/creating-managing-service-accounts["サービスアカウントの作成/管理"]。このようなサービスアカウントは、ITS_ClientID_と呼ばれる一意のIDによって識別され、ユーザ名として使用されます。
+* の手順に従って、サービスアカウントを作成する必要がありますlink:https://cloud.google.com/iam/docs/creating-managing-service-accounts["サービスアカウントの作成/管理"]。このサービス アカウントは、_clientId_ と呼ばれる一意の ID によって識別され、ユーザー名として使用されます。
 * さらに、の手順に従ってサービスアカウントキーを作成しますlink:https://cloud.google.com/iam/docs/creating-managing-service-account-keys["サービスアカウントキーの作成/管理"]。このキーはJSONファイルとしてダウンロードでき、そのコンテンツはパスワードとして使用されます。
 * サービスアカウントのスコープは、_compute.readonly_、_monitoring.read_、および_cloud-platform_である必要があります。
 
@@ -29,7 +29,7 @@ keywords: data collector, queries, create, google, cloud, volumes,
 
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 製品説明 
 
@@ -40,7 +40,7 @@ keywords: data collector, queries, create, google, cloud, volumes,
 | [Exclude]または[Include]を選択して、GCNVアセットを場所でフィルタリングします。 | デフォルトでは、このコレクタは組織内の全世界のすべてのGCNVボリュームを検出するように設定されているため、このコレクタは除外に設定されています。 
 
 
-| GCNVの場所を除外/含める | これはデフォルトでは空であり、"Choose 'Exclude' or 'Include'オプションと組み合わせて使用されます。世界の特定の地域内の資産のみを検出したい場合は、これら2つのオプションを操作してこのコレクタの範囲を制限できます。 
+| GCNVの場所を除外/含める | デフォルトでは空になっており、「除外」または「含める」オプションと組み合わせて使用されます。特定のリージョン内のアセットのみを検出する場合は、これら 2 つのオプションを使用して、このコレクターの範囲を制限します。 
 
 
 | プロジェクト ID | 「除外する」値の値に応じて、フィルタするプロジェクト ID または検出から除外するプロジェクト ID のリスト。デフォルトリストは空です 
@@ -55,7 +55,7 @@ keywords: data collector, queries, create, google, cloud, volumes,
 
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 製品説明 
 
@@ -63,7 +63,7 @@ keywords: data collector, queries, create, google, cloud, volumes,
 | インベントリポーリング間隔（分） | デフォルトは60分です 
 
 
-| REST API呼び出しにAUプロキシを使用する | このチェックボックスをオンにすると、コレクタが存在するAUと同じプロキシが使用されます。これはデフォルトでは有効になっていません。つまり、コレクタはHTTPS API呼び出しをGoogleに直接送信しようとします。 
+| REST API呼び出しにAUプロキシを使用する | このオプションを選択すると、コレクターが、自身が属するアクイジションユニットと同じプロキシを使用します。デフォルトでは無効になっており、コレクターはHTTPS API呼び出しをGoogleに直接送信しようとします。 
 
 
 | VM をフィルタリングするキーと値を指定します | VM のキーとラベルの値に一致するキーと値でフィルタリングして、対象に含める VM （および関連するディスク）を選択するには、「 * + フィルタラベル * 」をクリックします。ラベルキーは必須です。ラベル値はオプションです。ラベル値が空の場合、 VM はラベルキーと一致するかぎりフィルタリングされます。 

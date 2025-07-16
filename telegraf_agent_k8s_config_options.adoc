@@ -2,16 +2,19 @@
 sidebar: sidebar 
 permalink: telegraf_agent_k8s_config_options.html 
 keywords: telegraf, installation, install, agent, telegraf agent, kubernetes, eks, operator, k8s, options, configuration 
-summary: NetApp Kubernetes Monitoring Operatorには、設定可能なオプションが多数あります。 
+summary: AgentConfiguration オプションを使用してNetApp Kubernetes Monitoring Operator を構成します。 
 ---
 = Kubernetes監視オペレータの設定オプション
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Kubernetes監視オペレータ"]構成はカスタマイズできます。
+そのlink:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Kubernetes監視オペレータ"] AgentConfiguration ファイルを通じて、幅広いカスタマイズオプションを提供します。リソース制限、収集間隔、プロキシ設定、許容範囲、Telegraf、kube-state-metrics、ログ収集、ワークロードマッピング、変更管理などのコンポーネント固有の設定を構成して、Kubernetes 環境の監視を最適化します。
 
 次の表に、_AgentConfiguration_ファイルに使用できるオプションを示します。
 
@@ -131,7 +134,7 @@ link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Ku
 |  | 許容範囲 | kube-state-metrics追加の許容値。 
 
 
-|  | ラベル | kube-state-metricsでキャプチャするリソースのカンマ区切りリスト例：cronjobs=[*]、daemonsets=[*]、deployments=[*]、ingresses=[*]、jobs=[*]、namespaces=[*]、nodes=[*]、persistentvolumes=[*]、pods=[*]、replicaresets=[*]、[*]、[*]、[*] 
+|  | ラベル | kube-state-metrics がラベルをキャプチャするリソースのコンマ区切りリスト +++ 例: cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*] +++ 
 
 
 | ログ |  | オペレータのログ収集とインストールをカスタマイズできる設定オプション 
@@ -200,7 +203,7 @@ link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Ku
 |  | MemRequestの略 | change-observer-watch-rsのMEM要求 
 
 
-|  | failureDeclarationIntervalMins | ワークロードの導入に失敗した場合に障害が発生したとマークされる間隔（分） 
+|  | ワークロード障害宣言間隔（秒） | ワークロードのデプロイメントが失敗した場合に失敗としてマークされるまでの間隔（秒） 
 
 
 |  | deployAggrIntervalSeconds | ワークロード導入を実行中のイベントが送信される頻度 
@@ -454,8 +457,8 @@ spec:
     # cpuRequest: '500m'
     # memRequest: '500Mi'
 
-    # # Interval in minutes after which a non-successful deployment of a workload will be marked as failed
-    # failureDeclarationIntervalMins: '30'
+    # # Interval after which a non-successful deployment of a workload will be marked as failed, in seconds
+    # workloadFailureDeclarationIntervalSeconds: '30'
 
     # # Frequency at which workload deployment in-progress events are sent
     # deployAggrIntervalSeconds: '300'

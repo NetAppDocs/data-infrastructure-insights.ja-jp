@@ -10621,9 +10621,7 @@
   <block id="c6e2ba85460afb33b2bbe0fcfd9a3568" category="paragraph"><block ref="c6e2ba85460afb33b2bbe0fcfd9a3568" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0adbbc22841794e4fddaba88c2c92a43" category="list-text">目的のイベント（重要、警告、解決済み）の「チーム」ウェブフックを選択します。</block>
   <block id="3cc4e4e22440eccabf6117795fc161eb" category="paragraph"><block ref="3cc4e4e22440eccabf6117795fc161eb" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1d292eb6751a0db171502dec84f9f7c0" category="summary">NetApp Kubernetes Monitoring Operatorには、設定可能なオプションが多数あります。</block>
   <block id="9c64a0e0a0e22cc18b7137e967889926" category="doc">Kubernetes監視オペレータの設定オプション</block>
-  <block id="f32519ffeecd98f4c4f06a7bf1c7a34c" category="paragraph"><block ref="025a80672f7feae526479c9984c435c7" category="inline-link-macro-rx"></block>構成はカスタマイズできます。</block>
   <block id="2d18be6c8402f4ca0cb26ce68adc0564" category="paragraph">次の表に、_AgentConfiguration_ファイルに使用できるオプションを示します。</block>
   <block id="b33aed8f3134996703dc39f9a7c95783" category="cell">エージェント</block>
   <block id="4e49d105e5ecfd95da78eb980f698488" category="cell">オペレータがインストールできるすべてのコンポーネントに共通の設定オプション。これらは「グローバル」オプションと見なすことができます。</block>
@@ -10688,7 +10686,6 @@
   <block id="3b720d9649ae501d73e8f8c4a7a15348" category="cell">キャプチャするリソースのカンマ区切りリスト。例：cronjobs、daemonsets、deployment、ingresses、jobs、namespace、nodes、persistentvolumes、pods、ReplicaSets、resourcequotas、services、statefulsets</block>
   <block id="d6c26478ca41a23cc9741a4e92576269" category="cell">許容範囲</block>
   <block id="c511c601aee805f46f3767063104cdd8" category="cell">kube-state-metrics追加の許容値。</block>
-  <block id="cea61529c4fbcfd86c0a3459bc229a87" category="cell">kube-state-metricsでキャプチャするリソースのカンマ区切りリスト例：cronjobs=[*]、daemonsets=[*]、deployments=[*]、ingresses=[*]、jobs=[*]、namespaces=[*]、nodes=[*]、persistentvolumes=[*]、pods=[*]、replicaresets=[*]、[*]、[*]、[*]</block>
   <block id="d795ec2d0a164433572a8d5d91b8fae0" category="cell">オペレータのログ収集とインストールをカスタマイズできる設定オプション</block>
   <block id="031104420a282e1bdb63e280c40a4938" category="cell">readFromHead</block>
   <block id="d7ff51440723c6bba696ef19f757a8af" category="cell">true / false。fluentビットがheadからログを読み取る必要があります</block>
@@ -10723,8 +10720,6 @@
   <block id="6e753299d008aca89690ad5b5c6b784f" category="cell">change-observer-watch-rsのメモリ制限</block>
   <block id="582e83d73d36aa6674624867468704da" category="cell">change-observer-watch-rsのCPU要求</block>
   <block id="d73c96f8e69fcf08ffd440cc16f573af" category="cell">change-observer-watch-rsのMEM要求</block>
-  <block id="5190879b0edfb4a53603a0ab23ab40e8" category="cell">failureDeclarationIntervalMins</block>
-  <block id="6e18e5efc4d170de4ac66b784ca443b6" category="cell">ワークロードの導入に失敗した場合に障害が発生したとマークされる間隔（分）</block>
   <block id="c055d40d7bbe856522ad8c59006f6754" category="cell">deployAggrIntervalSeconds</block>
   <block id="e06e4cc3c2b6796e0850387e7147734e" category="cell">ワークロード導入を実行中のイベントが送信される頻度</block>
   <block id="43aa9b44901fa9982cd6c7faf3f97402" category="cell">nonWorkloadAggrIntervalSeconds</block>
@@ -12473,15 +12468,10 @@
   <block id="eb693e07b3c7e38a77aa691eee254db7" category="cell">これは、kubeletが自己署名証明書を使用している場合、または指定した証明書がcertificates_Subject Alternative Name_listに&lt;kubelet_IP&gt;を含まない場合に発生します。これを解決するには<block ref="1ff2a3d734af6ebdb77c417baa3479b1" category="inline-link-macro-rx"></block>、およびset_telegraf:insecureK8sSkipVerify_to_true_を変更します。これにより、telegraf入力プラグインが検証をスキップするように設定されます。または、ユーザがkubeletを設定することもできます<block ref="9ed8afe3c99331fa3d23c13414b98aba" category="inline-link-macro-rx"></block>。kubeletは、「certificates.k8s.io」APIからの証明書要求をトリガーします。</block>
   <block id="9c9d5560c9fe980c9cfc837919c7ecfa" category="paragraph">アラートの説明にパラメータとして任意のオブジェクト属性（ストレージ名など）を追加できます。たとえば、ボリューム名とストレージ名のパラメータを次のような説明で設定できます。"High Latency for Volume：_%% relatedObject.volume.name%%_、Storage：_%% relatedObject.storage.name%%_"</block>
   <block id="782368f0cf779dae181ca1a15b5e1609" category="paragraph">任意のオブジェクト属性（ストレージ名など）をパラメータとしてWebhookに追加できます。たとえば、Webhookの説明でボリューム名とストレージ名のパラメータを次のように設定できます。"High Latency for Volume：_%%relatedObject.volume.name%%_、Storage：_%%relatedObject.storage.name%%_"</block>
-  <block id="f9bf728d80a2e93034e1980e4b769331" category="summary">Google Cloud NetApp Volumesデータコレクタの設定</block>
-  <block id="61f5a9d6ac308733fa136e57d4b5632d" category="doc">NetApp Google Cloud NetApp Volumeデータコレクタ</block>
-  <block id="31a01859ca4a7c16eaa2d78f965019b1" category="paragraph">このデータコレクタは、Google NetApp Cloud Volumesクラウドプラットフォーム構成からのインベントリとパフォーマンスの収集をサポートします。このコレクタは、1つのGoogle組織内のすべてのプロジェクト内のすべてのコンピューティングリソースを検出しようとします。Data Infrastructure Insightsで検出したいGoogle組織が複数ある場合は、組織ごとにData Infrastructure Insightsコレクタを1つ導入します。</block>
   <block id="d0e30a72147518a811af49d61e436b72" category="cell">[Exclude]または[Include]を選択して、GCNVアセットを場所でフィルタリングします。</block>
   <block id="4ffa818c022d19570d8e17b29333c422" category="cell">デフォルトでは、このコレクタは組織内の全世界のすべてのGCNVボリュームを検出するように設定されているため、このコレクタは除外に設定されています。</block>
   <block id="df737fe9add18ce2518a85be515b48fb" category="cell">GCNVの場所を除外/含める</block>
-  <block id="aeb2c618381901b42bfc96e1eaba0439" category="cell">これはデフォルトでは空であり、"Choose 'Exclude' or 'Include'オプションと組み合わせて使用されます。世界の特定の地域内の資産のみを検出したい場合は、これら2つのオプションを操作してこのコレクタの範囲を制限できます。</block>
   <block id="cfb59ac35dea35081dc8e9a9e178e6fa" category="cell">REST API呼び出しにAUプロキシを使用する</block>
-  <block id="c31db4d5c88645987121fa14f303decf" category="cell">このチェックボックスをオンにすると、コレクタが存在するAUと同じプロキシが使用されます。これはデフォルトでは有効になっていません。つまり、コレクタはHTTPS API呼び出しをGoogleに直接送信しようとします。</block>
   <block id="86cdc2548407309cf22885284404c866" category="paragraph">Webhookを使用すると、ユーザーはカスタマイズされたWebhookチャネルを使用して、クリティカルまたは警告のアラート通知をさまざまなアプリケーションに送信できます。</block>
   <block id="fc2d88a1f6b61e7bd83c4e85a527c903" category="paragraph">Webhook<block ref="2990f1f56161b3387a3b4aed372cd205" category="inline-link-macro-rx"></block></block>
   <block id="a2a31fbada6144e8ed1aea34738b3286" category="paragraph">Webhook for Webhook for Webhook for Webhook for <block ref="fd47f99f71f4060a45930a1b7d2d1fd6" category="inline-link-macro-rx"></block>Webhook  for Webhook <block ref="119cd804e167819a5b1cbe06f835cd07" category="inline-link-macro-rx"></block> for <block ref="9ec366bafa5f53c82668f1616a12e6a8" category="inline-link-macro-rx"></block></block>
@@ -12666,4 +12656,15 @@
   <block id="5fc13cc8fea1e8f6d7dfd8f19d75023f" category="cell">パフォーマンス収集が .....VF:nn、エラー: アクセスなし... で失敗しました</block>
   <block id="cda70acc46e3d1a4dc1d0f11bb28b33f" category="cell">複数の仮想ファブリックが有効になっているデバイスでSNMPv3を使用するようにDIIコレクターを設定しましたが、SNMPv3ユーザーにはVF NNの権限がありません。DIIは物理資産の部分的な検出をサポートしていません。DIIは常に特定の物理デバイス上の既存のVFのパフォーマンスデータを取得しようとするため、DIIには128個すべてのVFへのアクセスを事前に許可する必要があります。</block>
   <block id="8ff9d3e7325b20dc214cb38b6233f6c6" category="cell">SELinuxを有効にして強制すると、TelegrafポッドがKubernetesノードの/proc/1/mountstatsファイルにアクセスできなくなる可能性があります。この制限を克服するには、agentconfigurationを編集し、runPrivileged設定を有効にします。詳細については、OpenShift の手順を参照してください。</block>
+  <block id="a51d5815fff9d493e0bde769c3ac52cd" category="summary">Google Cloud NetApp Volumesデータコレクターを構成します。</block>
+  <block id="a003df7b52c5682e8dd7ee12e523a2c8" category="doc">Google Cloud NetApp Volumesデータコレクター</block>
+  <block id="17dbbe1b03933e008635798c32e51898" category="paragraph">このデータコレクタは、Google Cloud NetApp Volumes構成からのインベントリとパフォーマンスの収集をサポートします。このコレクタは、Google 組織内のすべてのプロジェクトにわたってNetAppボリュームとストレージリソースを検出します。DataData Infrastructure Insightsでモニタリングする Google 組織が複数ある場合は、組織ごとに 1 つのコレクタをデプロイしてください。</block>
+  <block id="492f865b5fade01a28fef8824749466a" category="list-text">の手順に従って、サービスアカウントを作成する必要があります<block ref="c28b074b5309c5497b50c55bf7b3a88a" category="inline-link-macro-rx"></block>。このサービス アカウントは、_clientId_ と呼ばれる一意の ID によって識別され、ユーザー名として使用されます。</block>
+  <block id="44690d418c76e0ca92d23ed5623ea33b" category="cell">デフォルトでは空になっており、「除外」または「含める」オプションと組み合わせて使用されます。特定のリージョン内のアセットのみを検出する場合は、これら 2 つのオプションを使用して、このコレクターの範囲を制限します。</block>
+  <block id="c3fd7f4eb7ebff0a7ad57fe275b56834" category="cell">このオプションを選択すると、コレクターが、自身が属するアクイジションユニットと同じプロキシを使用します。デフォルトでは無効になっており、コレクターはHTTPS API呼び出しをGoogleに直接送信しようとします。</block>
+  <block id="ae4768c261eca8a6c88e3f5101e586e5" category="summary">AgentConfiguration オプションを使用してNetApp Kubernetes Monitoring Operator を構成します。</block>
+  <block id="4b6ede77804c1986eba28cc32fdecda4" category="paragraph">その<block ref="025a80672f7feae526479c9984c435c7" category="inline-link-macro-rx"></block> AgentConfiguration ファイルを通じて、幅広いカスタマイズオプションを提供します。リソース制限、収集間隔、プロキシ設定、許容範囲、Telegraf、kube-state-metrics、ログ収集、ワークロードマッピング、変更管理などのコンポーネント固有の設定を構成して、Kubernetes 環境の監視を最適化します。</block>
+  <block id="c84711fe6ad5fa23070462b2086412e2" category="cell">kube-state-metrics がラベルをキャプチャするリソースのコンマ区切りリスト +++ 例: cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*] +++</block>
+  <block id="f7b8b6cbce2f95ef7109d41adce08b69" category="cell">ワークロード障害宣言間隔（秒）</block>
+  <block id="02c3ccd1d51babc54da2759d79e61c5c" category="cell">ワークロードのデプロイメントが失敗した場合に失敗としてマークされるまでの間隔（秒）</block>
 </blocks>
