@@ -12667,4 +12667,6 @@
   <block id="c84711fe6ad5fa23070462b2086412e2" category="cell">kube-state-metrics がラベルをキャプチャするリソースのコンマ区切りリスト +++ 例: cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*] +++</block>
   <block id="f7b8b6cbce2f95ef7109d41adce08b69" category="cell">ワークロード障害宣言間隔（秒）</block>
   <block id="02c3ccd1d51babc54da2759d79e61c5c" category="cell">ワークロードのデプロイメントが失敗した場合に失敗としてマークされるまでの間隔（秒）</block>
+  <block id="8edfed76354af11279c58c2d91948eda" category="cell">fluent-bit-containerLogPath</block>
+  <block id="3150c73f1d1522f3b831f0d591077194" category="cell">デフォルトでは、Fluentbit DaemonSet は Kubernetes コンテナログにアクセス/読み取りするために、/var/log および /var/lib/docker/containers ホストパスをマウントします。Kubernetesがコンテナログをデフォルト以外の場所に配置するように設定されている場合、このオプションを使用して Fluentbit DaemonSet を変更し、デフォルト以外のパスをマウントするようにします。</block>
 </blocks>
