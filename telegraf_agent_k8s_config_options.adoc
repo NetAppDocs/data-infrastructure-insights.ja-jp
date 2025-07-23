@@ -14,7 +14,7 @@ summary: AgentConfiguration オプションを使用してNetApp Kubernetes Moni
 
 
 [role="lead"]
-そのlink:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Kubernetes監視オペレータ"] AgentConfiguration ファイルを通じて、幅広いカスタマイズオプションを提供します。リソース制限、収集間隔、プロキシ設定、許容範囲、Telegraf、kube-state-metrics、ログ収集、ワークロードマッピング、変更管理などのコンポーネント固有の設定を構成して、Kubernetes 環境の監視を最適化します。
+そのlink:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Kubernetes監視オペレータ"] AgentConfiguration ファイルを通じて、幅広いカスタマイズオプションが提供されます。リソース制限、収集間隔、プロキシ設定、許容値、コンポーネント固有の設定を構成して、Kubernetes 環境の監視を最適化できます。これらのオプションを使用して、Telegraf、kube-state-metrics、ログ収集、ワークロードマッピング、変更管理、その他の監視コンポーネントをカスタマイズできます。
 
 次の表に、_AgentConfiguration_ファイルに使用できるオプションを示します。
 
@@ -26,13 +26,13 @@ summary: AgentConfiguration オプションを使用してNetApp Kubernetes Moni
 | エージェント |  | オペレータがインストールできるすべてのコンポーネントに共通の設定オプション。これらは「グローバル」オプションと見なすことができます。 
 
 
-|  | dockerrepo | Data Infrastructure Insights Dockerリポジトリと比較して、お客様のプライベートDockerリポジトリからイメージを取得するためのdockerRepoオーバーライド。デフォルトはData Infrastructure Insights Dockerリポジトリ 
+|  | dockerrepo | Data Infrastructure Insights Dockerリポジトリではなく、お客様のプライベートDockerリポジトリからイメージをプルするためのdockerRepoオーバーライド。デフォルトはData Infrastructure Insights Dockerリポジトリです。 
 
 
-|  | dockerImagePullSecretの略 | オプション:顧客のプライベートリポジトリのシークレット 
+|  | dockerImagePullSecretの略 | オプション: 顧客のプライベート リポジトリのシークレット。 
 
 
-|  | クラスタ名 | すべてのお客様のクラスタ間でクラスタを一意に識別するフリーテキストフィールド。これは、Data Infrastructure Insightsのテナント全体で一意である必要があります。デフォルトでは、UIで[Cluster Name]フィールドに入力します 
+|  | クラスタ名 | すべての顧客クラスターの中でクラスターを一意に識別するフリーテキストフィールドです。DataData Infrastructure Insightsテナント全体で一意である必要があります。デフォルトは、顧客がUIの「クラスター名」フィールドに入力した値です。 
 
 
 |  | プロキシ形式:プロキシ:サーバー:ポート:ユーザー名:パスワード: noProxy:isTelegrafProxyEnabled:isAuProxyEnabled:isFluentbitProxyEnabled:isCollectorProxyEnabled: | プロキシを設定する場合はオプションです。これは通常、顧客の法人代理店です。 
@@ -107,7 +107,7 @@ summary: AgentConfiguration オプションを使用してNetApp Kubernetes Moni
 |  | skipProcessorsAfterAggregators | を参照し link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf設定ドキュメント"] 
 
 
-|  | 保護なし | えっこれlink:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["既知のTelegraf問題"]。setting_unprotected_は、Kubernetes Monitoring Operatorにフラグを指定してTelegrafを実行するように指示し `--unprotected`ます。 
+|  | 保護なし | これを参照してください link:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["既知のTelegraf問題"]。 `--unprotected`フラグ。 
 
 
 |  | insecureK8sSkipVerify | IP SANが不足しているためにtelegrafで証明書を検証できない場合は、検証スキップを有効にしてみてください。 
@@ -209,10 +209,10 @@ summary: AgentConfiguration オプションを使用してNetApp Kubernetes Moni
 |  | ワークロード障害宣言間隔（秒） | ワークロードのデプロイメントが失敗した場合に失敗としてマークされるまでの間隔（秒） 
 
 
-|  | deployAggrIntervalSeconds | ワークロード導入を実行中のイベントが送信される頻度 
+|  | ワークロードデプロイアグリゲート間隔（秒） | ワークロードのデプロイメントを組み合わせて送信する頻度（秒単位） 
 
 
-|  | nonWorkloadAggrIntervalSeconds | ワークロード以外の導入環境を組み合わせて送信する頻度 
+|  | 非ワークロードデプロイアグリゲート間隔秒数 | 非ワークロードデプロイメントを組み合わせて送信する頻度（秒単位） 
 
 
 |  | termsToRedact | 値が編集される環境名およびデータマップで使用される一連の正規表現例：「pwd」、「password」、「token」、「apiKey」、「api-key」、「jwt」 
@@ -468,11 +468,11 @@ spec:
     # # Interval after which a non-successful deployment of a workload will be marked as failed, in seconds
     # workloadFailureDeclarationIntervalSeconds: '30'
 
-    # # Frequency at which workload deployment in-progress events are sent
-    # deployAggrIntervalSeconds: '300'
+    # # Frequency at which workload deployments are combined and sent, in seconds
+    # workloadDeployAggrIntervalSeconds: '300'
 
-    # # Frequency at which non-workload deployments are combined and sent
-    # nonWorkloadAggrIntervalSeconds: '15'
+    # # Frequency at which non-workload deployments are combined and sent, in seconds
+    # nonWorkloadDeployAggrIntervalSeconds: '15'
 
     # # A set of regular expressions used in env names and data maps whose value will be redacted
     # termsToRedact: '"pwd", "password", "token", "apikey", "api-key", "api_key", "jwt", "accesskey", "access_key", "access-key", "ca-file", "key-file", "cert", "cafile", "keyfile", "tls", "crt", "salt", ".dockerconfigjson", "auth", "secret"'

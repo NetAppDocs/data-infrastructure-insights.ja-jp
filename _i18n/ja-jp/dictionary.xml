@@ -10626,11 +10626,8 @@
   <block id="b33aed8f3134996703dc39f9a7c95783" category="cell">エージェント</block>
   <block id="4e49d105e5ecfd95da78eb980f698488" category="cell">オペレータがインストールできるすべてのコンポーネントに共通の設定オプション。これらは「グローバル」オプションと見なすことができます。</block>
   <block id="286bec770910c4da609323e21222e283" category="cell">dockerrepo</block>
-  <block id="55f37f5127b4085cc0881e89df336196" category="cell">Data Infrastructure Insights Dockerリポジトリと比較して、お客様のプライベートDockerリポジトリからイメージを取得するためのdockerRepoオーバーライド。デフォルトはData Infrastructure Insights Dockerリポジトリ</block>
   <block id="994be3a18bf7e0a16ab2be2d5c1643ae" category="cell">dockerImagePullSecretの略</block>
-  <block id="9f033a5b208feb9ef67ab1def3051525" category="cell">オプション:顧客のプライベートリポジトリのシークレット</block>
   <block id="343d28c140c3f5ce20a1ac3f8f7dae2c" category="cell">クラスタ名</block>
-  <block id="5a550f6f445193e3c7e81200a2c9d8de" category="cell">すべてのお客様のクラスタ間でクラスタを一意に識別するフリーテキストフィールド。これは、Data Infrastructure Insightsのテナント全体で一意である必要があります。デフォルトでは、UIで[Cluster Name]フィールドに入力します</block>
   <block id="5c7af4a6b686285084e62f255503c141" category="cell">プロキシ形式:プロキシ:サーバー:ポート:ユーザー名:パスワード: noProxy:isTelegrafProxyEnabled:isAuProxyEnabled:isFluentbitProxyEnabled:isCollectorProxyEnabled:</block>
   <block id="f8ac74d8a3668ddf89efeb8e806ca908" category="cell">プロキシを設定する場合はオプションです。これは通常、顧客の法人代理店です。</block>
   <block id="0c8011c6947aae43789eb8972c306e85" category="cell">オペレータのTelegrafインストールをカスタマイズできる設定オプション</block>
@@ -10720,10 +10717,6 @@
   <block id="6e753299d008aca89690ad5b5c6b784f" category="cell">change-observer-watch-rsのメモリ制限</block>
   <block id="582e83d73d36aa6674624867468704da" category="cell">change-observer-watch-rsのCPU要求</block>
   <block id="d73c96f8e69fcf08ffd440cc16f573af" category="cell">change-observer-watch-rsのMEM要求</block>
-  <block id="c055d40d7bbe856522ad8c59006f6754" category="cell">deployAggrIntervalSeconds</block>
-  <block id="e06e4cc3c2b6796e0850387e7147734e" category="cell">ワークロード導入を実行中のイベントが送信される頻度</block>
-  <block id="43aa9b44901fa9982cd6c7faf3f97402" category="cell">nonWorkloadAggrIntervalSeconds</block>
-  <block id="cff422cbad1df823699a6830f754d451" category="cell">ワークロード以外の導入環境を組み合わせて送信する頻度</block>
   <block id="6d53bc2f7711e2d9a24631defb23b18f" category="cell">termsToRedact</block>
   <block id="532aa006f97c495d1734618405645779" category="cell">値が編集される環境名およびデータマップで使用される一連の正規表現例：「pwd」、「password」、「token」、「apiKey」、「api-key」、「jwt」</block>
   <block id="44011a6b8af68cc46d2d0dfb669fd887" category="cell">AdditionalKindsToWatch</block>
@@ -11290,7 +11283,6 @@
   <block id="ca351e1a429ee72dbdb2061c22743ef6" category="list-text">[Observability]&gt;[Explore]-&gt;[+New Metric Query]*に移動します。</block>
   <block id="5e7f24385025eba3461014d3d964455b" category="paragraph">非アクティブなデバイスを削除するには、削除するデバイスを選択し、* Bulk Actions *ドロップダウンで_Delete Inactive Devices_を選択します。</block>
   <block id="72a442c57900f55848aa4acb856a507d" category="sidebar">非アクティブなデバイスの識別</block>
-  <block id="2f461803a8b3a27284482a32459a1078" category="cell">えっこれ<block ref="0dcd3ea27696029fecb8ccd7e247f633" category="inline-link-macro-rx"></block>。setting_unprotected_は、Kubernetes Monitoring Operatorにフラグを指定してTelegrafを実行するように指示し<block ref="3a41393afb053a415e6dc30cf704d899" prefix=" " category="inline-code"></block>ます。</block>
   <block id="0860569a69c3584507ee09f4be585418" category="cell">insecureK8sSkipVerify</block>
   <block id="3008cd3125cccc003fa13335717e556e" category="cell">IP SANが不足しているためにtelegrafで証明書を検証できない場合は、検証スキップを有効にしてみてください。</block>
   <block id="9e43104f0687bd3a308759c5411641d7" category="paragraph"><block ref="9e43104f0687bd3a308759c5411641d7" category="inline-link-macro-rx"></block></block>
@@ -12663,10 +12655,20 @@
   <block id="44690d418c76e0ca92d23ed5623ea33b" category="cell">デフォルトでは空になっており、「除外」または「含める」オプションと組み合わせて使用されます。特定のリージョン内のアセットのみを検出する場合は、これら 2 つのオプションを使用して、このコレクターの範囲を制限します。</block>
   <block id="c3fd7f4eb7ebff0a7ad57fe275b56834" category="cell">このオプションを選択すると、コレクターが、自身が属するアクイジションユニットと同じプロキシを使用します。デフォルトでは無効になっており、コレクターはHTTPS API呼び出しをGoogleに直接送信しようとします。</block>
   <block id="ae4768c261eca8a6c88e3f5101e586e5" category="summary">AgentConfiguration オプションを使用してNetApp Kubernetes Monitoring Operator を構成します。</block>
-  <block id="4b6ede77804c1986eba28cc32fdecda4" category="paragraph">その<block ref="025a80672f7feae526479c9984c435c7" category="inline-link-macro-rx"></block> AgentConfiguration ファイルを通じて、幅広いカスタマイズオプションを提供します。リソース制限、収集間隔、プロキシ設定、許容範囲、Telegraf、kube-state-metrics、ログ収集、ワークロードマッピング、変更管理などのコンポーネント固有の設定を構成して、Kubernetes 環境の監視を最適化します。</block>
   <block id="c84711fe6ad5fa23070462b2086412e2" category="cell">kube-state-metrics がラベルをキャプチャするリソースのコンマ区切りリスト +++ 例: cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*] +++</block>
   <block id="f7b8b6cbce2f95ef7109d41adce08b69" category="cell">ワークロード障害宣言間隔（秒）</block>
   <block id="02c3ccd1d51babc54da2759d79e61c5c" category="cell">ワークロードのデプロイメントが失敗した場合に失敗としてマークされるまでの間隔（秒）</block>
   <block id="8edfed76354af11279c58c2d91948eda" category="cell">fluent-bit-containerLogPath</block>
   <block id="3150c73f1d1522f3b831f0d591077194" category="cell">デフォルトでは、Fluentbit DaemonSet は Kubernetes コンテナログにアクセス/読み取りするために、/var/log および /var/lib/docker/containers ホストパスをマウントします。Kubernetesがコンテナログをデフォルト以外の場所に配置するように設定されている場合、このオプションを使用して Fluentbit DaemonSet を変更し、デフォルト以外のパスをマウントするようにします。</block>
+  <block id="7e5bd63d855501c5e08449ea5b593ee7" category="summary">インフラの健全性を監視する</block>
+  <block id="48f51aa9a5737857bbd298bfb874281e" category="doc">インフラストラクチャの健全性を監視する</block>
+  <block id="a2c6fd0b23854404c386430346919db8" category="paragraph">その<block ref="025a80672f7feae526479c9984c435c7" category="inline-link-macro-rx"></block> AgentConfiguration ファイルを通じて、幅広いカスタマイズオプションが提供されます。リソース制限、収集間隔、プロキシ設定、許容値、コンポーネント固有の設定を構成して、Kubernetes 環境の監視を最適化できます。これらのオプションを使用して、Telegraf、kube-state-metrics、ログ収集、ワークロードマッピング、変更管理、その他の監視コンポーネントをカスタマイズできます。</block>
+  <block id="ea55ba51f0b69383ec5bb89cabada638" category="cell">Data Infrastructure Insights Dockerリポジトリではなく、お客様のプライベートDockerリポジトリからイメージをプルするためのdockerRepoオーバーライド。デフォルトはData Infrastructure Insights Dockerリポジトリです。</block>
+  <block id="8e8bb119221ff93e3f93bea9ae89444f" category="cell">オプション: 顧客のプライベート リポジトリのシークレット。</block>
+  <block id="82b5c50bc4616a08a16b907f9dd29573" category="cell">すべての顧客クラスターの中でクラスターを一意に識別するフリーテキストフィールドです。DataData Infrastructure Insightsテナント全体で一意である必要があります。デフォルトは、顧客がUIの「クラスター名」フィールドに入力した値です。</block>
+  <block id="d466d69e5a5f62e5d6773f7d399fe086" category="cell">これを参照してください <block ref="0dcd3ea27696029fecb8ccd7e247f633" category="inline-link-macro-rx"></block>。<block ref="3a41393afb053a415e6dc30cf704d899" prefix=" " category="inline-code"></block>フラグ。</block>
+  <block id="fded60399ef22b3b04bd3856d344233b" category="cell">ワークロードデプロイアグリゲート間隔（秒）</block>
+  <block id="f5d43bfb3eaf806884e4936fc4453865" category="cell">ワークロードのデプロイメントを組み合わせて送信する頻度（秒単位）</block>
+  <block id="fb937d63289578595fb05fc626554661" category="cell">非ワークロードデプロイアグリゲート間隔秒数</block>
+  <block id="e4685d20c866cca50df5bea5e4230497" category="cell">非ワークロードデプロイメントを組み合わせて送信する頻度（秒単位）</block>
 </blocks>
