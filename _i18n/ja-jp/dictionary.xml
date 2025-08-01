@@ -1857,7 +1857,6 @@
   <block id="dcfc2d1a305cec73fa5f84fa3a0ed89c" category="paragraph">Data Infrastructure Insightsの無償トライアルが終了間近になると、バナーが表示されます。そのバナー内に_View Subscription_linkがあり、* Admin -&gt; Subscription *ページが開きます。管理者以外のユーザにはバナーが表示されますが、サブスクリプションページに移動することはできません。</block>
   <block id="14e0941a34fd8121073e220481ffa66f" category="admonition">Data Infrastructure Insightsの評価期間が4日以内に終了するように設定されていて、試用期間をさらに30日間延長できます。トライアルを延長できるのは 1 回だけです。トライアルの期限が切れている場合は延長できません。</block>
   <block id="de41af8028b5287cc6d65bb0e73cae11" category="section-title">AWS Marketplaceで試用</block>
-  <block id="c66bd552dea63071ad19e124c869ab2e" category="paragraph">AWS Marketplaceの無償トライアルを延長することはできません。試用期間中はいつでも、* Admin -&gt; Subscription *ページからData Infrastructure Insights Basic Editionサブスクリプションにダウングレードしたり、Data Infrastructure Insightsの有料サブスクリプションに変更したりできます。</block>
   <block id="03742c91392961db83c5540550a3500a" category="section-title">トライアル期間が終了した場合はどうなりますか？</block>
   <block id="55b44e6cb866667b35e33325e5f2b246" category="paragraph">無償トライアルの有効期限が切れていて、Data Infrastructure Insightsにまだサブスクライブしていない場合は、サブスクライブするまで機能が制限されます。データの取り込みが中止される場合があり、数週間後にデータ保持ポリシーに従ってデータが削除されます。</block>
   <block id="35b65825e5ac5124cb47e8b94e7e203a" category="paragraph">Data Infrastructure Insightsのサブスクリプションをお持ちで、そのサブスクリプションの有効期限が切れている場合は、サブスクリプションを更新するために5日間の猶予期間が与えられます。Data Infrastructure Insightsのすべての機能は、この猶予期間中もアクティブなままです。</block>
@@ -12671,4 +12670,5 @@
   <block id="f5d43bfb3eaf806884e4936fc4453865" category="cell">ワークロードのデプロイメントを組み合わせて送信する頻度（秒単位）</block>
   <block id="fb937d63289578595fb05fc626554661" category="cell">非ワークロードデプロイアグリゲート間隔秒数</block>
   <block id="e4685d20c866cca50df5bea5e4230497" category="cell">非ワークロードデプロイメントを組み合わせて送信する頻度（秒単位）</block>
+  <block id="1cd8d8ba87dcbd642231ac1e1fb52f76" category="paragraph">AWS Marketplace の無料トライアルは延長できません。</block>
 </blocks>

@@ -8,6 +8,9 @@ summary: Kubernetes Monitoring Operatorは、Data Infrastructure Insightsで使�
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -92,7 +95,7 @@ cosign copy <DII container registry>/netapp-monitoring:<image version> <private 
 
 既存のOperatorにAgentConfigurationが存在するかどうかを確認します（ネームスペースがdefault_netapp-monitoring_でない場合は、適切なネームスペースに置き換えてください）。
 
- kubectl -n netapp-monitoring get agentconfiguration netapp-monitoring-configuration
+ kubectl -n netapp-monitoring get agentconfiguration netapp-ci-monitoring-configuration
 AgentConfigurationが存在する場合：
 
 * <<installing-the-kubernetes-monitoring-operator,インストール>>既存の演算子の上にある最新の演算子。
@@ -325,8 +328,8 @@ Kubernetes Monitoring Operatorのシークレットをクラスタ全体で表�
 
 [listing]
 ----
- ClusterRole/netapp-ci-<namespace>-agent-secret-clusterrole
- ClusterRoleBinding/netapp-ci-<namespace>-agent-secret-clusterrolebinding
+ ClusterRole/netapp-ci<namespace>-agent-secret
+ ClusterRoleBinding/netapp-ci<namespace>-agent-secret
 ----
 アップグレードの場合は、クラスタからリソースも削除します。
 
@@ -334,11 +337,12 @@ Kubernetes Monitoring Operatorのシークレットをクラスタ全体で表�
 ----
  kubectl delete ClusterRole/netapp-ci-<namespace>-agent-secret-clusterrole
  kubectl delete ClusterRoleBinding/netapp-ci-<namespace>-agent-secret-clusterrolebinding
+
 ----
 変更分析が有効になっている場合は、_AgentConfiguration_or_operator -config.yaml_を変更して、変更管理セクションのコメントを解除し、変更管理セクションの下に_kindsToIgnoreFromWatch：'"secrets"'_を含めます。この行の一重引用符と二重引用符の存在と位置に注意してください。
 
 ....
-# change-management:
+change-management:
   ...
   # # A comma separated list of kinds to ignore from watching from the default set of kinds watched by the collector
   # # Each kind will have to be prefixed by its apigroup
