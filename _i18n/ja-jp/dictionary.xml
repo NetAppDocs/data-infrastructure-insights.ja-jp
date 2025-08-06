@@ -5930,8 +5930,6 @@
   <block id="eff16f7e2ed55dec2fc30b6481ebf593" category="paragraph">MetroClusterの推奨事項は次のとおりです。</block>
   <block id="65b46bd8eed280f6feefa47f4a74d302" category="list-text">2つのデータコレクタをソースSVMに、別のデータコレクタをデスティネーションSVMに接続します。</block>
   <block id="d5d55b52a220ca4d14feac2aa8b83d23" category="list-text">データコレクタは、_Cluster IP_.によって接続する必要があります。</block>
-  <block id="c2e2e688fedcc6b98883e05a15afc9b8" category="list-text">あるデータコレクタを実行する必要がある時点であれば、別のデータコレクタでエラーが発生します。</block>
-  <block id="34d88af94446d0d86575e402898fc1b0" category="list-text">データコレクタがError状態からRunning状態に移行するまでに最大2分かかります。</block>
   <block id="f0240b95ecfe16d637a84130b5ed57d9" category="section-title">サービスポリシー</block>
   <block id="4cb8e0d8b1d299b402fd5ddce7d39cd5" category="paragraph">ONTAP *バージョン9.9.1以降*でサービスポリシーを使用している場合、データソースコレクタに接続するには、データservice_data-nfs_、および/または_data-cifs_とともに_data-fpolicy-client_serviceが必要です。</block>
   <block id="ee22588534e4e3b699a85e968f56f4a7" category="paragraph">9.6.1より前のバージョンのONTAP では、_data -fpolicy-client_need not be set」を実行します。</block>
@@ -12344,8 +12342,6 @@
   <block id="1b0825e538a70e8323fac1cbfe230ee5" category="paragraph">注:カスタムユーザーのすべての機能権限に使用する1つのロールを作成できます。既存のユーザが存在する場合は、まず次のコマンドを使用して既存のユーザとロールを削除します。</block>
   <block id="91f83541442d1c49aaf40212bccffad1" category="paragraph">注:カスタムユーザーのすべての機能権限に使用する1つのロールを作成できます。既存のユーザが存在する場合は、まず次のコマンドを使用して既存のユーザとロールを削除します。</block>
   <block id="858faeb682f19ff16f83d24c86cb97f7" category="cell">クラスタ IP を介して追加する場合に SVM / クラスタにアクセスするためのユーザ名。オプションは 1 です。cluster-admin 2.'csuser' 3.csuser と同様のロールを持つ ad-user 。SVM IPを使用して追加する場合のオプションは次のとおりです。4.vsadmin 5.'csuser' 6.csuser と同様のロールを持つ ad-username 。</block>
-  <block id="0851edbfbb1a0406acbc79df15296b3f" category="paragraph">現在「実行中」のSVMのデータコレクタには_running_と表示されます。現在「停止」しているSVMのデータコレクタには_Error_と表示されます。</block>
-  <block id="046c8e391630ab49d75409e270a4f4b6" category="list-text">スイッチオーバーが発生すると、データコレクタの状態が「実行中」から「エラー」に変わり、その逆も同様です。</block>
   <block id="7a69a2fce9a9acb9c8a84936863c1330" category="paragraph">コレクタの一時停止中にONTAPに新しいボリュームなどが作成された場合、ワークロードセキュリティはデータを収集せず、それらのボリュームなどはダッシュボードやテーブルに反映されません。</block>
   <block id="0d55775dbf06cf5596fe0f5c3363f19a" category="list-text">スナップショットのパージは、一時停止中のコレクタに設定されている設定に従って実行されません。</block>
   <block id="f8b4c5607366d38cf806b0860c9cc5e4" category="list-text">ONTAP ARPなどのEMSイベントは、一時停止中のコレクタでは処理されません。これは、ONTAPがランサムウェア攻撃を特定した場合、データインフラ分析情報ワークロードセキュリティはそのイベントを取得できないことを意味します。</block>
@@ -12671,4 +12667,8 @@
   <block id="fb937d63289578595fb05fc626554661" category="cell">非ワークロードデプロイアグリゲート間隔秒数</block>
   <block id="e4685d20c866cca50df5bea5e4230497" category="cell">非ワークロードデプロイメントを組み合わせて送信する頻度（秒単位）</block>
   <block id="1cd8d8ba87dcbd642231ac1e1fb52f76" category="paragraph">AWS Marketplace の無料トライアルは延長できません。</block>
+  <block id="f9140e559462604832a886e4eb558360" category="list-text">どの時点でも、1 つのデータ コレクターが実行中であり、もう 1 つは [停止] として表示されます。</block>
+  <block id="a2c39bece4ce05e23c13d7dc078d390f" category="paragraph">現在実行中の SVM のデータ コレクターは、_実行中_ と表示されます。現在「停止」している SVM のデータ コレクターは、_Stopped_ として表示されます。</block>
+  <block id="e02fc5a08fc17a2cc71f90cc044645af" category="list-text">切り替えが発生するたびに、データ コレクターの状態は「実行中」から「停止中」に変わり、その逆も同様になります。</block>
+  <block id="f2d8284860e834b1803b72a789ffeb84" category="list-text">データ コレクターが _停止_ 状態から _実行_ 状態に移行するまで最大 2 分かかります。</block>
 </blocks>
