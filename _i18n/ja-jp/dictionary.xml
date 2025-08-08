@@ -12655,8 +12655,6 @@
   <block id="02c3ccd1d51babc54da2759d79e61c5c" category="cell">ワークロードのデプロイメントが失敗した場合に失敗としてマークされるまでの間隔（秒）</block>
   <block id="8edfed76354af11279c58c2d91948eda" category="cell">fluent-bit-containerLogPath</block>
   <block id="3150c73f1d1522f3b831f0d591077194" category="cell">デフォルトでは、Fluentbit DaemonSet は Kubernetes コンテナログにアクセス/読み取りするために、/var/log および /var/lib/docker/containers ホストパスをマウントします。Kubernetesがコンテナログをデフォルト以外の場所に配置するように設定されている場合、このオプションを使用して Fluentbit DaemonSet を変更し、デフォルト以外のパスをマウントするようにします。</block>
-  <block id="7e5bd63d855501c5e08449ea5b593ee7" category="summary">インフラの健全性を監視する</block>
-  <block id="48f51aa9a5737857bbd298bfb874281e" category="doc">インフラストラクチャの健全性を監視する</block>
   <block id="a2c6fd0b23854404c386430346919db8" category="paragraph">その<block ref="025a80672f7feae526479c9984c435c7" category="inline-link-macro-rx"></block> AgentConfiguration ファイルを通じて、幅広いカスタマイズオプションが提供されます。リソース制限、収集間隔、プロキシ設定、許容値、コンポーネント固有の設定を構成して、Kubernetes 環境の監視を最適化できます。これらのオプションを使用して、Telegraf、kube-state-metrics、ログ収集、ワークロードマッピング、変更管理、その他の監視コンポーネントをカスタマイズできます。</block>
   <block id="ea55ba51f0b69383ec5bb89cabada638" category="cell">Data Infrastructure Insights Dockerリポジトリではなく、お客様のプライベートDockerリポジトリからイメージをプルするためのdockerRepoオーバーライド。デフォルトはData Infrastructure Insights Dockerリポジトリです。</block>
   <block id="8e8bb119221ff93e3f93bea9ae89444f" category="cell">オプション: 顧客のプライベート リポジトリのシークレット。</block>
@@ -12667,8 +12665,9 @@
   <block id="fb937d63289578595fb05fc626554661" category="cell">非ワークロードデプロイアグリゲート間隔秒数</block>
   <block id="e4685d20c866cca50df5bea5e4230497" category="cell">非ワークロードデプロイメントを組み合わせて送信する頻度（秒単位）</block>
   <block id="1cd8d8ba87dcbd642231ac1e1fb52f76" category="paragraph">AWS Marketplace の無料トライアルは延長できません。</block>
-  <block id="f9140e559462604832a886e4eb558360" category="list-text">どの時点でも、1 つのデータ コレクターが実行中であり、もう 1 つは [停止] として表示されます。</block>
-  <block id="a2c39bece4ce05e23c13d7dc078d390f" category="paragraph">現在実行中の SVM のデータ コレクターは、_実行中_ と表示されます。現在「停止」している SVM のデータ コレクターは、_Stopped_ として表示されます。</block>
-  <block id="e02fc5a08fc17a2cc71f90cc044645af" category="list-text">切り替えが発生するたびに、データ コレクターの状態は「実行中」から「停止中」に変わり、その逆も同様になります。</block>
   <block id="f2d8284860e834b1803b72a789ffeb84" category="list-text">データ コレクターが _停止_ 状態から _実行_ 状態に移行するまで最大 2 分かかります。</block>
+  <block id="da3fe25b9ad7a2bbb8f75a52d2d39828" category="summary">インフラストラクチャの健全性を監視する</block>
+  <block id="0513a990ff8b7eb9d4d9e530e812b450" category="paragraph">ONTAP SVM データ コレクターを使用すると、Workload Security はNetApp ONTAPストレージ仮想マシン (SVM) 上のファイルおよびユーザー アクセス アクティビティを監視できます。このガイドでは、 ONTAP環境の包括的なセキュリティ監視を実現するための SVM データ コレクターの前提条件、構成、管理について説明します。</block>
+  <block id="57da797adb74a055edb3de9c7e734b65" category="list-text">いつでも、現在「実行中」の SVM のデータ コレクターは「_実行中_」と表示されます。現在「停止」している SVM のデータ コレクターは、_Stopped_ として表示されます。</block>
+  <block id="61dcd000a72340c1c72d4c7a96c2ec90" category="list-text">切り替えが発生するたびに、データ コレクターの状態は _実行中_ から _停止_ に変わり、その逆も同様になります。</block>
 </blocks>

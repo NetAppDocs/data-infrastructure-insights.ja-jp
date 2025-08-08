@@ -7,6 +7,10 @@ summary: Kubernetes向けデータコレクタ
 = データコレクタ：Kubernetes
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
