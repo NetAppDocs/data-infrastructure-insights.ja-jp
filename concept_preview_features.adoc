@@ -13,12 +13,3 @@ keywords: coming soon, preview,
 Data Infrastructure Insightsでは、_ Preview_の方法で新機能に注目しています。プレビュー機能は、一部の環境または容量に限りがあります。
 
 これらの機能の1つまたは複数のプレビューをご希望の場合は、にお問い合わせくださいlink:https://bluexp.netapp.com/contact-cds["ネットアップの営業チーム"]。
-
-|===
-
-
-| * 特徴 * | * 概要 * 
-
-
-| ONTAP コールドストレージを再利用します | コールド容量を使用するONTAP ボリュームワークロードやその他の関連指標を視覚化できます。 
-|===

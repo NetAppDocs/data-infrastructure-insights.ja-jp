@@ -82,7 +82,7 @@ sidebar:
       - title: クエリの変更または削除
         url: "/task_modify_delete_query.html"
       - title: オブジェクトへの複数のアプリケーション / 注釈の割り当て
-        url: "/task_query_assign_multiple_applicationss.html"
+        url: "/task_query_assign_multiple_applications.html"
       - title: 表の値をクリップボードにコピーしています
         url: "/task_query_copy_table_values.html"
       - title: ログを照会しています
@@ -171,6 +171,8 @@ sidebar:
         url: "/san_analyzer_overview.html"
       - title: VMアナライザー
         url: "/vm_analyzer_overview.html"
+      - title: インフラストラクチャの健全性を監視する
+        url: "/monitor_infrastructure_health.html"
     - title: レポート作成
       entries:
       - title: レポート概要

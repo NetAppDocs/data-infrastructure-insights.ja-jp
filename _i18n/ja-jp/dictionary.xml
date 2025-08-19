@@ -1692,7 +1692,6 @@
   <block id="2240ee7d4e56b8ba7ac49b14311cdeed" category="inline-link-macro">ネットアップの営業チーム</block>
   <block id="5fa0ef8fc40e60003288942e2da3e300" category="cell">* 特徴 *</block>
   <block id="d972e288b86634fdb9a758828b4d511a" category="cell">ONTAP コールドストレージを再利用します</block>
-  <block id="e1f1a8af4cedab3466112b828b25b73f" category="cell">コールド容量を使用するONTAP ボリュームワークロードやその他の関連指標を視覚化できます。</block>
   <block id="5f06573aae905166447bf8d646c6bf89" category="summary">概要の照会</block>
   <block id="fadb076bccad39c075c50bfa7f81bc31" category="doc">クエリで使用するアセット</block>
   <block id="01baf5f78b2649e6a38c88d12944a3d9" category="paragraph">アセットにアノテーションを自動的に割り当てるアノテーションルール _require_a クエリに注意してください。</block>
@@ -4058,7 +4057,6 @@
   <block id="44b44ec49661da05e81e9deacf4859c9" category="list-text">更新が次のステップ<block ref="30a61035c14bad051f5a421dfd3d3693" category="inline-link-macro-rx"></block> <block ref="e6669e87e16244b0fccfa5ac76c749db" category="inline-link-macro-rx"></block> <block ref="e09dedd8fbac179aa2311a644e5eafb9" category="inline-link-macro-rx"></block> <block ref="4a83477a1c1cd11a9cc88c7f83441cbd" category="inline-link-macro-rx"></block> <block ref="0a7046f023aad7ac467f1bc6bd4c7520" category="inline-link-macro-rx"></block></block>
   <block id="d17aef0dcce543eeda80f0586306b127" category="inline-link-macro">* 予約購読 *</block>
   <block id="f22fe88435293fe687ec1e801a002593" category="list-text">これはすばらしい原料である! 覚悟はできてる<block ref="ba6df6766cca6593f2f22c86bc0c10f1" category="inline-link-macro-rx"></block></block>
-  <block id="a6a9e422cc6712614bdeb1c7c082055f" category="summary">Cloud Insightsは、分析とトラブルシューティングを容易にするために、インフラストラクチャの変更を追跡します。</block>
   <block id="48ad331c1d02b88cdeaea9528083c718" category="doc">インフラの変更分析</block>
   <block id="2309f522d85e82b60b3b59f8e753778b" category="section-title">インフラの変更分析はどのように役立ちますか？</block>
   <block id="9aad3ab86193ce06a9d17691b4d44ab4" category="paragraph">どのような環境でも、変更の設定ミスや停電などにより、リソースの変更が発生する可能性があります。Change Analysisでは、リソースの健全性を1つのペインで表示し、停止や予定されている変更と関連付けることができます。変更は、（新しいコレクタに対する最初のポーリングの後に）各インベントリポーリングで計算されます。</block>
@@ -9087,7 +9085,6 @@
   <block id="5c60750a2abc4b9d7aa61cc76e102a94" category="cell">可能な解決策： * 推奨：強力な（など）を使用して、 Virtual Center の証明書を再生成します 1024 ビット） RSA キー。* 推奨されません。 JVM java.security 設定を変更して、 JDK.certPath.disableAlgorithms 制約を利用し、 512 ビット RSA キーを許可します。次のURLにあるJDK 7 Update 40のリリースノートを参照してください。<block ref="ac06061ee1016775797c99e274153a15" category="inline-link-rx"></block></block>
   <block id="2b9be21f00b184f2a6ee90f1574df505" category="summary">ONTAP RESTデータコレクタ</block>
   <block id="e61b2d254813ba4e2bc2a8a223f0e0eb" category="doc">NetApp ONTAP RESTデータコレクタ</block>
-  <block id="550bad6f96e635103df31a148cb33c00" category="paragraph">このデータコレクタは、REST API呼び出しを使用して、ONTAP 9.14.1以降を実行するストレージシステムからインベントリ、EMSログ、パフォーマンスデータを取得します。以前のリリースのONTAPシステムでは、ZAPIベースの「NetApp ONTAPデータ管理ソフトウェア」コレクタタイプを使用します。</block>
   <block id="a5bc5e25da90f0de3436e66f223df7bc" category="inline-link-macro">ONTAP 9.14.1 ONTAPI-REST間のマッピング</block>
   <block id="6e2fe63a1853939e7fbcdfb785f57e86" category="admonition">ONTAP RESTコレクタは、以前のONTAPIベースのコレクタの代わりに使用できます。そのため、収集または報告される指標が異なる場合があります。ONTAPIとRESTの違いの詳細については、のドキュメントを参照してください<block ref="239e0ab1e46437458ce3ffae42b58457" category="inline-link-macro-rx"></block>。</block>
   <block id="992ec6f152c405f64da205561d5810c3" category="list-text">必要なレベルのアクセス権を持つユーザアカウントへのアクセス権が必要です。新しいRESTユーザ/ロールを作成する場合はAdmin権限が必要です。</block>
@@ -12666,8 +12663,38 @@
   <block id="e4685d20c866cca50df5bea5e4230497" category="cell">非ワークロードデプロイメントを組み合わせて送信する頻度（秒単位）</block>
   <block id="1cd8d8ba87dcbd642231ac1e1fb52f76" category="paragraph">AWS Marketplace の無料トライアルは延長できません。</block>
   <block id="f2d8284860e834b1803b72a789ffeb84" category="list-text">データ コレクターが _停止_ 状態から _実行_ 状態に移行するまで最大 2 分かかります。</block>
-  <block id="da3fe25b9ad7a2bbb8f75a52d2d39828" category="summary">インフラストラクチャの健全性を監視する</block>
   <block id="0513a990ff8b7eb9d4d9e530e812b450" category="paragraph">ONTAP SVM データ コレクターを使用すると、Workload Security はNetApp ONTAPストレージ仮想マシン (SVM) 上のファイルおよびユーザー アクセス アクティビティを監視できます。このガイドでは、 ONTAP環境の包括的なセキュリティ監視を実現するための SVM データ コレクターの前提条件、構成、管理について説明します。</block>
   <block id="57da797adb74a055edb3de9c7e734b65" category="list-text">いつでも、現在「実行中」の SVM のデータ コレクターは「_実行中_」と表示されます。現在「停止」している SVM のデータ コレクターは、_Stopped_ として表示されます。</block>
   <block id="61dcd000a72340c1c72d4c7a96c2ec90" category="list-text">切り替えが発生するたびに、データ コレクターの状態は _実行中_ から _停止_ に変わり、その逆も同様になります。</block>
+  <block id="342c42c2979927d6b0d68318cd6111a6" category="summary">Data Infrastructure Insights は、インフラストラクチャの変更を追跡し、分析とトラブルシューティングを容易にします。</block>
+  <block id="65be717dc296d58230cdf6471cf551c6" category="summary">パフォーマンス、容量、構成、コンポーネントのアラートに基づく統合スコアリングを使用してインフラストラクチャの健全性を監視し、問題をプロアクティブに解決します。</block>
+  <block id="48f51aa9a5737857bbd298bfb874281e" category="doc">インフラストラクチャの健全性を監視する</block>
+  <block id="9af3e29dc9d4dd7c03ed034e837cae19" category="paragraph">Data Infrastructure Insights は、ストレージ環境のパフォーマンス、容量、構成、コンポーネントの状態を追跡する包括的なインフラストラクチャのヘルス監視を提供します。ヘルススコアは、これらのカテゴリ全体のモニターアラートに基づいて計算され、システムのヘルスを統合的に表示して、問題をプロアクティブに解決できるようになります。</block>
+  <block id="6021dbd64d31bad79679304f2df95f96" category="section-title">インフラストラクチャヘルスダッシュボード</block>
+  <block id="90fee6011aeb14ebd1b3f6d5319de775" category="admonition">インフラストラクチャの健全性の監視は<block ref="312c0c6b46ba32b4b11ba8c9da5788ed" category="inline-link-macro-rx"></block>機能は変更される可能性があります。</block>
+  <block id="6d6ede202b061f87d3856c3a68a32733" category="paragraph">*可観測性 &gt; 分析* に移動し、*インフラストラクチャの健全性* を選択します。ダッシュボードには、以下に説明するモニターのアラート カテゴリとスコアに基づいて、システムの健全性の概要が表示されます。上部でフィルターを設定して、調査の焦点を絞り込みます。</block>
+  <block id="2fea58dd0f63d16cb2264053904f52cb" category="inline-image-macro">インフラの健全性の概要</block>
+  <block id="de0fb65c9e3436d4f762f2f75c9c80b0" category="paragraph"><block ref="de0fb65c9e3436d4f762f2f75c9c80b0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1aa157ede793f01cc555adc2a30791e8" category="paragraph">デフォルトでは、ヘルススコアはデータセンターごとにグループ化されています。セッションに最適なグループ化を選択できます。</block>
+  <block id="066389fa03fcba02204f22926e22624e" category="section-title">インフラストラクチャの健全性に使用するモニターを構成する</block>
+  <block id="a60dbecbd86aeef8b8d3aa2ad769c85b" category="paragraph">ヘルススコアは、システム ヘルス計算に含めるように構成されたアラートによって決まります。</block>
+  <block id="ee7e09ec846abc74e8ad67f86534b722" category="paragraph">インフラストラクチャ オブジェクトのモニターを作成するときに、モニターからのアラートを計算に含めるかどうかを選択できます。画面の下部で、[詳細構成] を展開し、[インフラストラクチャの健全性計算に含める] を選択します。モニターの計算を適用するカテゴリを選択します。</block>
+  <block id="1498d49bfadff63838ea7195f135ac9e" category="list-text">*コンポーネントの健全性* - ファンの障害、サービス プロセッサのオフラインなど。</block>
+  <block id="6b97abbf6ca0e03a0cd3a9533866bf5f" category="list-text">*パフォーマンスの健全性* - ストレージ ノードの使用率が高い、ノードのレイテンシが異常に上昇しているなど。</block>
+  <block id="bf79b02d39df2b08288a4abe2535b26a" category="list-text">*容量の健全性* - ストレージ プールの容量がいっぱいに近づいている、LUN スナップショット用のスペースが不足しているなど。</block>
+  <block id="c843c56f83e57485f38786634addb64f" category="list-text">*構成の健全性* - クラウド層に到達できない、 SnapMirror関係が同期していないなど。</block>
+  <block id="d40858c687455dd29e9ad9471cef9f13" category="inline-image-macro">ヘルス計算に追加するモニターの詳細設定、幅=400</block>
+  <block id="d3b587e592f9498e43468c5ad959f251" category="paragraph"><block ref="d3b587e592f9498e43468c5ad959f251" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d3146ac696d63c6e03b116d00c510d06" category="section-title">健康スコアの説明</block>
+  <block id="a0d13ceea9d5180b46f6c11f89216bc8" category="paragraph">スコアは 0 から 100 までのスケールで表示され、100 が完全な健康状態を表します。現在または最近問題が発生している監視対象インフラストラクチャ オブジェクトでは、次の加重平均に従ってこのスコアが下がります。</block>
+  <block id="ae476e1f9649f2266c271a5cdda0e9cc" category="list-text">コンポーネント、パフォーマンス、または容量: それぞれ 30%</block>
+  <block id="c99f872e67eeb86518c37462b0a7f179" category="list-text">構成: 10%</block>
+  <block id="3488867800ace6ce0bd52ef898824a3d" category="paragraph">ヘルススコアは、インフラストラクチャのヘルス計算に含めるように構成されたモニターによって生成されるアラートによって次のように影響を受けます。</block>
+  <block id="be8af7f981a23068d2bbb2ca5b2a82e9" category="list-text">重大なアラートは、カテゴリ全体の重みによってヘルススコアを下げます。</block>
+  <block id="a5d26862450bfc0c6b76f92767759d6f" category="list-text">警告アラートにより、カテゴリの重みのスコアが半分に下がります。</block>
+  <block id="7641f230a605045bb26fee7202d471e4" category="paragraph">いずれかのカテゴリが報告されていない場合は、加重平均がそれに応じて調整されます。</block>
+  <block id="f4cd96b732f2628b044469cd1a104e85" category="paragraph">たとえば、コンポーネントに関する重大なアラートが 1 件 (-30)、パフォーマンスに関する警告アラートが 1 件 (30 の 50% = -15) の場合、正常性スコアは 55 (100 から 45 を引いた値) になります。</block>
+  <block id="9a1645f81973ce35a5b8a3cb57dafb2e" category="paragraph">アラートが解決されると、これらのヘルススコアの低下は徐々に解消され、スコアは 2 時間以内に完全に回復します。</block>
+  <block id="3ad17df8e0c21cd3fba4fa89d748a88e" category="paragraph">このデータ コレクターは、REST API 呼び出しを使用して、 ONTAP 9.14.1 以降を実行しているストレージ システムからインベントリ、EMS ログ、およびパフォーマンス データを取得します。以前のリリースのONTAPシステムの場合は、ZAPI ベースの「NetApp ONTAPデータ管理ソフトウェア」コレクター タイプを使用します。</block>
+  <block id="93c13f56f33b4026f411d3de7b0577a5" category="paragraph">必要に応じて spi アクセスを確認できます。</block>
 </blocks>

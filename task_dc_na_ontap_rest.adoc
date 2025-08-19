@@ -7,10 +7,14 @@ summary: ONTAP RESTデータコレクタ
 = NetApp ONTAP RESTデータコレクタ
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-このデータコレクタは、REST API呼び出しを使用して、ONTAP 9.14.1以降を実行するストレージシステムからインベントリ、EMSログ、パフォーマンスデータを取得します。以前のリリースのONTAPシステムでは、ZAPIベースの「NetApp ONTAPデータ管理ソフトウェア」コレクタタイプを使用します。
+このデータ コレクターは、REST API 呼び出しを使用して、 ONTAP 9.14.1 以降を実行しているストレージ システムからインベントリ、EMS ログ、およびパフォーマンス データを取得します。以前のリリースのONTAPシステムの場合は、ZAPI ベースの「NetApp ONTAPデータ管理ソフトウェア」コレクター タイプを使用します。
 
 
 NOTE: ONTAP RESTコレクタは、以前のONTAPIベースのコレクタの代わりに使用できます。そのため、収集または報告される指標が異なる場合があります。ONTAPIとRESTの違いの詳細については、のドキュメントを参照してくださいlink:https://docs.netapp.com/us-en/ontap-restmap-9141/index.html["ONTAP 9.14.1 ONTAPI-REST間のマッピング"]。
@@ -77,6 +81,18 @@ User/Group                 Authentication                 Acct   Authentication
 Name           Application Method        Role Name        Locked Method
 -------------- ----------- ------------- ---------------- ------ --------------
 restUser       http        password      restRole         no     none
+----
+必要に応じて spi アクセスを確認できます。
+
+[listing]
+----
+**Vserver:> vserver services web access show -name spi
+ Vserver                      Type     Service Name     Role
+-------------- -------- ---------------- ----------------
+<vserver name >     admin             spi           admin
+<vserver name >     admin             spi           csrestrole
+
+2 entries were displayed.**
 ----
 
 
