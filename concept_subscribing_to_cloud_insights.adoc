@@ -7,6 +7,10 @@ keywords: subscribe, trial, subscription, contract, raw capacity, region, data r
 = Data Infrastructure Insightsのサブスクライブ
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -38,10 +42,7 @@ Data Infrastructure Insightsは、次の3つの簡単なステップで開始で
 
 登録プロセスでは、Data Infrastructure Insights環境をホストするグローバルリージョンを選択できます。詳細については、『Data Infrastructure Insights』をご覧link:security_information_and_region.html["情報と地域"]ください。
 
-Data Infrastructure InsightsのBasicエディションとPremiumエディションで使用できる機能の完全な比較については、link:https://www.netapp.com/cloud-services/cloud-insights/editions-pricing["Data Infrastructure Insightsのエディション"]ページを参照してください。
-
-
-WARNING: Inactive Data Infrastructure Insights Basic Edition環境が削除され、そのリソースが再利用されます。連続する 30 日間のユーザアクティビティがない場合、 7 日間にわたってデータが取り込まれていない場合、環境は非アクティブとみなされます。Data Infrastructure Insightsは、環境が削除される4日前に通知を送信し、猶予期間を設定します。
+Data Infrastructure Insights機能と価格オプションの詳細については、link:https://www.netapp.com/cloud-services/cloud-insights/editions-pricing["Data Infrastructure Insightsのエディション"]ページ。
 
 Data Infrastructure Insightsの使用中に南京錠のアイコンが表示された場合はimage:padlock.png["南京錠"]、現在のサブスクリプションでその機能を利用できないか、限定された形式で利用できないことを意味します。フルアクセスのためにその機能を購読してください。一部の機能は、サブスクライブする前にとして使用でき <<module-evaluation,モジュールの評価>> ます。
 

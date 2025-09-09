@@ -10,24 +10,24 @@ keywords: time-to-live, TTL, downsampling, downsample, retention
 
 
 [role="lead"]
-Data Infrastructure Insightsでは一定期間（エディションあたり）データが保持されるため、数千ものデータポイントが処理される可能性があります。そのため、グラフや表にデータが表示される前にデータがダウンサンプリングされることがあります。
+Data Infrastructure Insights は、サブスクリプションに応じて 7 日から 13 か月までの期間データを保持します。大規模なデータセットを表示する場合、統計の正確性を維持しながらチャートやグラフを効率的に読み込むために、データがダウンサンプリングされることがあります。
 
 
 
 == データ保持
 
-Data Infrastructure Insightsは、アクティブなサブスクライブエディションで決定された期間にわたってデータを保持します。
+Data Infrastructure Insights は、サブスクリプションの種類によって決まる期間、データを保持します。
 
 |===
-| 編集（ Edition ） | データ保持 
+| サブスクリプションタイプ | データ保持 
 
 
-| 基本 | 7日 
+| トライアル | 7日 
 
 
-| プレミアム | 13 カ月 
+| 購読済み | 13 カ月 
 |===
-各エディションで利用可能なすべての機能の一覧は、Data Infrastructure Insightsのlink:https://bluexp.netapp.com/cloud-insights-pricing["エディションと価格"]ページで確認できます。
+Data Infrastructure Insights機能と価格オプションの詳細については、link:https://bluexp.netapp.com/cloud-insights-pricing["Data Infrastructure Insights価格"]ページ。
 
 
 

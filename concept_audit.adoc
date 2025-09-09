@@ -7,6 +7,10 @@ summary: '[Audit]では、Data Infrastructure Insightsシステムでのシス�
 = 監査
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -135,11 +139,13 @@ Data Infrastructure Insightsで監査されるイベントとアクションは�
 
 == 監査データの保持
 
-Data Infrastructure Insightsが監査データを保持する時間は、お客様のエディションによって異なります。
+Data Infrastructure Insights が監査データを保持する期間は、サブスクリプションによって異なります。
 
-* Basic Edition ：監査データは 30 日間保持されます
-* Standard Edition および Premium Editions ：監査データは 1 年と 1 日の間保持されます
+* トライアル環境: 監査データは30日間保持されます
+* サブスクライブされた環境: 監査データは1年と1日間保持されます
 
+
+保持期限よりも古い監査エントリは自動的にパージされます。ユーザによる操作は不要です。
 
 保持期限よりも古い監査エントリは自動的にパージされます。ユーザによる操作は不要です。
 
