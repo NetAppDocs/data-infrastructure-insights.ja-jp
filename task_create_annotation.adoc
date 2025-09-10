@@ -7,6 +7,10 @@ summary: アノテーションの作成方法
 = アノテーションの使用
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

@@ -37,4 +37,4 @@ NOTE: ほとんどのVM Analyzerフィルタ（追加可能なフィルタを含
 
 == 実際に動作を見てみましょう
 
-link:https://media.netapp.com/video-detail/0e62b784-8456-5ef7-8879-f0352135a0f1/simplified-troubleshooting-with-vm-analyzer["VM Analyzer によるトラブルシューティングの簡素化 (ビデオ)"]
+link:https://media.netapp.com/video-detail/0e62b784-8456-5ef7-8879-f0352135a0f1/simplified-troubleshooting-with-vm-analyzer["VM Analyzer によるトラブルシューティングの簡素化 (ビデオ)、window=後で読む"]

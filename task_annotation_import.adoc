@@ -7,6 +7,10 @@ summary: Data Infrastructure Insights APIを使用して、アノテーション
 = アノテーションのインポート
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

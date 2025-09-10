@@ -27,8 +27,6 @@ sidebar:
       url: "/security_admin_tool.html"
   - title: はじめに
     entries:
-    - title: 機能チュートリアル
-      url: "/concept_feature_tutorials.html"
     - title: データの収集中
       entries:
       - title: 概要

@@ -12557,8 +12557,6 @@
   <block id="09562317f0e4300c8d530df45c626200" category="paragraph"><block ref="09562317f0e4300c8d530df45c626200" category="inline-image-macro-rx" type="image"></block></block>
   <block id="fdbcd622aeb7794a55d5a3c57f4ed433" category="admonition">ほとんどのVM Analyzerフィルタ（追加可能なフィルタを含む）はコンテキストに依存していますこれらのフィルタのいずれかでオブジェクトを選択すると'他のフィルタのドロップダウンに表示される選択肢は'選択したオブジェクトのコンテキストに応じて更新されます</block>
   <block id="86975522d809db49e0c205d536440123" category="paragraph">オブジェクトまたはグループをクリックすると、スライドアウトパネルが開き、オブジェクトとその接続に関する詳細情報が表示されます。スライドアウトパネルには、選択したオブジェクトの詳細（オブジェクトの種類に応じてスループットや使用率など）を示すサマリーと、レイテンシやIOPSなどのオブジェクトのメトリクスを示すチャートが表示されます。追加のタブでは、関連するリソースや変更、アラートを確認できます。必要に応じて、上位の相関オブジェクトや競合オブジェクトのメトリクスもチャートに表示するように選択できます。</block>
-  <block id="d2471c4bc746eeea68ab17452321a403" category="inline-link-macro">VM Analyzer によるトラブルシューティングの簡素化 (ビデオ)</block>
-  <block id="6e27a8c95ed5ddbd5bf8c70b3cdcde35" category="paragraph"><block ref="6e27a8c95ed5ddbd5bf8c70b3cdcde35" category="inline-link-macro-rx"></block></block>
   <block id="f463cb1a5df7d729d273f46c1e5cb861" category="sidebar">データの分析</block>
   <block id="c917a46858bc7b65af2e1c90ee0a1453" category="sidebar">SANアナライザー</block>
   <block id="2e2565dd8910383ad2b3626e2b5d37b2" category="sidebar">VMアナライザー</block>
@@ -12749,4 +12747,10 @@
   <block id="babe60c38b9af7eae2a65400f72c52c7" category="paragraph">ONTAP SVM データ コレクターを使用すると、Workload Security はNetApp ONTAPストレージ仮想マシン (SVM) 上のファイルおよびユーザー アクセス アクティビティを監視できます。このガイドでは、 ONTAP環境の包括的なセキュリティ監視を実現するための SVM データ コレクターの構成と管理について説明します。</block>
   <block id="097b5088c2a3d7584f939f2bcd00152f" category="admonition">グローバルな変更はONTAPシステムに影響を及ぼす可能性があります。多数のデータ コレクターに影響する変更は、オフピーク時間帯に行うことを強くお勧めします。</block>
   <block id="3c86c080f12d925b5a5ec1ad14563f65" category="paragraph">インフラストラクチャ リソース全体のパフォーマンスしきい値、ログ イベント、および異常を追跡するようにモニターを構成します。ノードの書き込み遅延、ストレージ容量、アプリケーション パフォーマンスなどのメトリックのカスタム アラートを作成し、そのような条件が満たされたときに通知を受け取ります。</block>
+  <block id="7c2fe93d0a150c1ccb110c7be9ba4de5" category="inline-link-macro">NetAppで強力なダッシュボードを作成する (ビデオ)</block>
+  <block id="87844637813d306b7e217695fa07af30" category="paragraph"><block ref="87844637813d306b7e217695fa07af30" category="inline-link-macro-rx"></block></block>
+  <block id="0fa83ca72fc86aac9bf3cb98f8457548" category="inline-link-macro">注釈と注釈ルール（ビデオ）、window=read-later</block>
+  <block id="7353b790cd233bfb4d223636cde644bc" category="paragraph"><block ref="7353b790cd233bfb4d223636cde644bc" category="inline-link-macro-rx"></block></block>
+  <block id="1fdb67257568169e128ab9cf001f8475" category="inline-link-macro">VM Analyzer によるトラブルシューティングの簡素化 (ビデオ)、window=後で読む</block>
+  <block id="b1cd067329cb001e27800ecd33c25fac" category="paragraph"><block ref="b1cd067329cb001e27800ecd33c25fac" category="inline-link-macro-rx"></block></block>
 </blocks>

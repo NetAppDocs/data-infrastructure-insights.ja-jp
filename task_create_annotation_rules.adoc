@@ -7,6 +7,10 @@ keywords: annotate, annotation, rules
 = アノテーションルールの作成
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

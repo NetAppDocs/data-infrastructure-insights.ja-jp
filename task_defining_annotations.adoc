@@ -7,6 +7,10 @@ summary: アノテーションを使用してデータを追跡する。
 = アノテーションの定義
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -24,6 +28,12 @@ Data Infrastructure Insightsでデータの追跡方法を企業の要件に合�
 * ルールを作成して、同じタイプの複数のアセットにアノテーションを自動的に適用する。
 * アノテーションに基づいてアセットをフィルタする。
 
+
+
+
+== 実際に動作を見てみましょう
+
+link:https://media.netapp.com/video-detail/248621bd-6619-5dc8-9718-5d78d0fd21da["注釈と注釈ルール（ビデオ）、window=read-later"]
 
 
 
