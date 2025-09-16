@@ -11249,7 +11249,6 @@
   <block id="72a442c57900f55848aa4acb856a507d" category="sidebar">非アクティブなデバイスの識別</block>
   <block id="0860569a69c3584507ee09f4be585418" category="cell">insecureK8sSkipVerify</block>
   <block id="3008cd3125cccc003fa13335717e556e" category="cell">IP SANが不足しているためにtelegrafで証明書を検証できない場合は、検証スキップを有効にしてみてください。</block>
-  <block id="9e43104f0687bd3a308759c5411641d7" category="paragraph"><block ref="9e43104f0687bd3a308759c5411641d7" category="inline-link-macro-rx"></block></block>
   <block id="2b8272217b69f1c5b5ad5968f0bc0945" category="list-text">Data Infrastructure Insightsの無償トライアルにご登録いただき、利用可能な機能をご確認ください。無償トライアルに登録するには：</block>
   <block id="6d2404e5699069be70636f65562fe693" category="list-text">に移動<block ref="66922be03d9fc23a3ec9641b7884c8f2" category="inline-link-rx"></block></block>
   <block id="e78fd759357c2a61f07ddc6a902f9270" category="list-text">ページ上部の*購入方法*を選択します。</block>
@@ -11587,7 +11586,6 @@
   <block id="bc23aa0997542e15a65a21a96991960a" category="paragraph">The user can go to the add/edit collector page, enter the cluster level details (in Cluster Mode) or SVM level details (in SVM Mode), and click on the *Test Connection* button. Workload Security will then process the request and display an appropriate success or failure message.</block>
   <block id="e8f41baace36619af4a7292787a17936" category="inline-image-macro">Workload Security 'Test Connection' success message</block>
   <block id="e6ea93198fd78cbc89b93053e0d0b573" category="paragraph"><block ref="e6ea93198fd78cbc89b93053e0d0b573" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c033c9dce9a48cc67d3409bab6aab6ba" category="paragraph"><block ref="c033c9dce9a48cc67d3409bab6aab6ba" category="inline-link-macro-rx"></block></block>
   <block id="88c55c9f00e518db40a6c680728b787f" category="section-title">2025年3月</block>
   <block id="27e5c5c33051ef47e145b432e9e357db" category="section-title">効率的なインフラ管理のための強化されたコンテキストナビゲーション</block>
   <block id="ca3a08b4a664d3460c1afb17ce14a0ca" category="paragraph">データインフラの分析情報を活用して優れた運用性を実現することで、時間を節約できます。現在、任意のオブジェクトからアセットランディングページに直接ジャンプしてデバイスのパフォーマンスを把握できるコンテキストメニューリンク、ネットワークトポロジを可視化できるSAN Analyzer、運用を認識できるログ、構成管理用のChange Analyzerを追加しています。</block>
@@ -12754,4 +12752,6 @@
   <block id="cd0e26864bdcc93e571cf104049dc723" category="summary">ONTAP All-San アレイ データ (ASA r2) コレクター</block>
   <block id="4d632e035deea033a31abbef4a39ee80" category="doc">NetApp ONTAP ASA r2（オールSANアレイ）データコレクター</block>
   <block id="d97291003c6a6e6615571bf02531ca30" category="sidebar">ONTAP ASA （オールSANアレイ）r2</block>
+  <block id="32344df03ee279db932571d5121eebc2" category="paragraph"><block ref="32344df03ee279db932571d5121eebc2" category="inline-link-macro-rx"></block></block>
+  <block id="af88d796899408a2445389775634dda1" category="paragraph"><block ref="af88d796899408a2445389775634dda1" category="inline-link-macro-rx"></block></block>
 </blocks>
