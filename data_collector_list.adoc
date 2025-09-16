@@ -247,7 +247,7 @@ Data Infrastructure Insightsでサポートされているデータコレクタ�
 | link:task_dc_na_ontap_rest.html["NetApp ONTAP RESTコレクタ"] | インフラ 
 
 
-| link:task_dc_na_ontap_all_san_array.html["NetApp ONTAP All-SAN Array（ASA）コレクタ"] | インフラ 
+| link:task_dc_na_ontap_all_san_array.html["NetApp ONTAP ASA r2（オールSANアレイ）コレクター"] | インフラ 
 
 
 | link:task_dc_na_cdot.html["NetApp ONTAP Select の略"] | インフラ 

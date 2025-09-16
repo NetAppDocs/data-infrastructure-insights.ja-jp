@@ -419,6 +419,8 @@ sidebar:
           url: "/task_dc_na_cloud_volumes_ontap.html"
         - title: AWS 向け Cloud Volume サービス
           url: "/task_dc_na_cloud_volumes.html"
+        - title: ONTAP ASA （オールSANアレイ）r2
+          url: "/task_dc_na_ontap_all_san_array.html"
         - title: ONTAP データ管理ソフトウェア
           url: "/task_dc_na_cdot.html"
         - title: ONTAP RESTコレクタ
