@@ -7,17 +7,21 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 = ワークロードセキュリティエージェントの要件
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-データコレクタから情報を取得するには、必要がありますlink:task_cs_add_agent.html["エージェントをインストールします"]。Agent をインストールする前に、お使いの環境がオペレーティングシステム、 CPU 、メモリ、およびディスクスペースの要件を満たしていることを確認してください。
+絶対ですlink:task_cs_add_agent.html["ワークロードセキュリティエージェントをインストールする"]データ収集者から情報を取得するため。エージェントをインストールする前に、環境がオペレーティング システム、CPU、メモリ、およびディスク領域の要件を満たしていることを確認してください。
 
 [cols="36,60"]
 |===
 | コンポーネント | Linux 要件 
 
 
-| オペレーティングシステム | 次のいずれかのライセンス版を実行しているコンピュータ: * AlmaLinux 9.4 および 9.5 (64 ビット) (SELinux を含む) * CentOS 9 Stream (64 ビット) * Debian 11(64 ビット) および 12 (64 ビット) (SELinux を含む) * OpenSUSE Leap 15.3(64 ビット) ～ 15.6 (64 ビット) * Oracle Linux 8.10 (64 ビット)、および 9.1(64 ビット) ～ 9.6 (64 ビット) (SELinux を含む) * Red Hat Enterprise Linux 8.10 (64 ビット)、および 9.1(64 ビット) ～ 9.6 (64 ビット) (SELinux を含む) * Rocky 9.4(64 ビット) および 9.5 (64 ビット) (SELinux を含む) * SUSE Linux Enterprise Server 15 SP4(64 ビット) ～ 15 SP6 (64 ビット) (SELinux を含む) * Ubuntu 20.04 LTS (64 ビット)、22.04 LTS (64 ビット)、および 24.04 LTS (64 ビット) このコンピューターでは、他のアプリケーション レベルのソフトウェアを実行しないでください。専用のサーバを使用することを推奨します。 
+| オペレーティングシステム | 次のいずれかのライセンス版を実行しているコンピュータ: * AlmaLinux 9.4 (64 ビット) ～ 9.5 (64 ビット)、10 (64 ビット) (SELinux を含む) * CentOS Stream 9 (64 ビット) * Debian 11 (64 ビット)、12 (64 ビット) (SELinux を含む) * OpenSUSE Leap 15.3 (64 ビット) ～ 15.6 (64 ビット) * Oracle Linux 8.10 (64 ビット)、9.1 (64 ビット) ～ 9.6 (64 ビット) (SELinux を含む) * Red Hat Enterprise Linux 8.10 (64 ビット)、9.1 (64 ビット) ～ 9.6 (64 ビット)、10 (64 ビット) (SELinux を含む) * Rocky 9.4 (64 ビット) ～ 9.6 (64 ビット) (SELinux を含む) * SUSE Linux Enterprise Server 15 SP4 (64 ビット) ～ 15 SP6 (64 ビット)、SELinux を含む * Ubuntu 20.04 LTS (64 ビット)、22.04 LTS (64 ビット)、24.04 LTS (64 ビット) このコンピューターでは、他のアプリケーション レベルのソフトウェアを実行しないでください。専用サーバーをお勧めします。 
 
 
 | コマンド | インストールには「unzip」が必要です。また、インストール、スクリプトの実行、およびアンインストールには、「sudo su–」コマンドが必要です。 
