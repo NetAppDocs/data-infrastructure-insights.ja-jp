@@ -41,7 +41,11 @@ link:https://www.netapp.com/pdf.html?item=/media/11887-patentspage.pdf["https://
 
 link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.com/company/legal/privacy-policy/"^]
 
-含まれるもの：https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-source-notice-intro.adoc[]
+
+
+== オープンソース
+
+通知ファイルには、 NetAppソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が提供されます。
 
 link:media/DII_Notice-Sept_2025.pdf["データインフラに関する分析情報（旧称Cloud Insights）に関するお知らせ"]
 
