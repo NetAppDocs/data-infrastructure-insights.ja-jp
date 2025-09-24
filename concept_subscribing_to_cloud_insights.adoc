@@ -145,7 +145,7 @@ Data Infrastructure Insightsのオブザーバビリティでは、テナント�
 
 各ティアは異なるレートで計測され、全体が一緒に計算されて重み付けされたエンタイトルメントが提供されます。加重使用量の計算式は次のとおりです。
 
- Weighted usage = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioning TiB)
+ Weighted Capacity = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioned TiB)
 これを容易にするために、DIIは_ subscribed _ quantitiesに基づいて1つの*加重使用権*数を計算し、_ discovered _ storageに基づいて同じ数を計算し、検出された容量が加重使用権より大きい場合にのみ違反を宣言します。これにより、各ティアのサブスクライブされた金額とは異なる数量を柔軟に監視できます。検出されたストレージの合計がサブスクライブされた加重使用権の範囲内である限り、DIIではその数量を監視できます。
 
 
