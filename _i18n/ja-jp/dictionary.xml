@@ -9119,7 +9119,6 @@
   <block id="c98d332ba8a502696256ec21ebc2eab0" category="summary">NetApp StorageGRID のデータコレクタを設定する</block>
   <block id="40d661645d6b35dfe2c38e25507244ac" category="doc">NetApp StorageGRID データコレクタ</block>
   <block id="f9df060c8d375048604f19820f72d8cf" category="paragraph">NetApp StorageGRID データコレクタでは、 StorageGRID 構成からのインベントリやパフォーマンスの収集がサポートされます。</block>
-  <block id="60299c50762b8f548c3ba08173af15db" category="admonition">StorageGRID は、 raw TB から管理対象ユニットへのレートが異なる場合に測定されます。フォーマットされていないStorageGRIDの容量が40TBにつき1として課金されます<block ref="1802ea889a272a3510701d2ff63bbea6" category="inline-link-macro-rx"></block>。</block>
   <block id="1a11df726501498f41b0a07dead00843" category="paragraph">Data Infrastructure Insightsでは、NetApp StorageGRIDコレクタから次のインベントリ情報を取得します。取得したアセットのタイプごとに、そのアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。</block>
   <block id="392d70ca39f31f10bd637936769788df" category="cell">StorageGRID</block>
   <block id="71939180bcd43cc6a5d2266fda82622f" category="paragraph">このデータソースの設定に関する要件は次のとおりです。</block>
@@ -12757,4 +12756,7 @@
   <block id="caecf875ec87c246704ef07763a1f352" category="list-text">グループ化ドロップダウンでは、ユーザー、フォルダー、エンティティ タイプなどでアクティビティをグループ化するオプションが提供されます。</block>
   <block id="4372644de09f6a468879ea88e6579002" category="list-text">FlexCache は、 ONTAP 9.7 以降のバージョンの NFS でサポートされます。</block>
   <block id="5a97d130bacafd15fd7701e8032dcd68" category="list-text">FlexCache は、 ONTAP 9.14.1 以降のバージョンの SMB でサポートされます。</block>
+  <block id="181a51adda79e935faca2d7b775d08b6" category="paragraph">基盤となるハードウェア トポロジと構成に関係なく、すべてのStorageGRIDシステムにわたって DII 権限に対する一貫した計測を提供するために、 Data Infrastructure Insights は、物理ディスク レイアウトに基づく RAW 容量ではなく、使用可能な合計容量 (storagegrid_storage_utilization_total_space_bytes) を使用します。</block>
+  <block id="57c5326214c52d2a92dd11ca997a6719" category="paragraph">容量ベースのライセンス モデルを使用しているお客様の場合、 StorageGRIDは「オブジェクト」ストレージとして計測されます。</block>
+  <block id="c865955193b52e756a8fdaf662399f0d" category="paragraph">従来の (MU) ライセンス モデルを使用しているお客様の場合、 StorageGRIDはセカンダリ ストレージとして 40TiB から 1 MU のレートで計測されます。</block>
 </blocks>

@@ -12,9 +12,15 @@ keywords: data collector, queries, create, storagegrid
 [role="lead"]
 NetApp StorageGRID データコレクタでは、 StorageGRID 構成からのインベントリやパフォーマンスの収集がサポートされます。
 
+[NOTE]
+====
+基盤となるハードウェア トポロジと構成に関係なく、すべてのStorageGRIDシステムにわたって DII 権限に対する一貫した計測を提供するために、 Data Infrastructure Insights は、物理ディスク レイアウトに基づく RAW 容量ではなく、使用可能な合計容量 (storagegrid_storage_utilization_total_space_bytes) を使用します。
 
-NOTE: StorageGRID は、 raw TB から管理対象ユニットへのレートが異なる場合に測定されます。フォーマットされていないStorageGRIDの容量が40TBにつき1として課金されますlink:concept_subscribing_to_cloud_insights.html#pricing["管理ユニット (MU)"]。
+容量ベースのライセンス モデルを使用しているお客様の場合、 StorageGRIDは「オブジェクト」ストレージとして計測されます。
 
+従来の (MU) ライセンス モデルを使用しているお客様の場合、 StorageGRIDはセカンダリ ストレージとして 40TiB から 1 MU のレートで計測されます。
+
+====
 
 
 == 用語
