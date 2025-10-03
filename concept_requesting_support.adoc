@@ -2,23 +2,27 @@
 sidebar: sidebar 
 permalink: concept_requesting_support.html 
 summary: サポートをリクエストする方法については、技術情報アーティクルの表示、ネットアップコミュニティとの接続、ビデオの表示、チケットの発行があります。 
-keywords: support, knowledgebase, documentation, community, chat, videos, help, contact, intercom 
+keywords: support, knowledgebase, documentation, community, videos, help, contact 
 ---
 = サポートをリクエストしています
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 *ヘルプ > サポート* を選択すると、 Data Infrastructure Insightsで利用可能なサポート オプションにアクセスできます。
 
-image:SupportPageWithLearningCenter.png["サポートページ"]
+image:SupportPageExample.png["サポートページ、幅=600"]
 
 
 
 == サポート資格をアクティブ化しています
 
-Data Infrastructure Insightsは、トライアルモードでの実行時にセルフサービスとEメールによるサポートを提供します。サービスに登録したら、サポート資格をアクティブ化することを強くお勧めします。サポートエンタイトルメントをアクティブにすると、オンラインチャット、 Web チケット発行システム、および電話でテクニカルサポートにアクセスできます。登録が完了するまで、デフォルトのサポートモードはセルフサービスです。<<obtaining-support-information,詳細>>以下を参照してください。
+Data Infrastructure Insights は、試用モードで実行しているときにセルフサービス サポートと電子メール サポートを提供します。サービスに加入したら、サポート資格を有効にすることを強くお勧めします。サポート資格を有効にすると、Web チケット システムと電話を介してテクニカル サポートにアクセスできるようになります。登録が完了するまで、デフォルトのサポート モードはセルフ サービスです。見る<<obtaining-support-information,詳細>>下に。
 
 初回のサブスクリプションプロセスでは、Data Infrastructure Insightsインスタンスが「950」で始まる20桁のNetAppシリアル番号を生成します。このNetAppシリアル番号は、アカウントに関連付けられたData Infrastructure Insightsのサブスクリプションを表します。サポート利用資格を有効にするには、ネットアップのシリアル番号を登録する必要があります。サポート登録には、次の 2 つのオプションがあります。
 
@@ -60,7 +64,7 @@ image:NewCustomerRegExample.png["新しい顧客フォーム"]
 image:SupportPage_SN_Section-NA.png["SN_Screen"]
 
 . エラーが発生しない場合は、「登録が正常に送信されました」ページが表示されます。登録に使用された NSS SSO ユーザ名に関連付けられた電子メールアドレスには、「お使いの製品はサポート対象です」という電子メールが数時間以内に送信されます。
-. ネットアップの新規のお客様の場合は、NetApp Support Site（ NSS ）のユーザアカウントを作成して、今後の登録や、テクニカルサポートチャットや Web チケット発行用のサポートポータルにアクセスする必要があります。このリンクはにあります https://mysupport.netapp.com/eservice/public/now.do[]。新たに登録したData Infrastructure Insightsのシリアル番号を入力すると、プロセスを円滑に進めることができます。
+. NetApp の新規顧客として、今後の登録やテクニカル サポートおよび Web チケット用サポート ポータルへのアクセスのために、 NetAppサポート サイト (NSS) ユーザー アカウントも作成する必要があります。このリンクは次の場所にあります https://mysupport.netapp.com/eservice/public/now.do[]。プロセスを迅速化するために、新しく登録したData Infrastructure Insights のシリアル番号を提供できます。
 . これは、Data Infrastructure Insights NetAppのシリアル番号の1回限りの登録です。
 
 
@@ -107,7 +111,6 @@ NOTE: にNetAppクラウド製品を使用するには、登録する必要が�
 
 * link:https://www.netapp.com/us/contact-us/support.aspx["* 電話 *"]
 * link:https://mysupport.netapp.com/portal?_nfpb=true&_st=initialPage=true&_pageLabel=submitcase["* サポートチケット *"]
-* *チャット*- NetAppサポート担当者に連絡してサポートを受けます（平日のみ）。チャットは、Data Infrastructure Insights画面の右上にある* Help（ヘルプ）> Live Chat（ライブチャット）*メニューオプションで利用できます。
 
 
 リンクをクリックしてセールスサポートをリクエストすることもできますlink:https://bluexp.netapp.com/contact-cds["* 販売担当者 * にお問い合わせください"]。

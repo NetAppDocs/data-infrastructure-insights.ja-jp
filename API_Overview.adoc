@@ -261,18 +261,11 @@ API アクセストークンには有効期限があります。API アクセス
 
 注：最新のNetApp Kubernetes Monitoring Operatorがインストールされ、更新可能なAPIアクセストークンを使用している場合、期限切れになるトークンは自動的に新規または更新されたAPIアクセストークンに置き換えられます。以下に示す手動手順を実行する必要はありません。
 
-* NetApp Kubernetes Monitoring Operatorを編集します。
-+
- kubectl -n netapp-monitoring edit agent netapp-ci-agent-monitoring-netapp
-* 古いAPIトークンを新しいAPIトークンに置き換えて、_spec.output-sink.api-key_valueを変更します。
-+
-....
-spec:
-…
-  output-sink:
-  - api-key:<NEW_API_TOKEN>
-....
+* 新しい API トークンを作成します。
+* 以下の手順に従ってくださいlink:task_config_telegraf_agent_k8s.html#manual-upgrades["手動アップグレード"]、新しい API トークンを選択します。
 
+
+注: Kustomize などの構成管理ツールを使用してNetApp Kubernetes Monitoring Operator を管理しているお客様は、同じ手順に従って、更新された YAML セットを生成してダウンロードし、リポジトリにプッシュできます。
 
 
 

@@ -119,8 +119,6 @@
   <block id="30136395f01879792198317c11831ea4" category="section-title">Kubernetes</block>
   <block id="719a89b64a07694e338d45825fcd17f0" category="paragraph">これらのコマンドでは、デフォルトのネームスペースである「 NetApp-monitoring 」が使用されていることに注意してください。独自のネームスペースを設定した場合は、それらのネームスペースと、以降のすべてのコマンドおよびファイルを置き換えます。</block>
   <block id="cab974fdccabc8d42fdf59c797a3fc04" category="paragraph">注：最新のNetApp Kubernetes Monitoring Operatorがインストールされ、更新可能なAPIアクセストークンを使用している場合、期限切れになるトークンは自動的に新規または更新されたAPIアクセストークンに置き換えられます。以下に示す手動手順を実行する必要はありません。</block>
-  <block id="d894fe24a5654169420a98540a56b302" category="list-text">NetApp Kubernetes Monitoring Operatorを編集します。</block>
-  <block id="a27d1e518922e9050e6e54ae8c965164" category="list-text">古いAPIトークンを新しいAPIトークンに置き換えて、_spec.output-sink.api-key_valueを変更します。</block>
   <block id="daed7387fa0b0965feb45d4dc3de1704" category="section-title">RHEL / CentOS と Debian/Ubuntu</block>
   <block id="779ce1f6c23a08b510ed7a6c996d255a" category="list-text">Telegraf 構成ファイルを編集し、古い API トークンのすべてのインスタンスを新しい API トークンに置き換えます。</block>
   <block id="e89f4056c39669637fb609320173681a" category="list-text">Tegraf を再起動します。</block>
@@ -1704,11 +1702,8 @@
   <block id="4e4315d948ef3fd3aad9be88a442863d" category="paragraph"><block ref="4e4315d948ef3fd3aad9be88a442863d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="79bac41a8e857539d5a75dc7e93e17d8" category="summary">サポートをリクエストする方法については、技術情報アーティクルの表示、ネットアップコミュニティとの接続、ビデオの表示、チケットの発行があります。</block>
   <block id="69ac5d78c7ecb4ab9a461a7400773ec3" category="doc">サポートをリクエストしています</block>
-  <block id="b9bfbe11ded79fa1b72b327d0497f9dd" category="inline-image-macro">サポートページ</block>
-  <block id="2a0a63dd16c8b87a179a933b2e9eb92e" category="paragraph"><block ref="2a0a63dd16c8b87a179a933b2e9eb92e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e9d356ec51ae4d84881e70ea3c98b6dc" category="section-title">サポート資格をアクティブ化しています</block>
   <block id="27792947ed5d5da7c0d1f43327ed9dab" category="inline-xref">詳細</block>
-  <block id="7b205ab2cecff2344de68946f6fcafe2" category="paragraph">Data Infrastructure Insightsは、トライアルモードでの実行時にセルフサービスとEメールによるサポートを提供します。サービスに登録したら、サポート資格をアクティブ化することを強くお勧めします。サポートエンタイトルメントをアクティブにすると、オンラインチャット、 Web チケット発行システム、および電話でテクニカルサポートにアクセスできます。登録が完了するまで、デフォルトのサポートモードはセルフサービスです。<block ref="055db438ec51479bd53b937469434a7e" category="inline-xref-macro-rx"></block>以下を参照してください。</block>
   <block id="933754a1936f865bf848ed02693c2c26" category="paragraph">初回のサブスクリプションプロセスでは、Data Infrastructure Insightsインスタンスが「950」で始まる20桁のNetAppシリアル番号を生成します。このNetAppシリアル番号は、アカウントに関連付けられたData Infrastructure Insightsのサブスクリプションを表します。サポート利用資格を有効にするには、ネットアップのシリアル番号を登録する必要があります。サポート登録には、次の 2 つのオプションがあります。</block>
   <block id="cc8ae441e8fc2d8b41c5c0efa830b99e" category="list-text">NetApp Support Site（ NSS ）の SSO アカウントをすでにお持ちのユーザ（現在ネットアップのお客様など）</block>
   <block id="0a0b0ec9b756ca7bf1c8323bc90df282" category="list-text">NetApp Support Site（ NSS ）の SSO アカウントがない新しいネットアップのお客様</block>
@@ -1728,7 +1723,6 @@
   <block id="9ff2e299ad4aa21f1b2da73ae35e14c1" category="paragraph"><block ref="9ff2e299ad4aa21f1b2da73ae35e14c1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d0666b8b7ae744d105cb544ddc03d8c8" category="list-text">製品ラインとして「_Data Infrastructure Insights」を選択します。課金プロバイダ（NetAppまたはAWS）を選択し、Data Infrastructure Insightsユーザインターフェイスの[Help]&gt;[Support]メニューを参照してシリアル番号、NetAppサブスクリプション名、またはAWSカスタマーIDを入力します。</block>
   <block id="310e9bfbb0987bc588b6f281357bc81c" category="list-text">エラーが発生しない場合は、「登録が正常に送信されました」ページが表示されます。登録に使用された NSS SSO ユーザ名に関連付けられた電子メールアドレスには、「お使いの製品はサポート対象です」という電子メールが数時間以内に送信されます。</block>
-  <block id="d41c7a89c53943f7c86e80fe6a27b4dc" category="list-text">ネットアップの新規のお客様の場合は、NetApp Support Site（ NSS ）のユーザアカウントを作成して、今後の登録や、テクニカルサポートチャットや Web チケット発行用のサポートポータルにアクセスする必要があります。このリンクはにあります<block ref="4b0df7f6652ef877e322a199d6b6edce" category="inline-link-rx"></block>。新たに登録したData Infrastructure Insightsのシリアル番号を入力すると、プロセスを円滑に進めることができます。</block>
   <block id="3757ee6dbdcabe2780104f98224939d5" category="list-text">これは、Data Infrastructure Insights NetAppのシリアル番号の1回限りの登録です。</block>
   <block id="bc4afdcc32d9a7d1bc03c2d8ad5b1828" category="section-title">サポート情報の入手方法</block>
   <block id="0ead5de583924ac8d48848b85f68e778" category="section-title">セルフサービスサポート：</block>
@@ -1751,7 +1745,6 @@
   <block id="d509e88fe0d420e546f838c2bf3149e4" category="list-text"><block ref="d509e88fe0d420e546f838c2bf3149e4" category="inline-link-macro-rx"></block></block>
   <block id="78ce7a1ba00884845ede733dc79b1141" category="inline-link-macro">* サポートチケット *</block>
   <block id="1ce9a43d63998783a781596de13b0965" category="list-text"><block ref="fa5b9c38e8e5b8e1f4e408b08ce16532" category="inline-link-macro-rx"></block></block>
-  <block id="2911a8a094a0fc515bf83ad1a0cf9eba" category="list-text">*チャット*- NetAppサポート担当者に連絡してサポートを受けます（平日のみ）。チャットは、Data Infrastructure Insights画面の右上にある* Help（ヘルプ）&gt; Live Chat（ライブチャット）*メニューオプションで利用できます。</block>
   <block id="ac2ae10a8c7bd50e80c93d5e57fc84da" category="inline-link-macro">* 販売担当者 * にお問い合わせください</block>
   <block id="30a12dfd5908adfdb9f06395cb4b5c34" category="paragraph">Data Infrastructure Insightsのシリアル番号は、サービス内で*[ヘルプ]&gt;[サポート]*メニューから確認できます。サービスへのアクセスで問題が発生し、以前にNetAppにシリアル番号を登録したことがある場合は、NetAppサポートサイトでData Infrastructure Insightsのシリアル番号のリストを次のように確認することもできます。</block>
   <block id="290bf19e1ed3fabfc80a0ac6d77f6466" category="list-text">mysupport.netapp.com にログインします</block>
@@ -12770,4 +12763,12 @@
   <block id="c17dfb3f3f4ae3af21c5846ff8667831" category="paragraph-title">ブール注釈に関する注意</block>
   <block id="86268b3f5a0b59ea7ad7bf21fde99e9d" category="paragraph">ブール型注釈でフィルタリングする場合、フィルタリング対象となる次の値が表示されることがあります。</block>
   <block id="5d7833cba1c63365c4f78e55d7a8df24" category="list-text">*なし*: アノテーションがまったく設定されていない結果のみを返します。  「Null」値とも呼ばれます。</block>
+  <block id="a647293570fb3320889a900012ccf294" category="list-text">新しい API トークンを作成します。</block>
+  <block id="174f87cfebc7cef23d8e19f4467ca8a1" category="inline-link-macro">手動アップグレード</block>
+  <block id="6f997cc44c9290ef243df8a0a553f20e" category="list-text">以下の手順に従ってください<block ref="6d9abfddb9977fcf24c6a9ba410ec405" category="inline-link-macro-rx"></block>、新しい API トークンを選択します。</block>
+  <block id="5eb77ae291c88a890426b8950858cbcc" category="paragraph">注: Kustomize などの構成管理ツールを使用してNetApp Kubernetes Monitoring Operator を管理しているお客様は、同じ手順に従って、更新された YAML セットを生成してダウンロードし、リポジトリにプッシュできます。</block>
+  <block id="f407e820df29faa344002c82daa17ec2" category="inline-image-macro">サポートページ、幅=600</block>
+  <block id="b0baa05e4ca03a2c83cff1367375a3bf" category="paragraph"><block ref="b0baa05e4ca03a2c83cff1367375a3bf" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8c4e9ad03446638823176afd0e5f8ea8" category="paragraph">Data Infrastructure Insights は、試用モードで実行しているときにセルフサービス サポートと電子メール サポートを提供します。サービスに加入したら、サポート資格を有効にすることを強くお勧めします。サポート資格を有効にすると、Web チケット システムと電話を介してテクニカル サポートにアクセスできるようになります。登録が完了するまで、デフォルトのサポート モードはセルフ サービスです。見る<block ref="055db438ec51479bd53b937469434a7e" category="inline-xref-macro-rx"></block>下に。</block>
+  <block id="204d060241f7de3644e3ebeef168c8aa" category="list-text">NetApp の新規顧客として、今後の登録やテクニカル サポートおよび Web チケット用サポート ポータルへのアクセスのために、 NetAppサポート サイト (NSS) ユーザー アカウントも作成する必要があります。このリンクは次の場所にあります<block ref="4b0df7f6652ef877e322a199d6b6edce" category="inline-link-rx"></block>。プロセスを迅速化するために、新しく登録したData Infrastructure Insights のシリアル番号を提供できます。</block>
 </blocks>
