@@ -80,7 +80,7 @@ NetApp は、さまざまな方法でData Infrastructure Insightsのサポート
 
 これらのサポートオプションはトライアルモードで利用でき、 24 時間 365 日無料でご利用いただけます。
 
-* * https://kb.netapp.com/Cloud/BlueXP/DII[KnowledgeBase]*
+* *https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs[ナレッジベース]*
 +
 このセクション内のリンクをクリックすると、ネットアップナレッジベースに移動し、関連する記事、ハウツーなどを検索できます。
 
@@ -113,7 +113,7 @@ NOTE: にNetAppクラウド製品を使用するには、登録する必要が�
 * link:https://mysupport.netapp.com/portal?_nfpb=true&_st=initialPage=true&_pageLabel=submitcase["* サポートチケット *"]
 
 
-リンクをクリックしてセールスサポートをリクエストすることもできますlink:https://bluexp.netapp.com/contact-cds["* 販売担当者 * にお問い合わせください"]。
+*営業部に問い合わせる*リンクをクリックして営業サポートをリクエストすることもできます。
 
 Data Infrastructure Insightsのシリアル番号は、サービス内で*[ヘルプ]>[サポート]*メニューから確認できます。サービスへのアクセスで問題が発生し、以前にNetAppにシリアル番号を登録したことがある場合は、NetAppサポートサイトでData Infrastructure Insightsのシリアル番号のリストを次のように確認することもできます。
 

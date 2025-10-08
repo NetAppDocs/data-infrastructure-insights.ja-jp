@@ -7,6 +7,10 @@ summary: インサイトでは、リソースがテナントの他のリソー�
 = 分析情報：ONTAP コールドストレージの再利用
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

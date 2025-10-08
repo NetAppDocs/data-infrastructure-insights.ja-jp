@@ -14,32 +14,30 @@ keywords: onboarding, new user
 
 
 [role="lead"]
-Data Infrastructure Insightsの使用を開始する前に、* NetApp BlueXP *ポータルにサインアップする必要があります。NetApp BlueXP  へのログインをすでにお持ちの場合は、いくつかの簡単な手順でData Infrastructure Insightsの無償トライアルを開始できます。
+Data Infrastructure Insightsの使用を開始する前に、* NetApp Console* ポータルにサインアップする必要があります。  NetAppコンソールのログイン情報をすでにお持ちの場合は、簡単な手順でData Infrastructure Insightsの無料トライアルを開始できます。
 
 
 
-== NetApp BlueXPアカウントの作成
+== NetAppコンソールアカウントの作成
 
-NetAppのクラウドサービスを開始するには、に移動してlink:https://bluexp.netapp.com/["* NetApp BlueXP *"^]*[開始]*をクリックします。
+NetAppのクラウドサービスを開始するには、link:https://console.netapp.com/["* NetAppコンソール*"^] *開始*をクリックします。
 
 * まだサインアップしていない場合は、*サインアップ*を選択します
 * 有効なビジネス用 E メールアドレスを入力し、パスワードを選択してください。
 * 会社名と氏名を入力します。
 * 利用条件に同意し、* Continue（続行）*を選択します。
-* BlueXPのガイドに従って操作を開始します。
+* コンソールで開始手順を説明します。
 
 
 
 
-=== NetApp BlueXPへのログインをすでにお持ちの場合はどうすればよいですか？
+=== すでにNetAppコンソール ログインを持っている場合はどうなりますか?
 
-NetApp BlueXP  アカウントを取得したら、ポータルページで「ログイン」を選択するだけですlink:https://bluexp.netapp.com/["* NetApp BlueXP *"^]。
+NetAppコンソールアカウントを取得したら、link:https://console.netapp.com/["* NetAppコンソール*"^]ポータルページ。
 
 E メールアドレスとパスワードを入力します。その後、ネットアップのクラウドサービスに関するページに移動します。
 
-[Data Infrastructure Insights ]を選択します。
-
-image:BlueXP_CloudInsights.png["BlueXP  でのData Infrastructure Insights無償トライアル"]
+Data Infrastructure Insightsの詳細を確認したり、デモをリクエストしたりするには、「分析と制御」 > 「可観測性」に移動してください。
 
 
 
@@ -49,7 +47,7 @@ Data Infrastructure Insightsに初めてログインする場合は、[Data Infr
 
 image:trial_region_selector.png["Data Infrastructure Insightsテナントをホストするリージョンの選択"]
 
-テナントの作成が完了したら、BlueXP  クレデンシャルを使用してログインし、Data Infrastructure Insightsの30日間無償トライアルを開始できます。このトライアルでは、Data Infrastructure Insightsが提供する機能を確認できます。
+テナントの作成が完了したら、コンソールの資格情報を使用してログインし、 Data Infrastructure Insightsの 30 日間無料トライアルを開始します。このトライアル期間中、 Data Infrastructure Insightsが提供する機能を試すことができます。
 
 無償トライアルでは、link:concept_subscribing_to_cloud_insights.html["サブスクリプションを開始します"]Data Infrastructure Insightsをいつでも試すことができます。サブスクリプションを購入すると、現在のサブスクリプションに基づいてData Infrastructure Insightsの機能を使用できます。
 
@@ -57,15 +55,15 @@ image:trial_region_selector.png["Data Infrastructure Insightsテナントをホ�
 
 == サインインして実行します
 
-テナントが作成されたら、いつでもNetApp BlueXP  ポータルにログインして*[Go to Data Infrastructure Insights（データインフラのインサイトに移動）]*をクリックするだけです。Data Infrastructure Insightsのテナントに直接移動します。
+テナントが作成されると、いつでもNetAppコンソールポータルにログインして、link:https://services.cloud.netapp.com["クラウド サービス"]ページに移動し、「*Data Infrastructure Insightsに移動*」を選択します。
 
 ブラウザを開いて、Data Infrastructure InsightsのテナントURLに直接アクセスすることもできます。次に例を示します。
 
  \https://<tenant-prefix>.c01.cloudinsights.netapp.com/
-また、 URL は各ユーザーの招待メールにも含まれ、簡単にアクセスしたりブックマークを付けたりできます。BlueXPにまだログインしていない場合は、ログインするように求められます。
+簡単にアクセスしてブックマークできるように、各ユーザーの招待メールにも URL が含まれます。ユーザーがまだコンソールにログインしていない場合は、ログインするように求められます。
 
 
-NOTE: 新規ユーザがテナントURLにアクセスするには、引き続きBlueXP  へのアクセスにサインアップする必要があります。
+NOTE: 新しいユーザーは、テナント URL にアクセスする前に、コンソールへのアクセスにサインアップする必要があります。
 
 新しいテナントに初めてログインするときは、をセットアップする手順が表示されますlink:task_getting_started_with_cloud_insights.html["* データの収集を開始 *"]。
 
@@ -73,13 +71,13 @@ NOTE: 新規ユーザがテナントURLにアクセスするには、引き続�
 
 == ログアウトしています
 
-Data Infrastructure Insightsからログアウトするには、*[ユーザ名]*をクリックし、*[ログアウト]*を選択します。BlueXPのサインイン画面に戻ります。
+Data Infrastructure Insightsからログアウトするには、*ユーザー名* をクリックし、*ログアウト* を選択します。コンソールのサインイン画面に戻ります。
 
 
-NOTE: Data Infrastructure Insightsからログアウトすると、BlueXP  からログアウトされます。BlueXPサインインを使用する他のNetAppクラウドサービスからもログアウトされます。
+NOTE: Data Infrastructure Insightsからログアウトすると、コンソールからもログアウトされます。コンソール サインインを使用する他のNetApp Cloud サービスからもログアウトされます。
 
 
 
 === 非アクティブ時のタイムアウト
 
-操作がない状態が6時間（360分）続くと、デフォルトではBlueXPからユーザがログアウトされます。アクティビティに関係なく、ユーザは7日後にログアウトされます。
+デフォルトでは、コンソールは 6 時間 (360 分) にわたってアクティビティがない場合にユーザーをログアウトします。アクティビティに関係なく、ユーザーは 7 日後にログアウトされます。

@@ -488,7 +488,6 @@
   <block id="e79313bfe03c4561628e01c7102ba5fb" category="section-title">監査済みイベントとアクション</block>
   <block id="8b967231ec2e102ec5001f95b74a1fbd" category="paragraph">Data Infrastructure Insightsで監査されるイベントとアクションは、大きく次の領域に分類できます。</block>
   <block id="c5c594e685367681b202d84ba0c87407" category="list-text">* ユーザーアカウント * ：ログイン、ログアウト、ロール変更など</block>
-  <block id="d7a21ae00693a409dd262b09be87f4f7" category="paragraph">例：_User * Tony Lavoie * 10.1.120.15 *、ユーザエージェント* Mozilla/5.0（Windows NT 10.0、Win64、x64）AppleWebKit/537.36（KHTML、Geckoなど）Chrome/85.0.4183.121 Safari/537.36 *、ログイン方法* BlueXP Portal Login_*</block>
   <block id="f8c4f6c2455f59fa0c1cc9fed5a8c6c1" category="list-text">* Acquisition Unit * ：作成、削除など</block>
   <block id="c1e8e78730ec648eeb7339e916d33231" category="paragraph">例： _ Acquisition Unit * AU-Boston-1 * removed_.</block>
   <block id="fa421109b9971a24c53c504a4c5ef88d" category="list-text">* Data Collector * ：追加、削除、変更、延期 / 再開、 Acquisition Unit の変更、 スタート / ストップなど</block>
@@ -1076,7 +1075,6 @@
   <block id="b7ead3a19a9e810bd9a56c2d0ba0970d" category="paragraph">各ウィジェットの右上に自動更新間隔が表示されます。</block>
   <block id="2d5591e725889a349c977cc4e7cae6db" category="paragraph">カスタムダッシュボードの期間では自動更新を使用できません。</block>
   <block id="86a98ce9895b65a865ec666b2d4a77a5" category="paragraph">* TV モード * と組み合わせて使用すると、自動更新により、ダッシュボードまたはアセットページにほぼリアルタイムでデータを表示できます。テレビモードでは、すっきりとしたディスプレイが提供されます。ナビゲーションメニューは非表示になっており、編集ボタンと同様に、データ表示用の画面のスペースが増えます。TVモードでは、Data Infrastructure Insightsの一般的なタイムアウトが無視され、手動でログアウトするか、認証セキュリティプロトコルによって自動的にログアウトするまで、ディスプレイはライブのままになります。</block>
-  <block id="e1ce05359ad592db56c9190034f73bb2" category="admonition">NetApp BlueXP  には7日間のユーザログインタイムアウトが設定されているため、Data Infrastructure Insightsもそのイベントを使用してログアウトする必要があります。再度ログインするだけで、ダッシュボードは引き続き表示されます。</block>
   <block id="16e17d81e16ad1130af115e7872fb73d" category="list-text">TVモードを有効にするには、TVモードボタンをクリックします。</block>
   <block id="01ae5a5571c2696aeab673838cae159a" category="list-text">TV モードを無効にするには、画面左上の * 終了 * ボタンをクリックします。</block>
   <block id="ab725dcaf8aab4f9267b993fc1b48570" category="paragraph">右上隅にある一時停止ボタンをクリックすると、自動更新を一時的に中断できます。一時停止中は、ダッシュボードの時間範囲フィールドに一時停止中のデータのアクティブな時間範囲が表示されます。自動更新が一時停止されている間も、データの取得と更新はまだ行われています。[ 再開 ] ボタンをクリックして、データの自動更新を続行します。</block>
@@ -1820,8 +1818,6 @@
   <block id="f3401e4ee824520e1586f085b0650e9f" category="summary">無償トライアルの期間中は、いつでもData Infrastructure Insightsにサブスクライブできます。</block>
   <block id="1aab8077f1a540841a66dd24d0732360" category="doc">Data Infrastructure Insightsのサブスクライブ</block>
   <block id="f887dd4c6ffb2d6fd67813bccd44e611" category="paragraph">Data Infrastructure Insightsは、次の3つの簡単なステップで開始できます。</block>
-  <block id="21a763771df4e64b083a2b050ce81f09" category="inline-link-macro">* NetApp BlueXP *</block>
-  <block id="6341e61d6dc641d29b3f2e7300137ea9" category="list-text">でアカウントを登録し<block ref="e0b3e45a049f223d3b91d005d1e31db5" category="inline-link-macro-rx"></block>て、NetAppのすべてのクラウドサービスにアクセスしてください。</block>
   <block id="cab27dc53edb571cac663ce2e16450dc" category="inline-link-macro">AWSマーケットプレイス</block>
   <block id="7bc1d8b07dfc0e98950abc0c7f3979a5" category="inline-link-macro">情報と地域</block>
   <block id="d618d9be50e37adf260935938e49af96" category="inline-image-macro">南京錠</block>
@@ -1882,7 +1878,6 @@
   <block id="9406fb3af0e8e2bf8446823785c0e069" category="inline-link">データインフラの分析情報</block>
   <block id="fb34277cad05cd8f39fa57afaad666e5" category="paragraph">Amazon Marketplaceのリンクをクリックすると、AWS<block ref="3ca19a3071fc3facb94d3a6ba2a1aa87" category="inline-link-rx"></block>サブスクリプションページが開き、サブスクリプションを完了できます。このページでは、計算ツールで入力した値が AWS のサブスクリプションページに入力されていないことに注意してください。管理対象ユニットの総数を入力する必要があります。</block>
   <block id="b0d79f167bb60f1ee8201b52678b1e91" category="paragraph">管理対象ユニットの総数を入力し、 12 か月または 36 か月のサブスクリプション期間を選択したら、「 * アカウントの設定 * 」をクリックしてサブスクリプションプロセスを終了します。</block>
-  <block id="1d523fd0bf0013fb2bfc407093be520b" category="paragraph">AWSのサブスクリプションプロセスが完了すると、現在のData Infrastructure Insights環境に戻ります。または、環境がアクティブでなくなった場合（ログアウトした場合など）は、NetApp BlueXPのサインインページに移動します。Data Infrastructure Insightsに再度サインインすると、お客様のサブスクリプションが有効になります。</block>
   <block id="5d3063371ceaf93b149242b0ae0e859e" category="admonition">AWS Marketplace のページで「 * アカウントの設定 * 」をクリックしてから、 AWS サブスクリプションの手続きを 1 時間以内に完了する必要があります。1 時間以内に完了しない場合は、もう一度「 * アカウントの設定 * 」をクリックして処理を完了する必要があります。</block>
   <block id="adeb6d7dca380a78c632dade1cb64bd9" category="paragraph">問題が発生し、サブスクリプションプロセスが正常に完了しない場合でも、環境にログインすると「トライアルバージョン」のバナーが表示されます。この場合は、 * Admin &gt; Subscription * に移動して、契約プロセスを繰り返すことができます。</block>
   <block id="7a523464a7ffeacc5aafdfd0de3ab1aa" category="section-title">サブスクリプションステータスを表示します</block>
@@ -2021,7 +2016,6 @@
   <block id="19afc2b6de08730341fe43a49d74b17f" category="cell">ユーザー管理：招待 / 追加 / 変更 / 非アクティブ化</block>
   <block id="99fb7036d3e93ba3319d093dfe84cd02" category="paragraph">* Premium Edition が必要です</block>
   <block id="c6050a6ee22484e6d99c05b9079a54e6" category="section-title">ユーザーを招待してアカウントを作成する</block>
-  <block id="2e28d2e91336191eb4cfb9f135bf4ce2" category="paragraph">新しいユーザアカウントを作成するには、BlueXPを使用します。ユーザはEメールで送信された招待状に応答できますが、BlueXPのアカウントをお持ちでない場合は、BlueXPにサインアップして招待を承諾する必要があります。</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="list-title">開始する前に</block>
   <block id="2261218e5eda0b1a833ad7434d235af5" category="list-text">ユーザー名は、招待の電子メールアドレスです。</block>
   <block id="ee878f787b1f1f1d4994736d075986bd" category="list-text">割り当てるユーザロールを理解します。</block>
@@ -2060,27 +2054,12 @@
   <block id="d26ae26dfaa208a028ca6437966e9b43" category="section-title">アイデンティティフェデレーションとは</block>
   <block id="3c55703ac1b754437c4ca4d09b9083c0" category="paragraph">アイデンティティフェデレーションを使用：</block>
   <block id="1fa3ec89d7b92a55ab22349de75a4680" category="list-text">認証は、お客様の社内ディレクトリにあるお客様の資格情報を使用して、お客様のアイデンティティ管理システムに委任され、多要素認証（ MFA ）などの自動化ポリシーが適用されます。</block>
-  <block id="08f656c4c33fd00fad5ab1ef569dae11" category="list-text">ユーザはすべてのNetApp BlueXPサービスに一度ログインします（シングルサインオン）。</block>
-  <block id="02f6b1d6847323521b6d5dfdeb3f5dbf" category="paragraph">ユーザアカウントは、すべてのクラウドサービスのNetApp BlueXPで管理されます。デフォルトでは、認証はBlueXPローカルユーザプロファイルを使用して行われます。このプロセスの概要を以下に示します。</block>
-  <block id="58ccf39c430354a2330777ebbfdc320c" category="inline-image-macro">ローカルを使用したBlueXP認証</block>
-  <block id="6e7c9d2ac3ef07c7bcfe628147140973" category="paragraph"><block ref="6e7c9d2ac3ef07c7bcfe628147140973" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8307f5e5195927d36157a98119d50cb2" category="paragraph">ただし、お客様の中には、独自のアイデンティティプロバイダを使用して、データインフラ分析情報やその他のNetApp BlueXP  サービスのユーザを認証したいと考えるお客様もいます。アイデンティティフェデレーションでは、NetApp BlueXPアカウントは社内ディレクトリのクレデンシャルを使用して認証されます。</block>
   <block id="5bdf50c3632df05e809cd15e1fcb4ca9" category="paragraph">次に、このプロセスの簡単な例を示します。</block>
-  <block id="34dde67853699a7c5e92b37ac717d586" category="inline-image-macro">フェデレーションを使用したBlueXP認証</block>
-  <block id="14bf8864e0c03f214a9531c84f7509ff" category="paragraph"><block ref="14bf8864e0c03f214a9531c84f7509ff" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7492f425dcc16dfdb3bf6df60569e6fb" category="paragraph">上の図では、ユーザがData Infrastructure Insightsにアクセスすると、そのユーザは認証のためにお客様のアイデンティティ管理システムに誘導されます。アカウントが認証されると、ユーザはData Infrastructure InsightsのテナントURLに移動します。</block>
   <block id="41f5e02dabb202e2e56ff56a913cc88b" category="section-title">アイデンティティフェデレーションの有効</block>
-  <block id="76ef581d75f4d1e4d3bdceeb091433ef" category="inline-link-macro">BlueXPフェデレーションの手順</block>
-  <block id="f68beb94c4510489905761611b802b02" category="paragraph">BlueXPはAuth0を使用してアイデンティティフェデレーションを実装し、Active Directoryフェデレーションサービス（ADFS）やMicrosoft Azure Active Directory（AD）などのサービスと統合します。アイデンティティフェデレーションを設定するには、を参照して<block ref="dcb213271585f680aa429c2cd0d8d64f" category="inline-link-macro-rx"></block>ください。</block>
-  <block id="885922ff1b836c95f53f6ede8cf15917" category="admonition">Data Infrastructure InsightsでSSOを使用するには、事前にBlueXP  アイデンティティフェデレーションを設定する必要があります。</block>
-  <block id="5bb414ee12d60beb5148ebd546560765" category="paragraph">BlueXP  でのアイデンティティフェデレーションの変更は、データインフラの分析情報だけでなく、すべてのNetApp BlueXP  サービスにも適用されることを理解しておくことが重要です。この変更については、お客様が所有する各BlueXP製品のNetAppチームと話し合い、使用している設定がアイデンティティフェデレーションと連携していることを確認したり、アカウントの調整が必要な場合はその旨をお客様に伝えてください。お客様は、社内の SSO チームをアイデンティティフェデレーションの変更にも関与させる必要があります。</block>
-  <block id="9ebe3356d760f8536e9bb24151537fda" category="paragraph">アイデンティティフェデレーションを有効にしたら、会社のアイデンティティプロバイダに対する変更（SAMLからMicrosoft ADへの移行など）には、ユーザのプロファイルを更新するためにBlueXPでトラブルシューティング/変更/対応が必要になる可能性があることを理解しておくことも重要です。</block>
-  <block id="5688f19f1e497727b537222451f54cc6" category="paragraph">このようなフェデレーションの問題については、でサポートチケットを開き<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block>、カテゴリ「BlueXP . NetApp . com &gt;フェデレーションの問題」を選択します。</block>
   <block id="d6034d333b0966edaeeea729724c4988" category="section-title">シングルサインオン（ SSO ）ユーザの自動プロビジョニング</block>
   <block id="5ca34449651a28aef2f66150bbdab559" category="paragraph">管理者は、ユーザを招待するだけでなく、社内ドメイン内のすべてのユーザに対して*シングルサインオン（SSO）ユーザの自動プロビジョニング*によるData Infrastructure Insightsへのアクセスを有効にすることもできます。個別に招待する必要はありません。SSOが有効な場合は、同じドメインEメールアドレスを持つすべてのユーザが社内クレデンシャルを使用してData Infrastructure Insightsにログインできます。</block>
   <block id="fa8a297cebb990edca45e0364e7e6b45" category="inline-link-macro">アイデンティティフェデレーション</block>
-  <block id="700b1528a54f585af4e6babcff795f22" category="admonition">_SSOユーザ自動プロビジョニング_は、Data Infrastructure Insights Premium Editionで使用できます。Data Infrastructure Insightsで有効にするには、事前に構成する必要があります。SSOユーザ自動プロビジョニングの設定には、<block ref="822fb5372050010317b40dcb63a546f0" category="inline-link-macro-rx"></block>上記のセクションで説明したように、NetApp BlueXP  を介した設定が含まれます。フェデレーションを使用すると、シングルサインオンユーザは、Security Assertion Markup Language 2.0（SAML）やOpenID Connect（OIDC）などのオープン標準を使用して、社内ディレクトリのクレデンシャルを使用してNetApp BlueXPアカウントにアクセスできます。</block>
-  <block id="3e1bcd2d4d8f98d94d9ab44d7d7c4163" category="paragraph">_SSOユーザ自動プロビジョニング_を設定するには、*[管理]&gt;[ユーザ管理]*ページで、事前にBlueXPアイデンティティフェデレーションを設定しておく必要があります。バナーの*[フェデレーションの設定]*リンクを選択して、BlueXPフェデレーションに進みます。設定が完了すると、Data Infrastructure Insightsの管理者はSSOユーザログインを有効にできます。管理者が _SSO ユーザーの自動プロビジョニング _ を有効にすると、すべての SSO ユーザー（ゲストやユーザーなど）にデフォルトの役割を選択します。SSO を使用してログインしたユーザには、このデフォルトロールが割り当てられます。</block>
   <block id="69b24ac806086d8120c6941f51bea8c7" category="inline-image-macro">フェデレーションを使用したユーザー管理</block>
   <block id="141cee4c6d3099b12c6927aace6bf538" category="paragraph"><block ref="141cee4c6d3099b12c6927aace6bf538" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a813fe1072f1f4f8421f847135972e39" category="paragraph">管理者が、デフォルトの SSO ロールから 1 人のユーザを昇格する場合（管理者に昇格する場合など）には、これは、ユーザの右側のメニューをクリックし、 _Assign Role_を 選択することにより、 [*Admin] &gt; [User Management] ページで実行できます。この方法で明示的なロールが割り当てられたユーザは、_SSO User Auto-Provisioning_がその後無効になった場合でも、引き続きData Infrastructure Insightsにアクセスできます。</block>
@@ -5752,7 +5731,6 @@
   <block id="6bf565eb0af1d9c4319c14b7f1ed3b40" category="list-text">機能データ</block>
   <block id="acc33fbeb51f2c273dbbbe898cd55111" category="paragraph">このデータは、ネットアップがクラウドデータサービスを提供することで生成されます。このサービスは、クラウドデータサービスの開発、導入、運用、メンテナンス、セキュリティの各分野をネットアップに通知します。機能データには、顧客情報や個人情報は含まれません。</block>
   <block id="8a0aeae003bb44ce51746437118cac5d" category="list-text">ユーザーアクセスデータ</block>
-  <block id="31dc46cbad0a2e3127365feb257368b1" category="paragraph">NetApp BlueXP  が各地域のData Infrastructure Insightsサイトと通信できるようにする認証およびアクセス情報（ユーザの承認に関連するデータなど）。</block>
   <block id="1dd36ea366f8218507b500da92bb6c48" category="list-text">ストレージワークロードのセキュリティユーザディレクトリデータ</block>
   <block id="e587cf6b5b26fd5aa0090c89ebb05008" category="paragraph">ワークロードセキュリティ機能が有効になっていて、ユーザーディレクトリコレクタを有効にすることを選択した場合、ユーザー表示名、企業の電子メールアドレス、およびActive Directoryから収集されたその他の情報が保存されます。</block>
   <block id="4030f95cb0d895349e65658e719f5d46" category="admonition">ユーザディレクトリデータとは、ワークロードセキュリティユーザディレクトリデータコレクタによって収集されたユーザディレクトリ情報であり、データインフラインサイト/ワークロードセキュリティのユーザ自身に関するデータではありません。</block>
@@ -5770,7 +5748,6 @@
   <block id="206942a675cab8dd706f1c5d66ae53a4" category="list-text">ワークロードのセキュリティ監査情報</block>
   <block id="eadd19c061641ba4fce9e9fbb954b811" category="paragraph">以下の情報は、Data Infrastructure Insights環境をホストしているリージョンに関係なく、米国内に存在します。</block>
   <block id="2a56580b4f73dbbdeb1ee18d500fa3e8" category="list-text">サイト / アカウント所有者などの環境サイト（「テナント」とも呼ばれる）情報。</block>
-  <block id="5500b33272f685ee69a5dee2eb3d3ec9" category="list-text">NetApp BlueXP  が各地域のData Infrastructure Insightsサイトと通信できるようにするための情報（ユーザの承認に関連する情報を含む）。</block>
   <block id="e2974ba7c41705b05f12779115268649" category="list-text">Data Infrastructure Insightsのユーザとテナントの関係に関連する情報。</block>
   <block id="71071f9eeb8b3ff7f4a52f9927b52da4" category="section-title">ホストリージョン</block>
   <block id="2c5e620943b15b31c38df4433ca50af9" category="paragraph">ホスト領域は次のとおりです。</block>
@@ -5983,29 +5960,18 @@
   <block id="6dccb0b39ff4102f40182d2486243608" category="section-title">オブジェクトからのビジネスエンティティの削除</block>
   <block id="7b855521b65fe198b7fa8deffb44b477" category="paragraph">オブジェクトからビジネスエンティティを削除するには、オブジェクトを照会して選択し、 * 一括処理 * をクリックして、アノテーションの削除 _ を選択します。ビジネスエンティティ注釈を選択し、 * 削除 * をクリックします。</block>
   <block id="9be58f2fc8b11ec837406376ca6b3e2a" category="doc">データインフラの分析情報をオンボーディング</block>
-  <block id="c9c452240be4db82e89f010124f3c4a2" category="paragraph">Data Infrastructure Insightsの使用を開始する前に、* NetApp BlueXP *ポータルにサインアップする必要があります。NetApp BlueXP  へのログインをすでにお持ちの場合は、いくつかの簡単な手順でData Infrastructure Insightsの無償トライアルを開始できます。</block>
-  <block id="5bff30d13ce98c505187872963af1f25" category="section-title">NetApp BlueXPアカウントの作成</block>
   <block id="1e26781b207fa848ce81c7268cf016a7" category="list-text">まだサインアップしていない場合は、*サインアップ*を選択します</block>
   <block id="05d2a837df7692f0d65e4466b2fb05bd" category="list-text">有効なビジネス用 E メールアドレスを入力し、パスワードを選択してください。</block>
   <block id="ad66d403ef43ddd58a7b527874c51878" category="list-text">会社名と氏名を入力します。</block>
   <block id="895a961645c5f6456e2cc43102e1de8a" category="list-text">利用条件に同意し、* Continue（続行）*を選択します。</block>
-  <block id="027e58ebcf59f73bde476a8af6584584" category="list-text">BlueXPのガイドに従って操作を開始します。</block>
-  <block id="6670eac4232d1c66e6c936fe67e52aff" category="section-title">NetApp BlueXPへのログインをすでにお持ちの場合はどうすればよいですか？</block>
   <block id="a46b8a484704b65f978247cb9b3901aa" category="paragraph">E メールアドレスとパスワードを入力します。その後、ネットアップのクラウドサービスに関するページに移動します。</block>
-  <block id="a255e7df64ed3494ccf094bd8b25822f" category="paragraph">[Data Infrastructure Insights ]を選択します。</block>
-  <block id="ce69050591300865b670a02cda814df2" category="inline-image-macro">BlueXP  でのData Infrastructure Insights無償トライアル</block>
-  <block id="bb54fa54730b137dbc2cd2c625c413eb" category="paragraph"><block ref="bb54fa54730b137dbc2cd2c625c413eb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="eeecd13aa136e65aaedc64374c7415bc" category="section-title">Data Infrastructure Insights無償トライアルを開始する</block>
   <block id="3b1f676d06286548e11b332567f42bbd" category="inline-link-macro">サブスクリプションを開始します</block>
   <block id="b48d78927dd619cab2e6b7fde5ffb6b1" category="paragraph">無償トライアルでは、<block ref="822a67eb96671d13fff372a75b259713" category="inline-link-macro-rx"></block>Data Infrastructure Insightsをいつでも試すことができます。サブスクリプションを購入すると、現在のサブスクリプションに基づいてData Infrastructure Insightsの機能を使用できます。</block>
   <block id="2c4bb88652ba26d23266d851053ba465" category="section-title">サインインして実行します</block>
-  <block id="c95038e09e37b3186bbce880a572f8f5" category="paragraph">また、 URL は各ユーザーの招待メールにも含まれ、簡単にアクセスしたりブックマークを付けたりできます。BlueXPにまだログインしていない場合は、ログインするように求められます。</block>
   <block id="da115c4fc9cae6fc87764395ef9ff331" category="inline-link-macro">* データの収集を開始 *</block>
   <block id="cc580c5eecd9c28053db6de1830561ee" category="section-title">ログアウトしています</block>
-  <block id="98377bec6f105f7567a616e2fae146d1" category="paragraph">Data Infrastructure Insightsからログアウトするには、*[ユーザ名]*をクリックし、*[ログアウト]*を選択します。BlueXPのサインイン画面に戻ります。</block>
-  <block id="e09151ab8df045eb7a668a5d788f1872" category="admonition">Data Infrastructure Insightsからログアウトすると、BlueXP  からログアウトされます。BlueXPサインインを使用する他のNetAppクラウドサービスからもログアウトされます。</block>
   <block id="8463a61dd94ff5934036d4c8a8936e32" category="section-title">非アクティブ時のタイムアウト</block>
-  <block id="db7d4581c8073d9c4dda50c4994c4383" category="paragraph">操作がない状態が6時間（360分）続くと、デフォルトではBlueXPからユーザがログアウトされます。アクティビティに関係なく、ユーザは7日後にログアウトされます。</block>
   <block id="fde8afa3fd65a9f38d9b11377453846e" category="doc">NetApp ONTAP コレクタ用のCloud Volumes ONTAP とAmazon FSXの設定</block>
   <block id="c45671a9389f697917f0b33d12822c51" category="section-title">Cloud Volumes ONTAP ストレージ構成</block>
   <block id="2ffc6472f9d6abaf761bbe2e6a0385ce" category="paragraph">ワークロードセキュリティエージェントをホストするシングルノード/ HA AWSインスタンスを設定するには、OnCommand Cloud Volumes ONTAPのドキュメントを参照してください。<block ref="caca64b8e9927e0ea8e8b0158b9e47cd" category="inline-link-rx"></block></block>
@@ -8929,7 +8895,6 @@
   <block id="5eb6bb157528b365f84c27bb4784031b" category="cell">シークレットキー</block>
   <block id="9447267c06cce84dba179c481872fb16" category="cell">Cloud Volume シークレットキー</block>
   <block id="36d35d8bdb33f254c1406a404bc7c125" category="cell">「Failed to execute request：Connect to &lt;AWS region endpoint &gt;：8080 [&lt;AWS region endpoint &gt;/AWS region endpoint IP &gt;] failed：connect timed out：GET \https://&lt;AWS Region Endpoint FQDN &gt;：8080/v1/Storage/IPRanges HTTP/1.1'」というエラーが表示されました。</block>
-  <block id="ef756d1229bc6f51e983884d984a03f3" category="inline-link-macro">ネットアップの技術情報アーティクル</block>
   <block id="47407ceeb441f7c5d1eac8ca6060c4b7" category="summary">NetApp Cloud Volumes ONTAP のデータコレクタを設定する</block>
   <block id="a7544b3f9e0cc7c642c8b55af45cc192" category="doc">NetApp Cloud Volumes ONTAP データコレクタ</block>
   <block id="2285e08ef18a1a3f2e02b335409147d7" category="paragraph">このデータコレクタは、 Cloud Volumes ONTAP 構成からのインベントリ収集をサポートします。</block>
@@ -9265,7 +9230,6 @@
   <block id="53f8bc03c7402d7812acddbaa9e936ca" category="cell">可能な解決策： * 推奨：強力な（など）を使用して、 Virtual Center の証明書を再生成します 1024 ビット） RSA キー。* 推奨されません。 JVM java.security 設定を変更して、 JDK.certPath.disableAlgorithms 制約を利用し、 512 ビット RSA キーを許可します。を参照して <block ref="8c7ff7eed57156b6919b2144a456417e" category="inline-link-macro-rx"></block></block>
   <block id="fabe685d95e2e1417a08839fae32f1b9" category="cell">「VMware Logs package is not supported on VMware below version 8.0.1」というメッセージが表示されます。</block>
   <block id="09e914a359bccc237b5d356257feffe8" category="inline-link-macro">KB記事</block>
-  <block id="2cb7dfab51629866872e7d7f1e343086" category="cell">8.0.1より前のバージョンのVMwareでは、ログの収集はサポートされていません。Data Infrastructure Insightsのログ収集機能を使用する場合は、VI Center Infrastructureをバージョン8.0.1以降にアップグレードします。詳細については、こちらを参照して<block ref="510a6f6d1fdadbdea9d537bab50e5367" category="inline-link-macro-rx"></block>ください。</block>
   <block id="16418fb6362362bf39641dbe5e3e3d86" category="summary">アノテーションを使用してデータを追跡する。</block>
   <block id="25d7e5698aba7e130a2b0da07a8635ed" category="paragraph">Data Infrastructure Insightsでデータの追跡方法を企業の要件に合わせてカスタマイズするときは、アノテーションと呼ばれる特殊なメモを定義してアセットに割り当てることができます。</block>
   <block id="407dc792025a10c7ad65e372a7704eb6" category="paragraph">アセットの終了日、データセンター、建物の場所、ストレージ階層、ボリュームのサービスレベルなどの情報をアノテーションに割り当てることができます。</block>
@@ -10321,17 +10285,11 @@
   <block id="37b418c8c2b422040e90081e18556979" category="section-title">ログインの問題</block>
   <block id="8f85ee65b3485bb4199931404085584c" category="cell">Data Infrastructure Insightsは6時間ごとに自動的にログアウト</block>
   <block id="39595915536b739d06f4c02735749d51" category="cell">これは、ブラウザのサードパーティのCookieが無効になっているためです。ユーザーは、ブラウザを設定してすべてのサードパーティのCookieを有効にするか、より狭い例外リストを使用してData Infrastructure Insights用のCookieを有効にすることができます。例:ブラウザの設定を開く[すべてのCookieを許可する]オプションを選択します。*または*[サードパーティクッキーをブロック]を選択し、_[\*.] auth0.com _および_[*.] NetApp .com _に例外を追加します。Microsoft Edgeでは、Chromeと同じ形式の例外が適用されます。Firefoxでは、Cookie例外は単に_auth0.comおよび_netapp.comとして指定されます。</block>
-  <block id="8ff0a6baa556dcfc21fcb29db0eff472" category="cell">BlueXPアカウントを持っていますが、BlueXPにログインできません。</block>
   <block id="0659d428df833a806e29e65e632d380a" category="inline-link-macro">ネットアップサポート</block>
-  <block id="6fbdc7276d4f79696070dabc0205c452" category="cell">からチケットを開き<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block>ます。カテゴリ「blueXP.netapp.com」&gt;「Account/Login Issues」または「bluexp.netapp.com」&gt;「Federation Issues」を選択します。これらは、BlueXPの問題や質問に特化したものです。Data Infrastructure Insightsテクニカルサポートのその他の問題については、にお問い合わせください<block ref="1a8b44ad735b0e8f3f08395032e9cb16" category="inline-link-macro-rx"></block>。</block>
   <block id="7bb58e74fa35bd90237db949c52cec82" category="cell">Data Infrastructure Insightsに招待されましたが、「権限がありません」というメッセージが表示されます。</block>
-  <block id="ab1561bb6c52df24635b2b2ff6194a94" category="cell">BlueXPアカウントにサインアップしたこと、またはBlueXPでSSOログインを使用していることを確認します。BlueXP  プロファイルのEメールアドレスが、Data Infrastructure InsightsのようこそEメールに表示されているEメールアドレスと一致していることを確認します。E メールが一致しない場合は、正しい E メールアドレスで新しい招待状をリクエストします。</block>
-  <block id="3a1e8ff9b6dee2eb5f1881fa4a0710e7" category="cell">BlueXP  からログアウトし、Data Infrastructure Insightsから自動的にログアウトしました。</block>
   <block id="b6497315eac7548893fe9df9a3a4e133" category="cell">NetAppクラウドサービス全体でシングルサインオン（SSO）を実行すると、Data Infrastructure Insightsのすべてのセッションがログアウトされます。複数のData Infrastructure Insightsアカウントにアクセスできる場合は、いずれかのアカウントからログアウトすると、アクティブなセッションがすべてログアウトされます。ログインし直して、アカウントにアクセスします。</block>
   <block id="6db6d0d20a3dd35029f13f472f68dbbd" category="cell">数日後に自動的にログアウトされました。</block>
-  <block id="d6d54ee6b6dfdd2783aff066e96f7330" category="cell">NetApp Cloudアカウントでは、数日ごとに再認証が必要です（現在のBlueXPの設定は7日です）。ログインし直して、アカウントにアクセスします。</block>
   <block id="8b6ee0d30d0749811a1b65835a1d82ad" category="cell">「ログインを許可されていません」というエラーメッセージが表示されます。</block>
-  <block id="1b51f17425f84d494f4007c3f9ae163b" category="cell">アカウント管理者に問い合わせて、Data Infrastructure Insightsへのアクセス権を確認してください。BlueXP  プロファイルのEメールアドレスが、Data Infrastructure InsightsのようこそEメールに表示されているEメールアドレスと一致していることを確認する</block>
   <block id="96121ba0b77816de52c6e906145fa0f1" category="cell">その他のログインエラーです</block>
   <block id="f4300936bf66917c778b4197c0a05315" category="cell">Chrome で incognito モードを試すか、ブラウザの履歴、クッキー、およびキャッシュをクリアします。別のブラウザプロファイル（例 Chrome - ユーザーを追加します）。</block>
   <block id="6f482c482b4f6739bf91b49fb509e1fa" category="section-title">その他の問題</block>
@@ -11079,10 +11037,7 @@
   <block id="f596c7c5f04ed4be7cad8a6bac5f0b64" category="paragraph">Data Infrastructure Insightsに初めてログインする場合は、[Data Infrastructure Insights Offering]で*[Start Free Trial]*をクリックします。Data Infrastructure Insightsでは、テナントを配置する地域の選択など、企業のテナントを作成する手順を説明します。</block>
   <block id="d6fc6f290827ae120b8547b3660afe0e" category="inline-image-macro">Data Infrastructure Insightsテナントをホストするリージョンの選択</block>
   <block id="0959e45a1edcdcaa7f540365665b3986" category="paragraph"><block ref="0959e45a1edcdcaa7f540365665b3986" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1e8a8b3c445b73def4e806cac0aa998d" category="paragraph">テナントの作成が完了したら、BlueXP  クレデンシャルを使用してログインし、Data Infrastructure Insightsの30日間無償トライアルを開始できます。このトライアルでは、Data Infrastructure Insightsが提供する機能を確認できます。</block>
-  <block id="cccf87ffc04aeb31da5c700ef184d03c" category="paragraph">テナントが作成されたら、いつでもNetApp BlueXP  ポータルにログインして*[Go to Data Infrastructure Insights（データインフラのインサイトに移動）]*をクリックするだけです。Data Infrastructure Insightsのテナントに直接移動します。</block>
   <block id="206cb1224c200bbbd73cfa4118ad7c1e" category="paragraph">ブラウザを開いて、Data Infrastructure InsightsのテナントURLに直接アクセスすることもできます。次に例を示します。</block>
-  <block id="8892cd0f593b5478c5dbbe5ac3270b4a" category="admonition">新規ユーザがテナントURLにアクセスするには、引き続きBlueXP  へのアクセスにサインアップする必要があります。</block>
   <block id="587f396a83dde1056c9bf606ffc535f7" category="paragraph">新しいテナントに初めてログインするときは、をセットアップする手順が表示されます<block ref="2949f1254245e371c2d697f481723a7e" category="inline-link-macro-rx"></block>。</block>
   <block id="8c8f719781e45e8796bf00085394a1ca" category="paragraph">このデータコレクタを使用すると、テナント上のApacheサーバからデータを収集できます。</block>
   <block id="44c442d3e78a8d192000c14c74f3d018" category="paragraph">収集用のエージェントを設定していない場合は、テナントで要求され<block ref="a1b69a79c96be75135c991d76ebf15bb" category="inline-link-macro-rx"></block>ます。</block>
@@ -11241,7 +11196,6 @@
   <block id="2b8272217b69f1c5b5ad5968f0bc0945" category="list-text">Data Infrastructure Insightsの無償トライアルにご登録いただき、利用可能な機能をご確認ください。無償トライアルに登録するには：</block>
   <block id="6d2404e5699069be70636f65562fe693" category="list-text">に移動<block ref="66922be03d9fc23a3ec9641b7884c8f2" category="inline-link-rx"></block></block>
   <block id="e78fd759357c2a61f07ddc6a902f9270" category="list-text">ページ上部の*購入方法*を選択します。</block>
-  <block id="7070fd1d7b5d144bd3131c3c2b7ee1ca" category="list-text">[Request trial]*を選択します。BlueXP  にまだ登録していない場合は、詳細を入力してサインアップしてください。それ以外の場合は、サインインします。</block>
   <block id="e461fd437885ee63b7f00e77ade6b3cb" category="list-text">会議をスケジュールするか、担当者からトライアルについての連絡をお待ちください。</block>
   <block id="44d2017272b4664ce749afa3c1fc2785" category="summary">SAN Analyzerは'テナント上の資産のトポロジーを提供</block>
   <block id="a720fce5b3da4c111f19c80487c269cf" category="paragraph">SANは重要なワークロードの処理に非常に重要な役割を果たしますが、その複雑さは、大規模なシステム停止や顧客の業務停止を招く可能性があります。DIIのSAN Analyzer*により'SANの管理がよりシンプルかつ効率的になりますこの強力なツールは、エンドツーエンドの可視化を提供し、VM /ホストからネットワーク、LUN、ストレージまでの依存関係をマッピングします。</block>
@@ -11366,8 +11320,6 @@
   <block id="1677cd7abeaa8f0a0514a964c0c2bda6" category="paragraph"><block ref="1677cd7abeaa8f0a0514a964c0c2bda6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0b7788a77d5d76748437f02599d4ffbf" category="paragraph"><block ref="0b7788a77d5d76748437f02599d4ffbf" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e4d6c49d3ae18aca7ed82f5ef2ab8266" category="paragraph"><block ref="e4d6c49d3ae18aca7ed82f5ef2ab8266" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1158d69294406edc67b8de2b5ed02647" category="paragraph">NetAppのクラウドサービスを開始するには、に移動して<block ref="40ad5c1f57b9131d3640bb640a07e49e" category="inline-link-macro-rx"></block>*[開始]*をクリックします。</block>
-  <block id="90aa9e4cd4632612b7635f2c366a8948" category="paragraph">NetApp BlueXP  アカウントを取得したら、ポータルページで「ログイン」を選択するだけです<block ref="40ad5c1f57b9131d3640bb640a07e49e" category="inline-link-macro-rx"></block>。</block>
   <block id="b7b46ce5d1a547db89c0bc615ff272a5" category="inline-link-macro">ASA</block>
   <block id="e4d6d8fa32272beabde4921e66b643d2" category="paragraph">ONTAP Essentialsには、最新世代のデバイスの管理機能がすぐに使えるようになりました<block ref="a86d3d554a7f4851edc0f19a9e8accf3" category="inline-link-macro-rx"></block>。これには、ONTAPで実行されるワークロードのVMからLUNへのトポロジを実現するSAN Analyzerが含まれています。この機能は、Data Infrastructure Insights Basicエディションの一部としてNetAppサポートでも利用できるようになりました。</block>
   <block id="8af8d6d7603eec1cb34086e9cf6e2055" category="inline-image-macro">ASAがユニファイドとは異なることを示すONTAP Essentialsドロップダウン</block>
@@ -11406,8 +11358,6 @@
   <block id="0e7f6af549f009474555d1625059e6d7" category="cell">[Auto Renewal]が有効な場合、対応は不要です。NetAppセールスに連絡してサブスクリプションを更新してください。</block>
   <block id="2e9dbda35cab3bb298214da257ad124f" category="cell">ページからトライアルを更新し<block ref="1270e27ca8ec5d3dff21c492e4b5c786" category="inline-link-macro-rx"></block>ます。試用版は 1 回更新できます。サブスクリプションの購入については、NetApp営業担当にお問い合わせください</block>
   <block id="a25c3f0a67375ee45e02e2a95818cfb5" category="cell">サブスクリプションの購入については、NetApp営業担当にお問い合わせください</block>
-  <block id="670521a1846ad94b7cc140e2678df21c" category="paragraph">これらの機能の1つまたは複数のプレビューをご希望の場合は、にお問い合わせください<block ref="02af545fedbe237243dabe2f44648f4d" category="inline-link-macro-rx"></block>。</block>
-  <block id="16630d72023cbbf23b8ab69cac2b3ff7" category="paragraph">リンクをクリックしてセールスサポートをリクエストすることもできます<block ref="6193a07b36740b6aedc4527702e204e2" category="inline-link-macro-rx"></block>。</block>
   <block id="a42decca1d15ec644d4c66c06689344e" category="paragraph"><block ref="a4e343c69e2eae514016d98dfce8b36b" category="inline-link-macro-rx"></block>データコレクタを使用すると、VMwareで設定されている同名タグを使用してCloud Insightsのテキスト注釈を入力できます。</block>
   <block id="0d0549b05d1645d38baa1a6cedaa7190" category="paragraph">Cloud Insights では、多数のエキサイティングなプレビュー機能が定期的にハイライトされています。これらの機能の1つまたは複数のプレビューをご希望の場合は、にお問い合わせください<block ref="02af545fedbe237243dabe2f44648f4d" category="inline-link-macro-rx"></block>。</block>
   <block id="6230fc6d3836bf964eb587a1b21b5c48" category="admonition">現在Premium Editionをお使いで、レポートを保持したい場合は、こちらをお読みください<block ref="85f8206314043d7dd91d050def6a5cd1" category="inline-link-macro-rx"></block>。</block>
@@ -11416,15 +11366,9 @@
   <block id="5620b4a9c0487779fe08be37f85948ac" category="paragraph"><block ref="5620b4a9c0487779fe08be37f85948ac" category="inline-image-macro-rx" type="image"></block></block>
   <block id="905f3e264909d9cdcfa3de883e22e115" category="inline-image-macro">SAN Analyzerのスライドアウト・パネル</block>
   <block id="16e072902d4155747f40acc51a5aa5a3" category="paragraph"><block ref="16e072902d4155747f40acc51a5aa5a3" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1eaf65163d0a898b5a6a94771ef2cf69" category="list-text">* https://kb.netapp.com/Cloud/BlueXP/DII[KnowledgeBase]*</block>
   <block id="0e8f78366da6895d9cdeb4b8ed117539" category="paragraph">このセクション内のリンクをクリックすると、ネットアップナレッジベースに移動し、関連する記事、ハウツーなどを検索できます。</block>
   <block id="bf404f6bed29d85c3f6e00ca198b64e2" category="paragraph">2023年4月4日より前のリリースでは、クラウド接続で現在収集されているすべてのONTAP システムについて、新しいNetApp ONTAP データ管理ソフトウェアデータコレクタを設定する必要があります。</block>
-  <block id="bf82f4272c116f4033743ef9a8d2db15" category="paragraph">プロキシ設定の詳細については、NetAppを参照し<block ref="b348c1aae834cf0cd466b9787dfa5acf" category="inline-link-macro-rx"></block>てください。</block>
-  <block id="a7cf74afe22d08d0531dde90555aadbd" category="cell">クエリー変数およびスイッチの設定によっては、一部のクエリーがデフォルトのタイムアウトを超える場合があります。<block ref="fd40aed016519dab72e69cf2e3342cb9" category="inline-link-macro-rx"></block>です。</block>
   <block id="fb915b764f3baecfa629ff22686e14ee" category="admonition">このデータコレクタは、2023年4月4日をもってData Infrastructure Insightsにインストールできなくなり、2023年7月にインストールされたすべてのData Infrastructure Insightsから削除される予定です。</block>
-  <block id="1f1f9d998591f96c2653327f9004b1a9" category="cell"><block ref="588cebdad26ee4a9a3bb08c290310eb7" category="inline-link-macro-rx"></block>Data Infrastructure InsightsがAcquisition Unitとの通信に使用するは、Data Infrastructure InsightsとData Collector自体との間の通信は行いません。以下にいくつかの方法で試してみましょう。Acquisition UnitでFQDNを解決して、必要なポートに到達できることを確認してください。エラーメッセージに示されたエンドポイントにアクセスするためにプロキシが必要でないことを確認します。cURLを使用して、Acquisition Unitとエンドポイント間の通信をテストできます。このテストにプロキシを使用していない*ことを確認してください。例: root@acquisitionunit#curl -s -H accept: application/json -H "Content-type: application/json"-H api-key:&lt;データコレクタの資格情報で使用されるAPIキー-H secret-key:&lt;データコレクタの資格情報で使用されるシークレットキー&gt;-X Get \https://&lt;AWS Regional Endpoint &gt;: 808080/v1/Storage/IPRanges参照。<block ref="ee10e7e073fdf55fff4a0c77a9c435fc" category="inline-link-macro-rx"></block></block>
-  <block id="1ec51096f7cea66fb872ea91910e89b9" category="paragraph">その他のトラブルシューティングのヒントについては、を参照して<block ref="6fe211aef2305839bd4b415ac3b03770" category="inline-link-macro-rx"></block>ください（サポートへのサインインが必要です）。</block>
-  <block id="9e6e19182965cf2820f2a5f8cce84e8b" category="cell">AUをSELinuxにインストールしている場合は、SEを_permissive_modeに設定する必要があります。Enforcing_modeはサポートされていませんSELinuxをPermissiveモードに設定したら、AUサービスを再起動します。<block ref="2aa71c1262c825b4349ce4125965fabb" category="inline-link-macro-rx"></block>です。</block>
   <block id="af66622d3522b0b6fa496a47273bdb04" category="paragraph">Data Collector Support Matrixには、ベンダーやモデルの情報など、Data Infrastructure InsightsでサポートされるData Collectorのリファレンスが記載されています。</block>
   <block id="8892f0f7118a4e14ceef9a37218a5a33" category="cell">HPE Alletra 9080 HPE_3PAR 20450 HPE_3PAR 20850 HPE_3PAR 7200 HPE_3PAR 7200c HPE_3PAR 7400 HPE_3PAR 7400c HPE_3PAR 7440c HPE_3PAR 7450c HPE_3PAR 3400 3400 HPE_3400 3400 HPE_3PPE_3400</block>
   <block id="10fd66f5b4802aee3a88de2a537a57b4" category="cell">使用済み容量</block>
@@ -12540,7 +12484,6 @@
   <block id="2e2565dd8910383ad2b3626e2b5d37b2" category="sidebar">VMアナライザー</block>
   <block id="35c091b25f788bb392ac1dd40614c3e3" category="list-text">さまざまな柔軟なサブスクリプション オプションを通じて、データへの継続的かつ中断のないアクセスを実現するには、Data Infrastructure Insights に*サブスクライブ*してください。</block>
   <block id="a2282c5ca88a344b1bf947a11cb57bc8" category="inline-link-macro">NetAppセールスダイレクト</block>
-  <block id="dbed590bd111eb57145cd0aa78c71ccb" category="list-text"><block ref="dbed590bd111eb57145cd0aa78c71ccb" category="inline-link-macro-rx"></block></block>
   <block id="fbb9a72326df00d6f836e5eea8110335" category="list-text">AWS マーケットプレイス:</block>
   <block id="ec298b41c1e3f240e9fc796c682f69de" category="inline-link-macro">固定期間サブスクリプション</block>
   <block id="f56e44396701dcd46539ca0e7b1b3320" category="list-text"><block ref="f56e44396701dcd46539ca0e7b1b3320" category="inline-link-macro-rx"></block></block>
@@ -12771,4 +12714,58 @@
   <block id="b0baa05e4ca03a2c83cff1367375a3bf" category="paragraph"><block ref="b0baa05e4ca03a2c83cff1367375a3bf" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8c4e9ad03446638823176afd0e5f8ea8" category="paragraph">Data Infrastructure Insights は、試用モードで実行しているときにセルフサービス サポートと電子メール サポートを提供します。サービスに加入したら、サポート資格を有効にすることを強くお勧めします。サポート資格を有効にすると、Web チケット システムと電話を介してテクニカル サポートにアクセスできるようになります。登録が完了するまで、デフォルトのサポート モードはセルフ サービスです。見る<block ref="055db438ec51479bd53b937469434a7e" category="inline-xref-macro-rx"></block>下に。</block>
   <block id="204d060241f7de3644e3ebeef168c8aa" category="list-text">NetApp の新規顧客として、今後の登録やテクニカル サポートおよび Web チケット用サポート ポータルへのアクセスのために、 NetAppサポート サイト (NSS) ユーザー アカウントも作成する必要があります。このリンクは次の場所にあります<block ref="4b0df7f6652ef877e322a199d6b6edce" category="inline-link-rx"></block>。プロセスを迅速化するために、新しく登録したData Infrastructure Insights のシリアル番号を提供できます。</block>
+  <block id="4d4f08b680e8b232c68293d97a2dac48" category="admonition">NetAppコンソールには 7 日間の独自のユーザー ログイン タイムアウトがあるため、 Data Infrastructure Insightsそのイベントでログアウトする必要があります。再度ログインするだけでダッシュボードが引き続き表示されます。</block>
+  <block id="43680febd505de2083039d0fe7ca8947" category="paragraph">これらの機能の 1 つ以上をプレビューすることにご興味がある場合は、 NetApp の営業チームに詳細をお問い合わせください。</block>
+  <block id="f8c86fc2d67d1956112f774f6b072f20" category="list-text">*https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs[ナレッジベース]*</block>
+  <block id="f55d23a57e602a67ed79cd2014d28415" category="paragraph">*営業部に問い合わせる*リンクをクリックして営業サポートをリクエストすることもできます。</block>
+  <block id="14b33e994477a76e918b15271e482d20" category="inline-link-macro">* NetAppコンソール*</block>
+  <block id="485e07b6cd31ba2d7e9f46491555e216" category="list-text">アカウント登録はこちら<block ref="783bda85a492283bb02841c8613ed63d" category="inline-link-macro-rx"></block>NetApp のすべてのクラウド サービスにアクセスできます。</block>
+  <block id="90fd194e43d479c0c3c0d066c83fa95d" category="list-text">*トライアルをリクエスト*を選択します。コンソールにまだ登録していない場合は、詳細を入力してサインアップしてください。それ以外の場合はサインインしてください。</block>
+  <block id="8e895430cb7f81fc7e1bf63e870e6265" category="list-text"><block ref="8e895430cb7f81fc7e1bf63e870e6265" category="inline-link-macro-rx"></block></block>
+  <block id="08323cc8bf02aae61a01a839769a5e26" category="paragraph">AWS サブスクリプションプロセスが完了すると、 Data Infrastructure Insights環境に戻ります。または、環境がアクティブでなくなった場合 (ログアウトした場合など)、NetAPp コンソールのサインイン ページに移動します。  Data Infrastructure Insightsに再度サインインすると、サブスクリプションがアクティブになります。</block>
+  <block id="a6cab9905e7c8d4c6632a729468da854" category="paragraph">新しいユーザー アカウントの作成は、 NetAppコンソールを通じて行われます。ユーザーは電子メールで送信された招待に応答できますが、ユーザーがコンソールのアカウントを持っていない場合は、招待を承諾できるようにサインアップする必要があります。</block>
+  <block id="4070a1fca01c010c21a6d903adbba45c" category="list-text">ユーザーはすべてのNetAppコンソール サービスに一度ログインします (シングル サインオン)。</block>
+  <block id="e38a79d0a33c9944d49b323ae38a3cbd" category="paragraph">すべてのクラウド サービスのユーザー アカウントは、 NetAppコンソールで管理されます。デフォルトでは、認証はコンソールのローカル ユーザー プロファイルを使用して行われます。以下にそのプロセスの簡略化された概要を示します。</block>
+  <block id="b91ce10da0a96befde3daf96ef461002" category="inline-image-macro">ローカル認証</block>
+  <block id="80baa00904ed63558dc3d0a1a04eb3e1" category="paragraph"><block ref="80baa00904ed63558dc3d0a1a04eb3e1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="aa9976cb174e8153b357604eaa9efd75" category="paragraph">ただし、お客様によっては、 Data Infrastructure Insightsやその他のNetAppコンソール サービスのユーザーを認証するために独自の ID プロバイダーを使用したいと考えています。  Identity Federation を使用すると、 NetAppコンソール アカウントは企業ディレクトリの資格情報を使用して認証されます。</block>
+  <block id="ff84df4edca96aff4369430e2d721aaf" category="inline-image-macro">フェデレーションを使用した認証</block>
+  <block id="a6a29f3b88017e799ffcd98bff8a98ff" category="paragraph"><block ref="a6a29f3b88017e799ffcd98bff8a98ff" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="886b1a3de15b78d2b278736a98396c67" category="inline-link-macro">連盟の指示</block>
+  <block id="c6d7acb559f79c2514c4e63a4fa62c93" category="paragraph">コンソールは Auth0 を使用して ID フェデレーションを実装し、Active Directory Federation Services (ADFS) や Microsoft Azure Active Directory (AD) などのサービスと統合します。アイデンティティフェデレーションを構成するには、<block ref="a4b6ed3ca8f07d360215db41c21a5e43" category="inline-link-macro-rx"></block> 。</block>
+  <block id="98d798cf2b5d29b88d7b8011d355724a" category="admonition">Data Infrastructure Insightsで SSO を使用する前に、Identity Federation を構成する必要があります。</block>
+  <block id="4ac685237dfedaa56fd08e5496497255" category="paragraph">アイデンティティ フェデレーションの変更は、Data Infrastructure Insightsだけでなく、すべてのNetAppコンソール サービスに適用されることを理解することが重要です。お客様は、所有する各製品のNetAppチームとこの変更について話し合い、使用している構成が Identity Federation で機能するか、アカウントに調整が必要かどうかを確認する必要があります。顧客は、アイデンティティ フェデレーションへの変更に社内の SSO チームも関与させる必要があります。</block>
+  <block id="b3ebc864803d6de1e2c5fdf3c020ad0e" category="paragraph">また、ID フェデレーションを有効にすると、会社の ID プロバイダーに変更を加える場合 (SAML から Microsoft AD への移行など)、ユーザーのプロファイルを更新するためにトラブルシューティングや変更、注意が必要になる可能性が高いことを認識しておくことも重要です。</block>
+  <block id="aeb3c9ddf34c77460d6ca6a264475ebc" category="paragraph">この問題やその他のフェデレーションの問題については、次の場所でサポートチケットを開くことができます。<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block> 。</block>
+  <block id="2e9d92eab4f95a7f9f86e3283810fd7a" category="admonition">_SSO ユーザー自動プロビジョニング_ はData Infrastructure Insights Premium Edition で使用できますが、 Data Infrastructure Insightsで有効にする前に構成する必要があります。 SSOユーザー自動プロビジョニング構成には以下が含まれます<block ref="822fb5372050010317b40dcb63a546f0" category="inline-link-macro-rx"></block>上記のセクションで説明したように、 NetAppコンソール経由で実行します。フェデレーションにより、シングル サインオン ユーザーは、Security Assertion Markup Language 2.0 (SAML) や OpenID Connect (OIDC) などのオープン スタンダードを使用して、企業ディレクトリの資格情報を使用してNetAppコンソール アカウントにアクセスできるようになります。</block>
+  <block id="9a43d0d6fcf0114c87a7f4b91ec16de7" category="paragraph">_SSO ユーザー自動プロビジョニング_ を構成するには、*管理 &gt; ユーザー管理* ページで、まず Identity Federation を設定する必要があります。バナーの*フェデレーションの設定*リンクを選択して、コンソール フェデレーションに進みます。設定が完了すると、 Data Infrastructure Insights管理者は SSO ユーザー ログインを有効にできるようになります。管理者が _SSO ユーザーの自動プロビジョニング_ を有効にすると、すべての SSO ユーザーのデフォルト ロール (ゲストやユーザーなど) を選択します。  SSO 経由でログインするユーザーには、そのデフォルトのロールが与えられます。</block>
+  <block id="99a022ffdff1e8eeae3ab89eebb7370b" category="paragraph">NetAppコンソールが地域のData Infrastructure Insightsサイトと通信できるようにする認証およびアクセス情報 (ユーザー認証に関連するデータを含む)。</block>
+  <block id="ca895bde8f170399f93431a372e7b032" category="list-text">NetAppコンソールが地域のData Infrastructure Insightsサイトと通信できるようにする情報 (ユーザー認証に関連するものを含む)。</block>
+  <block id="549ae8b6dea4926a2af206c5d7300fc5" category="paragraph">Data Infrastructure Insightsの使用を開始する前に、* NetApp Console* ポータルにサインアップする必要があります。  NetAppコンソールのログイン情報をすでにお持ちの場合は、簡単な手順でData Infrastructure Insightsの無料トライアルを開始できます。</block>
+  <block id="bb793de9cdfd6b52adc5dea5b6228679" category="section-title">NetAppコンソールアカウントの作成</block>
+  <block id="b4e0df93660adc2e97f2f5484451c415" category="paragraph">NetAppのクラウドサービスを開始するには、<block ref="5b0deb840231d6f2646d7cf25956c35a" category="inline-link-macro-rx"></block> *開始*をクリックします。</block>
+  <block id="d127182d44408d014798631913d1e97f" category="list-text">コンソールで開始手順を説明します。</block>
+  <block id="f691976da142019af74f673d9e988d66" category="section-title">すでにNetAppコンソール ログインを持っている場合はどうなりますか?</block>
+  <block id="2a76d74bf06e79d6a8243138ab8d0572" category="paragraph">NetAppコンソールアカウントを取得したら、<block ref="5b0deb840231d6f2646d7cf25956c35a" category="inline-link-macro-rx"></block>ポータルページ。</block>
+  <block id="4ec4e4954d48db50650c5ec49007cf27" category="paragraph">Data Infrastructure Insightsの詳細を確認したり、デモをリクエストしたりするには、「分析と制御」 &gt; 「可観測性」に移動してください。</block>
+  <block id="13d2916279db639fea18a00088e8cb21" category="paragraph">テナントの作成が完了したら、コンソールの資格情報を使用してログインし、 Data Infrastructure Insightsの 30 日間無料トライアルを開始します。このトライアル期間中、 Data Infrastructure Insightsが提供する機能を試すことができます。</block>
+  <block id="27e0956311428740c19b40a7a971c7ef" category="inline-link-macro">クラウド サービス</block>
+  <block id="d97af656d080e05ccc035b1948ac30b8" category="paragraph">テナントが作成されると、いつでもNetAppコンソールポータルにログインして、<block ref="37a150e92f05332b5bc5a56046c3177c" category="inline-link-macro-rx"></block>ページに移動し、「*Data Infrastructure Insightsに移動*」を選択します。</block>
+  <block id="9834a50024d1c9eb92d1d75e4f1fc3fa" category="paragraph">簡単にアクセスしてブックマークできるように、各ユーザーの招待メールにも URL が含まれます。ユーザーがまだコンソールにログインしていない場合は、ログインするように求められます。</block>
+  <block id="955402d5e1e7fb2ed3dc9cdbbcb35826" category="admonition">新しいユーザーは、テナント URL にアクセスする前に、コンソールへのアクセスにサインアップする必要があります。</block>
+  <block id="21360340baae34a3a426d1ff1dbc116f" category="paragraph">Data Infrastructure Insightsからログアウトするには、*ユーザー名* をクリックし、*ログアウト* を選択します。コンソールのサインイン画面に戻ります。</block>
+  <block id="c4207c205277b5cad1577163a6bae022" category="admonition">Data Infrastructure Insightsからログアウトすると、コンソールからもログアウトされます。コンソール サインインを使用する他のNetApp Cloud サービスからもログアウトされます。</block>
+  <block id="db8ff6a5dfcebcb4f9f3077c3acd8c0a" category="paragraph">デフォルトでは、コンソールは 6 時間 (360 分) にわたってアクティビティがない場合にユーザーをログアウトします。アクティビティに関係なく、ユーザーは 7 日後にログアウトされます。</block>
+  <block id="912dc75ad8c1b3c63c4788f3dd66dbb8" category="paragraph">プロキシ設定の詳細については、 NetApp<block ref="c1e13c6c878698ae2a44059eca84db33" category="inline-link-macro-rx"></block> 。</block>
+  <block id="3dbf1ba1bacdb669e8846d5cf9a7e402" category="cell">クエリ変数とスイッチ構成によっては、一部のクエリがデフォルトのタイムアウトを超える場合があります。<block ref="04a64b547dbf0b228e70a63d94725321" category="inline-link-macro-rx"></block> 。</block>
+  <block id="f51fb2108c9628f317aa92174475a004" category="cell">その<block ref="588cebdad26ee4a9a3bb08c290310eb7" category="inline-link-macro-rx"></block>Data Infrastructure Insightsが Acquisition Unit と通信するために使用されるものは、Data Infrastructure Insightsとデータ コレクター自体の間では通信しません。試すことができるいくつかのことを次に示します。取得ユニットが FQDN を解決し、必要なポートに到達できることを確認します。エラー メッセージで指定されたエンドポイントに到達するためにプロキシが必要ないことを確認します。 Curl を使用して、取得ユニットとエンドポイント間の通信をテストできます。このテストではプロキシを使用していないことを確認してください。例: root@acquisitionunit# curl -s -H accept:application/json -H "Content-type: application/json" -H api-key:&lt;データコレクターの認証情報で使用される API キー -H secret-key:&lt;データコレクターの認証情報で使用される秘密キー&gt; -X GET \https://&lt;AWS リージョンエンドポイント&gt;:8080/v1/Storage/IPRanges</block>
+  <block id="64695c46a63626de5533ce69795996fb" category="cell">ログ収集は、VMware バージョン 8.0.1 より前ではサポートされていません。 Data Infrastructure Insights内のログ収集機能を使用する場合は、VI Center Infrastructure をバージョン 8.0.1 以降にアップグレードしてください。詳細については、こちらをご覧ください<block ref="ae8e56653b1173564f25a9c990f6c3c4" category="inline-link-macro-rx"></block>。</block>
+  <block id="f983e92f007e61009c98c62ad5615476" category="cell">コンソールアカウントを持っていますが、ログインできません。</block>
+  <block id="5dd83d7d47f6c76b4dac6687a0fc6a2d" category="cell">チケットを開く<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block>。カテゴリ「console.netapp.com &gt; アカウント/ログインの問題」または「console.netapp.com &gt; フェデレーションの問題」を選択します。これらは、コンソールの問題や質問に特化しています。その他のData Infrastructure Insightsのテクニカルサポートの問題については、<block ref="1a8b44ad735b0e8f3f08395032e9cb16" category="inline-link-macro-rx"></block> 。</block>
+  <block id="0da134fdf104cff1abc8f449063214e0" category="cell">コンソール アカウントにサインアップしていること、または組織がコンソールで SSO ログインを使用していることを確認します。コンソール プロファイルの電子メール アドレスが、 Data Infrastructure Insightsのウェルカム メールに記載されている電子メール アドレスと一致していることを確認します。メールアドレスが一致しない場合は、正しいメールアドレスで新しい招待をリクエストしてください。</block>
+  <block id="1e811d1179da441c6a469e0c9e18f755" category="cell">コンソールからログアウトすると、 Data Infrastructure Insightsからも自動的にログアウトされました。</block>
+  <block id="729e0245270539dde4c90fa689f6c381" category="cell">NetApp Cloud アカウントでは、数日ごとに再認証が必要です (現在のコンソール設定は 7 日です)。アカウントにアクセスするには再度ログインしてください。</block>
+  <block id="5a9b478b441f7c2030a759e864c6a230" category="cell">Data Infrastructure Insightsへのアクセスを確認するには、アカウント管理者に問い合わせてください。コンソール プロファイルのメール アドレスが、 Data Infrastructure Insightsのウェルカム メールに記載されているメール アドレスと一致していることを確認します。</block>
+  <block id="247e36ea24d5c72138f2f225cbb3ff5a" category="paragraph">追加のトラブルシューティングのヒントについては、<block ref="f2ab65542a88d990d661538806479fe3" category="inline-link-macro-rx"></block> (サポートへのサインインが必要です)。</block>
+  <block id="62d43538bf5a9e08593a0549e6121905" category="cell">AU を SELINUX にインストールする場合、SE を _permissive_ モードに設定する必要があります。  _Enforcing_ モードはサポートされていません。  SELINUX を許可モードに設定した後、AU サービスを再起動します。</block>
 </blocks>

@@ -124,7 +124,7 @@ Data Infrastructure Insightsには、アカウント所有者、管理者、ユ�
 
 == ユーザーを招待してアカウントを作成する
 
-新しいユーザアカウントを作成するには、BlueXPを使用します。ユーザはEメールで送信された招待状に応答できますが、BlueXPのアカウントをお持ちでない場合は、BlueXPにサインアップして招待を承諾する必要があります。
+新しいユーザー アカウントの作成は、 NetAppコンソールを通じて行われます。ユーザーは電子メールで送信された招待に応答できますが、ユーザーがコンソールのアカウントを持っていない場合は、招待を承諾できるようにサインアップする必要があります。
 
 .開始する前に
 * ユーザー名は、招待の電子メールアドレスです。
@@ -209,18 +209,18 @@ image:Assign_Account_Owner.png["アカウント所有者の選択を示すユー
 アイデンティティフェデレーションを使用：
 
 * 認証は、お客様の社内ディレクトリにあるお客様の資格情報を使用して、お客様のアイデンティティ管理システムに委任され、多要素認証（ MFA ）などの自動化ポリシーが適用されます。
-* ユーザはすべてのNetApp BlueXPサービスに一度ログインします（シングルサインオン）。
+* ユーザーはすべてのNetAppコンソール サービスに一度ログインします (シングル サインオン)。
 
 
-ユーザアカウントは、すべてのクラウドサービスのNetApp BlueXPで管理されます。デフォルトでは、認証はBlueXPローカルユーザプロファイルを使用して行われます。このプロセスの概要を以下に示します。
+すべてのクラウド サービスのユーザー アカウントは、 NetAppコンソールで管理されます。デフォルトでは、認証はコンソールのローカル ユーザー プロファイルを使用して行われます。以下にそのプロセスの簡略化された概要を示します。
 
-image:BlueXP_Authentication_Local.png["ローカルを使用したBlueXP認証"]
+image:Authentication_Local.png["ローカル認証"]
 
-ただし、お客様の中には、独自のアイデンティティプロバイダを使用して、データインフラ分析情報やその他のNetApp BlueXP  サービスのユーザを認証したいと考えるお客様もいます。アイデンティティフェデレーションでは、NetApp BlueXPアカウントは社内ディレクトリのクレデンシャルを使用して認証されます。
+ただし、お客様によっては、 Data Infrastructure Insightsやその他のNetAppコンソール サービスのユーザーを認証するために独自の ID プロバイダーを使用したいと考えています。  Identity Federation を使用すると、 NetAppコンソール アカウントは企業ディレクトリの資格情報を使用して認証されます。
 
 次に、このプロセスの簡単な例を示します。
 
-image:BlueXP_Authentication_Federated.png["フェデレーションを使用したBlueXP認証"]
+image:Authentication_Federated.png["フェデレーションを使用した認証"]
 
 上の図では、ユーザがData Infrastructure Insightsにアクセスすると、そのユーザは認証のためにお客様のアイデンティティ管理システムに誘導されます。アカウントが認証されると、ユーザはData Infrastructure InsightsのテナントURLに移動します。
 
@@ -228,16 +228,16 @@ image:BlueXP_Authentication_Federated.png["フェデレーションを使用し�
 
 === アイデンティティフェデレーションの有効
 
-BlueXPはAuth0を使用してアイデンティティフェデレーションを実装し、Active Directoryフェデレーションサービス（ADFS）やMicrosoft Azure Active Directory（AD）などのサービスと統合します。アイデンティティフェデレーションを設定するには、を参照してlink:https://services.cloud.netapp.com/misc/federation-support["BlueXPフェデレーションの手順"]ください。
+コンソールは Auth0 を使用して ID フェデレーションを実装し、Active Directory Federation Services (ADFS) や Microsoft Azure Active Directory (AD) などのサービスと統合します。アイデンティティフェデレーションを構成するには、link:https://services.cloud.netapp.com/misc/federation-support["連盟の指示"] 。
 
 
-NOTE: Data Infrastructure InsightsでSSOを使用するには、事前にBlueXP  アイデンティティフェデレーションを設定する必要があります。
+NOTE: Data Infrastructure Insightsで SSO を使用する前に、Identity Federation を構成する必要があります。
 
-BlueXP  でのアイデンティティフェデレーションの変更は、データインフラの分析情報だけでなく、すべてのNetApp BlueXP  サービスにも適用されることを理解しておくことが重要です。この変更については、お客様が所有する各BlueXP製品のNetAppチームと話し合い、使用している設定がアイデンティティフェデレーションと連携していることを確認したり、アカウントの調整が必要な場合はその旨をお客様に伝えてください。お客様は、社内の SSO チームをアイデンティティフェデレーションの変更にも関与させる必要があります。
+アイデンティティ フェデレーションの変更は、Data Infrastructure Insightsだけでなく、すべてのNetAppコンソール サービスに適用されることを理解することが重要です。お客様は、所有する各製品のNetAppチームとこの変更について話し合い、使用している構成が Identity Federation で機能するか、アカウントに調整が必要かどうかを確認する必要があります。顧客は、アイデンティティ フェデレーションへの変更に社内の SSO チームも関与させる必要があります。
 
-アイデンティティフェデレーションを有効にしたら、会社のアイデンティティプロバイダに対する変更（SAMLからMicrosoft ADへの移行など）には、ユーザのプロファイルを更新するためにBlueXPでトラブルシューティング/変更/対応が必要になる可能性があることを理解しておくことも重要です。
+また、ID フェデレーションを有効にすると、会社の ID プロバイダーに変更を加える場合 (SAML から Microsoft AD への移行など)、ユーザーのプロファイルを更新するためにトラブルシューティングや変更、注意が必要になる可能性が高いことを認識しておくことも重要です。
 
-このようなフェデレーションの問題については、でサポートチケットを開き https://mysupport.netapp.com/site/help[]、カテゴリ「BlueXP . NetApp . com >フェデレーションの問題」を選択します。
+この問題やその他のフェデレーションの問題については、次の場所でサポートチケットを開くことができます。 https://mysupport.netapp.com/site/help[] 。
 
 
 
@@ -246,9 +246,9 @@ BlueXP  でのアイデンティティフェデレーションの変更は、�
 管理者は、ユーザを招待するだけでなく、社内ドメイン内のすべてのユーザに対して*シングルサインオン（SSO）ユーザの自動プロビジョニング*によるData Infrastructure Insightsへのアクセスを有効にすることもできます。個別に招待する必要はありません。SSOが有効な場合は、同じドメインEメールアドレスを持つすべてのユーザが社内クレデンシャルを使用してData Infrastructure Insightsにログインできます。
 
 
-NOTE: _SSOユーザ自動プロビジョニング_は、Data Infrastructure Insights Premium Editionで使用できます。Data Infrastructure Insightsで有効にするには、事前に構成する必要があります。SSOユーザ自動プロビジョニングの設定には、link:https://services.cloud.netapp.com/misc/federation-support["アイデンティティフェデレーション"]上記のセクションで説明したように、NetApp BlueXP  を介した設定が含まれます。フェデレーションを使用すると、シングルサインオンユーザは、Security Assertion Markup Language 2.0（SAML）やOpenID Connect（OIDC）などのオープン標準を使用して、社内ディレクトリのクレデンシャルを使用してNetApp BlueXPアカウントにアクセスできます。
+NOTE: _SSO ユーザー自動プロビジョニング_ はData Infrastructure Insights Premium Edition で使用できますが、 Data Infrastructure Insightsで有効にする前に構成する必要があります。 SSOユーザー自動プロビジョニング構成には以下が含まれますlink:https://services.cloud.netapp.com/misc/federation-support["アイデンティティフェデレーション"]上記のセクションで説明したように、 NetAppコンソール経由で実行します。フェデレーションにより、シングル サインオン ユーザーは、Security Assertion Markup Language 2.0 (SAML) や OpenID Connect (OIDC) などのオープン スタンダードを使用して、企業ディレクトリの資格情報を使用してNetAppコンソール アカウントにアクセスできるようになります。
 
-_SSOユーザ自動プロビジョニング_を設定するには、*[管理]>[ユーザ管理]*ページで、事前にBlueXPアイデンティティフェデレーションを設定しておく必要があります。バナーの*[フェデレーションの設定]*リンクを選択して、BlueXPフェデレーションに進みます。設定が完了すると、Data Infrastructure Insightsの管理者はSSOユーザログインを有効にできます。管理者が _SSO ユーザーの自動プロビジョニング _ を有効にすると、すべての SSO ユーザー（ゲストやユーザーなど）にデフォルトの役割を選択します。SSO を使用してログインしたユーザには、このデフォルトロールが割り当てられます。
+_SSO ユーザー自動プロビジョニング_ を構成するには、*管理 > ユーザー管理* ページで、まず Identity Federation を設定する必要があります。バナーの*フェデレーションの設定*リンクを選択して、コンソール フェデレーションに進みます。設定が完了すると、 Data Infrastructure Insights管理者は SSO ユーザー ログインを有効にできるようになります。管理者が _SSO ユーザーの自動プロビジョニング_ を有効にすると、すべての SSO ユーザーのデフォルト ロール (ゲストやユーザーなど) を選択します。  SSO 経由でログインするユーザーには、そのデフォルトのロールが与えられます。
 
 image:Roles_federation_Banner.png["フェデレーションを使用したユーザー管理"]
 

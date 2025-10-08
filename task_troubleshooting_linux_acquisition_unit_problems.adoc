@@ -21,7 +21,7 @@ keywords: AU, acquisition unit, trioubleshooting
 | [Acquisition Units]タブの*[Observability]>[Collectors]*ページにあるAUのステータスには、[Certificate Expired]または[Certificate Revoked]と表示されます。 | AU の右側にあるメニューをクリックし、 * Restore Connection * （接続の復元）を選択します。指示に従って Acquisition Unit をリストアします。 1.Acquisition Unit （ AU ）サービスを停止します。_Copy Stop command_ ボタンをクリックすると、コマンドをクリップボードに簡単にコピーし、このコマンドを Acquisition Unit マシンのコマンドプロンプトに貼り付けることができます。2.AUの_/ var/lib/lib/cloudinsights/acq/conf_ NetAppフォルダに「token」という名前のファイルを作成します。3.[_Copy Token_]ボタンをクリックし、作成したファイルにこのトークンを貼り付けます。4.AUサービスを再開します。_Copy Restart command_ ボタンをクリックし、 AU のコマンドプロンプトにコマンドを貼り付けます。 
 
 
-| Acquisition Unitサーバサービスの開始時に権限が拒否されました | AUをSELinuxにインストールしている場合は、SEを_permissive_modeに設定する必要があります。Enforcing_modeはサポートされていませんSELinuxをPermissiveモードに設定したら、AUサービスを再起動します。link:https://kb.netapp.com/Cloud/BlueXP/DII/Permission_denied_when_starting_the_Cloud_Insight_Acquisition_Unit_Server_Service["詳細"]です。 
+| Acquisition Unitサーバサービスの開始時に権限が拒否されました | AU を SELINUX にインストールする場合、SE を _permissive_ モードに設定する必要があります。  _Enforcing_ モードはサポートされていません。  SELINUX を許可モードに設定した後、AU サービスを再起動します。 
 
 
 | サーバ要件が満たされていません | Acquisition UnitサーバまたはVMがlink:concept_acquisition_unit_requirements.html["要件"] 
@@ -90,6 +90,6 @@ image:ProxyEndpoints_NewTable.png["プロキシエンドポイントテーブル
 
 == リソース
 
-その他のトラブルシューティングのヒントについては、を参照してlink:https://kb.netapp.com/Cloud/BlueXP/DII["NetAppナレッジベース"]ください（サポートへのサインインが必要です）。
+追加のトラブルシューティングのヒントについては、link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["NetAppナレッジベース"] (サポートへのサインインが必要です)。
 
 その他のサポート情報については、Data Infrastructure Insightsのページを参照してlink:concept_requesting_support.html["サポート"]ください。

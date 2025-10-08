@@ -164,6 +164,6 @@ VMwareタグでは大文字と小文字が区別され、Data Infrastructure Ins
 | エラー： IP の VirtualCenter には、 JVM で必要な非準拠の証明書があります | 可能な解決策： * 推奨：強力な（など）を使用して、 Virtual Center の証明書を再生成します 1024 ビット） RSA キー。* 推奨されません。 JVM java.security 設定を変更して、 JDK.certPath.disableAlgorithms 制約を利用し、 512 ビット RSA キーを許可します。を参照して link:http://www.oracle.com/technetwork/java/javase/7u40-relnotes-2004172.html["JDK 7 Update 40リリースノート"] 
 
 
-| 「VMware Logs package is not supported on VMware below version 8.0.1」というメッセージが表示されます。 | 8.0.1より前のバージョンのVMwareでは、ログの収集はサポートされていません。Data Infrastructure Insightsのログ収集機能を使用する場合は、VI Center Infrastructureをバージョン8.0.1以降にアップグレードします。詳細については、こちらを参照してlink:https://kb.netapp.com/Cloud/BlueXP/Cloud_Insights/VMware_Logs_package_is_not_supported_on_VMware_below_version_8.0.1___Data_Infrastructure_Insights["KB記事"]ください。 
+| 「VMware Logs package is not supported on VMware below version 8.0.1」というメッセージが表示されます。 | ログ収集は、VMware バージョン 8.0.1 より前ではサポートされていません。 Data Infrastructure Insights内のログ収集機能を使用する場合は、VI Center Infrastructure をバージョン 8.0.1 以降にアップグレードしてください。詳細については、こちらをご覧くださいlink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["KB記事"]。 
 |===
 詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

@@ -170,7 +170,7 @@ Data Infrastructure Insightsでは、Brocade FCスイッチデータコレクタ
 | 問題 | 次の操作を実行します 
 
 
-| パフォーマンスの収集が失敗し、「Timed out during sending SNMP request」というメッセージが表示されます。 | クエリー変数およびスイッチの設定によっては、一部のクエリーがデフォルトのタイムアウトを超える場合があります。link:https://kb.netapp.com/Cloud/BlueXP/DII/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["詳細"]です。 
+| パフォーマンスの収集が失敗し、「Timed out during sending SNMP request」というメッセージが表示されます。 | クエリ変数とスイッチ構成によっては、一部のクエリがデフォルトのタイムアウトを超える場合があります。link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["詳細"] 。 
 
 
 | パフォーマンス収集が失敗し、「...SNMP テーブルに行の重複が見つかりました...」 | DII が不正な SNMP 応答を検出しました。FOS8.2.3e を使用している可能性があります。8.2.3e2 以降にアップグレードしてください。 

@@ -16,18 +16,18 @@ keywords: subscribe, trial, subscription, contract, raw capacity, region, data r
 [role="lead"]
 Data Infrastructure Insightsは、次の3つの簡単なステップで開始できます。
 
-. でアカウントを登録しlink:https://bluexp.netapp.com//["* NetApp BlueXP *"]て、NetAppのすべてのクラウドサービスにアクセスしてください。
+. アカウント登録はこちらlink:https://console.netapp.com//["* NetAppコンソール*"]NetApp のすべてのクラウド サービスにアクセスできます。
 . Data Infrastructure Insightsの無償トライアルにご登録いただき、利用可能な機能をご確認ください。無償トライアルに登録するには：
 +
 ** に移動 https://netapp.com[]
 ** ページ上部の*購入方法*を選択します。
-** [Request trial]*を選択します。BlueXP  にまだ登録していない場合は、詳細を入力してサインアップしてください。それ以外の場合は、サインインします。
+** *トライアルをリクエスト*を選択します。コンソールにまだ登録していない場合は、詳細を入力してサインアップしてください。それ以外の場合はサインインしてください。
 ** 会議をスケジュールするか、担当者からトライアルについての連絡をお待ちください。
 
 
 . さまざまな柔軟なサブスクリプション オプションを通じて、データへの継続的かつ中断のないアクセスを実現するには、Data Infrastructure Insights に*サブスクライブ*してください。
 +
-** link:https://bluexp.netapp.com/contact-cds["NetAppセールスダイレクト"]
+** link:https://console.netapp.com/contact-cds["NetAppセールスダイレクト"]
 ** AWS マーケットプレイス:
 +
 *** link:https://aws.amazon.com/marketplace/pp/prodview-axhuy7muvzfx2["固定期間サブスクリプション"]
@@ -202,7 +202,7 @@ Amazon Marketplaceのリンクをクリックすると、AWS https://aws.amazon.
 
 管理対象ユニットの総数を入力し、 12 か月または 36 か月のサブスクリプション期間を選択したら、「 * アカウントの設定 * 」をクリックしてサブスクリプションプロセスを終了します。
 
-AWSのサブスクリプションプロセスが完了すると、現在のData Infrastructure Insights環境に戻ります。または、環境がアクティブでなくなった場合（ログアウトした場合など）は、NetApp BlueXPのサインインページに移動します。Data Infrastructure Insightsに再度サインインすると、お客様のサブスクリプションが有効になります。
+AWS サブスクリプションプロセスが完了すると、 Data Infrastructure Insights環境に戻ります。または、環境がアクティブでなくなった場合 (ログアウトした場合など)、NetAPp コンソールのサインイン ページに移動します。  Data Infrastructure Insightsに再度サインインすると、サブスクリプションがアクティブになります。
 
 
 NOTE: AWS Marketplace のページで「 * アカウントの設定 * 」をクリックしてから、 AWS サブスクリプションの手続きを 1 時間以内に完了する必要があります。1 時間以内に完了しない場合は、もう一度「 * アカウントの設定 * 」をクリックして処理を完了する必要があります。

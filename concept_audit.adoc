@@ -89,9 +89,6 @@ image:Audit_Filters.png["監査フィルタ"]
 Data Infrastructure Insightsで監査されるイベントとアクションは、大きく次の領域に分類できます。
 
 * * ユーザーアカウント * ：ログイン、ログアウト、ロール変更など
-+
-例：_User * Tony Lavoie * 10.1.120.15 *、ユーザエージェント* Mozilla/5.0（Windows NT 10.0、Win64、x64）AppleWebKit/537.36（KHTML、Geckoなど）Chrome/85.0.4183.121 Safari/537.36 *、ログイン方法* BlueXP Portal Login_*
-
 * * Acquisition Unit * ：作成、削除など
 +
 例： _ Acquisition Unit * AU-Boston-1 * removed_.

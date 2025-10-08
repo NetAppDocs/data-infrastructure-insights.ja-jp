@@ -40,7 +40,7 @@ Data Infrastructure Insightsには次の情報が格納されます。
 
 * ユーザーアクセスデータ
 +
-NetApp BlueXP  が各地域のData Infrastructure Insightsサイトと通信できるようにする認証およびアクセス情報（ユーザの承認に関連するデータなど）。
+NetAppコンソールが地域のData Infrastructure Insightsサイトと通信できるようにする認証およびアクセス情報 (ユーザー認証に関連するデータを含む)。
 
 * ストレージワークロードのセキュリティユーザディレクトリデータ
 +
@@ -76,7 +76,7 @@ Data Infrastructure Insightsには、環境が作成されたリージョンに�
 以下の情報は、Data Infrastructure Insights環境をホストしているリージョンに関係なく、米国内に存在します。
 
 * サイト / アカウント所有者などの環境サイト（「テナント」とも呼ばれる）情報。
-* NetApp BlueXP  が各地域のData Infrastructure Insightsサイトと通信できるようにするための情報（ユーザの承認に関連する情報を含む）。
+* NetAppコンソールが地域のData Infrastructure Insightsサイトと通信できるようにする情報 (ユーザー認証に関連するものを含む)。
 * Data Infrastructure Insightsのユーザとテナントの関係に関連する情報。
 
 

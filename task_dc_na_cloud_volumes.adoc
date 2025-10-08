@@ -7,6 +7,10 @@ keywords: data collector, NetApp, Cloud, AWS
 = NetApp Cloud Volume Services for AWS データコレクタ
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -51,6 +55,6 @@ keywords: data collector, NetApp, Cloud, AWS
 | 問題 | 次の操作を実行します 
 
 
-| 「Failed to execute request：Connect to <AWS region endpoint >：8080 [<AWS region endpoint >/AWS region endpoint IP >] failed：connect timed out：GET \https://<AWS Region Endpoint FQDN >：8080/v1/Storage/IPRanges HTTP/1.1'」というエラーが表示されました。 | link:task_configure_acquisition_unit.html#proxy-configuration-2["プロキシ"]Data Infrastructure InsightsがAcquisition Unitとの通信に使用するは、Data Infrastructure InsightsとData Collector自体との間の通信は行いません。以下にいくつかの方法で試してみましょう。Acquisition UnitでFQDNを解決して、必要なポートに到達できることを確認してください。エラーメッセージに示されたエンドポイントにアクセスするためにプロキシが必要でないことを確認します。cURLを使用して、Acquisition Unitとエンドポイント間の通信をテストできます。このテストにプロキシを使用していない*ことを確認してください。例: root@acquisitionunit#curl -s -H accept: application/json -H "Content-type: application/json"-H api-key:<データコレクタの資格情報で使用されるAPIキー-H secret-key:<データコレクタの資格情報で使用されるシークレットキー>-X Get \https://<AWS Regional Endpoint >: 808080/v1/Storage/IPRanges参照。link:https://kb.netapp.com/Cloud/BlueXP/DII/Data_Infrastructure_Insights_fails_discovery_for_Cloud_Volumes_Service_for_AWS["ネットアップの技術情報アーティクル"] 
+| 「Failed to execute request：Connect to <AWS region endpoint >：8080 [<AWS region endpoint >/AWS region endpoint IP >] failed：connect timed out：GET \https://<AWS Region Endpoint FQDN >：8080/v1/Storage/IPRanges HTTP/1.1'」というエラーが表示されました。 | そのlink:task_configure_acquisition_unit.html#proxy-configuration-2["プロキシ"]Data Infrastructure Insightsが Acquisition Unit と通信するために使用されるものは、Data Infrastructure Insightsとデータ コレクター自体の間では通信しません。試すことができるいくつかのことを次に示します。取得ユニットが FQDN を解決し、必要なポートに到達できることを確認します。エラー メッセージで指定されたエンドポイントに到達するためにプロキシが必要ないことを確認します。 Curl を使用して、取得ユニットとエンドポイント間の通信をテストできます。このテストではプロキシを使用していないことを確認してください。例: root@acquisitionunit# curl -s -H accept:application/json -H "Content-type: application/json" -H api-key:<データコレクターの認証情報で使用される API キー -H secret-key:<データコレクターの認証情報で使用される秘密キー> -X GET \https://<AWS リージョンエンドポイント>:8080/v1/Storage/IPRanges 
 |===
 このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。

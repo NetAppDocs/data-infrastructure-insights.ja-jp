@@ -74,6 +74,6 @@ image:ProxyEndpoints_NewTable.png["プロキシエンドポイントテーブル
 
 == リソース
 
-その他のトラブルシューティングのヒントについては、を参照してlink:https://kb.netapp.com/Cloud/BlueXP/DII["NetAppナレッジベース"]ください（サポートへのサインインが必要です）。
+追加のトラブルシューティングのヒントについては、link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["NetAppナレッジベース"] (サポートへのサインインが必要です)。
 
 その他のサポート情報については、Data Infrastructure Insightsのページを参照してlink:concept_requesting_support.html["サポート"]ください。
