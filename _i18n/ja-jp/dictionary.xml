@@ -12771,4 +12771,26 @@
   <block id="2f0b05ac17e2cbf6a46b1c047243119b" category="paragraph">問題が発生した場合に試すことができるいくつかのこと:</block>
   <block id="5ae21ce2895991936f988458e0d59550" category="cell">_trafficUtilization_ や _trafficRate_ などのメトリックの凡例に、&lt;0、=0、または &gt;0 が表示されます。</block>
   <block id="08e0ca793e3dec21e2eea30949c98088" category="cell">これは、メトリック値が 0.000123 のように小数点以下 2 桁未満の非常にまれなケースで発生する可能性があります。時間ウィンドウを拡張すると、メトリックをより効果的に分析できるようになります。</block>
+  <block id="99dfa28920a40a7be0858c50f989a3e5" category="section-title">2025年10月</block>
+  <block id="7ce7a14f7a7ab13259d78d9c587f7511" category="section-title">インフラストラクチャの健全性: ストレージとファブリックのリスクを即座に可視化</block>
+  <block id="6b389c7abe5315fe2f49fdfe2039f913" category="paragraph">新しい *インフラストラクチャの健全性* 機能を使用すると、ストレージとファブリック全体の潜在的なリスクを即座に把握できます。単一の色分けされたダッシュボードにより、統合されたリスクの可視性が得られ、ダウンタイムを最小限に抑え、収益損失を迅速に軽減できます。</block>
+  <block id="98c92459566d46664ff09992678f57e4" category="paragraph">スコアが 100 未満の場合、潜在的な問題があることを示します。スコアが低いほど、リソースの健全性が低くなります。データ センターまたはリージョン別にリソースをグループ化して、直感的で統合されたヘルス スコアを得ることで、重要な領域の優先順位付けやトラブルシューティングを簡単に行うことができます。</block>
+  <block id="8d76e9d5c3edb494701feea84d6ebc83" category="inline-image-macro">赤、黄、緑のリソース ヘルス スコアを表示するインフラ ヘルス ダッシュボード (幅 = 600)</block>
+  <block id="09d53ec06bd688b410a942777bbb1b63" category="paragraph"><block ref="09d53ec06bd688b410a942777bbb1b63" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="95fe62dd1c108211a44df9ddcea7cb02" category="paragraph">ボタンをクリックするだけで画面上のスライドアウト パネルに詳細情報が表示されるため、注意が必要な問題を迅速に特定し、システムの安全性と回復力を維持できます。</block>
+  <block id="5c15a89f3dfcc5cf28e75e2462b8b75d" category="inline-image-macro">インフラヘルス詳細パネル、幅=600</block>
+  <block id="698352f404a2b3d6a5b56b12386329b8" category="paragraph"><block ref="698352f404a2b3d6a5b56b12386329b8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="df8b5251af7e98385c1a69f727713bf1" category="section-title">正確な警告のためのマルチコンディションモニター</block>
+  <block id="6709c50f3a253900061ba24b2457f82a" category="paragraph">オプションの 2 番目の条件をメトリック モニターに追加することで、アラート ノイズを削減し、監視の精度を向上させます。アラートは両方の条件が満たされた場合にのみトリガーされるため、最も重要なシナリオに重点を置いた、よりターゲットを絞った通知が提供されます。</block>
+  <block id="19d168d964447f9cb9ed51c40e9beb67" category="inline-image-macro">モニターに2番目の条件を追加する（幅=600）</block>
+  <block id="4c1f0d772f71f8ead992bbfa6c328771" category="paragraph"><block ref="4c1f0d772f71f8ead992bbfa6c328771" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f36d230c5a43a53a188667b9257b8ddc" category="section-title">クエリの改善: 一目でわかるオブジェクトの詳細</block>
+  <block id="05814820cd0dcd3b5db2b55adc94c207" category="paragraph">オブジェクト クエリ結果リストの行を選択すると、選択したオブジェクトの詳細パネルが開きます。メトリックと属性 (オブジェクト クエリのデフォルト ビュー)、アラートと変更、パフォーマンス、ヘルス スコアをすばやく表示したり、関連リソースを調べたりできます。関連するオブジェクト情報はすべてすぐに入手できます。</block>
+  <block id="b398dd7f0628e0209062c867a19f996c" category="inline-image-macro">クエリスライドアウトパネルの図（デフォルトでメトリックと属性タブに設定、幅=600）</block>
+  <block id="a8ee3fea585c41aa1d8564b06059227c" category="paragraph"><block ref="a8ee3fea585c41aa1d8564b06059227c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f410f0ddc632aab6b49db918a669ccd7" category="paragraph">2 つの新しい API により、Workload Security 環境をより詳細に制御できるようになります。</block>
+  <block id="ebf69be04c82e1675fd92ad104156771" category="list-text">_GET /rest/v1/cloudsecure/activities/groups_ を使用してグループを表示および管理します。</block>
+  <block id="2a6cfdee3521e533287663e97fd888a4" category="list-text">_POST /rest/v1/cloudsecure/collectors/{collector-uuid}/status_ を使用してデータコレクターを一時停止および再開します。</block>
+  <block id="faaf8042743d6c4413633d0cd0603f36" category="paragraph">さらに、Workload Security のロール権限チェックがさらに安全になりました。セキュリティが強化された結果、既存のユーザーの一部はコレクターを追加するときに権限の問題が発生する可能性があります。指示に従ってユーザー権限を確認してください。<block ref="90660a14ff858b5310896684a88b82bc" category="inline-link-macro-rx"></block> 。</block>
+  <block id="0b472b999667cd3663a08684d640b8a4" category="summary">2018年から2019年にかけてData Infrastructure Insightsで利用できる新機能</block>
 </blocks>
