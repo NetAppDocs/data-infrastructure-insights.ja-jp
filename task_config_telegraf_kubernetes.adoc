@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_kubernetes.html 
 keywords: telegraf 
-summary: Kubernetes向けデータコレクタ 
+summary: Kubernetesのデータコレクター 
 ---
-= データコレクタ：Kubernetes
+= データコレクター: Kubernetes
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,33 +14,33 @@ summary: Kubernetes向けデータコレクタ
 
 
 [role="lead"]
-Data Infrastructure Insightsは、このデータコレクタを使用してKubernetesポッド、ノード、コンテナの指標を収集します。
+Data Infrastructure Insights は、このデータ コレクターを使用して、Kubernetes Pod、ノード、およびコンテナのメトリックを収集します。
 
 
 
 == インストール
 
-Kubernetesのインストール手順については、ページを参照してくださいlink:task_config_telegraf_agent_k8s.html["Kubernetes監視オペレータ"]。
+Kubernetesのインストール手順については、link:task_config_telegraf_agent_k8s.html["Kubernetes モニタリング オペレーター"]ページ。
 
 
 
-== Kubeステートメトリックについて
+== Kube-state-metricsについて
 
-Kubernetes Monitoring Operatorはkube-state-metricsを自動的にインストールします。ユーザの操作は必要ありません。
+Kubernetes モニタリング オペレーターは kube-state-metrics を自動的にインストールします。ユーザーの操作は必要ありません。
 
 
 
-=== kube-state-metricsカウンタ
+=== Kube-state-metrics カウンター
 
-NetApp Kubernetes監視オペレータは、以下のkube-state-metricsカウンタを抽出します。各カウンタの詳細については、を参照してください https://github.com/kubernetes/kube-state-metrics/tree/main/docs#exposed-metrics[]。
+NetApp Kubernetes Monitoring Operator は、以下にリストされている kube-state-metrics カウンターを抽出します。各カウンターの詳細については、以下をご覧ください。 https://github.com/kubernetes/kube-state-metrics/tree/main/docs#exposed-metrics[] 。
 
-. DemonSet メトリック
-. 導入メトリック
-. ネームスペース指標
-. ノードのメトリックス
-. 永続的ボリューム指標
-. 永続的ボリューム要求の指標
-. ポッドのメトリック
+. デーモンセットメトリック
+. デプロイメントメトリック
+. 名前空間メトリック
+. ノードメトリクス
+. 永続ボリュームメトリック
+. 永続ボリュームクレームメトリクス
+. ポッドメトリクス
 . レプリカセットメトリック
 . サービスメトリクス
 . ステートフルセットメトリクス

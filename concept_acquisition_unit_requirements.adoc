@@ -1,16 +1,16 @@
 ---
 sidebar: sidebar 
 permalink: concept_acquisition_unit_requirements.html 
-summary: Acquisition Unitとして使用するサーバまたはVMが最小要件を満たしている必要があります。 
+summary: 取得ユニットとして使用するサーバーまたは VM は、最小要件を満たしている必要があります。 
 keywords: AU, acquisition unit, requirements, sizing 
 ---
-= Acquisition Unit の要件
+= 取得ユニットの要件
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-インフラのデータコレクタ（ストレージ、 VM 、ポート、 EC2 など）から情報を取得するには、 Acquisition Unit （ AU ）をインストールする必要があります。Acquisition Unitをインストールする前に、テナントがオペレーティングシステム、CPU、メモリ、およびディスクスペースの要件を満たしていることを確認する必要があります。
+インフラストラクチャ データ コレクター (ストレージ、VM、ポート、EC2 など) から情報を取得するには、Acquisition Unit (AU) をインストールする必要があります。  Acquisition Unit をインストールする前に、テナントがオペレーティング システム、CPU、メモリ、およびディスク領域の要件を満たしていることを確認する必要があります。
 
 
 
@@ -19,48 +19,48 @@ keywords: AU, acquisition unit, requirements, sizing
 |===
 
 
-| コンポーネント | Linux 要件 | Windows 要件 
+| コンポーネント | Linux 要件 | Windows の要件 
 
 
-| オペレーティングシステム | 次のいずれかのライセンス版を実行しているコンピュータ: * AlmaLinux 9.3 ～ 9.5 * Centos (64 ビット): 7.2 ～ 7.9、8.1 ～ 8.4、Stream 8、Stream 9 * Debian (64 ビット): 9 ～ 12 * OpenSUSE Leap 15.1 ～ 15.6 * Oracle Enterprise Linux (64 ビット): 7.5 ～ 7.9、8.1 ～ 8.10、9.3 ～ 9.6 * Red Hat (64 ビット): 7.2 ～ 7.9、8.1 ～ 8.10、9.1 ～ 9.6 * Rocky 9.0 ～ 9.5 * SUSE Linux Enterprise Server 15、15 SP2 ～ 15 SP6 * Ubuntu Server: 18.04、20.04、22.04、24.04 LTS * SELinux on上記のプラットフォーム このコンピューターでは、他のアプリケーション レベルのソフトウェアは実行しないでください。専用のサーバを使用することを推奨します。SELinuxを使用している場合は、Acquisition Unitシステムで次のコマンドを実行することを推奨します。sudo semanage fcontext -a -t usr_t "/opt/ NetApp /cloudinsights（/.*）？"sudo restorecon -R /opt/ NetApp /cloudinsights | 次のいずれかのライセンスバージョンを実行しているコンピューター。* Microsoft Windows 10 64ビット* Microsoft Windows 11 * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025このコンピューターは、他のアプリケーションレベルのソフトウェアを実行していない必要があります。専用のサーバを使用することを推奨します。 
+| オペレーティング システム | 次のいずれかのライセンス版を実行しているコンピュータ: * AlmaLinux 9.3～9.5 * Centos (64ビット): 7.2～7.9、8.1～8.4、Stream 8、Stream 9 * Debian (64ビット): 9～12 * OpenSUSE Leap 15.1～15.6 * Oracle Enterprise Linux (64ビット): 7.5～7.9、8.1～8.10、9.3～9.6 * Red Hat (64ビット): 7.2～7.9、8.1～8.10、9.1～9.6 * Rocky 9.0～9.5 * SUSE Linux Enterprise Server 15、15 SP2～15 SP6 * Ubuntu Server: 18.04、20.04、22.04、24.04 LTS * SELinux on上記のプラットフォーム このコンピューターでは、他のアプリケーション レベルのソフトウェアは実行しないでください。専用サーバーをお勧めします。  SELinux で実行している場合は、取得ユニットシステムで次のコマンドを実行することをお勧めします: sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights | 次のいずれかのライセンス バージョンを実行しているコンピューター: * Microsoft Windows 10 64 ビット * Microsoft Windows 11 * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 このコンピューターでは、他のアプリケーション レベルのソフトウェアを実行しないでください。専用サーバーをお勧めします。 
 
 
-| CPU | 2個のCPUコア | 同じ 
+| CPU | 2つのCPUコア | 同じ 
 
 
 | メモリ | 8GBのRAM | 同じ 
 
 
-| 使用可能なディスクスペース | 50GB（100GBを推奨）Linuxの場合は、次のようにディスクスペースを割り当てる必要があります。/opt/ NetApp 10GB（大規模環境では20GB）/var/log/ NetApp 40GB（大規模環境では80GB）/tmpインストール時に1GB以上利用可能 | 50GB 
+| 使用可能なディスク容量 | 50 GB (100 GB を推奨) Linux の場合、ディスク領域は次のように割り当てる必要があります: /opt/netapp 10 GB (大規模環境の場合は 20 GB) /var/log/netapp 40 GB (大規模環境の場合は 80 GB) /tmp インストール時に少なくとも 1 GB 使用可能 | 50 GB 
 
 
-| ネットワーク | 100 Mbps/1 Gbpsイーサネット接続、静的IPアドレス、およびAcquisition Unitから*.cloudinsights.accom/Data Infrastructure NetAppテナント（\https：//<tenant_id>.c01.cloudinsights.c01.cloudinsights.c.com NetApp）へのポート80または443（アウトバウンド）接続が必要です。Acquisition Unitと各Data Collectorの間の要件については、の手順を参照してくださいlink:data_collector_list.html["Data Collector"]。インターネットアクセスにプロキシを使用する必要がある場合は、組織のプロキシの動作を理解し、Data Infrastructure Insightsが機能するために特定の例外を探す必要があります。たとえば、デフォルトでアクセスがブロックされ、特定のWebサイト/ドメインへのアクセスのみが例外で許可されていますか。その場合は、次のドメインを例外リストに追加する必要があります。*。NetApp .com詳細については、プロキシlink:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["こちら（Linux）"]またはを参照してください。link:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["ここ（Windows）"]AUからData Infrastructure Insightsへのポート443を「アウトバウンド」で開く必要があることに注意してください。 | 同じ 
+| ネットワーク | 100 Mbps/1 Gbps イーサネット接続、静的 IP アドレス、および Acquisition Unit から *.cloudinsights.netapp.com またはData Infrastructure Insightsテナント (つまり \https://<tenant_id>.c01.cloudinsights.netapp.com) へのポート 80 または 443 (送信) 接続が必要です。取得ユニットと各データ収集装置間の要件については、link:data_collector_list.html["データコレクター"] 。組織でインターネット アクセスにプロキシの使用が必要な場合は、組織のプロキシの動作を理解し、 Data Infrastructure Insightsが機能するための特定の例外を探す必要がある場合があります。たとえば、組織ではデフォルトでアクセスをブロックし、例外的に特定の Web サイト/ドメインへのアクセスのみを許可していますか? もしそうなら、次のドメインを例外リストに追加する必要があります: *.cloudinsights.netapp.com 詳細については、プロキシについてお読みください。link:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["ここ（Linux）"]またはlink:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["こちら（Windows）"]。  AU からData Infrastructure Insightsへの「アウトバウンド」ポート 443 を開く必要があることに注意してください。 | 同じ 
 
 
-| 権限 | Acquisition Unit サーバに対する sudo 権限/tmp は EXEC 機能でマウントする必要があります。 | Acquisition Unit サーバに対する管理者権限が必要です 
+| 権限 | 取得ユニット サーバーに対する Sudo 権限。  /tmp は exec 権限でマウントする必要があります。 | 取得ユニットサーバーの管理者権限 
 
 
-| ウィルススキャン |  | インストール時に、すべてのウィルススキャンソフトウェアを完全に無効にする必要があります。インストール後に、 Acquisition Unit ソフトウェアで使用するパスをウィルススキャンから除外する必要があります。 
+| ウィルススキャン |  | インストール中は、すべてのウイルス スキャナーを完全に無効にする必要があります。インストール後、Acquisition Unit ソフトウェアで使用されるパスをウイルス スキャンから除外する必要があります。 
 |===
 
 
-== その他の推奨事項
+== 追加の推奨事項
 
-* 正確な監査およびデータレポートを作成するためには、 * Network Time Protocol （ NTP ；ネットワークタイムプロトコル） * または * Simple Network Time Protocol （ SNTP ） * を使用して Acquisition Unit マシンの時間を同期することを強く推奨します。
-
-
+* 正確な監査とデータ レポートのために、*ネットワーク タイム プロトコル (NTP)* または *簡易ネットワーク タイム プロトコル (SNTP)* を使用して取得ユニット マシンの時刻を同期することを強くお勧めします。
 
 
-== サイジングについて
-
-Data Infrastructure Insights Acquisition Unitの使用は、メモリが8GB、ディスクスペースが50GBしかないので開始できますが、大規模な環境の場合は次の点を自問してください。
-
-次のことを期待していますか？
-
-* この Acquisition Unit 上で、 2500 台を超える仮想マシン、または 10 台の大規模（ 2 ノード以上）の ONTAP クラスタ、 Symmetrix 、 HDS / HPE VSP/XP アレイを検出できるか？
-* この Acquisition Unit に合計 75 個以上のデータコレクタを導入しますか？
 
 
-上記の「はい」回答ごとに、 8 GB のメモリと 50 GB のディスク容量を AU に追加することをお勧めします。たとえば、「はい」と答えた場合、 150GB 以上のディスクスペースを備えた 24GB のメモリシステムを導入する必要があります。Linux の場合、ログの場所に追加するディスクスペース。
+== サイズについて
 
-サイジングに関するその他の情報については、ネットアップサポートにお問い合わせください。
+8 GB のメモリと 50 GB のディスク容量のみでData Infrastructure Insights Acquisition Unit を開始できますが、より大規模な環境では、次の質問を自問する必要があります。
+
+以下のことを期待していますか:
+
+* この取得ユニットで 2,500 台を超える仮想マシンまたは 10 個の大規模 (2 ノード超) ONTAPクラスター、Symmetrix、または HDS/HPE VSP/XP アレイを検出しますか?
+* この取得ユニットに合計 75 台以上のデータ コレクターを展開しますか?
+
+
+上記の各質問に「はい」と答えた場合は、AU に 8 GB のメモリと 50 GB のディスク容量を追加することをお勧めします。したがって、たとえば、両方の質問に「はい」と答えた場合は、150 GB 以上のディスク容量を備えた 24 GB のメモリ システムを展開する必要があります。  Linux の場合、ログの場所に追加するディスク領域。
+
+サイズに関する追加の質問については、 NetAppサポートにお問い合わせください。

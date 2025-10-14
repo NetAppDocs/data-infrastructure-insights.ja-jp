@@ -2,37 +2,37 @@
 sidebar: sidebar 
 permalink: task_dc_vast_datastore.html 
 keywords: data collector, VAST storage, VAST data 
-summary: Vast Dataデータストアストレージデータコレクタを設定しています 
+summary: VAST データ DataStore ストレージ データ コレクターを構成します。 
 ---
-= 膨大なデータストアデータコレクタ
+= VAST DataStore データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、膨大なデータストアデータコレクタを使用してインベントリとパフォーマンスのデータを収集します。
+Data Infrastructure Insights は、 VAST DataStore データ コレクターを使用して、インベントリとパフォーマンス データを収集します。
 
 
 
 == 用語
 
-Data Infrastructure Insightsで取得したアセットタイプごとに、そのアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
 [cols="2*"]
 |===
-| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
 
-| キヤリア | disks（locationフィールドのディスクシェルフ部分） 
+| キャリア | ディスク（場所フィールドのディスク シェルフ部分） 
 
 
 | クラスタ | ストレージ 
 
 
-| cnodes | ストレージノード（type=cnode） 
+| Cノード | ストレージノード（タイプ = cnode） 
 
 
-| dNode | ストレージノード（type=dnode） 
+| Dノード | ストレージノード（タイプ = dnode） 
 
 
 | NVRAM | ディスク 
@@ -41,7 +41,7 @@ Data Infrastructure Insightsで取得したアセットタイプごとに、そ�
 | 保護されたパス | 内部ボリューム同期 
 
 
-| QoSポリシー | 内部ボリューム（QoS制限） 
+| QOSポリシー | 内部ボリューム（QoS 制限） 
 
 
 | クォータ | クォータ 
@@ -56,17 +56,17 @@ Data Infrastructure Insightsで取得したアセットタイプごとに、そ�
 | ポリシーの表示 | FileShare（権限用） 
 
 
-| ビュー | 内部ボリューム 
+| ビュー | 内部容積 
 |===
-注：これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているわけではありません。
+注: これらは一般的な用語のマッピングのみであり、このデータ コレクターのすべてのケースを反映しているわけではありません。
 
 
 
 == 要件
 
-* VASTデータストアシステムのIPアドレスまたは完全修飾ドメイン名
-* VASTシステムにアクセスするためのユーザ名/パスワード
-* ポート要件：HTTPS 443
+* VAST DataStore システムの IP アドレスまたは完全修飾ドメイン名
+* VAST システムにアクセスするためのユーザー名 / パスワード
+* ポート要件: HTTPs 443
 
 
 
@@ -75,13 +75,13 @@ Data Infrastructure Insightsで取得したアセットタイプごとに、そ�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| VASTデータストアストレージIP/ホスト名 | ストレージシステムのIPアドレスまたはFQDN 
+| VAST データストア ストレージ IP/ホスト名 | ストレージシステムのIPアドレスまたはFQDN 
 
 
-| ユーザ | VASTストレージのユーザ名 
+| ユーザ | VASTストレージユーザー名 
 
 
 | パスワード | VASTストレージパスワード 
@@ -92,16 +92,16 @@ Data Infrastructure Insightsで取得したアセットタイプごとに、そ�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| 接続タイプ | HTTP または HTTPS を選択します。デフォルトのポートも表示されます。 
+| 接続の種類 | [HTTP]または[HTTPS]を選択します。デフォルトのポートも表示します。 
 
 
-| TCP ポートを上書きします | 空白の場合は、 [Connection Type] フィールドでデフォルトのポートを使用します。それ以外の場合は、使用する接続ポートを入力します 
+| TCPポートを上書きする | 空白の場合は、接続タイプフィールドのデフォルトのポートを使用します。それ以外の場合は、使用する接続ポートを入力します。 
 
 
-| インベントリのポーリング間隔（分） | デフォルトは 60 分です。 
+| インベントリポーリング間隔（分） | デフォルトは60分です 
 
 
 | パフォーマンスポーリング間隔（秒） | デフォルトは300です 
@@ -110,7 +110,7 @@ Data Infrastructure Insightsで取得したアセットタイプごとに、そ�
 
 == トラブルシューティング
 
-このデータコレクタで問題が発生した場合の対処方法を次に示します。
+このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
@@ -118,9 +118,9 @@ Data Infrastructure Insightsで取得したアセットタイプごとに、そ�
 
 [cols="2*"]
 |===
-| 問題 | 次の操作を実行します 
+| 問題： | これを試してください: 
 
 
-| 「 Invalid login credentials 」というエラーメッセージが表示され、「 Policy does not allow 」または「 you are not authorized 」が表示されます。 | Pure http インターフェイスで Pure のユーザアカウントとパスワードを検証します 
+| 「無効なログイン資格情報」と「ポリシーにより許可されていません」または「権限がありません」というエラー メッセージが表示される | Pure http インターフェース経由で Pure ユーザー アカウントとパスワードを検証します 
 |===
-詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

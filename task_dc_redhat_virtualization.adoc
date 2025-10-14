@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: task_dc_redhat_virtualization.html 
 keywords: data collector, Red Hat Virtualization 
-summary: Red Hat Virtualization データコレクタの設定 
+summary: Red Hat Virtualization データコレクターを構成します。 
 ---
-= Red Hat Virtualization データコレクタ
+= Red Hat Virtualization データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、Red Hat Virtualizationデータコレクタを使用して、仮想化されたLinuxおよびMicrosoft Windowsのワークロードからインベントリデータを収集します。
+Data Infrastructure Insights は、 Red Hat Virtualization データコレクターを使用して、仮想化された Linux および Microsoft Windows ワークロードからインベントリ データを収集します。
 
 
 
 == 用語
 
-Data Infrastructure Insightsで取得したアセットタイプごとに、そのアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
 [cols="2*"]
 |===
-| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
 
 | ディスク | 仮想ディスク 
@@ -32,20 +32,20 @@ Data Infrastructure Insightsで取得したアセットタイプごとに、そ�
 | 仮想マシン | 仮想マシン 
 
 
-| ストレージドメイン | データストア 
+| ストレージドメイン | データ ストア 
 
 
-| Logical Unit の略 | LUN 
+| 論理ユニット | LUN 
 |===
-注：これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているわけではありません。
+注: これらは一般的な用語のマッピングのみであり、このデータ コレクターのすべてのケースを反映しているわけではありません。
 
 
 
 == 要件
 
-* REST API を使用した RHEV サーバのポート 443 経由の IP アドレス
-* 読み取り専用のユーザ名とパスワード
-* RHEV バージョン 3.0+
+* REST API 経由のポート 443 経由の RHEV サーバーの IP アドレス
+* 読み取り専用のユーザー名とパスワード
+* RHEV バージョン 3.0 以上
 
 
 
@@ -54,16 +54,16 @@ Data Infrastructure Insightsで取得したアセットタイプごとに、そ�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| RHEVサーバのIPアドレス | ストレージシステムの IP アドレス 
+| RHEV サーバの IP アドレス | ストレージシステムのIPアドレス 
 
 
-| ユーザ名 | admin 権限があるユーザ名 
+| ユーザ名 | 管理者権限を持つユーザー名 
 
 
-| admin 権限があるアカウントのパスワード | パスワード 
+| 管理者権限アカウントのパスワード | パスワード 
 |===
 
 
@@ -71,16 +71,16 @@ Data Infrastructure Insightsで取得したアセットタイプごとに、そ�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| HTTPS 通信ポート | RHEV への HTTPS 通信に使用するポート 
+| HTTPS通信ポート | RHEVへのHTTPS通信に使用するポート 
 
 
-| インベントリのポーリング間隔（分） | デフォルトは20分です。 
+| インベントリポーリング間隔（分） | デフォルトは20分です。 
 |===
 
 
 == トラブルシューティング
 
-このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

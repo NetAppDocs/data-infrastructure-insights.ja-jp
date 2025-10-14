@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_agent_requirements.html 
-summary: エージェントとして使用するサーバまたは VM が、最小要件を満たしている必要があります 
+summary: エージェントとして使用するサーバーまたはVMは、最小要件を満たしている必要があります。 
 keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cloud Secure 
 ---
-= ワークロードセキュリティエージェントの要件
+= ワークロード セキュリティ エージェントの要件
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -21,76 +21,76 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 | コンポーネント | Linux 要件 
 
 
-| オペレーティングシステム | 次のいずれかのライセンス版を実行しているコンピュータ: * AlmaLinux 9.4 (64 ビット) ～ 9.5 (64 ビット)、10 (64 ビット) (SELinux を含む) * CentOS Stream 9 (64 ビット) * Debian 11 (64 ビット)、12 (64 ビット) (SELinux を含む) * OpenSUSE Leap 15.3 (64 ビット) ～ 15.6 (64 ビット) * Oracle Linux 8.10 (64 ビット)、9.1 (64 ビット) ～ 9.6 (64 ビット) (SELinux を含む) * Red Hat Enterprise Linux 8.10 (64 ビット)、9.1 (64 ビット) ～ 9.6 (64 ビット)、10 (64 ビット) (SELinux を含む) * Rocky 9.4 (64 ビット) ～ 9.6 (64 ビット) (SELinux を含む) * SUSE Linux Enterprise Server 15 SP4 (64 ビット) ～ 15 SP6 (64 ビット)、SELinux を含む * Ubuntu 20.04 LTS (64 ビット)、22.04 LTS (64 ビット)、24.04 LTS (64 ビット) このコンピューターでは、他のアプリケーション レベルのソフトウェアを実行しないでください。専用サーバーをお勧めします。 
+| オペレーティング システム | 次のいずれかのライセンス版を実行しているコンピュータ: * AlmaLinux 9.4 (64 ビット) ～ 9.5 (64 ビット)、10 (64 ビット) (SELinux を含む) * CentOS Stream 9 (64 ビット) * Debian 11 (64 ビット)、12 (64 ビット) (SELinux を含む) * OpenSUSE Leap 15.3 (64 ビット) ～ 15.6 (64 ビット) * Oracle Linux 8.10 (64 ビット)、9.1 (64 ビット) ～ 9.6 (64 ビット) (SELinux を含む) * Red Hat Enterprise Linux 8.10 (64 ビット)、9.1 (64 ビット) ～ 9.6 (64 ビット)、10 (64 ビット) (SELinux を含む) * Rocky 9.4 (64 ビット) ～ 9.6 (64 ビット) (SELinux を含む) * SUSE Linux Enterprise Server 15 SP4 (64 ビット) ～ 15 SP6 (64 ビット)、SELinux を含む * Ubuntu 20.04 LTS (64 ビット)、22.04 LTS (64 ビット)、24.04 LTS (64 ビット) このコンピューターでは、他のアプリケーション レベルのソフトウェアを実行しないでください。専用サーバーをお勧めします。 
 
 
-| コマンド | インストールには「unzip」が必要です。また、インストール、スクリプトの実行、およびアンインストールには、「sudo su–」コマンドが必要です。 
+| コマンド | インストールには「unzip」が必要です。さらに、インストール、スクリプトの実行、アンインストールには「sudo su –」コマンドが必要です。 
 
 
-| CPU | 4個のCPUコア 
+| CPU | 4つのCPUコア 
 
 
 | メモリ | 16GBのRAM 
 
 
-| 使用可能なディスクスペース | ディスク領域は次のように割り当てる必要があります。/opt/ NetApp 36 GB (ファイルシステム作成後に35 GB以上の空き領域)注:ファイルシステムを作成できるように、少し余分なディスク領域を割り当てることをお勧めします。ファイルシステムに35GB以上の空きスペースがあることを確認します。/optがNASストレージからマウントされたフォルダである場合は、ローカルユーザーがこのフォルダにアクセスできることを確認してください。ローカルユーザーがこのフォルダへのアクセス権を持っていない場合、AgentまたはData Collectorのインストールに失敗することがあります。詳細については、を参照してください。link:task_cs_add_agent.html#troubleshooting-agent-errors["トラブルシューティング"] 
+| 使用可能なディスク容量 | ディスク領域は次のように割り当てる必要があります: /opt/netapp 36 GB (ファイルシステムの作成後に最低 35 GB の空き領域) 注: ファイルシステムの作成を可能にするために、少し余分なディスク領域を割り当てることをお勧めします。ファイルシステムに少なくとも 35 GB の空き領域があることを確認します。 /opt が NAS ストレージからマウントされたフォルダーである場合は、ローカル ユーザーがこのフォルダーにアクセスできることを確認してください。ローカルユーザーにこのフォルダへの権限がない場合、エージェントまたはデータコレクタのインストールに失敗する可能性があります。link:task_cs_add_agent.html#troubleshooting-agent-errors["トラブルシューティング"]詳細についてはセクションをご覧ください。 
 
 
-| ネットワーク | 100 Mbps~1 Gbpsイーサネット接続、静的IPアドレス、すべてのデバイスへのIP接続、およびワークロードセキュリティインスタンスへの必要なポート（80または443） 
+| ネットワーク | 100 Mbps ～ 1 Gbps のイーサネット接続、静的 IP アドレス、すべてのデバイスへの IP 接続、および Workload Security インスタンスへの必要なポート (80 または 443)。 
 |===
-注：ワークロードセキュリティエージェントは、Data Infrastructure Insights Acquisition Unitやエージェントと同じマシンにインストールできます。ただし、これらを別々のマシンにインストールすることを推奨します。これらが同じマシンにインストールされている場合は、次のようにディスク領域を割り当ててください。
+注意: Workload Security エージェントは、Data Infrastructure Insights取得ユニットやエージェントと同じマシンにインストールできます。ただし、これらを別々のマシンにインストールすることがベストプラクティスです。これらを同じマシンにインストールする場合は、以下のようにディスク領域を割り当ててください。
 
-|===
-
-
-| 使用可能なディスクスペース | Linux では 50 ～ 55 GB 、ディスクスペースは次のように割り当てます。 /opt/netapp 25-30 GB /var/log/netapp 25 GB 
 |===
 
 
-== その他の推奨事項
-
-* ONTAP システムとエージェントマシンの両方の時刻を、 *Network Time Protocol （ NTP; ネットワークタイムプロトコル） * または *Simple Network Time Protocol （ SNTP ） * を使用して同期することを強くお勧めします。
-
+| 使用可能なディスク容量 | 50～55 GB Linuxの場合、ディスク容量は次のように割り当てる必要があります: /opt/netapp 25～30 GB /var/log/netapp 25 GB 
+|===
 
 
+== 追加の推奨事項
 
-== Cloud Network Access Rules の略
+* *Network Time Protocol (NTP)* または *Simple Network Time Protocol (SNTP)* を使用して、 ONTAPシステムとエージェント マシンの両方の時刻を同期することを強くお勧めします。
 
-USベースの*ワークロード・セキュリティ環境の場合：
+
+
+
+== クラウドネットワークアクセスルール
+
+*米国ベースの*ワークロード セキュリティ環境の場合:
 
 [cols="5*"]
 |===
-| プロトコル | ポート | ソース | デスティネーション | 製品説明 
+| プロトコル | ポート | ソース | デスティネーション | 説明 
 
 
-| TCP | 443 | ワークロードセキュリティエージェント | < サイト名 > .cs01.cloudinsights.netapp.com < サイト名 > .c01.cloudinsights.netapp.com < サイト名 > .c02.cloudinsights.netapp.com | データインフラの分析情報へのアクセス 
+| TCP | 443 | ワークロードセキュリティエージェント | <サイト名>.cs01.cloudinsights.netapp.com <サイト名>.c01.cloudinsights.netapp.com <サイト名>.c02.cloudinsights.netapp.com | Data Infrastructure Insightsへのアクセス 
 
 
-| TCP | 443 | ワークロードセキュリティエージェント | エージェントログイン.cs01.cloudinsights.netapp.com | 認証サービスへのアクセス 
+| TCP | 443 | ワークロードセキュリティエージェント | agentlogin.cs01.cloudinsights.netapp.com | 認証サービスへのアクセス 
 |===
-欧州*ベースのワークロード・セキュリティー環境の場合：
+*ヨーロッパベースの*ワークロード セキュリティ環境の場合:
 
 [cols="5*"]
 |===
-| プロトコル | ポート | ソース | デスティネーション | 製品説明 
+| プロトコル | ポート | ソース | デスティネーション | 説明 
 
 
-| TCP | 443 | ワークロードセキュリティエージェント | < サイト名 > .cs01-eu-1.cloudinsights.netapp.com < サイト名 > .c01-eu-1.cloudinsights.netapp.com < サイト名 > .c02-eu-1.cloudinsights.netapp.com | データインフラの分析情報へのアクセス 
+| TCP | 443 | ワークロードセキュリティエージェント | <サイト名>.cs01-eu-1.cloudinsights.netapp.com <サイト名>.c01-eu-1.cloudinsights.netapp.com <サイト名>.c02-eu-1.cloudinsights.netapp.com | Data Infrastructure Insightsへのアクセス 
 
 
 | TCP | 443 | ワークロードセキュリティエージェント | agentlogin.cs01-eu-1.cloudinsights.netapp.com | 認証サービスへのアクセス 
 |===
-APACベースの*ワークロード・セキュリティ環境の場合：
+*APAC ベース*のワークロード セキュリティ環境の場合:
 
 [cols="5*"]
 |===
-| プロトコル | ポート | ソース | デスティネーション | 製品説明 
+| プロトコル | ポート | ソース | デスティネーション | 説明 
 
 
-| TCP | 443 | ワークロードセキュリティエージェント | < サイト名 > .cs01-ap-1.cloudinsights.netapp.com < サイト名 > .c01-ap-1.cloudinsights.netapp.com < サイト名 > .c02-ap-1.cloudinsights.netapp.com | データインフラの分析情報へのアクセス 
+| TCP | 443 | ワークロードセキュリティエージェント | <サイト名>.cs01-ap-1.cloudinsights.netapp.com <サイト名>.c01-ap-1.cloudinsights.netapp.com <サイト名>.c02-ap-1.cloudinsights.netapp.com | Data Infrastructure Insightsへのアクセス 
 
 
-| TCP | 443 | ワークロードセキュリティエージェント | agentlogin.cs01-ap-1.cloudinsights.netapp.com | 認証サービスへのアクセス 
+| TCP | 443 | ワークロードセキュリティエージェント | エージェントログイン.cs01-ap-1.cloudinsights.netapp.com | 認証サービスへのアクセス 
 |===
 
 
@@ -98,25 +98,25 @@ APACベースの*ワークロード・セキュリティ環境の場合：
 
 [cols="5*"]
 |===
-| プロトコル | ポート | ソース | デスティネーション | 製品説明 
+| プロトコル | ポート | ソース | デスティネーション | 説明 
 
 
-| TCP | 389 （ LDAP ） 636 （ LDAPS / start-TLS ） | ワークロードセキュリティエージェント | LDAP サーバ URL | LDAP に接続します 
+| TCP | 389(LDAP) 636 (LDAP / start-tls) | ワークロードセキュリティエージェント | LDAP Server URL | LDAPに接続する 
 
 
-| TCP | 443 | ワークロードセキュリティエージェント | クラスタまたはSVMの管理IPアドレス（SVMコレクタの設定に応じて） | ONTAP との API 通信 
+| TCP | 443 | ワークロードセキュリティエージェント | クラスタまたは SVM 管理 IP アドレス (SVM コレクターの構成によって異なります) | ONTAPとのAPI通信 
 
 
-| TCP | 35000 ~ 55000 | SVM データ LIF の IP アドレス | ワークロードセキュリティエージェント | FPolicyイベントのONTAPからワークロードセキュリティエージェントへの通信。ONTAPがイベントをワークロードセキュリティエージェントに送信するには、これらのポートをワークロードセキュリティエージェントに対して開いておく必要があります。これには、ワークロードセキュリティエージェント自体のファイアウォールも含まれます（存在する場合）。これらのポートをすべて予約する必要はありませんが、予約するポートはこの範囲内である必要があります。最初に最大100個のポートを予約し、必要に応じて増やすことをお勧めします。 
+| TCP | 35000 - 55000 | SVM データ LIF IP アドレス | ワークロードセキュリティエージェント | Fpolicy イベントのためのONTAPから Workload Security Agent への通信。 ONTAP がWorkload Security Agent にイベントを送信するには、Workload Security Agent 自体のファイアウォール（存在する場合）も含めてこれらのポートを Workload Security Agent に対して開く必要があります。これらのポートをすべて予約する必要はありませんが、予約するポートはこの範囲内である必要があります。まずは約 100 個のポートを予約し、必要に応じて増やすことをお勧めします。 
 
 
-| TCP | 35000-55000 | クラスタ管理IP | ワークロードセキュリティエージェント | ONTAPクラスタ管理IPからWorkload Security Agentへの*EMSイベント*用の通信。ONTAPがWorkload Security Agentに*EMSイベント*を送信するには、これらのポートをWorkload Security Agentに向けて開く必要があります。Workload Security Agent自体のファイアウォール（存在する場合）も対象となります。これらのポートをすべて予約する必要はありませんが、予約するポートはこの範囲内である必要があります。最初に最大100個のポートを予約し、必要に応じて増やすことをお勧めします。 
+| TCP | 35000-55000 | クラスタ管理IP | ワークロードセキュリティエージェント | *EMS イベント* 用のONTAPクラスタ管理 IP からワークロード セキュリティ エージェントへの通信。 ONTAP がWorkload Security Agent に *EMS イベント* を送信するには、これらのポートを Workload Security Agent に対して開く必要があります。これには、Workload Security Agent 自体のファイアウォール (存在する場合) も含まれます。これらのポートをすべて予約する必要はありませんが、予約するポートはこの範囲内である必要があります。まずは約 100 個のポートを予約し、必要に応じて増やすことをお勧めします。 
 
 
-| SSH | 22 | ワークロードセキュリティエージェント | クラスタ管理 | CIFS / SMBユーザブロックに必要です。 
+| SSH | 22 | ワークロードセキュリティエージェント | クラスタ管理 | CIFS/SMB ユーザーのブロックに必要です。 
 |===
 
 
-== システムのサイジング
+== システムのサイズ設定
 
-サイジングの詳細については、のドキュメントを参照してlink:concept_cs_event_rate_checker.html["イベントレートチェッカー"]ください。
+参照link:concept_cs_event_rate_checker.html["イベントレートチェッカー"]サイズに関する情報についてはドキュメントを参照してください。

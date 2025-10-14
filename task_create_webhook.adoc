@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task_create_webhook.html 
 keywords: webhook, notification, slack, integration 
-summary: パフォーマンスまたはインベントリのしきい値をアラートするためのモニタを作成する 
+summary: パフォーマンスまたは在庫のしきい値を警告するモニターを作成する 
 ---
-= webhook を使用した通知
+= Webhookを使用した通知
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,87 +14,87 @@ summary: パフォーマンスまたはインベントリのしきい値をア�
 
 
 [role="lead"]
-Webhook を使用すると、ユーザーはカスタマイズされた webhook チャネルを使用して、さまざまなアプリケーションにアラート通知を送信できます。
+Webhook を使用すると、ユーザーはカスタマイズされた Webhook チャネルを使用してさまざまなアプリケーションにアラート通知を送信できます。
 
-多くの商用アプリケーションでは、標準入力インターフェイスとして Webhook がサポートされています。たとえば、 Slack 、 PagerDuty 、 Teams 、および Discord は、すべてのウェブフックをサポートしています。Data Infrastructure Insightsは、カスタマイズ可能な汎用Webhookチャネルをサポートすることで、これらの配信チャネルの多くをサポートできます。Web フックの情報は、これらのアプリケーション Web サイトに掲載されています。たとえば、Slackにはlink:https://api.slack.com/messaging/webhooks["この便利なガイドです"]次のような機能があります。
+多くの商用アプリケーションは、標準入力インターフェースとして Webhook をサポートしています。たとえば、Slack、PagerDuty、Teams、Discord はすべて Webhook をサポートしています。汎用的でカスタマイズ可能な Webhook チャネルをサポートすることで、 Data Infrastructure Insights はこれらの配信チャネルの多くをサポートできます。 Webhook に関する情報は、これらのアプリケーション Web サイトで参照できます。例えば、Slackはlink:https://api.slack.com/messaging/webhooks["この便利なガイド"]。
 
-複数の Web フックチャネルを作成できます。各チャネルは異なる目的に合わせて、アプリケーションや受信者などを個別に指定できます
+複数の Webhook チャネルを作成し、各チャネルを異なる目的 (個別のアプリケーション、異なる受信者など) に向けることができます。
 
-webhook チャネルインスタンスは、次の要素で構成されています。
+Webhook チャネル インスタンスは、次の要素で構成されます。
 
 |===
 
 
-| 名前 | 一意の名前 
+| Name | 一意の名前 
 
 
-| URL | URLパラメータとともに_ http://_または_ https://_プレフィックスを含むWebhookターゲットURL 
+| URL | Webhook ターゲット URL（URL パラメータとともに _http://_ または _https://_ プレフィックスを含む） 
 
 
-| 方法 | GET 、 POST-DEFAULT は POST です 
+| 方法 | GET、POST - デフォルトはPOST 
 
 
-| カスタムヘッダー | ここで任意のカスタムヘッダー行を指定します 
+| カスタムヘッダー | ここでカスタムヘッダー行を指定します 
 
 
-| メッセージ本文 | メッセージの本文をここに入力します 
+| メッセージ本文 | メッセージの本文をここに入力してください 
 
 
-| デフォルトのアラートパラメータ | に、 webhook のデフォルトパラメータを示します 
+| デフォルトのアラートパラメータ | Webhookのデフォルトパラメータを一覧表示します 
 
 
-| カスタムパラメータとシークレット | カスタムパラメータとシークレットを使用すると、一意のパラメータとパスワードなどのセキュアな要素を追加できます 
+| カスタムパラメータとシークレット | カスタムパラメータとシークレットを使用すると、固有のパラメータやパスワードなどの安全な要素を追加できます。 
 |===
 
 
-== Webhook の作成
+== Webhookの作成
 
-Data Infrastructure InsightsのWebhookを作成するには、* Admin > Notifications *に移動し、* Webhooks *タブを選択します。
+Data Infrastructure Insights Webhook を作成するには、*管理 > 通知* に移動し、*Webhooks* タブを選択します。
 
-次の図は、 Slack 用に設定された webhook の例を示しています。
+次の画像は、Slack 用に構成された Webhook の例を示しています。
 
-image:Webhook_Example_Slack.png["webhook の例"]
+image:Webhook_Example_Slack.png["Webhookの例"]
 
-各フィールドに適切な情報を入力し、完了したら[保存]をクリックします。
+各フィールドに適切な情報を入力し、完了したら「保存」をクリックします。
 
-また、[ Webフックのテスト]ボタンをクリックして、接続をテストすることもできます。これにより、選択されたメソッドに従って、定義されたURLに「Message Body」（置換なし）が送信されます。
+「Webhook のテスト」ボタンをクリックして接続をテストすることもできます。これにより、選択したメソッドに従って、定義された URL に「メッセージ本文」（置換なし）が送信されることに注意してください。
 
-Data Infrastructure InsightsのWebhookは、多数のデフォルトパラメータで構成されています。また、独自のカスタムパラメータまたはシークレットを作成することもできます。
+Data Infrastructure Insights Webhook は、いくつかのデフォルト パラメータで構成されています。さらに、独自のカスタム パラメータまたはシークレットを作成することもできます。
 
-image:Webhook_Default_Parameters.png["Data Infrastructure InsightsのデフォルトのWebhookパラメータ"]
+image:Webhook_Default_Parameters.png["Data Infrastructure Insightsのデフォルトの Webhook パラメータ"]
 
 
 
-=== パラメータ：パラメータとは何ですか？また、パラメータの使用方法を教えてください。
+=== パラメーター: パラメーターとは何ですか? また、どのように使用しますか?
 
-アラートパラメータは、アラートごとに動的に設定される値です。たとえば、 %%TriggeredOn%% の _Parameter はアラートがトリガーされたオブジェクトで置き換えられます。
+アラート パラメータは、アラートごとに設定される動的な値です。たとえば、_%%TriggeredOn%%_ パラメータは、アラートがトリガーされたオブジェクトに置き換えられます。
 
-任意のオブジェクト属性（ストレージ名など）をパラメータとしてWebhookに追加できます。たとえば、Webhookの説明でボリューム名とストレージ名のパラメータを次のように設定できます。"High Latency for Volume：_%%relatedObject.volume.name%%_、Storage：_%%relatedObject.storage.name%%_"
+任意のオブジェクト属性 (ストレージ名など) をパラメータとして Webhook に追加できます。たとえば、Webhook の説明に、次のようにボリューム名とストレージ名のパラメータを設定できます: 「ボリューム: _%%relatedObject.volume.name%%_、ストレージ: _%%relatedObject.storage.name%%_ の待機時間が長い」。
 
-このセクションでは、置換は「Test Webhook」ボタンをクリックしたときに_not_performedになります。このボタンは、_%_substitionsを示すペイロードを送信しますが、これらをデータに置き換えません。
+このセクションでは、「Webhook をテスト」ボタンをクリックしたときに置換は実行されないことに注意してください。ボタンは、_%%_ 置換を示すペイロードを送信しますが、データに置き換えません。
 
 
 
 === カスタムパラメータとシークレット
 
-このセクションでは、任意のカスタムパラメータやシークレットを追加できます。セキュリティ上の理由から、シークレットが定義されている場合は、 webhook 作成者だけがこの webhook チャネルを変更できます。他のユーザに対しては読み取り専用です。URL/ ヘッダーのシークレットは、 %%<secret_name>%%_ として使用できます。
+このセクションでは、必要なカスタム パラメータやシークレットを追加できます。セキュリティ上の理由から、シークレットが定義されている場合、この Webhook チャネルを変更できるのは Webhook 作成者のみです。他のユーザーにとっては読み取り専用となります。  URL/ヘッダーでは、_%%<secret_name>%%_ のようにシークレットを使用できます。
 
 
 
-=== Webhookリストページ
+=== Webhooksリストページ
 
-Webhookのリストページには、Name、Created By、Created On、Status、Secure、 およびLast Reportedフィールド。
-
-
-
-== モニタで [Webhook Notification] を選択します
-
-でWebhook通知を選択するにはlink:task_create_monitor.html["監視する"]、*アラート>モニターの管理*に移動して目的のモニターを選択するか、新しいモニターを追加します。[ チーム通知の設定 ] セクションで、配信方法として [_Webhook_] を選択します。警告レベル（重大、警告、解決済み）を選択し、目的のウェブフックを選択します。
-
-image:Webhook_Monitor_Notify.png["Webhook モニタの通知"]
+Webhook リスト ページには、名前、作成者、作成日、ステータス、セキュリティ、最終報告のフィールドが表示されます。
 
 
 
-== Webhook の例：
+== モニターでWebhook通知を選択する
 
-Webhook用Webhook link:task_webhook_example_pagerduty.html["PagerDuty"]用Webhook用Webhook用Webhook用Webhook用Webhooklink:task_webhook_example_slack.html["Slack"]用link:task_webhook_example_teams.html["チーム"]link:task_webhook_example_discord.html["切断"]
+ウェブフック通知を選択するにはlink:task_create_monitor.html["monitor"]、*アラート > モニターの管理* に移動して目的のモニターを選択するか、新しいモニターを追加します。 _チーム通知の設定_ セクションで、配信方法として _Webhook_ を選択します。アラート レベル (重大、警告、解決済み) を選択し、目的の Webhook を選択します。
+
+image:Webhook_Monitor_Notify.png["Webhookモニター通知"]
+
+
+
+== Webhook の例:
+
+Webhooksのlink:task_webhook_example_slack.html["スラック"]Webhooksのlink:task_webhook_example_pagerduty.html["ページャーデューティ"]Webhooksのlink:task_webhook_example_teams.html["チーム"]Webhooksのlink:task_webhook_example_discord.html["不和"]

@@ -1,31 +1,31 @@
 ---
 sidebar: sidebar 
 permalink: index.html 
-summary: Data Infrastructure Insightsのドキュメントポータルへようこそ。 
+summary: Data Infrastructure Insightsのドキュメント ポータルへようこそ。 
 keywords:  
 ---
-= Data Infrastructure Insightsドキュメント
+= Data Infrastructure Insightsのドキュメント
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-NetApp Data Infrastructure Insights（旧称Cloud Insights）は、インフラ全体を可視化できるクラウドインフラ監視ツールです。Data Infrastructure Insightsを使用すると、パブリッククラウドやプライベートデータセンターを含む、すべてのリソースの監視、トラブルシューティング、最適化を実行できます。
+NetApp Data Infrastructure Insights (旧称Cloud Insights) は、インフラストラクチャ全体の可視性を提供するクラウド インフラストラクチャ監視ツールです。Data Infrastructure Insightsを使用すると、パブリック クラウドやプライベート データ センターを含むすべてのリソースを監視、トラブルシューティング、最適化できます。
 
 
 
-== Data Infrastructure Insightsでできること
+== Data Infrastructure Insights は何ができるのでしょうか?
 
-Data Infrastructure Insightsは、ハイブリッドマルチクラウドを監視し、インフラとワークロードのフルスタックのオブザーバビリティを提供します。
+Data Infrastructure Insightsはハイブリッド マルチクラウド監視を提供し、インフラストラクチャとワークロードのフルスタックの観測可能性を実現します。
 
-* Kubernetesを含む、異機種混在インフラとワークロード向けのデータコレクタ
-* オープンなTelegrafコレクターとオープンAPIにより、統合が容易になります
+* Kubernetesを含む異機種インフラストラクチャとワークロード向けのデータコレクター
+* オープンなTelegrafコレクターとオープンAPIで簡単に統合可能
 * 包括的なアラートと通知
-* インテリジェントなインサイトを得るための機械学習
-* リソース利用率を最適化
-* 高度なフィルタを備えた組み込みまたはカスタマイズ可能なダッシュボードにより、回答 の質問に対する表示ノイズを最小限に抑えることができます
-* ONTAP ストレージの運用状態を検出できます 
-* 最も重要なビジネス資産であるランサムウェア攻撃やデータ破壊攻撃からデータを保護
+* インテリジェントな洞察のための機械学習
+* リソース利用の最適化
+* 表示ノイズを最小限に抑えて質問に答えるための高度なフィルターを備えた組み込みまたはカスタマイズ可能なダッシュボード
+* ONTAPストレージ運用の健全性を確認する 
+* 最も貴重なビジネス資産であるデータをランサムウェアやデータ破壊攻撃から保護します
 
 
 '''
@@ -33,8 +33,8 @@ Data Infrastructure Insightsは、ハイブリッドマルチクラウドを監�
 
 == はじめに
 
-* link:task_cloud_insights_onboarding_1.html["*開始する*"]Data Infrastructure Insightsの使用方法
-* サインアップしています。どうすればいい?link:task_getting_started_with_cloud_insights.html["データの取得"] link:concept_user_roles.html["ユーザを設定する"]
-* 更新が次のステップlink:task_defining_annotations.html["アセットの準備：アノテーション"] link:concept_querying_assets.html["目的のアセットの検索：クエリ"] link:concept_dashboards_overview.html["必要なデータの表示：ダッシュボード"] link:task_create_monitor.html["監視とアラート"] link:task_cs_getting_started.html["データを保護する"]
-* これはすばらしい原料である! 覚悟はできてるlink:concept_subscribing_to_cloud_insights.html["* 予約購読 *"]
+* どうすればlink:task_cloud_insights_onboarding_1.html["*始めましょう*"]Data Infrastructure Insightsで?
+* 登録しました。さて、どうすればいいでしょうか?link:task_getting_started_with_cloud_insights.html["データの取得"] link:concept_user_roles.html["ユーザーの設定"]
+* 素晴らしい！次は何?link:task_defining_annotations.html["アセットの準備：注釈付け"] link:concept_querying_assets.html["必要な資産を見つける: クエリ"] link:concept_dashboards_overview.html["必要なデータを見る: ダッシュボード"] link:task_create_monitor.html["監視とアラート"] link:task_cs_getting_started.html["データの保護"]
+* これは素晴らしいですね！私は準備ができていますlink:concept_subscribing_to_cloud_insights.html["*購読する*"]。
 

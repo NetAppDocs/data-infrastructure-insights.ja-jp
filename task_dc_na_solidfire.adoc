@@ -1,28 +1,28 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_na_solidfire.html 
-summary: NetApp SolidFire のデータコレクタを設定する 
+summary: NetApp SolidFireデータコレクターを構成する 
 keywords: data collector, queries, create 
 ---
-= NetApp SolidFire オールフラッシュアレイデータコレクタ
+= NetApp SolidFireオールフラッシュアレイ データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-NetApp SolidFire オールフラッシュアレイデータコレクタは、 iSCSI と Fibre Channel の両方の SolidFire 構成からのインベントリとパフォーマンスの収集をサポートします。
+NetApp SolidFireオールフラッシュ アレイ データ コレクターは、iSCSI とファイバー チャネルの両方のSolidFire構成からのインベントリとパフォーマンスの収集をサポートします。
 
-SolidFire データコレクタでは、 SolidFire REST API を使用します。データコレクタが配置されている Acquisition Unit から、 SolidFire クラスタ管理 IP アドレス上の TCP ポート 443 への HTTPS 接続を開始できる必要があります。データコレクタには、 SolidFire クラスタに対して REST API クエリを実行するためのクレデンシャルが必要です。
+SolidFireデータ コレクターはSolidFire REST API を利用します。データ コレクターが存在する取得ユニットは、 SolidFireクラスター管理 IP アドレスの TCP ポート 443 への HTTPS 接続を開始できる必要があります。データ コレクターには、 SolidFireクラスターで REST API クエリを実行できる資格情報が必要です。
 
 
 
 == 用語
 
-Data Infrastructure Insightsでは、NetApp SolidFireオールフラッシュアレイデータコレクタから次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+Data Infrastructure Insights は、 NetApp SolidFire All-Flash Array データ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
 [cols="2*"]
 |===
-| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
 
 | ドライブ | ディスク 
@@ -31,30 +31,30 @@ Data Infrastructure Insightsでは、NetApp SolidFireオールフラッシュア
 | クラスタ | ストレージ 
 
 
-| ノード | ストレージノード 
+| ノード | ストレージ ノード 
 
 
-| ボリューム | ボリューム 
+| Volume | Volume 
 
 
-| ファイバ・チャネル・ポート | ポート 
+| ファイバーチャネルポート | ポート 
 
 
-| ボリュームアクセスグループ、 LUN の割り当て | ボリュームマップ 
+| ボリュームアクセスグループ、LUN割り当て | ボリュームマップ 
 
 
 | iSCSI セッション | ボリュームマスク 
 |===
-注：これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているわけではありません。
+注: これらは一般的な用語のマッピングのみであり、このデータ コレクターのすべてのケースを反映しているわけではありません。
 
 
 
 == 要件
 
-このデータコレクタを設定するための要件は次のとおりです。
+このデータ コレクターを構成するための要件は次のとおりです。
 
-* 管理仮想 IP アドレス
-* 読み取り専用のユーザ名とクレデンシャル
+* 管理仮想IPアドレス
+* 読み取り専用のユーザー名と資格情報
 * ポート443
 
 
@@ -64,16 +64,16 @@ Data Infrastructure Insightsでは、NetApp SolidFireオールフラッシュア
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| 管理仮想 IP アドレス（ MVIP ） | SolidFire クラスタの管理仮想 IP アドレス 
+| 管理仮想 IP アドレス (MVIP) | SolidFireクラスタの管理仮想IPアドレス 
 
 
-| ユーザー名 | SolidFire クラスタへのログインに使用するユーザ名 
+| ユーザー名 | SolidFireクラスタにログインするために使用する名前 
 
 
-| パスワード | SolidFire クラスタへのログインに使用するパスワード 
+| パスワード | SolidFireクラスタにログインするために使用するパスワード 
 |===
 
 
@@ -81,13 +81,13 @@ Data Infrastructure Insightsでは、NetApp SolidFireオールフラッシュア
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| 接続タイプ | 接続タイプを選択します 
+| 接続タイプ | 接続タイプを選択 
 
 
-| 通信ポート | NetApp API に使用するポート 
+| 通信ポート | NetApp API に使用されるポート 
 
 
 | インベントリポーリング間隔（分） | デフォルトは20分です 
@@ -99,15 +99,15 @@ Data Infrastructure Insightsでは、NetApp SolidFireオールフラッシュア
 
 == トラブルシューティング
 
-SolidFireからエラーが報告されると、Data Infrastructure Insightsに次のように表示されます。
+SolidFire がエラーを報告すると、 Data Infrastructure Insightsに次のように表示されます。
 
-データの取得中に SolidFire デバイスからエラーメッセージを受信しました。呼び出しは <method> （ <parameterString> ）でした。デバイスからのエラーメッセージは次のとおりです（デバイスマニュアルを確認してください）。 <message>_
+_データを取得しようとしたときに、 SolidFireデバイスからエラー メッセージが受信されました。呼び出しは <method> (<parameterString> ) でした。デバイスからのエラーメッセージは次のとおりです (デバイスのマニュアルを確認してください): <メッセージ>_
 
-ここで、
+各値の意味は次のとおりです。
 
-* method> は、 GET や PUT などの HTTP メソッドです。
-* parameterString> は、 REST 呼び出しに含まれていたパラメータをカンマで区切ったリストです。
-* <message> は、エラーメッセージとして返されたデバイスです。
+* <method> は、GET や PUT などの HTTP メソッドです。
+* <parameterString> は、REST 呼び出しに含まれていたパラメータのコンマ区切りリストです。
+* <message> は、デバイスがエラー メッセージとして返した内容です。
 
 
-このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

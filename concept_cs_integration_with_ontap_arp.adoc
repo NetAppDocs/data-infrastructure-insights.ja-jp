@@ -1,29 +1,29 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_integration_with_ontap_arp.html 
-summary: ワークロードセキュリティをONTAP の自動ランサムウェア防御と統合することで、ランサムウェアの検出を強化 
+summary: Workload Security はONTAP Autonomous Ransomware Protection と統合され、ランサムウェアの検出能力が向上します。 
 keywords: ransomware, ARP, Protection, Security 
 ---
-= ONTAP によるランサムウェア対策との統合
+= ONTAP Autonomous Ransomware Protectionとの統合
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-ONTAP の自律的ランサムウェア対策（ARP）機能は、NAS（NFSおよびSMB）環境におけるワークロード分析を使用して、ランサムウェア攻撃を示す可能性のある異常なインファイルアクティビティをプロアクティブに検出して警告します。
+ONTAP Autonomous Ransomware Protection（ARP）機能は、NAS（NFS および SMB）環境でのワークロード分析を使用して、ランサムウェア攻撃の兆候となる可能性のある異常なファイル内アクティビティをプロアクティブに検出し、警告します。
 
-ARPの詳細とライセンス要件についてはlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["ここをクリック"]、こちらを参照してください。
+ARPに関する追加の詳細とライセンス要件については、以下をご覧ください。link:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["ここをクリックしてください。"] 。
 
-ワークロードセキュリティは、ONTAP と統合してARPイベントを受信し、追加の分析と自動応答レイヤを提供します。
+Workload Security はONTAPと統合して ARP イベントを受信し、追加の分析および自動応答レイヤーを提供します。
 
-ワークロードセキュリティは、ONTAP からARPイベントを受信し、次の処理を行います。
+Workload Security はONTAPから ARP イベントを受信し、次のアクションを実行します。
 
-. ボリューム暗号化イベントとユーザアクティビティを関連付けて、破損の原因となっているユーザを特定します。
+. ボリューム暗号化イベントとユーザー アクティビティを相関させて、損害の原因を特定します。
 . 自動応答ポリシーを実装する（定義されている場合）
-. フォレンジック機能を提供：
+. フォレンジック機能を提供します:
 +
-** お客様がデータ侵害の調査を実施できるようにします。
-** 影響を受けたファイルを特定し、迅速なリカバリとデータ侵害の調査に役立ちます。
+** 顧客がデータ侵害の調査を実施できるようにします。
+** 影響を受けたファイルを特定し、より迅速な復旧とデータ侵害調査の実施に役立ちます。
 
 
 
@@ -32,43 +32,43 @@ ARPの詳細とライセンス要件についてはlink:https://docs.netapp.com/
 
 == 前提条件
 
-. ONTAPの最小バージョン：9.11.1
-. ARPが有効なボリューム。ARPのイネーブル化の詳細については、link:https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html["ここをクリック"]を参照してください。ARPは、OnCommand システムマネージャを介して有効にする必要があります。ワークロードセキュリティでARPを有効にすることはできませ
-. ワークロードセキュリティコレクタはクラスタIPを介して追加する必要があります。
-. この機能を使用するには、クラスタレベルのクレデンシャルが必要です。つまり、SVMを追加するときはクラスタレベルのクレデンシャルを使用する必要があります。
+. 最小ONTAPバージョン: 9.11.1
+. ARP 対応ボリューム。  ARPを有効にする方法の詳細については、link:https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html["ここをクリックしてください。"] 。  ARP はOnCommand System Manager経由で有効にする必要があります。  Workload Security では ARP を有効にできません。
+. Workload Security コレクターは、クラスター IP 経由で追加する必要があります。
+. この機能が動作するには、クラスター レベルの資格情報が必要です。つまり、SVM を追加するときは、クラスター レベルの認証情報を使用する必要があります。
 
 
 
 
-== ユーザ権限が必要です
+== ユーザー権限が必要です
 
-クラスタ管理者のクレデンシャルを使用している場合、新しい権限は不要です。
+クラスター管理資格情報を使用している場合は、新しい権限は必要ありません。
 
-ユーザに付与された権限でカスタムユーザ（_csuser_など）を使用している場合は、次の手順に従ってワークロードセキュリティにアクセス許可を付与し、ONTAP からARP関連情報を収集します。
+ユーザーに権限が付与されたカスタム ユーザー (たとえば、_csuser_) を使用している場合は、以下の手順に従って、Workload Security にONTAPから ARP 関連情報を収集する権限を付与します。
 
-クラスタクレデンシャルを使用する_csuser_withの場合、ONTAP コマンドラインから次の操作を実行します。
+クラスタ認証情報を持つ _csuser_ の場合は、 ONTAPコマンドラインから次の操作を実行します。
 
 ....
 security login role create -role csrole -cmddirname "volume" -access readonly
 security login role create -role csrole -cmddirname "security anti-ransomware volume" -access readonly
 ....
-その他の設定について詳しくは、こちらをご覧くださいlink:task_add_collector_svm.html["ONTAPケンケン"]。
+その他の設定についてはこちらlink:task_add_collector_svm.html["ONTAP権限"]。
 
 
 
-== アラートの例
+== サンプルアラート
 
-ARPイベントにより生成されたアラートの例を次に示します。
+ARP イベントにより生成されたアラートのサンプルを以下に示します。
 
-image:CS_Ransomware_Example_1.png["ランサムウェアアラートの上部セクション"] image:CS_Ransomware_Example_2.png["ランサムウェアアラートの上部セクション"] image:CS_Ransomware_Example_3.png["ランサムウェアアラートの上部セクション"]
+image:CS_Ransomware_Example_1.png["ランサムウェアアラートのトップセクション"] image:CS_Ransomware_Example_2.png["ランサムウェアアラートのトップセクション"] image:CS_Ransomware_Example_3.png["ランサムウェアアラートのトップセクション"]
 
-信頼性の高いバナーは、攻撃がランサムウェアの挙動とファイル暗号化のアクティビティを示していることを示しています。暗号化ファイルのグラフには、ARP解決策 によってボリューム暗号化アクティビティが検出されたタイムスタンプが示されます。
+高信頼バナーは、攻撃がファイル暗号化アクティビティとともにランサムウェアの動作を示していることを示します。暗号化されたファイルのグラフには、ARP ソリューションによってボリューム暗号化アクティビティが検出されたタイムスタンプが示されます。
 
 
 
 == 制限事項
 
-SVMがワークロードセキュリティで監視されていないものの、ONTAP によって生成されたARPイベントがある場合、ワークロードセキュリティはイベントを受信して表示します。ただし、アラートに関連するフォレンジック情報およびユーザーマッピングはキャプチャまたは表示されません。
+SVM が Workload Security によって監視されていないが、 ONTAPによって ARP イベントが生成されている場合でも、そのイベントは Workload Security によって受信され、表示されます。ただし、アラートに関連するフォレンジック情報やユーザー マッピングは取得または表示されません。
 
 
 
@@ -78,8 +78,8 @@ SVMがワークロードセキュリティで監視されていないものの�
 
 [cols="2*"]
 |===
-| 問題 | 解決策： 
+| 問題： | 解決： 
 
 
-| 電子メールアラートは、攻撃が検出されてから24時間後に受信されます。UIでは、その24時間前にData Infrastructure Insights Workload SecurityがEメールを受信するとアラートが表示されます。 | ONTAPがData Infrastructure Insights Workload Security（ワークロードセキュリティ）に_Ransomware Detected_Eventを送信すると、Eメールが送信されます。イベントには、攻撃のリストとタイムスタンプが含まれます。Workload Security UIには、攻撃を受けた最初のファイルのアラートタイムスタンプが表示されます。ONTAPは、一定数のファイルがエンコードされると、_Ransomware Detected_EventをData Infrastructure Insightsに送信します。そのため、UIにアラートが表示される時間とEメールが送信される時間が異なる場合があります。 
+| 攻撃が検出されてから 24 時間以内に電子メールアラートが受信されます。  UI では、 Data Infrastructure Insights Workload Security が電子メールを受信する 24 時間前にアラートが表示されます。 | ONTAP が_Ransomware Detected_ イベントをData Infrastructure Insights Workload Security (Workload Security) に送信すると、電子メールが送信されます。イベントには攻撃のリストとそのタイムスタンプが含まれます。  Workload Security UI には、攻撃を受けた最初のファイルのアラート タイムスタンプが表示されます。 ONTAP は、一定数のファイルがエンコードされると、_Ransomware Detected_ イベントをData Infrastructure Insightsに送信します。したがって、UI にアラートが表示される時間と電子メールが送信される時間には差が生じる可能性があります。 
 |===

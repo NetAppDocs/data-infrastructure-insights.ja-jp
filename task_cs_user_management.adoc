@@ -2,17 +2,17 @@
 sidebar: sidebar 
 permalink: task_cs_user_management.html 
 keywords: Workload Security, User, Login, account, cloud secure 
-summary: ワークロードのセキュリティユーザアカウントはData Infrastructure Insightsのユーザ管理で管理 
+summary: ワークロード セキュリティ ユーザー アカウントは、Data Infrastructure Insightsユーザー管理を通じて管理されます。 
 ---
-= ユーザ管理
+= ユーザー管理
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-ワークロードセキュリティユーザアカウントは、Data Infrastructure Insightsを通じて管理されます。
+Workload Security ユーザー アカウントは、Data Infrastructure Insightsを通じて管理されます。
 
-Data Infrastructure Insightsには、アカウント所有者、管理者、ユーザ、ゲストの4つのユーザアカウントレベルが用意されています。各アカウントには、特定の権限レベルが割り当てられます。管理者権限を持つユーザアカウントは、ユーザを作成または変更し、各ユーザに次のいずれかのワークロードセキュリティロールを割り当てることができます。
+Data Infrastructure Insights には、アカウント所有者、管理者、ユーザー、ゲストの 4 つのユーザー アカウント レベルがあります。各アカウントには特定の権限レベルが割り当てられます。管理者権限を持つユーザー アカウントは、ユーザーを作成または変更し、各ユーザーに次のいずれかの Workload Security ロールを割り当てることができます。
 
 |===
 
@@ -20,23 +20,23 @@ Data Infrastructure Insightsには、アカウント所有者、管理者、ユ�
 | ロール | ワークロードセキュリティアクセス 
 
 
-| 管理者 | アラート、フォレンジック、データコレクタ、自動応答ポリシー、ワークロードセキュリティ用APIなど、すべてのワークロードセキュリティ機能を実行できます。管理者は、他のユーザーを招待することもできますが、割り当てられるのはワークロードセキュリティロールのみです。 
+| 管理者 | アラート、フォレンジック、データ コレクター、自動応答ポリシー、および Workload Security の API など、すべての Workload Security 機能を実行できます。管理者は他のユーザーを招待することもできますが、割り当てることができるのは Workload Security のロールのみです。 
 
 
-| ユーザ | アラートを表示および管理し、フォレンジックを表示できます。ユーザーロールは、アラートステータスの変更、メモの追加、スナップショットの手動作成、ユーザーアクセスの制限を行うことができます。 
+| ユーザ | アラートを表示および管理し、フォレンジックを表示できます。ユーザー ロールでは、アラートのステータスを変更したり、メモを追加したり、スナップショットを手動で取得したり、ユーザー アクセスを制限したりできます。 
 
 
-| ゲスト | アラートおよびフォレンジックを表示できます。ゲストロールは、アラートステータスの変更、メモの追加、スナップショットの手動作成、ユーザーアクセスの制限を行うことはできません。 
+| ゲスト | アラートとフォレンジックを表示できます。ゲスト ロールでは、アラート ステータスを変更したり、メモを追加したり、スナップショットを手動で取得したり、ユーザー アクセスを制限したりすることはできません。 
 |===
 .手順
-. Workload Securityにログインします
-. メニューで、 [*Admin] > [User Management] をクリックします
+. ワークロードセキュリティにログイン
+. メニューで*管理>ユーザー管理*をクリックします
 +
-Data Infrastructure Insightsのユーザ管理ページに移動します。
+Data Infrastructure Insights のユーザー管理ページに転送されます。
 
-. 各ユーザに必要なロールを選択します。
+. 各ユーザーに対して希望するロールを選択します。
 
 
-新しいユーザを追加する際には、目的のロール（通常はユーザまたはゲスト）を選択します。
+新しいユーザーを追加するときは、希望するロール (通常はユーザーまたはゲスト) を選択するだけです。
 
-ユーザアカウントとロールの詳細については、Data Infrastructure Insightsのドキュメントを参照してlink:https://docs.netapp.com/us-en/cloudinsights/concept_user_roles.html["ユーザロール"]ください。
+ユーザーアカウントとロールの詳細については、Data Infrastructure Insightsをご覧ください。link:https://docs.netapp.com/us-en/cloudinsights/concept_user_roles.html["ユーザ ロール"]ドキュメント。

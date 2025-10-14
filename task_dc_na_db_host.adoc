@@ -2,21 +2,21 @@
 sidebar: sidebar 
 permalink: task_dc_na_db_host.html 
 keywords: data collector, generic db 
-summary: 汎用DBホストリゾルバコレクタ 
+summary: 汎用DBホストリゾルバコレクター 
 ---
-= NetApp汎用DBホストリゾルバ
+= NetApp汎用 DB ホスト リゾルバ
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-このデータコレクタはインベントリを取得します。
+このデータ収集者は在庫を取得します
 
 
 
 == 用語
 
-Data Infrastructure Insightsは、このコレクタからインベントリを取得します。
+Data Infrastructure Insights はこのコレクターからインベントリを取得します。
 
 
 
@@ -24,19 +24,19 @@ Data Infrastructure Insightsは、このコレクタからインベントリを�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| DBサーバのIPアドレス | DBサーバのIPアドレス 
+| DB サーバの IP アドレス | DBサーバーのIPアドレス 
 
 
-| DBサーバポート | デフォルトは3306です。 
+| DB サーバーポート | デフォルトは3306です 
 
 
-| 修飾ドライバクラス名 | ドライバのクラス名。 
+| 認定ドライバークラス名 | ドライバーのクラス名。 
 
 
-| JDBCドライバURL | ドライバのURL 
+| JDBC ドライバー URL | ドライバーのURL 
 
 
 | SQLクエリ | テーブルからデータを返すために使用されるクエリ 
@@ -47,15 +47,15 @@ Data Infrastructure Insightsは、このコレクタからインベントリを�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| インベントリポーリング間隔（最小） | デフォルトは60分です 
+| インベントリポーリング間隔（分） | デフォルトは60分です 
 
 
-| SSL接続を有効にする | SSL経由の接続を有効にする場合に選択 
+| SSL接続を有効にする | SSL経由の接続を有効にするには選択してください 
 
 
-| WWNエイリアスのレポート | WWNエイリアスをレポートする場合に選択します 
+| WWNエイリアスを報告 | WWNエイリアスを報告するには選択してください 
 |===
-詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

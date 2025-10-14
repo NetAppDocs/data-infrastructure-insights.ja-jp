@@ -2,129 +2,129 @@
 sidebar: sidebar 
 permalink: task_install_manual_au.html 
 keywords: Acquisition Unit, AU, install, configure, Linux, add, remove, uninstall, delete, deleting, move, moving, manual, AU, Patch 
-summary: Data Infrastructure Insightsでは、AUソフトウェアを手動で更新するように設定できるため、テナントにインストールされているソフトウェアをより細かく制御できます。 
+summary: Data Infrastructure Insightsでは、AU ソフトウェアを手動で更新するように構成できるため、テナントにインストールされているソフトウェアをより細かく制御できます。 
 ---
-= Acquisition Unitソフトウェアを手動でインストールする
+= 取得ユニットソフトウェアの手動インストール
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-デフォルトでは、Data Infrastructure Insightsは、更新が導入されるとAcquisition Unit（AU）ソフトウェアを自動的に更新します。ただし、安全に管理された環境では、自動更新が不可能または望まれない場合があります。このような場合は、AUソフトウェアを手動で更新するようにData Infrastructure Insightsを設定して、テナントにインストールされているソフトウェアをより細かく制御できます。
+デフォルトでは、 Data Infrastructure Insights は、更新が展開されると、Acquisition Unit (AU) ソフトウェアを自動的に更新します。ただし、安全に管理された環境では、自動更新が不可能または望ましくない場合があります。このような場合、 Data Infrastructure Insightsを構成して AU ソフトウェアを手動で更新することで、テナントにインストールされているソフトウェアをより細かく制御できるようになります。
 
-AUソフトウェアを手動でダウンロードしてインストールするには、次の手順に従います。Data Infrastructure Insightsには、これらの手順の多くに役立つSwaggerのドキュメントページが用意されています。また、独自のAPIスクリプト/コマンドを使用することもできます。[Admin]>[API Access]に移動し、[API Documentation]リンクをクリックします。
+AU ソフトウェアを手動でダウンロードしてインストールするには、次の手順を実行します。  Data Infrastructure Insightsには、これらの手順の多くに使用できる便利な Swagger ドキュメント ページが用意されています。また、独自の API スクリプト/コマンドを使用することもできます。  「管理」>「API アクセス」に移動し、「API ドキュメント」リンクをクリックします。
 
-このプロセスは、LinuxとWindowsで同様です。
+このプロセスは Linux と Windows で同様です。
 
 
 
-== Linuxでの新規AUインストールの実行：
+== Linux 上で新しい AU インストールを実行する:
 
-. Data Infrastructure Insightsで、APIトークンを作成します。
+. Data Infrastructure Insightsで、API トークンを作成します。
 +
-.. [Admin]>[API Access]*に移動し、*[+API Access Token]*を選択します。
+.. *管理 > API アクセス* に移動し、*+ API アクセス トークン* を選択します。
 +
-... 識別しやすい* Name *と*概要*を設定します
-... タイプ：[Acquisition Unit]および[Data Collection]を選択します。
-... 権限：*読み取り/書き込み*
-... 目的の*有効期限*および*自動更新*の値を選択します
+... 識別しやすい*名前*と*説明*を設定します
+... タイプ: *取得ユニット*と*データ収集*を選択します
+... 権限: *読み取り/書き込み*
+... 希望する*有効期限*と*自動更新*の値を選択します
 
 
-.. [ 保存（ Save ） ] をクリックします。
-.. 生成されたAPIアクセストークンをコピーします。この手順は、ウィンドウを閉じる前に実行する必要があります。
+.. *保存*をクリックします
+.. 生成された API アクセス トークンをコピーします。ウィンドウを閉じる前にこの手順を実行する必要があります。
 
 
 
 
-image:Manual_AU_Create_API_Token.png["APIトークンの作成"]
+image:Manual_AU_Create_API_Token.png["APIトークンを作成する"]
 
-. Swagger（[Admin]>[API Access]>[API Documentation]）で、トークンを使用してData Infrastructure Insights APIを許可
+. Swagger（管理 > APIアクセス > APIドキュメント）で、トークンを使用してData Infrastructure Insights APIを承認します。
 +
-.. Swagger画面の右上にある[_Authorize]をクリックします
-.. 上からコピーしたトークンを[Customer apiKey]フィールドに貼り付けます
-.. [承認]*をクリックします
-.. ウィンドウを閉じます
+.. Swagger画面の右上にある_Authorize_をクリックします
+.. 上記からコピーしたトークンを顧客APIKeyフィールドに貼り付けます。
+.. *承認*をクリックします
+.. ウィンドウを閉じる
 
 
 
 
 image:Manual_AU_Authorization.png["APIトークンを承認する"]
 
-. 次の_/au/installers/｛platform｝/latest_or_/au/installers/｛platform｝/｛version｝_apiを使用してAUインストーラをダウンロードします。
+. _/au/installers/{platform}/latest_ または _/au/installers/{platform}/{version}_ API を使用して AU インストーラーをダウンロードします。
 +
-.. プラットフォーム：* Linux *
-.. バージョン：*<version>*（最新または指定）
+.. プラットフォーム: *Linux*
+.. バージョン: *<バージョン>* (最新または指定)
 
 
 
 
-image:Manual_AU_API_Retrieve_latest.png["最新のAUバージョンを取得するAPI"]
+image:Manual_AU_API_Retrieve_latest.png["最新のAUバージョンを取得するためのAPI"]
 
 
-NOTE: 最新バージョンをダウンロードしない場合は、NetAppでダウンロードするAUバージョンを確認してください。
+NOTE: 最新バージョンをダウンロードしない場合は、ダウンロードに指定する AU バージョンをNetAppに確認してください。
 
-. [ファイルのダウンロード]*をクリックします。AUシステム以外のシステムでこれらの手順を実行する場合は、ダウンロードしたファイルをAUシステムにコピーします。
-. また、AUシステムでcurlコマンドを実行することもできます。
+. *ファイルのダウンロード*をクリックします。  AU システム以外のシステムでこれらの手順を実行する場合は、ダウンロードしたファイルを AU システムにコピーします。
+. あるいは、結果として得られた CURL コマンドを AU システムで実行することもできます。
 +
  curl -X GET "<tenant>/rest/v1/au/installers/linux/<AU version>" -H "accept: application/octet-stream" -H "X-CloudInsights-ApiKey: <token>"
-. この時点で、インストーラファイルがAUシステムに存在している必要があります。
+. この時点で、インストーラー ファイルが AU システム上に存在するはずです。
 
 
 
-IMPORTANT: 次の手順では、一時トークンを使用する必要があります。上記で作成したAPIアクセストークンは使用しないでください。
+IMPORTANT: 次の手順では、一時トークンを使用する必要があります。上記で作成した API アクセス トークンは使用しないでください。
 
-. Data Infrastructure Insights API Swaggerで、_/ au/oneTimeToken_APIを使用してワンタイムトークンを作成します。
+. Data Infrastructure Insights API Swagger で、_/au/oneTimeToken_ API を使用してワンタイム トークンを作成します。
 +
-.. 結果のワンユーストークンをコピーします。
+.. 生成された 1 回限りのトークンをコピーします。
 
 
 
 
-image:Manual_AU_one_time_token.png["ワンタイム使用APIトークンの作成"] image:Manual_AU_one_time_token_response.png["ワンタイム使用APIトークンの応答例"]
+image:Manual_AU_one_time_token.png["1回限りのAPIトークンを作成する"] image:Manual_AU_one_time_token_response.png["ワンタイムAPIトークンのレスポンスの例"]
 
-. AUをインストールするマシンで、ダウンロードしたインストーラファイルが格納されているフォルダに移動します。次のコマンドを実行するには、ユーザにroot権限が必要です。
+. AU をインストールするマシンで、ダウンロードしたインストーラー ファイルが含まれているフォルダーに移動します。以下のコマンドを実行するには、ユーザーに root 権限が必要です。
 +
-.. インストーラファイルを解凍します
-.. 作成されたインストーラフォルダにディレクトリを変更します
-.. 次のコマンドを実行して、ワンタイムトークンとインストーラのバージョンを環境変数にエクスポートします。
+.. インストーラファイルを解凍する
+.. 作成されたインストーラーフォルダにディレクトリを変更します。
+.. 次のコマンドを実行して、ワンタイム トークンとインストーラーのバージョンを環境変数にエクスポートします。
 +
  export TOKEN=<One-Time Token>
-.. 次のコマンドを実行して、カスタムのユーザとグループを指定してCIをインストールします。
+.. カスタム ユーザーとグループを使用して CI をインストールするには、次のコマンドを実行します。
 +
  ./cloudinsights-install.sh <custom user> <custom group>
 +
-注：カスタムのユーザおよびグループを使用しない場合は、デフォルトの「cisys」ユーザおよびグループを使用できます。この場合は、上記のinstallコマンドを実行しますが、ユーザとグループは指定しません。
+注: カスタム ユーザーとグループを使用しない場合は、デフォルトの「cisys」ユーザーとグループを使用できます。この場合、上記のインストール コマンドを実行しますが、ユーザーとグループは指定しません。
 
 
 
 
 
-この時点で、AUソフトウェアがシステムにインストールされ、カスタムユーザおよびグループからアクセスできます。ただし、データコレクタを追加することはできません。これを手動で行うには、次の手順をお読みください。パッチのみをインストールする場合は、以下のセクションを参照してください<<downloading-a-patch,パッチ>>。
+この時点で、AU ソフトウェアはシステムにインストールされ、カスタム ユーザーとグループがアクセスできるようになります。ただし、データ コレクターを追加する機能はありません。これを手動で行うには、次の手順をお読みください。パッチのみをインストールする場合は、<<downloading-a-patch,パッチ>>以下のセクションをご覧ください。
 
 
 
-== データコレクタの手動インストール
+== データコレクターの手動インストール
 
-/collector/patch/datasourceswar/latest APIを使用して、最新のdatasources.warをダウンロードします。
+/collector/patch/datasourceswar/latest API を使用して最新の datasources.war をダウンロードします。
 
-image:API_Manual_Download_datasources.png["最新のdatasources.warを取得するAPI"]
+image:API_Manual_Download_datasources.png["最新のデータソースを取得するためのAPI.war"]
 
-注:最新バージョンをダウンロードしていない場合は、NetAppでダウンロードするバージョンを確認してください。
+注意: 最新バージョンをダウンロードしない場合は、ダウンロードに指定するバージョンをNetAppに確認してください。
 
-Download Fileをクリックします。AUシステム以外のシステムでこれらの手順を実行する場合は、ダウンロードしたdatasources.war zipバンドルをAUシステムにコピーします。
+「ファイルのダウンロード」をクリックします。  AU システム以外のシステムでこれらの手順を実行する場合は、ダウンロードした datasources.war zip バンドルを AU システムにコピーします。
 
-datasources.war zipバンドルが次のディレクトリにコピーされていることを確認します。/var/lib/netapp/cloudinsights/acq/download
+datasources.war zip バンドルが次のディレクトリにコピーされていることを確認してください: /var/lib/netapp/cloudinsights/acq/download
 
-datasources.warの/var/lib/lib/cloudinsights/acq/download NetAppディレクトリに移動し、zipファイルを確認します。
+datasources.war の /var/lib/netapp/cloudinsights/acq/download ディレクトリに移動し、そこにある zip ファイルを確認します。
 
-. 次の手順では、カスタムユーザに切り替える（またはrootからログアウトしてからログインする）必要があります。
+. 次の手順では、カスタム ユーザーに切り替える (または、root からログアウトしてカスタム ユーザーでログインする) 必要があります。
 +
  su <custom user>
 +
-注：デフォルトの「cisys」ユーザおよびグループを使用している場合は、この手順を実行する必要はありません。
+注: デフォルトの「cisys」ユーザーとグループを使用している場合は、この手順を実行する必要はありません。
 
 +
-注:カスタムユーザーには、AUのインストール時にcloudinsights-install.shに提供したカスタムグループのメンバーである任意のユーザーを指定できます。また、AUのインストール時に指定したカスタムユーザーと同じユーザーまたは異なるユーザーを指定できます。
+注: カスタム ユーザーは、AU インストール中に cloudinsights-install.sh に指定したカスタム グループのメンバーである任意のユーザーにすることができ、AU インストール中に指定したカスタム ユーザーと同じでも異なっていても構いません。
 
 . 次の手順を実行します。
 +
@@ -136,38 +136,38 @@ drwxrwx--- 2 test-user2 test-group-1  4096 Feb 16 10:10 datasources-war-<version
 …
 ....
 +
-注：「cisys」ユーザおよびグループを使用している場合は、上記の出力に表示されます。
+注: 「cisys」ユーザーとグループを使用している場合は、上記の出力に表示されます。
 
 +
-注:別のカスタムユーザーを使用してをインストールする場合は、所有者とグループの両方に対して、グループ権限が読み取りと書き込みに設定されていることを確認してください(chmod 660…)。
+注: 異なるカスタム ユーザーを使用してインストールする場合は、所有者とグループの両方に対してグループ権限が読み取りと書き込みに設定されていることを確認してください (chmod 660 …)
 
-. AUを再起動します。Data Infrastructure Insightsで、[Observability]>[Collectors]に移動し、[Acquisition Units]タブを選択します。AUの右側にある「Three Dots」メニューから「Restart」を選択します。
+. AU を再起動します。Data Infrastructure Insightsで、「Observability」 > 「Collectors」に移動し、「Acquisition Units」タブを選択します。  AU の右側にある「3 つのドット」メニューから「再起動」を選択します。
 
 
 
 
 == パッチのダウンロード
 
-/collector/patch/file/｛version｝APIを使用してパッチをダウンロードします。
+/collector/patch/file/{version} API を使用してパッチをダウンロードします。
 
-image:API_Manual_Download_patch.png["パッチを取得するAPI"]
+image:API_Manual_Download_patch.png["パッチを取得するためのAPI"]
 
-注:ダウンロードするバージョンをNetAppで確認してください。
+注: ダウンロードに指定するバージョンについてはNetAppに確認してください。
 
-Download Fileをクリックします。AUシステム以外のシステムでこれらの手順を実行する場合は、ダウンロードしたパッチzipバンドルをAUシステムにコピーします。
+「ファイルのダウンロード」をクリックします。  AU システム以外のシステムでこれらの手順を実行する場合は、ダウンロードしたパッチ zip バンドルを AU システムにコピーします。
 
-パッチzipバンドルが次のディレクトリにコピーされていることを確認します。/var/lib/netapp/cloudinsights/acq/download
+パッチ zip バンドルが次のディレクトリにコピーされていることを確認します: /var/lib/netapp/cloudinsights/acq/download
 
-パッチの/var/lib/netapp/cloudinsights/acq/downloadディレクトリに移動し、.zipファイルを確認します。
+パッチの /var/lib/netapp/cloudinsights/acq/download ディレクトリに移動し、そこにある .zip ファイルを確認します。
 
-. 次の手順では、カスタムユーザに切り替える（またはrootからログアウトしてからログインする）必要があります。
+. 次の手順では、カスタム ユーザーに切り替える (または、root からログアウトしてカスタム ユーザーでログインする) 必要があります。
 +
  su <custom user>
 +
-注：デフォルトの「cisys」ユーザおよびグループを使用している場合は、この手順を実行する必要はありません。
+注: デフォルトの「cisys」ユーザーとグループを使用している場合は、この手順を実行する必要はありません。
 
 +
-注:カスタムユーザーには、AUのインストール時にcloudinsights-install.shに提供したカスタムグループのメンバーである任意のユーザーを指定できます。また、AUのインストール時に指定したカスタムユーザーと同じユーザーまたは異なるユーザーを指定できます。
+注: カスタム ユーザーは、AU インストール中に cloudinsights-install.sh に指定したカスタム グループのメンバーである任意のユーザーにすることができ、AU インストール中に指定したカスタム ユーザーと同じでも異なっていても構いません。
 
 . 次の手順を実行します。
 +
@@ -179,43 +179,43 @@ drwxrwx--- 2 test-user2 test-group-1  4096 Feb 16 10:10 <patch_file_name>.zip
 …
 ....
 +
-注：「cisys」ユーザおよびグループを使用している場合は、上記の出力に表示されます。
+注: 「cisys」ユーザーとグループを使用している場合は、上記の出力に表示されます。
 
 +
-注:別のカスタムユーザーを使用してをインストールする場合は、所有者とグループの両方に対して、グループ権限が読み取りと書き込みに設定されていることを確認してください(chmod 660…)。
+注: 異なるカスタム ユーザーを使用してインストールする場合は、所有者とグループの両方に対してグループ権限が読み取りと書き込みに設定されていることを確認してください (chmod 660 …)
 
-. AUを再起動します。Data Infrastructure Insightsで、[Observability]>[Collectors]に移動し、[Acquisition Units]タブを選択します。AUの右側にある「Three Dots」メニューから「Restart」を選択します。
+. AU を再起動します。Data Infrastructure Insightsで、「Observability」 > 「Collectors」に移動し、「Acquisition Units」タブを選択します。  AU の右側にある「3 つのドット」メニューから「再起動」を選択します。
 
 
 
 
 == 外部キーの取得
 
-UNIXシェルスクリプトを指定すると、Acquisition Unitによって実行され、キー管理システムから*秘密鍵*と*公開鍵*を取得できます。
+UNIX シェル スクリプトを提供すると、取得ユニットによってそのスクリプトが実行され、キー管理システムから *秘密キー* と *公開キー* を取得できます。
 
-キーを取得するために、Data Infrastructure Insightsはスクリプトを実行し、_key id_と_key type_の2つのパラメータを渡します。キーID _は、キー管理システム内のキーを識別するために使用できます。_Key type _には、「public」または「private」を指定します。キータイプが「public」の場合、スクリプトは公開鍵を返す必要があります。キータイプが「private」の場合は、秘密鍵を返す必要があります。
+キーを取得するために、 Data Infrastructure Insights はスクリプトを実行し、_key id_ と _key type_ の 2 つのパラメータを渡します。  _キー ID_ は、キー管理システム内のキーを識別するために使用できます。 _キー タイプ_ は「公開」または「秘密」のいずれかです。キー タイプが「public」の場合、スクリプトは公開キーを返す必要があります。キー タイプが「private」の場合、秘密キーを返す必要があります。
 
-Acquisition Unitにキーを戻すには、標準出力にキーを出力する必要があります。スクリプトは、標準出力にキーをprint_only_theで出力する必要があります。他のテキストは標準出力に出力しないでください。要求されたキーが標準出力に出力されると、スクリプトは終了コード0で終了する必要があります。その他の戻りコードはエラーと見なされます。
+キーを取得ユニットに送り返すには、スクリプトでキーを標準出力に出力する必要があります。スクリプトはキーのみを標準出力に出力する必要があります。他のテキストを標準出力に出力してはなりません。要求されたキーが標準出力に印刷されると、スクリプトは終了コード 0 で終了する必要があります。その他の戻りコードはエラーと見なされます。
 
-スクリプトはSecurityAdminツールを使用してAcquisition Unitに登録する必要があります。このツールでは、Acquisition Unitとともにスクリプトが実行されます。スクリプトには、rootおよび"cisys"ユーザに対する_read_and_execute_permissionが必要です。登録後にシェルスクリプトを変更した場合は、変更したシェルスクリプトをAcquisition Unitに再登録する必要があります。
+スクリプトは、SecurityAdmin ツールを使用して取得ユニットに登録する必要があります。これにより、取得ユニットとともにスクリプトが実行されます。スクリプトには、ルートおよび「cisys」ユーザーに対する _read_ および _execute_ 権限が必要です。登録後にシェル スクリプトを変更した場合は、変更したシェル スクリプトを取得ユニットに再登録する必要があります。
 
 |===
 
 
-| 入力パラメータ:キーID | 顧客のキー管理システムでキーを識別するために使用するキー識別子。 
+| 入力パラメータ: キーID | 顧客のキー管理システムでキーを識別するために使用されるキー識別子。 
 
 
-| 入力パラメータ:キータイプ | パブリックまたはプライベート。 
+| 入力パラメータ: キータイプ | 公立か私立か。 
 
 
-| 出力 | 要求されたキーを標準出力に出力する必要があります。現在、2048ビットRSAキーがサポートされています。キーは次の形式でエンコードおよび印刷する必要があります。秘密鍵形式- PEM、DERエンコードPKCS8 PrivateKeyInfo RFC 5958公開鍵形式- PEM、DERエンコードX.509 SubjectPublicKeyInfo RFC 5280 
+| 出力 | 要求されたキーは標準出力に印刷する必要があります。現在、2048 ビットの RSA キーがサポートされています。キーは以下の形式でエンコードおよび印刷する必要があります - 秘密鍵形式 - PEM、DERエンコード PKCS8 PrivateKeyInfo RFC 5958 公開鍵形式 - PEM、DERエンコード X.509 SubjectPublicKeyInfo RFC 5280 
 
 
-| 終了コード | 成功のためのゼロの終了コード。他のすべての終了値は失敗と見なされます。 
+| 終了コード | 成功した場合の終了コードはゼロです。その他の終了値はすべて失敗とみなされます。 
 
 
-| スクリプト権限 | スクリプトには、rootおよび「cisys」ユーザに対する読み取りおよび実行権限が必要です。 
+| スクリプト権限 | スクリプトには、ルートおよび「cisys」ユーザーの読み取りおよび実行権限が必要です。 
 
 
-| ログ | スクリプトの実行が記録されます。ログは-/var/log/cloudinsights/securityadmin/ NetApp securityadmin.log /var/log/cloudinsights/acq/ NetApp acq.logにあります。 
+| ログ | スクリプトの実行がログに記録されます。ログは次の場所にあります - /var/log/netapp/cloudinsights/securityadmin/securityadmin.log /var/log/netapp/cloudinsights/acq/acq.log 
 |===

@@ -2,29 +2,29 @@
 sidebar: sidebar 
 permalink: task_dc_ms_anf.html 
 keywords: data collector, azure, Netapp files, anf 
-summary: Azure NetApp Files データコレクタの設定 
+summary: Azure NetApp Filesデータ コレクターを構成します。 
 ---
-= Azure NetApp Files データコレクタの設定
+= Azure NetApp Filesデータ コレクターの構成
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、Azure NetApp Filesデータコレクタを使用してインベントリとパフォーマンスのデータを取得します。
+Data Infrastructure Insights は、 Azure NetApp Filesデータ コレクターを使用して、インベントリとパフォーマンス データを取得します。
 
 
 
 == 要件
 
-このデータコレクタを設定するには、次の情報が必要です。
+このデータ コレクターを構成するには、次の情報が必要です。
 
-* ポート要件： 443 HTTPS
-* Azure Management Rest IP （ management.azure.com ）
-* Azure サービスプリンシパルクライアント ID （ユーザアカウント）
-* Azure サービスプリンシパルの認証キー（ユーザパスワード）
-* Data Infrastructure Insightsの検出用にAzureアカウントを設定する必要があります。
+* ポート要件: 443 HTTPS
+* Azure 管理 REST IP (management.azure.com)
+* Azure サービス プリンシパル クライアント ID (ユーザー アカウント)
+* Azure サービス プリンシパル認証キー (ユーザー パスワード)
+* Data Infrastructure Insights の検出用に Azure アカウントを設定する必要があります。
 +
-アカウントを適切に設定してAzureにアプリケーションを登録すると、Data Infrastructure InsightsでAzureインスタンスを検出するために必要なクレデンシャルが取得されます。次のリンクでは、検出用のアカウントを設定する方法について説明します。
+アカウントが適切に構成され、アプリケーションを Azure に登録すると、 Data Infrastructure Insightsを使用して Azure インスタンスを検出するために必要な資格情報が得られます。次のリンクでは、検出用のアカウントを設定する方法について説明しています。
 
 
 
@@ -34,23 +34,23 @@ https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-ser
 
 == 構成
 
-次の表に従って、データコレクタフィールドにデータを入力します。
+以下の表に従って、データ コレクター フィールドにデータを入力します。
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| Azure サービスプリンシパルクライアント ID | Azure へのサインイン ID 
+| Azure サービス プリンシパル クライアント ID | AzureへのサインインID 
 
 
 | Azure テナント ID | Azure テナント ID 
 
 
-| Azure サービスプリンシパルの認証キー | ログイン認証キー 
+| Azure サービス プリンシパル認証キー | ログイン認証キー 
 
 
-| Microsoft が API リクエストを請求することを理解しています | これをチェックして、 Insight のポーリングで作成された API 要求を Microsoft から課金することを理解していることを確認します。 
+| 私は、MicrosoftがAPIリクエストに対して料金を請求することを理解しています | Insight ポーリングによって行われた API リクエストに対して Microsoft が課金することを理解していることを確認するには、これにチェックを入れます。 
 |===
 
 
@@ -58,7 +58,7 @@ https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-ser
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
 | インベントリポーリング間隔（分） | デフォルトは60です 
@@ -67,8 +67,8 @@ https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-ser
 
 == トラブルシューティング
 
-* ANFデータコレクタで使用するクレデンシャルに、ANFボリュームを含むすべてのAzureサブスクリプションへのアクセスが必要です。
-* Reader へのアクセスによってパフォーマンス収集が失敗する場合は、リソースグループレベルで貢献者アクセスを許可してみてください。
+* ANF データ コレクターが使用する資格情報には、ANF ボリュームを含むすべての Azure サブスクリプションへのアクセス権が必要です。
+* 読者アクセスによってパフォーマンス収集が失敗する場合は、リソース グループ レベルで共同作成者アクセスを付与してみてください。
 
 
-このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

@@ -2,51 +2,51 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_consul.html 
 keywords: telegraf, installation, install, consul 
-summary: 絶縁データコレクタの設定 
+summary: Consulデータコレクターの構成 
 ---
-= 総領事データ収集
+= 領事データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、このデータコレクタを使用してConsulから指標を収集します。
+Data Infrastructure Insights は、このデータ コレクターを使用して Consul からメトリックを収集します。
 
 
 
 == インストール
 
-. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。Consulを選択します。
+. *Observability > Collectors* から、*+ Data Collector* をクリックします。領事を選択してください。
 +
-収集用のエージェントを設定していない場合は、テナントで要求されlink:task_config_telegraf_agent.html["エージェントをインストールします"]ます。
+収集用のエージェントを設定していない場合は、link:task_config_telegraf_agent.html["エージェントをインストールする"]テナントに。
 
 +
-エージェントがすでに設定されている場合は、適切な OS またはプラットフォームを選択し、 [* Continue （続行） ] をクリックします。
+エージェントがすでに構成されている場合は、適切なオペレーティング システムまたはプラットフォームを選択し、[続行] をクリックします。
 
-. [Consul Configuration] 画面の指示に従って、データコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+. Consul 構成画面の指示に従って、データ コレクターを構成します。手順は、データ収集に使用しているオペレーティング システムまたはプラットフォームの種類によって異なります。
 
 
 
 
 == セットアップ
 
-詳細については、を参照してlink:https://www.consul.io/docs/index.html["総領事からのご説明"]ください。
+詳細は以下をご覧ください。link:https://www.consul.io/docs/index.html["領事文書"] 。
 
 
 
-== 接続のためのオブジェクトとカウンタ
+== 領事館のオブジェクトとカウンター
 
-次のオブジェクトとそのカウンタが収集されます。
+次のオブジェクトとそのカウンターが収集されます。
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+| オブジェクト | 識別子: | 属性: | データポイント: 
 
 
-| 総領事 | ネームスペースチェック ID サービスノード | ノード IP ノード OS ノード UUID ノードネームサービス名チェックネームサービス ID ステータス | 重大な合格警告 
+| 領事 | 名前空間チェックIDサービスノード | ノードIP ノードOS ノードUUID ノード名 サービス名 チェック名 サービスID ステータス | クリティカルパス警告 
 |===
 
 
 == トラブルシューティング
 
-詳細については、ページを参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページ。

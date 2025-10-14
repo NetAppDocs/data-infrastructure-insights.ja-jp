@@ -1,15 +1,15 @@
 ---
 sidebar: sidebar 
 permalink: concept_preview_features.html 
-summary: プレビュー機能は限られた容量で利用でき、プライムタイムに備えていない機能を強調しています。 
+summary: プレビュー機能は限られた容量で利用可能であり、まだプライムタイムの準備ができていない機能をハイライトします。 
 keywords: coming soon, preview, 
 ---
-= フィーチャーと機能をプレビューします
+= プレビュー機能
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsでは、_ Preview_の方法で新機能に注目しています。プレビュー機能は、一部の環境または容量に限りがあります。
+Data Infrastructure Insights、新しい機能と機能を _プレビュー_ 形式で紹介します。プレビュー機能は、制限された環境または制限された容量で利用可能になります。
 
 これらの機能の 1 つ以上をプレビューすることにご興味がある場合は、 NetApp の営業チームに詳細をお問い合わせください。

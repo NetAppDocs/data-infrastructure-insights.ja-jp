@@ -1,24 +1,24 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_google_cloud.html 
-summary: Google Compute データコレクタを設定します 
+summary: Google Compute データコレクターを構成する 
 keywords: data collector, queries, create 
 ---
-= NetApp Google Compute データコレクタ
+= NetApp Google Compute データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-このデータコレクタは、 Google Compute クラウドプラットフォーム構成からのインベントリとパフォーマンスの収集をサポートします。このコレクタは、 1 つの Google 組織内のすべてのプロジェクト内のすべてのコンピューティングリソースを検出しようとします。Data Infrastructure Insightsで検出したいGoogle組織が複数ある場合は、組織ごとにData Infrastructure Insightsコレクタを1つ導入します。
+このデータ コレクターは、Google Compute クラウド プラットフォーム構成からのインベントリとパフォーマンスの収集をサポートします。このコレクターは、1 つの Google 組織内のすべてのプロジェクト内のすべてのコンピューティング リソースを検出しようとします。  Data Infrastructure Insightsを使用して検出する Google 組織が複数ある場合は、組織ごとに 1 つのData Infrastructure Insightsコレクターをデプロイする必要があります。
 
 
 
 == サービスアカウントの要件
 
-* の手順に従って、サービスアカウントを作成する必要がありますlink:https://cloud.google.com/iam/docs/creating-managing-service-accounts["サービスアカウントの作成/管理"]。このようなサービスアカウントは、ITS_ClientID_と呼ばれる一意のIDによって識別され、ユーザ名として使用されます。
-* さらに、の手順に従ってサービスアカウントキーを作成しますlink:https://cloud.google.com/iam/docs/creating-managing-service-account-keys["サービスアカウントキーの作成/管理"]。このキーはJSONファイルとしてダウンロードでき、そのコンテンツはパスワードとして使用されます。
-* サービスアカウントのスコープは、_compute.readonly_、_monitoring.read_、および_cloud-platform_である必要があります。
+* 以下の手順に従ってサービスアカウントを作成する必要があります。link:https://cloud.google.com/iam/docs/creating-managing-service-accounts["サービスアカウントの作成/管理"] 。このようなサービス アカウントは、_clientId_ と呼ばれる一意の ID によって識別され、ユーザー名として使用されます。
+* さらに、以下の手順に従ってサービスアカウントキーを作成します。link:https://cloud.google.com/iam/docs/creating-managing-service-account-keys["サービス アカウント キーの作成/管理"] 。このキーは json ファイルとしてダウンロードでき、その内容がパスワードとして使用されます。
+* サービス アカウントのスコープは、_compute.readonly_、_monitoring.read_、および _cloud-platform_ に設定する必要があります。
 
 
 
@@ -27,22 +27,22 @@ keywords: data collector, queries, create
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| 組織 ID | このコレクタで検出する組織 ID 。サービスアカウントが複数の組織を表示できる場合は、このフィールドが必要です 
+| 組織ID | このコレクターで検出する組織 ID。サービスアカウントが複数の組織を参照できる場合、このフィールドは必須です 
 
 
-| GCP プロジェクトを ID でフィルタリングするには、 [ 除外 ] または [ 含める ] を選択します | Data Infrastructure Insightsに取り込むプロジェクトのリソースを制限する場合は、 
+| GCP プロジェクトを ID でフィルタリングするには、「除外」または「含める」を選択します | Data Infrastructure Insightsに取り込まれるプロジェクトのリソースを制限する場合。 
 
 
-| プロジェクト ID | 「除外する」値の値に応じて、フィルタするプロジェクト ID または検出から除外するプロジェクト ID のリスト。デフォルトリストは空です 
+| プロジェクトID | 「除外を選択...」の値に応じて、検出対象としてフィルター処理するプロジェクト ID のリスト。デフォルトのリストは空です 
 
 
 | クライアントID | Google Cloud Platform 構成のクライアント ID 
 
 
-| Google 資格情報ファイルの内容をここにコピーして貼り付けます | Cloud Platform アカウントの Google クレデンシャルをこのフィールドにコピーします 
+| Google認証情報ファイルの内容をコピーしてここに貼り付けます | Cloud Platform アカウントの Google 認証情報をこのフィールドにコピーします 
 |===
 
 
@@ -50,16 +50,16 @@ keywords: data collector, queries, create
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
 | インベントリポーリング間隔（分） | デフォルトは60分です 
 
 
-| VM をラベルでフィルタリングするには、「除外」または「含める」を選択します | データの収集時に VM をラベルで含めるか除外するかを指定します。「含める」が選択されている場合は、「ラベルキー」フィールドを空白にすることはできません。 
+| ラベルによるVMのフィルタリングを適用するには、「除外」または「含める」を選択します | データ収集時にラベルごとに VM を含めるか除外するかを指定します。  「含める」を選択した場合、ラベル キー フィールドを空にすることはできません。 
 
 
-| VM をフィルタリングするキーと値を指定します | VM のキーとラベルの値に一致するキーと値でフィルタリングして、対象に含める VM （および関連するディスク）を選択するには、「 * + フィルタラベル * 」をクリックします。ラベルキーは必須です。ラベル値はオプションです。ラベル値が空の場合、 VM はラベルキーと一致するかぎりフィルタリングされます。 
+| VM をフィルタリングするためのラベルキーと値 | *+ フィルター ラベル* をクリックし、VM 上のラベルのキーと値に一致するキーと値をフィルターして、含める/除外する VM (および関連ディスク) を選択します。ラベル キーは必須ですが、ラベル値はオプションです。ラベル値が空の場合、ラベル キーと一致する限り VM はフィルタリングされます。 
 
 
 | パフォーマンスポーリング間隔（秒） | デフォルトは1800秒です 
@@ -68,4 +68,4 @@ keywords: data collector, queries, create
 
 == トラブルシューティング
 
-このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

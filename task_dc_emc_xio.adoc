@@ -2,36 +2,36 @@
 sidebar: sidebar 
 permalink: task_dc_emc_xio.html 
 keywords: data collector, XtremeIO, EMC 
-summary: XtremeIO データコレクタを構成しています。 
+summary: XtremeIO データ コレクターを構成します。 
 ---
-= Dell EMC XtremeIO データコレクタ
+= Dell EMC XtremeIO データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-EMC XtremIO データコレクタは、 EMC XtremIO ストレージシステムからインベントリとパフォーマンスのデータを取得します。
+EMC XtremIO データ コレクターは、EMC XtremIO ストレージ システムからインベントリ データとパフォーマンス データを取得します。
 
 
 
 == 要件
 
-EMC XtremIO （ HTTP ）データコレクタを設定するには、次のものが必要です。
+EMC XtremIO (HTTP) データ コレクターを構成するには、次のものが必要です。
 
-* XtremIO Management Server （ XMS ）ホストのアドレス
+* XtremIO 管理サーバー (XMS) ホスト アドレス
 * 管理者権限を持つアカウント
-* ポート 443 へのアクセス（ HTTPS ）
+* ポート443（HTTPS）へのアクセス
 
 
 
 
 == 用語
 
-Data Infrastructure Insightsは、EMC XtremIOデータコレクタから次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータソースを表示またはトラブルシューティングするときは、次の用語に注意してください。
+Data Infrastructure Insights は、 EMC XtremIO データ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ ソースを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
 [cols="2*"]
 |===
-| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
 
 | ディスク（SSD） | ディスク 
@@ -40,25 +40,25 @@ Data Infrastructure Insightsは、EMC XtremIOデータコレクタから次の�
 | クラスタ | ストレージ 
 
 
-| コントローラ | ストレージノード 
+| コントローラ | ストレージ ノード 
 
 
-| ボリューム | ボリューム 
+| Volume | Volume 
 
 
 | LUN マップ | ボリュームマップ 
 
 
-| ターゲット FC イニシエータ | ボリュームマスク 
+| ターゲットFCイニシエーター | ボリュームマスク 
 |===
-注：これらは一般的な用語の対応のみを示したものであり、このデータソースのすべてのケースを表しているとは限りません。
+注: これらは一般的な用語のマッピングのみであり、このデータ ソースのすべてのケースを反映しているわけではありません。
 
 
 
 == 要件
 
-* XtremIO Management Server （ XMS ）ホストの IP アドレス
-* XtremIO の管理者のユーザ名とパスワード
+* XtremIO 管理サーバー (XMS) ホストの IP アドレス
+* XtremIOの管理者ユーザー名とパスワード
 
 
 
@@ -67,16 +67,16 @@ Data Infrastructure Insightsは、EMC XtremIOデータコレクタから次の�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| XMSホスト | XtremIO Management Server の IP アドレスまたは完全修飾ドメイン名 
+| XMSホスト | XtremIO 管理サーバーの IP アドレスまたは完全修飾ドメイン名 
 
 
-| ユーザ名 | XtremIO Management Server のユーザ名 
+| ユーザ名 | XtremIO管理サーバーのユーザー名 
 
 
-| パスワード | XtremIO Management Server のパスワード 
+| パスワード | XtremIO管理サーバーのパスワード 
 |===
 
 
@@ -84,19 +84,19 @@ Data Infrastructure Insightsは、EMC XtremIOデータコレクタから次の�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| TCP ポート | XtremIO Management Server への接続に使用する TCP ポート。デフォルトは443です。 
+| TCP ポート | XTremIO 管理サーバーに接続するために使用される TCP ポート。デフォルトは 443 です。 
 
 
-| インベントリのポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは60分です。 
+| インベントリポーリング間隔（分） | インベントリ ポーリングの間隔。デフォルトは60分です。 
 
 
-| パフォーマンスのポーリング間隔（秒） | パフォーマンスのポーリング間隔デフォルトは300秒です。 
+| パフォーマンスポーリング間隔（秒） | パフォーマンス ポーリングの間隔。デフォルトは300秒です。 
 |===
 
 
 == トラブルシューティング
 
-このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

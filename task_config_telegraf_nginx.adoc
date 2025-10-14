@@ -2,54 +2,54 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_nginx.html 
 keywords: telegraf, installation, install, nginx 
-summary: nginx のデータコレクタ設定 
+summary: Nginxデータコレクターの設定 
 ---
-= nginx データコレクタ
+= Nginx データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、このデータコレクタを使用してNginxから指標を収集します。
+Data Infrastructure Insights は、このデータ コレクターを使用して Nginx からメトリックを収集します。
 
 
 
 == インストール
 
-. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。[Nginx]を選択します。
+. *Observability > Collectors* から、*+ Data Collector* をクリックします。  Nginx を選択します。
 +
-Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+Telegraf エージェントがインストールされているオペレーティング システムまたはプラットフォームを選択します。
 
-. コレクション用エージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[_Show Instructions_]をクリックして手順を展開しlink:task_config_telegraf_agent.html["エージェントのインストール"]ます。
-. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
-. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+. 収集用のエージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[手順を表示] をクリックして展開します。link:task_config_telegraf_agent.html["エージェントのインストール"]説明書。
+. このデータ コレクターで使用するエージェント アクセス キーを選択します。 *+ エージェント アクセス キー* ボタンをクリックすると、新しいエージェント アクセス キーを追加できます。ベスト プラクティス: データ コレクターを OS/プラットフォーム別などにグループ化する場合にのみ、異なるエージェント アクセス キーを使用します。
+. 構成手順に従ってデータ コレクターを構成します。手順は、データ収集に使用しているオペレーティング システムまたはプラットフォームの種類によって異なります。
 
 
-image:NginxDCConfigLinux-1.png["Linux Nginx の構成"] image:NginxDCConfigLinux-2.png["Linux Nginx の構成"]
+image:NginxDCConfigLinux-1.png["Linux Nginx の設定"] image:NginxDCConfigLinux-2.png["Linux Nginx の設定"]
 
 
 
 == セットアップ
 
-nginxの指標を収集するには、nginxを有効にする必要がありlink:http://nginx.org/en/docs/http/ngx_http_stub_status_module.html["HTTP_STUB_STATE_MODULE"]ます。
+Nginxのメトリック収集には、Nginxlink:http://nginx.org/en/docs/http/ngx_http_stub_status_module.html["http_stub_status_module"]有効になります。
 
-詳細については、を参照してlink:http://nginx.org/en/docs/["nginx のドキュメント"]ください。
+追加情報は以下をご覧ください。link:http://nginx.org/en/docs/["Nginxのドキュメント"] 。
 
 
 
-== オブジェクトとカウンタ
+== オブジェクトとカウンター
 
-次のオブジェクトとそのカウンタが収集されます。
+次のオブジェクトとそのカウンターが収集されます。
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+| オブジェクト | 識別子: | 属性: | データポイント: 
 
 
-| nginx | ネームスペースサーバ | ノード IP ノード名ポート | アクティブな処理済み読み取り要求の書き込み待機を受け入れます 
+| Nginx | 名前空間サーバー | ノードIP ノード名 ポート | アクティブに処理された読み取り要求を受け入れ、書き込みを待機 
 |===
 
 
 == トラブルシューティング
 
-詳細については、ページを参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページ。

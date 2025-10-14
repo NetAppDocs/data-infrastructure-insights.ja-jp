@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_subscribing_to_cloud_insights.html 
-summary: 無償トライアルの期間中は、いつでもData Infrastructure Insightsにサブスクライブできます。 
+summary: 無料トライアル期間中はいつでも、 Data Infrastructure Insightsにサブスクライブできます。 
 keywords: subscribe, trial, subscription, contract, raw capacity, region, data retention, retention, MU, managed unit, managed units, units, managed, module, evaluation, pricing, meter, metering 
 ---
-= Data Infrastructure Insightsのサブスクライブ
+= Data Infrastructure Insightsの購読
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,283 +14,283 @@ keywords: subscribe, trial, subscription, contract, raw capacity, region, data r
 
 
 [role="lead"]
-Data Infrastructure Insightsは、次の3つの簡単なステップで開始できます。
+Data Infrastructure Insightsの使用を開始するのは、次の 3 つの簡単な手順で完了します。
 
-. アカウント登録はこちらlink:https://console.netapp.com//["* NetAppコンソール*"]NetApp のすべてのクラウド サービスにアクセスできます。
-. Data Infrastructure Insightsの無償トライアルにご登録いただき、利用可能な機能をご確認ください。無償トライアルに登録するには：
+. アカウント登録はこちらlink:https://console.netapp.com//["* NetApp Console*"]NetApp のすべてのクラウド サービスにアクセスできます。
+. 利用可能な機能を調べるには、 Data Infrastructure Insightsの無料トライアルに登録してください。無料トライアルに登録するには:
 +
-** に移動 https://netapp.com[]
+** へ移動 https://netapp.com[]
 ** ページ上部の*購入方法*を選択します。
 ** *トライアルをリクエスト*を選択します。コンソールにまだ登録していない場合は、詳細を入力してサインアップしてください。それ以外の場合はサインインしてください。
-** 会議をスケジュールするか、担当者からトライアルについての連絡をお待ちください。
+** 会議をスケジュールするか、担当者がトライアルに関して連絡するのをお待ちください。
 
 
-. さまざまな柔軟なサブスクリプション オプションを通じて、データへの継続的かつ中断のないアクセスを実現するには、Data Infrastructure Insights に*サブスクライブ*してください。
+. さまざまな柔軟なサブスクリプション オプションを通じて、データへの継続的かつ中断のないアクセスを実現するには、 Data Infrastructure Insightsに*サブスクライブ*してください。
 +
 ** link:https://console.netapp.com/contact-cds["NetAppセールスダイレクト"]
 ** AWS マーケットプレイス:
 +
 *** link:https://aws.amazon.com/marketplace/pp/prodview-axhuy7muvzfx2["固定期間サブスクリプション"]
-*** link:https://aws.amazon.com/marketplace/pp/prodview-rn4qwencpjpge["従量課金制のサブスクリプション"]
+*** link:https://aws.amazon.com/marketplace/pp/prodview-rn4qwencpjpge["従量課金制サブスクリプション"]
 *** link:https://aws.amazon.com/marketplace/pp/prodview-nku57vjsqdwzu["固定ベース + 従量課金超過サブスクリプション"]
 
 
-** link:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.dii_premium["Azure Marketplace で入手できます"] （すべてのサブスクリプションオプション）
+** link:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.dii_premium["Azureマーケットプレイス"]（すべてのサブスクリプションオプション）
 
 
 
 
-登録プロセスでは、Data Infrastructure Insights環境をホストするグローバルリージョンを選択できます。詳細については、『Data Infrastructure Insights』をご覧link:security_information_and_region.html["情報と地域"]ください。
+登録プロセス中に、 Data Infrastructure Insights環境をホストするグローバル リージョンを選択できます。詳細については、Data Infrastructure Insightsをご覧ください。link:security_information_and_region.html["情報と地域"] 。
 
-Data Infrastructure Insights機能と価格オプションの詳細については、link:https://www.netapp.com/cloud-services/cloud-insights/editions-pricing["Data Infrastructure Insightsのエディション"]ページ。
+Data Infrastructure Insights機能と価格オプションの詳細については、link:https://www.netapp.com/cloud-services/cloud-insights/editions-pricing["Data Infrastructure Insightsエディション"]ページ。
 
-Data Infrastructure Insightsの使用中に南京錠のアイコンが表示された場合はimage:padlock.png["南京錠"]、現在のサブスクリプションでその機能を利用できないか、限定された形式で利用できないことを意味します。フルアクセスのためにその機能を購読してください。一部の機能は、サブスクライブする前にとして使用でき <<module-evaluation,モジュールの評価>> ます。
-
-
-
-== 試用版
-
-Data Infrastructure Insightsにサインアップして、環境がアクティブであれば、Data Infrastructure Insightsの30日間無償トライアルに参加できます。このトライアルでは、Data Infrastructure Insightsがお客様の環境で提供する機能を確認できます。
-
-試用期間中は、いつでもData Infrastructure Insightsにサブスクライブできます。Data Infrastructure Insightsにサブスクライブすると、データへの中断のないアクセスと幅広いlink:https://docs.netapp.com/us-en/cloudinsights/concept_requesting_support.html["* 製品サポート *"]オプションが保証されます。
-
-Data Infrastructure Insightsの無償トライアルが終了間近になると、バナーが表示されます。そのバナー内に_View Subscription_linkがあり、* Admin -> Subscription *ページが開きます。管理者以外のユーザにはバナーが表示されますが、サブスクリプションページに移動することはできません。
-
-
-NOTE: Data Infrastructure Insightsの評価期間が4日以内に終了するように設定されていて、試用期間をさらに30日間延長できます。トライアルを延長できるのは 1 回だけです。トライアルの期限が切れている場合は延長できません。
+Data Infrastructure Insightsの使用中に、南京錠アイコンが表示された場合image:padlock.png["南京錠"]は、その機能が現在のサブスクリプションでは利用できないか、制限された形でしか利用できないことを意味します。フルアクセスするには、その機能に登録してください。一部の機能は、<<module-evaluation,モジュール評価>>購読する前に。
 
 
 
-=== AWS Marketplaceで試用
+== トライアル版
 
-また、AWS Marketplaceで無料トライアルに登録することもできます。AWS Marketplace の無料トライアルでは、33 日間の試用期間中、Data Infrastructure Insights にアクセスできます。
+Data Infrastructure Insightsにサインアップし、環境がアクティブになると、 Data Infrastructure Insightsの 30 日間無料トライアルが開始されます。このトライアル期間中、 Data Infrastructure Insightsが提供する機能を独自の環境で試すことができます。
+
+試用期間中はいつでも、 Data Infrastructure Insightsにサブスクライブできます。  Data Infrastructure Insightsに加入すると、データへの中断のないアクセスと拡張されたlink:https://docs.netapp.com/us-en/cloudinsights/concept_requesting_support.html["*製品サポート*"]オプション。
+
+無料トライアルの終了が近づくと、 Data Infrastructure Insightsにバナーが表示されます。そのバナー内には [サブスクリプションの表示] リンクがあり、これをクリックすると *管理者 -> サブスクリプション* ページが開きます。管理者以外のユーザーにはバナーが表示されますが、サブスクリプション ページに移動することはできません。
+
+
+NOTE: Data Infrastructure Insightsを評価するために追加の時間が必要で、試用期間が 4 日以内に終了する場合は、試用期間をさらに 30 日間延長できます。試用期間を延長できるのは 1 回のみです。試用期間が終了している場合は延長できません。
+
+
+
+=== AWS Marketplace でのトライアル
+
+AWS Marketplace を通じて無料トライアルにサインアップすることもできます。  AWS Marketplace の無料トライアルでは、33 日間の試用期間中、 Data Infrastructure Insightsにアクセスできます。
 
 AWS Marketplace の無料トライアルは延長できません。
 
 
 
-=== トライアル期間が終了した場合はどうなりますか？
+=== 試用期間が終了したらどうなりますか?
 
-無償トライアルの有効期限が切れていて、Data Infrastructure Insightsにまだサブスクライブしていない場合は、サブスクライブするまで機能が制限されます。データの取り込みが中止される場合があり、数週間後にデータ保持ポリシーに従ってデータが削除されます。
-
-
-
-== サブスクリプション*の有効期限が切れた場合はどうなりますか？
-
-Data Infrastructure Insightsのサブスクリプションをお持ちで、そのサブスクリプションの有効期限が切れている場合は、サブスクリプションを更新するために5日間の猶予期間が与えられます。Data Infrastructure Insightsのすべての機能は、この猶予期間中もアクティブなままです。
-
-猶予期間が経過すると、更新するまでData Infrastructure Insightsの機能は一時停止されます。更新については、*[Admin]>[Subscription]*ページを参照するか、NetAppセールスにお問い合わせください。
-
-
-NOTE: Data Infrastructure Insightsのデータは、猶予期間後30日間そのまま維持されます。この時間内にサブスクリプションを更新すると、猶予期間が経過するまでのすべてのデータが利用可能になります。
+無料トライアルの有効期限が切れており、まだData Infrastructure Insightsにサブスクライブしていない場合は、サブスクライブするまで機能が制限されます。データの取り込みが停止される場合があり、数週間後には、データ保持ポリシーに従ってデータが削除されます。
 
 
 
-== モジュールの評価
+== *サブスクリプション*の有効期限が切れた場合はどうなりますか?
 
-また、*モジュール評価*もご利用いただけます。たとえば、インフラオブザーバビリティにすでにサブスクライブしていて、Kubernetesを環境に追加する場合は、NetApp Kubernetes監視オペレータのインストール時から、Kubernetesオブザーバビリティの30日間の評価が自動的に行われます。評価期間の終了時に、Kubernetes Observability Managed Unitの使用料金のみが請求されます。
+Data Infrastructure Insightsのサブスクリプションをお持ちで、そのサブスクリプションの有効期限が切れている場合は、サブスクリプションを更新するための 5 日間の猶予期間が与えられます。この猶予期間中、すべてのData Infrastructure Insights機能はアクティブなままになります。
 
-
-NOTE: 評価後に新しいManaged Unit（MU）の使用料が請求されることに注意してください。そのため、適切な計画を立ててください。モジュールの評価が終了すると、サービスの中断を回避するためにMUを追加する必要があるかどうかが通知されます。
-
-管理ユニットの使用状況は、*[管理]>[サブスクリプション]ページの*[使用状況]タブで監視できます。
-
-image:Module_Trials_UsageTab.png["[MU Usage]画面"]
+猶予期間が経過すると、更新するまでData Infrastructure Insights の機能は停止されます。更新するには、*管理者 > サブスクリプション* ページを参照するか、 NetApp の営業部門にお問い合わせください。
 
 
-NOTE: A_Module Evaluation_は_トライアルではありません_- Data Infrastructure Insightsサービスの無償トライアル期間をお客様に提供して、適切で購入可能であることを確認する場合は、タームトライアルを使用します。モジュールの評価方法は異なります。これは、有料サブスクリプションの直近数カ月間に使用していないData Infrastructure Insightsのモジュールを有料のお客様が試すことを許可する場合です。評価がアクティブな場合、新しく構成されたモジュールの料金だけが免除されます。お客様の作業環境はまだサブスクリプション期間中であり、無償トライアルに復帰していません。サブスクリプションは変更されていません。
+NOTE: 猶予期間後、 Data Infrastructure Insights のデータは 30 日間そのまま残ります。この期間内にサブスクリプションを更新すると、猶予期間が経過するまでのすべてのデータが利用できるようになります。
 
 
 
-=== 試算ツール
+== モジュール評価
 
-モジュール評価中は、モジュールで消費されたリソースのMU使用量は課金されませんが、* Estimator *（_Summary_tab）を開いて、評価後のMUの課金方法を確認したり、将来必要となるMU数の「What if」シナリオを使用したりできます。Estimatorを終了して数値をリセットします。
+*モジュール評価*を利用することもできます。たとえば、すでに Infrastructure Observability に加入していて、環境に Kubernetes を追加する場合、 NetApp Kubernetes Monitoring Operator をインストールした時点から 30 日間の Kubernetes Observability 評価が自動的に開始されます。評価期間の終了時に、Kubernetes Observability 管理対象ユニットの使用量に対してのみ課金されます。
 
-image:Module_Trials_Estimator.png["試算ツール"]
 
-モジュールの横にあるチェックボックスをオンにして、モジュール全体のMUを推定コストから追加または削除します。
+NOTE: 評価後には新しい管理対象ユニット (MU) の使用料が発生することにご注意ください。それに応じて計画を立ててください。モジュールの評価が終了すると、サービスの中断を避けるために MU を追加する必要があるかどうかが通知されます。
 
-Estimatorでは、現在のサブスクリプション期間を維持してライセンスを付与されたManaged Unitの数を増やすアドオンや、現在のサブスクリプションのときに購入する更新サブスクリプションの更新オプションのいずれかのアドオンの番号がどのように積み重ねられているかを確認することもできます。 期間終了。
+管理対象ユニットの使用状況は、*管理 > サブスクリプション* ページの *使用状況* タブで監視できます。
 
-モジュール評価の対象となるのは、サブスクリプションごとに1回のみです。
+image:Module_Trials_UsageTab.png["MU使用状況画面"]
+
+
+NOTE: _モジュール評価_ は _トライアル_ ではありません。トライアルという用語は、適合性を確認して購入を可能にするために、顧客にData Infrastructure Insightsサービスの無料トライアル期間を提供する場合に使用します。モジュール評価は異なります。これは、有料のお客様が、有料サブスクリプションの過去数か月間に使用していなかったData Infrastructure Insightsのモジュールを試用できるようにするものです。評価がアクティブな場合、新しく構成されたモジュールのみの料金が免除されます。顧客の作業環境はまだサブスクリプション中であり、無料トライアルに戻っていません。サブスクリプションは変更されていません。
+
+
+
+=== 見積もり
+
+モジュールの評価中は、モジュールで消費されたリソースに対して MU 使用量は請求されませんが、*見積もり* (_概要_ タブ) を開いて、評価後に MU がどのように請求されるかを確認したり、将来必要になる可能性のある MU の数に関する「What if」シナリオを試したりすることができます。  Estimator を終了して数値をリセットします。
+
+image:Module_Trials_Estimator.png["見積もり"]
+
+モジュールの横にあるチェックボックスを選択して、モジュール全体の MU を見積コストに追加または削除します。
+
+また、Estimator を使用すると、現在のサブスクリプション期間を維持し、ライセンスされた管理対象ユニットの数を増やすアドオン、または現在のサブスクリプション期間が終了したときに購入する更新サブスクリプションの更新オプションのいずれかの数値を確認することもできます。
+
+お客様は、サブスクリプションごとに 1 回のみモジュール評価を受けることができることに注意してください。
 
 
 
 == サブスクリプションオプション
 
-サブスクライブするには、*[管理]->[サブスクリプション]*に移動します。*Subscribe*ボタンに加えて、インストールされているデータコレクタを確認し、推定計測値を計算することができます。一般的な環境の場合は、セルフサービスのAWS Marketplaceボタンをクリックします。ご使用の環境に 1,000 台以上の管理対象ユニットが含まれている場合、または含まれる予定の場合は、ボリューム価格の対象となります。
+登録するには、*管理者 -> サブスクリプション* に移動します。 *サブスクライブ* ボタンに加えて、インストールされているデータ コレクターを確認し、推定計測値を計算することもできます。一般的な環境では、セルフサービス AWS Marketplace ボタンをクリックできます。環境に 1,000 個以上の管理対象ユニットが含まれているか、含まれることが予想される場合は、ボリューム価格設定の対象となります。
 
 
 
-=== オブザーバビリティ計測
+=== 可観測性メータリング
 
-Data Infrastructure Insightsのオブザーバビリティは、次の2つの方法のいずれかで計測されます。
+Data Infrastructure Insightsの可観測性は、次の 2 つの方法のいずれかで計測されます。
 
-* 容量の計測
-* Managed Unit Metering（レガシー）
-
-
-サブスクリプションは、既存のサブスクリプションを持っているか、新しいサブスクリプションを開始するかに応じて、いずれかの方法で計測されます。
+* 容量計測
+* 管理対象ユニットメータリング（レガシー）
 
 
-
-==== 容量の計測
-
-Data Infrastructure Insightsのオブザーバビリティでは、テナントのストレージ階層に基づいて使用量を測定します。次のカテゴリに分類されるストレージがある場合があります。
-
-* プライマリ物理容量
-* 物理オブジェクト
-* クラウド消費
+既存のサブスクリプションがあるか、新しいサブスクリプションを開始するかに応じて、サブスクリプションはこれらの方法のいずれかで計測されます。
 
 
-各ティアは異なるレートで計測され、全体が一緒に計算されて重み付けされたエンタイトルメントが提供されます。加重使用量の計算式は次のとおりです。
+
+==== 容量計測
+
+Data Infrastructure Insights Observability は、テナント上のストレージの層に応じて使用状況を測定します。以下の 1 つ以上のカテゴリに該当するストレージがある可能性があります。
+
+* プライマリー生
+* オブジェクト生
+* クラウド消費量
+
+
+各層は異なるレートで計測され、全体を合計して加重権利が与えられます。加重使用量を計算する式は次のとおりです。
 
  Weighted Capacity = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioned TiB)
-これを容易にするために、DIIは_ subscribed _ quantitiesに基づいて1つの*加重使用権*数を計算し、_ discovered _ storageに基づいて同じ数を計算し、検出された容量が加重使用権より大きい場合にのみ違反を宣言します。これにより、各ティアのサブスクライブされた金額とは異なる数量を柔軟に監視できます。検出されたストレージの合計がサブスクライブされた加重使用権の範囲内である限り、DIIではその数量を監視できます。
+これを容易にするために、DII は、_サブスクライブされた_量に基づいて単一の*加重権利*数を計算します。次に、_検出された_ストレージに基づいて同じ数を計算し、検出された容量が加重権利よりも大きい場合にのみ違反を宣言します。これにより、各層のサブスクライブ量とは異なる数量を柔軟に監視できるようになります。これは、検出されたストレージの合計がサブスクライブされた加重資格の範囲内である限り、DII によって許可されます。
 
 
 
-==== Managed Unit Metering（レガシー）
+==== 管理対象ユニットメータリング（レガシー）
 
-Data Infrastructure InsightsインフラオブザーバビリティとKubernetesオブザーバビリティメーターの使用量（* Managed Unit *あたり）。管理対象ユニットの使用量は、 * ホストまたは仮想マシン * の数と、インフラ環境で管理されている * フォーマットされていない容量 * の量に基づいて計算されます。
+*管理対象ユニット*ごとのData Infrastructure Insightsインフラストラクチャ オブザーバビリティおよび Kubernetes オブザーバビリティ メーター使用量。管理対象ユニットの使用量は、インフラストラクチャ環境で管理されている *ホストまたは仮想マシン* の数と *未フォーマット容量* の量に基づいて計算されます。
 
-* 1 台の管理対象ユニット = 2 台のホスト（任意の仮想マシンまたは物理マシン）
-* 1 管理ユニット = 物理ディスクまたは仮想ディスクのフォーマットされていない容量の 4TiB
-* 1 Managed Unit = 40TiBの未フォーマット容量（AWS S3、Cohesity SmartFiles、Dell EMC Data Domain、Dell EMC ECS、Hitachi Content Platform、IBM Cleversafe、NetApp StorageGRID、 ルブリク
-* 1 Managed Unit = KubernetesのvCPU 4台。
+* 1 つの管理対象ユニット = 2 つのホスト (任意の仮想マシンまたは物理マシン)
+* 1 管理ユニット = 物理ディスクまたは仮想ディスクの未フォーマット容量 4 TiB
+* 1 管理対象ユニット = 選択したセカンダリストレージの未フォーマット容量 40 TiB: AWS S3、Cohesity SmartFiles、Dell EMC Data Domain、Dell EMC ECS、Hitachi Content Platform、IBM Cleversafe、 NetApp StorageGRID、Rubrik。
+* 1 つの管理対象ユニット = 4 つの Kuberentes vCPU。
 +
-** 1 Managed Unit（K8s）の調整=インフラでも監視されるノードまたはホスト×2
+** 1 つの管理対象ユニット K8s 調整 = インフラストラクチャによっても監視される 2 つのノードまたはホスト。
 
 
 
 
 
 
-=== ワークロードのセキュリティ計測
+=== ワークロードセキュリティメータリング
 
-ワークロードのセキュリティは、オブザーバビリティの計測と同じアプローチを使用してクラスタごとに計測されます。
+Workload Security は、Observability 計測と同じアプローチを使用して Cluster によって計測されます。
 
-ワークロードセキュリティの使用状況は、*[管理者]>[サブスクリプション]*ページの*[ワークロードセキュリティ]*タブで確認できます。
+Workload Security の使用状況は、*管理 > サブスクリプション* ページの *Workload Security* タブで確認できます。
 
-image:ws_metering_example_page.png["ハイエンド、ミッドレンジ、エントリレベルのノード数を表示する[Admin> Subscription> Workload Security]タブ"]
-
-
-NOTE: 既存のワークロードセキュリティサブスクリプションでは、ノードの使用量がManaged Unitを消費しないように、MU使用量が調整されます。Data Infrastructure Insightsは、使用量を測定して、ライセンスされた使用量に確実に準拠します。
+image:ws_metering_example_page.png["管理 > サブスクリプション > ワークロード セキュリティ タブに、ハイエンド、ミッドレンジ、エントリーレベルのノード数が表示されます"]
 
 
-
-== 登録方法を教えてください。
-
-Managed Unitの数が1、000未満の場合は、NetApp SalesまたはAWS Marketplaceでサブスクライブできます<<self-subscribe-through-aws-marketplace,セルフサブスクライブ>>。
+NOTE: 既存の Workload Security サブスクリプションでは、ノードの使用によって管理対象ユニットが消費されないように MU の使用量が調整されます。  Data Infrastructure Insights は使用状況を計測し、ライセンスされた使用状況への準拠を確保します。
 
 
 
-=== ネットアップの営業担当者にサブスクライブ
+== どうやって登録すればいいですか?
 
-想定されるManaged Unitの数が1、000以上の場合は、ボタンをクリックしlink:https://www.netapp.com/forms/cloud-insights-contact-us["* 販売担当者 * にお問い合わせください"]てNetApp営業チームから登録してください。
-
-有償のサブスクリプションをデータインフラ分析環境に適用できるように、Data Infrastructure Insights *のシリアル番号*をNetApp営業担当者に提出する必要があります。シリアル番号は、Data Infrastructure Insightsのトライアル環境を一意に識別するもので、*[Admin]>[Subscription]*ページで確認できます。
+管理対象ユニット数が1,000未満の場合は、 NetApp Sales経由で申し込むか、<<self-subscribe-through-aws-marketplace,セルフサブスクライブ>> AWS Marketplace 経由。
 
 
 
-=== AWS Marketplace でセルフサブスクライブ
+=== NetApp Sales Directを通じて申し込む
+
+予想される管理対象ユニット数が1,000以上の場合は、link:https://www.netapp.com/forms/cloud-insights-contact-us["*営業部へのお問い合わせ*"] NetAppセールス チームを通じてサブスクライブするためのボタン。
+
+有料サブスクリプションをData Infrastructure Insights Data Infrastructure Insights Insights の *シリアル番号* をNetApp の営業担当者に提供する必要があります。シリアル番号は、Data Infrastructure Insights の試用環境を一意に識別するもので、*管理 > サブスクリプション* ページで確認できます。
 
 
-NOTE: AWS Marketplaceサブスクリプションを既存のData Infrastructure Insightsトライアルアカウントに適用するには、アカウント所有者または管理者である必要があります。さらに、 Amazon Web Services （ AWS ）アカウントが必要です。
 
-Amazon Marketplaceのリンクをクリックすると、AWS https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["データインフラの分析情報"]サブスクリプションページが開き、サブスクリプションを完了できます。このページでは、計算ツールで入力した値が AWS のサブスクリプションページに入力されていないことに注意してください。管理対象ユニットの総数を入力する必要があります。
+=== AWS Marketplace を通じてセルフサブスクライブ
 
-管理対象ユニットの総数を入力し、 12 か月または 36 か月のサブスクリプション期間を選択したら、「 * アカウントの設定 * 」をクリックしてサブスクリプションプロセスを終了します。
+
+NOTE: 既存のData Infrastructure Insightsトライアルアカウントに AWS Marketplace サブスクリプションを適用するには、アカウント所有者または管理者である必要があります。さらに、Amazon Web Services (AWS) アカウントが必要です。
+
+AmazonマーケットプレイスのリンクをクリックするとAWSが開きます https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["Data Infrastructure Insights"]サブスクリプションページで、サブスクリプションを完了できます。計算ツールに入力した値は AWS サブスクリプション ページには入力されないことに注意してください。このページで管理対象ユニットの合計数を入力する必要があります。
+
+管理対象ユニットの合計数を入力し、12 か月または 36 か月のサブスクリプション期間を選択したら、[アカウントの設定] をクリックしてサブスクリプション プロセスを終了します。
 
 AWS サブスクリプションプロセスが完了すると、 Data Infrastructure Insights環境に戻ります。または、環境がアクティブでなくなった場合 (ログアウトした場合など)、NetAPp コンソールのサインイン ページに移動します。  Data Infrastructure Insightsに再度サインインすると、サブスクリプションがアクティブになります。
 
 
-NOTE: AWS Marketplace のページで「 * アカウントの設定 * 」をクリックしてから、 AWS サブスクリプションの手続きを 1 時間以内に完了する必要があります。1 時間以内に完了しない場合は、もう一度「 * アカウントの設定 * 」をクリックして処理を完了する必要があります。
+NOTE: AWS Marketplace ページで *アカウントの設定* をクリックした後、1 時間以内に AWS サブスクリプションプロセスを完了する必要があります。  1 時間以内に完了しない場合は、再度「アカウントの設定」をクリックしてプロセスを完了する必要があります。
 
-問題が発生し、サブスクリプションプロセスが正常に完了しない場合でも、環境にログインすると「トライアルバージョン」のバナーが表示されます。この場合は、 * Admin > Subscription * に移動して、契約プロセスを繰り返すことができます。
-
-
-
-== サブスクリプションステータスを表示します
-
-サブスクリプションがアクティブになると、 [*Admin] > [Subscription] * ページからサブスクリプションのステータスと管理ユニットの使用状況を確認できます。
-
-Subscription * Summary *タブには、次のような情報が表示されます。
-
-* 現在のエディション
-* サブスクリプションシリアル番号
-* 現在のMUエンタイトルメント
+問題が発生してサブスクリプション プロセスが正しく完了しなかった場合でも、環境にログインすると「試用版」バナーが表示されます。この場合は、*管理 > サブスクリプション* に移動して、サブスクリプション プロセスを繰り返すことができます。
 
 
-[* Usage]タブには、現在のMUの使用状況と、その使用状況がデータコレクタ別に表示されます。
+
+== サブスクリプションのステータスを表示する
+
+サブスクリプションがアクティブになると、*管理 > サブスクリプション* ページからサブスクリプションのステータスと管理対象ユニットの使用状況を確認できます。
+
+サブスクリプションの*概要*タブには次のような内容が表示されます。
+
+* 最新版
+* サブスクリプションのシリアル番号
+* 現在のMU資格
+
+
+*使用状況*タブには、現在の MU の使用状況と、その使用状況がデータ コレクターごとにどのように内訳されているかが表示されます。
 
 image:SubscriptionUsageByModule.png["モジュール別のMU使用量"]
 
-[History（履歴）]タブには、過去7～90日間のMU使用状況が表示されます。グラフの列にカーソルを合わせると、モジュール別の内訳（オブザーバビリティ、Kubernetesなど）が表示されます。
+*履歴*タブでは、過去 7 日から 90 日間の MU の使用状況を確認できます。グラフ内の列にマウスを移動すると、モジュール (Observability、Kubernetes など) ごとの内訳が表示されます。
 
-image:Subscription_Usage_History.png["MU使用履歴"]
-
-
-
-== 使用状況管理を表示します
-
-[Usage Management]タブには、Managed Unitの使用状況の概要と、コレクタまたはKubernetesクラスタ別のManaged Unitの消費状況を示すタブが表示されます。
-
-
-NOTE: フォーマットされていない容量管理対象ユニット数は、環境内の合計物理容量を表し、最も近い管理対象ユニットに切り上げられます。
-
-
-NOTE: 管理対象ユニットの合計は、サマリセクションのデータコレクタ数とは若干異なる場合があります。これは、管理対象ユニットの数が最も近い管理対象ユニットに切り上げられるためです。データコレクタリストのこれらの数値の合計は、ステータスセクションの管理対象ユニットの合計よりも少し高くなる場合があります。サマリセクションには、サブスクリプションの実際の管理ユニット数が表示されます。
-
-利用状況がサブスクライブした金額に近づいている、または超過している場合は、データコレクタを削除するか、Kubernetesクラスタの監視を停止することで、使用量を減らすことができます。このリストの項目を削除するには、「3つのドット」メニューをクリックして_Delete_を選択します。
+image:Subscription_Usage_History.png["MUの使用履歴"]
 
 
 
-=== 購読している使用量を超えた場合はどうなりますか ?
+== 使用状況管理を表示する
 
-管理下ユニットの使用率が総加入量の 80% 、 90% 、 100% を超えると、警告が表示されます。
+使用状況管理タブには、管理対象ユニットの使用状況の概要と、コレクターまたは Kubernetes クラスター別に管理対象ユニットの消費量を分類したタブが表示されます。
+
+
+NOTE: 未フォーマット容量の管理対象ユニット数は、環境内の総生容量の合計を反映し、最も近い管理対象ユニットに切り上げられます。
+
+
+NOTE: 管理対象ユニットの合計は、概要セクションのデータ コレクターの数と若干異なる場合があります。これは、管理対象ユニットの数が最も近い管理対象ユニットに切り上げられるためです。データ コレクター リスト内のこれらの数値の合計は、ステータス セクションの管理対象ユニットの合計よりもわずかに高くなる場合があります。概要セクションには、サブスクリプションの実際の管理対象ユニット数が反映されます。
+
+使用量がサブスクライブした量に近づいたり超えたりした場合は、データ コレクターを削除するか、Kubernetes クラスターの監視を停止することで使用量を削減できます。このリスト内の項目を削除するには、「3 つのドット」メニューをクリックして [削除] を選択します。
+
+
+
+=== 登録した使用量を超えた場合はどうなりますか?
+
+管理対象ユニットの使用量が合計サブスクリプション量の 80%、90%、100% を超えると、警告が表示されます。
 
 [cols="2*a"]
 |===
-| * 使用量が * を超えた場合 | * これは / 推奨される処置 : * 
+| *使用量が超過した場合:* | *このようなことが起こる場合 / 推奨されるアクション:* 
 
 
  a| 
-* 80%*
+*80%*
  a| 
 情報バナーが表示されます。対処は不要です。
 
 
 
  a| 
-* 90%*
+*90%*
  a| 
-警告バナーが表示されます。購読している管理ユニット数を増やすことができます。
+警告バナーが表示されます。サブスクライブしている管理対象ユニットの数を増やす必要がある場合があります。
 
 
 
  a| 
-* 100%*
+*100%*
  a| 
-次のいずれかを実行するまで、エラーバナーが表示されます。
+次のいずれかを実行するまで、エラー バナーが表示されます。
 
-* データコレクタを削除して、Managed Unitの使用量がサブスクライブした量以下になるようにする
-* サブスクリプションを変更してManaged Unitの数を増やす
+* 管理対象ユニットの使用量がサブスクリプションの量以下になるようにデータコレクターを削除します
+* サブスクリプションを変更して、サブスクライブされた管理対象ユニットの数を増やします
 
 
 |===
 
 
-== 直接購読して、トライアルをスキップしてください
+== 直接購読してトライアルをスキップ
 
-Data Infrastructure Insightsは https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["AWSマーケットプレイス"]、最初に試用環境を作成することなく、から直接サブスクライブすることもできます。サブスクリプションが完了し、環境がセットアップされると、すぐにサブスクライブされます。
+また、 Data Infrastructure Insightsを以下のサイトから直接購読することもできます。 https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["AWS マーケットプレイス"]最初に試用環境を作成せずに。サブスクリプションが完了し、環境がセットアップされると、すぐにサブスクリプションが開始されます。
 
 
 
-== エンタイトルメント ID の追加
+== 資格IDの追加
 
-Data Infrastructure Insightsにバンドルされている有効なNetApp製品を所有している場合は、その製品のシリアル番号を既存のData Infrastructure Insightsサブスクリプションに追加できます。たとえば、NetApp Astra Control Centerを購入した場合、Astra Control Centerライセンスのシリアル番号を使用してData Infrastructure Insightsでサブスクリプションを識別できます。Data Infrastructure Insightsでは、このエンタイトルメントID _を参照しています。
+Data Infrastructure Insightsにバンドルされている有効なNetApp製品を所有している場合は、その製品のシリアル番号を既存のData Infrastructure Insightsサブスクリプションに追加できます。たとえば、 NetApp Astra Control Center を購入した場合、 Astra Control Center ライセンスのシリアル番号を使用して、 Data Infrastructure Insightsでサブスクリプションを識別できます。  Data Infrastructure Insights、これを _Entitlement ID_ と呼びます。
 
-Data Infrastructure Insightsサブスクリプションに使用権IDを追加するには、*[Admin]>[Subscription]*ページで、[+Entitlement ID_]をクリックします。
+Data Infrastructure Insightsサブスクリプションに資格 ID を追加するには、*管理者 > サブスクリプション* ページで、_+ 資格 ID_ をクリックします。
 
-image:Subscription_AddEntitlementID.png["サブスクリプションにエンタイトルメント ID を追加します"]
+image:Subscription_AddEntitlementID.png["サブスクリプションに資格IDを追加する"]

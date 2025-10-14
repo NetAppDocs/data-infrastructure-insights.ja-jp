@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: forensic_entity_detail.html 
 keywords: Forensic, entity, entity overview, entity behavior, entities 
-summary: フォレンジックエンティティページ 
+summary: 法医学的実体ページ 
 ---
-= フォレンジックエンティティページ
+= 法医学的実体ページ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,18 +14,18 @@ summary: フォレンジックエンティティページ
 
 
 [role="lead"]
-[Forensics Entities]ページには、テナントのエンティティアクティビティに関する詳細情報が表示されます。
+フォレンジック エンティティ ページには、テナント上のエンティティ アクティビティに関する詳細情報が表示されます。
 
 
 
-== エンティティ情報の検査
+== エンティティ情報の調査
 
-* Forensics > Activity Forensics * をクリックし、 _Entities_ タブをクリックして Entities ページにアクセスします。
+*フォレンジック > アクティビティ フォレンジック* をクリックし、_エンティティ_ タブをクリックしてエンティティ ページにアクセスします。
 
-このページには、テナントのエンティティアクティビティの概要が表示され、次の情報が強調表示されます。*グラフに_Unique Entities_accessed per minute *エンティティタイプのグラフaccessed _* A chart of _ Entity types accessed _* A breakdown of the _Common Paths_*エンティティの総数のうち_Top 50 Entities_outのリスト
+このページでは、テナント上のエンティティアクティビティの概要を示し、以下の情報を強調表示します。 * 1 分あたりにアクセスされた _一意のエンティティ_ を示すグラフ * アクセスされたエンティティの種類_ のチャート * 共通パス_ の内訳 * エンティティの総数のうちの _上位 50 エンティティ_ のリスト
 
-image:CS-Entities-Page.png["エンティティページ（ Entities Page ）"]
+image:CS-Entities-Page.png["エンティティページ"]
 
-リスト内のエンティティをクリックすると、エンティティの概要ページが開き、エンティティのプロファイルに名前、タイプ、デバイス名、最もアクセスされる場所の IP 、パスなどの詳細、およびユーザ、 IP 、 エンティティが最後にアクセスされた時刻です。
+リスト内のエンティティをクリックすると、そのエンティティの概要ページが開き、名前、タイプ、デバイス名、最もアクセスされた場所の IP やパスなどの詳細を含むエンティティのプロファイルと、ユーザー、IP、エンティティが最後にアクセスされた時間などのエンティティの動作が表示されます。
 
-image:CS-entity-detail-page.png["エンティティの概要ページ"]
+image:CS-entity-detail-page.png["エンティティ概要ページ"]

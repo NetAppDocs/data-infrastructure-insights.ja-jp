@@ -2,53 +2,53 @@
 sidebar: sidebar 
 permalink: task_dc_pure_flashblade.html 
 keywords: data collector, Pure Storage, pure, FlashBlade 
-summary: Pure Storage データコレクタの設定 
+summary: Pure Storage データ コレクターを構成します。 
 ---
-= Pure Storage FlashBladeデータコレクタ
+= Pure Storage FlashBlade データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、Pure Storage FlashBladeデータコレクタを使用して、REST APIのバージョン2を公開するFlashBladeクラスタからインベントリとパフォーマンスのデータを収集します。
+Data Infrastructure Insightsは、 Pure Storage FlashBladeデータコレクターを使用して、REST APIバージョン2を公開するFlashBladeクラスターからインベントリとパフォーマンスデータを収集します。
 
 
 
 == 用語
 
-Data Infrastructure Insightsで取得したアセットタイプごとに、そのアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
 [cols="2*"]
 |===
-| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
 
-| ドライブ（ SSD ） | ディスク 
+| ドライブ（SSD） | ディスク 
 
 
 | アレイ | ストレージ 
 
 
-| ブレード | ストレージノード 
+| ブレード | ストレージ ノード 
 
 
-| File System の略 | 内部ボリューム 
+| ファイルシステム | 内部容積 
 
 
 | オブジェクトストレージバケット | qtree 
 
 
-| イニシエータ、ターゲット | ボリュームマスク 
+| イニシエーター、ターゲット | ボリュームマスク 
 |===
-注：これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているわけではありません。
+注: これらは一般的な用語のマッピングのみであり、このデータ コレクターのすべてのケースを反映しているわけではありません。
 
 
 
 == 要件
 
 * ストレージシステムのIPアドレスまたは完全修飾ドメイン名
-* APIトークン。理想的には寿命が無限です。読み取り専用レベルのユーザで十分です。
-* ポート要件： HTTPS 443
+* 理想的には無期限の有効期間を持つ API トークン。読み取り専用レベルのユーザーで十分です。
+* ポート要件: HTTPS 443
 
 
 
@@ -57,16 +57,16 @@ Data Infrastructure Insightsで取得したアセットタイプごとに、そ�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| FlashBladeホストのIPアドレス | ストレージシステムの IP アドレス 
+| FlashBladeホストIPアドレス | ストレージシステムのIPアドレス 
 
 
-| ユーザ名 | Data Infrastructure Insightsの管理者が自分のAPIトークンが属するユーザを覚えやすくするためのユーザ名 
+| ユーザ名 | Data Infrastructure Insights管理者が API トークンがどのユーザーのものであるかを覚えておくのに役立つユーザー名 
 
 
-| API トークン | API トークン 
+| APIトークン | APIトークン 
 |===
 
 
@@ -74,16 +74,16 @@ Data Infrastructure Insightsで取得したアセットタイプごとに、そ�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| 接続タイプ | HTTP または HTTPS を選択します。デフォルトのポートも表示されます。 
+| 接続の種類 | [HTTP]または[HTTPS]を選択します。デフォルトのポートも表示します。 
 
 
-| TCP ポートを上書きします | 空白の場合は、 [Connection Type] フィールドでデフォルトのポートを使用します。それ以外の場合は、使用する接続ポートを入力します 
+| TCPポートを上書きする | 空白の場合は、接続タイプフィールドのデフォルトのポートを使用します。それ以外の場合は、使用する接続ポートを入力します。 
 
 
-| インベントリのポーリング間隔（分） | デフォルトは 60 分です。 
+| インベントリポーリング間隔（分） | デフォルトは60分です 
 
 
 | パフォーマンスポーリング間隔（秒） | デフォルトは300です 
@@ -92,7 +92,7 @@ Data Infrastructure Insightsで取得したアセットタイプごとに、そ�
 
 == トラブルシューティング
 
-このデータコレクタで問題が発生した場合の対処方法を次に示します。
+このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
@@ -100,9 +100,9 @@ Data Infrastructure Insightsで取得したアセットタイプごとに、そ�
 
 [cols="2*"]
 |===
-| 問題 | 次の操作を実行します 
+| 問題： | これを試してください: 
 
 
-| 「 Invalid login credentials 」というエラーメッセージが表示され、「 Policy does not allow 」または「 you are not authorized 」が表示されます。 | Pure http インターフェイスで Pure のユーザアカウントとパスワードを検証します 
+| 「無効なログイン資格情報」と「ポリシーにより許可されていません」または「権限がありません」というエラー メッセージが表示される | Pure http インターフェース経由で Pure ユーザー アカウントとパスワードを検証します 
 |===
-詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

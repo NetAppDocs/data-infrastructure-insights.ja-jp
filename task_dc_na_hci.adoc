@@ -2,27 +2,27 @@
 sidebar: sidebar 
 permalink: task_dc_na_hci.html 
 keywords: data collector, VMware, hci 
-summary: NetApp HCI 管理サーバのデータコレクタの設定 
+summary: NetApp HCI管理サーバーのデータ コレクターを構成します。 
 ---
-= NetApp HCI 管理サーバのデータコレクタの設定
+= NetApp HCI管理サーバーのデータコレクターの構成
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-NetApp HCI 管理サーバデータコレクタは、 NetApp HCI ホスト情報を収集します。管理サーバ内のすべてのオブジェクトに対する読み取り専用の権限が必要です。
+NetApp HCI管理サーバーのデータ コレクターは、 NetApp HCIホスト情報を収集し、管理サーバー内のすべてのオブジェクトに対する読み取り専用権限を必要とします。
 
-このデータコレクタは、 * NetApp HCI 管理サーバーのみ * から取得します。ストレージシステムからデータを収集するには、データコレクタも設定する必要がありlink:task_dc_na_solidfire.html["NetApp SolidFire"]ます。
+このデータ コレクターは、* NetApp HCI管理サーバーからのみ* を取得します。ストレージシステムからデータを収集するには、link:task_dc_na_solidfire.html["NetApp SolidFire"]データ収集者。
 
 
 
 == 用語
 
-Data Infrastructure Insightsは、このデータコレクタから次のインベントリ情報を取得します。取得したアセットのタイプごとに、そのアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+Data Infrastructure Insights は、このデータ コレクターから次のインベントリ情報を取得します。取得した資産の種類ごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
 [cols="2*"]
 |===
-| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
 
 | 仮想ディスク | ディスク 
@@ -37,28 +37,28 @@ Data Infrastructure Insightsは、このデータコレクタから次のイン�
 | データストア | データストア 
 
 
-| LUN | ボリューム 
+| LUN | Volume 
 
 
-| ファイバ・チャネル・ポート | ポート 
+| ファイバーチャネルポート | ポート 
 |===
-これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているとは限りません
+これらは一般的な用語のマッピングのみであり、このデータ コレクターのすべてのケースを反映しているわけではありません。
 
 
 
 == 要件
 
-このデータコレクタを設定するには、次の情報が必要です。
+このデータ コレクターを構成するには、次の情報が必要です。
 
-* NetApp HCI 管理サーバの IP アドレス
-* NetApp HCI 管理サーバの読み取り専用のユーザ名とパスワード
-* NetApp HCI 管理サーバ内のすべてのオブジェクトに対する読み取り専用権限。
-* NetApp HCI 管理サーバ上の SDK へのアクセス - 通常はセットアップ済みです。
-* ポート要件： http - 80 https-443
-* アクセスの検証：
+* NetApp HCI管理サーバーの IP アドレス
+* NetApp HCI管理サーバーの読み取り専用のユーザー名とパスワード
+* NetApp HCI管理サーバー内のすべてのオブジェクトに対する読み取り専用権限。
+* NetApp HCI管理サーバー上の SDK アクセス – 通常は既に設定されています。
+* ポート要件: http-80 https-443
+* アクセスを検証:
 +
-** 上記のユーザ名とパスワードを使用して、 NetApp HCI 管理サーバにログインします
-** SDK が有効になっていることを確認します。 telnet <VC_IP> 443
+** 上記のユーザー名とパスワードを使用してNetApp HCI管理サーバーにログインします。
+** SDKが有効になっていることを確認します: telnet <vc_ip> 443
 
 
 
@@ -69,13 +69,13 @@ Data Infrastructure Insightsは、このデータコレクタから次のイン�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| 名前 | データコレクタの一意の名前 
+| Name | データコレクターの一意の名前 
 
 
-| Acquisition Unit の場合 | Acquisition Unit の名前 
+| 買収ユニット | 買収ユニット名 
 |===
 
 
@@ -83,58 +83,58 @@ Data Infrastructure Insightsは、このデータコレクタから次のイン�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| NetApp HCI ストレージクラスタの MVIP | 管理仮想 IP アドレス 
+| NetApp HCIストレージ クラスター MVIP | 管理仮想IPアドレス 
 
 
-| SolidFire 管理ノード（ mNode ） | 管理ノードの IP アドレス 
+| SolidFire管理ノード (mNode) | 管理ノードのIPアドレス 
 
 
-| ユーザ名 | NetApp HCI 管理サーバへのアクセスに使用するユーザ名 
+| ユーザ名 | NetApp HCI管理サーバーにアクセスするために使用するユーザー名 
 
 
-| パスワード | NetApp HCI 管理サーバへのアクセスに使用するパスワード 
+| パスワード | NetApp HCI管理サーバーにアクセスするために使用するパスワード 
 
 
-| vCenter ユーザ名 | vCenter のユーザ名 
+| VCenterユーザー名 | VCenterのユーザー名 
 
 
-| vCenter のパスワード | vCenter のパスワード 
+| VCenter パスワード | VCenterのパスワード 
 |===
 
 
 == 高度な設定
 
-詳細設定画面で、 VM パフォーマンス * ボックスをオンにしてパフォーマンスデータを収集します。インベントリ収集は、デフォルトで有効になっています。次のフィールドを設定できます。
+詳細構成画面で、*VM パフォーマンス* ボックスをオンにしてパフォーマンス データを収集します。インベントリ収集はデフォルトで有効になっています。次のフィールドを設定できます。
 
 [cols="2*"]
 |===
 
 
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| インベントリのポーリング間隔（分） | デファントは 20 歳です 
+| インベントリポーリング間隔（分） | デフォルトは20です 
 
 
-| で VM をフィルタリングします | クラスタ、データセンター、または ESX ホストを選択します 
+| VMをフィルタリング | クラスタ、データセンター、またはESXホストを選択 
 
 
-| 「除外」または「含める」を選択してリストを指定します | VM を含めるか除外するかを指定します 
+| リストを指定するには「除外」または「含める」を選択します | VMを含めるか除外するかを指定する 
 
 
-| デバイスリストをフィルタリングします | フィルタリングする VM のリスト（カンマ区切り、値にカンマを使用する場合はセミコロンで区切った）。 ESX_host 、クラスタ、およびデータセンターでのみフィルタリングします 
+| デバイスリストをフィルタリング | ESX_HOST、CLUSTER、および DATACENTER のみによるフィルタリングの場合、フィルタリングする VM のリスト (カンマ区切り、または値にカンマが使用されている場合はセミコロン区切り) 
 
 
-| パフォーマンスのポーリング間隔（秒） | デフォルトは300です 
+| パフォーマンスポーリング間隔（秒） | デフォルトは300です 
 |===
 
 
 == トラブルシューティング
 
-このデータコレクタで問題が発生した場合の対処方法を次に示します。
+このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
@@ -142,15 +142,15 @@ Data Infrastructure Insightsは、このデータコレクタから次のイン�
 
 [cols="2*"]
 |===
-| 問題 | 次の操作を実行します 
+| 問題： | これを試してください: 
 
 
-| エラー：フィルタリングする VM をリストに含めることはできません | [Include List] を選択した場合は、有効なデータセンター、クラスタ、またはホスト名をリストして、 VM をフィルタリングしてください 
+| エラー: VM をフィルタリングするための包含リストは空にできません | 包含リストを選択した場合は、VM をフィルタリングするために有効なデータセンター、クラスタ、またはホスト名をリストしてください。 
 
 
-| エラー： IP で VirtualCenter への接続をインスタンス化できませんでした | 解決策： * 入力された資格情報と IP アドレスを確認してください。* Infrastructure Client を使用して、 Virtual Center と通信してみてください。* Managed Object Browser （ MOB など）を使用して Virtual Center と通信してみます。 
+| エラー: IP の VirtualCenter への接続をインスタンス化できませんでした | 考えられる解決策: * 入力した資格情報と IP アドレスを確認します。  * Infrastructure Client を使用して Virtual Center との通信を試みます。  * 管理対象オブジェクト ブラウザー (MOB など) を使用して仮想センターとの通信を試みます。 
 
 
-| エラー： IP の VirtualCenter には、 JVM で必要な非準拠の証明書があります | 可能な解決策： * 推奨：強力な（など）を使用して、 Virtual Center の証明書を再生成します 1024 ビット） RSA キー。* 推奨されません。 JVM java.security 設定を変更して、 JDK.certPath.disableAlgorithms 制約を利用し、 512 ビット RSA キーを許可します。次のURLにあるJDK 7 Update 40のリリースノートを参照してください。"http://www.oracle.com/technetwork/java/javase/7u40-relnotes-2004172.html"[] 
+| エラー: IP の VirtualCenter には、JVM に必要な非準拠の証明書があります | 考えられる解決策: * 推奨: より強力な (例: 1024 ビット) RSA キーを使用して、Virtual Center の証明書を再生成します。  * 非推奨: JVM java.security 構成を変更して、制約 jdk.certpath.disabledAlgorithms を活用し、512 ビットの RSA キーを許可します。  JDK 7アップデート40のリリースノートについては、"http://www.oracle.com/technetwork/java/javase/7u40-relnotes-2004172.html"[] 
 |===
-詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

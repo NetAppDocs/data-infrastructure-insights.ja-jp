@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_ws_integration_with_ontap_access_denied.html 
-summary: ワークロードセキュリティは、ONTAPと統合してアクセス拒否イベントを受信し、追加の分析と自動応答レイヤを提供します。 
+summary: Workload Security はONTAPと統合して、アクセス拒否イベントを受信し、追加の分析および自動応答レイヤーを提供します。 
 keywords: ransomware, ARP, Protection, Security, access 
 ---
-= ONTAPアクセス拒否との統合
+= ONTAPとの統合アクセスが拒否されました
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,40 +14,40 @@ keywords: ransomware, ARP, Protection, Security, access
 
 
 [role="lead"]
-ONTAPアクセス拒否機能は、NAS環境（NFSおよびSMB）のワークロード分析を使用して、失敗したファイル処理（権限のない処理を実行しようとしているユーザなど）をプロアクティブに検出して警告します。これらのファイル操作の失敗の通知は、特にセキュリティ関連の障害の場合には、初期段階でのインサイダー攻撃のブロックにさらに役立ちます。
+ONTAPアクセス拒否機能は、NAS 環境 (NFS および SMB) のワークロード分析を使用して、失敗したファイル操作 (つまり、ユーザーが権限のない操作を実行しようとしている) をプロアクティブに検出し、警告します。これらの失敗したファイル操作通知は、特にセキュリティ関連の障害の場合、早い段階で内部者による攻撃をブロックするのにさらに役立ちます。
 
-データインフラストラクチャインサイトワークロードセキュリティは、ONTAPと統合してアクセス拒否イベントを受信し、追加の分析および自動応答レイヤを提供します。
+Data Infrastructure Insights Workload Security はONTAPと統合してアクセス拒否イベントを受信し、追加の分析および自動応答レイヤーを提供します。
 
 
 
 == 前提条件
 
-* ONTAPの最小バージョン：9.13.0
-* ワークロードセキュリティ管理者は、新しいコレクタの追加時または既存のコレクタの編集時に、[Advanced Configuration]の下にある[_Monitor Access Denied Events_]チェックボックスをオンにして、アクセス拒否機能を有効にする必要があります。
+* 最小ONTAPバージョン: 9.13.0。
+* Workload Security 管理者は、新しいコレクターを追加するとき、または既存のコレクターを編集するときに、[詳細設定] の [アクセス拒否イベントの監視] チェックボックスをオンにして、アクセス拒否機能を有効にする必要があります。
 
 
-image:WS_Access_Denied_Enable_in_Collector.png["ONTAPコレクタの詳細設定でアクセス拒否を有効にする"]
+image:WS_Access_Denied_Enable_in_Collector.png["ONTAPコレクターの詳細設定でアクセス拒否を有効にする"]
 
 
 
-== ユーザ権限が必要です
+== ユーザー権限が必要です
 
-クラスタ管理資格情報を使用してData Collectorを追加する場合、新しい権限は必要ありません。
+クラスター管理資格情報を使用してデータ コレクターを追加する場合、新しい権限は必要ありません。
 
-ユーザに付与された権限を持つカスタムユーザ（_csuser_など）を使用してコレクタを追加する場合は、次の手順に従って、ONTAPでアクセス拒否イベントに登録するために必要な権限をワークロードセキュリティに付与します。
+ユーザーに権限が付与されたカスタム ユーザー (たとえば、_csuser_) を使用してコレクターを追加する場合は、次の手順に従って、 ONTAPでアクセス拒否イベントを登録するために必要な権限を Workload Security に付与します。
 
-CSUSER WITH_CLUSTER_CREDENTIALの場合は、ONTAPコマンドラインから次のコマンドを実行します。この権限はすでに存在する可能性があることに注意してください。
+_cluster_ 認証情報を持つ csuser の場合は、 ONTAPコマンドラインから次のコマンドを実行します。この権限はすでに存在している可能性があることに注意してください。
 
  security login role create -role csrole -cmddirname "vserver fpolicy" -access all
-csuser with _svm_credentialsの場合は、ONTAPコマンドラインから次のコマンドを実行します。この権限はすでに存在する可能性があることに注意してください。
+_SVM_ 認証情報を持つ csuser の場合は、 ONTAPコマンドラインから次のコマンドを実行します。この権限はすでに存在している可能性があることに注意してください。
 
  security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
-その他の設定について詳しくは、こちらをご覧くださいlink:task_add_collector_svm.html["ONTAPケンケン"]。
+その他の設定についてはこちらlink:task_add_collector_svm.html["ONTAP権限"]。
 
 
 
 == アクセス拒否イベント
 
-ONTAPシステムからイベントが取得されると、[ワークロードセキュリティフォレンジック]ページにアクセス拒否イベントが表示されます。表示される情報に加えて、歯車アイコンから_desired Activity_columnをテーブルに追加することで、特定の操作で不足しているユーザー権限を表示できます。
+ONTAPシステムからイベントが取得されると、Workload Security Forensics ページに「アクセス拒否」イベントが表示されます。表示される情報に加えて、歯車アイコンからテーブルに「必要なアクティビティ」列を追加することで、特定の操作に不足しているユーザー権限を表示できます。
 
 image:WS_Access_Denied_Example_Event_1.png["アクセス拒否イベントの例"]

@@ -2,94 +2,94 @@
 sidebar: sidebar 
 permalink: task_config_user_dir_connect_ldap.html 
 keywords: collector, configure, LDAP, Active Directory, cloud secure 
-summary: ワークロードセキュリティLDAPユーザディレクトリコレクタの設定 
+summary: ワークロードセキュリティLDAPユーザーディレクトリコレクターの構成 
 ---
-= LDAP Directory Server Collector の設定
+= LDAPディレクトリサーバーコレクターの構成
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-ワークロードセキュリティを設定して、LDAPディレクトリサーバからユーザ属性を収集します。
+Workload Security を設定して、LDAP ディレクトリ サーバからユーザ属性を収集します。
 
 .開始する前に
-* このタスクを実行するには、Data Infrastructure Insightsの管理者またはアカウント所有者である必要があります。
-* LDAP ディレクトリサーバをホストしているサーバの IP アドレスを確認しておく必要があります。
-* LDAP ディレクトリコネクタを設定する前に、エージェントを設定する必要があります。
+* このタスクを実行するには、 Data Infrastructure Insights管理者またはアカウント所有者である必要があります。
+* LDAP ディレクトリ サーバーをホストするサーバーの IP アドレスが必要です。
+* LDAP ディレクトリ コネクタを構成する前に、エージェントを構成する必要があります。
 
 
-.ユーザーディレクトリコレクタの設定手順
-. [Workload Security]メニューで、*[Collectors]>[User Directory Collector]>[+ User Directory Collector]*をクリックし、*[LDAP Directory Server]*を選択します。
+.ユーザーディレクトリコレクターを構成する手順
+. ワークロード セキュリティ メニューで、*コレクター > ユーザー ディレクトリ コレクター > + ユーザー ディレクトリ コレクター* をクリックし、*LDAP ディレクトリ サーバー* を選択します。
 +
-[Add User Directory] 画面が表示されます。
+「ユーザー ディレクトリの追加」画面が表示されます。
 
 
 
-次の表に必要なデータを入力して、 User Directory Collector を設定します。
-
-[cols="2*"]
-|===
-
-
-| 名前 | 製品説明 
-
-
-| 名前 | ユーザディレクトリの一意の名前。たとえば、「 _GlobalLDAPCollector_ 」と入力します 
-
-
-| エージェント | リストから設定済みエージェントを選択します 
-
-
-| サーバの IP / ドメイン名 | LDAP ディレクトリサーバをホストするサーバの IP アドレスまたは完全修飾ドメイン名（ FQDN ） 
-
-
-| ベース検索 | LDAP サーバ検索ベースの検索ベースでは、 SVM でドメイン名を直接指定する場合と、 _x.y.z _ = > の両方の形式を使用できます。[ 例： hq.companyname.com] _DC= x 、 DC=y 、 DC=z_=> 相対識別名（例： DC=HQ 、 DC=companyname 、 DC=com ）。あるいは、次のように指定できます。 _OU=engineering 、 DC=HQ 、 DC=companyname 、 DC=com_[ 特定の OU でフィルタリング ] _CN=username 、 OU=engineering 、 DC=companyname 、 DC=netapp 、 DC=com [ OU から <username> を使用する特定のユーザだけを取得 ] <engineering>]_CN=Acrobat ユーザ、 CN=Users 、 DC=users 、 DC=user 、 DC=s,DC=s以降 、 <company=c 、 <company=< 企業名 > 
-
-
-| バインド DN | ディレクトリの検索が許可されています。例：uid=ldapuser、cn=users、cn=accounts、dc=domain、dc=companyname、dc=com uid=john、cn=users、cn=accounts、dc=dorp、dc=company、dc=com（ユーザjohn@dorp.company.comの場合）dorp.company.com 
-
-
-| アカウント | ユーザ 
-
-
-| -- ジョン | -- アンナ 
-
-
-| バインドパスワード | ディレクトリサーバのパスワード（バインド DN で使用されるユーザ名のパスワード） 
-
-
-| プロトコル | LDAP 、 ldaps 、 ldap-start-TLS 
-
-
-| ポート | ポートを選択します 
-|===
-LDAP ディレクトリサーバでデフォルトの属性名が変更されている場合は ' 次の Directory Server 必須属性を入力しますこれらの属性名のほとんどは、 LDAP ディレクトリサーバで _not_modified となります。この場合、デフォルトの属性名をそのまま使用できます。
+次の表に必要なデータを入力して、ユーザー ディレクトリ コレクターを構成します。
 
 [cols="2*"]
 |===
 
 
-| 属性 | ディレクトリサーバの属性名 
+| Name | 説明 
+
+
+| Name | ユーザー ディレクトリの一意の名前。例えば_GlobalLDAPCollector_ 
+
+
+| エージェント | リストから構成済みのエージェントを選択します 
+
+
+| サーバーIP/ドメイン名 | LDAP ディレクトリ サーバーをホストするサーバーの IP アドレスまたは完全修飾ドメイン名 (FQDN) 
+
+
+| 検索ベース | LDAP サーバーの検索ベース検索ベースでは、次の両方の形式が許可されます: _x.y.z_ => SVM にある直接のドメイン名。  [例: hq.companyname.com] _DC=x,DC=y,DC=z_ => 相対識別名 [例: DC=hq,DC= companyname,DC=com] または、次のように指定することもできます: _OU=engineering,DC=hq,DC= companyname,DC=com_ [特定の OU engineering でフィルタリングする] _CN=username,OU=engineering,DC=companyname, DC=netapp, DC=com_ [OU <engineering> から <username> を持つ特定のユーザーのみを取得する] _CN=Acrobat Users,CN=Users,DC=hq,DC=companyname,DC=com,O= companyname,L=Boston,S=MA,C=US_ [その組織内のユーザー内のすべての Acrobat ユーザーを取得する] 
+
+
+| バインドDN | ディレクトリの検索を許可されたユーザー。たとえば、ユーザー john@dorp.company.com の場合、uid=ldapuser、cn=users、cn=accounts、dc=domain、dc=companyname、dc=com uid=john、cn=users、cn=accounts、dc=dorp、dc=company、dc=com となります。 dorp.company.com 
+
+
+| --アカウント | --ユーザー 
+
+
+| --ジョン | --アンナ 
+
+
+| BINDのパスワード | ディレクトリ サーバーのパスワード (つまり、Bind DN で使用されるユーザー名のパスワード) 
+
+
+| プロトコル | ldap、ldaps、ldap-start-tls 
+
+
+| ポート | ポートを選択 
+|===
+LDAP ディレクトリ サーバーでデフォルトの属性名が変更されている場合は、次のディレクトリ サーバーの必須属性を入力します。ほとんどの場合、これらの属性名は LDAP ディレクトリ サーバーで変更されません。その場合は、デフォルトの属性名でそのまま続行できます。
+
+[cols="2*"]
+|===
+
+
+| 属性 | ディレクトリサーバーの属性名 
 
 
 | 表示名 | 名前 
 
 
-| UNIX ID | uidNumber 
+| UNIXID | uid番号 
 
 
-| ユーザー名 | UID 
+| ユーザー名 | uid 
 |===
-次の属性を追加するには、オプション属性を含めるをクリックします。
+次のいずれかの属性を追加するには、「オプション属性を含める」をクリックします。
 
 [cols="2*"]
 |===
 
 
-| 属性 | ディレクトリサーバの属性名 
+| 属性 | ディレクトリサーバーの属性名 
 
 
-| Eメールアドレス | メール 
+| E メール アドレス | 郵便 
 
 
 | 電話番号 | 電話番号 
@@ -101,7 +101,7 @@ LDAP ディレクトリサーバでデフォルトの属性名が変更されて
 | 国 | 共同 
 
 
-| 都道府県 | 状態 
+| 州 | 状態 
 
 
 | 部門 | 部門番号 
@@ -110,24 +110,24 @@ LDAP ディレクトリサーバでデフォルトの属性名が変更されて
 | 写真 | 写真 
 
 
-| ManagerDN | マネージャー 
+| マネージャーDN | マネージャー 
 
 
-| グループ | メンバーOf 
+| グループ | memberOf 
 |===
 
 
-== ユーザディレクトリコレクタ設定のテスト
+== ユーザーディレクトリコレクターの構成のテスト
 
-LDAP ユーザ権限および属性定義は、次の手順で検証できます。
+次の手順を使用して、LDAP ユーザー権限と属性定義を検証できます。
 
-* 次のコマンドを使用して、ワークロードセキュリティのLDAPユーザ権限を検証します。
+* Workload Security LDAP ユーザー権限を検証するには、次のコマンドを使用します。
 +
  ldapsearch -D "uid=john ,cn=users,cn=accounts,dc=dorp,dc=company,dc=com" -W -x -LLL -o ldif-wrap=no -b "cn=accounts,dc=dorp,dc=company,dc=com" -H ldap://vmwipaapp08.dorp.company.com
-* LDAP エクスプローラを使用して、 LDAP データベースの移動、オブジェクトのプロパティと属性の表示、権限の表示、オブジェクトのスキーマの表示、高度な検索の実行を行い、保存して再実行することができます。
+* LDAP エクスプローラーを使用すると、LDAP データベースをナビゲートしたり、オブジェクトのプロパティと属性を表示したり、権限を表示したり、オブジェクトのスキーマを表示したり、保存して再実行できる高度な検索を実行したりできます。
 +
-** LDAP(http://jxplorer.org/[]サーバーに接続できる任意のWindowsマシンに、LDAPエクスプローラ(http://ldaptool.sourceforge.net/[]またはJava LDAPエクスプローラをインストールします。
-** LDAPディレクトリサーバのユーザ名/パスワードを使用してLDAPサーバに接続します。
+** LDAPエクスプローラーをインストールする(http://ldaptool.sourceforge.net/[]) または Java LDAP エクスプローラー(http://jxplorer.org/[]) を、LDAP サーバーに接続できる任意の Windows マシンにインストールします。
+** LDAP ディレクトリ サーバーのユーザー名とパスワードを使用して LDAP サーバーに接続します。
 
 
 
@@ -136,59 +136,59 @@ image:CloudSecure_LDAPDialog.png["LDAP接続"]
 
 
 
-== LDAP ディレクトリコレクタ設定エラーのトラブルシューティング
+== LDAPディレクトリコレクターの設定エラーのトラブルシューティング
 
-次の表に、コレクタの設定時に発生する可能性のある既知の問題と解決策を示します。
+次の表では、コレクターの構成中に発生する可能性のある既知の問題と解決策について説明します。
 
 [cols="2*"]
 |===
-| 問題 | 解決策： 
+| 問題： | 解決： 
 
 
-| LDAP Directory Connector を追加すると、「 Error 」状態になります。「 Invalid credentials provided for LDAP server 」 (LDAP サーバーの資格情報が無効です ) というエラーが表示されます | 指定したバインド DN またはバインドパスワードまたは検索ベースが正しくありません。を編集し、正しい情報を入力します。 
+| LDAP ディレクトリ コネクタを追加すると、「エラー」状態になります。  「LDAP サーバーに無効な資格情報が提供されました」というエラーが表示されます。 | 指定されたバインド DN またはバインド パスワードまたは検索ベースが正しくありません。正しい情報を編集して提供してください。 
 
 
-| LDAP Directory Connector を追加すると、「 Error 」状態になります。「 DN=DC=HQ,DC=domainname,DC=com に対応するオブジェクトをフォレスト名として提供できませんでした」というエラーが表示されます。 | 入力された検索ベースが正しくありません正しいフォレスト名を編集して入力します。 
+| LDAP ディレクトリ コネクタを追加すると、「エラー」状態になります。エラーには、「フォレスト名として指定された DN=DC=hq、DC=domainname、DC=com に対応するオブジェクトを取得できませんでした。」と表示されます。 | 間違った検索ベースが指定されました。正しいフォレスト名を編集して入力します。 
 
 
-| ドメインユーザーのオプションの属性は、[ワークロードセキュリティユーザープロファイル]ページに表示されません。 | これは、 CloudSecure で追加されたオプション属性の名前と Active Directory の実際の属性名が一致しないことが原因である可能性があります。フィールドでは大文字と小文字が区別されます正しいオプションの属性名を編集して入力します。 
+| ドメイン ユーザーのオプション属性が、Workload Security ユーザー プロファイル ページに表示されません。 | これは、CloudSecure に追加されたオプション属性の名前と Active Directory の実際の属性名が一致していないことが原因であると考えられます。フィールドでは大文字と小文字が区別されます。正しいオプション属性名を編集して指定します。 
 
 
-| データコレクタでエラーが発生し、「 LDAP ユーザを取得できませんでした。失敗の理由：サーバに接続できません。接続が null です " | _Restart_Button をクリックして、コレクタを再起動します。 
+| データ コレクターが「LDAP ユーザーの取得に失敗しました」というエラー状態です。失敗の理由: サーバーに接続できません。接続が null です。 | _Restart_ ボタンをクリックしてコレクターを再起動します。 
 
 
-| LDAP Directory Connector を追加すると、「 Error 」状態になります。 | 必須フィールドに有効な値（ Server 、 forest-name 、 bind-dn 、 bind-Password ）が指定されていることを確認してください。bind-DN 入力が常に uid=ldapuser,cn=Users,cn=account,dc=domain,dc=companyname,dc=com として提供されていることを確認します。 
+| LDAP ディレクトリ コネクタを追加すると、「エラー」状態になります。 | 必須フィールド (サーバー、フォレスト名、バインド DN、バインド パスワード) に有効な値を指定していることを確認してください。バインド DN 入力が常に uid=ldapuser、cn=users、cn=accounts、dc=domain、dc=companyname、dc=com として提供されるようにします。 
 
 
-| LDAP Directory Connector を追加すると、「再試行中」の状態になります。「 Failed to Determine the health of the collector したがって retrying again 」というエラーが表示されます。 | 正しいサーバIPと検索ベースが提供されていることを確認します/// 
+| LDAP ディレクトリ コネクタを追加すると、「再試行」状態になります。  「コレクターの正常性を判断できなかったため、再試行します」というエラーが表示されます | 正しいサーバー IP と検索ベースが提供されていることを確認してください //// 
 
 
-| LDAP ディレクトリの追加中に、「 Failed to Determine the collector within 2 retries 、 try restarting the collector again (Error Code: AGENT008) 」というエラーが表示されます。 | 正しいサーバ IP と検索ベースが提供されていることを確認します 
+| LDAP ディレクトリの追加中に次のエラーが表示されます: 「2 回の再試行でコレクターの正常性を判断できませんでした。コレクターをもう一度再起動してください (エラー コード: AGENT008)」 | 正しいサーバーIPと検索ベースが提供されていることを確認してください 
 
 
-| LDAP Directory Connector を追加すると、「再試行中」の状態になります。「 Unable to define state of the collector 、 reason TCP command [Connect (localhost:35012, None, List() 、 some (,seconds),true)] failed because of java.net.ConnectionException:Connection refused 」というエラーが表示されます。 | AD サーバに対して指定された IP または FQDN が正しくありません。を編集し、正しい IP アドレスまたは FQDN を指定します。//// 
+| LDAP ディレクトリ コネクタを追加すると、「再試行」状態になります。  「コレクターの状態を定義できません。理由: java.net.ConnectionException: 接続が拒否されたため、TCP コマンド [Connect(localhost:35012,None,List(),Some(,seconds),true)] が失敗しました。」というエラーが表示されます。 | AD サーバーに指定された IP または FQDN が正しくありません。正しい IP アドレスまたは FQDN を編集して入力します。  //// 
 
 
-| LDAP Directory Connector を追加すると、「 Error 」状態になります。「 LDAP 接続の確立に失敗しました」というエラーが表示されます。 | LDAP サーバに対して指定された IP または FQDN が正しくありません。を編集し、正しい IP アドレスまたは FQDN を指定します。または、指定されたポートの値が正しくありません。LDAP サーバのデフォルトのポート値または正しいポート番号を使用してみてください。 
+| LDAP ディレクトリ コネクタを追加すると、「エラー」状態になります。  「LDAP 接続を確立できませんでした」というエラーが表示されます。 | LDAP サーバーに指定された IP または FQDN が正しくありません。正しい IP アドレスまたは FQDN を編集して入力します。または、指定されたポートの値が正しくありません。  LDAP サーバーのデフォルトのポート値または正しいポート番号を使用してみてください。 
 
 
-| LDAP Directory Connector を追加すると、「 Error 」状態になります。「設定をロードできませんでした。理由：データソースの設定でエラーが発生しました。具体的な理由： /connector/conf/application.conf ： 70 ： ldap.ldap-port には number ではなく string 型があります。 | 指定したポートの値が正しくありません。AD サーバのデフォルトのポート値または正しいポート番号を使用してみてください。 
+| LDAP ディレクトリ コネクタを追加すると、「エラー」状態になります。 「設定の読み込みに失敗しました」というエラーが表示されます。理由: データ ソース構成にエラーがあります。具体的な理由: /connector/conf/application.conf: 70: ldap.ldap-port のタイプは NUMBER ではなく STRING です | 指定されたポートの値が正しくありません。  AD サーバーのデフォルトのポート値または正しいポート番号を使用してみてください。 
 
 
-| 必須属性から始めて、機能しました。オプションの属性を追加した後、オプションの属性データは AD から取得されません。 | これは、 CloudSecure で追加されたオプションの属性と Active Directory の実際の属性名が一致しないことが原因である可能性があります。正しい必須またはオプションの属性名を編集して入力します。 
+| 必須属性から始めましたが、うまくいきました。オプションのものを追加した後、オプションの属性データが AD から取得されません。 | これは、CloudSecure に追加されたオプションの属性と Active Directory の実際の属性名が一致していないことが原因であると考えられます。正しい必須またはオプションの属性名を編集して指定します。 
 
 
-| コレクタの再起動後、 LDAP 同期はいつ行われますか。 | コレクタが再起動するとすぐに LDAP 同期が実行されます。約 15 分で約 30 万人のユーザデータが取得され、 12 時間ごとに自動的に更新されます。 
+| コレクターを再起動した後、LDAP 同期はいつ行われますか? | コレクターが再起動するとすぐに LDAP 同期が実行されます。約 30 万ユーザーのユーザーデータを取得するには約 15 分かかり、12 時間ごとに自動的に更新されます。 
 
 
-| ユーザデータは LDAP から CloudSecure に同期されます。データを削除するタイミング | 更新がない場合、ユーザデータは 13 カ月間保持されます。テナントが削除されると、データは削除されます。 
+| ユーザーデータは LDAP から CloudSecure に同期されます。データはいつ削除されますか? | 更新がない場合、ユーザーデータは 13 か月間保持されます。テナントが削除されると、データも削除されます。 
 
 
-| LDAP Directory Connector により、「 Error 」状態になります。" コネクタでエラーが発生しました。サービス名： usersLDAP 。失敗の理由： LDAP ユーザを取得できませんでした。失敗の理由： 80090308 ： LdapErr: DSID-0C090453 、 comment: AcceptSecurityContext error 、 data 52e 、 v3839 | 指定したフォレスト名が正しくありません。正しいフォレスト名を指定する方法については、上記を参照してください。 
+| LDAP ディレクトリ コネクタが「エラー」状態になります。 「コネクタはエラー状態です。サービス名: usersLdap。失敗の理由: LDAP ユーザーの取得に失敗しました。失敗の理由: 80090308: LdapErr: DSID-0C090453、コメント: AcceptSecurityContext エラー、データ 52e、v3839" | 指定されたフォレスト名が正しくありません。正しいフォレスト名を指定する方法については上記を参照してください。 
 
 
-| 電話番号がユーザプロファイルページに入力されていません。 | これは、多くの場合、 Active Directory の属性マッピングの問題が原因です。1.Active Directoryからユーザーの情報を取得する特定のActive Directoryコレクタを編集します。2.オプションの属性の下には、Active Directory属性「telephonenumber」にマッピングされたフィールド名「電話番号」があります。4.ここで、前述のようにActive Directoryエクスプローラツールを使用してLDAPディレクトリサーバを参照し、正しい属性名を確認してください。3.LDAPディレクトリに「telephonenumber」という名前の属性があり、実際にはユーザの電話番号が含まれていることを確認します。5.LDAPディレクトリで'phonenumber'に変更されているとします。6.次に、CloudSecure User Directoryコレクタを編集します。オプションの属性セクションで、「 telephonenumber 」を「 phonenumber 」に置き換えます。7.Active Directoryコレクタを保存すると、コレクタが再起動してユーザの電話番号を取得し、ユーザプロファイルページに同じ番号が表示されます。 
+| ユーザー プロフィール ページに電話番号が入力されません。 | これは、Active Directory の属性マッピングの問題が原因であると考えられます。1. Active Directory からユーザーの情報を取得している特定の Active Directory コレクターを編集します。2.オプション属性の下に、Active Directory 属性「telephonenumber」にマップされたフィールド名「電話番号」があることに注意してください。4.ここで、上で説明した Active Directory Explorer ツールを使用して、LDAP ディレクトリ サーバーを参照し、正しい属性名を確認してください。3. LDAP ディレクトリに、実際にユーザーの電話番号を持つ「telephonenumber」という名前の属性があることを確認します。5. LDAP ディレクトリで「phonenumber」に変更されたとします。6.次に、CloudSecure ユーザー ディレクトリ コレクターを編集します。オプション属性セクションで、「telephonenumber」を「phonenumber」に置き換えます。7.  Active Directory コレクターを保存すると、コレクターが再起動し、ユーザーの電話番号を取得して、ユーザー プロファイル ページに表示します。 
 
 
-| Active Directory（AD）サーバで暗号化証明書（SSL）が有効になっている場合、Workload Security User Directory CollectorはADサーバに接続できません。 | ユーザーディレクトリコレクタを設定する前に、 AD サーバーの暗号化を無効にします。ユーザの詳細情報が取得されてから 13 カ月間表示されます。ユーザーの詳細を取得した後に AD サーバーが切断された場合、新しく追加された AD 内のユーザーは取得されません。再度取得するには、ユーザディレクトリコレクタが AD に接続されている必要があります。 
+| Active Directory (AD) サーバーで暗号化証明書 (SSL) が有効になっている場合、Workload Security ユーザー ディレクトリ コレクターは AD サーバーに接続できません。 | ユーザー ディレクトリ コレクターを構成する前に、AD サーバー暗号化を無効にします。ユーザーの詳細が取得されると、その情報は 13 か月間保存されます。ユーザーの詳細を取得した後に AD サーバーが切断された場合、AD に新しく追加されたユーザーは取得されません。再度取得するには、ユーザー ディレクトリ コレクターを AD に接続する必要があります。 
 |===

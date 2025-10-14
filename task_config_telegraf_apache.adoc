@@ -2,72 +2,72 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_apache.html 
 keywords: telegraf, installation, install, apache 
-summary: Apache データコレクタの設定 
+summary: Apacheデータコレクターの設定 
 ---
-= Apache Data Collector
+= Apache データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-このデータコレクタを使用すると、テナント上のApacheサーバからデータを収集できます。
+このデータ コレクターを使用すると、テナント上の Apache サーバーからデータを収集できます。
 
 .前提条件
-* Apache HTTP Server がセットアップされ、適切に実行されている必要があります
-* エージェントのホスト / VM に対する sudo 権限または管理者権限が必要です
-* 通常、 apache_mod_status_module は、 Apache サーバの「 /server-status?auto 」場所にページを公開するように設定されています。使用可能なすべてのフィールドを収集するには、 _ExtendedStatus_ オプションを有効にする必要があります。サーバの設定方法については、Apacheモジュールのドキュメントを参照してください。 https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable[]
+* Apache HTTP Serverがセットアップされ、適切に実行されている必要があります。
+* エージェントホスト/VMに対するsudoまたは管理者権限が必要です
+* 通常、Apache _mod_status_ モジュールは、Apache サーバーの '/server-status?auto' の場所にページを公開するように構成されます。利用可能なすべてのフィールドを収集するには、_ExtendedStatus_ オプションを有効にする必要があります。サーバーの設定方法については、Apache モジュールのドキュメントを参照してください。 https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable[]
 
 
 
 
 == インストール
 
-. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。Apacheを選択します。
+. *Observability > Collectors* から、*+ Data Collector* をクリックします。  Apacheを選択します。
 +
-Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+Telegraf エージェントがインストールされているオペレーティング システムまたはプラットフォームを選択します。
 
-. コレクション用エージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[_Show Instructions_]をクリックして手順を展開しlink:task_config_telegraf_agent.html["エージェントのインストール"]ます。
-. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
-. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+. 収集用のエージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[手順を表示] をクリックして展開します。link:task_config_telegraf_agent.html["エージェントのインストール"]説明書。
+. このデータ コレクターで使用するエージェント アクセス キーを選択します。 *+ エージェント アクセス キー* ボタンをクリックすると、新しいエージェント アクセス キーを追加できます。ベスト プラクティス: データ コレクターを OS/プラットフォーム別などにグループ化する場合にのみ、異なるエージェント アクセス キーを使用します。
+. 構成手順に従ってデータ コレクターを構成します。手順は、データ収集に使用しているオペレーティング システムまたはプラットフォームの種類によって異なります。
 
 
-image:ApacheDCConfigLinux.png["Apache の設定"]
+image:ApacheDCConfigLinux.png["Apacheの設定"]
 
 
 
 == セットアップ
 
-Telegraf の Apache の HTTP Server 用プラグインは 'OD _status' モジュールを有効にする必要があります。これを有効にすると、 Apache の HTTP サーバは、ブラウザで表示したり、 Apache の HTTP サーバ設定の状態を抽出するためにスクレイピングされた HTML エンドポイントを公開します。
+Apache の HTTP サーバー用の Telegraf プラグインは、'mod_status' モジュールが有効になっていることを前提としています。これを有効にすると、Apache の HTTP サーバーは、ブラウザーで表示したり、Apache の HTTP サーバーのすべての構成のステータスを抽出するためにスクレイピングしたりできる HTML エンドポイントを公開します。
 
 
 
-=== 互換性：
+=== 互換性:
 
-構成は Apache の HTTP Server バージョン 2.4.38 に対して開発されました。
-
-
-
-=== mod_status を有効にします。
-
-'OD_status' モジュールを有効にして公開するには、次の 2 つの手順を実行します。
-
-* イネーブルモジュール
-* モジュールから統計情報を公開しています
+構成は、Apache の HTTP サーバー バージョン 2.4.38 に対して開発されました。
 
 
 
+=== mod_status を有効にする:
 
-=== イネーブルモジュール：
+「mod_status」モジュールを有効にして公開するには、次の 2 つの手順が必要です。
 
-モジュールのロードは '/usr/local/apache/conf/httpd.conf ' の下の config ファイルによって制御されます。構成ファイルを編集し、次の行のコメントを解除します。
+* 有効化モジュール
+* モジュールから統計を公開する
+
+
+
+
+=== 有効化モジュール:
+
+モジュールの読み込みは、「/usr/local/apache/conf/httpd.conf」の下の設定ファイルによって制御されます。設定ファイルを編集し、次の行のコメントを解除します。
 
  LoadModule status_module modules/mod_status.so
  Include conf/extra/httpd-info.conf
 
 
-=== モジュールからの統計情報の公開：
+=== モジュールから統計を公開する:
 
-'OD_status' の公開は '/usr/local/apache2/conf/extra /httpd-info.conf' の下の config ファイルによって制御されます。設定ファイルに次のものがあることを確認してください ( 少なくとも、他のディレクティブが存在することを確認してください ) 。
+'mod_status' の公開は、'/usr/local/apache2/conf/extra/httpd-info.conf' の下の設定ファイルによって制御されます。構成ファイルに次の内容が含まれていることを確認してください (少なくとも、他のディレクティブは含まれている必要があります)。
 
 [listing]
 ----
@@ -84,23 +84,23 @@ Telegraf の Apache の HTTP Server 用プラグインは 'OD _status' モジュ
 #
 ExtendedStatus On
 ----
-「MOD_STATUS」モジュールの詳細な手順については、link:https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable["Apache のドキュメント"]
+「mod_status」モジュールの詳細な手順については、link:https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable["Apacheドキュメント"]
 
 
 
-== オブジェクトとカウンタ
+== オブジェクトとカウンター
 
-次のオブジェクトとそのカウンタが収集されます。
+次のオブジェクトとそのカウンターが収集されます。
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+| オブジェクト | 識別子: | 属性: | データポイント: 
 
 
-| Apache | ネームスペースサーバ | ノード IP ノード名 Port Parent Server Config Generation Parent Server MPM Generation Server Uptime が停止しています | ビジーワーカーバイト / 要求バイト / 秒 CPU 子システム CPU 子ユーザ CPU 負荷 CPU システム CPU ユーザ非同期接続クローズ非同期接続キープアライブ非同期接続書き込み接続維持アイドル接続書き込み接続書き込み接続要求ごとの合計時間アイドルワーカー負荷平均（過去 1 分）負荷平均（過去 15 分） プロセスリクエスト数 / 秒合計アクセス時間合計合計 KBytes スコアボードクロージングスコアボード DNS ルックアップスコアボード仕上げスコアボードアイドルクリーンアップスコアボードキープアライブスコアボードログスコアボードオープンスコアボードスコアボード閲覧スコアボードスコアボード送信スコアボード開始スコアボード待機中 
+| アパッチ | 名前空間サーバー | ノードIP ノード名 ポート 親サーバー構成生成 親サーバーMPM生成 サーバー稼働停止中 | ビジーワーカー リクエストあたりのバイト数 1秒あたりのバイト数 CPU 子プロセス システム CPU 子プロセス ユーザープロセス CPU 負荷 システム CPU ユーザー 非同期接続 非同期接続のクローズ 維持 非同期接続 書き込み接続 リクエストあたりの合計継続時間 アイドルワーカー 平均負荷 (過去 1 分) 平均負荷 (過去 15 分) 平均負荷 (過去 5 分) プロセス 1 秒あたりのリクエスト数 合計アクセス数 合計継続時間 合計キロバイト数 スコアボード クローズ中 スコアボード DNS ルックアップ スコアボード 終了中 スコアボード アイドル クリーンアップ スコアボード 維持 スコアボード ログ記録中 スコアボード オープン中 スコアボード 読み取り中 スコアボード 送信中 スコアボード 開始中 スコアボード 待機中 
 |===
 
 
 == トラブルシューティング
 
-詳細については、ページを参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページ。

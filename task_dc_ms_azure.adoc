@@ -2,31 +2,31 @@
 sidebar: sidebar 
 permalink: task_dc_ms_azure.html 
 keywords: data collector, azure, 
-summary: Azure コンピューティングデータコレクタの設定 
+summary: Azure コンピューティング データ コレクターを構成します。 
 ---
-= Azure コンピューティングデータコレクタの設定
+= Azure コンピューティング データ コレクターの構成
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、Azureコンピューティングデータコレクタを使用して、Azureコンピューティングインスタンスからインベントリとパフォーマンスのデータを取得します。
+Data Infrastructure Insights は、 Azure コンピューティング データ コレクターを使用して、Azure コンピューティング インスタンスからインベントリとパフォーマンス データを取得します。
 
 
 
 == 要件
 
-このデータコレクタを設定するには、次の情報が必要です。
+このデータ コレクターを構成するには、次の情報が必要です。
 
-* ポート要件： 443 HTTPS
-* Azure OAuth 2.0 リダイレクト URI （ login.microsoftonline.com ）
-* Azure Management Rest IP （ management.azure.com ）
-* Azure Resource Manager IP （ management.core.windows.net ）
-* Azure サービスプリンシパルアプリケーション（クライアント） ID （リーダーのロールが必要）
-* Azure サービスプリンシパルの認証キー（ユーザパスワード）
-* Data Infrastructure Insightsの検出用にAzureアカウントを設定する必要があります。
+* ポート要件: 443 HTTPS
+* Azure OAuth 2.0 リダイレクト URI (login.microsoftonline.com)
+* Azure 管理 REST IP (management.azure.com)
+* Azure リソース マネージャー IP (management.core.windows.net)
+* Azure サービス プリンシパル アプリケーション (クライアント) ID (リーダー ロールが必要)
+* Azure サービス プリンシパル認証キー (ユーザー パスワード)
+* Data Infrastructure Insights の検出用に Azure アカウントを設定する必要があります。
 +
-アカウントを適切に設定してAzureにアプリケーションを登録すると、Data Infrastructure InsightsでAzureインスタンスを検出するために必要なクレデンシャルが取得されます。次のリンクでは、検出用のアカウントを設定する方法について説明します。https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[]
+アカウントが適切に構成され、アプリケーションを Azure に登録すると、 Data Infrastructure Insightsを使用して Azure インスタンスを検出するために必要な資格情報が得られます。次のリンクでは、検出用のアカウントを設定する方法について説明します。https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[]
 
 
 
@@ -34,23 +34,23 @@ Data Infrastructure Insightsは、Azureコンピューティングデータコ�
 
 == 構成
 
-次の表に従って、データコレクタフィールドにデータを入力します。
+以下の表に従って、データ コレクター フィールドにデータを入力します。
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| Azure サービスプリンシパルアプリケーション（クライアント） ID （リーダーのロールが必要） | Azure へのサインイン IDリーダーの役割アクセスが必要です。 
+| Azure サービス プリンシパル アプリケーション (クライアント) ID (リーダー ロールが必要) | Azure へのサインイン ID。リーダー ロールのアクセスが必要です。 
 
 
 | Azure テナント ID | Microsoft テナント ID 
 
 
-| Azure サービスプリンシパルの認証キー | ログイン認証キー 
+| Azure サービス プリンシパル認証キー | ログイン認証キー 
 
 
-| Microsoft が API リクエストを請求することを理解しています | これをチェックして、 Insight のポーリングで作成された API 要求を Microsoft から課金することを理解していることを確認します。 
+| 私は、MicrosoftがAPIリクエストに対して料金を請求することを理解しています | Insight ポーリングによって行われた API リクエストに対して Microsoft が課金することを理解していることを確認するには、これにチェックを入れます。 
 |===
 
 
@@ -58,16 +58,16 @@ Data Infrastructure Insightsは、Azureコンピューティングデータコ�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
 | インベントリポーリング間隔（分） | デフォルトは60です 
 
 
-| 「除外」または「含める」を選択して、タグによる VM のフィルタリングに適用します | データの収集時にタグを使用して VM を含めるか除外するかを指定します。「含める」が選択されている場合、タグキーフィールドを空にすることはできません。 
+| タグによる VM のフィルタリングを適用するには、「除外」または「含める」を選択します | データを収集するときに、タグによって VM を含めるか除外するかを指定します。  「含める」を選択した場合、タグ キー フィールドを空にすることはできません。 
 
 
-| VM をフィルタするタグキーと値 | + タグのフィルタ * をクリックして、 VM のキーとタグの値に一致するキーと値をフィルタリングして、対象に含める / 除外する VM （および関連ディスク）を選択します。タグキーは必須です。タグ値はオプションです。タグ値が空の場合、タグキーと一致する限り、 VM はフィルタリングされます。 
+| VM をフィルタリングするためのタグキーと値 | *+ フィルター タグ* をクリックし、VM 上のタグのキーと値に一致するキーと値をフィルターして、含める/除外する VM (および関連ディスク) を選択します。タグキーは必須ですが、タグ値はオプションです。タグ値が空の場合、タグ キーと一致する限り VM はフィルタリングされます。 
 
 
 | パフォーマンスポーリング間隔（秒） | デフォルトは300です 
@@ -76,4 +76,4 @@ Data Infrastructure Insightsは、Azureコンピューティングデータコ�
 
 == トラブルシューティング
 
-このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

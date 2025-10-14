@@ -2,52 +2,52 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_zookeeper.html 
 keywords: telegraf, installation, install, apache, zookeeper 
-summary: Apache Zookeeper データコレクタの設定 
+summary: Apache Zookeeper データコレクターの構成 
 ---
-= Zookeeper データコレクタ
+= 動物園飼育員データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、このデータコレクタを使用してApache Zookeeperから指標を収集します。
+Data Infrastructure Insights は、このデータ コレクターを使用して Apache Zookeeper からメトリックを収集します。
 
 
 
 == インストール
 
-. [*Admin] > [Data Collectors] で、 [*+[Data Collectors] をクリックします。[Apache Zookeeper]を選択します。
+. *管理者 > データ コレクター* から、*+ データ コレクター* をクリックします。  Apache Zookeeper を選択します。
 +
-Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+Telegraf エージェントがインストールされているオペレーティング システムまたはプラットフォームを選択します。
 
-. コレクション用エージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[_Show Instructions_]をクリックして手順を展開しlink:task_config_telegraf_agent.html["エージェントのインストール"]ます。
-. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
-. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+. 収集用のエージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[手順を表示] をクリックして展開します。link:task_config_telegraf_agent.html["エージェントのインストール"]説明書。
+. このデータ コレクターで使用するエージェント アクセス キーを選択します。 *+ エージェント アクセス キー* ボタンをクリックすると、新しいエージェント アクセス キーを追加できます。ベスト プラクティス: データ コレクターを OS/プラットフォーム別などにグループ化する場合にのみ、異なるエージェント アクセス キーを使用します。
+. 構成手順に従ってデータ コレクターを構成します。手順は、データ収集に使用しているオペレーティング システムまたはプラットフォームの種類によって異なります。
 
 
-image:ZookeeperDCConfigLinux.png["Zookeeper 構成"]
+image:ZookeeperDCConfigLinux.png["Zookeeperの設定"]
 
 
 
 == セットアップ
 
-少なくとも、 Zookeeper に 4 文字のサーバコマンド _Mntr_,_srvr_,_stat_ を許可する必要があります。これらのコマンドは、 _4lw.commands.whitelist=mntr 、 srvr 、 stat_in the _zoo .cfg file の形式で有効にできます。他にも、 4 文字のコマンドが必要になる場合があります。詳細については、のドキュメントを参照してくださいlink:https://zookeeper.apache.org/["Zookeeper の追加"]。
+少なくとも、Zookeeper の 4 文字のサーバー コマンド _mntr_、_srvr_、および _stat_ を許可する必要があります。これらのコマンドは、_zoo.cfg_ ファイルで _4lw.commands.whitelist=mntr, srvr, stat_ という形式を使用して有効にできます。構成には他の 4 文字のコマンドも必要になる場合があります。参照link:https://zookeeper.apache.org/["動物園の飼育員"]詳細についてはドキュメントをご覧ください。
 
 
 
-== オブジェクトとカウンタ
+== オブジェクトとカウンター
 
-次のオブジェクトとそのカウンタが収集されます。
+次のオブジェクトとそのカウンターが収集されます。
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+| オブジェクト | 識別子: | 属性: | データポイント: 
 
 
-| Zookeeper の追加 | ネームスペースサーバ | State Node IP Node Name Port の略 | 概算データサイズ平均遅延平均遅延エ phemassals 数最大ファイル記述子数最大遅延アライブ接続オープンファイル記述子数未処理要求数ウォッチカウント Znode カウント 
+| 動物園飼育員 | 名前空間サーバー | 状態 ノード IP ノード名 ポート | おおよそのデータサイズ、平均レイテンシ、エフェメラル数、最大ファイル記述子数、最大レイテンシ、最小レイテンシ、アクティブな接続数、開いているファイル記述子数、未処理のリクエスト数、ウォッチ数、Znode数 
 |===
 
 
 == トラブルシューティング
 
-詳細については、ページを参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページ。

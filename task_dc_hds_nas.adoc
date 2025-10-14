@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: task_dc_hds_nas.html 
 keywords: data collector, HDS HNAS, HDS NAS 
-summary: HDS NAS （ HNAS ）データコレクタの設定。 
+summary: 'HDS NAS (HNAS) データ コレクターを構成します。' 
 ---
-= Hitachi Vantara NAS データコレクタの設定
+= Hitachi Vantara NASデータコレクターの構成
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Hitachi Vantara NAS データコレクタは、 HDS NAS クラスタの検出をサポートするインベントリおよび設定データコレクタです。Data Infrastructure Insightsは、NFS共有とCIFS共有、ファイルシステム（内部ボリューム）、スパン（ストレージプール）の検出をサポートします。
+Hitachi Vantara NAS データ コレクターは、HDS NAS クラスターの検出をサポートするインベントリおよび構成データ コレクターです。  Data Infrastructure Insights は、 NFS および CIFS 共有、ファイル システム (内部ボリューム)、およびスパン (ストレージ プール) の検出をサポートします。
 
 
 
 == 用語
 
-Data Infrastructure Insightsは、HNASデータコレクタから次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+Data Infrastructure Insights は、 HNAS データ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
 [cols="2*"]
 |===
-| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
 
 | 階層 | ディスクグループ 
@@ -29,27 +29,27 @@ Data Infrastructure Insightsは、HNASデータコレクタから次のインベ
 | クラスタ | ストレージ 
 
 
-| ノード | ストレージノード 
+| ノード | ストレージ ノード 
 
 
-| スパン（ Span ） | ストレージプール 
+| スパン | ストレージ プール 
 
 
-| システムドライブ | バックエンド LUN 
+| システムドライブ | バックエンドLun 
 
 
-| ファイルシステム | 内部ボリューム 
+| ファイルシステム | 内部容積 
 |===
-注：これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているわけではありません。
+注: これらは一般的な用語のマッピングのみであり、このデータ コレクターのすべてのケースを反映しているわけではありません。
 
 
 
 == 要件
 
-* デバイスの IP アドレス
-* ポート 22 、 SSH プロトコル
-* ユーザ名とパスワードの権限レベル： Supervisor
-* 注：このデータコレクタは SSH ベースであるため、ホストが HNAS 自体またはクラスタの接続先のシステム管理ユニット（ SMU ）の TCP 22 への SSH セッションを開始できるようにする必要があります。
+* デバイスのIPアドレス
+* ポート22、SSHプロトコル
+* ユーザー名とパスワード - 権限レベル: スーパーバイザー
+* 注: このデータ コレクターは SSH ベースであるため、これをホストする AU は、HNAS 自体の TCP 22 またはクラスターが接続されているシステム管理ユニット (SMU) への SSH セッションを開始できる必要があります。
 
 
 
@@ -58,16 +58,16 @@ Data Infrastructure Insightsは、HNASデータコレクタから次のインベ
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| HNASホスト | HNAS 管理ホストの IP アドレスまたは完全修飾ドメイン名 
+| HNASホスト | HNAS管理ホストのIPアドレスまたは完全修飾ドメイン名 
 
 
-| ユーザー名 | HNAS CLIのユーザ名 
+| ユーザー名 | HNAS CLIのユーザー名 
 
 
-| パスワード | HNAS CLIに使用するパスワード 
+| パスワード | HNAS CLI で使用するパスワード 
 |===
 
 
@@ -75,16 +75,16 @@ Data Infrastructure Insightsは、HNASデータコレクタから次のインベ
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| インベントリポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは30分です。 
+| インベントリポーリング間隔（分） | インベントリ ポーリングの間隔。デフォルトは30分です。 
 |===
 
 
 == トラブルシューティング
 
-このデータコレクタで問題が発生した場合の対処方法を次に示します。
+このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
@@ -92,15 +92,15 @@ Data Infrastructure Insightsは、HNASデータコレクタから次のインベ
 
 [cols="2*"]
 |===
-| 問題 | 次の操作を実行します 
+| 問題： | これを試してください: 
 
 
-| 「 Error connecting 」 with error messages 「 Error setting up shell channel ：」または「 Error opening shell channel 」というエラーメッセージが表示されます。 | ネットワーク接続に問題があるか、 SSH の設定ミスが原因である可能性があります。代替 SSH クライアントとの接続を確認します 
+| 「接続エラー」と「シェル チャネルの設定エラー:」または「シェル チャネルを開くエラー」というエラー メッセージが表示される | ネットワーク接続の問題または SSH の設定ミスが原因である可能性があります。代替SSHクライアントで接続を確認する 
 
 
-| 「 Command ： XXX has timed out 」というエラーメッセージが表示され、「 Timeout 」または「 Error Retrieving data 」というエラーが表示されます。 | * 代替 SSH クライアントでコマンドを実行してください * タイムアウトが増加します 
+| 「タイムアウト」または「データの取得エラー」、および「コマンド: XXX がタイムアウトしました。」というエラー メッセージが表示される。 | * 別のSSHクライアントでコマンドを試す * タイムアウトを増やす 
 
 
-| " 接続エラー " または " 無効なログイン認証情報 " のエラーメッセージ " デバイスと通信できませんでした： " | * IP アドレスの確認 * ユーザ名とパスワードの確認 * 代替 SSH クライアントとの接続を確認してください 
+| 「接続エラー」または「ログイン資格情報が無効です」というエラー メッセージが表示され、「デバイスと通信できませんでした:」 | * IPアドレスを確認する * ユーザー名とパスワードを確認する * 代替SSHクライアントで接続を確認する 
 |===
-詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

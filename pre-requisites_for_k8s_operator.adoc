@@ -2,83 +2,83 @@
 sidebar: sidebar 
 permalink: pre-requisites_for_k8s_operator.html 
 keywords: telegraf, installation, install, agent, telegraf agent, kubernetes, eks, operator, k8s 
-summary: Data Infrastructure Insightsは、Kubernetes上で統合データを収集するエージェントとしてTelegrafをサポートしています。 
+summary: Data Infrastructure Insights は、 Kubernetes 上の統合データの収集エージェントとして Telegraf をサポートします。 
 ---
-= NetApp Kubernetes監視オペレータをインストールまたはアップグレードする前に
+= NetApp Kubernetes Monitoring Operator をインストールまたはアップグレードする前に
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
 
 
 [role="lead"]
-をインストールまたはアップグレードする前に、この情報をお読みくださいlink:task_config_telegraf_agent_k8s.html["Kubernetes監視オペレータ"]。
+インストールまたはアップグレードする前にこの情報をお読みくださいlink:task_config_telegraf_agent_k8s.html["Kubernetes モニタリング オペレーター"]。
 
 |===
 | コンポーネント | 要件 
 
 
-| Kubernetes のバージョン | Kubernetes v1.20以上： 
+| Kubernetesバージョン | Kubernetes v1.20 以上。 
 
 
-| Kubernetesディストリビューション | AWS Elastic Kubernetes Service（EKS）Azure Kubernetes Service（AKS）Google Kubernetes Engine（GKE）Red Hat OpenShift Rancher Kubernetes Engine（RKE）VMware Tanzu 
+| Kubernetesディストリビューション | AWS Elastic Kubernetes Service (EKS) Azure Kubernetes Service (AKS) Google Kubernetes Engine (GKE) Red Hat OpenShift Rancher Kubernetes Engine (RKE) VMware Tanzu 
 
 
-| Linux OS | Data Infrastructure Insightsでは、Arm64アーキテクチャで実行されているノードはサポートされません。ネットワーク監視：Linuxカーネルバージョン4.18.0以上を実行している必要があります。Photon OSはサポートされていません。 
+| Linux OS | Data Infrastructure Insights は、 Arm64 アーキテクチャで実行されているノードをサポートしていません。ネットワーク監視: Linux カーネル バージョン 4.18.0 以上を実行している必要があります。  Photon OS はサポートされていません。 
 
 
-| ラベル | Data Infrastructure Insightsは、Kubernetesノードセレクタを指定して、これらのプラットフォームで次のKubernetesラベルを検索することで、Linuxを実行しているKubernetesノードの監視をサポートします。Kubernetes v1.20以降：Kubernetes .io/os=linux Rancher + cattle.ioをオーケストレーション/ Kubernetesプラットフォーム：cattle.io/os=linux 
+| ラベル | Data Infrastructure Insights は、これらのプラットフォームで次の Kubernetes ラベルを検索する Kubernetes ノード セレクターを指定することにより、Linux を実行している Kubernetes ノードの監視をサポートします: Kubernetes v1.20 以上: Kubernetes.io/os = linux Rancher + cattle.io (オーケストレーション/Kubernetes プラットフォームとして): cattle.io/os = linux 
 
 
-| コマンド | curlコマンドとkubectlコマンドが使用可能である必要があります。;最良の結果を得るには、これらのコマンドをパスに追加してください。 
+| コマンド | curl コマンドと kubectl コマンドが使用可能である必要があります。最良の結果を得るには、これらのコマンドを PATH に追加します。 
 
 
-| 接続性 | kubectl CLIはターゲットのKubernetesクラスタと通信するように設定されており、Data Infrastructure Insights環境にインターネット接続されています。インストール中にプロキシの背後にいる場合は、「オペレータのインストール」のセクションに記載されている手順に従ってくださいlink:task_config_telegraf_agent_k8s.html#configuring-proxy-support["プロキシサポートを設定しています"]。監査およびデータレポートを正確に作成するには、Network Time Protocol（NTP；ネットワークタイムプロトコル）またはSimple Network Time Protocol（SNTP；簡易ネットワークタイムプロトコル）を使用してAgentマシンの時刻を同期します。 
+| 接続 | kubectl cli は、ターゲットの K8s クラスターと通信するように構成されており、 Data Infrastructure Insights環境にインターネット接続できます。インストール中にプロキシを使用している場合は、link:task_config_telegraf_agent_k8s.html#configuring-proxy-support["プロキシサポートの設定"]オペレータインストールのセクション。正確な監査とデータ レポートを行うには、ネットワーク タイム プロトコル (NTP) または簡易ネットワーク タイム プロトコル (SNTP) を使用してエージェント マシンの時刻を同期します。 
 
 
-| その他 | OpenShift 4.6以降を実行している場合は、上記の前提条件を満たしていることを確認するだけでなく、も実行する必要がありますlink:task_config_telegraf_agent_k8s.html#openshift-instructions["OpenShift の手順"]。 
+| その他 | OpenShift 4.6以降を実行している場合は、link:task_config_telegraf_agent_k8s.html#openshift-instructions["OpenShift の手順"]これらの前提条件が満たされていることを確認することに加えて。 
 
 
-| APIトークン | Operatorを再デプロイする場合(つまり、Operatorを更新または置換する場合)は、新しいAPIトークンを作成する必要はありません。前のトークンを再利用できます。 
+| APIトークン | Operator を再デプロイする場合 (つまり、更新または置換する場合)、新しい API トークンを作成する必要はなく、以前のトークンを再利用できます。 
 |===
 
 
-== 始める前に注意すべき重要事項
+== 始める前に注意すべき重要な事項
 
-を使用してを実行している場合<<configuring-proxy-support,プロキシ>>、<<using-a-custom-or-private-docker-repository,カスタムリポジトリ>>を使用している場合は<<openshift-instructions,OpenShift>>、次の項をよくお読みください。
+もしあなたが<<configuring-proxy-support,プロキシ>>、持っている<<using-a-custom-or-private-docker-repository,カスタムリポジトリ>>、または使用中<<openshift-instructions,オープンシフト>>、以下のセクションを注意深くお読みください。
 
-についても読んでください<<権限,権限>>。
-
-
-
-=== プロキシサポートを設定しています
-
-NetApp Kubernetes Monitoring Operatorをインストールするために、テナントでプロキシを使用できる場所は2つあります。同じプロキシシステムでも、別のプロキシシステムでもかまいません。
-
-* インストールコードスニペット（「curl」を使用）の実行中に、スニペットが実行されるシステムをData Infrastructure Insights環境に接続するために必要なプロキシ
-* ターゲットのKubernetesクラスタがData Infrastructure Insights環境と通信するために必要なプロキシ
+こちらもご覧ください<<権限,権限>>。
 
 
-これらのいずれかまたは両方にプロキシを使用する場合、NetApp Kubernetesオペレーティングモニタをインストールするには、まずプロキシがデータインフラストラクチャインサイト環境との良好な通信を許可するように設定されていることを確認する必要があります。たとえば、Operatorをインストールするサーバ/ VMからData Infrastructure Insightsにアクセスし、Data Infrastructure Insightsからバイナリをダウンロードできるようにする必要があります。
 
-NetApp Kubernetes Operating Monitorのインストールに使用するプロキシとして、オペレータをインストールする前に、_http_proxy/https_proxy_environment変数を設定します。一部のプロキシ環境では'_no_proxy環境変数も設定する必要があります
+=== プロキシサポートの設定
 
-変数を設定するには、NetApp Kubernetes Monitoring Operatorをインストールする前に、システムで次の手順を実行します。
+NetApp Kubernetes Monitoring Operator をインストールするために、テナント上でプロキシを使用できる場所は 2 つあります。これらは同じプロキシ システムである場合もあれば、別のプロキシ システムである場合もあります。
 
-. 現在のユーザの _https_proxy_ 変数と _http_proxy_environment 変数を設定します。
+* インストール コード スニペットの実行中（「curl」を使用）に、スニペットが実行されるシステムをData Infrastructure Insights環境に接続するために必要なプロキシ
+* ターゲット Kubernetes クラスターがData Infrastructure Insights環境と通信するために必要なプロキシ
+
+
+これらのいずれかまたは両方にプロキシを使用する場合、 NetApp Kubernetes Operating Monitor をインストールするには、まずプロキシがData Infrastructure Insights環境との良好な通信を許可するように構成されていることを確認する必要があります。たとえば、Operator をインストールするサーバー/VM から、 Data Infrastructure Insightsにアクセスし、 Data Infrastructure Insightsからバイナリをダウンロードできる必要があります。
+
+NetApp Kubernetes Operating Monitor のインストールに使用するプロキシについては、Operator をインストールする前に、_http_proxy/https_proxy_ 環境変数を設定します。一部のプロキシ環境では、_no_proxy environment_ 変数も設定する必要がある場合があります。
+
+変数を設定するには、 NetApp Kubernetes Monitoring Operator をインストールする前に、システムで次の手順を実行します。
+
+. 現在のユーザーの _https_proxy_ および/または _http_proxy_ 環境変数を設定します。
 +
-.. セットアップするプロキシに認証（ユーザ名/パスワード）がない場合は、次のコマンドを実行します。
+.. セットアップするプロキシに認証 (ユーザー名/パスワード) がない場合は、次のコマンドを実行します。
 +
  export https_proxy=<proxy_server>:<proxy_port>
-.. セットアップするプロキシに認証（ユーザ名/パスワード）が設定されている場合は、次のコマンドを実行します。
+.. セットアップするプロキシに認証 (ユーザー名/パスワード) がある場合は、次のコマンドを実行します。
 +
  export http_proxy=<proxy_username>:<proxy_password>@<proxy_server>:<proxy_port>
 
 
 
 
-KubernetesクラスタがData Infrastructure Insights環境と通信するために使用するプロキシの場合は、これらの手順をすべて読んでからNetApp Kubernetes監視オペレータをインストールします。
+Kubernetes クラスターがData Infrastructure Insights環境と通信するために使用するプロキシについては、これらの手順をすべて読んだ後、 NetApp Kubernetes Monitoring Operator をインストールしてください。
 
-NetApp Kubernetes Monitoring Operatorを導入する前に、operator-config.yamlでAgentConfigurationのプロキシセクションを設定します。
+NetApp Kubernetes Monitoring Operator をデプロイする前に、operator-config.yaml の AgentConfiguration の proxy セクションを構成します。
 
 [listing]
 ----
@@ -104,41 +104,41 @@ agent:
 ----
 
 
-=== カスタムまたはプライベートのDockerリポジトリを使用する
+=== カスタムまたはプライベートDockerリポジトリの使用
 
-デフォルトでは、NetApp Kubernetes監視オペレータは、データインフラのインサイトリポジトリからコンテナイメージを取得します。監視のターゲットとして使用されているKubernetesクラスタがあり、カスタムまたはプライベートのDockerリポジトリまたはコンテナレジストリからのみコンテナイメージを取得するようにそのクラスタが設定されている場合は、NetApp Kubernetes Monitoring Operatorで必要なコンテナへのアクセスを設定する必要があります。
+デフォルトでは、 NetApp Kubernetes Monitoring Operator は、 Data Infrastructure Insightsリポジトリからコンテナ イメージをプルします。監視のターゲットとして Kubernetes クラスタが使用されており、そのクラスタがカスタムまたはプライベート Docker リポジトリまたはコンテナ レジストリからのみコンテナ イメージをプルするように構成されている場合は、 NetApp Kubernetes Monitoring Operator に必要なコンテナへのアクセスを構成する必要があります。
 
-NetApp Monitoring Operatorのインストールタイルから[Image Pull Snippet]を実行します。このコマンドを実行すると、Data Infrastructure Insightsリポジトリにログインし、オペレータが必要とするすべてのイメージを取得して、Data Infrastructure Insightsリポジトリからログアウトします。プロンプトが表示されたら、指定したリポジトリの一時パスワードを入力します。このコマンドは、オプション機能を含む、オペレータが使用するすべてのイメージをダウンロードします。これらの画像がどの機能に使用されるかについては、以下を参照してください。
+NetApp Monitoring Operator インストール タイルから「イメージ プル スニペット」を実行します。このコマンドは、 Data Infrastructure Insightsリポジトリにログインし、オペレーターのすべてのイメージ依存関係をプルし、 Data Infrastructure Insightsリポジトリからログアウトします。プロンプトが表示されたら、提供されたリポジトリの一時パスワードを入力します。このコマンドは、オプション機能を含む、オペレータが使用するすべてのイメージをダウンロードします。これらの画像がどの機能に使用されているかについては、以下を参照してください。
 
-Core Operator Functionality and Kubernetes Monitoringの略
+コアオペレーター機能とKubernetesモニタリング
 
-* ネットアップによる監視
-* kube-rbac-proxyの略
-* kube-state-metricsの略
+* netapp 監視
+* kube-rbac-プロキシ
+* kube-state-metrics
 * テレグラフ
-* distroless-root-user
+* ディストロレスルートユーザー
 
 
 イベントログ
 
-* Fluent-bit
-* kubernetes-event-exporterの略
+* 流暢なビット
+* kubernetes イベント エクスポーター
 
 
-ネットワークのパフォーマンスとマップ
+ネットワークパフォーマンスとマップ
 
-* ci-net-observerの略
+* ci-net-オブザーバー
 
 
-社内のポリシーに従って、オペレータ用の Docker イメージをプライベート / ローカル / エンタープライズ Docker リポジトリにプッシュします。リポジトリ内のこれらのイメージへのイメージタグとディレクトリパスが、Data Infrastructure Insightsリポジトリ内のイメージタグとディレクトリパスと一致していることを確認します。
+企業ポリシーに従って、オペレーターの Docker イメージをプライベート/ローカル/エンタープライズ Docker リポジトリにプッシュします。リポジトリ内のこれらのイメージへのイメージ タグとディレクトリ パスが、 Data Infrastructure Insightsリポジトリのものと一致していることを確認します。
 
-operator-deployment.yamlでmonitoring-operatorデプロイメントを編集し、プライベートDockerリポジトリを使用するようにすべてのイメージ参照を変更します。
+operator-deployment.yaml の monitoring-operator デプロイメントを編集し、すべてのイメージ参照を変更してプライベート Docker リポジトリを使用します。
 
 ....
 image: <docker repo of the enterprise/corp docker repo>/kube-rbac-proxy:<kube-rbac-proxy version>
 image: <docker repo of the enterprise/corp docker repo>/netapp-monitoring:<version>
 ....
-operator-config.yamlのAgentConfigurationを編集して、新しいDockerリポジトリの場所を反映します。プライベートリポジトリ用に新しいimagePullSecretを作成します。詳細については、_ https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/_を参照してください
+新しい docker リポジトリの場所を反映するように、operator-config.yaml の AgentConfiguration を編集します。プライベート リポジトリ用に新しい imagePullSecret を作成します。詳細については、_https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/_ を参照してください。
 
 [listing]
 ----
@@ -154,21 +154,21 @@ agent:
 
 === OpenShift の手順
 
-OpenShift 4.6以降で実行している場合は、_runPrivileged_settingを有効にするには、_operator-config.yaml_でAgentConfigurationを編集する必要があります。
+OpenShift 4.6 以降で実行している場合は、_operator-config.yaml_ の AgentConfiguration を編集して、_runPrivileged_ 設定を有効にする必要があります。
 
 ....
 # Set runPrivileged to true SELinux is enabled on your kubernetes nodes
 runPrivileged: true
 ....
-OpenShiftは、一部のKubernetesコンポーネントへのアクセスをブロックする可能性のある追加のセキュリティレベルを実装する場合があります。
+Openshift は、一部の Kubernetes コンポーネントへのアクセスをブロックする可能性のある追加のセキュリティ レベルを実装する場合があります。
 
 
 
 === 権限
 
-監視しているクラスタにClusterRoleがないカスタムリソースが含まれている場合はlink:https://kubernetes.io/docs/reference/access-authn-authz/rbac/#aggregated-clusterroles["表示するアグリゲート"]、イベントログを使用してリソースを監視するために、オペレータにこれらのリソースへのアクセス権を手動で付与する必要があります。
+監視対象のクラスタに、ClusterRoleを持たないカスタムリソースが含まれている場合、link:https://kubernetes.io/docs/reference/access-authn-authz/rbac/#aggregated-clusterroles["表示する集計"]イベント ログでこれらのリソースを監視するには、オペレーターにこれらのリソースへのアクセスを手動で許可する必要があります。
 
-. edit_operator -additional-permissions.yaml_インストール前、またはインストール後にresource_ClusterRole/<namespace>-additional-permissions_を編集します。
-. 動詞["get","watch","list"]を使用して、目的のapiGroupsとリソースの新しいルールを作成します。「\https://kubernetes.io/docs/reference/access-authn-authz/rbac/」を参照
-. クラスタに変更を適用します。
+. インストール前に _operator-additional-permissions.yaml_ を編集するか、インストール後にリソース _ClusterRole/<namespace>-additional-permissions_ を編集します。
+. 動詞 ["get", "watch", "list"] を使用して、目的の apiGroup とリソースの新しいルールを作成します。参照\https://kubernetes.io/docs/reference/access-authn-authz/rbac/
+. 変更をクラスターに適用する
 

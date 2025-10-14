@@ -4,53 +4,53 @@ permalink: task_device_resolution_ip.html
 keywords: Automatic, AR, AHR, Host, automatic device resolution, FC, Identify 
 summary:  
 ---
-= IP デバイスの解決
+= IPデバイスの解像度
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-IP の識別画面には、自動デバイス解決または手動デバイス解決によって識別された iSCSI 共有と CIFS 共有または NFS 共有が表示されます。また、未識別のデバイスも表示されます。画面には、デバイスの IP アドレス、名前、ステータス、 iSCSI ノード、および共有名が表示されます。識別に成功したデバイスの割合も表示されます。
+IP 識別画面には、自動デバイス解決または手動デバイス解決によって識別された iSCSI および CIFS または NFS 共有が表示されます。識別されていないデバイスも表示されます。画面には、デバイスの IP アドレス、名前、ステータス、iSCSI ノード、共有名が表示されます。正常に識別されたデバイスの割合も表示されます。
 
-image:Device_Resolution_IP.png["IP デバイス解決"]
+image:Device_Resolution_IP.png["IPデバイスの解像度"]
 
 
 
-== IP デバイスを手動で追加する
+== IPデバイスを手動で追加する
 
-[IP Identify]画面の手動追加機能を使用して、IPデバイスをData Infrastructure Insightsに手動で追加できます。
+IP 識別画面で利用可能な手動追加機能を使用して、IP デバイスをData Infrastructure Insightsに手動で追加できます。
 
 .手順
-. Data Infrastructure Insights Web UIにログインします。
-. [*Manage] > [Device resolution*] をクリックします
-. [IP Address identify *] タブをクリックします。
-. [ * 追加（ Add * ） ] ボタンをクリックします。
+. Data Infrastructure Insights Web UI にログインします。
+. *管理 > デバイスの解像度*をクリックします
+. *IP アドレス識別* タブをクリックします。
+. *追加*ボタンをクリックします。
 +
-Add Device ダイアログが表示されます
+デバイスの追加ダイアログが表示されます
 
-. アドレス、 IP アドレス、および一意のデバイス名を入力します。
+. アドレス、IP アドレス、一意のデバイス名を入力します。
 
 
 .結果
-入力したデバイスは、 [IP Address Identify （ IP アドレスの識別） ] タブのデバイスのリストに追加されます。
+入力したデバイスは、[IP アドレス識別] タブのデバイス リストに追加されます。
 
 
 
-== .csv ファイルからの IP デバイス識別情報のインポート
+== .CSV ファイルから IP デバイス ID をインポートする
 
-IP デバイスの識別情報を、 .csv ファイルのデバイス識別情報のリストを使用して手動でデバイス解決機能にインポートできます。
+.CSV ファイル内のデバイス ID のリストを使用して、IP デバイス ID をデバイス解決機能に手動でインポートできます。
 
 . 開始する前に
 
 
-デバイスの識別情報をデバイス解決機能に直接インポートするには、正しい形式の .csv ファイルが必要です。IP デバイスの .csv ファイルには、次の情報が必要です。
+デバイス ID をデバイス解決機能に直接インポートするには、正しくフォーマットされた .CSV ファイルが必要です。  IP デバイスの .CSV ファイルには次の情報が必要です。
 
 |===
 
 
-| 住所 | IP | 名前 
+| アドレス | IP | Name 
 |===
-データフィールドは、次の例に示すように、引用符で囲む必要があります。
+以下の例に示すように、データ フィールドは引用符で囲む必要があります。
 
 ....
 "Address","IP","Name"
@@ -59,33 +59,33 @@ IP デバイスの識別情報を、 .csv ファイルのデバイス識別情�
 "ADDRESS593","IP593","NAME-593"
 ....
 
-NOTE: ベストプラクティスとして、まず IP アドレス識別情報を .csv ファイルにエクスポートし、そのファイルに必要な変更を加えてから、そのファイルを IP アドレス識別にインポートすることをお勧めします。これにより、必要な列が適切な順序で配置されます。
+NOTE: ベスト プラクティスとして、最初に IP アドレス識別情報を .CSV ファイルにエクスポートし、そのファイルで必要な変更を加えてから、そのファイルを IP アドレス識別に再度インポートすることをお勧めします。これにより、必要な列が存在し、適切な順序になっていることが保証されます。
 
 
 
-== IP デバイス識別情報の .csv ファイルへのエクスポート
+== IPデバイス識別情報を.CSVファイルにエクスポートする
 
-Data Infrastructure Insightsのデバイス解決機能から、既存のIPデバイスの識別情報を.csvファイルにエクスポートできます。エクスポートしたデバイス識別情報を変更してData Infrastructure Insightsに再度インポートすると、最初に識別情報をエクスポートしたデバイスと類似したデバイスの識別に使用できます。
+Data Infrastructure Insights のデバイス解決機能から、既存の IP デバイス ID を .CSV ファイルにエクスポートできます。デバイス ID をエクスポートして変更し、 Data Infrastructure Insightsに再度インポートして、エクスポートした ID に元々一致していたデバイスに類似したデバイスを識別するために使用することができます。
 
-.タスクの内容
-です。このシナリオは、 .csv ファイルで簡単に編集できる属性がデバイスに似ている場合に使用し、その後システムにインポートし直すことができます。
+.タスク概要
+。このシナリオは、デバイスに類似した属性があり、それらを .CSV ファイルで簡単に編集してシステムに再度インポートできる場合に使用される可能性があります。
 
-IP デバイスの識別情報を .csv ファイルにエクスポートすると、次の情報がこの順序でファイルに格納されます。
+IP デバイス ID を .CSV ファイルにエクスポートすると、ファイルには次の情報が表示されている順序で含まれます。
 
 |===
 
 
-| 住所 | IP | 名前 
+| アドレス | IP | Name 
 |===
 .手順
-. Data Infrastructure Insights Web UIにログインします。
-. [*Manage] > [Device Resolution*] をクリックします
-. [IP Address identify *] タブを選択します。
-. 識別情報をエクスポートする IP デバイスを選択します。
-. [エクスポート]ボタンをクリックしますimage:ExportButton.png["[エクスポート]ボタン"]。
+. Data Infrastructure Insights Web UI にログインします。
+. *管理 > デバイスの解像度*をクリックします
+. *IP アドレス識別* タブを選択します。
+. 識別子をエクスポートする IP デバイスを選択します。
+. *エクスポート*をクリックしますimage:ExportButton.png["[エクスポート]ボタン"]ボタン。
 +
-.csv ファイルを開くか、ファイルを保存するかを選択します。
+.CSV ファイルを開くか、ファイルを保存するかを選択します。
 
 
 
-関連：link:task_device_resolution_fibre_channel.html["ファイバチャネルデバイスの解決"] link:task_device_resolution_rules.html["デバイス解決ルールの作成"] link:task_device_resolution_preferences.html["デバイス解決のプリファレンスの設定"]
+関連している：link:task_device_resolution_fibre_channel.html["ファイバーチャネルデバイスの解像度"] link:task_device_resolution_rules.html["デバイス解決ルールの作成"] link:task_device_resolution_preferences.html["デバイスの解像度の設定"]

@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: task_dc_emc_vnx_block.html 
 keywords: data collector, EMC, clariion, VNX block 
-summary: Dell EMC VNX Block Storage の設定（旧 CLARiX ） 
+summary: 'DELL EMC VNX ブロック ストレージ (旧 CLARiiON) の構成。' 
 ---
-= Dell EMC VNX Block Storage （ NaviCLI ）データコレクタ
+= Dell EMC VNX ブロック ストレージ (NaviCLI) データ コレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、Dell EMC VNX Block Storage（NaviSec）データコレクタ（旧CLARiX）を使用してインベントリデータとパフォーマンスデータを取得します。
+Data Infrastructure Insights は、 Dell EMC VNX Block Storage (NaviSec) データ コレクター (旧 CLARiiON) を使用して、インベントリとパフォーマンス データを取得します。
 
 
 
 == 用語
 
-Data Infrastructure Insightsは、EMC VNX Block Storageデータコレクタから次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+Data Infrastructure Insights は、 EMC VNX ブロック ストレージ データ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
 [cols="2*"]
 |===
-| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
 
 | ディスク | ディスク 
@@ -29,36 +29,36 @@ Data Infrastructure Insightsは、EMC VNX Block Storageデータコレクタか�
 | ストレージ | ストレージ 
 
 
-| ストレージプロセッサ | ストレージノード 
+| ストレージプロセッサ | ストレージ ノード 
 
 
-| このプール 'RAID グループ | ストレージプール 
+| このプール、RAIDグループ | ストレージ プール 
 
 
-| LUN | ボリューム 
+| LUN | Volume 
 |===
-注：これらは一般的な用語の対応のみを示したものであり、このデータソースのすべてのケースを表しているとは限りません。
+注: これらは一般的な用語のマッピングのみであり、このデータ ソースのすべてのケースを反映しているわけではありません。
 
 
 
 == 要件
 
-データを収集するには、次の要件を満たしている必要があります。
+データを収集するには、次の要件を満たす必要があります。
 
-* 各 VNX ブロックストレージプロセッサの IP アドレス
-* VNX ブロックストレージアレイに対する読み取り専用の Navisphere ユーザー名とパスワード
-* NaviseccliがData Infrastructure Insights AUにインストールされていること
-* アクセスの検証：ユーザー名とパスワードを使用して、Data Infrastructure Insights AUから各アレイに対してnaviseccliを実行します。
-* ポート要件： 80 、 443
-* naviseccli のバージョンは ' アレイ上の最新の FLARE コードに対応している必要があります
-* パフォーマンスを収集するには、統計のログを有効にする必要があります。
-
-
+* 各VNXブロックストレージプロセッサのIPアドレス
+* VNXブロックストレージアレイへの読み取り専用のNavisphereユーザー名とパスワード
+* NaviSecCliはData Infrastructure Insights AUにインストールする必要があります
+* アクセス検証: ユーザー名とパスワードを使用して、Data Infrastructure Insights AU から各アレイに対して NaviSecCLI を実行します。
+* ポート要件: 80, 443
+* NaviSecCLIのバージョンは、アレイ上の最新のFLAREコードに対応している必要があります。
+* パフォーマンスを確保するには、統計ログを有効にする必要があります。
 
 
-== Navisphere コマンドラインインタフェースの構文
 
-NaviSECCLI.exe -h <ip address> -user <user> -password <password> -scope <scope 、 use 0 for global scope> -port <use 443 by default> コマンド
+
+== NaviSphere コマンドラインインターフェース構文
+
+naviseccli.exe -h <IPアドレス> -user <ユーザー> -password <パスワード> -scope <スコープ、グローバルスコープの場合は0を使用> -port <デフォルトでは443を使用> コマンド
 
 
 
@@ -66,19 +66,19 @@ NaviSECCLI.exe -h <ip address> -user <user> -password <password> -scope <scope �
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| VNX Block Storage の IP アドレス | VNX ブロックストレージの IP アドレスまたは完全修飾ドメイン名 
+| VNX ブロック ストレージ IP アドレス | VNXブロックストレージのIPアドレスまたは完全修飾ドメイン名 
 
 
-| ユーザー名 | VNX ブロックストレージデバイスへのログインに使用する名前。 
+| ユーザー名 | VNX ブロック ストレージ デバイスにログインするために使用される名前。 
 
 
-| パスワード | VNX ブロックストレージデバイスへのログインに使用するパスワード。 
+| パスワード | VNX ブロック ストレージ デバイスにログインするために使用されるパスワード。 
 
 
-| CLI から naviseccli.exe へのパス | _naviseccli.exe_executable を含むフォルダへの完全パス 
+| naviseccli.exe への CLI パス | _naviseccli.exe_ 実行ファイルを含むフォルダへのフルパス 
 |===
 
 
@@ -86,22 +86,22 @@ NaviSECCLI.exe -h <ip address> -user <user> -password <password> -scope <scope �
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| インベントリポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは40分です。 
+| インベントリポーリング間隔（分） | インベントリ ポーリングの間隔。デフォルトは40分です。 
 
 
-| 適用範囲 | セキュアなクライアントの範囲デフォルトは Global です。 
+| Scope | 安全なクライアントスコープ。デフォルトはグローバルです。 
 
 
-| パフォーマンスポーリング間隔（秒） | パフォーマンスのポーリング間隔デフォルトは300秒です。 
+| パフォーマンスポーリング間隔（秒） | パフォーマンス ポーリングの間隔。デフォルトは300秒です。 
 |===
 
 
 == トラブルシューティング
 
-このデータコレクタで問題が発生した場合の対処方法を次に示します。
+このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
@@ -109,26 +109,26 @@ NaviSECCLI.exe -h <ip address> -user <user> -password <password> -scope <scope �
 
 [cols="2a, 2a"]
 |===
-| 問題 | 次の操作を実行します 
+| 問題： | これを試してください: 
 
 
  a| 
 エラー：
 
-* エージェントが実行されてい
-* naviseccliが見つかりませんでした
-* コマンドを実行できませんでした
+* エージェントが実行されていません
+* naviseccli が見つかりませんでした
+* コマンドの実行に失敗しました
 
  a| 
-* Navisphere CLIがCloud Insight Acquisition Unitにインストールされていることを確認する
-* データコレクタ設定ウィザードで[Use secure client]オプションが選択されておらず、セキュアでないバージョンのNavisphere CLIがインストールされていません。
-* データコレクタ構成でNavisphere CLIのインストールディレクトリが正しいことを確認する
-* データコレクタ構成でVNXブロックストレージのIPが正しいことを確認します。
-* Data Infrastructure Insights Acquisition Unitから：
+* NaviSphere CLIがCloud Insight Acquisition Unitにインストールされていることを確認します。
+* データ コレクター構成ウィザードで「セキュア クライアントを使用する」オプションを選択しておらず、Naviphere CLI の非セキュア バージョンがインストールされていません。
+* データコレクタ構成でNaviSphere CLIのインストールディレクトリが正しいことを確認します。
+* データ コレクター構成で VNX ブロック ストレージの IP が正しいことを確認します。
+* Data Infrastructure Insights取得ユニットより:
 +
 ** CMDを開きます。
-** 設定したインストールディレクトリにディレクトリを変更します。
-** 「navicli -h {ip} getagent」と入力して、VNXブロックストレージデバイスとの接続を試行します（{ip}を実際のIPに置き換えます）。
+** 設定されたインストールディレクトリにディレクトリを変更します
+** 「navicli -h {ip} getagent」と入力して、VNXブロックストレージデバイスとの接続を試みます（{ip}を実際のIPに置き換えてください）。
 
 
 
@@ -136,41 +136,41 @@ NaviSECCLI.exe -h <ip address> -user <user> -password <password> -scope <scope �
 
 
  a| 
-エラー： 4.29 emc235848 emc241018 getAll Failed to parse host alias info
+エラー: 4.29 emc235848 emc241018 getall ホストエイリアス情報の解析に失敗しました
  a| 
-これは ' アレイ自体のホスト・イニシエータ・データベースの問題が FLARE 29 によって破損したことが原因で発生する可能性がありますEMC ナレッジベースの記事 emc235848 、 emc241018 を参照してください。また、 https://now.netapp.com/Knowledgebase/solutionarea.asp?id=kb58128[]
-
-
-
- a| 
-エラー：メタデータ LUN を取得できません。java -jar navicli.jar の実行中にエラーが発生しました
- a| 
-* セキュアクライアントを使用するようにデータコレクタの設定を変更する（推奨）
-* navicli.exeまたはnaviseccli.exeへのCLIパスにnavicli.jarをインストールします。
-* 注：navicli.jarはEMC Navisphereバージョン6.26で廃止されました
-* navicli.jarは\http://powerlink.emc.comから入手できます。
-
+これは、アレイ自体のホスト イニシエーター データベースの FLARE 29 破損問題によって発生したものと考えられます。 EMC ナレッジベースの記事 emc235848、emc241018 を参照してください。確認することもできます https://now.netapp.com/Knowledgebase/solutionarea.asp?id=kb58128[]
 
 
 
  a| 
-エラー：ストレージプールから、設定された IP アドレスのサービスプロセッサのディスクが報告されません
+エラー: メタ LUN を取得できません。  java -jar navicli.jar の実行中にエラーが発生しました
  a| 
-サービスプロセッサの両方の IP をカンマで区切ってデータコレクタを設定します
+* セキュア クライアントを使用するようにデータ コレクターの構成を変更します (推奨)
+* navicli.exe または naviseccli.exe の CLI パスに navicli.jar をインストールします。
+* 注意: navicli.jar は EMC Navisphere バージョン 6.26 以降では非推奨です。
+* navicli.jarは\http://powerlink.emc.comで入手できるかもしれない。
+
+
+
+
+ a| 
+エラー: ストレージ プールが、構成された IP アドレスのサービス プロセッサ上のディスクを報告していません
+ a| 
+両方のサービスプロセッサIPをコンマで区切ってデータコレクターを構成します。
 
 
 
  a| 
-エラー：リビジョン不一致エラー
+エラー: リビジョン不一致エラー
  a| 
-* これは通常、VNXブロックストレージデバイスのファームウェアの更新が原因で発生しますが、NaviCLI.exeのインストールは更新されません。ファームウェアが異なる複数のデバイスがあっても、インストールされている CLI が 1 つだけ（ファームウェアバージョンが異なる）の場合にも、この問題が発生する可能性があります。
+* これは通常、VNX ブロック ストレージ デバイスのファームウェアを更新したが、NaviCLI.exe のインストールを更新していないために発生します。これは、異なるファームウェアを搭載したさまざまなデバイスがあるにもかかわらず、(異なるファームウェア バージョンを備えた) 1 つの CLI のみがインストールされていることが原因である可能性もあります。
 * デバイスとホストの両方で同じバージョンのソフトウェアが実行されていることを確認します。
 +
-** Data Infrastructure Insights Acquisition Unitで、コマンドラインウィンドウを開く
-** 設定したインストールディレクトリにディレクトリを変更します。
-** 「navicli -h <ip> getagent」と入力して、CLARiXデバイスとの接続を確立します。
-** 最初の2行でバージョン番号を探します。例：エージェントリビジョン：6.16.2(0.1)
-** 最初の行のバージョンを探して比較します。例： Navisphere CLI Revision 6.07.00.04.07
+** Data Infrastructure Insights取得ユニットからコマンドラインウィンドウを開きます
+** 設定されたインストールディレクトリにディレクトリを変更します
+** 「navicli -h <ip> getagent」と入力してCLARiiONデバイスに接続します。
+** 最初の数行のバージョン番号を探します。例:「エージェント Rev: 6.16.2 (0.1)」
+** 最初の行のバージョンを探して比較します。例:「Navisphere CLI リビジョン 6.07.00.04.07」
 
 
 
@@ -178,9 +178,9 @@ NaviSECCLI.exe -h <ip address> -user <user> -password <password> -scope <scope �
 
 
  a| 
-エラー：サポート対象外の構成 - Fibre Channel ポートがありません
+エラー: サポートされていない構成 - ファイバーチャネルポートがありません
  a| 
-デバイスにファイバチャネルポートが設定されていない。現在サポートされているのは FC 構成のみです。このバージョン / ファームウェアがサポートされていることを確認してください。
+デバイスにはファイバー チャネル ポートが構成されていません。現在、FC 構成のみがサポートされています。このバージョン/ファームウェアがサポートされていることを確認してください。
 
 |===
-詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

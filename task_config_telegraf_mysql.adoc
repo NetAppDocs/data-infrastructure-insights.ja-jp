@@ -2,52 +2,52 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_mysql.html 
 keywords: telegraf, installation, install, mysql 
-summary: MySQL データコレクタの設定 
+summary: MySQLデータコレクターの設定 
 ---
-= MySQL データコレクタ
+= MySQL データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、このデータコレクタを使用してMySQLから指標を収集します。
+Data Infrastructure Insights は、このデータ コレクターを使用して MySQL からメトリックを収集します。
 
 
 
 == インストール
 
-. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。MySQLを選択します。
+. *Observability > Collectors* から、*+ Data Collector* をクリックします。  MySQLを選択します。
 +
-Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+Telegraf エージェントがインストールされているオペレーティング システムまたはプラットフォームを選択します。
 
-. コレクション用エージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[_Show Instructions_]をクリックして手順を展開しlink:task_config_telegraf_agent.html["エージェントのインストール"]ます。
-. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
-. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+. 収集用のエージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[手順を表示] をクリックして展開します。link:task_config_telegraf_agent.html["エージェントのインストール"]説明書。
+. このデータ コレクターで使用するエージェント アクセス キーを選択します。 *+ エージェント アクセス キー* ボタンをクリックすると、新しいエージェント アクセス キーを追加できます。ベスト プラクティス: データ コレクターを OS/プラットフォーム別などにグループ化する場合にのみ、異なるエージェント アクセス キーを使用します。
+. 構成手順に従ってデータ コレクターを構成します。手順は、データ収集に使用しているオペレーティング システムまたはプラットフォームの種類によって異なります。
 
 
-image:MySQLDCConfigWindows.png["MySQL の設定"]
+image:MySQLDCConfigWindows.png["MySQLの設定"]
 
 
 
 == セットアップ
 
-詳細については、を参照してlink:https://dev.mysql.com/doc/["MySQL のドキュメント"]ください。
+詳細は以下をご覧ください。link:https://dev.mysql.com/doc/["MySQLドキュメント"] 。
 
 
 
-== オブジェクトとカウンタ
+== オブジェクトとカウンター
 
-次のオブジェクトとそのカウンタが収集されます。
+次のオブジェクトとそのカウンターが収集されます。
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+| オブジェクト | 識別子: | 属性: | データポイント: 
 
 
-| MySQL | ネームスペース MySQL サーバ | ノード IP ノード名 | 中断されたクライアント（ 1 秒あたり）中止された接続（ 1 秒あたり） RX バイト（ 1 秒あたり） TX バイト（ 1 秒あたり）コマンド管理者（ 1 秒あたり） コマンド Alter Event コマンド Alter Function コマンド Alter Instance コマンド Alter 手順コマンド Alter 表コマンド Alter 表領域コマンド Alter User コマンド Alter User コマンド Alter To Keycache コマンド BEGIN コマンド Binlog コマンド手順コマンド Change Master コマンド Change Repl Filter コマンド Check コマンド チェックサムコマンドコミットコマンドデータベースの作成コマンド関数の作成コマンドインデックスの作成コマンド手順コマンドの作成トリガコマンドの作成トリガコマンドの作成 UDF コマンドユーザーコマンドの作成ビューコマンドの作成 SQL 接続エラー作成した tmp ディスクテーブル遅延エラーフラッシュコマンドの受け入れ ハンドラ Commit InnoDB Buffer Pool Bytes Data Key Blocks Not flushed Key Read Requests Key Write Requests Key Writes Max Execution Time Exceeded Max Used Connections Performance Schema Accounts Lost Prepared Stmt Count Qcache Free Blocks Queries 質問フル結合選択範囲選択範囲チェックを選択します [ テーブルロックを即時スキャン ] を選択します 
+| MySQL | 名前空間 MySQL サーバー | ノードIPノード名 | 中止されたクライアント数（1秒あたり） 中止された接続数（1秒あたり） 受信バイト数（1秒あたり） 送信バイト数（1秒あたり） 管理コマンド数（1秒あたり） イベント変更コマンド 関数変更コマンド インスタンス変更コマンド プロシージャ変更コマンド サーバー変更コマンド テーブル変更コマンド テーブルスペース変更コマンド ユーザー変更コマンド 分析コマンド キーキャッシュへの割り当てコマンド 開始コマンド バイナリログコマンド プロシージャ呼び出しコマンド DB変更コマンド マスター変更コマンド レプリケーションフィルター変更コマンド チェックコマンド チェックサムコマンド コミットコマンド DB作成コマンド イベント作成コマンド 関数作成コマンド インデックス作成コマンド プロシージャ作成コマンド サーバー作成コマンド テーブル作成コマンド トリガー作成コマンド UDF作成コマンド ユーザー作成コマンド ビュー作成コマンド SQL接続エラーの割り当て解除 作成された一時ディスクテーブルの受け入れ 遅延エラー フラッシュコマンド ハンドラーコミット Innodbバッファプールバイトデータ フラッシュされていないキーブロック キー読み取り要求 キー書き込み要求 キー書き込み 最大実行時間使用中の接続の最大数を超えました 開いているファイル パフォーマンス スキーマ アカウント 失われました 準備されたステートメントの数 Qcache 空きブロック クエリ 質問 フル結合の選択 フル範囲結合の選択 範囲チェックの選択 スキャン テーブル ロック 即時 
 |===
 
 
 == トラブルシューティング
 
-詳細については、ページを参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページ。

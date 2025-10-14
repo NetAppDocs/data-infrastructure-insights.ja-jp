@@ -2,49 +2,49 @@
 sidebar: sidebar 
 permalink: task_dc_emc_scaleio.html 
 keywords: data collector, scaleIO, PowerFlex EMC, DELL 
-summary: Dell EMC ScaleIO/PowerFlexデータコレクタの設定 
+summary: DELL EMC ScaleIO/PowerFlex データ コレクターを構成します。 
 ---
-= Dell EMC ScaleIO/PowerFlexデータコレクタ
+= DELL EMC ScaleIO / PowerFlex データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-ScaleIO/PowerFlexデータコレクタは、ScaleIOおよびPowerFlexストレージからインベントリ情報を収集します。このデータコレクタを設定するには、ScaleIO/PowerFlexゲートウェイアドレス、および管理者ユーザー名とパスワードが必要です。
+ScaleIO/PowerFlex データ コレクターは、ScaleIO および PowerFlex ストレージからインベントリ情報を収集します。このデータ コレクターを構成するには、ScaleIO/PowerFlex ゲートウェイ アドレスと管理者のユーザー名とパスワードが必要です。
 
 
 
 == 用語
 
-Data Infrastructure Insightsは、ScaleIO/PowerFlexデータコレクタから次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+Data Infrastructure Insights は、 ScaleIO/PowerFlex データ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
 [cols="2*"]
 |===
-| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
 
-| MDM （ Meta Data Manager ）クラスタ | ストレージ 
+| MDM（メタデータマネージャー）クラスター | ストレージ 
 
 
-| SDS（ScaleIO/PowerFlexデータサーバー） | ストレージノード 
+| SDS (ScaleIO/PowerFlex データ サーバー) | ストレージ ノード 
 
 
-| ストレージプール | ストレージプール 
+| ストレージ プール | ストレージ プール 
 
 
-| ボリューム | ボリューム 
+| Volume | Volume 
 
 
 | デバイス | ディスク 
 |===
-注：これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているわけではありません。
+注: これらは一般的な用語のマッピングのみであり、このデータ コレクターのすべてのケースを反映しているわけではありません。
 
 
 
 == 要件
 
-* Admin ユーザアカウントへの読み取り専用アクセス
-* ポート要件： HTTPS ポート 443
+* 管理者ユーザーアカウントへの読み取り専用アクセス
+* ポート要件: HTTPS ポート 443
 
 
 
@@ -53,38 +53,38 @@ Data Infrastructure Insightsは、ScaleIO/PowerFlexデータコレクタから�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| ScaleIO/PowerFlexゲートウェイ | ScaleIO/PowerFlexゲートウェイのIPアドレスまたはFQDN（カンマ（,）またはセミコロン（;）で区切ったもの 
+| ScaleIO/PowerFlex ゲートウェイ | ScaleIO/PowerFlex ゲートウェイの IP アドレスまたは FQDN（カンマ (,) またはセミコロン (;) で区切る） 
 
 
-| ユーザー名 | ScaleIO/PowerFlexデバイスへのログインに使用する管理者ユーザー名 
+| ユーザー名 | ScaleIO/PowerFlexデバイスにログインするために使用される管理者ユーザー名 
 
 
-| パスワード | ScaleIO/PowerFlexデバイスへのログインに使用するパスワード 
+| パスワード | ScaleIO/PowerFlexデバイスにログインするために使用するパスワード 
 |===
 
 
 == 高度な設定
 
-Inventory チェックボックスをクリックして、インベントリ収集を有効にします。
+インベントリ収集を有効にするには、[インベントリ] チェックボックスをクリックします。
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
 | HTTPS ポート | 443 
 
 
-| インベントリのポーリング間隔（分） | デフォルトは60です。 
+| インベントリポーリング間隔（分） | デフォルトは 60 です。 
 
 
-| 接続タイムアウト（秒） | デフォルトは60です。 
+| 接続タイムアウト（秒） | デフォルトは 60 です。 
 |===
 
 
 == トラブルシューティング
 
-詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

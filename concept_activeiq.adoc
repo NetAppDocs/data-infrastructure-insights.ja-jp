@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_activeiq.html 
 keywords: Active IQ, risks, svm, AIQ, risk, ADigital Advisor 
-summary: Data Infrastructure Insightsは、NetApp Active IQデジタルアドバイザ（デジタルアドバイザとも呼ばれる）からリスクデータを収集します。 
+summary: 'Data Infrastructure Insights は、 NetApp Active IQ Digital Advisor ( Digital Advisorとも呼ばれる) からリスク データを収集します。' 
 ---
 = Active IQ Digital Advisor
 :hardbreaks:
@@ -11,17 +11,17 @@ summary: Data Infrastructure Insightsは、NetApp Active IQデジタルアドバ
 
 
 [role="lead"]
-NetApplink:https://docs.netapp.com/us-en/active-iq/["Active IQ Digital Advisor"]（デジタルアドバイザとも呼ばれます）は、NetAppのお客様のハードウェア/ソフトウェアシステムに対して、一連の視覚化、分析、およびその他のサポート関連サービスを提供します。Digital Advisorによって報告されるデータは、システムの問題のトラブルシューティングを強化し、デバイスに関連する最適化および予測分析のインサイトを提供します。
+NetApplink:https://docs.netapp.com/us-en/active-iq/["Active IQ Digital Advisor"]( Digital Advisorとも呼ばれる) は、 NetAppの顧客のハードウェア/ソフトウェア システムに対して、一連の視覚化、分析、およびその他のサポート関連サービスを提供します。  Digital Advisorによって報告されるデータは、システムの問題のトラブルシューティングを強化し、デバイスに関連する最適化と予測分析に関する洞察も提供します。
 
-Data Infrastructure Insightsは、デジタルアドバイザによって監視およびレポートされるすべてのNetApp clustered Data ONTAPストレージシステムの*リスク*を収集します。ストレージシステムについて報告されたリスクは、Data Infrastructure Insightsによって、それらのデバイスからのデータ収集の一環として自動的に収集されます。Digital Advisorのリスク情報を収集するには、適切なデータコレクタをData Infrastructure Insightsに追加する必要があります。
+Data Infrastructure Insights は、 Digital Advisorによって監視およびレポートされるすべてのNetApp Clustered Data ONTAPストレージ システムの *リスク* を収集します。ストレージ システムについて報告されたリスクは、それらのデバイスからのデータ収集の一環として、Data Infrastructure Insightsによって自動的に収集されます。  Digital Advisor のリスク情報を収集するには、適切なデータ コレクターをData Infrastructure Insightsに追加する必要があります。
 
-Data Infrastructure Insightsには、Digital Advisorによって監視およびレポートされていないONTAPシステムのリスクデータは表示されません。
+Data Infrastructure Insights には、 Digital Advisorによって監視およびレポートされないONTAPシステムのリスク データは表示されません。
 
-レポートされるリスクは、Data Infrastructure Insightsの_storage_and_storage node_assetランディングページの「リスク」の表に表示されます。この表には、リスクの詳細、リスクのカテゴリ、リスクの潜在的な影響が表示されます。また、ストレージノードのすべてのリスクをまとめた[Digital Advisor]ページへのリンクも記載されています（NetAppサポートアカウントのサインインが必要です）。
+報告されたリスクは、Data Infrastructure Insightsの _storage_ および _storage node_ アセット ランディング ページの「リスク」テーブルに表示されます。表には、リスクの詳細、リスクのカテゴリ、リスクの潜在的な影響が表示され、ストレージ ノードのすべてのリスクをまとめたDigital Advisorページへのリンクも提供されます (NetAppサポート アカウントへのサインインが必要です)。
 
-image:AIQ_Risks_Table_Example.png["Digital Advisorのリスク一覧"]
+image:AIQ_Risks_Table_Example.png["Digital Advisorのリスク表"]
 
-レポートされたリスクの数は、ランディングページの[Summary]ウィジェットにも表示され、Digital Advisorの該当するページへのリンクが表示されます。a_storage_landing ページの数は、基盤となるすべてのストレージノードのリスクの合計です。
+報告されたリスクの数は、適切なDigital Advisorページへのリンクとともに、ランディング ページの概要ウィジェットにも表示されます。ストレージ ランディング ページでは、カウントは基礎となるすべてのストレージ ノードからのリスクの合計になります。
 
 image:AIQ_Summary_Example.png["ストレージページの概要"]
 
@@ -29,22 +29,22 @@ image:AIQ_Summary_Example.png["ストレージページの概要"]
 
 == Digital Advisorページを開く
 
-Digital Advisorのページへのリンクをクリックして現在Digital Advisorアカウントにサインインしていない場合は、次の手順を実行してストレージノードのDigital Advisorページを表示する必要があります。
+Digital Advisorページへのリンクをクリックするときに、現在Digital Advisorアカウントにサインインしていない場合は、次の手順を実行してストレージ ノードのDigital Advisorページを表示する必要があります。
 
-. [Data Infrastructure Insights Summary]ウィジェットまたは[Risks]テーブルで、[Digital Advisor]リンクをクリックします。
-. ネットアップサポートアカウントにサインインします。Digital Advisorの[ストレージノード]ページに直接移動します。
-
-
+. Data Infrastructure Insightsサイトの概要ウィジェットまたはリスク テーブルで、「Digital Advisor」リンクをクリックします。
+. NetAppサポート アカウントにSign in。  Digital Advisorのストレージ ノード ページに直接移動します。
 
 
-== リスクを照会しています
 
-Data Infrastructure Insightsでは、ストレージまたはストレージノードのクエリに* monitoring.count *列を追加できます。返された結果にDigital Advisorで監視されているストレージシステムが含まれている場合は、monitoring.count列にストレージシステムまたはノードのリスク数が表示されます。
+
+== リスクの問い合わせ
+
+Data Infrastructure Insightsでは、ストレージまたはストレージ ノード クエリに *monitoring.count* 列を​​追加できます。返された結果にDigital Advisor監視対象ストレージ システムが含まれている場合、monitoring.count 列にはストレージ システムまたはノードのリスクの数が表示されます。
 
 
 
 == ダッシュボード
 
-デジタルアドバイザが監視するNetApp clustered Data ONTAPシステムのストレージノードとストレージノードに関するオブジェクトのリスクを可視化するために、ウィジェット（円グラフ、表ウィジェット、バー、列、散布図、単一値ウィジェットなど）を構築できます。これらのウィジェットでは、「オブジェクトリスク」を列または指標として選択できます。各ウィジェットでは、ストレージノードまたはストレージノードがオブジェクトとなります。
+Digital Advisorによって監視されるNetApp Clustered Data ONTAPシステムのストレージおよびストレージ ノードのオブジェクト リスクを視覚化するために、ウィジェット (円グラフ、表ウィジェット、棒グラフ、列グラフ、散布図、単一値ウィジェットなど) を構築できます。ストレージまたはストレージ ノードがフォーカスのオブジェクトであるこれらのウィジェットでは、「オブジェクト リスク」を列またはメトリックとして選択できます。
 
 image:ObjectRiskWidgets.png["ウィジェットのオブジェクトリスク"]

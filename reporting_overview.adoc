@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reporting_overview.html 
-summary: Data Infrastructure Insightsを使用して、事前定義されたカスタムレポートを作成できます。 
+summary: Data Infrastructure Insightsを使用した、データの事前定義済みレポートとカスタム レポート。 
 keywords: reporting, cognos, data warehouse, dwh 
 ---
 = Data Infrastructure Insightsレポートの概要
@@ -10,49 +10,49 @@ keywords: reporting, cognos, data warehouse, dwh
 
 
 [role="lead"]
-Data Infrastructure Insightsのレポート機能は、事前定義済みのレポートを表示したり、カスタムレポートを作成したりできるビジネスインテリジェンスツールです。
+Data Infrastructure Insightsレポートは、定義済みレポートを表示したり、カスタム レポートを作成したりできるビジネス インテリジェンス ツールです。
 
 
-NOTE: レポート機能はData Infrastructure Insightsで使用できlink:concept_subscribing_to_cloud_insights.html["Premium Edition の場合"]ます。レポート機能の利用には、最小フットプリント要件が適用されます。link:https://www.netapp.com/forms/cloud-insights-contact-us/["NetAppの営業担当者にお問い合わせください"]詳細についてはこちらをご覧ください。
+NOTE: レポート機能は、Data Infrastructure Insightsで利用できます。link:concept_subscribing_to_cloud_insights.html["プレミアムエディション"] 。レポート機能の利用には、最小フットプリント要件が適用されます。link:https://www.netapp.com/forms/cloud-insights-contact-us/["NetAppの営業担当者にお問い合わせください"]詳細についてはこちらをご覧ください。
 
-Data Infrastructure Insightsのレポート作成機能では、次のタスクを実行できます。
+Data Infrastructure Insightsレポートを使用すると、次のタスクを実行できます。
 
-* 事前定義済みのレポートを実行します
+* 定義済みレポートを実行する
 * カスタムレポートを作成する
 * レポートの形式と配信方法をカスタマイズする
-* レポートが自動的に実行されるようにスケジュールを設定する
-* レポートを E メールで送信
-* データのしきい値を色で表します
+* レポートを自動的に実行するようにスケジュールする
+* メールレポート
+* データのしきい値を色で表す
 
 
-Data Infrastructure Insights Reportingでは、チャージバック、消費分析、予測などの領域に関するカスタムレポートを生成でき、次のような質問に対する回答に役立ちます。
+Data Infrastructure Insights Reporting は、チャージバック、消費分析、予測などの領域に関するカスタム レポートを生成し、次のような質問に答えるのに役立ちます。
 
-* 所有しているインベントリ
-* インベントリの場所
-* アセットの使用者
-* ビジネスユニットに割り当てられているストレージのチャージバック
-* ストレージ容量の追加購入が必要になるまでの期間
-* ビジネスユニットが適切なストレージ階層に配置されているか。
-* 1 カ月、 1 四半期、 1 年のストレージ割り当ての変化
-
-
-
-
-== データインフラの分析情報レポートへのアクセス
-
-Data Infrastructure Insights Reportingにアクセスするには、メニューの*[レポート]*リンクをクリックします。
-
-Reporting インターフェイスに移動します。Data Infrastructure Insightsでは、レポートエンジンにIBM Cognos Analyticsを使用しています。
+* どのような在庫がありますか?
+* 私の在庫はどこにありますか?
+* 私たちの資産を使っているのは誰ですか?
+* ビジネス ユニットに割り当てられたストレージのチャージバックとは何ですか?
+* 追加のストレージ容量を取得する必要があるまでどのくらいかかりますか?
+* ビジネス ユニットは適切なストレージ層に沿って配置されていますか?
+* ストレージの割り当ては、1 か月、四半期、または 1 年にわたってどのように変化していますか?
 
 
 
-== ETLとは
 
-Reporting では、「 Data Warehouse 」と「 ETL 」という用語が使用されます。ETL は、「抽出、変換、読み込み」の略です。ETLプロセスでは、Data Infrastructure Insightsで収集されたデータが取得され、レポートで使用する形式に変換されます。「 Data Warehouse 」は、レポートに使用できる収集データを表します。
+== Data Infrastructure Insightsサイトレポートへのアクセス
 
-ETL プロセスは、次の個別プロセスで構成されます。
+メニューの*レポート*リンクをクリックすると、 Data Infrastructure Insightsレポートにアクセスできます。
 
-* * Extract *：Data Infrastructure Insightsからデータを取得
-* *変換*：Data Infrastructure Insightsから抽出されるデータにビジネスロジックのルールや機能を適用します。
-* * ロード *: 変換されたデータをデータウェアハウスに保存して、レポート作成に使用します。
+レポート インターフェースに移動します。  Data Infrastructure Insights は、レポート エンジンとして IBM Cognos Analytics を使用します。
+
+
+
+== ETL とは何ですか?
+
+レポートを扱うときには、「データ ウェアハウス」と「ETL」という用語を耳にするでしょう。  ETL は「抽出、変換、ロード」の略です。  ETL プロセスは、 Data Infrastructure Insightsで収集されたデータを取得し、そのデータをレポートで使用できる形式に変換します。  「データ ウェアハウス」とは、レポートに使用できる収集されたデータを指します。
+
+ETL プロセスには、次の個別のプロセスが含まれます。
+
+* *抽出*: Data Infrastructure Insightsからデータを取得します。
+* *変換*: Data Infrastructure Insightsから抽出されたデータにビジネス ロジック ルールまたは関数を適用します。
+* *ロード*: レポートで使用するために、変換されたデータをデータ ウェアハウスに保存します。
 

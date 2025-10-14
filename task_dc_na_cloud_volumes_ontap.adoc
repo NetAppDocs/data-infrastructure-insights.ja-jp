@@ -1,16 +1,16 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_na_cloud_volumes_ontap.html 
-summary: NetApp Cloud Volumes ONTAP のデータコレクタを設定する 
+summary: NetApp Cloud Volumes ONTAPデータコレクターを構成する 
 keywords: data collector, NetApp, Cloud, ONTAP 
 ---
-= NetApp Cloud Volumes ONTAP データコレクタ
+= NetApp Cloud Volumes ONTAPデータコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-このデータコレクタは、 Cloud Volumes ONTAP 構成からのインベントリ収集をサポートします。
+このデータ コレクターは、Cloud Volumes ONTAP構成からのインベントリ収集をサポートします。
 
 
 
@@ -18,16 +18,16 @@ keywords: data collector, NetApp, Cloud, ONTAP
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| ネットアップ管理 IP アドレス | クラウドボリューム ONTAP の IP アドレス 
+| NetApp管理 IP アドレス | Cloud Volumens ONTAPの IP アドレス 
 
 
-| ユーザー名 | Cloud Volumes ONTAP のユーザ名 
+| ユーザー名 | Cloud Volumes ONTAPのユーザー名 
 
 
-| パスワード | 上記のユーザのパスワード 
+| パスワード | 上記ユーザーのパスワード 
 |===
 
 
@@ -35,46 +35,46 @@ keywords: data collector, NetApp, Cloud, ONTAP
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| 接続タイプ | HTTPS を推奨。にはデフォルトのポートも表示されます。 
+| 接続タイプ | HTTPS を推奨します。デフォルトのポートも表示されます。 
 
 
-| 通信ポートをオーバーライドします | デフォルト以外の場合に使用するポート。 
+| 通信ポートのオーバーライド | デフォルトでない場合に使用するポート。 
 
 
-| インベントリポーリング間隔（分） | デフォルトは60分です。 
+| インベントリポーリング間隔（分） | デフォルトは 60 分です。 
 
 
-| インベントリの同時スレッド数 | 同時スレッド数。 
+| インベントリ同時スレッド数 | 同時実行スレッドの数。 
 
 
-| HTTPS に TLS を強制します | HTTPS 経由で TLS を強制します 
+| HTTPSにTLSを強制する | HTTPS 経由の TLS を強制する 
 
 
 | ネットグループを自動的に検索する | ネットグループを自動的に検索する 
 
 
-| ネットグループの拡張 | シェルまたはファイルを選択します 
+| ネットグループの拡張 | シェルまたはファイルを選択 
 
 
-| HTTP 読み取りタイムアウト秒数 | デフォルトは30秒です 
+| HTTP読み取りタイムアウト秒数 | デフォルトは30秒です 
 
 
-| 応答を UTF-8 として強制実行します | 応答を UTF-8 として強制実行します 
+| 応答を UTF-8 として強制する | 応答を UTF-8 として強制する 
 
 
-| パフォーマンスポーリング間隔（分） | デフォルトは900秒です。 
+| パフォーマンスポーリング間隔（分） | デフォルトは 900 秒です。 
 
 
-| パフォーマンス同時スレッド数 | 同時スレッド数。 
+| パフォーマンス同時スレッド数 | 同時実行スレッドの数。 
 
 
-| 高度なカウンタデータ収集 | このチェックボックスをオンにすると、Data Infrastructure Insightsが以下のリストから高度な指標を収集します。 
+| 高度なカウンターデータ収集 | これをチェックすると、 Data Infrastructure Insightsによって以下のリストから高度なメトリックが収集されます。 
 |===
 
 
 == トラブルシューティング
 
-このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

@@ -2,39 +2,39 @@
 sidebar: sidebar 
 permalink: insights_overview.html 
 keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload, ttf, time to full, k8s, kubernetes, namespace 
-summary: 分析情報から、リソースの使用状況とトレンド分析を確認できます。 
+summary: Insights では、リソースの使用状況と傾向を確認できます。 
 ---
-= 分析
+= 洞察
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-分析情報を使用すると、リソースの使用状況や他のリソースへの影響、時間のかかる分析などを確認できます。
+Insights を使用すると、リソースの使用状況やそれが他のリソースに与える影響、またはフル稼働までの時間の分析などを調べることができます。
 
-さまざまなインサイトをご利用いただけます。詳細を見るには、*[Dashboards]>[Insights]*に移動します。アクティブなインサイト（現在発生しているインサイト）はメインタブに表示され、非アクティブなインサイトは_Inactive Insightsタブに表示されます。非アクティブなインサイトとは、以前はアクティブだったものの、もう発生していないインサイトです。
-
-
-
-== Insightのタイプ
+多数の Insights が利用可能です。詳細を確認するには、*ダッシュボード > インサイト* に移動します。アクティブなインサイト (現在発生しているインサイト) はメイン タブに表示され、非アクティブなインサイトは [非アクティブなインサイト] タブに表示されます。非アクティブなインサイトとは、以前はアクティブだったが、現在は発生していないインサイトです。
 
 
 
-=== 負荷のある共有リソース
-
-影響の大きいワークロードは、共有リソース内の他のワークロードのパフォーマンスを低下させる可能性があります。これにより、共有リソースに負荷がかかります。Data Infrastructure Insightsは、リソースの飽和状態とテナントへの影響を調査するのに役立つツールを提供します。link:insights_shared_resources_under_stress.html["詳細"]
+== インサイトの種類
 
 
 
-=== Kubernetesネームスペースのスペースが不足しています
+=== ストレス下における共有リソース
 
-Kubernetes Namespaces Running Of Space Insightでは、スペース不足のリスクがあるKubernetesネームスペース上のワークロードを確認できます。各スペースがフルになるまでの推定日数も表示されます。link:insights_k8s_namespaces_running_out_of_space.html["詳細"]
-
-
-
-=== ONTAP コールドストレージを再利用します
-
-ONTAPコールドストレージの再利用_Insightは、ONTAPシステム上のボリュームについて、コールド容量、潜在的なコスト/電力削減、推奨される対処方法に関するデータを提供します。link:insights_reclaim_ontap_cold_storage.html["詳細"]
+影響の大きいワークロードは、共有リソース内の他のワークロードのパフォーマンスを低下させる可能性があります。これにより、共有リソースにストレスがかかります。  Data Infrastructure Insights は、リソースの飽和状態とテナントへの影響を調査するのに役立つツールを提供します。link:insights_shared_resources_under_stress.html["詳細情報"]
 
 
-NOTE: これは_Preview_featureであり、改善が行われると時間の経過とともに変更される場合があります。link:/concept_preview_features.html["詳細"] Data Infrastructure Insightsプレビュー機能について
+
+=== Kubernetes 名前空間のスペース不足
+
+Kubernetes 名前空間のスペース不足インサイトでは、スペース不足になるリスクがある Kubernetes 名前空間のワークロードが表示され、各スペースがいっぱいになるまでの残り日数の見積もりも表示されます。link:insights_k8s_namespaces_running_out_of_space.html["詳細情報"]
+
+
+
+=== ONTAPコールド ストレージの再利用
+
+_Reclaim ONTAP Cold Storage_ Insight は、 ONTAPシステム上のボリュームのコールド容量、潜在的なコスト/電力節約、推奨されるアクション項目に関するデータを提供します。link:insights_reclaim_ontap_cold_storage.html["詳細情報"]
+
+
+NOTE: これはプレビュー機能であり、改善が進むにつれて変更される可能性があります。link:/concept_preview_features.html["詳細情報"] Data Infrastructure Insightsプレビュー機能について。

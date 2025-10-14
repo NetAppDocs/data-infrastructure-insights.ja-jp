@@ -2,105 +2,105 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_agent.html 
 keywords: telegraf, agent, telegraf agent 
-summary: Data Infrastructure Insightsは、統合データ収集のエージェントとしてTelegrafをサポートしており、WindowsまたはLinux上で構成できます。 
+summary: Data Infrastructure Insights は、統合データの収集エージェントとして Telegraf をサポートしており、Windows または Linux で構成できます。 
 ---
-= データを収集するためのエージェントの設定(Windows/Linux)
+= データ収集のためのエージェントの構成 (Windows/Linux)
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、link:https://docs.influxdata.com/telegraf["Tegraf"]統合データ収集のエージェントとしてを使用します。Telegraf はプラグインベースのサーバエージェントで、指標、イベント、ログの収集とレポートに使用できます。入力プラグインは、システム /OS に直接アクセスするか、サードパーティ API を呼び出すか、設定されたストリームをリスニングすることによって、エージェントに必要な情報を収集するために使用されます（例：） Kafka や StatsD など）を参照してください。出力プラグインは、収集されたメトリック、イベント、ログをエージェントからData Infrastructure Insightsに送信するために使用されます。
+Data Infrastructure Insightsサイトはlink:https://docs.influxdata.com/telegraf["テレグラフ"]統合データの収集エージェントとして。Telegraf は、メトリック、イベント、ログを収集およびレポートするために使用できるプラグイン駆動型のサーバー エージェントです。入力プラグインは、システム/OS に直接アクセスしたり、サードパーティの API を呼び出したり、構成されたストリーム (Kafka、statsD など) をリッスンしたりして、エージェントに必要な情報を収集するために使用されます。出力プラグインは、収集されたメトリック、イベント、およびログをエージェントからData Infrastructure Insightsに送信するために使用されます。
 
-Kubernetesへのインストールの詳細については、ページを参照してlink:task_config_telegraf_agent_k8s.html["NetApp Kubernetes Monitoring Operator"]ください。
-
-
-NOTE: 正確な監査およびデータレポートを作成するためには、 * Network Time Protocol （ NTP; ネットワークタイムプロトコル） * または * Simple Network Time Protocol （ SNTP ） * を使用して、 Agent マシンの時刻を同期することを強くお勧めします。
+Kubernetesへのインストールについては、link:task_config_telegraf_agent_k8s.html["NetApp Kubernetes 監視オペレーター"]ページ。
 
 
-NOTE: Agentをインストールする前にインストールファイルを確認する場合は、の次のセクションを参照してください<<Telegrafパッケージチェックサムの確認>>。
+NOTE: 正確な監査とデータ レポートのために、*ネットワーク タイム プロトコル (NTP)* または *簡易ネットワーク タイム プロトコル (SNTP)* を使用してエージェント マシンの時刻を同期することを強くお勧めします。
+
+
+NOTE: エージェントをインストールする前にインストールファイルを検証したい場合は、以下のセクションを参照してください。<<Telegraf パッケージのチェックサムの検証>> 。
 
 
 
-== エージェントをインストールしています
+== エージェントのインストール
 
-サービスデータコレクタをインストールしていて、エージェントをまだ設定していない場合は、最初に適切なオペレーティングシステム用のエージェントをインストールするように求められます。このトピックでは、 Tegraf エージェントを次のオペレーティングシステムにインストールする手順について説明します。
+サービス データ コレクターをインストールしていて、まだエージェントを構成していない場合は、まず適切なオペレーティング システム用のエージェントをインストールするように求められます。このトピックでは、次のオペレーティング システムに Telegraf エージェントをインストールする手順について説明します。
 
-* <<ウィンドウ>>
-* <<RHEL および CentOS>>
-* <<Ubuntu と Debian>>
+* <<Windows>>
+* <<RHEL と CentOS>>
+* <<UbuntuとDebian>>
 
 
 エージェントをインストールするには、使用しているプラットフォームに関係なく、まず次の手順を実行する必要があります。
 
 . エージェントに使用するホストにログインします。
-. Data Infrastructure Insights環境にログインし、*オブザーバビリティ>コレクタ*に移動します。
-. [*+Data Collector* ] をクリックして、インストールするデータコレクタを選択します。
-. ホストに適したプラットフォームを選択（Windows、Linux）
-. プラットフォームごとに、残りの手順を実行します。
+. Data Infrastructure Insights環境にログインし、*Observability > Collectors* に移動します。
+. *+データコレクター*をクリックし、インストールするデータコレクターを選択します。
+. ホストに適したプラットフォームを選択します（Windows、Linux）
+. 各プラットフォームの残りの手順に従います。
 
 
 
-NOTE: ホストにエージェントをインストールしたら、そのホストに再度エージェントをインストールする必要はありません。
+NOTE: 一度ホストにエージェントをインストールすると、そのホストに再度エージェントをインストールする必要はありません。
 
 
-TIP: サーバ/ VMにエージェントをインストールすると、Data Infrastructure Insightsは、設定したデータコレクタからの収集に加えて、そのシステムから指標を収集します。これらの指標はとして収集されlink:task_config_telegraf_node.html["「ノード」指標"]ます。
+TIP: サーバー/VM にエージェントをインストールすると、 Data Infrastructure Insights は、構成したデータ コレクターからの収集に加えて、そのシステムからメトリックを収集します。これらの指標は次のように収集されますlink:task_config_telegraf_node.html["「ノード」メトリック"]。
 
 
-NOTE: プロキシを使用している場合は、 Tegraf エージェントをインストールする前に、お使いのプラットフォームのプロキシの手順をお読みください。
+NOTE: プロキシを使用している場合は、Telegraf エージェントをインストールする前に、プラットフォームのプロキシ手順をお読みください。
 
 
 
 === ログの場所
 
-Telegrafログメッセージは、stdoutから次のログファイルにリダイレクトされます。デフォルトでは、
+デフォルトでは、Telegraf ログ メッセージは stdout から次のログ ファイルにリダイレクトされます。
 
-* RHEL / CentOS：/var/log/telegraf/telegraf.log
-* Ubuntu/Debian：/var/log/telegraf/telegraf.log
-* Windows：C：\Program Files\telegraf\telegraf.log
-
-
+* RHEL/CentOS: /var/log/telegraf/telegraf.log
+* Ubuntu/Debian: /var/log/telegraf/telegraf.log
+* Windows: C:\Program Files\telegraf\telegraf.log
 
 
-=== ウィンドウ
+
+
+=== Windows
 
 
 
 ==== 前提条件
 
-* PowerShell がインストールされていること
-* プロキシの背後にいる場合は、「Windows *プロキシ・サポートの構成」セクションの手順に従う必要があります。
+* PowerShellがインストールされている必要があります
+* プロキシを使用している場合は、「*Windows のプロキシ サポートの構成*」セクションの指示に従う必要があります。
 
 
 
 
-==== Windows 向けプロキシサポートを設定しています
+==== Windows のプロキシサポートの構成
 
 
-NOTE: プロキシを使用する環境の場合は、をインストールする前にこのセクションをお読みください。
+NOTE: 環境でプロキシを使用している場合は、インストールする前にこのセクションをお読みください。
 
 
-NOTE: 次の手順は '_http_proxy/https_proxy_environment 変数を設定するために必要なアクションの概要を示しています一部のプロキシ環境では '_no_proxy 環境変数も設定する必要があります
+NOTE: 以下の手順は、_http_proxy/https_proxy_ 環境変数を設定するために必要なアクションの概要を示しています。一部のプロキシ環境では、ユーザーは _no_proxy environment_ 変数も設定する必要があります。
 
-プロキシの背後にあるシステムの場合、 Telegraf エージェントをインストールする前に _https_proxy_ および /or_http_proxy_environment 変数 * を設定するには、次の手順を実行します。
+プロキシの背後にあるシステムの場合は、Telegraf エージェントをインストールする前に、次の操作を実行して _https_proxy_ および/または _http_proxy_ 環境変数を設定します。
 
  [System.Environment]:SetEnvironmentVariable(“https_proxy”, “<proxy_server>:<proxy_port>”, [System.EnvironmentVariableTarget]:Machine)
 
 
-==== エージェントをインストールしています
+==== エージェントのインストール
 
-image:AgentInstallWindows.png["Windows Agent のインストール"]
+image:AgentInstallWindows.png["Windowsエージェントのインストール"]
 
-.Windows にエージェントをインストールする手順：
-. エージェントアクセスキーを選択します。
-. エージェントのインストールダイアログからコマンドブロックをコピーします。クリップボードアイコンをクリックすると、コマンドをクリップボードに簡単にコピーできます。
-. PowerShell ウィンドウを開きます
-. コマンドを PowerShell ウィンドウに貼り付け、 Enter キーを押します。
-. コマンドは、適切なエージェントインストーラをダウンロードしてインストールし、デフォルト設定を行います。終了すると、エージェントサービスが再起動されます。コマンドには一意のキーがあり、 24 時間有効です。
-. [ 完了 ] または [ 続行 ] をクリックします
+.Windows にエージェントをインストールする手順:
+. エージェント アクセス キーを選択します。
+. エージェントのインストール ダイアログからコマンド ブロックをコピーします。クリップボード アイコンをクリックすると、コマンドをクリップボードにすばやくコピーできます。
+. PowerShellウィンドウを開く
+. コマンドを PowerShell ウィンドウに貼り付けて Enter キーを押します。
+. このコマンドは適切なエージェント インストーラーをダウンロードしてインストールし、デフォルト構成を設定します。完了すると、エージェント サービスが再起動されます。コマンドには一意のキーがあり、24 時間有効です。
+. *完了*または*続行*をクリックします
 
 
-エージェントのインストール後、次のコマンドを使用してサービスを開始または停止できます。
+エージェントをインストールした後、次のコマンドを使用してサービスを開始/停止できます。
 
 ....
 Start-Service telegraf
@@ -108,101 +108,101 @@ Stop-Service telegraf
 ....
 
 
-==== エージェントをアンインストールしています
+==== エージェントのアンインストール
 
-Windows でエージェントをアンインストールするには、 PowerShell ウィンドウで次の手順を実行します。
+Windows でエージェントをアンインストールするには、PowerShell ウィンドウで次の操作を行います。
 
-. Tegraf サービスを停止して削除します。
+. Telegraf サービスを停止して削除します。
 +
 ....
 Stop-Service telegraf
 sc.exe delete telegraf
 ....
-. 証明書を信頼ストアから削除します。
+. トラストストアから証明書を削除します。
 +
 ....
 cd Cert:\CurrentUser\Root
 //rm E5FB7B68C08B1CA902708584C274F8EFC7BE8ABC
 rm 1A918038E8E127BB5C87A202DF173B97A05B4996
 ....
-. バイナリ、ログ、およびコンフィグレーションファイルを削除するには、 _C ： \Program Files\テレ グラムフォルダを削除します
-. レジストリから _SYSTEM\CurrentControlSet\Services\EventLog\Application\テレ グラムキーを削除します
+. _C:\Program Files\telegraf_ フォルダを削除して、バイナリ、ログ、および構成ファイルを削除します。
+. レジストリから_SYSTEM\CurrentControlSet\Services\EventLog\Application\telegraf_キーを削除します。
 
 
 
 
-==== Agent をアップグレードしています
+==== エージェントのアップグレード
 
-テレグラムエージェントをアップグレードするには、次の手順に従います。
+Telegraf エージェントをアップグレードするには、次の手順を実行します。
 
-. テレグラムサービスを停止および削除します。
+. Telegraf サービスを停止して削除します。
 +
 ....
 Stop-Service telegraf
 sc.exe delete telegraf
 ....
-. レジストリから _SYSTEM\CurrentControlSet\Services\EventLog\Application\テレ グラムキーを削除します
-. DELETE_C ： \Program Files\テレ グラム \テレ グラム af.conf_
-. DELETE_C ： \Program Files\テレ グラム \テレ グラム af.exe_
-. link:#windows["新しいエージェントをインストールします"]です。
+. レジストリから_SYSTEM\CurrentControlSet\Services\EventLog\Application\telegraf_キーを削除します。
+. _C:\Program Files\telegraf\telegraf.conf_ を削除します。
+. _C:\Program Files\telegraf\telegraf.exe_ を削除します。
+. link:#windows["新しいエージェントをインストールする"] 。
 
 
 
 
-=== RHEL および CentOS
+=== RHEL と CentOS
 
 
 
 ==== 前提条件
 
-* cURL 、 sudo 、 ping 、 sha256sum 、 openssl 、 dmidecode となります
-* プロキシの背後にある場合は、「RHEL / CentOS *用のプロキシサポートの設定」セクションの手順に従う必要があります。
+* 次のコマンドが利用可能である必要があります: curl、sudo、ping、sha256sum、openssl、および dmidecode
+* プロキシを使用している場合は、*RHEL/CentOS のプロキシ サポートの構成*セクションの指示に従う必要があります。
 
 
 
 
-==== RHEL / CentOS でのプロキシサポートの設定
+==== RHEL/CentOS のプロキシサポートの設定
 
 
-NOTE: プロキシを使用する環境の場合は、をインストールする前にこのセクションをお読みください。
+NOTE: 環境でプロキシを使用している場合は、インストールする前にこのセクションをお読みください。
 
 
-NOTE: 次の手順は '_http_proxy/https_proxy_environment 変数を設定するために必要なアクションの概要を示しています一部のプロキシ環境では '_no_proxy 環境変数も設定する必要があります
+NOTE: 以下の手順は、_http_proxy/https_proxy_ 環境変数を設定するために必要なアクションの概要を示しています。一部のプロキシ環境では、ユーザーは _no_proxy environment_ 変数も設定する必要があります。
 
-プロキシの背後にあるシステムの場合は、 Telegraf エージェントをインストールする前に、次の手順 * を実行します。
+プロキシの背後にあるシステムの場合は、Telegraf エージェントをインストールする前に、次の手順を実行します。
 
-. 現在のユーザの _https_proxy_ 変数と _http_proxy_environment 変数を設定します。
+. 現在のユーザーの _https_proxy_ および/または _http_proxy_ 環境変数を設定します。
 +
  export https_proxy=<proxy_server>:<proxy_port>
-. /etc/default/テレ グラム af_ を作成し、 _https_proxy_/or_http_proxy_variable の定義を挿入します。
+. _/etc/default/telegraf_ を作成し、_https_proxy_ および/または _http_proxy_ 変数の定義を挿入します。
 +
  https_proxy=<proxy_server>:<proxy_port>
 
 
 
 
-==== エージェントをインストールしています
+==== エージェントのインストール
 
-image:Agent_Requirements_Rhel.png["RHEL / CentOS Agent のインストール"]
+image:Agent_Requirements_Rhel.png["Rhel/CentOS エージェントのインストール"]
 
-.RHEL または CentOS にエージェントをインストールする手順：
-. エージェントアクセスキーを選択します。
-. エージェントのインストールダイアログからコマンドブロックをコピーします。クリップボードアイコンをクリックすると、コマンドをクリップボードに簡単にコピーできます。
-. Bash ウィンドウを開きます
-. Bash ウィンドウにコマンドを貼り付けて、 Enter キーを押します。
-. コマンドは、適切なエージェントインストーラをダウンロードしてインストールし、デフォルト設定を行います。終了すると、エージェントサービスが再起動されます。コマンドには一意のキーがあり、 24 時間有効です。
-. [ 完了 ] または [ 続行 ] をクリックします
+.RHEL/CentOS にエージェントをインストールする手順:
+. エージェント アクセス キーを選択します。
+. エージェントのインストール ダイアログからコマンド ブロックをコピーします。クリップボード アイコンをクリックすると、コマンドをクリップボードにすばやくコピーできます。
+. Bashウィンドウを開く
+. コマンドをBash ウィンドウに貼り付けて、Enter キーを押します。
+. このコマンドは適切なエージェント インストーラーをダウンロードしてインストールし、デフォルト構成を設定します。完了すると、エージェント サービスが再起動されます。コマンドには一意のキーがあり、24 時間有効です。
+. *完了*または*続行*をクリックします
 
 
-エージェントのインストール後、次のコマンドを使用してサービスを開始または停止できます。
+エージェントをインストールした後、次のコマンドを使用してサービスを開始/停止できます。
 
-オペレーティングシステムで systemd （ CentOS 7+ および RHEL 7+ ）を使用している場合：
+オペレーティング システムで systemd を使用している場合 (CentOS 7+ および RHEL 7+):
 
 ....
 sudo systemctl start telegraf
 sudo systemctl stop telegraf
 ....
-オペレーティングシステムで systemd （ CentOS 7+ および RHEL 7+ ）を使用していない場合：
+オペレーティング システムで systemd を使用していない (CentOS 7+ および RHEL 7+) 場合:
 
 ....
 sudo service telegraf start
@@ -210,9 +210,9 @@ sudo service telegraf stop
 ....
 
 
-==== エージェントをアンインストールしています
+==== エージェントのアンインストール
 
-Bash 端末で RHEL または CentOS のエージェントをアンインストールするには、次の手順を実行します。
+RHEL/CentOS 上のエージェントをアンインストールするには、Bash ターミナルで次の手順を実行します。
 
 . Telegraf サービスを停止します。
 +
@@ -220,10 +220,10 @@ Bash 端末で RHEL または CentOS のエージェントをアンインスト�
 systemctl stop telegraf (If your operating system is using systemd (CentOS 7+ and RHEL 7+)
 /etc/init.d/telegraf stop (for systems without systemd support)
 ....
-. Tegraf エージェントを取り外します。
+. Telegraf エージェントを削除します。
 +
  yum remove telegraf
-. 残っている設定ファイルまたはログファイルを削除します。
+. 残っている可能性のある構成ファイルやログ ファイルをすべて削除します。
 +
 ....
 rm -rf /etc/telegraf*
@@ -233,78 +233,78 @@ rm -rf /var/log/telegraf*
 
 
 
-==== Agent をアップグレードしています
+==== エージェントのアップグレード
 
-テレグラムエージェントをアップグレードするには、次の手順に従います。
+Telegraf エージェントをアップグレードするには、次の手順を実行します。
 
-. テレグラムサービスを停止します。
+. Telegraf サービスを停止します。
 +
 ....
 systemctl stop telegraf (If your operating system is using systemd (CentOS 7+ and RHEL 7+)
 /etc/init.d/telegraf stop (for systems without systemd support)
 ....
-. 前のテレグラムエージェントを削除します。
+. 以前の Telegraf エージェントを削除します。
 +
  yum remove telegraf
-. link:#rhel-and-centos["新しいエージェントをインストールします"]です。
+. link:#rhel-and-centos["新しいエージェントをインストールする"] 。
 
 
 
 
-=== Ubuntu と Debian
+=== UbuntuとDebian
 
 
 
 ==== 前提条件
 
-* cURL 、 sudo 、 ping 、 sha256sum 、 openssl 、 dmidecode となります
-* プロキシの背後にいる場合は、「Ubuntu / Debian *用のプロキシサポートの設定」セクションの手順に従う必要があります。
+* 次のコマンドが利用可能である必要があります: curl、sudo、ping、sha256sum、openssl、および dmidecode
+* プロキシを使用している場合は、*Ubuntu/Debian のプロキシ サポートの構成* セクションの指示に従う必要があります。
 
 
 
 
-==== Ubuntu / Debian のプロキシサポートの設定
+==== Ubuntu/Debian のプロキシサポートの設定
 
 
-NOTE: プロキシを使用する環境の場合は、をインストールする前にこのセクションをお読みください。
+NOTE: 環境でプロキシを使用している場合は、インストールする前にこのセクションをお読みください。
 
 
-NOTE: 次の手順は '_http_proxy/https_proxy_environment 変数を設定するために必要なアクションの概要を示しています一部のプロキシ環境では '_no_proxy 環境変数も設定する必要があります
+NOTE: 以下の手順は、_http_proxy/https_proxy_ 環境変数を設定するために必要なアクションの概要を示しています。一部のプロキシ環境では、ユーザーは _no_proxy environment_ 変数も設定する必要があります。
 
-プロキシの背後にあるシステムの場合は、 Telegraf エージェントをインストールする前に、次の手順 * を実行します。
+プロキシの背後にあるシステムの場合は、Telegraf エージェントをインストールする前に、次の手順を実行します。
 
-. 現在のユーザの _https_proxy_ 変数と _http_proxy_environment 変数を設定します。
+. 現在のユーザーの _https_proxy_ および/または _http_proxy_ 環境変数を設定します。
 +
  export https_proxy=<proxy_server>:<proxy_port>
-. /etc/default/テレ グラムを作成し、 _https_proxy_/or_http_proxy_variable 以下の定義を挿入します。
+. /etc/default/telegraf を作成し、_https_proxy_ および/または _http_proxy_ 変数の定義を挿入します。
 +
  https_proxy=<proxy_server>:<proxy_port>
 
 
 
 
-==== エージェントをインストールしています
+==== エージェントのインストール
 
-image:Agent_Requirements_Ubuntu.png["Ubuntu / Debian Agent のインストール"]
+image:Agent_Requirements_Ubuntu.png["Ubuntu/Debianエージェントのインストール"]
 
-.Debian または Ubuntu にエージェントをインストールする手順 :
-. エージェントアクセスキーを選択します。
-. エージェントのインストールダイアログからコマンドブロックをコピーします。クリップボードアイコンをクリックすると、コマンドをクリップボードに簡単にコピーできます。
-. Bash ウィンドウを開きます
-. Bash ウィンドウにコマンドを貼り付けて、 Enter キーを押します。
-. コマンドは、適切なエージェントインストーラをダウンロードしてインストールし、デフォルト設定を行います。終了すると、エージェントサービスが再起動されます。コマンドには一意のキーがあり、 24 時間有効です。
-. [ 完了 ] または [ 続行 ] をクリックします
+.Debian または Ubuntu にエージェントをインストールする手順:
+. エージェント アクセス キーを選択します。
+. エージェントのインストール ダイアログからコマンド ブロックをコピーします。クリップボード アイコンをクリックすると、コマンドをクリップボードにすばやくコピーできます。
+. Bashウィンドウを開く
+. コマンドをBash ウィンドウに貼り付けて、Enter キーを押します。
+. このコマンドは適切なエージェント インストーラーをダウンロードしてインストールし、デフォルト構成を設定します。完了すると、エージェント サービスが再起動されます。コマンドには一意のキーがあり、24 時間有効です。
+. *完了*または*続行*をクリックします
 
 
-エージェントのインストール後、次のコマンドを使用してサービスを開始または停止できます。
+エージェントをインストールした後、次のコマンドを使用してサービスを開始/停止できます。
 
-オペレーティング・システムが systemd を使用している場合：
+オペレーティング システムで systemd を使用している場合:
 
 ....
 sudo systemctl start telegraf
 sudo systemctl stop telegraf
 ....
-オペレーティングシステムが systemd を使用していない場合は、次の手順を実行します。
+オペレーティング システムで systemd を使用していない場合は、次の操作を行います。
 
 ....
 sudo service telegraf start
@@ -312,9 +312,9 @@ sudo service telegraf stop
 ....
 
 
-==== エージェントをアンインストールしています
+==== エージェントのアンインストール
 
-Ubuntu または Debian でエージェントをアンインストールするには、 Bash ターミナルで次のコマンドを実行します。
+Ubuntu/Debian でエージェントをアンインストールするには、Bash ターミナルで次のコマンドを実行します。
 
 . Telegraf サービスを停止します。
 +
@@ -322,10 +322,10 @@ Ubuntu または Debian でエージェントをアンインストールする�
 systemctl stop telegraf (If your operating system is using systemd)
 /etc/init.d/telegraf stop (for systems without systemd support)
 ....
-. Tegraf エージェントを取り外します。
+. Telegraf エージェントを削除します。
 +
  dpkg -r telegraf
-. 残っている設定ファイルまたはログファイルを削除します。
+. 残っている可能性のある構成ファイルやログ ファイルをすべて削除します。
 +
 ....
 rm -rf /etc/telegraf*
@@ -335,81 +335,81 @@ rm -rf /var/log/telegraf*
 
 
 
-==== Agent をアップグレードしています
+==== エージェントのアップグレード
 
-テレグラムエージェントをアップグレードするには、次の手順に従います。
+Telegraf エージェントをアップグレードするには、次の手順を実行します。
 
-. テレグラムサービスを停止します。
+. Telegraf サービスを停止します。
 +
 ....
 systemctl stop telegraf (If your operating system is using systemd)
 /etc/init.d/telegraf stop (for systems without systemd support)
 ....
-. 前のテレグラムエージェントを削除します。
+. 以前の Telegraf エージェントを削除します。
 +
  dpkg -r telegraf
-. link:#ubuntu-and-debian["新しいエージェントをインストールします"]です。
+. link:#ubuntu-and-debian["新しいエージェントをインストールする"] 。
 
 
 
 
-== Telegrafパッケージチェックサムの確認
+== Telegraf パッケージのチェックサムの検証
 
-Data Infrastructure Insightsエージェントインストーラは整合性チェックを実行しますが、ダウンロードしたTelegrafバイナリをインストールする前に独自の検証を実行したい場合もあります。これを行うには、インストーラをダウンロードしてダウンロードしたパッケージのチェックサムを生成し、チェックサムをインストール手順に示されている値と比較します。
+Data Infrastructure Insightsエージェント インストーラーは整合性チェックを実行しますが、ダウンロードした Telegraf バイナリをインストールする前に独自の検証を実行することを望むユーザーもいます。これは、インストーラーをダウンロードし、ダウンロードしたパッケージのチェックサムを生成し、そのチェックサムをインストール手順に示されている値と比較することで実行できます。
 
 
 
-=== インストールせずにインストーラパッケージをダウンロードします
+=== インストールせずにインストーラーパッケージをダウンロードする
 
-（デフォルトのダウンロードおよびインストールではなく）ダウンロード専用の操作を実行するには、UIから取得したエージェントインストールコマンドを編集して、「install」オプションを削除します。
+ダウンロードのみの操作 (デフォルトのダウンロードとインストールではなく) を実行するには、ユーザーは UI から取得したエージェント インストール コマンドを編集し、「インストール」オプションを削除します。
 
 次の手順を実行します。
 
-. 指示に従ってエージェントインストーラスニペットをコピーします。
-. スニペットをコマンドウィンドウに貼り付ける代わりに、テキストエディタに貼り付けます。
-. コマンドから末尾の「--install」（Linux）または「-install」（Windows）を削除します。
-. コマンド全体をテキストエディタからコピーします。
-. 次に、コマンドウィンドウ（作業ディレクトリ内）に貼り付けて実行します。
+. 指示に従ってエージェント インストーラー スニペットをコピーします。
+. スニペットをコマンド ウィンドウに貼り付ける代わりに、テキスト エディターに貼り付けます。
+. コマンドの末尾の「--install」（Linux）または「-install」（Windows）を削除します。
+. テキスト エディターからコマンド全体をコピーします。
+. 次に、それをコマンド ウィンドウ (作業ディレクトリ内) に貼り付けて実行します。
 
 
-Windows 以外（ Kubernetes の場合は次の例を使用します。実際のスクリプト名は異なる場合があります）
+Windows 以外 (これらの例は Kubernetes 用です。実際のスクリプト名は異なる場合があります):
 
-* Download and install （デフォルト）：
+* ダウンロードしてインストールする（デフォルト）:
 +
  installerName=cloudinsights-ubuntu_debian.sh … && ./$installerName --download --verify && sudo -E -H ./$installerName --install
-* ダウンロードのみ：
+* ダウンロード専用:
 +
  installerName=cloudinsights-ubuntu_debian.sh … && ./$installerName --download --verify
 
 
 Windows：
 
-* Download and install （デフォルト）：
+* ダウンロードしてインストールする（デフォルト）:
 +
  !$($installerName=".\cloudinsights-windows.ps1") … -and $(if(((Get-FileHash $installerName).Hash).ToLower() -eq "INSTALLER_CHECKSUM ") { &$installerName -download -verify -install } else { Write-Host "Install script checksum does not match"})"
-* ダウンロードのみ：
+* ダウンロード専用:
 +
  !$($installerName=".\cloudinsights-windows.ps1") … -and $(if(((Get-FileHash $installerName).Hash).ToLower() -eq "INSTALLER_CHECKSUM ") { &$installerName -download -verify } else { Write-Host "Install script checksum does not match"})"
 
 
-download-onlyコマンドを実行すると、必要なすべてのアーティファクトがData Infrastructure Insightsから作業ディレクトリにダウンロードされます。アーティファクトには次のものがありますが、これらに限定することはできません。
+ダウンロード専用コマンドは、必要なすべての成果物をData Infrastructure Insightsから作業ディレクトリにダウンロードします。アーティファクトには、以下のものが含まれますが、これらに限定されるわけではありません。
 
 * インストールスクリプト
 * 環境ファイル
 * Telegrafバイナリ
-* Telegrafバイナリのシグネチャ
-* バイナリ署名を検証するパブリック証明書
+* Telegrafバイナリの署名
+* バイナリ署名を検証するための公開証明書
 
 
-DIIからダウンロードおよびコピーされたインストールスニペットは、インストールスクリプトを自動的にチェックサムし、Telegrafバイナリの署名はインストールスクリプトによって検証されます。
+DII からダウンロードしてコピーされたインストール スニペットはインストール スクリプトのチェックサムを自動的に計算し、インストール スクリプトによって telegraf バイナリの署名が検証されます。
 
 
 
-=== チェックサム値の検証
+=== チェックサム値を検証する
 
-チェックサム値を生成するには、使用するプラットフォームに応じて次のコマンドを実行します。
+チェックサム値を生成するには、適切なプラットフォームに応じて次のコマンドを実行します。
 
-* RHEL / Ubuntu：
+* RHEL/Ubuntu:
 +
  sha256sum <package_name>
 * Windows：
@@ -419,11 +419,11 @@ DIIからダウンロードおよびコピーされたインストールスニ�
 
 
 
-=== ダウンロードしたパッケージをインストールします
+=== ダウンロードしたパッケージをインストールする
 
-すべてのアーティファクトが正常に検証されたら、次のコマンドを実行してエージェントのインストールを開始できます。
+すべてのアーティファクトが適切に検証されたら、次のコマンドを実行してエージェントのインストールを開始できます。
 
-Windows 以外：
+Windows以外:
 
  sudo -E -H ./<installation_script_name> --install
 Windows：
@@ -433,57 +433,57 @@ Windows：
 
 == APIアクセストークンの作成と使用
 
-Telegrafデータ取り込み用のAPIアクセストークンを作成するには、次のいずれかを実行してください。
+Telegraf データ取り込み用の API アクセス トークンを作成するには、次のいずれかを実行してください。
 
 
 
-=== Data Collectorのインストールページを使用した作成
+=== データコレクターのインストールページから作成する
 
-. 使用するプラットフォーム（Windows、Linux）のData Collectorインストールページに移動します。
-. [+API Access Token]ボタンを使用してトークンを作成します。
-. 名前を入力し、[保存]をクリックします。
-. これで、ドロップダウンでトークン名が選択され、コレクタのインストール時に使用されます。
+. 使用するプラットフォーム (Windows、Linux) の Data Collector インストール ページに移動します。
+. + API アクセス トークン ボタンを使用してトークンを作成します。
+. 名前を入力して「保存」をクリックします。
+. ドロップダウンでトークン名が選択され、コレクターのインストール時に使用されます。
 
 
 
 
 === APIアクセストークンを手動で作成する
 
-. [Admin]>[API Access]に移動します。
-. [+API Access Token]をクリックします。
-. 名前を入力し、必要に応じて説明を入力します。
-. [What type of APIs will this token be used to calling]で[Data ingestion only]を選択し、[Acquisition Unit]を選択解除します。
-. [Permissions]で[Read/Write]を選択します。
-. [Automatically rotate tokens for Kubernetes ]の選択を解除します。
+. [管理] > [API アクセス] に移動します。
+. + API アクセス トークンをクリックします。
+. 名前と、オプションで説明を入力します。
+. 「このトークンはどのタイプの API を呼び出すために使用されますか?」の下で、「データ取り込み」のみを選択し、「取得ユニット」の選択を解除します。
+. 「権限」の下で「読み取り/書き込み」を選択します。
+. 「Kubernetes のトークンを自動的にローテーションする」の選択を解除します。
 
 
-新しく作成したAPIアクセストークンを使用するには、インストーラページの[Select Existing API Access Token or create a new one]ドロップダウンから選択します。使用できるのは、次のプロパティを持つトークンのみです。
+新しく作成した API アクセス トークンを使用するには、インストーラー ページの「既存の API アクセス トークンを選択するか、新しいトークンを作成する」ドロップダウンから選択します。次のプロパティを持つトークンのみが使用できることに注意してください。
 
-* APIタイプ：「データの取り込み」のみ
-* 権限：読み取り/書き込み
-* Kubernetesの自動ローテーション：オフ
+* APIタイプ:「データ取り込み」のみ
+* 権限: 読み取り/書き込み
+* Kubernetes 自動ローテーション: オフ
 
 
 
 
 == トラブルシューティング
 
-エージェントの設定で問題が発生した場合の対処方法を次に示します。
+エージェントの設定中に問題が発生した場合に試すことができるいくつかのこと:
 
 [cols="2*"]
 |===
-| 問題 | 次の操作を実行します 
+| 問題： | これを試してください: 
 
 
-| 新しいプラグインを設定してTegrafを再起動すると、Tegrafが起動しない。ログには、次のようなエラーが表示されます。"[テレ グラム]エージェント実行エラー:設定ファイルのロード中にエラーが発生しました。/etc/exraf/exraf.d/cusinetrainesetraine-default.conf：プラグイン出力。http：line <linenumber> ：configuration specified the fields [use_system_proxy"]、but they were not used] | インストールされているTelegrafのバージョンが古い。このページの手順に従って、お使いのプラットフォームに対応するエージェント*をアップグレードしてください。 
+| 新しいプラグインを設定して Telegraf を再起動した後、Telegraf が起動に失敗します。ログには、次のようなエラーが記録されています: "[telegraf] エージェント実行エラー: 設定ファイル /etc/telegraf/telegraf.d/cloudinsights-default.conf の読み込みエラー: プラグイン出力.http: 行 <行番号>: 設定でフィールド ["use_system_proxy"] が指定されましたが、使用されていません" | インストールされている Telegraf のバージョンが古くなっています。このページの手順に従って、適切なプラットフォームの*エージェントをアップグレード*してください。 
 
 
-| 古いインストールでインストーラスクリプトを実行したが、エージェントがデータを送信していない | テレグラムエージェントをアンインストールし、インストールスクリプトを再実行します。お使いのプラットフォームに応じて、このページの*エージェントのアップグレード*の手順を実行します。 
+| 古いインストールでインストーラスクリプトを実行したところ、エージェントがデータを送信しなくなりました | Telegraf エージェントをアンインストールしてから、インストール スクリプトを再実行します。適切なプラットフォームについては、このページの *エージェントのアップグレード* の手順に従ってください。 
 
 
-| Data Infrastructure Insightsを使用してエージェントをインストール済み | ホスト /VM にエージェントがすでにインストールされている場合は、エージェントを再度インストールする必要はありません。この場合は、 Agent Installation （エージェントのインストール）画面で適切な Platform and Key （プラットフォームとキー）を選択し、 * Continue * （続行）または * Finish （完了） * をクリックします。 
+| Data Infrastructure Insightsを使用してエージェントをすでにインストールしました | ホスト/VM にエージェントがすでにインストールされている場合は、エージェントを再度インストールする必要はありません。この場合は、エージェントのインストール画面で適切なプラットフォームとキーを選択し、「続行」または「完了」をクリックするだけです。 
 
 
-| エージェントはすでにインストールされているが、Data Infrastructure Insightsインストーラを使用していない | 以前のエージェントを削除し、Data Infrastructure Insights Agentのインストールを実行して、デフォルトの構成ファイルが正しく設定されていることを確認します。完了したら、 [* Continue * （続行） ] または [* Finish （完了） ] をクリックします。 
+| エージェントはすでにインストールされていますが、 Data Infrastructure Insightsインストーラーを使用していません | 以前のエージェントを削除し、 Data Infrastructure Insights Agent のインストールを実行して、適切なデフォルト構成ファイル設定を確認します。完了したら、[続行] または [完了] をクリックします。 
 |===
-詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

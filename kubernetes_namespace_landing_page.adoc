@@ -2,22 +2,22 @@
 sidebar: sidebar 
 permalink: kubernetes_namespace_landing_page.html 
 keywords: telegraf, installation, install, kubernetes, pods, clusters, filters, filtering, k8s, namespace 
-summary: Kubernetes のネームスペースランディングページについて説明しました 
+summary: Kubernetesネームスペースランディングページの説明 
 ---
-= Kubernetes のネームスペースの詳細ページ
+= Kubernetes 名前空間の詳細ページ
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Kubernetes のネームスペースの詳細ページには、ネームスペースに使用されているすべてのアセットの概要が表示されます。これには、バックエンドのすべてのストレージリソースとその容量利用率が含まれます。
+Kubernetes 名前空間の詳細ページには、すべてのバックエンド ストレージ リソースとその容量使用率など、名前空間で使用されるすべてのアセットの概要が表示されます。
 
-Kubernetes Explorer ページでネームスペースのリンクをクリックすると、そのネームスペースの詳細ページが開きます。
+任意の Kubernetes Explorer ページにある名前空間リンクをクリックすると、その名前空間の詳細ページが開きます。
 
-image:Kubernetes_Namespace_Detail_Example_2.png["ネームスペースの詳細ページ"]
+image:Kubernetes_Namespace_Detail_Example_2.png["名前空間の詳細ページ"]
 
-他の Kubernetes Excplorer ページと同様に、特定のノードまたは他のオブジェクトに焦点を当てるようにフィルタを設定できます。また、ポッドの正常性とネームスペースのステータスの概要を確認できます。また、 CPU とメモリの需要と永続的ボリュームの容量がある場合は、グラフも表示されます。
+他の Kubernetes Excplorer ページと同様に、特定のノードやその他のオブジェクトに焦点を絞るためのフィルターを設定でき、ポッドの健全性と名前空間のステータスの概要、CPU とメモリの需要、および該当する場合は永続ボリュームの容量を示すグラフを表示できます。
 
-最後に、ネームスペースに関連付けられているワークロードがページに表示されます。
+最後に、ページには名前空間に関連付けられたワークロードのテーブルが表示されます。
 
-ページのいずれかのリンクをクリックして、 Kubernetes 環境の詳細を確認またはトラブルシューティングします。
+ページ上の任意のリンクをクリックすると、Kubernetes 環境をさらに詳しく調査したり、トラブルシューティングしたりできます。

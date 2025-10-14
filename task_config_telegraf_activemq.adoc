@@ -2,58 +2,58 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_activemq.html 
 keywords: telegraf, installation, install, ActiveMQ 
-summary: HTTPデータコレクタの設定 
+summary: HTTPデータコレクターの構成 
 ---
-= ActiveMQ データコレクタ
+= ActiveMQ データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、このデータコレクタを使用してActiveMQから指標を収集します。
+Data Infrastructure Insights は、このデータ コレクターを使用して ActiveMQ からメトリックを収集します。
 
 
 
 == インストール
 
-. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。[ActiveMQ]を選択します。
+. *Observability > Collectors* から、*+ Data Collector* をクリックします。  ActiveMQを選択します。
 +
-Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+Telegraf エージェントがインストールされているオペレーティング システムまたはプラットフォームを選択します。
 
-. コレクション用エージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[_Show Instructions_]をクリックして手順を展開しlink:task_config_telegraf_agent.html["エージェントのインストール"]ます。
-. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
-. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+. 収集用のエージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[手順を表示] をクリックして展開します。link:task_config_telegraf_agent.html["エージェントのインストール"]説明書。
+. このデータ コレクターで使用するエージェント アクセス キーを選択します。 *+ エージェント アクセス キー* ボタンをクリックすると、新しいエージェント アクセス キーを追加できます。ベスト プラクティス: データ コレクターを OS/プラットフォーム別などにグループ化する場合にのみ、異なるエージェント アクセス キーを使用します。
+. 構成手順に従ってデータ コレクターを構成します。手順は、データ収集に使用しているオペレーティング システムまたはプラットフォームの種類によって異なります。
 
 
-image:ActiveMQDCConfigWindows.png["ActiveMQ の設定"]
+image:ActiveMQDCConfigWindows.png["ActiveMQの設定"]
 
 
 
 == セットアップ
 
-詳細については、 http://activemq.apache.org/getting-started.html["ActiveMQ のドキュメント"]
+詳細は以下をご覧ください。 http://activemq.apache.org/getting-started.html["ActiveMQドキュメント"]
 
 
 
-== オブジェクトとカウンタ
+== オブジェクトとカウンター
 
-次のオブジェクトとそのカウンタが収集されます。
+次のオブジェクトとそのカウンターが収集されます。
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+| オブジェクト | 識別子: | 属性: | データポイント: 
 
 
-| ActiveMQ キュー | ネームスペースキューポートサーバ | ノード名ノード IP ノード UUID | 消費者数キューカウントキューサイズ 
+| ActiveMQ キュー | 名前空間キューポートサーバー | ノード名 ノードIP ノードUUID | コンシューマー数 デキュー数 エンキュー数 キューサイズ 
 
 
-| ActiveMQ サブスクライバ | クライアント ID 接続 ID ポートサーバーの名前空間 | は、アクティブなデスティネーションノード名ノード IP ノード UUID ノード OS セレクタサブスクリプションです | Dequeue Count Depatched Count DeQueue Size Dequeue Count Pending Queue Size （デキューカウントディスパッチキューカウントキューサイズ） 
+| ActiveMQ サブスクライバー | クライアントID 接続ID ポート サーバー 名前空間 | アクティブ宛先ノード名ノードIPノードUUIDノードOSセレクタサブスクリプション | デキュー数、ディスパッチ数、ディスパッチキューサイズ、エンキュー数、保留キューサイズ 
 
 
-| ActiveMQ トピック | トピックポートサーバーの名前空間 | ノード名ノード IP ノード UUID ノード OS | 消費者数キューカウントキューカウントサイズ 
+| ActiveMQトピック | トピックポートサーバー名前空間 | ノード名 ノードIP ノードUUID ノードOS | コンシューマー数 デキュー数 エンキュー数 サイズ 
 |===
 
 
 == トラブルシューティング
 
-詳細については、ページを参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページ。

@@ -2,26 +2,26 @@
 sidebar: sidebar 
 permalink: task_dc_brocade_sphereon_intrepid.html 
 keywords: data collector, Brocade, Sphereon Intrepid, 
-summary: Brocade Sphereon/Intrepid Switch データコレクタの設定 
+summary: Brocade Sphereon/Intrepid スイッチ データ コレクターの構成 
 ---
-= Brocade Sphereon/Intrepid Switch データコレクタの設定
+= Brocade Sphereon/Intrepid スイッチ データ コレクターの構成
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsでは、Brocade Sphereon/Intrepid Switch（SNMP）データコレクタを使用して、Brocade Sphereon/Intrepidスイッチのインベントリを検出します。
+Data Infrastructure Insights は、 Brocade Sphereon/Intrepid Switch (SNMP) データ コレクターを使用して、 Brocade Sphereon または Intrepid スイッチのインベントリを検出します。
 
 
 
 == 要件
 
-このデータコレクタを設定するには、次の要件を満たしている必要があります。
+このデータ コレクターを構成するには、次の要件を満たす必要があります。
 
-* ファブリック内のすべてのスイッチへのIP接続が確立されている必要があります。[Discover all switches in the fabric]チェックボックスを選択すると、Data Infrastructure Insightsによってファブリック内のすべてのスイッチが識別されますが、検出するにはこれらの追加スイッチへのIP接続が必要です。
-* SNMP V1 または SNMP V2 を使用している場合は、読み取り専用コミュニティストリングが必要です。
-* ゾーニング情報を取得するには、スイッチへの HTTP アクセスが必要です。
-* このスイッチに snmpwalk ユーティリティを実行してアクセスを検証します（ _ <install_path>\bin\_ を参照）。
+* ファブリック内のすべてのスイッチに IP 接続する必要があります。  [ファブリック内のすべてのスイッチを検出する] チェック ボックスをオンにすると、 Data Infrastructure Insights はファブリック内のすべてのスイッチを識別します。ただし、これらの追加スイッチを検出するには、それらのスイッチへの IP 接続が必要です。
+* SNMP V1 または SNMP V2 を使用している場合は読み取り専用のコミュニティ文字列。
+* ゾーニング情報を取得するためにスイッチに HTTP アクセスします。
+* スイッチに対して snmpwalk ユーティリティを実行してアクセスを検証します (_<install_path>\bin\_ を参照)。
 
 
 
@@ -30,22 +30,22 @@ Data Infrastructure Insightsでは、Brocade Sphereon/Intrepid Switch（SNMP）�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| 球スイッチ | スイッチの IP アドレスまたは完全修飾ドメイン名 
+| スフィアオンスイッチ | スイッチのIPアドレスまたは完全修飾ドメイン名 
 
 
 | SNMPバージョン | SNMPバージョン 
 
 
-| SNMP コミュニティストリング | スイッチへのアクセスに使用する SNMP の読み取り専用コミュニティストリング 
+| SNMPコミュニティ文字列 | スイッチへのアクセスに使用されるSNMP読み取り専用コミュニティ文字列 
 
 
-| SNMPユーザー名 | スイッチの SMI-S のユーザ名（ SNMP v3 のみ） 
+| SNMPユーザー名 | スイッチの SMI-S ユーザー名 (SNMP v3 のみ) 
 
 
-| SNMPパスワード | スイッチの SMI-S のパスワード（ SNMP v3 のみ） 
+| SNMP パスワード | スイッチの SMI-S パスワード (SNMP v3 のみ) 
 |===
 
 
@@ -53,34 +53,34 @@ Data Infrastructure Insightsでは、Brocade Sphereon/Intrepid Switch（SNMP）�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| インベントリポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは15分です。 
+| インベントリポーリング間隔（分） | インベントリ ポーリングの間隔。デフォルトは15分です。 
 
 
-| SNMP 認証プロトコル | SNMP 認証プロトコル（ SNMP v3 のみ） 
+| SNMP認証プロトコル | SNMP認証プロトコル（SNMP v3のみ） 
 
 
-| SNMP プライバシーパスワード | SNMP プライバシーパスワード（ SNMP v3 のみ） 
+| SNMPプライバシーパスワード | SNMP プライバシー パスワード (SNMP v3 のみ) 
 
 
-| SNMP 再試行回数 | SNMPの再試行回数 
+| SNMP再試行回数 | SNMP再試行回数 
 
 
-| ファブリック名 | データコレクタによって報告されるファブリック名。ファブリック名を WWN としてレポートする場合は、空白のままにします。 
+| ファブリック名 | データ コレクターによって報告されるファブリック名。ファブリック名を WWN として報告するには空白のままにします。 
 
 
-| トラッピングを有効にします | デバイスからの SNMP トラップの受信時にデータ収集を有効にする場合に選択します。トラップを有効にするを選択した場合は、 SNMP も有効にする必要があります。 
+| トラッピングを有効にする | デバイスから SNMP トラップを受信したときに取得を有効にする場合に選択します。トラッピングを有効にする場合は、SNMP も有効にする必要があります。 
 
 
-| トラップ間の最小時間（秒） | トラップでデータ収集を試行する最小間隔。デフォルトは10秒です。 
+| トラップ間の最小時間（秒） | トラップによってトリガーされる取得試行間の最小時間。デフォルトは10秒です。 
 
 
-| パフォーマンスポーリング間隔（秒） | パフォーマンスのポーリング間隔デフォルトは300秒です。 
+| パフォーマンスポーリング間隔（秒） | パフォーマンス ポーリングの間隔。デフォルトは300秒です。 
 |===
 
 
 == トラブルシューティング
 
-このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

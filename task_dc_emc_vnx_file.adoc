@@ -2,31 +2,31 @@
 sidebar: sidebar 
 permalink: task_dc_emc_vnx_file.html 
 keywords: data collector, Celerra, EMC, DELL, VNX File 
-summary: Dell EMC Celerra データコレクタの設定 
+summary: DELL EMC Celerra データ コレクターを構成します。 
 ---
-= Dell EMC VNX File （旧 Celerra Unified Storage System ）データコレクタ
+= DELL EMC VNX File（旧Celerra Unified Storage System）データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-このデータコレクタは、 VNX File Storage System からインベントリ情報を取得します。このデータコレクタを設定するには、ストレージプロセッサの IP アドレス、および読み取り専用のユーザ名とパスワードが必要です。
+このデータ コレクターは、VNX ファイル ストレージ システムからインベントリ情報を取得します。このデータ コレクターを構成するには、ストレージ プロセッサの IP アドレスと読み取り専用のユーザー名とパスワードが必要です。
 
 
 
 == 用語
 
-Data Infrastructure Insightsは、VNX Fileデータコレクタから次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+Data Infrastructure Insights は、 VNX ファイル データ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
 [cols="2*"]
 |===
-| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
 
-| Celerra Network Server/Celerra ストレージ・プール | ストレージプール 
+| Celerra ネットワーク サーバ/Celerra ストレージ プール | ストレージ プール 
 
 
-| File System の略 | 内部ボリューム 
+| ファイルシステム | 内部容積 
 
 
 | データムーバー | コントローラ 
@@ -35,22 +35,22 @@ Data Infrastructure Insightsは、VNX Fileデータコレクタから次のイ�
 | データムーバーにマウントされたファイルシステム | ファイル共有 
 
 
-| CIFS および NFS エクスポート | 共有 
+| CIFSおよびNFSエクスポート | 共有 
 
 
-| ディスクボリューム | バックエンド LUN 
+| ディスクボリューム | バックエンドLUN 
 |===
-注：これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているわけではありません。
+注: これらは一般的な用語のマッピングのみであり、このデータ コレクターのすべてのケースを反映しているわけではありません。
 
 
 
 == 要件
 
-このデータコレクタを設定するには、次の情報が必要です。
+このデータ コレクターを構成するには、次のものが必要です。
 
-* ストレージプロセッサの IP アドレス
-* 読み取り専用のユーザ名とパスワード
-* SSHポート22
+* ストレージプロセッサのIPアドレス
+* 読み取り専用のユーザー名とパスワード
+* SSH、ポート22
 
 
 
@@ -59,16 +59,16 @@ Data Infrastructure Insightsは、VNX Fileデータコレクタから次のイ�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| VNX ファイルの IP アドレス | VNX File デバイスの IP アドレスまたは完全修飾ドメイン名 
+| VNXファイルのIPアドレス | VNX ファイル デバイスの IP アドレスまたは完全修飾ドメイン名 
 
 
-| ユーザー名 | VNX File デバイスへのログインに使用する名前 
+| ユーザー名 | VNXファイルデバイスにログインするために使用する名前 
 
 
-| パスワード | VNX File デバイスへのログインに使用するパスワード 
+| パスワード | VNXファイルデバイスにログインするために使用するパスワード 
 |===
 
 
@@ -76,16 +76,16 @@ Data Infrastructure Insightsは、VNX Fileデータコレクタから次のイ�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| インベントリポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは20分です。 
+| インベントリポーリング間隔（分） | インベントリ ポーリングの間隔。デフォルトは20分です。 
 |===
 
 
 == トラブルシューティング
 
-このデータコレクタで問題が発生した場合の対処方法を次に示します。
+このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
@@ -93,9 +93,9 @@ Data Infrastructure Insightsは、VNX Fileデータコレクタから次のイ�
 
 [cols="2*"]
 |===
-| 問題 | 次の操作を実行します 
+| 問題： | これを試してください: 
 
 
-| エラー： DART の更新の実行中は処理を続行できません | Possible 解決策：データコレクタを一時停止し、 DART のアップグレードが完了するのを待ってから、別の取得要求を実行します。 
+| エラー: DART の更新中は続行できません | 考えられる解決策: データ コレクターを一時停止し、DART アップグレードが完了するまで待ってから、別の取得要求を試行します。 
 |===
-詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

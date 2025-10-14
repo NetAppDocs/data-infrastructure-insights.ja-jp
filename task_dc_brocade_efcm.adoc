@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: task_dc_brocade_efcm.html 
 keywords: data collector, Brocade, EFCM, 
-summary: Brocade データコレクタの設定 
+summary: Brocadeデータ コレクターを構成します。 
 ---
-= Brocade Enterprise Fabric Connectivity Manager データコレクタの設定
+= Brocade Enterprise Fabric Connectivity Manager データコレクターの構成
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、Brocade Enterprise Fabric Connectivity Manager（EFCM）データコレクタを使用して、Brocade EFCMスイッチのインベントリを検出します。Data Infrastructure Insightsは、EFCMバージョン9.5、9.6、9.7をサポートしています。
+Data Infrastructure Insights は、 Brocade Enterprise Fabric Connectivity Manager (EFCM) データ コレクターを使用して、 Brocade EFCM スイッチのインベントリを検出します。  Data Infrastructure Insights は、 EFCM バージョン 9.5、9.6、および 9.7 をサポートしています。
 
 
 
 == 要件
 
-* EFCM サーバのネットワークアドレスまたは完全修飾ドメイン名
-* EFCM のバージョンは 9.5 、 9.6 、または 9.7 である必要があります
-* EFCMサーバのIPアドレス
-* EFCM サーバに対する読み取り専用のユーザ名とパスワード
-* ポート51512を介した読み取り専用のユーザ名とパスワードを使用して'Data Infrastructure InsightsサーバからConnectrixスイッチへのTelnetアクセスを検証
+* EFCM サーバーのネットワーク アドレスまたは完全修飾ドメイン名
+* EFCM バージョンは 9.5、9.6、または 9.7 である必要があります
+* EFCMサーバーのIPアドレス
+* EFCM サーバーの読み取り専用のユーザー名とパスワード
+* ポート51512経由で読み取り専用のユーザー名とパスワードを使用して、 Data Infrastructure InsightsサーバーからTelnetでConnectrixスイッチへのアクセスを検証しました。
 
 
 
@@ -29,13 +29,13 @@ Data Infrastructure Insightsは、Brocade Enterprise Fabric Connectivity Manager
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| EFCサーバ | EFCサーバのIPアドレスまたは完全修飾ドメイン名 
+| EFC サーバ | EFCサーバーのIPアドレスまたは完全修飾ドメイン名 
 
 
-| ユーザー名 | スイッチのユーザ名 
+| ユーザー名 | スイッチのユーザー名 
 
 
 | パスワード | スイッチのパスワード 
@@ -46,35 +46,35 @@ Data Infrastructure Insightsは、Brocade Enterprise Fabric Connectivity Manager
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| インベントリポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは15分です。 
+| インベントリポーリング間隔（分） | インベントリ ポーリングの間隔。デフォルトは15分です。 
 
 
-| ファブリック名 | EFCM データコレクタでレポートするファブリック名ファブリック名を WWN としてレポートする場合は、空白のままにします。 
+| ファブリック名 | EFCM データ コレクターによって報告されるファブリック名。ファブリック名を WWN として報告するには空白のままにします。 
 
 
-| 通信ポート | スイッチとの通信に使用するポート 
+| 通信ポート | スイッチとの通信に使用されるポート 
 
 
-| トラッピングを有効にします | デバイスからの SNMP トラップの受信時にデータ収集を有効にする場合に選択します。トラップを有効にするを選択した場合は、 SNMP も有効にする必要があります。 
+| トラッピングを有効にする | デバイスから SNMP トラップを受信したときに取得を有効にする場合に選択します。トラッピングを有効にする場合は、SNMP も有効にする必要があります。 
 
 
-| トラップ間の最小時間（秒） | トラップでデータ収集を試行する最小間隔。デフォルトは15秒です。 
+| トラップ間の最小時間（秒） | トラップによってトリガーされる取得試行間の最小時間。デフォルトは15秒です。 
 
 
-| 非アクティブなゾーンセット | アクティブなゾーンセットに加えてデータ収集の対象に含める非アクティブなゾーンセットをカンマで区切ったリスト 
+| 非アクティブなゾーンセット | アクティブなゾーン セットの取得に加えて、取得を実行する非アクティブなゾーン セットのコンマ区切りリスト 
 
 
-| 使用する NIC | SAN デバイスをレポートする際に RAU で使用するネットワークインターフェイスを指定します 
+| 使用するNIC | SANデバイスをレポートするときにRAUで使用するネットワークインターフェースを指定します 
 
 
-| デバイスを除外します | ポーリングの対象に含めるか除外するユニットの名前をカンマで区切ったリスト 
+| デバイスを除外 | ポーリングに含めるか除外するユニット名のコンマ区切りリスト 
 
 
-| EFCM スイッチのニックネームをスイッチ名として使用します | EFCMスイッチのニックネームをData Infrastructure Insightsのスイッチ名として使用する場合に選択します。 
+| EFCMスイッチのニックネームをスイッチ名として使用します | EFCM スイッチのニックネームをData Infrastructure Insightsスイッチ名として使用する場合に選択します。 
 
 
-| パフォーマンスポーリング間隔（秒） | パフォーマンスのポーリング間隔デフォルトは300秒です。 
+| パフォーマンスポーリング間隔（秒） | パフォーマンス ポーリングの間隔。デフォルトは300秒です。 
 |===

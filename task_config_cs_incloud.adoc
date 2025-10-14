@@ -2,72 +2,72 @@
 sidebar: sidebar 
 permalink: task_config_cs_incloud.html 
 keywords: Cloud, Storage, AWS, Cloud Volumes, Cloud ONTAP, firewall, VPC, Subnet,  cloud secure 
-summary: ワークロードセキュリティでは、データコレクタを使用して、デバイスからファイルとユーザのアクセスデータを収集します。 
+summary: Workload Security はデータ コレクターを使用して、デバイスからファイルおよびユーザー アクセス データを収集します。 
 ---
-= NetApp ONTAP コレクタ用のCloud Volumes ONTAP とAmazon FSXの設定
+= Cloud Volumes ONTAPとAmazon FSx for NetApp ONTAPコレクターの構成
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-ワークロードセキュリティでは、データコレクタを使用して、デバイスからファイルとユーザのアクセスデータを収集します。
+Workload Security はデータ コレクターを使用して、デバイスからファイルおよびユーザー アクセス データを収集します。
 
 
 
-== Cloud Volumes ONTAP ストレージ構成
+== Cloud Volumes ONTAPストレージ構成
 
-ワークロードセキュリティエージェントをホストするシングルノード/ HA AWSインスタンスを設定するには、OnCommand Cloud Volumes ONTAPのドキュメントを参照してください。https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/index.html[]
+Workload Security Agent をホストするための単一ノード/HA AWS インスタンスを構成するには、 OnCommand Cloud Volumes ONTAPドキュメントを参照してください。https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/index.html[]
 
-設定が完了したら、次の手順に従ってSVMをセットアップします。https://docs.netapp.com/us-en/cloudinsights/task_add_collector_svm.html[]
+設定が完了したら、次の手順に従って SVM をセットアップします。https://docs.netapp.com/us-en/cloudinsights/task_add_collector_svm.html[]
 
 
 
 == サポート対象プラットフォーム
 
-* Cloud Volumes ONTAP は、利用可能なすべてのクラウドサービスプロバイダで利用できます。たとえば、Amazon、Azure、Google Cloudなどです。
-* ONTAP Amazon FSXの略
+* Cloud Volumes ONTAP は、利用可能なすべてのクラウド サービス プロバイダーでサポートされています。例: Amazon、Azure、Google Cloud。
+* ONTAP Amazon FSx
 
 
 
 
-== Agent Machine Configuration の略
+== エージェントマシン構成
 
-エージェントマシンは、クラウドサービスプロバイダのそれぞれのサブネットで設定する必要があります。ネットワークアクセスの詳細については、[エージェントの要件]を参照してください。
+エージェント マシンは、クラウド サービス プロバイダーのそれぞれのサブネット内に構成する必要があります。ネットワーク アクセスの詳細については、[エージェントの要件] を参照してください。
 
-以下は、AWSでエージェントをインストールする手順です。クラウドサービスプロバイダに応じて、AzureまたはGoogle Cloudでインストールのために同等の手順を実行できます。
+以下は AWS でのエージェントのインストール手順です。インストールには、クラウド サービス プロバイダーに応じて、Azure または Google Cloud で同等の手順に従うことができます。
 
-AWSでワークロードセキュリティエージェントとして使用するマシンを設定するには、次の手順を実行します。
+AWS では、次の手順に従って、マシンを Workload Security エージェントとして使用するように設定します。
 
-ワークロードセキュリティエージェントとして使用するマシンを構成するには、次の手順を実行します。
+Workload Security Agent として使用するマシンを設定するには、次の手順に従います。
 
 .手順
-. AWS コンソールにログインし、 EC2-Instances ページに移動して、 _Launch instance_ を選択します。
-. 次のページで説明しているように、適切なバージョンのRHELまたはCentOS AMIを選択します。https://docs.netapp.com/us-en/cloudinsights/concept_cs_agent_requirements.html[]
-. Cloud ONTAP インスタンスが存在する VPC とサブネットを選択します。
-. 割り当てられたリソースとして、 [T2.xlarge _ （ 4 vCPU と 16 GB RAM ） ] を選択します。
+. AWS コンソールにログインし、EC2 インスタンス ページに移動して、[インスタンスの起動] を選択します。
+. このページに記載されている適切なバージョンの RHEL または CentOS AMI を選択します。https://docs.netapp.com/us-en/cloudinsights/concept_cs_agent_requirements.html[]
+. Cloud ONTAPインスタンスが存在する VPC とサブネットを選択します。
+. 割り当てリソースとして _t2.xlarge_ (4 個の vCPU と 16 GB の RAM) を選択します。
 +
 .. EC2 インスタンスを作成します。
 
 
-. YUM パッケージマネージャを使用して、必要な Linux パッケージをインストールします。
+. YUM パッケージ マネージャーを使用して必要な Linux パッケージをインストールします。
 +
-.. Linux パッケージのインストール _wget_or_unzip_native 。
+.. ネイティブ Linux パッケージ _wget_ および _unzip_ をインストールします。
 
 
 
 
 
 
-== ワークロードセキュリティエージェントをインストールします
+== ワークロードセキュリティエージェントをインストールする
 
 . Data Infrastructure Insights環境に管理者またはアカウント所有者としてログインします。
-. [Workload Security]*[Collectors]*に移動し、*[Agents]*タブをクリックします。
-. [*+Agent] をクリックし、ターゲットプラットフォームとして RHEL を指定します。
-. [ エージェントインストール ] コマンドをコピーします。
-. ログインしている RHEL EC2 インスタンスに Agent Installation コマンドを貼り付けます。すべてのが満たされている場合、ワークロードセキュリティエージェントがインストールされますlink:concept_cs_agent_requirements.html["エージェントの前提条件"]。
+. Workload Security *Collectors* に移動し、*Agents* タブをクリックします。
+. *+エージェント*をクリックし、ターゲット プラットフォームとして RHEL を指定します。
+. エージェント インストール コマンドをコピーします。
+. ログインしている RHEL EC2 インスタンスにエージェント インストール コマンドを貼り付けます。これにより、Workload Securityエージェントがインストールされ、link:concept_cs_agent_requirements.html["エージェントの前提条件"]満たされます。
 
 
-詳細な手順については、次のリンクを参照してください。https://docs NetApp .com/us-en/cloudinsights/task_cs_add_agent.html#steps-to-install-agent
+詳細な手順については、このリンクを参照してください：https://docs.netapp.com/us-en/cloudinsights/task_cs_add_agent.html#steps-to-install-agent
 
 
 
@@ -81,5 +81,5 @@ AWSでワークロードセキュリティエージェントとして使用す�
 | 問題 | 解決策 
 
 
-| 「Workload Security: Failed to Determine ONTAP type for Amazon FxSN data collector」というエラーがData Collectorに表示されます。お客様が新しいAmazon FSxNデータコレクタをワークロードセキュリティに追加できません。エージェントからのポート443上のFSxNクラスタへの接続がタイムアウトしました。ファイアウォールとAWSセキュリティグループでは、通信を許可するために必要なルールが有効になっています。エージェントはすでに導入されており、同じAWSアカウントにも存在します。同じエージェントを使用して、残りのネットアップデバイス（およびすべてのデバイスが動作）を接続および監視します。 | この問題 を解決するには、fsxadmin LIFネットワークセグメントをエージェントのセキュリティルールに追加します。ポートについて不明な場合は、すべてのポートを許可します。 
+| データコレクターによって「Workload Security: Amazon FxSN データコレクターのONTAPタイプを判別できませんでした」というエラーが表示されます。お客様は、新しい Amazon FSxN データコレクターを Workload Security に追加できません。エージェントからポート 443 上の FSxN クラスターへの接続がタイムアウトしています。ファイアウォールと AWS セキュリティグループには、通信を許可するために必要なルールが有効になっています。エージェントはすでにデプロイされており、同じ AWS アカウントに存在します。この同じエージェントは、残りのNetAppデバイス (すべて動作中) への接続と監視にも使用されます。 | この問題を解決するには、fsxadmin LIF ネットワーク セグメントをエージェントのセキュリティ ルールに追加します。ポートが不明な場合は、すべてのポートを許可します。 
 |===

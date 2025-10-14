@@ -4,50 +4,50 @@ permalink: task_config_telegraf_kapacitor.html
 keywords: telegraf, installation, install, kapacitor 
 summary: kapacitor の設定 
 ---
-= Kapacitor Data Collector
+= Kapacitor データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、このデータコレクタを使用してinfluxdata Kapacitorから指標を収集します。
+Data Infrastructure Insights は、このデータ コレクターを使用して、influxdata Kapacitor からメトリックを収集します。
 
 
 
 == インストール
 
-. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。Kapacitorを選択します。
+. *Observability > Collectors* から、*+ Data Collector* をクリックします。  Kapacitorを選択します。
 +
-Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+Telegraf エージェントがインストールされているオペレーティング システムまたはプラットフォームを選択します。
 
-. コレクション用エージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[_Show Instructions_]をクリックして手順を展開しlink:task_config_telegraf_agent.html["エージェントのインストール"]ます。
-. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
-. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+. 収集用のエージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[手順を表示] をクリックして展開します。link:task_config_telegraf_agent.html["エージェントのインストール"]説明書。
+. このデータ コレクターで使用するエージェント アクセス キーを選択します。 *+ エージェント アクセス キー* ボタンをクリックすると、新しいエージェント アクセス キーを追加できます。ベスト プラクティス: データ コレクターを OS/プラットフォーム別などにグループ化する場合にのみ、異なるエージェント アクセス キーを使用します。
+. 構成手順に従ってデータ コレクターを構成します。手順は、データ収集に使用しているオペレーティング システムまたはプラットフォームの種類によって異なります。
 
 
-image:KapacitorDCConfigWindows.png["Kapacitor の構成"]
+image:KapacitorDCConfigWindows.png["Kapacitorの設定"]
 
 
 
 == セットアップ
 
-セットアップ情報は、 https://docs.influxdata.com/kapacitor/v1.5/["カパトールの資料"]
+セットアップ情報は、 https://docs.influxdata.com/kapacitor/v1.5/["Kapacitor ドキュメント"]
 
 
 
-== オブジェクトとカウンタ
+== オブジェクトとカウンター
 
-次のオブジェクトとそのカウンタが収集されます。
+次のオブジェクトとそのカウンターが収集されます。
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| オブジェクト | 識別子 | 属性 | 「 dataPoints 」： 
+| オブジェクト | 識別子 | 属性 | データポイント: 
 
 
-| カパトール | ネームスペースノード名ノード IP | OS アーキテクチャ OS 名 OS バージョンランタイム仕様ランタイム仕様ベンダーランタイム仕様バージョン Uptime Kapacitor バージョン Runtime VM 名 Runtime VM ベンダーランタイム VM バージョン | 割り当てられたバイトバックハッシュシステムにより、 GC システムの GCC PU フラクションヒープ割り当てヒープ使用ヒープオブジェクトの使用ヒープ解放されたヒープシステムの最終的な GC (ns) ルックアップの Mallocs の mcache が使用中の mcache システムの確認 Maspan システム Next GC (ns) Num GC Other System Pause Total (ns) Stack In Use Stack System Bytes Total Allocated Bytes Average Execution Time （ ns ） Errors 
+| カパシター | 名前空間ノード名ノードIP | OS アーキテクチャ OS 名 OS バージョン ランタイム仕様 ランタイム仕様 ベンダー ランタイム仕様 バージョン 稼働時間 Kapacitor バージョン ランタイム VM 名 ランタイム VM ベンダー ランタイム VM バージョン | 割り当てられたバイト数 バックハッシュ システム解放 GC システム GCC PU 割合 ヒープ割り当て ヒープアイドル ヒープ使用 ヒープオブジェクト ヒープ解放 ヒープシステム 最後の GC (ns) ルックアップ malloc 使用中の Mcache Mcache システム使用中の Mspan Mspan システム 次の GC (ns) GC 数 その他システム 一時停止合計 (ns) 使用中のスタック スタックシステム システムバイト 割り当てられたバイト合計 平均実行時間 (ns) エラー 
 |===
 
 
 == トラブルシューティング
 
-詳細については、ページを参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページ。

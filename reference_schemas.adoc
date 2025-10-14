@@ -1,20 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: reference_schemas.html 
-summary: Reporting で使用する Data Warehouse スキーマの図とテーブル 
+summary: レポートで使用するデータ ウェアハウス スキーマ図とテーブル 
 keywords: dwh, data warehouse, schema, reporting 
 ---
-= レポート作成のためのデータインフラ分析情報スキーマ
+= Data Infrastructure Insightsサイト レポート用スキーマ
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-ここでは、Data Infrastructure Insightsのレポート作成の参考として、スキーマの表と図を示します。
+これらのスキーマ テーブルと図は、Data Infrastructure Insightsサイト レポートの参照としてここに提供されています。
 
-link:https://docs.netapp.com/us-en/cloudinsights/ci_reporting_database_schema.pdf["* スキーマテーブル *"]（.pdf形式）。リンクをクリックして開くか、右クリックして「 _ 名前を付けて保存 ..._ 」を選択してダウンロードします。
+link:https://docs.netapp.com/us-en/cloudinsights/ci_reporting_database_schema.pdf["*スキーマテーブル*"].PDF 形式です。リンクをクリックして開くか、右クリックして [名前を付けて保存] を選択してダウンロードします。
 
-link:reporting_schema_diagrams.html["* スキーマ図 *"]
+link:reporting_schema_diagrams.html["*スキーマ図*"]
 
 
-NOTE: レポート機能はData Infrastructure Insightsで使用できlink:concept_subscribing_to_cloud_insights.html["Premium Edition の場合"]ます。
+NOTE: レポート機能は、Data Infrastructure Insightsで利用できます。link:concept_subscribing_to_cloud_insights.html["プレミアムエディション"] 。

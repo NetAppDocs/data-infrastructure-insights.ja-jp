@@ -1,46 +1,46 @@
 ---
 sidebar: sidebar 
 permalink: task_troubleshooting_general_problems.html 
-summary: データインフラに関する分析情報に関する全般的なトラブルシューティングのヒント。 
+summary: 一般的なData Infrastructure Insightsのトラブルシューティングのヒント。 
 keywords: troubleshooting, problems, browser, login, log in, accessing, access to, Trident, qtree, quota 
 ---
-= Data Infrastructure Insightsの一般的な問題のトラブルシューティング
+= 一般的なData Infrastructure Insightsの問題のトラブルシューティング
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-ここでは、Data Infrastructure Insightsのトラブルシューティングに関する推奨事項を紹介します。
+ここでは、Data Infrastructure Insights のトラブルシューティングに関する提案を紹介します。
 
-およびも参照してくださいlink:task_troubleshooting_linux_acquisition_unit_problems.html["Linux Acquisition Unit の問題のトラブルシューティング"]link:task_troubleshooting_windows_acquisition_unit_problems.html["Windows Acquisition Unit の問題のトラブルシューティング"]。
+参照link:task_troubleshooting_linux_acquisition_unit_problems.html["Linux 取得ユニットの問題のトラブルシューティング"]そしてlink:task_troubleshooting_windows_acquisition_unit_problems.html["Windows 取得ユニットの問題のトラブルシューティング"]。
 
 
 
-== ログインの問題
+== ログインに関する問題
 
 |===
-| * 問題： * | * これを試みなさい : * 
+| *問題：* | *これを試してみてください:* 
 
 
-| Data Infrastructure Insightsは6時間ごとに自動的にログアウト | これは、ブラウザのサードパーティのCookieが無効になっているためです。ユーザーは、ブラウザを設定してすべてのサードパーティのCookieを有効にするか、より狭い例外リストを使用してData Infrastructure Insights用のCookieを有効にすることができます。例:ブラウザの設定を開く[すべてのCookieを許可する]オプションを選択します。*または*[サードパーティクッキーをブロック]を選択し、_[\*.] auth0.com _および_[*.] NetApp .com _に例外を追加します。Microsoft Edgeでは、Chromeと同じ形式の例外が適用されます。Firefoxでは、Cookie例外は単に_auth0.comおよび_netapp.comとして指定されます。 
+| Data Infrastructure Insightsは6時間ごとに自動的にログアウトします | これはブラウザのサードパーティ Cookie が無効になっているために発生します。ユーザーは、ブラウザを設定してすべてのサードパーティ Cookie を有効にすることも、より狭い例外リストを使用してData Infrastructure Insightsの Cookie のみを有効にすることもできます。例: ブラウザの設定を開き、「すべての Cookie を許可する」オプションを選択します。  *または*「サードパーティの Cookie をブロックする」を選択し、_[\*.]auth0.com_ と _[*.]netapp.com_ の例外を追加します。  Microsoft Edge は、例外に関して Chrome と同じ形式に従います。  Firefox では、Cookie 例外は単に _auth0.com_ と _netapp.com_ として指定されます。 
 
 
-| コンソールアカウントを持っていますが、ログインできません。 | チケットを開く https://mysupport.netapp.com/site/help[]。カテゴリ「console.netapp.com > アカウント/ログインの問題」または「console.netapp.com > フェデレーションの問題」を選択します。これらは、コンソールの問題や質問に特化しています。その他のData Infrastructure Insightsのテクニカルサポートの問題については、link:concept_requesting_support.html["ネットアップサポート"] 。 
+| コンソールアカウントを持っていますが、ログインできません。 | チケットを開く https://mysupport.netapp.com/site/help[]。カテゴリ「console.netapp.com > アカウント/ログインの問題」または「console.netapp.com > フェデレーションの問題」を選択します。これらは、コンソールの問題や質問に特化しています。その他のData Infrastructure Insightsのテクニカルサポートの問題については、link:concept_requesting_support.html["NetAppサポート"] 。 
 
 
-| Data Infrastructure Insightsに招待されましたが、「権限がありません」というメッセージが表示されます。 | コンソール アカウントにサインアップしていること、または組織がコンソールで SSO ログインを使用していることを確認します。コンソール プロファイルの電子メール アドレスが、 Data Infrastructure Insightsのウェルカム メールに記載されている電子メール アドレスと一致していることを確認します。メールアドレスが一致しない場合は、正しいメールアドレスで新しい招待をリクエストしてください。 
+| Data Infrastructure Insightsに招待されましたが、「承認されていません」というメッセージが表示されます。 | コンソール アカウントにサインアップしていること、または組織がコンソールで SSO ログインを使用していることを確認します。コンソール プロファイルの電子メール アドレスが、 Data Infrastructure Insightsのウェルカム メールに記載されている電子メール アドレスと一致していることを確認します。メールアドレスが一致しない場合は、正しいメールアドレスで新しい招待をリクエストしてください。 
 
 
-| コンソールからログアウトすると、 Data Infrastructure Insightsからも自動的にログアウトされました。 | NetAppクラウドサービス全体でシングルサインオン（SSO）を実行すると、Data Infrastructure Insightsのすべてのセッションがログアウトされます。複数のData Infrastructure Insightsアカウントにアクセスできる場合は、いずれかのアカウントからログアウトすると、アクティブなセッションがすべてログアウトされます。ログインし直して、アカウントにアクセスします。 
+| コンソールからログアウトすると、 Data Infrastructure Insightsからも自動的にログアウトされました。 | NetAppクラウド サービス全体のシングル サインオン (SSO) により、すべてのData Infrastructure Insightsセッションがログアウトされます。複数のData Infrastructure Insightsアカウントにアクセスできる場合、いずれか 1 つのアカウントからログアウトすると、すべてのアクティブなセッションがログアウトされます。アカウントにアクセスするには再度ログインしてください。 
 
 
 | 数日後に自動的にログアウトされました。 | NetApp Cloud アカウントでは、数日ごとに再認証が必要です (現在のコンソール設定は 7 日です)。アカウントにアクセスするには再度ログインしてください。 
 
 
-| 「ログインを許可されていません」というエラーメッセージが表示されます。 | Data Infrastructure Insightsへのアクセスを確認するには、アカウント管理者に問い合わせてください。コンソール プロファイルのメール アドレスが、 Data Infrastructure Insightsのウェルカム メールに記載されているメール アドレスと一致していることを確認します。 
+| 「ログインする権限がありません」というエラーメッセージが表示されます。 | Data Infrastructure Insightsへのアクセスを確認するには、アカウント管理者に問い合わせてください。コンソール プロファイルのメール アドレスが、 Data Infrastructure Insightsのウェルカム メールに記載されているメール アドレスと一致していることを確認します。 
 
 
-| その他のログインエラーです | Chrome で incognito モードを試すか、ブラウザの履歴、クッキー、およびキャッシュをクリアします。別のブラウザプロファイル（例 Chrome - ユーザーを追加します）。 
+| その他のログインエラー | Chrome でシークレット モードを試すか、ブラウザの履歴、Cookie、キャッシュを消去してください。別のブラウザ プロファイル (Chrome - Person を追加など) を試してください。 
 |===
 
 
@@ -49,16 +49,16 @@ keywords: troubleshooting, problems, browser, login, log in, accessing, access t
 |===
 
 
-| *質問：* | *回答 ：* 
+| *質問：* | *答え：* 
 
 
-| qtreeのハードクォータがクエリに正しく表示されていますが、ソフトクォータがボリュームの合計容量として表示されています。正解ですか？ | 設定されたクォータとして表示されるのは、手動で設定するかTridentで設定したハードクォータのみです。ハードクォータを指定しない場合、qtreeの容量は内部ボリュームの容量になります。 
+| Qtree ハード クォータはクエリで正しく表示されますが、ソフト クォータはボリュームの合計容量として表示されます。それは正しいですか？ | 設定されたクォータとして表示されるのは、手動で設定されたか、またはTridentを通じて設定されたハード クォータのみです。ハード クォータが指定されていない場合、Qtree の容量は内部ボリュームの容量になります。 
 
 
-| 同じqtreeにソフトクォータとハードクォータの両方を手動で設定していますが、表示される合計容量はハードクォータです。Is that correct？ | ○（ハードクォータが指定されている場合は、合計容量として表示されます） 
+| 同じ Qtree にソフト クォータとハード クォータの両方を手動で設定していますが、表示される合計容量はハード クォータです。これは正しいですか? | はい、ハード クォータが指定されている場合は、それが合計容量として表示されます。 
 
 
-| Cognosのレポートスケジュールの時間を入力すると、スケジュールの時間に「m」が余分に表示されることがあります。たとえば、時刻を「02:15 PM」と入力すると、「02:15 PMM」（またはPMM）という余分な文字が追加されます。外をクリックすると、「2:15 AM」に変わります。レポートを保存することはできますが、保存したレポートを再度開くと、スケジュール時刻にAMとPMのどちらを入力したかに関係なく、スケジュール時刻はAM（午前）と表示されます。 | 「AM」または「PM」の文字を完全に入力しないように注意して、スケジュール時刻を再入力します。「AM」は「A」、「PM」は「P」と入力するだけで十分です。余分な文字が表示されない場合は、スケジュール時刻が正しく設定されます。 
+| Cognos レポートのスケジュール時間を入力すると、スケジュール時間に余分な「m」が入ってしまうことがあります。たとえば、時間を「02:15 PM」と入力すると、「02:15 PMM」(または PMm) という余分な文字が追加されることがあります。外側をクリックすると、「午前 2:15」に変わります。レポートを保存することはできますが、保存したレポートを再度開くと、スケジュール時間に AM と PM のどちらを入力したかに関係なく、スケジュール時間は AM (午前) として表示されます。 | スケジュール時刻を再入力します。「AM」または「PM」の文字をすべて入力しないように注意してください。「AM」の場合は「A」、「PM」の場合は「P」と入力するだけで十分です。余分な文字が表示されない場合は、スケジュール時間は正しく設定されています。 
 |===
 
 
@@ -66,10 +66,10 @@ keywords: troubleshooting, problems, browser, login, log in, accessing, access t
 
 追加のトラブルシューティングのヒントについては、link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["NetAppナレッジベース"] (サポートへのサインインが必要です)。
 
-その他のサポート情報については、Data Infrastructure Insightsのページを参照してlink:concept_requesting_support.html["サポート"]ください。
+追加のサポート情報は、Data Infrastructure Insightsから入手できます。link:concept_requesting_support.html["サポート"]ページ。
 
-Data Infrastructure Insightsのアクティブなサブスクリプションをお持ちの場合は、次のサポートオプションをご利用いただけます。
+アクティブなData Infrastructure Insightsサブスクリプションをお持ちの場合は、次のサポート オプションを使用できます。
 
 link:https://www.netapp.com/us/contact-us/support.aspx["電話番号"] link:https://mysupport.netapp.com/site/cases/mine/create?serialNumber=95001014387268156333["サポートチケット"]
 
-詳細については、を参照して https://docs.netapp.com/us-en/cloudinsights/concept_requesting_support.html["Data Infrastructure Insightsサポートドキュメント"]ください。
+詳細については、 https://docs.netapp.com/us-en/cloudinsights/concept_requesting_support.html["Data Infrastructure Insightsサポートドキュメント"] 。

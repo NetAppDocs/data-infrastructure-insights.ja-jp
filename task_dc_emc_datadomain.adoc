@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: task_dc_emc_datadomain.html 
 keywords: data collector, Data Domain, EMC, DELL 
-summary: Dell EMC Data Domain データコレクタの設定。 
+summary: DELL EMC Data Domain データ コレクターを構成します。 
 ---
-= Dell EMC Data Domain データコレクタ
+= DELL EMC Data Domain データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-このデータコレクタは、 Dell EMC Data Domain 重複排除ストレージシステムからインベントリとパフォーマンスの情報を収集します。このデータコレクタを設定するには、特定の設定手順と使用に関する推奨事項に従う必要があります。
+このデータ コレクターは、DELL EMC Data Domain 重複排除ストレージ システムからインベントリとパフォーマンス情報を収集します。このデータ コレクターを構成するには、特定の構成手順と使用上の推奨事項に従う必要があります。
 
 
 
 == 用語
 
-Data Infrastructure Insightsは、Data Domainデータコレクタから次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+Data Infrastructure Insights は、 Data Domain データ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
 [cols="2*"]
 |===
-| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
 
 | ディスク | ディスク 
@@ -32,25 +32,25 @@ Data Infrastructure Insightsは、Data Domainデータコレクタから次の�
 | FCポート | ポート 
 
 
-| File System の略 | 内部ボリューム 
+| ファイルシステム | 内部容積 
 
 
 | クォータ | クォータ 
 
 
-| NFS 共有および CIFS 共有 | ファイル共有 
+| NFSとCIFSの共有 | ファイルシェア 
 |===
-注意：これらは一般的な用語のマッピングのみであり、このデータ照合のすべてのケースを表しているわけではありません。
+注: これらは一般的な用語のマッピングのみであり、このデータ収集ツールのすべてのケースを反映しているわけではありません。
 
 
 
 == 要件
 
-このデータコレクタを設定するには、次の情報が必要です。
+このデータ コレクターを構成するには、次の情報が必要です。
 
-* Data Domain デバイスの IP アドレス
-* Data Domain ストレージに対する読み取り専用のユーザ名とパスワード
-* SSHポート22
+* Data DomainデバイスのIPアドレス
+* Data Domainストレージへの読み取り専用ユーザー名とパスワード
+* SSH、ポート22
 
 
 
@@ -59,16 +59,16 @@ Data Infrastructure Insightsは、Data Domainデータコレクタから次の�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
 | IPアドレス | Data Domain ストレージアレイの IP アドレスまたは完全修飾ドメイン名 
 
 
-| ユーザ名 | Data Domain ストレージアレイのユーザ名 
+| ユーザ名 | Data Domainストレージアレイのユーザー名 
 
 
-| パスワード | Data Domain ストレージアレイのパスワード 
+| パスワード | Data Domainストレージアレイのパスワード 
 |===
 
 
@@ -76,16 +76,16 @@ Data Infrastructure Insightsは、Data Domainデータコレクタから次の�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| インベントリポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは20です。 
+| インベントリポーリング間隔（分） | インベントリ ポーリングの間隔。デフォルトは 20 です。 
 
 
-| SSHポート | SSH サービスポート 
+| SSHポート | SSHサービスポート 
 |===
 
 
 == トラブルシューティング
 
-このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

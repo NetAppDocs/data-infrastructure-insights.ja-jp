@@ -2,46 +2,46 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_hadoop.html 
 keywords: telegraf, installation, install, Hadoop 
-summary: Hadoop のデータコレクタの設定 
+summary: Hadoopデータコレクターの構成 
 ---
-= Hadoop Data Collector
+= Hadoop データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、このデータコレクタを使用してHadoopから指標を収集します。
+Data Infrastructure Insights は、このデータ コレクターを使用して Hadoop からメトリックを収集します。
 
 
 
 == インストール
 
-. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。Hadoopを選択します。
+. *Observability > Collectors* から、*+ Data Collector* をクリックします。  Hadoop を選択します。
 +
-Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+Telegraf エージェントがインストールされているオペレーティング システムまたはプラットフォームを選択します。
 
-. コレクション用エージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[_Show Instructions_]をクリックして手順を展開しlink:task_config_telegraf_agent.html["エージェントのインストール"]ます。
-. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
-. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+. 収集用のエージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[手順を表示] をクリックして展開します。link:task_config_telegraf_agent.html["エージェントのインストール"]説明書。
+. このデータ コレクターで使用するエージェント アクセス キーを選択します。 *+ エージェント アクセス キー* ボタンをクリックすると、新しいエージェント アクセス キーを追加できます。ベスト プラクティス: データ コレクターを OS/プラットフォーム別などにグループ化する場合にのみ、異なるエージェント アクセス キーを使用します。
+. 構成手順に従ってデータ コレクターを構成します。手順は、データ収集に使用しているオペレーティング システムまたはプラットフォームの種類によって異なります。
 
 
-image:HadoopDCConfigLinux-1.png["Hadoop 構成"] image:HadoopDCConfigLinux-2.png["Hadoop 構成"]
+image:HadoopDCConfigLinux-1.png["Hadoopの設定"] image:HadoopDCConfigLinux-2.png["Hadoopの設定"]
 
 
 
 == セットアップ
 
-Hadoop を完全に導入するには、次のコンポーネントが必要です。
+完全な Hadoop の展開には、次のコンポーネントが含まれます。
 
-* NameNode ： Hadoop 分散型ファイルシステム（ HDFS ）プライマリシステム。一連の DataNode を調整します。
-* セカンダリ NameNode ：メイン NameNode のウォームフェイルオーバー。Hadoop では、 NameNode への昇格は自動的には行われません。セカンダリ NameNode は、必要に応じてプロモート可能な状態にするために、 NameNode から情報を収集します。
-* DataNode ：データの実際の所有者。
-* ResourceManager ：コンピューティングのプライマリシステム（ yarn ）。一連の NodeManager を調整します。
-* NodeManager ：コンピューティング用のリソース。アプリケーションを実行するための実際の場所。
-* JobHistoryServer ：ジョブ履歴に関連するすべての要求の処理を担当します。
+* NameNode: Hadoop 分散ファイル システム (HDFS) のプライマリ システム。一連の DataNode を調整します。
+* セカンダリ NameNode: メイン NameNode のウォーム フェイルオーバー。 Hadoop では、NameNode への昇格は自動的には行われません。セカンダリ NameNode は、必要に応じて昇格できるように NameNode から情報を収集します。
+* DataNode: データの実際の所有者。
+* ResourceManager: コンピューティング プライマリ システム (Yarn)。一連の NodeManager を調整します。
+* NodeManager: コンピューティングのリソース。アプリケーションを実行する実際の場所。
+* JobHistoryServer: すべてのジョブ履歴関連のリクエストを処理する役割を担います。
 
 
-Hadoop プラグインは、テレグラムの Jolokia プラグインに基づいています。すべての Hadoop コンポーネントから情報を収集するための要件など、 JMX はすべてのコンポーネントで Jolokia 経由で設定および公開する必要があります。
+Hadoop プラグインは、Telegraf の Jolokia プラグインに基づいています。すべての Hadoop コンポーネントから情報を収集する必要があるため、すべてのコンポーネントで Jolokia 経由で JMX を構成して公開する必要があります。
 
 
 
@@ -51,21 +51,21 @@ Hadoop プラグインは、テレグラムの Jolokia プラグインに基づ�
 
 
 
-=== セットアップ中です
+=== セットアップ
 
 
 
-==== Jolokia エージェント JAR
+==== ジョロキアエージェントジャー
 
-個々のコンポーネントについては、 Jolokia エージェント jar ファイルのバージョンをダウンロードする必要があります。テストされたバージョンはでしたlink:https://jolokia.org/download.html["Jolokia 代理店 1.6.0"]。
+すべての個別コンポーネントについて、Jolokia エージェント jar ファイルのバージョンをダウンロードする必要があります。テスト対象のバージョンはlink:https://jolokia.org/download.html["Jolokia エージェント 1.6.0"]。
 
-以下の手順では、ダウンロードした jar ファイル（ jolokia-jvm-1.6.0-agent.jar ）が「 /opt/hadoop /lib/' 」の下に配置されると想定しています。
+以下の手順では、ダウンロードした jar ファイル (jolokia-jvm-1.6.0-agent.jar) が '/opt/hadoop/lib/' の場所に配置されていることを前提としています。
 
 
 
-==== NameNode
+==== ネームノード
 
-Jolokia API が公開されるように NameNode を設定するには、 <hadoop home>/etc/hadoop /hadoop -env.sh で次のセットアップを行います。
+NameNode を設定して Jolokia API を公開するには、<HADOOP_HOME>/etc/hadoop/hadoop-env.sh で次のように設定します。
 
 [listing]
 ----
@@ -74,9 +74,9 @@ You can choose a different port for JMX (8000 above) and Jolokia (7800). If you 
 ----
 
 
-==== セカンダリ NameNode
+==== セカンダリネームノード
 
-セカンダリ NameNode で Jolokia API を公開するように設定するには、 <hadoop home>/etc/hadoop /hadoop -env.sh で次のように設定します。
+セカンダリ NameNode が Jolokia API を公開するように設定するには、<HADOOP_HOME>/etc/hadoop/hadoop-env.sh で次のように設定します。
 
 [listing]
 ----
@@ -85,9 +85,9 @@ You can choose a different port for JMX (8002 above) and Jolokia (7802). If you 
 ----
 
 
-==== DataNode
+==== データノード
 
-Jolokia API が公開されるように DataNode を設定するには、 <hopp_home>/etc/hadoop /hadoop -env.sh に以下のセットアップを行います。
+Jolokia API を公開するように DataNode を構成するには、<HADOOP_HOME>/etc/hadoop/hadoop-env.sh で次のように設定します。
 
 [listing]
 ----
@@ -96,9 +96,9 @@ You can choose a different port for JMX (8001 above) and Jolokia (7801). If you 
 ----
 
 
-==== ResourceManager の略
+==== リソースマネージャー
 
-ResourceManager で Jolokia API を公開するように設定するには、 <hadoop HOME>//etc/hadoop /hadoop -env.sh で次の設定を行うことができます。
+ResourceManager が Jolokia API を公開するように設定するには、<HADOOP_HOME>/etc/hadoop/hadoop-env.sh で次のように設定します。
 
 [listing]
 ----
@@ -107,9 +107,9 @@ You can choose a different port for JMX (8003 above) and Jolokia (7803). If you 
 ----
 
 
-==== NodeManager
+==== ノードマネージャー
 
-Jolokia API を公開するように NodeManager を設定するには、 <hadoop home>/etc/hadoop /hadoop -env.sh で次の設定を行うことができます。
+Jolokia API を公開するように NodeManagers を構成するには、<HADOOP_HOME>/etc/hadoop/hadoop-env.sh で次のように設定します。
 
 [listing]
 ----
@@ -118,9 +118,9 @@ You can choose a different port for JMX (8004 above) and Jolokia (7804). If you 
 ----
 
 
-==== JobHistoryServer
+==== ジョブ履歴サーバー
 
-JobHistoryServer で Jolokia API を公開するように設定するには、 <hadoop home>/etc/hadoop /hadoop -env.sh で次の設定を行うことができます。
+JobHistoryServer が Jolokia API を公開するように設定するには、<HADOOP_HOME>/etc/hadoop/hadoop-env.sh で次のように設定します。
 
 [listing]
 ----
@@ -129,34 +129,34 @@ You can choose a different port for JMX (8005 above) and Jolokia (7805). If you 
 ----
 
 
-== オブジェクトとカウンタ
+== オブジェクトとカウンター
 
-次のオブジェクトとそのカウンタが収集されます。
+次のオブジェクトとそのカウンターが収集されます。
 
 [cols="<.<,<.<,<.<"]
 |===
-| オブジェクト： | 識別子： | 属性： 
+| オブジェクト | 識別子: | 属性: 
 
 
-| Hadoop セカンダリ NameNode | クラスタネームスペースサーバ | ノード名ノード IP コンパイル情報バージョン 
+| Hadoop セカンダリネームノード | クラスター名前空間サーバー | ノード名 ノードIP コンパイル情報 バージョン 
 
 
-| Hadoop ノードマネージャ | クラスタネームスペースサーバ | ノード名ノード IP 
+| Hadoop ノードマネージャー | クラスター名前空間サーバー | ノード名 ノードIP 
 
 
-| Hadoop ResourceManager | クラスタネームスペースサーバ | ノード名ノード IP 
+| Hadoop リソースマネージャー | クラスター名前空間サーバー | ノード名 ノードIP 
 
 
-| Hadoop DataNode | クラスタネームスペースサーバ | ノード名ノード IP クラスタ ID バージョン 
+| Hadoop データノード | クラスター名前空間サーバー | ノード名 ノードIP クラスタID バージョン 
 
 
-| Hadoop NameNode | クラスタネームスペースサーバ | ノード名ノード IP トランザクション ID 前回の書き込み時間最後にロードしたあとの編集 HA 状態ファイルシステム状態ブロックプール ID クラスタ ID コンパイル情報別バージョン数 
+| Hadoop ネームノード | クラスター名前空間サーバー | ノード名 ノードIP トランザクションID 最終書き込み 最終ロード以降の時間 編集 HA状態 ファイルシステム状態 ブロックプールID クラスタID コンパイル情報 個別バージョン数 バージョン 
 
 
-| Hadoop ジョブ履歴サーバ | クラスタネームスペースサーバ | ノード名ノード IP 
+| Hadoop ジョブ履歴サーバー | クラスター名前空間サーバー | ノード名 ノードIP 
 |===
 
 
 == トラブルシューティング
 
-詳細については、ページを参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページ。

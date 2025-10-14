@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference_object_icons.html 
-summary: Data Infrastructure Insightsオブジェクトアイコン 
+summary: Data Infrastructure Insightsオブジェクト アイコンのリファレンス。 
 keywords: icons, assets, objects, reference, map 
 ---
 = オブジェクトアイコンリファレンス
@@ -14,22 +14,22 @@ keywords: icons, assets, objects, reference, map
 
 
 [role="lead"]
-Data Infrastructure Insightsで使用されるオブジェクトアイコン。
+Data Infrastructure Insightsで使用されるオブジェクト アイコン。
 
 
 
-== インフラストラクチャアイコン：
+== インフラストラクチャアイコン:
 
-image:Icon_Glossary.png["インフラストラクチャアイコン参照"]
-
-
-
-== Kubernetesのアイコン：
-
-image:K8sIconsWithLabels.png["Kubernetesアイコンリファレンス、幅= 180"]
+image:Icon_Glossary.png["インフラストラクチャアイコンリファレンス"]
 
 
 
-== Kubernetesのネットワークパフォーマンスの監視とマップアイコン：
+== Kubernetes アイコン:
 
-image:ServiceMap_Icons.png["Kubernetes Network Performance Monitoring and Map、width=640"]
+image:K8sIconsWithLabels.png["Kubernetes アイコンリファレンス、幅=180"]
+
+
+
+== Kubernetes ネットワーク パフォーマンス監視とマップ アイコン:
+
+image:ServiceMap_Icons.png["Kubernetes ネットワークパフォーマンス監視とマップ、幅 = 640"]

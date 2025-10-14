@@ -2,39 +2,39 @@
 sidebar: sidebar 
 permalink: kubernetes_node_detail.html 
 keywords: k8s, pods, clusters, nodes. troubleshooting, planning 
-summary: Kubernetes ノードの詳細ページでは、バックエンドの PV ストレージとポッドストレージに関する情報を確認できます。 
+summary: Kubernetes ノードの詳細ページでは、バックエンドの PV と Pod ストレージの詳細情報が提供されます。 
 ---
-= Kubernetes Node Detail ページ
+= Kubernetes ノードの詳細ページ
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Kubernetes Explorer でノードアイコンをクリックすると、そのノードの詳細情報ページを開くことができます。このページでは、ノードに関する情報のほか、 VM 、ポッド、コンテナに関する情報を確認できます。
+Kubernetes Explorer では、ノード アイコンをクリックすると、そのノードの詳細情報ページが開きます。このページでは、ノードに関する情報を表示できるほか、VM、ポッド、コンテナの情報を調べることもできます。
 
-image:KubernetesNodeFiltering.png["フィルタリングが表示された Kubernetes Node Detail ページ"]
+image:KubernetesNodeFiltering.png["Kubernetesノードの詳細ページにフィルタリングが表示されている"]
 
 
 
-== ノードのポッドと永続的ボリュームの確認
+== ノードのポッドと永続ボリュームの調査
 
-Data Infrastructure Insightsは、Kubernetes環境のバックエンドストレージを可視化し、Kubernetesポッドと永続的ボリューム（PV）に関する分析情報を提供します。IOPS 、レイテンシ、スループットなどの PV カウンタは、単一ポッドでの使用量から PV カウンター、 PV 、バックエンドストレージデバイスへのすべての方法で追跡できます。
+Data Infrastructure Insights は、 Kubernetes 環境のバックエンド ストレージの可視性を提供し、Kubernetes Pod と永続ボリューム (PV) に関する分析情報を提供します。単一の Pod の使用状況から PV カウンター、PV、そしてバックエンド ストレージ デバイスに至るまで、IOPS、レイテンシー、スループットなどの PV カウンターを追跡できます。
 
-PVレベルでは、Data Infrastructure Insightsがバックエンド（PVタイプに応じて内部ボリュームまたはボリューム）の容量情報（合計、使用済み、使用率）と内部ボリュームのSnapshot数を収集します。ポッドからストレージレベルでは、バックエンドの容量と内部ボリュームの Snapshot 数を収集します。
+PV レベルでは、 Data Infrastructure Insights はバックエンド (PV タイプに応じて内部ボリュームまたはボリューム) の容量情報 (合計、使用済み、使用率) と内部ボリュームのスナップショット数を収集します。  Pod からストレージ レベルでは、バックエンドの容量と内部ボリュームのスナップショット数を収集します。
 
-ボリュームまたは内部ボリュームのランディングページには、次の 2 つのテーブルが表示されます。
+ボリュームまたは内部ボリュームのランディング ページには、次の 2 つのテーブルが表示されます。
 
 image:Kubernetes_PV_Table.png["Kubernetes PV テーブル"] image:Kubernetes_Pod_Table.png["Kubernetes ポッドテーブル"]
 
 
-NOTE: ボリュームまたは内部ボリュームのランディングページをカスタマイズしている場合は、 PV テーブルとポッドテーブルが自動的に表示されないことがあります。これらのテーブルを表示するには、ページをデフォルトに戻す必要があります。デフォルトに戻すと、 PV テーブルとポッドテーブルが表示されます。その後、必要に応じてページを再カスタマイズできます。
+NOTE: ボリュームまたは内部ボリュームのランディング ページをカスタマイズしている場合は、PV テーブルと Pod テーブルが自動的に表示されないことがあります。これらのテーブルを表示するには、ページをデフォルトに戻す必要があります。その時点で、PV テーブルと Pod テーブルが表示されます。その後、必要に応じてページを再度カスタマイズできます。
 
-これらの新しいテーブルを利用するには、現在の Kubernetes エージェントをアンインストールして新規にインストールすることをお勧めします。Kbe State-Metrics バージョン 2.1.0 以降もインストールする必要があります。
+これらの新しいテーブルを活用するには、現在の Kubernetes エージェントをアンインストールして、新規にインストールすることをお勧めします。  Kube-State-Metrics バージョン 2.1.0 以降もインストールする必要があります。
 
 
 
-== Kubernetes ノードから VM リンク
+== Kubernetes ノードから VM へのリンク
 
-Kubernetes Node ページで、をクリックしてノードの VM ページを開くことができます。VM ページには、ノード自体へのリンクも表示されます。
+Kubernetes ノード ページでクリックすると、ノードの VM ページが開きます。  VM ページには、ノード自体へのリンクも含まれています。
 
-image:Kubernetes_Node_Page_with_VM_Link.png["VM リンクが表示された Kubernetes ノードページ"] image:Kubernetes_VM_Page_with_Node_Link.png["ノードリンクを示す Kubernetes VM ページ"]
+image:Kubernetes_Node_Page_with_VM_Link.png["VMリンクを表示するKubernetesノードページ"] image:Kubernetes_VM_Page_with_Node_Link.png["ノードリンクが表示されているKubernetes VMページ"]

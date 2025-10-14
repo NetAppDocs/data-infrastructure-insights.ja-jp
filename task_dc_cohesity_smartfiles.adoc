@@ -2,15 +2,15 @@
 sidebar: sidebar 
 permalink: task_dc_cohesity_smartfiles.html 
 keywords: data collector, cohesity 
-summary: Cohesity SmartFilesデータコレクタの構成。 
+summary: Cohesity SmartFiles データ コレクターを構成します。 
 ---
-= Cohesity SmartFilesデータコレクタ
+= Cohesity SmartFiles データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-このREST APIベースのコレクタはCohesityクラスタを取得し、「ビュー」（Data Infrastructure Insightsの内部ボリューム）、各種ノードを検出し、パフォーマンス指標を収集します。
+この REST API ベースのコレクターは、Cohesity クラスターを取得し、「ビュー」(Data Infrastructure Insightsの内部ボリュームとして) やさまざまなノードを検出し、パフォーマンス メトリックを収集します。
 
 
 
@@ -18,16 +18,16 @@ summary: Cohesity SmartFilesデータコレクタの構成。
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| Cohesity Cluster IPの略 | CohesityクラスタのIPアドレス 
+| Cohesity クラスタ IP | Cohesity クラスタの IP アドレス 
 
 
-| ユーザー名 | Cohesityクラスタのユーザ名 
+| ユーザー名 | Cohesity クラスタのユーザー名 
 
 
-| パスワード | Cohesityクラスタに使用するパスワード 
+| パスワード | Cohesity クラスタで使用するパスワード 
 |===
 
 
@@ -35,19 +35,19 @@ summary: Cohesity SmartFilesデータコレクタの構成。
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| TCPポート | CohesityクラスタとのTCP通信に使用するポート 
+| TCPポート | Cohesity クラスタとの TCP 通信に使用されるポート 
 
 
-| インベントリポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは60分です。 
+| インベントリポーリング間隔（分） | インベントリ ポーリングの間隔。デフォルトは60分です。 
 
 
-| パフォーマンスポーリング間隔（分） | パフォーマンスのポーリング間隔デフォルトは900秒です。 
+| パフォーマンスポーリング間隔（分） | パフォーマンス ポーリングの間隔。デフォルトは900秒です。 
 |===
 
 
 == トラブルシューティング
 
-詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: nkmo_clusterrole_yaml.html 
 keywords: NKMO, yaml, 
-summary: NKMOクラスタロールのYAMLファイルの例 
+summary: NKMO ClusterroleのYAMLファイルの例 
 ---
-= NKMOクラスタロールYAMLの例
+= NKMO Clusterrole YAML の例
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
 
 
 [role="lead"]
-NetApp Kubernetes Monitoring Operator（NKMO）の_kubectl_コンポーネントは、少なくとも次のKubernetesオブジェクトにアクセスできるように設定する必要があります。エージェント、クラスタロール、クラスタロールバインド、カスタムリソース定義、導入、 ネームスペース'ロール'ロールバインド'シークレット'サービスアカウント' サービスを提供します。以下は最小権限を持つクラスタロールの例です。
+NetApp Kubernetes Monitoring Operator (NKMO) の _kubectl_ コンポーネントは、少なくとも、エージェント、clusterroles、clusterrolebindings、customresourcedefinitions、デプロイメント、ネームスペース、ロール、ロールバインディング、シークレット、サービス アカウント、およびサービスなどの Kubernetes オブジェクトへのアクセスが設定される必要があります。以下は、これらの最小限の権限を持つ clusterrole の例です。
 
 [listing]
 ----

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_cloud_insights_onboarding_1.html 
-summary: Data Infrastructure Insightsにサインアップしてテナントを作成しましょう。 
+summary: Data Infrastructure Insightsにサインアップし、テナントを作成します。 
 keywords: onboarding, new user 
 ---
-= データインフラの分析情報をオンボーディング
+= Data Infrastructure Insightsインサイトオンボーディング
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,50 +14,50 @@ keywords: onboarding, new user
 
 
 [role="lead"]
-Data Infrastructure Insightsの使用を開始する前に、* NetApp Console* ポータルにサインアップする必要があります。  NetAppコンソールのログイン情報をすでにお持ちの場合は、簡単な手順でData Infrastructure Insightsの無料トライアルを開始できます。
+Data Infrastructure Insightsの使用を開始する前に、* NetApp Console* ポータルにサインアップする必要があります。  NetApp Consoleのログイン情報をすでにお持ちの場合は、簡単な手順でData Infrastructure Insightsの無料トライアルを開始できます。
 
 
 
-== NetAppコンソールアカウントの作成
+== NetApp Consoleアカウントの作成
 
-NetAppのクラウドサービスを開始するには、link:https://console.netapp.com/["* NetAppコンソール*"^] *開始*をクリックします。
+NetAppのクラウドサービスを開始するには、link:https://console.netapp.com/["* NetApp Console*"^] *開始*をクリックします。
 
-* まだサインアップしていない場合は、*サインアップ*を選択します
-* 有効なビジネス用 E メールアドレスを入力し、パスワードを選択してください。
-* 会社名と氏名を入力します。
-* 利用条件に同意し、* Continue（続行）*を選択します。
+* まだサインアップしていない場合は、「サインアップ」を選択してください
+* 有効なビジネス用メールアドレスを入力し、パスワードを選択してください。
+* 会社名と氏名を入力してください。
+* 利用規約に同意して、[続行] を選択します。
 * コンソールで開始手順を説明します。
 
 
 
 
-=== すでにNetAppコンソール ログインを持っている場合はどうなりますか?
+=== すでにNetApp Consoleログインを持っている場合はどうなりますか?
 
-NetAppコンソールアカウントを取得したら、link:https://console.netapp.com/["* NetAppコンソール*"^]ポータルページ。
+NetApp Consoleアカウントを取得したら、link:https://console.netapp.com/["* NetApp Console*"^]ポータルページ。
 
-E メールアドレスとパスワードを入力します。その後、ネットアップのクラウドサービスに関するページに移動します。
+メールアドレスとパスワードを入力してください。次に、NetApp のクラウド オファリング ページに移動します。
 
 Data Infrastructure Insightsの詳細を確認したり、デモをリクエストしたりするには、「分析と制御」 > 「可観測性」に移動してください。
 
 
 
-== Data Infrastructure Insights無償トライアルを開始する
+== Data Infrastructure Insightsの無料トライアルを開始する
 
-Data Infrastructure Insightsに初めてログインする場合は、[Data Infrastructure Insights Offering]で*[Start Free Trial]*をクリックします。Data Infrastructure Insightsでは、テナントを配置する地域の選択など、企業のテナントを作成する手順を説明します。
+Data Infrastructure Insightsに初めてログインする場合は、 Data Infrastructure Insightsオファーの下にある *無料トライアルを開始* をクリックします。  Data Infrastructure Insights、テナントを配置するリージョンの選択など、会社のテナントの作成手順を案内します。
 
 image:trial_region_selector.png["Data Infrastructure Insightsテナントをホストするリージョンの選択"]
 
 テナントの作成が完了したら、コンソールの資格情報を使用してログインし、 Data Infrastructure Insightsの 30 日間無料トライアルを開始します。このトライアル期間中、 Data Infrastructure Insightsが提供する機能を試すことができます。
 
-無償トライアルでは、link:concept_subscribing_to_cloud_insights.html["サブスクリプションを開始します"]Data Infrastructure Insightsをいつでも試すことができます。サブスクリプションを購入すると、現在のサブスクリプションに基づいてData Infrastructure Insightsの機能を使用できます。
+無料トライアル期間中は、link:concept_subscribing_to_cloud_insights.html["購読を開始する"]いつでもData Infrastructure Insightsにアクセスできます。サブスクライブすると、現在のサブスクリプションに基づいてData Infrastructure Insights機能を使用できます。
 
 
 
-== サインインして実行します
+== Sign inて出発
 
-テナントが作成されると、いつでもNetAppコンソールポータルにログインして、link:https://services.cloud.netapp.com["クラウド サービス"]ページに移動し、「*Data Infrastructure Insightsに移動*」を選択します。
+テナントが作成されると、いつでもNetApp Consoleポータルにログインして、link:https://services.cloud.netapp.com["クラウド サービス"]ページに移動し、「*Data Infrastructure Insightsに移動*」を選択します。
 
-ブラウザを開いて、Data Infrastructure InsightsのテナントURLに直接アクセスすることもできます。次に例を示します。
+ブラウザを開いて、 Data Infrastructure Insightsテナント URL に直接アクセスすることもできます。次に例を示します。
 
  \https://<tenant-prefix>.c01.cloudinsights.netapp.com/
 簡単にアクセスしてブックマークできるように、各ユーザーの招待メールにも URL が含まれます。ユーザーがまだコンソールにログインしていない場合は、ログインするように求められます。
@@ -65,11 +65,11 @@ image:trial_region_selector.png["Data Infrastructure Insightsテナントをホ�
 
 NOTE: 新しいユーザーは、テナント URL にアクセスする前に、コンソールへのアクセスにサインアップする必要があります。
 
-新しいテナントに初めてログインするときは、をセットアップする手順が表示されますlink:task_getting_started_with_cloud_insights.html["* データの収集を開始 *"]。
+新しいテナントに初めてログインすると、設定のガイドが表示されます。link:task_getting_started_with_cloud_insights.html["*データ収集を開始*"] 。
 
 
 
-== ログアウトしています
+== ログアウト
 
 Data Infrastructure Insightsからログアウトするには、*ユーザー名* をクリックし、*ログアウト* を選択します。コンソールのサインイン画面に戻ります。
 

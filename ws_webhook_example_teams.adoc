@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: ws_webhook_example_teams.html 
 keywords: webhook, notification, Microsoft, Teams, integration 
-summary: Microsoft Teams用のワークロードセキュリティWebhookを作成してセキュリティを警告 
+summary: Microsoft Teams のセキュリティに関するアラートを通知するための Workload Security Webhook を作成する 
 ---
-= Microsoft Teams向けのワークロードセキュリティWebhookの例
+= Microsoft Teams のワークロード セキュリティ Webhook の例
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,47 +14,47 @@ summary: Microsoft Teams用のワークロードセキュリティWebhookを作�
 
 
 [role="lead"]
-Webhook を使用すると、ユーザーはカスタマイズされた webhook チャネルを使用して、さまざまなアプリケーションにアラート通知を送信できます。このページでは、チームの Web フックを設定する例を示します。
+Webhook を使用すると、ユーザーはカスタマイズされた Webhook チャネルを使用してさまざまなアプリケーションにアラート通知を送信できます。このページでは、Teams の Webhook を設定する例を示します。
 
 
-NOTE: このページはサードパーティの指示を参照していますが、これらは変更される可能性があります。最新の情報については、を参照してlink:https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook["チームのドキュメント"]ください。
+NOTE: このページはサードパーティの指示を参照しており、変更される可能性があります。参照link:https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook["Teamsドキュメント"]最新情報についてはこちらをご覧ください。
 
 
 
-== チームの設定：
+== Teams のセットアップ:
 
-. チームで、 kebab を選択し、着信 Webhook を検索します。
+. Teams でケバブを選択し、Incoming Webhook を検索します。
 +
-image:Webhooks_Teams_Create_Webhook.png["チーム内の着信 Webhook"]
+image:Webhooks_Teams_Create_Webhook.png["Teams での受信 Webhook"]
 
-. [ チームに追加（ Add to a Team ） ] > [ チームを選択（ Select a Team ） ] > [ コネクタのセットアップ（ Setup a Connector ） ]
-. Webhook URL をコピーします。これをワークロードセキュリティのWebhook設定に貼り付ける必要があります。
-
-
+. *チームに追加 > チームを選択 > コネクタの設定*を選択します。
+. Webhook URL をコピーします。これを Workload Security Webhook 設定に貼り付ける必要があります。
 
 
-== ワークロードセキュリティチームの作成Webhook：
 
-. [Admin]>[Notifications]に移動し、[Workload Security webhooks_tab]を選択します。[_+Webhook_]を選択して、新しいWebhookを作成します。
-. Webhookに意味のある名前を付けます。
-. [_Template Type_] ドロップダウンで、 [*Teams] を選択します。
+
+== ワークロード セキュリティ チームの Webhook を作成します。
+
+. 「管理」>「通知」に移動し、「Workload Security Webhooks」タブを選択します。新しい Webhook を作成するには、[_+ Webhook_] を選択します。
+. Webhook に意味のある名前を付けます。
+. [_テンプレート タイプ_] ドロップダウンで、[*Teams*] を選択します。
 +
-image:ws_webhook_teams_example.png["ワークロードセキュリティチームのWebhookの例"]
+image:ws_webhook_teams_example.png["ワークロード セキュリティ チームの Webhook の例"]
 
-. 上の URL を _url_field に貼り付けます。
-
-
+. 上記の URL を _URL_ フィールドに貼り付けます。
 
 
-== Webhook で通知します
-
-Webhookでイベントを通知するには、_Workload Security > Policies_に移動します。[_+Attack Policy_]または[_+Warning Policy_]を選択します。
-
-* わかりやすいポリシー名を入力します。
-* [Required Attack Type(s)]、[Devices to which policy should be attached、および[Required Actions]を選択します。
-* _webhooks Notifications_Dropdownで、必要なチームのWebhookを選択します。ポリシーを保存します。
 
 
-注: Webhookは、既存のポリシーを編集して適用することもできます。
+== Webhook経由の通知
 
-image:ws_add_attack_policy.png["Webhookを表示する攻撃ポリシーの追加ダイアログ"]
+Webhook 経由でイベントを通知するには、[_Workload Security_] > [ポリシー] に移動します。  _+攻撃ポリシー_または_+警告ポリシー_を選択します。
+
+* 意味のあるポリシー名を入力します。
+* 必要な攻撃タイプ、ポリシーを適用するデバイス、および必要なアクションを選択します。
+* [_Webhooks Notifications_] ドロップダウンで、必要な Teams Webhook を選択します。ポリシーを保存します。
+
+
+注: Webhook は、編集することで既存のポリシーに添付することもできます。
+
+image:ws_add_attack_policy.png["Webhook を表示する攻撃ポリシー ダイアログを追加する"]

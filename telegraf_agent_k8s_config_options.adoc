@@ -4,7 +4,7 @@ permalink: telegraf_agent_k8s_config_options.html
 keywords: telegraf, installation, install, agent, telegraf agent, kubernetes, eks, operator, k8s, options, configuration 
 summary: AgentConfiguration オプションを使用してNetApp Kubernetes Monitoring Operator を構成します。 
 ---
-= Kubernetes監視オペレータの設定オプション
+= Kubernetes モニタリング オペレーターの設定オプション
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,199 +14,199 @@ summary: AgentConfiguration オプションを使用してNetApp Kubernetes Moni
 
 
 [role="lead"]
-そのlink:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Kubernetes監視オペレータ"] AgentConfiguration ファイルを通じて、幅広いカスタマイズオプションが提供されます。リソース制限、収集間隔、プロキシ設定、許容値、コンポーネント固有の設定を構成して、Kubernetes 環境の監視を最適化できます。これらのオプションを使用して、Telegraf、kube-state-metrics、ログ収集、ワークロードマッピング、変更管理、その他の監視コンポーネントをカスタマイズできます。
+そのlink:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Kubernetes モニタリング オペレーター"] AgentConfiguration ファイルを通じて、幅広いカスタマイズオプションが提供されます。リソース制限、収集間隔、プロキシ設定、許容値、コンポーネント固有の設定を構成して、Kubernetes 環境の監視を最適化できます。これらのオプションを使用して、Telegraf、kube-state-metrics、ログ収集、ワークロードマッピング、変更管理、その他の監視コンポーネントをカスタマイズできます。
 
-次の表に、_AgentConfiguration_ファイルに使用できるオプションを示します。
+以下の表は、_AgentConfiguration_ ファイルの可能なオプションを示しています。
 
 [cols="1,1,2"]
 |===
-| コンポーネント | オプション | 製品説明 
+| コンポーネント | オプション | 説明 
 
 
-| エージェント |  | オペレータがインストールできるすべてのコンポーネントに共通の設定オプション。これらは「グローバル」オプションと見なすことができます。 
+| エージェント |  | オペレーターがインストールできるすべてのコンポーネントに共通の構成オプション。これらは「グローバル」オプションとみなすことができます。 
 
 
-|  | dockerrepo | Data Infrastructure Insights Dockerリポジトリではなく、お客様のプライベートDockerリポジトリからイメージをプルするためのdockerRepoオーバーライド。デフォルトはData Infrastructure Insights Dockerリポジトリです。 
+|  | dockerリポジトリ | Data Infrastructure Insights Dockerリポジトリではなく、お客様のプライベートDockerリポジトリからイメージをプルするためのdockerRepoオーバーライド。デフォルトはData Infrastructure Insights Dockerリポジトリです。 
 
 
-|  | dockerImagePullSecretの略 | オプション: 顧客のプライベート リポジトリのシークレット。 
+|  | dockerImagePullSecret | オプション: 顧客のプライベート リポジトリのシークレット。 
 
 
-|  | クラスタ名 | すべての顧客クラスターの中でクラスターを一意に識別するフリーテキストフィールドです。DataData Infrastructure Insightsテナント全体で一意である必要があります。デフォルトは、顧客がUIの「クラスター名」フィールドに入力した値です。 
+|  | クラスター名 | すべての顧客クラスターの中でクラスターを一意に識別するフリーテキストフィールドです。DataData Infrastructure Insightsテナント全体で一意である必要があります。デフォルトは、顧客がUIの「クラスター名」フィールドに入力した値です。 
 
 
-|  | プロキシ形式:プロキシ:サーバー:ポート:ユーザー名:パスワード: noProxy:isTelegrafProxyEnabled:isAuProxyEnabled:isFluentbitProxyEnabled:isCollectorProxyEnabled: | プロキシを設定する場合はオプションです。これは通常、顧客の法人代理店です。 
+|  | プロキシ形式: proxy: server: port: username: password: noProxy: isTelegrafProxyEnabled: isAuProxyEnabled: isFluentbitProxyEnabled: isCollectorProxyEnabled: | プロキシを設定するかどうかはオプションです。これは通常、顧客の企業プロキシです。 
 
 
-| テレグラフ |  | オペレータのTelegrafインストールをカスタマイズできる設定オプション 
+| テレグラフ |  | OperatorのTelegrafインストールをカスタマイズできる設定オプション 
 
 
-|  | collectionInterval | 指標収集間隔（秒）（最大=60秒） 
+|  | コレクション間隔 | メトリクス収集間隔（秒単位）（最大60秒） 
 
 
-|  | dsCpuLimit | Telegraf DSのCPU制限 
+|  | dsCPU制限 | Telegraf DS の CPU 制限 
 
 
 |  | dsMemLimit | Telegraf DSのメモリ制限 
 
 
-|  | dsCpuRequest | Telegraf DSのCPU要求 
+|  | dsCPUリクエスト | Telegraf DSのCPU要求 
 
 
 |  | dsMemRequest | Telegraf DSのメモリ要求 
 
 
-|  | rsCpuLimit | Telegraf RSのCPU制限 
+|  | rsCPU制限 | Telegraf RS の CPU 制限 
 
 
-|  | rsMemLimit | Telegraf RSのメモリ制限 
+|  | rsメモリ制限 | Telegraf RS のメモリ制限 
 
 
-|  | rsCpuRequest | Telegraf RSのCPU要求 
+|  | rsCPUリクエスト | Telegraf RSのCPU要求 
 
 
-|  | rsMemRequest | テレグラフRSのメモリ要求 
+|  | rsメモリリクエスト | Telegraf RS のメモリ要求 
 
 
-|  | runPrivileged | 特権モードでtelegrafデーモンセットの_telegraf-mountstats-poller_containerを実行します。KubernetesノードでSELinuxが有効になっている場合は、このパラメータをtrueに設定します。 
+|  | 特権実行 | telegraf DaemonSet の _telegraf-mountstats-poller_ コンテナを特権モードで実行します。  Kubernetes ノードで SELinux が有効になっている場合は、これを true に設定します。 
 
 
-|  | runDsPrivileged | 特権モードでtelegraf DaemonSetのtelegrafコンテナを実行するには、runDsPrivilegedをtrueに設定します。 
+|  | 特権実行 | telegraf DaemonSet の telegraf コンテナを特権モードで実行するには、runDsPrivileged を true に設定します。 
 
 
-|  | バッチサイズ | を参照し link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf設定ドキュメント"] 
+|  | バッチサイズ | 見るlink:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 設定ドキュメント"] 
 
 
-|  | BufferLimit | を参照し link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf設定ドキュメント"] 
+|  | バッファ制限 | 見るlink:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 設定ドキュメント"] 
 
 
-|  | RoundIntervalの略 | を参照し link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf設定ドキュメント"] 
+|  | ラウンド間隔 | 見るlink:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 設定ドキュメント"] 
 
 
-|  | collectionJitter | を参照し link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf設定ドキュメント"] 
+|  | コレクションジッター | 見るlink:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 設定ドキュメント"] 
 
 
-|  | 精度 | を参照し link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf設定ドキュメント"] 
+|  | 精度 | 見るlink:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 設定ドキュメント"] 
 
 
-|  | flushInterval（フラッシュ間隔） | を参照し link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf設定ドキュメント"] 
+|  | フラッシュ間隔 | 見るlink:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 設定ドキュメント"] 
 
 
-|  | FlushJitter（フラッシュジッタ | を参照し link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf設定ドキュメント"] 
+|  | フラッシュジッター | 見るlink:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 設定ドキュメント"] 
 
 
-|  | outputTimeout | を参照し link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf設定ドキュメント"] 
+|  | 出力タイムアウト | 見るlink:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 設定ドキュメント"] 
 
 
-|  | dsTolerations | Telegraf-DS追加の許容値。 
+|  | ds許容範囲 | telegraf-ds 追加の許容範囲。 
 
 
-|  | rsTolerations | Telegraf-RS追加許容値。 
+|  | rs許容範囲 | telegraf-rs 追加の許容範囲。 
 
 
-|  | skipProcessorsAfterAggregators | を参照し link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf設定ドキュメント"] 
+|  | アグリゲーター後のスキッププロセッサ | 見るlink:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 設定ドキュメント"] 
 
 
-|  | 保護なし | これを参照してください link:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["既知のTelegraf問題"]。 `--unprotected`フラグ。 
+|  | 保護なし | これを参照してください link:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["既知のTelegrafの問題"]。 `--unprotected`フラグ。 
 
 
-|  | insecureK8sSkipVerify | IP SANが不足しているためにtelegrafで証明書を検証できない場合は、検証スキップを有効にしてみてください。 
+|  | 安全でないK8sSkipVerify | IP SANの不足によりTelegrafが証明書を検証できない場合は、検証スキップを有効にしてみてください。 
 
 
-| kube-state-metricsの略 |  | Operatorのkube状態メトリックのインストールをカスタマイズできる設定オプション 
+| kube-state-metrics |  | Operatorのkube state metricsのインストールをカスタマイズできる設定オプション 
 
 
-|  | cpuLimit | kube-state-metricsデプロイメントのCPU制限 
+|  | CPU制限 | kube-state-metrics デプロイメントの CPU 制限 
 
 
-|  | memLimit | kube-state-metrics展開のメモリ制限 
+|  | メモリ制限 | kube-state-metrics デプロイメントのメモリ制限 
 
 
-|  | cpuRequest | kube state metrics deploymentのCPU要求 
+|  | CPUリクエスト | Kube 状態メトリックのデプロイメントに対する CPU 要求 
 
 
-|  | MemRequestの略 | KUBE状態メトリクス展開のためのMEM要求 
+|  | メモリリクエスト | Kube 状態メトリックのデプロイメントのメモリ要求 
 
 
-|  | リソース | キャプチャするリソースのカンマ区切りリスト。例：cronjobs、daemonsets、deployment、ingresses、jobs、namespace、nodes、persistentvolumes、pods、ReplicaSets、resourcequotas、services、statefulsets 
+|  | リソース | キャプチャするリソースのコンマ区切りリスト。例: cronjobs、daemonsets、deployments、ingresses、jobs、namespaces、nodes、persistentvolumeclaims、persistentvolumes、pods、replicasets、resourcequotas、services、statefulsets 
 
 
-|  | 許容範囲 | kube-state-metrics追加の許容値。 
+|  | 寛容 | kube-state-metrics の追加の許容範囲。 
 
 
 |  | ラベル | kube-state-metrics がラベルをキャプチャするリソースのコンマ区切りリスト +++ 例: cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*] +++ 
 
 
-| ログ |  | オペレータのログ収集とインストールをカスタマイズできる設定オプション 
+| ログ |  | オペレータのログ収集とインストールをカスタマイズできる構成オプション 
 
 
-|  | readFromHead | true / false。fluentビットがheadからログを読み取る必要があります 
+|  | ヘッドから読み取る | true/false、Fluent Bit がログを先頭から読み取るかどうか 
 
 
-|  | タイムアウト | タイムアウト（秒） 
+|  | timeout | タイムアウト（秒） 
 
 
-|  | DNSMode（DNSMode） | TCP / UDP、DNSのモード 
+|  | dnsモード | TCP/UDP、DNSのモード 
 
 
-|  | Fluent-bit-tolerationsの略 | FLUENT-BIT-DSの追加許容値。 
+|  | 流暢なビット許容度 | fluent-bit-ds 追加の許容範囲。 
 
 
-|  | event-exporter-tolerationsの略 | イベントエクスポータの追加許容値。 
+|  | イベントエクスポーターの許容範囲 | イベント エクスポーターの追加の許容範囲。 
 
 
-|  | event-exporter-maxEventAgeSeconds | イベントエクスポータの最大イベント経過時間。を参照し https://github.com/jkroepke/resmoio-kubernetes-event-exporter[] 
+|  | イベントエクスポーターのmaxEventAgeSeconds | イベント エクスポーターの最大イベント有効期間。見る https://github.com/jkroepke/resmoio-kubernetes-event-exporter[] 
 
 
-|  | fluent-bit-containerLogPath | デフォルトでは、Fluentbit DaemonSet は Kubernetes コンテナログにアクセス/読み取りするために、/var/log および /var/lib/docker/containers ホストパスをマウントします。Kubernetesがコンテナログをデフォルト以外の場所に配置するように設定されている場合、このオプションを使用して Fluentbit DaemonSet を変更し、デフォルト以外のパスをマウントするようにします。 
+|  | fluent-bit-containerLogPath | デフォルトでは、Fluentbit DaemonSet は、Kubernetes コンテナ ログにアクセスしたり読み取ったりするために、/var/log および /var/lib/docker/containers ホスト パスをマウントします。  Kubernetes がコンテナ ログをデフォルト以外の場所に配置するように構成されている場合は、このオプションを使用して Fluentbit DaemonSet を変更し、デフォルト以外のパスをマウントします。 
 
 
-| ワークロードマップ |  | 作業負荷マップの収集とオペレータのインストールをカスタマイズできる設定オプション。 
+| ワークロードマップ |  | ワークロード マップの収集と Operator のインストールをカスタマイズできる構成オプション。 
 
 
-|  | cpuLimit | ネットオブザーバーDSのCPU制限 
+|  | CPU制限 | ネットオブザーバーDSのCPU制限 
 
 
-|  | memLimit | ネットオブザーバDSのメモリ制限 
+|  | メモリ制限 | ネットオブザーバー DS のメモリ制限 
 
 
-|  | cpuRequest | ネットオブザーバーDSのCPU要求 
+|  | CPUリクエスト | ネットオブザーバーDSのCPU要求 
 
 
-|  | MemRequestの略 | ネットオブザーバーDSのMEM要求 
+|  | メモリリクエスト | ネットオブザーバー DS のメモリ要求 
 
 
-|  | metricAggregationInterval | メトリック集約間隔（秒単位） 
+|  | メトリック集約間隔 | メトリック集約間隔（秒） 
 
 
-|  | bpfPollIntervalの略 | BPFポーリング間隔（秒単位） 
+|  | bpfポーリング間隔 | BPFポーリング間隔（秒） 
 
 
-|  | enableDNSLookup | trueまたはfalse、DNSルックアップを有効にします 
+|  | DNSルックアップを有効にする | true/false、DNSルックアップを有効にする 
 
 
-|  | L4 -公差 | NET-OBSERVER-L4-DS追加許容値。 
+|  | l4-寛容 | net-observer-l4-ds 追加の許容範囲。 
 
 
-|  | runPrivileged | true/false - KubernetesノードでSELinuxが有効になっている場合は、runPrivilegedをtrueに設定します。 
+|  | 特権実行 | true/false - Kubernetes ノードで SELinux が有効になっている場合は、runPrivileged を true に設定します。 
 
 
-| 変更管理 |  | Kubernetes Change Management and Analysisの構成オプション 
+| 変更管理 |  | Kubernetes 変更管理と分析の構成オプション 
 
 
-|  | cpuLimit | change-observer-watch-rsのCPU制限 
+|  | CPU制限 | change-observer-watch-rs の CPU 制限 
 
 
-|  | memLimit | change-observer-watch-rsのメモリ制限 
+|  | メモリ制限 | change-observer-watch-rs のメモリ制限 
 
 
-|  | cpuRequest | change-observer-watch-rsのCPU要求 
+|  | CPUリクエスト | change-observer-watch-rs の CPU 要求 
 
 
-|  | MemRequestの略 | change-observer-watch-rsのMEM要求 
+|  | メモリリクエスト | change-observer-watch-rs のメモリ要求 
 
 
-|  | ワークロード障害宣言間隔（秒） | ワークロードのデプロイメントが失敗した場合に失敗としてマークされるまでの間隔（秒） 
+|  | ワークロード障害宣言間隔（秒） | ワークロードのデプロイメントが成功しなかった場合に失敗としてマークされるまでの間隔（秒） 
 
 
 |  | ワークロードデプロイアグリゲート間隔（秒） | ワークロードのデプロイメントを組み合わせて送信する頻度（秒単位） 
@@ -215,25 +215,25 @@ summary: AgentConfiguration オプションを使用してNetApp Kubernetes Moni
 |  | 非ワークロードデプロイアグリゲート間隔秒数 | 非ワークロードデプロイメントを組み合わせて送信する頻度（秒単位） 
 
 
-|  | termsToRedact | 値が編集される環境名およびデータマップで使用される一連の正規表現例：「pwd」、「password」、「token」、「apiKey」、「api-key」、「jwt」 
+|  | 編集する用語 | 環境変数名とデータマップで使用される正規表現のセット。値は編集されます。例:「pwd」、「password」、「token」、「apikey」、「api-key」、「jwt」 
 
 
-|  | AdditionalKindsToWatch | コレクターが監視するデフォルトの種類のセットから、監視する追加の種類のコンマ区切りリスト 
+|  | 追加の注目種 | コレクターが監視するデフォルトの種類のセットから監視する追加の種類をコンマで区切ったリスト 
 
 
-|  | kindsToIgnoreFromWatch | コレクタが監視するデフォルトの種類のセットから、監視対象から無視する種類のコンマ区切りのリスト 
+|  | ウォッチから無視する種類 | コレクターが監視するデフォルトの種類のセットから監視から無視する種類のコンマ区切りリスト 
 
 
-|  | logRecordAggrIntervalSeconds | コレクタからCIにログレコードを送信する頻度 
+|  | ログ記録アグレッシブ間隔秒数 | コレクターから CI にログレコードが送信される頻度 
 
 
-|  | ウォッチトレランス | change-observer-watch-ds追加の許容値。省略された単一行形式のみ。例：「｛key：taint1、operator：exists、effect：NoSchedule｝、｛key：taint2、operator：exists、effect：NoExecute｝」 
+|  | 時計の許容範囲 | change-observer-watch-ds 追加の許容範囲。短縮された単一行形式のみ。例: '{キー: taint1、演算子: Exists、効果: NoSchedule},{キー: taint2、演算子: Exists、効果: NoExecute}' 
 |===
 
 
-== サンプルのAgentConfigurationファイル
+== サンプル AgentConfiguration ファイル
 
-以下は、Sample_AgentConfiguration_ファイルです。
+以下はサンプルの _AgentConfiguration_ ファイルです。
 
 [listing]
 ----

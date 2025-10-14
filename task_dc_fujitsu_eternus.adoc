@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: task_dc_fujitsu_eternus.html 
 keywords: data collector, Fujitsu, Eternus 
-summary: Fujitsu Eternus データコレクタの設定。 
+summary: Fujitsu Eternus データ コレクターの構成。 
 ---
-= Fujitsu Eternus データコレクタ
+= 富士通 Eternus データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Fujitsu Eternus データコレクタは、管理者レベルのストレージシステムアクセスを使用してインベントリデータを取得します。
+Fujitsu Eternus データ コレクターは、ストレージ システムへの管理レベルのアクセスを使用してインベントリ データを取得します。
 
 
 
 == 用語
 
-Data Infrastructure Insightsは、Fujitsu ETERNUSストレージから次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+Data Infrastructure Insights は、 Fujitsu Eternus ストレージから以下のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
 [cols="2*"]
 |===
-| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
 
 | ディスク | ディスク 
@@ -29,26 +29,26 @@ Data Infrastructure Insightsは、Fujitsu ETERNUSストレージから次のイ�
 | ストレージ | ストレージ 
 
 
-| シンプール、フレキシブル階層プール、 RAID グループ | ストレージプール 
+| シンプール、フレキシブルティアプール、レイドグループ | ストレージ プール 
 
 
-| 標準ボリューム、スナップデータボリューム（ SDV ）、スナップデータプールボリューム（ SDPV ）、シンプロビジョニングボリューム（ TPV ）、フレキシブル階層ボリューム（ FTV ）、ワイドストライピングボリューム（ WSV ） | ボリューム 
+| 標準ボリューム、スナップ データ ボリューム (SDV)、スナップ データ プール ボリューム (SDPV)、シン プロビジョニング ボリューム (TPV)、フレキシブル ティア ボリューム (FTV)、ワイド ストライピング ボリューム (WSV) | Volume 
 
 
 | チャネルアダプタ | コントローラ 
 |===
-注：これらは一般的な用語の対応のみを示したものであり、このデータ照合のすべてのケースを表しているわけではありません。
+注: これらは一般的な用語のマッピングのみであり、このデータ コレクターのすべてのケースを反映しているわけではありません。
 
 
 
 == 要件
 
-このデータコレクタを設定するには、次のものが必要です。
+このデータ コレクターを構成するには、次のものが必要です。
 
-* Eternus ストレージの IP アドレス。カンマで区切って指定することはできません
-* SSH 管理レベルのユーザ名とパスワード
+* EternusストレージのIPアドレス（カンマ区切り不可）
+* SSH 管理レベルのユーザー名とパスワード
 * ポート22
-* ページスクロールが無効になっていることを確認します（ clienv -show -more-scroll disable ）。
+* ページスクロールが無効になっていることを確認します（clienv-show-more-scroll disable）
 
 
 
@@ -57,16 +57,16 @@ Data Infrastructure Insightsは、Fujitsu ETERNUSストレージから次のイ�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| Eternus ストレージの IP アドレス | Eternus ストレージの IP アドレス 
+| EternusストレージのIPアドレス | EternusストレージのIPアドレス 
 
 
-| ユーザー名 | Eternus ストレージのユーザ名 
+| ユーザー名 | Eternusストレージのユーザー名 
 
 
-| パスワード | Eternus ストレージのパスワード 
+| パスワード | Eternusストレージのパスワード 
 |===
 
 
@@ -74,7 +74,7 @@ Data Infrastructure Insightsは、Fujitsu ETERNUSストレージから次のイ�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
 | インベントリポーリング間隔（分） | デフォルトは20分です。 
@@ -83,7 +83,7 @@ Data Infrastructure Insightsは、Fujitsu ETERNUSストレージから次のイ�
 
 == トラブルシューティング
 
-このデータコレクタで問題が発生した場合の対処方法を次に示します。
+このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
@@ -91,12 +91,12 @@ Data Infrastructure Insightsは、Fujitsu ETERNUSストレージから次のイ�
 
 [cols="2*"]
 |===
-| 問題 | 次の操作を実行します 
+| 問題： | これを試してください: 
 
 
-| 「 Error Retrieving data 」というエラーメッセージが表示され、「 Error Finding Prompt CLI 」または「 Error Finding prompt at the end of shell results 」が表示されます。 | 考えられる原因：ストレージシステムでページスクロールが有効になっています。考えられる解決策： * 次のコマンドを実行して、ページスクロールを無効にしてください。 set clienv -show -more-scroll disable 
+| 「データ取得エラー」と「CLI プロンプト検索エラー」または「シェル結果の最後にプロンプト検索エラー」というエラー メッセージが表示される | 考えられる原因: ストレージ システムでページ スクロールが有効になっています。考えられる解決策: * 次のコマンドを実行して、ページスクロールを無効にしてみてください: set clienv-show-more -scroll disable 
 
 
-| 「 Connecting error 」とエラーメッセージ「 Failed to instantiate an SSH connection to storage 」または「 Failed to instantiate a connection to VirtualCenter 」が表示されます。 | 考えられる原因： * クレデンシャルが正しくありません。* IP アドレスが正しくありません。* ネットワークの問題。* ストレージが停止しているか、応答しない可能性があります解決策： * 入力された資格情報と IP アドレスを確認してください。* SSH クライアントを使用してストレージと通信してみてください。 
+| 「接続エラー」と「ストレージへの SSH 接続のインスタンス化に失敗しました」または「VirtualCenter への接続のインスタンス化に失敗しました」というエラー メッセージが表示される | 考えられる原因: * 資格情報が正しくありません。  * IP アドレスが正しくありません。  * ネットワークの問題。 * ストレージがダウンしているか、応答しない可能性があります。考えられる解決策: * 入力した資格情報と IP アドレスを確認します。  * SSH クライアントを使用してストレージとの通信を試みます。 
 |===
-詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

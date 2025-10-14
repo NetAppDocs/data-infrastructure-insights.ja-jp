@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_cs_add_agent.html 
 keywords: agent, Workload Security, installation, Cloud Secure 
-summary: ワークロードセキュリティエージェントの追加 
+summary: Workload Securityエージェントの追加 
 ---
 = ワークロードセキュリティエージェントのインストール
 :hardbreaks:
@@ -10,15 +10,15 @@ summary: ワークロードセキュリティエージェントの追加
 
 
 [role="lead"]
-ワークロードセキュリティ（旧Cloud Secure ）は、1つ以上のエージェントを使用してユーザアクティビティデータを収集します。エージェントはテナントのデバイスに接続し、ワークロードセキュリティSaaS層に送信されたデータを収集して分析します。エージェントVMを設定するには、を参照してくださいlink:concept_cs_agent_requirements.html["エージェントの要件"]。
+Workload Security (旧称Cloud Secure) は、1 つ以上のエージェントを使用してユーザー アクティビティ データを収集します。エージェントはテナント上のデバイスに接続し、分析のために Workload Security SaaS レイヤーに送信されるデータを収集します。見るlink:concept_cs_agent_requirements.html["エージェントの要件"]エージェント VM を構成します。
 
 
 
-== 開始する前に
+== 開始前の準備
 
 * インストール、スクリプトの実行、アンインストールには sudo 権限が必要です。
-* エージェントのインストール中に、ローカルのuser_cssys_とローカルのgroup_cssys_がマシン上に作成されます。権限設定でローカルユーザの作成が許可されておらず、Active Directoryが必要な場合は、Active Directoryサーバにusername_csys_という名前のユーザを作成する必要があります。
-* Data Infrastructure Insightsのセキュリティについてはlink:security_overview.html["ここをクリック"]、こちらをご覧ください。
+* エージェントのインストール中に、ローカル ユーザー _cssys_ とローカル グループ _cssys_ がマシン上に作成されます。権限設定によりローカル ユーザーの作成が許可されず、代わりに Active Directory が必要な場合は、ユーザー名が _cssys_ のユーザーを Active Directory サーバーに作成する必要があります。
+* Data Infrastructure Insightsのセキュリティについて読むことができますlink:security_overview.html["ここをクリックしてください。"]。
 
 
 
@@ -26,49 +26,49 @@ NOTE: グローバルな変更はONTAPシステムに影響を及ぼす可能性
 
 
 
-== エージェントをインストールする手順
+== エージェントのインストール手順
 
-. ワークロードセキュリティ環境に管理者またはアカウント所有者としてログインします。
-. [Collectors]>[Agents]>[+Agent]を選択します。
+. Workload Security 環境に管理者またはアカウント所有者としてログインします。
+. *コレクター > エージェント > +エージェント*を選択
 +
-[ エージェントの追加 ] ページが表示されます。
+エージェントの追加ページが表示されます。
 
 +
 image:Add-agent-1.png["ワークロードセキュリティエージェントの追加"]
 
-. エージェントサーバが最小システム要件を満たしていることを確認します。
-. エージェントサーバでサポートされているバージョンの Linux が実行されていることを確認するには、 _ サポートされているバージョン（ i ） _ をクリックします。
-. ネットワークでプロキシサーバを使用している場合は、プロキシセクションの指示に従ってプロキシサーバの詳細を設定してください。
+. エージェント サーバーが最小システム要件を満たしていることを確認します。
+. エージェント サーバーがサポートされているバージョンの Linux を実行していることを確認するには、[_サポートされているバージョン (i)_] をクリックします。
+. ネットワークでプロキシ サーバーを使用している場合は、「プロキシ」セクションの指示に従ってプロキシ サーバーの詳細を設定してください。
 +
-image:CloudSecureAgentWithProxy_Instructions.png["エージェントのインストールとプロキシに関する注意事項"]
+image:CloudSecureAgentWithProxy_Instructions.png["プロキシを使用したエージェントのインストールに関する注意"]
 
-. [ クリップボードにコピー ] アイコンをクリックして、インストールコマンドをコピーします。
-. ターミナルウィンドウでインストールコマンドを実行します。
+. インストール コマンドをコピーするには、[クリップボードにコピー] アイコンをクリックします。
+. ターミナル ウィンドウでインストール コマンドを実行します。
 . インストールが正常に完了すると、次のメッセージが表示されます。
 +
-image:new-agent-detect.png["エージェントのインストールが成功したことを示すメッセージ"]
+image:new-agent-detect.png["エージェントのインストール成功のメッセージ"]
 
 
 
 .完了後
-. を設定する必要がありlink:task_config_user_dir_connect.html["User Directory Collector の略"]ます。
-. 1 つ以上のデータコレクタを設定する必要があります。
+. 設定する必要がありますlink:task_config_user_dir_connect.html["ユーザーディレクトリコレクター"]。
+. 1 つ以上のデータ コレクターを構成する必要があります。
 
 
 
 
 == ネットワーク構成
 
-ローカルシステムで次のコマンドを実行して、ワークロードセキュリティで使用されるポートを開きます。ポート範囲に関するセキュリティ上の問題がある場合は、 _35000 ： 35100_ のように小さいポート範囲を使用できます。各 SVM は 2 つのポートを使用します。
+Workload Security で使用されるポートを開くには、ローカル システムで次のコマンドを実行します。ポート範囲に関してセキュリティ上の懸念がある場合は、_35000:35100_ などのより狭いポート範囲を使用できます。各 SVM は 2 つのポートを使用します。
 
 .手順
 . `sudo firewall-cmd --permanent --zone=public --add-port=35000-55000/tcp`
 . `sudo firewall-cmd --reload`
 
 
-プラットフォームに応じて、次の手順を実行します。
+プラットフォームに応じて次の手順に従ってください。
 
-* CentOS 7.x / RHEL 7.x * ：
+*CentOS 7.x / RHEL 7.x*:
 
 . `sudo iptables-save | grep 35000`
 
@@ -76,7 +76,7 @@ image:new-agent-detect.png["エージェントのインストールが成功し�
 出力例：
 
  -A IN_public_allow -p tcp -m tcp --dport 35000:55000 -m conntrack -ctstate NEW,UNTRACKED -j ACCEPT
-* CentOS 8.x / RHEL 8.x * ：
+*CentOS 8.x / RHEL 8.x*:
 
 . `sudo firewall-cmd --zone=public --list-ports | grep 35000`（CentOS 8の場合）
 
@@ -86,25 +86,25 @@ image:new-agent-detect.png["エージェントのインストールが成功し�
  35000-55000/tcp
 
 
-== 現在のバージョンでエージェントを「固定」する
+== エージェントを現在のバージョンに「固定」する
 
-デフォルトでは、Data Infrastructure Insights Workload Securityはエージェントを自動的に更新します。お客様によっては、自動更新を一時停止したい場合があります。これにより、次のいずれかが発生するまで、Agentは現在のバージョンのままになります。
+デフォルトでは、 Data Infrastructure Insights Workload Security はエージェントを自動的に更新します。自動更新を一時停止して、次のいずれかが発生するまでエージェントを現在のバージョンのままにすることを希望する顧客もいます。
 
-* カスタマーはエージェントの自動更新を再開します。
-* 30日が過ぎました。30日間は、エージェントが一時停止された日ではなく、最新のエージェント更新の日に開始されます。
+* 顧客はエージェントの自動更新を再開します。
+* 30日が経過しました。  30 日間は、エージェントが一時停止された日ではなく、最新のエージェント更新の日から始まることに注意してください。
 
 
-これらのいずれの場合も、エージェントは次回のワークロードセキュリティ更新時に更新されます。
+いずれの場合も、エージェントは次回の Workload Security 更新時に更新されます。
 
-エージェントの自動更新を一時停止または再開するには、_cloudsecure_config.agents_APIを使用します。
+自動エージェント更新を一時停止または再開するには、_cloudsecure_config.agents_ API を使用します。
 
-image:ws_pin_agent_apis.png["クラウドセキュアエージェントAPIによるエージェントの固定と固定解除"]
+image:ws_pin_agent_apis.png["エージェントをピン留めおよびピン留め解除するための cloudsecure エージェント API"]
 
-一時停止または再開のアクションが有効になるまで、最大5分かかることがあります。
+一時停止または再開アクションが有効になるまでに最大 5 分かかる場合があることに注意してください。
 
-現在のエージェントのバージョンは、*ワークロードセキュリティ>コレクタ*ページの*エージェント*タブで確認できます。
+現在のエージェントのバージョンは、*Workload Security > Collectors* ページの *Agents* タブで確認できます。
 
-image:ws_agent_version.png["エージェントテーブルに表示されるWSエージェントのバージョン"]
+image:ws_agent_version.png["エージェント テーブルに表示される WS エージェントのバージョン"]
 
 
 
@@ -114,50 +114,50 @@ image:ws_agent_version.png["エージェントテーブルに表示されるWS�
 
 [cols="2*"]
 |===
-| 問題 | 解決策： 
+| 問題： | 解決： 
 
 
-| エージェントのインストール時に /opt/NetApp/cloudsecure/agent/logs/agent.log フォルダが作成されず、 install.log ファイルに関連情報が記録されません。 | このエラーは、エージェントのブートストラップ中に発生します。ロガーが初期化される前に発生するため、エラーはログファイルに記録されません。エラーは標準出力にリダイレクトされ、 `journalctl -u cloudsecure-agent.service`コマンドを使用してサービスログに表示されます。このコマンドは、問題の詳細なトラブルシューティングに使用できます。est 
+| エージェントのインストールで /opt/netapp/cloudsecure/agent/logs/agent.log フォルダの作成に失敗し、install.log ファイルには関連情報が提供されません。 | このエラーはエージェントのブートストラップ中に発生します。エラーはロガーが初期化される前に発生するため、ログ ファイルに記録されません。エラーは標準出力にリダイレクトされ、サービスログで次のように表示されます。 `journalctl -u cloudsecure-agent.service`指示。このコマンドは、問題をさらにトラブルシューティングするために使用できます。 
 
 
-| 「この Linux ディストリビューションはサポートされていません。インストールを終了しています。 | このエラーは、サポートされていないシステムにAgentをインストールしようとしたときに表示されます。を参照して link:concept_cs_agent_requirements.html["エージェントの要件"] 
+| エージェントのインストールが「この Linux ディストリビューションはサポートされていません」というメッセージで失敗します。インストールを終了します。 | このエラーは、サポートされていないシステムにエージェントをインストールしようとしたときに表示されます。見るlink:concept_cs_agent_requirements.html["エージェントの要件"] 。 
 
 
-| エージェントのインストールが次のエラーで失敗しました： "-bash: unzip: command not found" | unzip をインストールし、インストールコマンドを再度実行します。Yum がマシンにインストールされている場合は、「 yum install unzip 」を実行して解凍ソフトウェアをインストールしてください。その後、 Agent インストール UI からコマンドをコピーして CLI に貼り付け、再度インストールを実行します。 
+| エージェントのインストールが次のエラーで失敗しました: "-bash: unzip: コマンドが見つかりません" | unzip をインストールしてから、インストール コマンドを再度実行します。マシンに Yum がインストールされている場合は、「yum install unzip」を実行して unzip ソフトウェアをインストールしてください。その後、エージェントのインストール UI からコマンドを再度コピーし、CLI に貼り付けてインストールを再度実行します。 
 
 
-| エージェントがインストールされ、実行されていました。しかし、エージェントは突然停止しました。 | Agent マシンに SSH 接続します。でエージェントサービスのステータスを確認します `sudo systemctl status cloudsecure-agent.service`。1.ログに「Failed to start Workload Security daemon service」というメッセージが表示されているかどうかを確認します。2.csysユーザがAgentマシンに存在するかどうかを確認します。次のコマンドを root 権限で 1 つずつ実行し、 cssys ユーザとグループが存在するかどうかを確認します。
+| エージェントがインストールされ、実行されていました。しかし、エージェントは突然停止しました。 | エージェント マシンに SSH で接続します。エージェントサービスのステータスを確認するには、 `sudo systemctl status cloudsecure-agent.service` 。1.ログに「Workload Security デーモン サービスを開始できませんでした」というメッセージが表示されているかどうかを確認します。2.エージェント マシンに cssys ユーザーが存在するかどうかを確認します。次のコマンドをルート権限で 1 つずつ実行し、cssys ユーザーとグループが存在するかどうかを確認します。
 `sudo id cssys`
-`sudo groups cssys`3.存在しない場合は、集中型モニタリングポリシーによって cssys ユーザが削除されている可能性があります。4.次のコマンドを実行して、csysユーザおよびグループを手動で作成します。
+`sudo groups cssys`3.存在しない場合は、集中監視ポリシーによって cssys ユーザーが削除されている可能性があります。4.次のコマンドを実行して、cssys ユーザーとグループを手動で作成します。
 `sudo useradd cssys`
-`sudo groupadd cssys`5.その後、次のコマンドを実行してエージェントサービスを再起動します。
-`sudo systemctl restart cloudsecure-agent.service`まだ実行されていない場合は、他のトラブルシューティングオプションを確認してください。 
+`sudo groupadd cssys`5.その後、次のコマンドを実行してエージェント サービスを再起動します。
+`sudo systemctl restart cloudsecure-agent.service` 6.それでも実行されない場合は、他のトラブルシューティング オプションを確認してください。 
 
 
-| エージェントには50個を超えるデータコレクタを追加できません。 | エージェントに追加できるデータコレクタは 50 個までです。Active Directory 、 SVM 、その他のコレクタなど、すべてのコレクタタイプを組み合わせて使用できます。 
+| エージェントに 50 個を超えるデータ コレクターを追加することはできません。 | エージェントに追加できるデータ コレクターは 50 個のみです。これは、Active Directory、SVM、その他のコレクターなど、すべてのコレクター タイプの組み合わせになります。 
 
 
-| Agent is in not_connected 状態であることが UI に表示されます。 | エージェントを再起動する手順。1.Agent マシンに SSH 接続します。2.その後、次のコマンドを実行してエージェントサービスを再起動します。
-`sudo systemctl restart cloudsecure-agent.service`でエージェントサービスのステータスを確認します `sudo systemctl status cloudsecure-agent.service`。4.エージェントは接続状態に移行する必要があります。 
+| UI には、エージェントが NOT_CONNECTED 状態にあることが示されます。 | エージェントを再起動する手順。1.エージェント マシンに SSH で接続します。2.その後、次のコマンドを実行してエージェント サービスを再起動します。
+`sudo systemctl restart cloudsecure-agent.service` 3.エージェントサービスのステータスを確認するには、 `sudo systemctl status cloudsecure-agent.service` 。4.エージェントは CONNECTED 状態に移行する必要があります。 
 
 
-| エージェント VM が Zscaler プロキシの背後にあり、エージェントのインストールに失敗しています。ZscalerプロキシのSSL検査により、ワークロードセキュリティ証明書はZscaler CAによって署名されたため、エージェントが通信を信頼していないと表示されます。 | *.cloudinsights.netapp.com URL の Zscaler プロキシで SSL 検査をディセーブルにします。ZscalerがSSLを検査して証明書を置き換えた場合、Workload Securityは機能しません。 
+| エージェント VM は Zscaler プロキシの背後にあり、エージェントのインストールが失敗します。  Zscaler プロキシの SSL 検査により、Workload Security 証明書は Zscaler CA によって署名された状態で提示されるため、エージェントは通信を信頼していません。 | *.cloudinsights.netapp.com URL の Zscaler プロキシで SSL 検査を無効にします。  Zscaler が SSL 検査を実行して証明書を置き換えると、Workload Security は機能しなくなります。 
 
 
-| エージェントのインストール中に、解凍後にインストールがハングします。 | 「 chmod 755 -rf 」コマンドが失敗しています。このコマンドは、別のユーザに属する作業ディレクトリ内のファイルを含む root 以外の sudo ユーザがエージェントのインストールコマンドを実行している場合は失敗し、それらのファイルの権限を変更することはできません。失敗した chmod コマンドのため、残りのインストールは実行されません。1.「cloudsecure」という名前の新しいディレクトリを作成します。2.そのディレクトリに移動します。3.完全な「token=………./cloudsecure-agent-install.sh」インストールコマンドをコピーして貼り付け、Enterキーを押します。4.インストールを続行できます。 
+| エージェントのインストール中に、解凍後にインストールがハングします。 | 「chmod 755 -Rf」コマンドが失敗しています。エージェント インストール コマンドが非 root sudo ユーザーによって実行され、作業ディレクトリに別のユーザーに属するファイルがあり、それらのファイルの権限を変更できない場合、コマンドは失敗します。 chmod コマンドが失敗したため、インストールの残りの部分は実行されません。1. 「cloudsecure」という名前の新しいディレクトリを作成します。2.そのディレクトリに移動します。3.完全な「token=…… … ./cloudsecure-agent-install.sh」インストール コマンドをコピーして貼り付け、Enter キーを押します。4.インストールを続行できるはずです。 
 
 
-| エージェントがまだ SaaS に接続できない場合は、ネットアップサポートでケースをオープンしてください。Data Infrastructure Insightsのシリアル番号を提供してケースをオープンし、記録したとおりにログをケースに添付します。 | ケースにログを添付するには、次の手順を実行します。 1.root権限で以下のスクリプトを実行し、出力ファイル(cloudsecure-agent-symptions.zip)を共有しますNetApp /cloudsecure/agent/bin/cloudsecure-agent-symptom-collector.sh。次のコマンドをroot権限で1つずつ実行し、出力を共有します。a. id csys b. groups csys ccat /etc/os-release 
+| それでもエージェントが Saas に接続できない場合は、 NetAppサポートにケースを開いてください。ケースを開くには、 Data Infrastructure Insights のシリアル番号を提供し、記載されているとおりにログをケースに添付します。 | ログをケースに取り付けるには: 1.次のスクリプトをルート権限で実行し、出力ファイル (cloudsecure-agent-symptoms.zip) を共有します。a. /opt/netapp/cloudsecure/agent/bin/cloudsecure-agent-symptom-collector.sh 2.ルート権限で次のコマンドを1つずつ実行し、出力を共有します。a. id cssys b. groups cssys c. cat /etc/os-release 
 
 
-| cloudsecure-agent-symptom-collector.shスクリプトが次のエラーで失敗します。[root@machine tmp]#/opt/netapp/cloudsecure/agent/bin/cloudsecure-agent-symptom-collector.shサービスログの収集アプリケーションログの収集エージェント設定の収集エージェントディレクトリ構造スナップショットの取得中のサービスステータススナップショット…………… 。…………………………… 。/opt/netapp/cloudsecure/agent/bin/cloudsecure-agent-symptom-collector.sh：line 52：zip：command not found error：/tmp/cloudsecure-agent-symptoms.zipを作成できませんでした | ZIPツールがインストールされていません。コマンド「yum install zip」を実行してzipツールをインストールします。次に、cloudsecure-agent-symptom-collector.shを再度実行します。 
+| cloudsecure-agent-symptom-collector.sh スクリプトが次のエラーで失敗します。  [root@machine tmp]# /opt/netapp/cloudsecure/agent/bin/cloudsecure-agent-symptom-collector.sh サービス ログを収集しています アプリケーション ログを収集しています エージェント構成を収集しています サービス ステータスのスナップショットを取得しています エージェント ディレクトリ構造のスナップショットを取得しています ………………….  ……………………。  /opt/netapp/cloudsecure/agent/bin/cloudsecure-agent-symptom-collector.sh: 行 52: zip: コマンドが見つかりません エラー: /tmp/cloudsecure-agent-symptoms.zip の作成に失敗しました | Zip ツールがインストールされていません。 「yum install zip」コマンドを実行して、zip ツールをインストールします。次に、cloudsecure-agent-symptom-collector.sh を再度実行します。 
 
 
-| エージェントのインストールに失敗し、useradd：Cannot create directory/home/cssysというメッセージが表示されます | このエラーは、権限がないためにユーザのログインディレクトリを/homeの下に作成できない場合に発生することがあります。回避策 では、次のコマンドを使用してcssysユーザを作成し、そのログインディレクトリを手動で追加します。_sudo useradd user_name -m -d home_DIR_m：ユーザのホームディレクトリがない場合は作成します。-d：新しいユーザは'ユーザのログイン・ディレクトリの値としてhome_DIRを使用して作成されますたとえば、_sudo useradd cssys-m-d/cssys_はuser_cssys_を追加し、rootの下にそのログインディレクトリを作成します。 
+| エージェントのインストールが useradd で失敗します: ディレクトリ /home/cssys を作成できません | このエラーは、権限不足のためにユーザーのログイン ディレクトリを /home の下に作成できない場合に発生する可能性があります。回避策としては、cssys ユーザーを作成し、次のコマンドを使用してそのログイン ディレクトリを手動で追加します: _sudo useradd user_name -m -d HOME_DIR_ -m : ユーザーのホーム ディレクトリが存在しない場合は作成します。 -d : ユーザーのログイン ディレクトリの値として HOME_DIR を使用して新しいユーザーが作成されます。たとえば、_sudo useradd cssys -m -d /cssys_ は、ユーザー _cssys_ を追加し、ルートの下にそのログイン ディレクトリを作成します。 
 
 
-| エージェントはインストール後に実行されていません。_systemctl status cloudsecure-agent.service_ NetApp cloudsecure-agent.service:には次の情報が表示されます。[root@demo ~]# systemctl status cloudsecure-agent.service agent.service /cloudsecure/agent/bin/cloudsecure-agent n/a–Workload Security Agent Daemon Service Loaded: Loaded (/usr/lib/systemd/system/cloudsecure-agent.service; enabled; vendor preset : disabled) cloudsecure-agent.service8月03日21：12：26 demo systemd [1]：cloudsecure-agent.serviceが失敗しました。 | これは'_cssys_userにインストール権限がないために失敗することがあります/opt/netappがNFSマウントで、_cssys_userがこのフォルダにアクセスできない場合、インストールは失敗します。_cssys_は、マウントされた共有にアクセスする権限がない可能性があるワークロードセキュリティインストーラによって作成されたローカルユーザです。これを確認するには、_cssys_userを使用して/opt/netapp/cloudsecure/agent/bin/cloudsecure-agentにアクセスします。「Permission denied」が返された場合、インストール許可は表示されません。マウントされたフォルダではなく、マシンのローカルディレクトリにインストールします。 
+| インストール後にエージェントが実行されていません。  _Systemctl status cloudsecure-agent.service_ は次のように表示します: [root@demo ~]# systemctl status cloudsecure-agent.service agent.service – Workload Security Agent Daemon Service Loaded: loaded (/usr/lib/systemd/system/cloudsecure-agent.service; enabled; vendor preset: disabled) Active: activating (auto-restart) (Result: exit-code) since Tue 2021-08-03 21:12:26 PDT; 2 秒前 プロセス: 25889 ExecStart=/bin/bash /opt/netapp/cloudsecure/agent/bin/cloudsecure-agent (コード = 終了、ステータス = 126) メイン PID: 25889 (コード = 終了、ステータス = 126)、8 月 03 日 21:12:26 demo systemd[1]: cloudsecure-agent.service: メイン プロセスが終了しました。コード = 終了、ステータス = 126/n/a 8 月 03 日 21:12:26 demo systemd[1]: ユニット cloudsecure-agent.service が失敗状態になりました。  8月3日 21:12:26 デモ systemd[1]: cloudsecure-agent.service が失敗しました。 | _cssys_ ユーザーにインストール権限がない可能性があるため、失敗する可能性があります。  /opt/netapp が NFS マウントであり、_cssys_ ユーザーがこのフォルダーにアクセスできない場合、インストールは失敗します。 _cssys_ は、Workload Security インストーラによって作成されたローカル ユーザーであり、マウントされた共有にアクセスする権限がない可能性があります。これを確認するには、_cssys_ ユーザーを使用して /opt/netapp/cloudsecure/agent/bin/cloudsecure-agent にアクセスしてみてください。 「Permission denied」が返された場合、インストール権限が存在しません。マウントされたフォルダーの代わりに、マシンのローカル ディレクトリにインストールします。 
 
 
-| エージェントは最初にプロキシサーバを介して接続され、エージェントのインストール時にプロキシが設定されました。これでプロキシサーバが変更されました。エージェントのプロキシ設定はどのように変更できますか。 | agent.propertiesを編集して、プロキシの詳細を追加できます。次の手順を実行します。1.プロパティファイルが格納されているフォルダ（cd /opt/netapp/cloudsecure/conf 2）に変更します。任意のテキストエディタを使用して、_agent.properties_ファイルを開いて編集します。3.次の行を追加または変更します。agent_proxy_host=scspa1950329001.vm.com NetApp agent_proxy_port=80 agent_proxy_user=pxuser agent_proxy_password=pass1234 4.ファイルを保存します。5.エージェントを再起動します。sudo systemctl restart cloudsecure-agent.service 
+| エージェントは最初にプロキシ サーバー経由で接続され、プロキシはエージェントのインストール中に設定されました。プロキシサーバーが変更されました。エージェントのプロキシ構成を変更するにはどうすればよいですか? | agent.properties を編集してプロキシの詳細を追加できます。次の手順に従ってください: 1.プロパティ ファイルが含まれているフォルダーに変更します: cd /opt/netapp/cloudsecure/conf 2.お気に入りのテキスト エディターを使用して、_agent.properties_ ファイルを開いて編集します。3.次の行を追加または変更します: AGENT_PROXY_HOST=scspa1950329001.vm.netapp.com AGENT_PROXY_PORT=80 AGENT_PROXY_USER=pxuser AGENT_PROXY_PASSWORD=pass1234 4.ファイルを保存します。5.エージェントを再起動します: sudo systemctl restart cloudsecure-agent.service 
 |===

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_requesting_support.html 
-summary: サポートをリクエストする方法については、技術情報アーティクルの表示、ネットアップコミュニティとの接続、ビデオの表示、チケットの発行があります。 
+summary: ナレッジベースの記事を表示したり、 NetAppコミュニティに接続したり、ビデオを視聴したり、チケットを開いてサポートをリクエストしたりできます。 
 keywords: support, knowledgebase, documentation, community, videos, help, contact 
 ---
-= サポートをリクエストしています
+= サポートのリクエスト
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -20,117 +20,117 @@ image:SupportPageExample.png["サポートページ、幅=600"]
 
 
 
-== サポート資格をアクティブ化しています
+== サポート資格の有効化
 
 Data Infrastructure Insights は、試用モードで実行しているときにセルフサービス サポートと電子メール サポートを提供します。サービスに加入したら、サポート資格を有効にすることを強くお勧めします。サポート資格を有効にすると、Web チケット システムと電話を介してテクニカル サポートにアクセスできるようになります。登録が完了するまで、デフォルトのサポート モードはセルフ サービスです。見る<<obtaining-support-information,詳細>>下に。
 
-初回のサブスクリプションプロセスでは、Data Infrastructure Insightsインスタンスが「950」で始まる20桁のNetAppシリアル番号を生成します。このNetAppシリアル番号は、アカウントに関連付けられたData Infrastructure Insightsのサブスクリプションを表します。サポート利用資格を有効にするには、ネットアップのシリアル番号を登録する必要があります。サポート登録には、次の 2 つのオプションがあります。
+最初のサブスクリプション プロセス中に、 Data Infrastructure Insightsインスタンスによって、「950」で始まる 20 桁のNetAppシリアル番号が生成されます。このNetAppシリアル番号は、アカウントに関連付けられているData Infrastructure Insightsサブスクリプションを表します。サポート資格を有効にするには、 NetAppシリアル番号を登録する必要があります。サポート登録には 2 つのオプションがあります。
 
-. NetApp Support Site（ NSS ）の SSO アカウントをすでにお持ちのユーザ（現在ネットアップのお客様など）
-. NetApp Support Site（ NSS ）の SSO アカウントがない新しいネットアップのお客様
-
-
-
-
-=== オプション 1 ：NetApp Support Site（ NSS ）の SSO アカウントを事前にお持ちのユーザ向けの手順
-
-.手順
-. NetApp登録Webサイトに移動する https://register.netapp.com[]
-. [I am already registered as NetApp Customer]を選択し、製品ラインとして[_Data Infrastructure Insights _]を選択します。課金プロバイダ（NetAppまたはAWS）を選択し、Data Infrastructure Insightsユーザインターフェイスの[Help]>[Support]メニューを参照してシリアル番号、NetAppサブスクリプション名、またはAWSカスタマーIDを入力します。
-+
-image:SupportPage_SN_Section-NA.png["SN_Screen"]
-
-. 既存の顧客登録フォームに入力し、 *Submit * をクリックします。
-+
-image:ExistingCustomerRegExample.png["既存の顧客フォーム"]
-
-. エラーが発生しない場合は、「登録が正常に送信されました」ページが表示されます。登録に使用された NSS SSO ユーザ名に関連付けられた電子メールアドレスには、数分以内に「お使いの製品は現在サポート対象です」という電子メールが送信されます。
-. Data Infrastructure Insights NetAppのシリアル番号の登録は1回のみです。
+. 既存のNetAppサポート サイト (NSS) SSO アカウントを持つユーザー (例: 現在のNetApp顧客)
+. 既存のNetAppサポート サイト (NSS) SSO アカウントを持たない新しいNetApp顧客
 
 
 
 
-=== オプション 2 ：NetApp Support Site（ NSS ）の SSO アカウントがない新しいネットアップのお客様向けの手順
+=== オプション 1: 既存のNetAppサポート サイト (NSS) SSO アカウントを持つユーザーの手順
 
 .手順
-. NetApp登録Webサイトに移動する https://register.netapp.com[]
-. 「 I am not a registered NetApp Customer 」を選択し、以下の例のフォームに必要な情報を入力します。
-
-
-image:NewCustomerRegExample.png["新しい顧客フォーム"]
-
-. 製品ラインとして「_Data Infrastructure Insights」を選択します。課金プロバイダ（NetAppまたはAWS）を選択し、Data Infrastructure Insightsユーザインターフェイスの[Help]>[Support]メニューを参照してシリアル番号、NetAppサブスクリプション名、またはAWSカスタマーIDを入力します。
+. NetApp登録ウェブサイトへアクセスします https://register.netapp.com[]
+. 「すでにNetApp顧客として登録されています」を選択し、製品ラインとして [_Data Infrastructure Insights_] を選択します。請求プロバイダー (NetAppまたは AWS) を選択し、 Data Infrastructure Insightsユーザー インターフェイス内の [ヘルプ > サポート] メニューを参照して、シリアル番号とNetAppサブスクリプション名または AWS 顧客 ID を入力します。
 +
-image:SupportPage_SN_Section-NA.png["SN_Screen"]
+image:SupportPage_SN_Section-NA.png["SN_スクリーン"]
 
-. エラーが発生しない場合は、「登録が正常に送信されました」ページが表示されます。登録に使用された NSS SSO ユーザ名に関連付けられた電子メールアドレスには、「お使いの製品はサポート対象です」という電子メールが数時間以内に送信されます。
+. 既存顧客登録フォームに記入し、「送信」をクリックします。
++
+image:ExistingCustomerRegExample.png["既存顧客フォーム"]
+
+. エラーが発生しない場合、ユーザーは「登録が正常に送信されました」ページに移動します。登録に使用した NSS SSO ユーザー名に関連付けられた電子メール アドレスに、数分以内に「お使いの製品はサポート対象になりました」という内容の電子メールが届きます。
+. これは、Data Infrastructure Insights NetAppシリアル番号の 1 回限りの登録です。
+
+
+
+
+=== オプション 2: 既存のNetAppサポート サイト (NSS) SSO アカウントを持たない新しいNetApp顧客向けの手順
+
+.手順
+. NetApp登録ウェブサイトへアクセスします https://register.netapp.com[]
+. 「私はNetAppの登録顧客ではありません」を選択し、以下のサンプルフォームに必要な情報を入力します。
+
+
+image:NewCustomerRegExample.png["新規顧客フォーム"]
+
+. 製品ラインとして「_Data Infrastructure Insights_」を選択します。請求プロバイダー (NetAppまたは AWS) を選択し、 Data Infrastructure Insightsユーザー インターフェイス内の [ヘルプ > サポート] メニューを参照して、シリアル番号とNetAppサブスクリプション名または AWS 顧客 ID を入力します。
++
+image:SupportPage_SN_Section-NA.png["SN_スクリーン"]
+
+. エラーが発生しない場合、ユーザーは「登録が正常に送信されました」ページに移動します。登録に使用した NSS SSO ユーザー名に関連付けられた電子メール アドレスに、数時間以内に「お使いの製品はサポート対象になりました」という内容の電子メールが届きます。
 . NetApp の新規顧客として、今後の登録やテクニカル サポートおよび Web チケット用サポート ポータルへのアクセスのために、 NetAppサポート サイト (NSS) ユーザー アカウントも作成する必要があります。このリンクは次の場所にあります https://mysupport.netapp.com/eservice/public/now.do[]。プロセスを迅速化するために、新しく登録したData Infrastructure Insights のシリアル番号を提供できます。
-. これは、Data Infrastructure Insights NetAppのシリアル番号の1回限りの登録です。
+. これは、Data Infrastructure Insights NetAppシリアル番号の 1 回限りの登録です。
 
 
 
 
-== サポート情報の入手方法
+== サポート情報の入手
 
-NetApp は、さまざまな方法でData Infrastructure Insightsのサポートを提供します。ナレッジベース (KB) 記事やNetAppコミュニティなど、豊富な無料のセルフサポート オプションが 24 時間 365 日ご利用いただけます。  Data Infrastructure Insightsに加入しているユーザーは、電話または Web チケットを通じてテクニカル サポートを受けることができます。  Web チケットとケース管理には、 NetAppサポート サイト (NSS) SSO アカウントが必要です。
+NetApp は、さまざまな方法でData Infrastructure Insightsのサポートを提供します。ナレッジベース (KB) 記事やNetAppコミュニティなど、豊富な無料のセルフサポート オプションが 24 時間 365 日ご利用いただけます。Data Infrastructure Insightsに加入しているユーザーは、電話または Web チケットを通じてテクニカル サポートを受けることができます。Web チケットとケース管理には、 NetAppサポート サイト (NSS) SSO アカウントが必要です。
 
 
 
-=== セルフサービスサポート：
+=== セルフサービスサポート:
 
-これらのサポートオプションはトライアルモードで利用でき、 24 時間 365 日無料でご利用いただけます。
+以下のサポート オプションは試用モードで利用可能で、24 時間 365 日無料でご利用いただけます。
 
 * *https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs[ナレッジベース]*
 +
-このセクション内のリンクをクリックすると、ネットアップナレッジベースに移動し、関連する記事、ハウツーなどを検索できます。
+このセクションのリンクをクリックすると、 NetAppナレッジベースに移動し、関連する記事やハウツーなどを検索できます。
 
-* link:https://docs.netapp.com/us-en/cloudinsights/["ドキュメント"]**
+* *link:https://docs.netapp.com/us-en/cloudinsights/["ドキュメント"] *
 +
-[Documentation] リンクをクリックすると、このドキュメントセンターに移動します。
+「ドキュメント」リンクをクリックすると、このドキュメント センターに移動します。
 
-* link:https://community.netapp.com/t5/Cloud-Insights/bd-p/CloudInsights["コミュニティ"]**
+* *link:https://community.netapp.com/t5/Cloud-Insights/bd-p/CloudInsights["コミュニティ"] *
 +
-コミュニティリンクをクリックすると、NetApp Data Infrastructure Insightsのコミュニティに移動し、他のユーザやエキスパートと交流できます。
+コミュニティ リンクをクリックすると、 NetApp Data Infrastructure Insightsコミュニティに移動し、そこで同僚や専門家とつながることができます。
 
 
 
-link:mailto:ng-cloudinsights-customerfeedback@netapp.com["* フィードバック *"]データインフラの分析情報を改善するためのリンクもあります。
+提供するためのリンクもありますlink:mailto:ng-cloudinsights-customerfeedback@netapp.com["*フィードバック*"]Data Infrastructure Insights の改善にご協力ください。
 
 
 
 === サブスクリプションサポート
 
-上記のセルフサポートオプションに加えて、Data Infrastructure Insightsのサブスクリプションを契約しているか、監視対象のNetApp製品やサービスに対して有償サポートを利用している場合は、NetAppサポートエンジニアと協力して問題を解決できます。
+上記のセルフサポート オプションに加えて、 Data Infrastructure Insightsサブスクリプション、または監視対象のNetApp製品やサービスの有料サポートをお持ちの場合は、 NetAppサポート エンジニアと協力して問題を解決することができます。
 
 
-NOTE: にNetAppクラウド製品を使用するには、登録する必要があります<<activating-support-entitlement,サポートを有効にします>>。登録するには、NetAppのページにアクセスしlink:https://register.netapp.com["クラウドデータサービスサポート登録"]てください。
+NOTE: 登録が必要です<<activating-support-entitlement,サポートを有効にする>>NetApp Cloud 製品向け。登録するには、NetAppのlink:https://register.netapp.com["クラウドデータサービスサポート登録"]。
 
-サポートセッション中にNetAppサポートエンジニアがData Infrastructure Insightsテナントにアクセスできるようにするには、チェックボックスをオンにすることを強く推奨します。これにより、エンジニアが問題のトラブルシューティングを行い、問題を迅速に解決できるようになります。問題が解決されるか、サポートセッションが終了したら、チェックボックスをオフにできます。
+サポート セッション中にNetAppサポート エンジニアがData Infrastructure Insightsテナントにアクセスできるようにするには、ボックスをオンにすることを強くお勧めします。これにより、エンジニアが問題をトラブルシューティングし、迅速に解決できるようになります。問題が解決した場合、またはサポート セッションが終了したら、ボックスのチェックを外すことができます。
 
-サポートは次のいずれかの方法でリクエストできます。以下のサポートオプションを利用するには、Data Infrastructure Insightsのアクティブなサブスクリプションが必要です。
+以下のいずれかの方法でサポートをリクエストできます。これらのサポート オプションを使用するには、アクティブなData Infrastructure Insightsサブスクリプションが必要です。
 
-* link:https://www.netapp.com/us/contact-us/support.aspx["* 電話 *"]
-* link:https://mysupport.netapp.com/portal?_nfpb=true&_st=initialPage=true&_pageLabel=submitcase["* サポートチケット *"]
+* link:https://www.netapp.com/us/contact-us/support.aspx["*電話*"]
+* link:https://mysupport.netapp.com/portal?_nfpb=true&_st=initialPage=true&_pageLabel=submitcase["*サポートチケット*"]
 
 
 *営業部に問い合わせる*リンクをクリックして営業サポートをリクエストすることもできます。
 
-Data Infrastructure Insightsのシリアル番号は、サービス内で*[ヘルプ]>[サポート]*メニューから確認できます。サービスへのアクセスで問題が発生し、以前にNetAppにシリアル番号を登録したことがある場合は、NetAppサポートサイトでData Infrastructure Insightsのシリアル番号のリストを次のように確認することもできます。
+Data Infrastructure Insights のシリアル番号は、サービス内の *ヘルプ > サポート* メニューから確認できます。サービスへのアクセスに問題があり、以前にNetAppにシリアル番号を登録している場合は、次のようにしてNetAppサポート サイトからData Infrastructure Insightsシリアル番号のリストを表示することもできます。
 
-* mysupport.netapp.com にログインします
-* [Products]>[My Products]メニュータブで、製品ファミリーの[SaaS Data Infrastructure Insights ]を使用して登録済みのすべてのシリアル番号を確認します。
-
-
-image:Support_View_SN.png["サポート SN を確認します"]
+* mysupport.netapp.comにログイン
+* [製品] > [マイ製品] メニュー タブから、製品ファミリー「SaaS Data Infrastructure Insights」を使用して、登録済みのすべてのシリアル番号を見つけます。
 
 
+image:Support_View_SN.png["サポートSNを表示"]
 
-== Data Infrastructure Insights Data Collectorサポートマトリックス
 
-サポートされているデータコレクタの情報と詳細は、で表示またはダウンロードできますlink:reference_data_collector_support_matrix.html["* Data Infrastructure Insights Data Collector Support Matrix *、role="external""]。
+
+== Data Infrastructure Insightsデータコレクターサポートマトリックス
+
+サポートされているデータコレクターに関する情報や詳細は、link:reference_data_collector_support_matrix.html["*Data Infrastructure Insightsデータ コレクター サポート マトリックス*、role="external""] 。
 
 
 
 === ラーニングセンター
 
-サブスクリプションに関係なく、*[ヘルプ]>[サポート]*をクリックすると、データインフラのインサイトを最大限に活用するために役立つNetApp Universityのいくつかのコースにアクセスできます。チェックアウト！
+サブスクリプションの種類に関係なく、*ヘルプ > サポート* には、Data Infrastructure Insightsを最大限に活用するのに役立ついくつかのNetApp University コースへのリンクがあります。ぜひチェックしてみてください！

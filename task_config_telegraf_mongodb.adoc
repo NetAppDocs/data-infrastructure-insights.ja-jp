@@ -2,55 +2,55 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_mongodb.html 
 keywords: telegraf, installation, install, MongoDB 
-summary: MongoDB データコレクタの設定 
+summary: MongoDBデータコレクターの構成 
 ---
-= MongoDB データコレクタ
+= MongoDB データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、このデータコレクタを使用してMongoDBから指標を収集します。
+Data Infrastructure Insights は、このデータ コレクターを使用して MongoDB からメトリックを収集します。
 
 
 
 == インストール
 
-. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。[MongoDB]を選択します。
+. *Observability > Collectors* から、*+ Data Collector* をクリックします。  MongoDB を選択します。
 +
-Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+Telegraf エージェントがインストールされているオペレーティング システムまたはプラットフォームを選択します。
 
-. コレクション用エージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[_Show Instructions_]をクリックして手順を展開しlink:task_config_telegraf_agent.html["エージェントのインストール"]ます。
-. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
-. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+. 収集用のエージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[手順を表示] をクリックして展開します。link:task_config_telegraf_agent.html["エージェントのインストール"]説明書。
+. このデータ コレクターで使用するエージェント アクセス キーを選択します。 *+ エージェント アクセス キー* ボタンをクリックすると、新しいエージェント アクセス キーを追加できます。ベスト プラクティス: データ コレクターを OS/プラットフォーム別などにグループ化する場合にのみ、異なるエージェント アクセス キーを使用します。
+. 構成手順に従ってデータ コレクターを構成します。手順は、データ収集に使用しているオペレーティング システムまたはプラットフォームの種類によって異なります。
 
 
-image:MongoDBDCConfigLinux.png["MongoDB の設定"]
+image:MongoDBDCConfigLinux.png["MongoDBの設定"]
 
 
 
 == セットアップ
 
-詳細については、を参照してlink:https://docs.mongodb.com/["MongoDB のドキュメント"]ください。
+詳細は以下をご覧ください。link:https://docs.mongodb.com/["MongoDBのドキュメント"] 。
 
 
 
-== オブジェクトとカウンタ
+== オブジェクトとカウンター
 
-次のオブジェクトとそのカウンタが収集されます。
+次のオブジェクトとそのカウンターが収集されます。
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+| オブジェクト | 識別子: | 属性: | データポイント: 
 
 
-| MongoDB | ネームスペースホスト名 |  |  
+| MongoDB | 名前空間ホスト名 |  |  
 
 
-| MongoDB データベース | ネームスペースホスト名データベース名 |  |  
+| MongoDB データベース | 名前空間 ホスト名 データベース名 |  |  
 |===
 
 
 == トラブルシューティング
 
-情報はページから見つけることができlink:concept_requesting_support.html["サポート"]ます。
+情報は以下から入手できます。link:concept_requesting_support.html["サポート"]ページ。

@@ -2,77 +2,77 @@
 sidebar: sidebar 
 permalink: task_dc_na_amazon_fsx.html 
 keywords: 'data collector, stout, fsx, fsx-netapp, Amazon, AWS, cluster, volume, share, LUN"' 
-summary: NetApp ONTAP Data Collector 向けの Amazon FSX 
+summary: Amazon FSx for NetApp ONTAPデータコレクター 
 ---
-= NetApp ONTAP データコレクタ用の Amazon FSX
+= Amazon FSx for NetApp ONTAPデータコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-このデータコレクタは、 Amazon FSX for NetApp ONTAP からインベントリデータとパフォーマンスデータを取得します。このデータコレクタは、Data Infrastructure Insightsサービスのリージョン全体で段階的に利用できるようになります。Data Infrastructure Insights環境にこのコレクタのアイコンが表示されない場合は、営業担当者にお問い合わせください。
+このデータコレクターは、Amazon FSx for NetApp ONTAPからインベントリとパフォーマンスデータを取得します。このデータ コレクターは、Data Infrastructure Insightsサービス リージョン全体で段階的に利用可能になります。  Data Infrastructure Insights環境にこのコレクターのアイコンが表示されない場合は、営業担当者にお問い合わせください。
 
 
-NOTE: このData Infrastructure Insightsコレクタには、_Filesystem-Scoped_roleを持つONTAPユーザが必要です。link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/roles-and-users.html["ロールとルール"]使用可能なオプションについては、AWSのドキュメントを参照してください。現時点では、AWSはFilesystem Scopeを使用するユーザロールの1種類（_fsxadmin_）のみをサポートしています。これは、Data Infrastructure Insightsコレクタに使用する適切なロールです。また、ユーザには、http、ontapi、sshの3つのアプリケーションすべてが割り当てられている必要があります。
+NOTE: このData Infrastructure Insightsコレクターには、_Filesystem-Scoped_ ロールを持つONTAPユーザーが必要です。 AWSを確認してくださいlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/roles-and-users.html["役割とルール"]利用可能なオプションのドキュメント。現時点では、AWS はファイルシステムスコープを持つユーザーロールとして _fsxadmin_ の 1 種類のみをサポートしています。これは、 Data Infrastructure Insightsコレクターに使用する適切なロールです。ユーザーには、http、ontapi、ssh の 3 つのアプリケーションもすべて割り当てられている必要があります。
 
 
 
 == 用語
 
-Data Infrastructure Insightsは、FSx - NetAppデータコレクタからインベントリとパフォーマンスのデータを取得します。取得したアセットのタイプごとに、そのアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+Data Infrastructure Insights は、 FSx- NetAppデータ コレクターからインベントリとパフォーマンス データを取得します。取得した資産の種類ごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
 [cols="2*"]
 |===
-| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
 
 | クラスタ | ストレージ 
 
 
-| LUN | ボリューム 
+| LUN | Volume 
 
 
-| ボリューム | 内部ボリューム 
+| Volume | 内部容積 
 |===
 
 
-== FSX - ネットアップの用語
+== FSx- NetApp用語
 
-FSx-NetApp ストレージアセットランディングページにあるオブジェクトや参考資料に関連する用語を次に示します。これらの用語の多くは、他のデータコレクタにも適用されます。
+次の用語は、FSx- NetAppストレージ アセット ランディング ページに表示されるオブジェクトまたは参照に適用されます。これらの条件の多くは、他のデータ収集者にも適用されます。
 
 
 
 === ストレージ
 
-* model –このクラスタ内で一意のディスクリートモデル名をカンマで区切って指定します。
-* ベンダー–AWS
-* Serial Number –アレイのシリアル番号。
-* IP –一般に、データソースで設定されている IP またはホスト名です。
-* 物理容量–FSXファイルシステムに割り当てられているすべてのSSDストレージの2つの合計。
-* レイテンシ–読み取りと書き込みの両方について、ワークロードが直面しているホストの状況が表示されます。理想的なのは、Data Infrastructure Insightsがこの価値を直接提供していることですが、そうではないことがよくあります。Data Infrastructure Insightsでは、この機能を提供するアレイの代わりに、個 々 の内部ボリュームの統計に基づいてIOPSの加重計算を実行します。
-* スループット–内部ボリュームから集約されたもの。管理–デバイスの管理インターフェイスのハイパーリンクが含まれている可能性があります。インベントリレポートの一部として、Data Infrastructure Insightsデータソースによってプログラムによって作成されます。
+* モデル – このクラスター内の一意の個別のモデル名のカンマ区切りリスト。
+* ベンダー – AWS
+* シリアル番号 – アレイのシリアル番号。
+* IP – 通常は、データ ソースで構成されている IP またはホスト名になります。
+* 生の容量 – FSx ファイルシステムに割り当てられたすべての SSD ストレージの 2 を底とする合計。
+* レイテンシ – 読み取りと書き込みの両方において、ホスト側のワークロードが経験している状況を表します。理想的には、 Data Infrastructure Insightsがこの値を直接取得しますが、多くの場合そうではありません。アレイがこれを提供する代わりに、 Data Infrastructure Insightsは通常、個々の内部ボリュームの統計から導き出された IOPS 加重計算を実行します。
+* スループット – 内部ボリュームから集計されます。管理 – これにはデバイスの管理インターフェイスへのハイパーリンクが含まれる場合があります。インベントリレポートの一部として、 Data Infrastructure Insightsデータ ソースによってプログラムによって作成されます。
 
 
 
 
-=== ストレージプール
+=== ストレージ プール
 
-* storage –このプールのストレージアレイの場所。必須。
-* Type –可能性のリストから説明的な値を入力します。最も一般的な構成は、「集約」または「 RAID グループ」です。
-* 容量–使用済みの論理容量、使用可能な容量、および合計論理容量の値と、これらの要素で使用されている割合の値が表示されます。
-* IOPS–このストレージプールに割り当てられているすべてのボリュームの合計IOPS。
-* Throughput–このストレージプールに割り当てられているすべてのボリュームの合計スループット。
+* ストレージ – このプールが存在するストレージ アレイ。必須。
+* タイプ – 可能性のある列挙リストからの説明的な値。最も一般的なのは「アグリゲート」または「RAID グループ」です。
+* 容量 – ここでの値は、論理的に使用されている容量、使用可能な容量、論理的な合計容量、およびこれらの間で使用されている割合です。
+* IOPS – このストレージ プールに割り当てられたすべてのボリュームの合計 IOPS。
+* スループット – このストレージ プールに割り当てられたすべてのボリュームの合計スループット。
 
 
 
 
 == 要件
 
-このデータコレクタを設定して使用するための要件は次のとおりです。
+このデータ コレクターを構成して使用するための要件は次のとおりです。
 
-* 「fsxadmin」ロールのアカウントにアクセスできる必要があります。このアカウントには、ssh、ontapi、httpの3つのアプリケーションが割り当てられています。
-* アカウントの詳細には、ユーザ名とパスワードが含まれます。
-* ポートの要件：443
+* 「fsxadmin」ロールを持つアカウントにアクセスでき、それには ssh、ontapi、http の 3 つのアプリケーションが割り当てられている必要があります。
+* アカウントの詳細にはユーザー名とパスワードが含まれます。
+* ポート要件: 443
 
 
 
@@ -81,43 +81,43 @@ FSx-NetApp ストレージアセットランディングページにあるオブ
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| ネットアップ管理 IP | NetAppクラスタのIPアドレスまたは完全修飾ドメイン名 
+| NetApp管理 IP | NetAppクラスタのIPアドレスまたは完全修飾ドメイン名 
 
 
-| ユーザー名 | ネットアップクラスタのユーザ名 
+| ユーザー名 | NetAppクラスタのユーザー名 
 
 
-| パスワード | ネットアップクラスタのパスワード 
+| パスワード | NetAppクラスタのパスワード 
 |===
 
 
-== Advanced Metricsの2つのパラメータ
+== 高度なメトリクス
 
-このデータコレクタは、NetApp ONTAP ストレージのFSXから次の高度な指標を収集します。
+このデータ コレクターは、FSx for NetApp ONTAPストレージから次の高度なメトリックを収集します。
 
-* FPolicy
-* NFSv3
-* NFSv3：ノード
-* NFSv4
+* fpolicy
+* nfsv3
+* nfsv3:ノード
+* nfsv4
 * nfsv4_1
-* nfsv4_1：ノード
-* NFSv4：ノード
-* policy_groupを開きます
+* nfsv4_1:ノード
+* nfsv4:ノード
+* ポリシーグループ
 * qtree
-* ボリューム
-* Workload _volume
+* 音量
+* ワークロードボリューム
 
 
-FSx CLIコマンドとAPIコマンドは、Data Infrastructure Insights ZAPIで収集されない一部の容量値を取得するため、Data Infrastructure Insightsでは特定の容量値（ストレージプールの値など）がFSx自体と異なる場合があることに注意してください。
+FSx CLI および API コマンドは、Data Infrastructure Insights ZAPI が収集しない一部の容量値を取得するため、特定の容量値 (ストレージ プールの値など) はData Infrastructure Insightsと FSx 自体で異なる場合があることに注意してください。
 
 
 
 == トラブルシューティング
 
-このデータコレクタで問題が発生した場合の対処方法を次に示します。
+このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
@@ -125,24 +125,24 @@ FSx CLIコマンドとAPIコマンドは、Data Infrastructure Insights ZAPIで�
 
 [cols="2*"]
 |===
-| 問題 | 次の操作を実行します 
+| 問題： | これを試してください: 
 
 
-| 401 HTTP 応答または 13003 ZAPI エラーコードを受信し、 ZAPI から「 Insufficient privileges 」または「 Not authorized for this command 」が返される | ユーザ名とパスワード、およびユーザの権限と権限を確認してください。 
+| 401 HTTP 応答または 13003 ZAPI エラー コードを受信し、ZAPI が「権限が不十分です」または「このコマンドは許可されていません」を返します。 | ユーザー名とパスワード、およびユーザー権限/許可を確認します。 
 
 
-| ZAPI から「 cluster role is not cluster_mgmt LIF 」が返される | AU はクラスタ管理 IP と通信する必要があります。IP を確認し、必要に応じて別の IP に変更してください 
+| ZAPI は「クラスタ ロールが cluster_mgmt LIF ではありません」を返します | AU はクラスター管理 IP と通信する必要があります。  IPを確認し、必要に応じて別のIPに変更します 
 
 
-| ZAPI コマンドの再試行後に失敗する | AU でクラスタとの通信に問題があります。ネットワーク、ポート番号、および IP アドレスを確認してください。また、 AU マシンのコマンドラインからもコマンドを実行しようとします。 
+| 再試行後にZAPIコマンドが失敗する | AU はクラスターとの通信に問題があります。ネットワーク、ポート番号、IP アドレスを確認します。ユーザーは、AU マシンのコマンド ラインからコマンドを実行することも試みる必要があります。 
 
 
-| AU が HTTP 経由で ZAPI に接続できませんでした | ZAPI ポートでプレーンテキストが受け入れるかどうかを確認します。AU が SSL ソケットにプレーンテキストを送信しようとすると、通信に失敗します。 
+| AUはHTTP経由でZAPIに接続できませんでした | ZAPI ポートがプレーンテキストを受け入れるかどうかを確認します。  AU が SSL ソケットにプレーンテキストを送信しようとすると、通信は失敗します。 
 
 
-| SSLException で通信が失敗します | AU が Filer 上のプレーンテキストポートに SSL を送信しようとしています。ZAPI ポートで SSL を受け入れるか、別のポートを使用するかを確認します。 
+| SSLException により通信が失敗しました | AU は、ファイラー上のプレーンテキスト ポートに SSL を送信しようとしています。  ZAPI ポートが SSL を受け入れるかどうかを確認するか、別のポートを使用します。 
 
 
-| その他の接続エラー： ZAPI 応答にはエラーコード 13001 、「 database is not open 」 ZAPI エラーコード 60 があり、応答に「 API did not finished on time 」という応答が含まれています。 ZAPI エラーコード 14007 では「 initialize_session() returned NULL environment 」が返され、応答に「 Node is not healthy 」が含まれます。 | ネットワーク、ポート番号、および IP アドレスを確認してください。また、 AU マシンのコマンドラインからもコマンドを実行しようとします。 
+| 追加の接続エラー: ZAPI 応答にエラー コード 13001、「データベースが開いていません」が含まれています。ZAPI エラー コードは 60 で、応答には「API が時間どおりに終了しませんでした」が含まれています。ZAPI 応答には「initialize_session() が NULL 環境を返しました」が含まれています。ZAPI エラー コードは 14007 で、応答には「ノードが正常ではありません」が含まれています。 | ネットワーク、ポート番号、IP アドレスを確認します。ユーザーは、AU マシンのコマンド ラインからコマンドを実行することも試みる必要があります。 
 |===
-詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

@@ -2,49 +2,49 @@
 sidebar: sidebar 
 permalink: task_dc_rubrik_cdm.html 
 keywords: data collector, Rubrik, 
-summary: Rubrik CDMデータコレクタを設定しています。 
+summary: Rubrik CDM データ コレクターを構成します。 
 ---
-= Rubrik CDM Data Collectorの略
+= Rubrik CDM データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、Rubrikのデータコレクタを使用して、Rubrikストレージアプライアンスからインベントリとパフォーマンスのデータを取得します。
+Data Infrastructure Insights は、 Rubrik データ コレクターを使用して、Rubrik ストレージ アプライアンスからインベントリ データとパフォーマンス データを取得します。
 
 
 
 == 用語
 
-Data Infrastructure Insightsでは、Rubrikのデータコレクタから次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+Data Infrastructure Insights は、 Rubrik データ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
 [cols="2*"]
 |===
-| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
 
 | クラスタ | ストレージ、ストレージプール 
 
 
-| ノード | ストレージノード 
+| ノード | ストレージ ノード 
 
 
 | ディスク | ディスク 
 |===
-注：これらは一般的な用語の対応のみを示したものであり、このデータソースのすべてのケースを表しているとは限りません。
+注: これらは一般的な用語のマッピングのみであり、このデータ ソースのすべてのケースを反映しているわけではありません。
 
 
 
 == 要件
 
-このデータコレクタを設定するには、次のものが必要です。
+このデータ コレクターを構成するには、次のものが必要です。
 
-* Data Infrastructure Insights Acquisition Unitは、RubrikクラスタへのTCPポート443への接続を開始します。クラスタごとに1つのコレクタ。
-* RubrikクラスタのIPアドレス。
-* クラスタのユーザ名とパスワード。
-* RubrikクラスタのIPアドレスまたはホスト名。
-* Basic認証の場合は、クラスタのユーザ名とパスワード。サービスアカウントベースの認証を使用する場合は、サービスアカウント、シークレット、および組織IDが必要です。
-* ポート要件： HTTPS 443
+* Data Infrastructure Insights取得ユニットは、Rubrik クラスターへの TCP ポート 443 への接続を開始します。クラスターごとに 1 つのコレクター。
+* Rubrik クラスターの IP アドレス。
+* クラスターへのユーザー名とパスワード。
+* Rubrik クラスターの IP アドレスまたはホスト名。
+* 基本認証の場合、クラスターへのユーザー名とパスワード。サービスアカウントベースの認証を使用する場合は、サービスアカウント、シークレット、組織IDが必要です。
+* ポート要件: HTTPS 443
 
 
 
@@ -53,16 +53,16 @@ Data Infrastructure Insightsでは、Rubrikのデータコレクタから次の�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| IP | RubrikクラスタのIPアドレス 
+| IP | Rubrik クラスタの IP アドレス 
 
 
-| ユーザー名 / サービスアカウント | クラスタのユーザ名 
+| ユーザー名 / サービスアカウント | クラスターのユーザー名 
 
 
-| パスワード/シークレット | クラスタのパスワード 
+| パスワード/シークレット | クラスターのパスワード 
 
 
 | サービスアカウントの組織ID | これは、「Organization:::nnnnnn-nnnn.....」のような完全な文字列である必要があります。 
@@ -73,7 +73,7 @@ Data Infrastructure Insightsでは、Rubrikのデータコレクタから次の�
 
 [cols="2*"]
 |===
-| インベントリのポーリング間隔（分） | デフォルトは60です 
+| インベントリポーリング間隔（分） | デフォルトは60です 
 
 
 | パフォーマンスポーリング間隔（秒） | デフォルトは300です 
@@ -82,7 +82,7 @@ Data Infrastructure Insightsでは、Rubrikのデータコレクタから次の�
 
 == トラブルシューティング
 
-このデータコレクタで問題が発生した場合の対処方法を次に示します。
+このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
@@ -90,12 +90,12 @@ Data Infrastructure Insightsでは、Rubrikのデータコレクタから次の�
 
 [cols="2*"]
 |===
-| 問題 | 次の操作を実行します 
+| 問題： | これを試してください: 
 
 
-| 複数のストレージが作成されているというメッセージを受け取りました。 | クラスタが正しく設定されており、コレクタが単一のクラスタを参照していることを確認します。 
+| 複数のストレージが作成されたというメッセージが表示されました。 | クラスターが正しく構成され、コレクターが単一のクラスターを指していることを確認します。 
 
 
 | ポーリングが 400 [Bad Request] で失敗しました....ManagedId が無効です.... | 組織 ID フィールドに値を入力しましたが、Rubrik からのエラー メッセージで「ManagedId」と表示されているにもかかわらず、Rubrik クラスターではそれが有効な組織 ID であると認識されません。 
 |===
-詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

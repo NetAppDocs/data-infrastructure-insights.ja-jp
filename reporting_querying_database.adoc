@@ -1,72 +1,72 @@
 ---
 sidebar: sidebar 
 permalink: reporting_querying_database.html 
-summary: Data Infrastructure InsightsのAPIを使用して、Reporting DBに直接クエリを実行 
+summary: Data Infrastructure Insights API を使用して、レポート DB を直接クエリします。 
 keywords: reporting, cognos, data warehouse, dwh, API 
 ---
-= API 経由で Reporting Database にアクセスします
+= API経由でレポートデータベースにアクセスする
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsの強力なAPIを使用すると、Cognos Reporting環境を介さずに、Data Infrastructure Insights Reportingデータベースに直接クエリを実行できます。
+Data Infrastructure Insightsの強力な API を使用すると、ユーザーは Cognos Reporting 環境を経由せずに、 Data Infrastructure Insights Reporting データベースを直接クエリできます。
 
 
-NOTE: このドキュメントでは、Data Infrastructure Insights Premiumエディションで利用できるData Infrastructure Insightsのレポート機能について説明します。
-
-
-
-== OData
-
-Data Infrastructure Insights Reporting APIは、（Open Data Protocol）標準に従ってlink:https://www.odata.org/["OData v4 の"]Reportingデータベースを照会します。詳細または詳細については、ODataをご覧くださいlink:https://www.odata.org/getting-started/basic-tutorial/["このチュートリアルでは"]。
-
-すべての要求は、URL_\https://<Data Infrastructure Insights URL>/rest/v1/dwh-management/odata_で始まります。
+NOTE: このドキュメントは、 Data Infrastructure Insights Premium Edition で利用できるData Infrastructure Insightsレポート機能について説明しています。
 
 
 
-== apiKey を生成します
+== 小田田
 
-詳細については、をご覧くださいlink:API_Overview.html["データインフラ分析情報API"]。
+Data Infrastructure InsightsサイトレポートAPIは、link:https://www.odata.org/["OData v4"]レポート データベースのクエリを実行するための Open Data Protocol (Open Data Protocol) 標準。さらに詳しい情報や詳細については、link:https://www.odata.org/getting-started/basic-tutorial/["このチュートリアル"] OData で。
+
+すべてのリクエストは、URL _\https://< Data Infrastructure Insights URL>/rest/v1/dwh-management/odata_ で始まります。
+
+
+
+== APIキーの生成
+
+詳細はこちらlink:API_Overview.html["Data Infrastructure InsightsAPI"]。
 
 API キーを生成するには、次の手順を実行します。
 
-* Data Infrastructure Insights環境にログインし、*[Admin]>[API Access]*を選択します。
-* [+API Access Token] をクリックします。
-* 名前と概要を入力します。
-* タイプには、 Data Warehouse _ を選択します。
-* 権限を読み取り / 書き込みに設定します。
-* 要望の有効期限を設定します。
-* [ 保存 ] をクリックし、 * キーをコピーして安全な場所に保存します。あとでフルキーにアクセスすることはできません。
+* Data Infrastructure Insights環境にログインし、*管理者 > API アクセス* を選択します。
+* 「+ API アクセス トークン」をクリックします。
+* 名前と説明を入力します。
+* タイプには、「_データ ウェアハウス_」を選択します。
+* 権限を読み取り/書き込みに設定します。
+* 希望の有効期限を設定します。
+* 「保存」をクリックし、*キーをコピーして安全な場所に保存します*。後で完全なキーにアクセスすることはできません。
 
 
-APIkeysはに適してい<<synchronous-or-asynchronous,同期または非同期_>>ます。
+APIキーは次の用途に使えます<<synchronous-or-asynchronous,_同期_ または _非同期_>>。
 
 
 
 == テーブルの直接クエリ
 
-API キーを配置した状態で、 Reporting データベースの直接クエリを実行できるようになりました。長いURLは、\https://<Data Infrastructure Insightsの完全なURL >/rest/v1/dwh-management/odata/ではなく、表示目的で\https://.../odata/に単純化できます。
+API キーを設定すると、レポート データベースへの直接クエリが可能になります。長い URL は、表示上の都合上、完全な \https://< Data Infrastructure Insights URL>/rest/v1/dwh-management/odata/ ではなく、\https://.../odata/ のように簡略化される場合があります。
 
-次のような簡単なクエリを試してください
+次のような簡単なクエリを試してみましょう
 
-* \https://<Dataインフラ分析情報のURL>/reset/v1/dwh-management/odata/dwh_custom
-* \https://<Dataインフラ分析情報のURL>/rest /v1/dwh-management/odata/dwh_inventory
-* \https://<Dataインフラ分析情報のURL>/rest /v1/dwh-management/odata/dwh_inventory/storage
-* \https://<Dataインフラ分析情報のURL>/rest /v1/dwh-management/odata/dwh_inventory/disk
+* \https://<Data Infrastructure InsightsのURL>/rest/v1/dwh-management/odata/dwh_custom
+* \https://<Data Infrastructure Insightsサイト URL>/rest/v1/dwh-management/odata/dwh_inventory
+* \https://<Data Infrastructure InsightsURL>/rest/v1/dwh-management/odata/dwh_inventory/storage
+* \https://<Data Infrastructure InsightsのURL>/rest/v1/dwh-management/odata/dwh_inventory/disk
 * \https://.../odata/dwh_custom/custom_queries
 
 
 
 
-== REST API の例
+== REST APIの例
 
-すべての呼び出しのURLは_\https://<Data Infrastructure Insights URL>/rest/v1/dwh-management/odata_です。
+すべての呼び出しの URL は _\https://< Data Infrastructure Insights URL>/rest/v1/dwh-management/odata_ です。
 
-* get/{schema}/**-レポートデータベースからデータを取得します。
+* GET /{schema}/** - レポート データベースからデータを取得します。
 
 
-形式：_\https://<Data Infrastructure Insights <schema_name>/<query>_
+形式: _\https://< Data Infrastructure Insights URL>/rest/v1/dwh-management/odata/<schema_name>/<query>_
 
 例：
 
@@ -103,44 +103,44 @@ API キーを配置した状態で、 Reporting データベースの直接ク�
 ....
 
 
-== 役に立つヒント
+== 役立つヒント
 
-Reporting API クエリを使用する場合は、次の点に注意してください。
+Reporting API クエリを使用するときは、次の点に留意してください。
 
-* クエリペイロードには有効な JSON 文字列を指定する必要があります
-* クエリペイロードは 1 行に含める必要があります
-* 二重引用符はエスケープする必要があります。
-* タブは \t としてサポートされています
-* コメントは避けてください
+* クエリペイロードは有効なJSON文字列である必要があります
+* クエリペイロードは1行に含める必要があります
+* 二重引用符はエスケープする必要があります。例: \"
+* タブは\tとしてサポートされています
+* コメントを避ける
 * 小文字のテーブル名がサポートされています
 
 
-さらに、
+さらに：
 
-* 2 つのヘッダーが必要です。
+* 2 つのヘッダーが必要です:
 +
-** 「 X-CloudInsights - apiKey 」という名前を付けます。
-** 属性値「 <apiKey> 」
+** 名前を「X-CloudInsights-ApiKey」にする
+** 属性値 "<apikey>"
 
 
 
 
-APIキーは、お客様のData Infrastructure Insights環境に固有のものです。
+API キーは、Data Infrastructure Insights環境に固有のものになります。
 
 
 
-== 同期か非同期か
+== 同期か非同期か?
 
-デフォルトでは、APIコマンドは_synchronous_modeで動作します。つまり、要求を送信するとすぐに応答が返されます。ただし、クエリの実行に時間がかかることがあり、要求がタイムアウトする可能性があります。これを回避するには、request_asynchronously _を実行します。非同期モードでは、要求は実行の監視に使用するURLを返します。URLは準備ができたら結果を返します。
+デフォルトでは、API コマンドは同期モードで動作します。つまり、リクエストを送信すると、すぐに応答が返されます。ただし、クエリの実行に長い時間がかかり、リクエストがタイムアウトになる場合があります。これを回避するには、リクエストを非同期的に実行します。非同期モードでは、リクエストは実行を監視できる URL を返します。準備ができたら、URL から結果が返されます。
 
-非同期モードでクエリを実行するには、ヘッダーを要求に追加し `*Prefer: respond-async*`ます。実行が成功すると、応答に次のヘッダーが含まれます。
+非同期モードでクエリを実行するには、ヘッダーを追加します `*Prefer: respond-async*`リクエストに応じて。実行が成功すると、応答には次のヘッダーが含まれます。
 
 ....
 Status Code: 202 (which means ACCEPTED)
 preference-applied: respond-async
 location: https://<Data Infrastructure Insights URL>/rest/v1/dwh-management/odata/dwh_custom/asyncStatus/<token>
 ....
-ロケーションURLを照会すると、応答の準備ができていない場合は同じヘッダーが返され、応答の準備ができている場合はステータス200が返されます。応答コンテンツのタイプはtextで、元のクエリのhttpステータスとメタデータが含まれ、その後に元のクエリの結果が続きます。
+場所の URL を照会すると、応答がまだ準備ができていない場合は同じヘッダーが返され、応答の準備ができている場合はステータス 200 が返されます。応答コンテンツはテキスト タイプになり、元のクエリの http ステータスといくつかのメタデータが含まれ、その後に元のクエリの結果が続きます。
 
 ....
 HTTP/1.1 200 OK
@@ -150,7 +150,7 @@ HTTP/1.1 200 OK
 
  { <JSON_RESPONSE> }
 ....
-すべての非同期クエリのリストと、準備ができているものを表示するには、次のコマンドを使用します。
+すべての非同期クエリのリストと、そのうちのどれが準備完了しているかを確認するには、次のコマンドを使用します。
 
  GET https://<Data Infrastructure Insights URL>/rest/v1/dwh-management/odata/dwh_custom/asyncList
 応答の形式は次のとおりです。

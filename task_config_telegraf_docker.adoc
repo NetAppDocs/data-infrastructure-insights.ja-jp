@@ -2,56 +2,56 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_docker.html 
 keywords: telegraf, installation, install, docker 
-summary: Docker データコレクタの設定 
+summary: Dockerデータコレクターの構成 
 ---
-= Docker Data Collector
+= Docker データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、このデータコレクタを使用してDockerから指標を収集します。
+Data Infrastructure Insights は、このデータ コレクターを使用して Docker からメトリックを収集します。
 
 
 
 == インストール
 
-. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。[Docker]を選択します。
+. *Observability > Collectors* から、*+ Data Collector* をクリックします。  Dockerを選択します。
 +
-収集用のエージェントを設定していない場合は、テナントで要求されlink:task_config_telegraf_agent.html["エージェントをインストールします"]ます。
+収集用のエージェントを設定していない場合は、link:task_config_telegraf_agent.html["エージェントをインストールする"]テナントに。
 
 +
-エージェントがすでに設定されている場合は、適切な OS またはプラットフォームを選択し、 [* Continue （続行） ] をクリックします。
+エージェントがすでに構成されている場合は、適切なオペレーティング システムまたはプラットフォームを選択し、[続行] をクリックします。
 
-. Docker Configuration 画面の指示に従って、データコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+. Docker 構成画面の指示に従って、データ コレクターを構成します。手順は、データ収集に使用しているオペレーティング システムまたはプラットフォームの種類によって異なります。
 
 
-image:DockerDCConfigLinux.png["Docker 構成"]
+image:DockerDCConfigLinux.png["Dockerの設定"]
 
 
 
 == セットアップ
 
-Telegraf Docker 用入力プラグインは、指定された UNIX ソケットまたは TCP エンドポイントを介してメトリックを収集します。
+Docker 用の Telegraf 入力プラグインは、指定された UNIX ソケットまたは TCP エンドポイントを通じてメトリックを収集します。
 
 
 
 === 互換性
 
-Docker バージョン 1.12.6 に対して構成が開発されました。
+構成は Docker バージョン 1.12.6 に対して開発されました。
 
 
 
-=== セットアップ中です
+=== セットアップ
 
 
 
-=== UNIX ソケット経由で Docker にアクセスする
+=== UNIXソケット経由でDockerにアクセスする
 
-Tegraf エージェントが BareMetal 上で実行されている場合は、次のコマンドを実行して、テレグラフ UNIX ユーザを Docker UNIX グループに追加します。
+Telegraf エージェントがベアメタル上で実行されている場合は、次のコマンドを実行して、telegraf Unix ユーザーを docker Unix グループに追加します。
 
  sudo usermod -aG docker telegraf
-Telegraf エージェントが Kubernetes ポッド内で実行されている場合は、ソケットをポッドにボリュームとしてマッピングし、そのボリュームを /var/run/docker.sock にマウントすることで、 Docker Unix ソケットを公開します。たとえば、 PodSpec に次の情報を追加します。
+Telegraf エージェントが Kubernetes ポッド内で実行されている場合は、ソケットをボリュームとしてポッドにマッピングし、そのボリュームを /var/run/docker.sock にマウントすることで、Docker Unix ソケットを公開します。たとえば、PodSpec に以下を追加します。
 
 [listing]
 ----
@@ -62,7 +62,7 @@ hostPath:
 path: /var/run/docker.sock
 type: File
 ----
-次に、次の項目をコンテナに追加します。
+次に、コンテナーに次の内容を追加します。
 
 [listing]
 ----
@@ -71,38 +71,38 @@ volumeMounts:
 - name: docker-sock
 mountPath: /var/run/docker.sock
 ----
-Kubernetesプラットフォーム用に提供されているData Infrastructure Insightsインストーラがこのマッピングを自動的に処理します。
+Kubernetes プラットフォーム用に提供されているData Infrastructure Insightsインストーラーがこのマッピングを自動的に処理することに注意してください。
 
 
 
-=== TCP エンドポイントを介して Docker にアクセスする
+=== TCPエンドポイント経由でDockerにアクセスする
 
-デフォルトでは、 Docker は暗号化されていないアクセスにポート 2375 を使用し、暗号化されたアクセスにポート 2376 を使用します。
+デフォルトでは、Docker は暗号化されていないアクセスにポート 2375 を使用し、暗号化されたアクセスにポート 2376 を使用します。
 
 
 
-== オブジェクトとカウンタ
+== オブジェクトとカウンター
 
-次のオブジェクトとそのカウンタが収集されます。
+次のオブジェクトとそのカウンターが収集されます。
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+| オブジェクト | 識別子: | 属性: | データポイント: 
 
 
-| Docker Engine の略 | ネームスペース Docker Engine | ノード名ノード IP ノード UUID ノード OS Kubernetes クラスタ Docker バージョンユニット | メモリコンテナコンテナ一時停止コンテナコンテナ停止 CPU 実行ルーチンイメージリスナーイベント使用ファイル記述子データ使用可能データ合計データ使用メタデータ使用可能メタデータ使用プールブロックサイズ合計 
+| Dockerエンジン | 名前空間 Docker エンジン | ノード名 ノードIP ノードUUID ノードOS Kubernetes クラスター Docker バージョン ユニット | メモリ コンテナ 一時停止中のコンテナ 実行中のコンテナ 停止中のコンテナ CPU Go ルーチン イメージ リスナー 使用中のイベント ファイル記述子 使用可能なデータ 使用済みデータ合計 使用可能なメタデータ 使用可能なメタデータ 使用済みメタデータ合計 プール ブロックサイズ 
 
 
-| Docker コンテナ | 名前空間コンテナ名 Docker Engine | Kubernetes コンテナコンテナハッシュ Kubernetes コンテナポート Kubernetes コンテナ再起動カウント Kubernetes コンテナ終了メッセージパス Kubernetes コンテナ終了メッセージポリシー Kubernetes ポッド終了猶予期間コンテナイメージコンテナステータスコンテナバージョンノード名 Kubernetes コンテナログパス Kubernetes Kubernetes コンテナ Kubernetes Kubernetes Kubernetes Kubernetes Kubernetes タイプ Kubernetes ポッド名 Kubernetes ポッドネームスペース Kubernetes ポッド ポッド UID Kubernetes サンドボックス ID ノード IP ノード UUID Docker バージョン Kubernetes IO の確認 Kubernetes IO 構成ソース OpenShift IO SCC Kubernetes 概要 Kubernetes Kubernetes 表示名 OpenShift タグ Kompose サービスポッドテンプレートハッシュコントローラリビジョンハッシュポッドテンプレート生成ライセンススキーマ構築日スキーマネームスキーマ URL スキーマ VCS URL スキーマベンダースキーマバージョンスキーマスキーマバージョンメンテナ顧客ポッド Kubernetes 状態セットポッド名テナント WebConsole アーキテクチャ信頼できるソース URL ビルド日付 RH ビルドホスト RH コンポーネント配布範囲インストールリリース実行概要 VCS タイプベンダーバージョン健常性ステータスコンテナ ID | Memory Active Anonymous Memory アクティブな匿名メモリキャッシュメモリ階層制限メモリ非アクティブな匿名メモリ非アクティブメモリメモリメモリメモリメモリ最大使用メモリページフォールトメモリページメモリページメモリ内でページアウトされたメモリ常駐セットサイズメモリ常駐セット全体アクティブ 匿名メモリアクティブファイルメモリ合計キャッシュメモリ非アクティブ匿名メモリ合計非アクティブファイルメモリ合計マップファイルメモリ総ページフォールトメモリ総ページ主要エラーメモリ合計ページインメモリ総ページアウトメモリ総常駐セットサイズメモリ合計常駐セットサイズヒュージメモリ合計 Unevictable Memory Unevictable Memory Usage Memory Usage Percent Exit Code OOM killed PID Started at Failing Streak (Unevictable メモリ使用率終了コード OOM がエラー終了時に PID を終了しました 
+| Dockerコンテナ | 名前空間 コンテナ名 Docker エンジン | Kubernetes コンテナ ハッシュ、Kubernetes コンテナ ポート、Kubernetes コンテナの再起動回数、Kubernetes コンテナの終了メッセージ パス、Kubernetes コンテナの終了メッセージ ポリシー、Kubernetes ポッドの終了猶予期間、コンテナ イメージ、コンテナの状態、コンテナのバージョン、ノード名、Kubernetes コンテナのログ パス、Kubernetes コンテナ名、Kubernetes Docker タイプ、Kubernetes ポッド名、Kubernetes ポッド名前空間、Kubernetes ポッド UID、Kubernetes サンドボックス ID、ノード IP、ノード UUID、Docker バージョン、Kubernetes IO 構成の確認、Kubernetes IO 構成ソース、OpenShift IO SCC、Kubernetes の説明、Kubernetes 表示名、OpenShift タグ、Kompose サービス、ポッド テンプレート ハッシュ、コントローラー リビジョン ハッシュ、ポッド テンプレートの生成、ライセンス スキーマのビルド日、スキーマ ライセンス スキーマ名、スキーマ URL、スキーマ VCS URL、スキーマ ベンダー、スキーマ バージョン、スキーマ スキーマ バージョン、メンテナー、顧客ポッド、Kubernetes StatefulSet、ポッド名、テナント、Web コンソール、アーキテクチャ、権限のあるソース URL、ビルド日、RH ビルド ホスト、RH コンポーネント ディストリビューション、スコープ、インストール、リリース、実行の概要、アンインストール、VCS 参照、VCS タイプ、ベンダー バージョン、ヘルス ステータス、コンテナ ID | メモリ アクティブ匿名メモリ アクティブファイルメモリ キャッシュメモリ 階層制限 メモリ 非アクティブ匿名メモリ 非アクティブファイルメモリ制限 メモリ マップファイルメモリ 最大使用量 メモリ ページフォールトメモリ ページメジャーフォールトメモリ ページインメモリ ページアウトメモリ 常駐セットサイズ メモリ常駐セットサイズ 巨大メモリ合計 アクティブ匿名メモリ合計 アクティブファイルメモリ合計 キャッシュメモリ合計 非アクティブ匿名メモリ合計 非アクティブファイルメモリ合計 マップファイルメモリ合計 ページフォールトメモリ合計 ページメジャーフォールトメモリ合計 ページインメモリ合計 ページアウトメモリ合計 常駐セットサイズ メモリ合計常駐セットサイズ巨大メモリ合計 排除不可能メモリ 排除不可能メモリ使用量 メモリ使用量の割合 終了コード OOM 強制終了 PID 開始時 失敗ストリーク 
 
 
-| Docker コンテナブロック IO | 名前空間コンテナ名 Device Docker Engine | Kubernetes コンテナコンテナハッシュ Kubernetes コンテナポート Kubernetes コンテナ再起動カウント Kubernetes コンテナ終了メッセージパス Kubernetes コンテナ終了メッセージポリシー Kubernetes ポッド終了猶予期間コンテナイメージコンテナステータスコンテナバージョンノード名 Kubernetes コンテナログパス Kubernetes Kubernetes コンテナ Kubernetes Kubernetes Kubernetes Kubernetes Kubernetes タイプ Kubernetes ポッド名 Kubernetes ポッドネームスペース Kubernetes ポッド ポッド UID Kubernetes サンドボックス ID ノード IP ノード UUID Docker バージョン Kubernetes 構成表示 Kubernetes 構成ソース OpenShift SCC Kubernetes 概要 Kubernetes Kubernetes 表示名 OpenShift タグスキーマバージョンポッドテンプレートハッシュコントローラリビジョンハッシュポッドテンプレート生成 Kompose Service Schema Build Date スキーマネームスキーマベンダーカスタマー ポッド Kubernetes 静的ステート設定ポッド名テナント WebConsole 構築日ライセンスベンダーアーキテクチャ信頼できるソース URL RH ビルドホスト RH コンポーネント配布範囲インストールメンテナリリース実行概要削除 VCS リファレンスバージョンスキーマ URL スキーマバージョンコンテナ ID | IO サービスバイト再帰的非同期 IO サービスバイト再帰的 IO サービスバイト再帰的 IO サービスバイト再帰的な総 IO サービスバイト再帰的 IO サービスバイト再帰的 IO サービス対象再帰的 IO サービス対象再帰的 IO サービス対象再帰的 IO サービス対象の再帰的な総 IO サービス対象 IO 
+| DockerコンテナブロックIO | 名前空間 コンテナ名 デバイス Docker エンジン | Kubernetes コンテナ ハッシュ、Kubernetes コンテナ ポート、Kubernetes コンテナの再起動回数、Kubernetes コンテナの終了メッセージ パス、Kubernetes コンテナの終了メッセージ ポリシー、Kubernetes ポッドの終了猶予期間、コンテナ イメージ、コンテナの状態、コンテナのバージョン、ノード名、Kubernetes コンテナのログ パス、Kubernetes コンテナ名、Kubernetes Docker タイプ、Kubernetes ポッド名、Kubernetes ポッド名前空間、Kubernetes ポッド UID、Kubernetes サンドボックス ID、ノード IP、ノード UUID、Docker バージョン、Kubernetes 構成情報、Kubernetes 構成ソース、OpenShift SCC、Kubernetes の説明、Kubernetes 表示名、OpenShift タグ、スキーマ、スキーマ バージョン、ポッド テンプレート ハッシュ、コントローラー リビジョン ハッシュ、ポッド テンプレート生成、Kompose サービス スキーマ、ビルド日、スキーマ ライセンス、スキーマ名、スキーマ ベンダー、顧客ポッド、Kubernetes StatefulSet ポッド名、テナント Web コンソール ビルド日、ライセンス ベンダー、アーキテクチャ、信頼できるソース URL、RH ビルド ホスト、RH コンポーネント ディストリビューション スコープ、インストール、メンテナー、リリース、実行、概要、アンインストール、VCS 参照、VCS タイプ バージョン、スキーマ URL、スキーマ、VCS URL、スキーマ バージョン、コンテナ ID | IO サービス バイト数 (再帰非同期)、IO サービス バイト数 (再帰読み取り)、IO サービス バイト数 (再帰同期)、IO サービス バイト数 (再帰合計)、IO サービス バイト数 (再帰書き込み)、IO サービス数 (再帰非同期)、IO サービス数 (再帰読み取り)、IO サービス数 (再帰同期)、IO サービス数 (再帰合計)、IO サービス数 (再帰書き込み) 
 
 
-| Docker コンテナネットワーク | 名前空間コンテナネットワーク Docker エンジン | コンテナイメージコンテナステータスコンテナノードバージョンノード名ノード IP ノード UUID ノード OS Kubernetes クラスタ Docker バージョンコンテナ ID | Rx dropped RX bytes RX Errors RX Packets TX dropped TX Bytes TX Errors TX パケット 
+| Dockerコンテナネットワーク | 名前空間 コンテナ名 ネットワーク Docker エンジン | コンテナイメージ コンテナステータス コンテナバージョン ノード名 ノードIP ノードUUID ノードOS K8s クラスタ Dockerバージョン コンテナID | RXドロップ RXバイト RXエラー RXパケット TXドロップ TXバイト TXエラー TXパケット 
 
 
-| Docker コンテナの CPU | 名前空間コンテナ CPU Docker Engine | Kubernetes コンテナハッシュ Kubernetes コンテナポート Kubernetes コンテナの再起動カウント Kubernetes コンテナの終了メッセージパス Kubernetes コンテナの終了メッセージポリシー Kubernetes ポッドの終了猶予期間 Kubernetes 構成ソース OpenShift SCC コンテナイメージコンテナステータスコンテナバージョンノード名 Kubernetes コンテナログパス Kubernetes コンテナ名 Kubernetes コンテナ名 Docker 「 Kubernetes ポッド名 Kubernetes ポッドネームスペース Kubernetes ポッド UID Kubernetes サンドボックス ID ノード IP ノード UUID ノード OS Kubernetes クラスタ Docker バージョン Kubernetes 概要 Kubernetes 表示名 OpenShift タグスキーマバージョンポッドテンプレートハッシュコントローラリビジョンハッシュポッドテンプレート生成 Kompose Service Schema Build Date Schema License Schema Name 」と入力します スキーマベンダーカスタマーポッド Kubernetes ステータス設定ポッド名テナント WebConsole ビルド日ライセンスベンダーアーキテクチャ信頼できるソース URL RH ビルドホスト RH コンポーネント配布範囲インストールメンテナリリース概要アンインストール VCS リファレンスバージョンスキーマバージョンスキーマバージョンコンテナ ID | スロットル周期スロットルスロットルスロットルスロットルスロットルスロットルスロットルスロットルスロットルスロットルスロットルスロットル時間の使用率（ユーザーモード使用率）使用率システム使用率合計 
+| DockerコンテナCPU | 名前空間 コンテナ名 CPU Dockerエンジン | Kubernetes コンテナ ハッシュ、Kubernetes コンテナ ポート、Kubernetes コンテナの再起動回数、Kubernetes コンテナの終了メッセージ パス、Kubernetes コンテナの終了メッセージ ポリシー、Kubernetes ポッドの終了猶予期間、Kubernetes 構成の確認、Kubernetes 構成ソース、OpenShift SCC コンテナ イメージ、コンテナ ステータス、コンテナ バージョン、ノード名、Kubernetes コンテナ ログ パス、Kubernetes コンテナ名、Kubernetes Docker タイプ、Kubernetes ポッド名、Kubernetes ポッド名前空間、Kubernetes ポッド UID、Kubernetes サンドボックス ID、ノード IP、ノード UUID、ノード OS、Kubernetes クラスター Docker バージョン、Kubernetes の説明、Kubernetes 表示名、OpenShift タグ、スキーマ バージョン、ポッド テンプレート ハッシュ、コントローラー リビジョン ハッシュ、ポッド テンプレート生成、Kompose サービス スキーマ ビルド日、スキーマ ライセンス スキーマ名、スキーマ ベンダー、顧客ポッド、Kubernetes StatefulSet ポッド名、テナント Web コンソール ビルド日、ライセンス ベンダー、アーキテクチャ、権限のあるソース URL、RH ビルド ホスト、RH コンポーネント ディストリビューション スコープ、インストール、メンテナー、リリース、実行、サマリー、アンインストール、VCS 参照、VCS タイプ バージョン、スキーマ URL、スキーマ、VCS URL、スキーマ バージョン、コンテナ ID | スロットル期間 スロットル スロットル期間 スロットル スロットル時間 カーネルモードでの使用量 ユーザーモードでの使用量 使用量の割合 システム使用量 合計 
 |===
 
 
@@ -110,9 +110,9 @@ Kubernetesプラットフォーム用に提供されているData Infrastructure
 
 [cols="2*"]
 |===
-| 問題 | 次の操作を実行します 
+| 問題： | これを試してください: 
 
 
-| 設定ページの手順に従っても、Data Infrastructure InsightsにDocker指標が表示されません。 | Tegraf エージェントログを調べて、次のエラーが報告されているかどうかを確認します。プラグインのエラー [input.docdocker ]: Docker デーモンソケットに接続しようとしたときに許可が拒否されました。接続されている場合は、事前に指定した Docker Unix ソケットへの Telegraf エージェントアクセスを提供するために必要な手順を実行してください。 
+| 構成ページの指示に従った後、 Data Infrastructure Insightsに Docker メトリックが表示されません。 | Telegraf エージェント ログをチェックして、次のエラーが報告されているかどうかを確認します: E! プラグイン [inputs.docker] のエラー: Docker デーモン ソケットへの接続中に権限が拒否されました。その場合は、上記のように、Telegraf エージェントに Docker Unix ソケットへのアクセスを提供するために必要な手順を実行してください。 
 |===
-詳細については、ページを参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページ。

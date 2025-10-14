@@ -2,33 +2,33 @@
 sidebar: sidebar 
 permalink: task_dc_emc_vmax_powermax.html 
 keywords: data collector, EMC, DELL, vmax, powermax 
-summary: Dell EMC VMAX および PowerMax ファミリのデバイスデータコレクタの設定。 
+summary: Dell EMC VMAX および PowerMax デバイス ファミリのデータ コレクターを構成します。 
 ---
-= Dell EMC VMAX および PowerMax ファミリのデバイスデータコレクタ
+= Dell EMC VMAXおよびPowerMaxデバイスファミリーのデータコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、Solutions Enablerのsymcliコマンドと環境内の既存のSolutions Enablerサーバを使用して、EMC VMAXおよびPowerMaxストレージアレイを検出します。既存の Solutions Enabler サーバは、ゲートキーパーボリュームへのアクセスを通じて VMAX/PowerMax ストレージアレイに接続できます。
+Data Infrastructure Insights は、環境内の既存の Solutions Enabler サーバーと組み合わせて Solutions Enabler symcli コマンドを使用することで、EMC VMAX および PowerMax ストレージ アレイを検出します。既存の Solutions Enabler サーバーは、ゲートキーパー ボリュームへのアクセスを通じて VMAX/PowerMax ストレージ アレイに接続できます。
 
 
 
 == 要件
 
-このデータコレクタを設定する前に、Data Infrastructure Insightsが既存のSolutions Enablerサーバのポート2707にTCP接続されていることを確認する必要があります。Data Infrastructure Insightsは、このサーバからの「symcfg list」出力に示されるように、このサーバに対して「ローカル」であるすべてのSymmetrixアレイを検出します。
+このデータ コレクターを構成する前に、 Data Infrastructure Insights が既存の Solutions Enabler サーバー上のポート 2707 に TCP 接続できることを確認する必要があります。  Data Infrastructure Insights は、そのサーバーからの「symcfg list」出力に表示される、このサーバーに「ローカル」であるすべての Symmetrix アレイを検出します。
 
-* EMC Solutions Enabler （ CLI ）と SMI-S プロバイダアプリケーションが Acquisition Unit サーバにインストールされている必要があります。 Solutions Enabler サーバで実行されているバージョンと同じかそれよりも前のバージョンが必要です。
-* 適切に設定された {installdir}\EMC\SYMAPI\config\netcnfg ファイルが必要です。このファイルでは、 Solutions Enabler サーバのサービス名とアクセス方法（ SECURE / NOSECURE / ANY ）を定義します。
-* ストレージノードレベルで読み取り / 書き込みレイテンシが必要な場合、 SMI-S プロバイダは Unisphere for VMAX アプリケーションの実行中のインスタンスと通信する必要があります。
-* 管理用 Solutions Enabler サーバの IP アドレス
-* Solutions Enabler （ SE ）サーバに対する管理者権限が必要です
-* SE ソフトウェアに対する読み取り専用のユーザ名とパスワード
-* UNISPHERE for VMAX アプリケーションを実行して、 SMI-S プロバイダのインストールで管理される EMC VMAX および PowerMax ストレージアレイの統計を収集する必要があります
-* パフォーマンスのためのアクセスの検証：Acquisition UnitのWebブラウザで、_\ https：//<SMI-S Hostname or IP>：5989/ecomconfig_に移動します。「SMI-S Hostname or IP」は、SMI-SサーバのIPアドレスまたはホスト名です。このURLは'EMC SMI-S（ECOM）サービスの管理ポータル用であり'ログイン・ポップアップが表示されます
-* 権限はSolutions Enablerサーバのデーモン構成ファイルで宣言する必要があります。通常は次の場所にあります。_/var/symapi/config/demon _users_
+* SMI-S プロバイダー アプリケーションを備えた EMC Solutions Enabler (CLI) は、Acquisition Unit サーバーにインストールする必要があり、そのバージョンは Solutions Enabler サーバーで実行されているバージョンと一致するか、それより前である必要があります。
+* 適切に構成された {installdir}\EMC\SYMAPI\config\netcnfg ファイルが必要です。このファイルは、Solutions Enabler サーバーのサービス名とアクセス方法 (SECURE / NOSECURE /ANY) を定義します。
+* ストレージ ノード レベルで読み取り/書き込みの遅延が必要な場合、SMI-S プロバイダーは、UNISPHERE for VMAX アプリケーションの実行中のインスタンスと通信する必要があります。
+* 管理ソリューション イネーブラ サーバーの IP アドレス
+* Solutions Enabler (SE) サーバーの管理者権限
+* SEソフトウェアへの読み取り専用ユーザー名とパスワード
+* UNISPHERE for VMAXアプリケーションが実行され、SMI-Sプロバイダーのインストールによって管理されるEMC VMAXおよびPowerMaxストレージアレイの統計情報を収集する必要があります。
+* パフォーマンスのアクセス検証: 取得ユニットの Web ブラウザーで、_\https://<SMI-S ホスト名または IP>:5989/ecomconfig_ にアクセスします。ここで、「SMI-S ホスト名または IP」は SMI-S サーバーの IP アドレスまたはホスト名です。この URL は、EMC SMI-S (別名「ECOM」) サービスの管理ポータル用です。ログイン ポップアップが表示されます。
+* 権限は、Solutions Enabler サーバーのデーモン構成ファイルで宣言する必要があります。このファイルは通常、次の場所にあります: _/var/symapi/config/daemon_users_
 +
-次に、適切なciscysアクセス権を持つサンプルファイルを示します。
+適切な cisys 権限を持つファイルの例を次に示します。
 
 +
 ....
@@ -49,11 +49,11 @@ cisys storapid <all>
 
 == 用語
 
-Data Infrastructure Insightsでは、EMC VMAX / PowerMaxデータソースから次のインベントリ情報を取得します。取得したアセットのタイプごとに、そのアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+Data Infrastructure Insights は、 EMC VMAX/PowerMax データ ソースから次のインベントリ情報を取得します。取得した資産の種類ごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
 [cols="2*"]
 |===
-| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
 
 | ディスク | ディスク 
@@ -65,34 +65,34 @@ Data Infrastructure Insightsでは、EMC VMAX / PowerMaxデータソースから
 | ストレージ | アレイストレージ 
 
 
-| ディレクター | ストレージノード 
+| 監督 | ストレージ ノード 
 
 
-| デバイスプール、 Storage Resource Pool （ SRP ；ストレージリソースプール） | ストレージプール 
+| デバイス プール、ストレージ リソース プール (SRP) | ストレージ プール 
 
 
-| デバイス TDev | ボリューム 
+| デバイスTDev | Volume 
 |===
-注：これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているわけではありません。
+注: これらは一般的な用語のマッピングのみであり、このデータ コレクターのすべてのケースを反映しているわけではありません。
 
 
 
 == 構成
 
-*注：* SMI-Sユーザ認証が有効になっていない場合、Data Infrastructure Insightsデータコレクタのデフォルト値は無視されます。
+*注:* SMI-S ユーザー認証が有効になっていない場合、 Data Infrastructure Insightsデータ コレクターのデフォルト値は無視されます。
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| サービス名 | _netcnfG_file で指定されたサービス名 
+| サービス名 | _netcnfg_ ファイルに指定されたサービス名 
 
 
-| CLI の完全パス | Symmetrix CLI を含むフォルダへのフル・パス 
+| CLIへのフルパス | Symmetrix CLI を含むフォルダへのフルパス 
 
 
-| SMI-S ホストの IP アドレス | SMI-S ホストの IP アドレス 
+| SMI-SホストIPアドレス | SMI-SホストのIPアドレス 
 |===
 
 
@@ -100,76 +100,76 @@ Data Infrastructure Insightsでは、EMC VMAX / PowerMaxデータソースから
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| インベントリポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは40分です。 
+| インベントリポーリング間隔（分） | インベントリ ポーリングの間隔。デフォルトは40分です。 
 
 
-| 「除外」または「含める」を選択してリストを指定します | 下のリストに表示されたアレイをデータの収集時に対象に含めるか除外するかを指定します。 
+| リストを指定するには「除外」または「含める」を選択します | データを収集するときに、以下の配列リストを含めるか除外するかを指定します。 
 
 
-| インベントリフィルタデバイスリスト | 対象に含めるか除外するデバイスの ID をカンマで区切ったリスト 
+| インベントリフィルターデバイスリスト | 含めるまたは除外するデバイス ID のコンマ区切りリスト 
 
 
-| 接続のキャッシュ | 接続キャッシュ方法の選択： * local は 'Solutions Enabler サーバ上で Cloud Insights 取得サービスが実行されていることを意味しますこのサーバは ' 検出対象の Symmetrix アレイにファイバ・チャネルで接続されており ' ゲートキーパー・ボリュームにアクセスできる必要がありますこのオプションは、一部の Remote Acquisition Unit （ RAU ）構成で使用されます。* REMOTE_CACHED はデフォルトの設定であり、ほとんどの状況でこのオプションを使用します。このオプションでは、 NETCNFG ファイルの設定に基づいて、 IP を使用して Solutions Enabler サーバに接続します。サーバは検出対象の Symmetrix アレイにファイバチャネルで接続されていて、ゲートキーパーボリュームにアクセスできる必要があります。* REMOTE_CACHED オプションで CLI コマンドが失敗する場合は、 REMOTE オプションを使用します。データ収集プロセスが遅くなることに注意してください（数時間から場合によっては数日かかることがあります）。検出対象の Symmetrix アレイにファイバチャネルで接続された Solutions Enabler サーバへの IP 接続には、引き続き NETCNFG ファイルの設定が使用されます。*注：*この設定では、「symcfg list」の出力でREMOTEと表示されているアレイに対するData Infrastructure Insightsの動作は変更されません。Data Infrastructure Insightsは、このコマンドでLOCALと表示されているデバイスのデータのみを収集します。 
+| 接続キャッシュ | 接続キャッシュ方法を選択します: * LOCAL は、 Cloud Insights Acquisition サービスが Solutions Enabler サーバー上で実行されており、検出対象の Symmetrix アレイへのファイバー チャネル接続があり、ゲートキーパー ボリュームにアクセスできることを意味します。これは、一部のリモート取得ユニット (RAU) 構成で発生する可能性があります。 * REMOTE_CACHED はデフォルトであり、ほとんどの場合に使用する必要があります。これには、NETCNFG ファイル設定を使用して、IP を使用して Solutions Enabler サーバーに接続します。このサーバーは、検出対象の Symmetrix アレイへのファイバ チャネル接続を持ち、Gatekeeper ボリュームにアクセスできる必要があります。 * REMOTE_CACHED オプションにより CLI コマンドが失敗する場合は、REMOTE オプションを使用します。取得プロセスが遅くなることに注意してください (極端な場合には数時間または数日かかる可能性があります)。  NETCNFG ファイル設定は、検出対象の Symmetrix アレイへのファイバー チャネル接続を持つ Solutions Enabler サーバーへの IP 接続に引き続き使用されます。  *注:* この設定では、「symcfg list」出力で REMOTE としてリストされているアレイに関するData Infrastructure Insights の動作は変更されません。  Data Infrastructure Insights は、このコマンドによって LOCAL として表示されるデバイス上でのみデータを収集します。 
 
 
-| SMI-S プロトコル | SMI-S プロバイダへの接続に使用するプロトコル。使用されているデフォルトのポートも表示されます。 
+| SMI-Sプロトコル | SMI-S プロバイダーに接続するために使用されるプロトコル。使用されるデフォルトのポートも表示します。 
 
 
-| SMIS-Port をオーバーライドします | 空白の場合は、 [Connection Type] フィールドでデフォルトのポートを使用します。それ以外の場合は、使用する接続ポートを入力します 
+| SMISポートの上書き | 空白の場合は、接続タイプフィールドのデフォルトのポートを使用します。それ以外の場合は、使用する接続ポートを入力します。 
 
 
-| SMI-S ユーザー名 | SMI-S プロバイダホストのユーザ名 
+| SMI-Sユーザー名 | SMI-Sプロバイダーホストのユーザー名 
 
 
-| SMI-S のパスワード | SMI-S プロバイダホストのユーザ名 
+| SMI-Sパスワード | SMI-Sプロバイダーホストのユーザー名 
 
 
-| パフォーマンスポーリング間隔（秒） | パフォーマンスのポーリング間隔（デフォルトは1000秒） 
+| パフォーマンスポーリング間隔（秒） | パフォーマンスポーリングの間隔（デフォルトは1000秒） 
 
 
-| リストを指定するには、「除外」または「含める」を選択します | 下のリストに表示されたアレイをパフォーマンスデータの収集時に対象に含めるか除外するかを指定します 
+| リストを指定するには「除外」または「含める」を選択します | パフォーマンスデータを収集するときに、以下のアレイリストを含めるか除外するかを指定します 
 
 
-| パフォーマンスフィルタのデバイスリスト | 対象に含めるか除外するデバイスの ID をカンマで区切ったリスト 
+| パフォーマンスフィルターデバイスリスト | 含めるまたは除外するデバイス ID のコンマ区切りリスト 
 |===
 
 
 == トラブルシューティング
 
-このデータコレクタで問題が発生した場合の対処方法を次に示します。
+このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 [cols="2*"]
 |===
-| 問題 | 次の操作を実行します 
+| 問題： | これを試してください: 
 
 
-| エラー：要求されている機能のライセンスがありません | SYMAPI サーバ・ライセンスをインストールします 
+| エラー: 要求された機能は現在ライセンスされていません | SYMAPI サーバー ライセンスをインストールします。 
 
 
-| エラー：デバイスが見つかりませんでした | Symmetrix デバイスが Solutions Enabler サーバで管理されるように構成されていることを確認します： - symcfg list -v を実行して ' 構成済みの Symmetrix デバイスのリストを確認します 
+| エラー: デバイスが見つかりません | Symmetrix デバイスが Solutions Enabler サーバーによって管理されるように構成されていることを確認します。 - 構成されている Symmetrix デバイスのリストを表示するには、symcfg list -v を実行します。 
 
 
-| エラー：要求されたネットワークサービスがサービスファイルで見つかりませんでした | Solutions Enabler サービス名が Solutions Enabler 用の netcnfg ファイルとして定義されていることを確認します。このファイルは通常 'Solutions Enabler クライアントのインストールの SYMAPI\config\ にあります 
+| エラー: 要求されたネットワーク サービスがサービス ファイルに見つかりません | Solutions Enabler の netcnfg ファイルで Solutions Enabler サービス名が定義されていることを確認します。このファイルは通常、Solutions Enabler クライアント インストールの SYMAPI\config\ にあります。 
 
 
-| エラー：リモートクライアント / サーバハンドシェイクに失敗しました | 検出しようとしている Solutions Enabler ホストの最新の storsrvd.log * ファイルを確認します 
+| エラー: リモートクライアント/サーバーハンドシェイクに失敗しました | 検出しようとしている Solutions Enabler ホスト上の最新の storsrvd.log* ファイルを確認します。 
 
 
-| エラー：クライアント証明書の共通名が無効です | Solutions Enabler サーバの _hosts_file を編集して、 Acquisition Unit のホスト名が Solutions Enabler サーバの storsrvd.log で報告された IP アドレスに解決されるようにします。 
+| エラー: クライアント証明書の共通名が無効です | Solutions Enabler サーバー上の _hosts_ ファイルを編集して、Acquisition Unit のホスト名が Solutions Enabler サーバー上の storsrvd.log に報告されている IP アドレスに解決されるようにします。 
 
 
-| エラー：機能がメモリを取得できませんでした | Solutions Enabler を実行するための十分な空きメモリがシステムにあることを確認してください 
+| エラー: 関数はメモリを取得できませんでした | Solutions Enablerを実行するためにシステムに十分な空きメモリがあることを確認してください。 
 
 
-| エラー： Solutions Enabler は必要なすべてのデータを提供できませんでした。 | Solutions Enabler の正常性ステータスとロードプロファイルを調査します 
+| エラー: Solutions Enabler は必要なすべてのデータを提供できませんでした。 | Solutions Enablerの健全性状態と負荷プロファイルを調査する 
 
 
-| エラー : • Solutions Enabler サーバ 8.x から Solutions Enabler 7.x と一緒に収集したときに、「 symcfg list -Tdev 」 CLI コマンドで誤ったデータが返されることがあります• Solutions Enabler サーバ 8.3 以降から Solutions Enabler 8.1.0 以前で収集した場合、 CLI コマンド「 symcfg list -srp 」で誤ったデータが返されることがあります。 | Solutions Enabler のメジャーリリースが同じであることを確認してください 
+| エラー: • Solutions Enabler サーバー 8.x から Solutions Enabler 7.x を使用して収集した場合、「symcfg list -tdev」CLI コマンドは誤ったデータを返す場合があります。  • Solutions Enabler 8.3 以降から Solutions Enabler 8.1.0 以前を使用して収集された場合、「symcfg list -srp」 CLI コマンドは誤ったデータを返すことがあります。 | 同じSolutions Enablerメジャーリリースを使用していることを確認してください 
 
 
-| 「unknown code」というメッセージが表示され、データ収集エラーが発生しました。 | このメッセージは'Solutions Enablerサーバのデーモン構成ファイルで権限が宣言されていない場合に表示されます（上記を参照）<<要件,要件>>これは、SEクライアントのバージョンがSEサーバのバージョンと一致していることを前提としています。このエラーは'Solutions Enablerコマンドを実行する_cisys_userが/var/symapi/config/demon _users構成ファイルで必要なデーモン権限で構成されていない場合にも発生することがありますこれを修正するには、/var/symapi/config/demonファイルを編集し、cisysユーザにstorapidデーモンに対して指定された<all> 権限があることを確認します。例：14：11：25 #tail /var/symapi/config/demon users... cisys storapid <all> 
+| 「不明なコード」というメッセージとともにデータ収集エラーが表示されます | Solutions Enablerサーバーのデーモン構成ファイルで権限が宣言されていない場合、このメッセージが表示されることがあります（<<要件,要件>>その上。）これは、SE クライアントのバージョンが SE サーバーのバージョンと一致していることを前提としています。このエラーは、_cisys_ ユーザー (Solutions Enabler コマンドを実行する) に /var/symapi/config/daemon_users 構成ファイルで必要なデーモン権限が設定されていない場合にも発生する可能性があります。これを修正するには、/var/symapi/config/daemon_users ファイルを編集し、cisys ユーザーに storapid デーモンに対して指定された <all> 権限があることを確認します。例: 14:11:25 # tail /var/symapi/config/daemon_users ... cisys storapid <all> 
 |===
-詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

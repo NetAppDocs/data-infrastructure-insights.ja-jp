@@ -2,51 +2,51 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_elasticsearch.html 
 keywords: telegraf, installation, install, ElasticSearch 
-summary: Elasticsearch データコレクタの設定 
+summary: Elasticsearch データコレクターの構成 
 ---
-= Elasticsearch Data Collector
+= Elasticsearch データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、このデータコレクタを使用してElasticsearchから指標を収集します。
+Data Infrastructure Insights は、このデータ コレクターを使用して Elasticsearch からメトリックを収集します。
 
-. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。[Elasticsearch]を選択します。
+. *Observability > Collectors* から、*+ Data Collector* をクリックします。  Elasticsearch を選択します。
 +
-Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+Telegraf エージェントがインストールされているオペレーティング システムまたはプラットフォームを選択します。
 
-. コレクション用エージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[_Show Instructions_]をクリックして手順を展開しlink:task_config_telegraf_agent.html["エージェントのインストール"]ます。
-. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
-. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+. 収集用のエージェントをまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォーム用のエージェントをインストールする場合は、[手順を表示] をクリックして展開します。link:task_config_telegraf_agent.html["エージェントのインストール"]説明書。
+. このデータ コレクターで使用するエージェント アクセス キーを選択します。 *+ エージェント アクセス キー* ボタンをクリックすると、新しいエージェント アクセス キーを追加できます。ベスト プラクティス: データ コレクターを OS/プラットフォーム別などにグループ化する場合にのみ、異なるエージェント アクセス キーを使用します。
+. 構成手順に従ってデータ コレクターを構成します。手順は、データ収集に使用しているオペレーティング システムまたはプラットフォームの種類によって異なります。
 
 
-image:ElasticsearchDCConfigLinux.png["Elasticsearch 設定"]
+image:ElasticsearchDCConfigLinux.png["Elasticsearchの設定"]
 
 
 
 == セットアップ
 
-詳細については、を参照してlink:https://www.elastic.co/guide/index.html["Elasticsearch のドキュメント"]ください。
+詳細は以下をご覧ください。link:https://www.elastic.co/guide/index.html["Elasticsearch ドキュメント"] 。
 
 
 
-== オブジェクトとカウンタ
+== オブジェクトとカウンター
 
-次のオブジェクトとそのカウンタが収集されます。
+次のオブジェクトとそのカウンターが収集されます。
 
 [cols="<.<,<.<,<.<"]
 |===
-| オブジェクト： | 識別子： | 属性： 
+| オブジェクト | 識別子: | 属性: 
 
 
-| Elasticsearch クラスタ | ネームスペースクラスタ | ノード IP ノード名クラスタステータス 
+| Elasticsearch クラスター | 名前空間クラスター | ノードIP ノード名 クラスタステータス 
 
 
-| Elasticsearch ノード | ネームスペースクラスタ ES ノード ID ES ノード IP ES ノードです | ゾーン ID 
+| Elasticsearchノード | 名前空間 クラスター ES ノード ID ES ノード IP ES ノード | ゾーンID 
 |===
 
 
 == トラブルシューティング
 
-詳細については、ページを参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページ。

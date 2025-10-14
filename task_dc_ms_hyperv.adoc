@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: task_dc_ms_hyperv.html 
 keywords: data collector, Microsoft, Hyper-V 
-summary: Microsoft Hyper-V データコレクタの設定 
+summary: Microsoft Hyper-V データ コレクターを構成します。 
 ---
-= Microsoft Hyper-V データコレクタ
+= Microsoft Hyper-V データコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Microsoft Hyper-V データコレクタは、仮想サーバコンピューティング環境からインベントリとパフォーマンスのデータを取得します。このデータコレクタは、スタンドアロンのHyper-Vホストを検出することも、クラスタ全体を検出して、スタンドアロンのホストまたはクラスタごとにコレクタを1つ作成することもできます。
+Microsoft Hyper-V データ コレクターは、仮想化されたサーバー コンピューティング環境からインベントリとパフォーマンス データを取得します。このデータ コレクターは、スタンドアロン Hyper-V ホストまたはクラスター全体を検出できます。スタンドアロン ホストまたはクラスターごとに 1 つのコレクターを作成します。
 
 
 
 == 用語
 
-Data Infrastructure Insightsは、Microsoft Hyper-V（WMI）から次のインベントリ情報を取得します。Data Infrastructure Insightsで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+Data Infrastructure Insights は、 Microsoft Hyper-V (WMI) から次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
 [cols="2*"]
 |===
-| ベンダー / モデルの用語 | Data Infrastructure Insightsの用語 
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
 
 | 仮想ハードディスク | 仮想ディスク 
@@ -32,39 +32,39 @@ Data Infrastructure Insightsは、Microsoft Hyper-V（WMI）から次のイン�
 | 仮想マシン | 仮想マシン 
 
 
-| Cluster Shared Volume （ CSV ；クラスタ共有ボリューム）、パーティションボリューム | データストア 
+| クラスター共有ボリューム（CSV）、パーティションボリューム | データ ストア 
 
 
-| Internet SCSI Device 、 Multi Path SCSI LUN の略 | LUN 
+| インターネット SCSI デバイス、マルチパス SCSI LUN | LUN 
 
 
-| ファイバチャネルポート | ポート 
+| ファイバーチャネルポート | ポート 
 |===
-注：これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているわけではありません。
+注: これらは一般的な用語のマッピングのみであり、このデータ コレクターのすべてのケースを反映しているわけではありません。
 
 
 
 == 要件
 
-このデータコレクタを設定するには、次のものが必要です。
+このデータ コレクターを構成するには、次のものが必要です。
 
-* Hyper-V では、データ収集とリモートアクセス / 管理用にポート 5985 が開いている必要があります。
-* クラスタまたはスタンドアロンハイパーバイザーのIPアドレスまたはFQDN。フローティングクラスタのホスト名またはIPを使用する方法は、コレクタをクラスタ内の1つの特定のノードだけに指定する方法ではない可能性があります。
-* クラスタ内のすべてのハイパーバイザーで機能する管理者レベルのユーザアカウント。
-* WinRMを有効にし、すべてのハイパーバイザーでリスンする必要があります
-* ポート要件： WMI 経由のポート 135 および Windows 2003 以前の場合は 1024~65535 、 Windows 2008 の場合は 49152~65535 の動的 TCP ポート。
-* データコレクタが IP アドレスだけを参照している場合でも、 DNS 解決は成功する必要があります
-* 各 Hyper-V ハイパーバイザーでは、各ホスト上のすべての VM に対して「リソース計測」をオンにする必要があります。これにより、各ハイパーバイザーは、各ゲストでData Infrastructure Insights用により多くのデータを使用できるようになります。この値を設定しない場合は、各ゲストのパフォーマンスメトリックが取得される回数が少なくなります。リソース計測の詳細については、Microsoftの次のドキュメントを参照してください。
+* Hyper-V では、データ収集とリモート アクセス/管理のためにポート 5985 を開く必要があります。
+* クラスターまたはスタンドアロン ハイパーバイザーの IP アドレスまたは FQDN。フローティング クラスターのホスト名または IP を使用することは、クラスター内の特定の 1 つのノードのみにコレクターを向ける場合よりも、最も信頼性の高いアプローチであると考えられます。
+* クラスター内のすべてのハイパーバイザーで機能する管理レベルのユーザー アカウント。
+* WinRMはすべてのハイパーバイザーで有効化され、リッスンする必要がある
+* ポート要件: WMI 経由のポート 135、および Windows 2003 以前では 1024 ～ 65535、Windows 2008 では 49152 ～ 65535 に割り当てられた動的 TCP ポート。
+* データコレクターがIPアドレスのみを指している場合でも、DNS解決は成功する必要がある
+* 各 Hyper-V ハイパーバイザーでは、すべてのホスト上のすべての VM に対して「リソース メータリング」をオンにする必要があります。これにより、各ハイパーバイザーは、各ゲストのData Infrastructure Insightsにさらに多くのデータを利用できるようになります。これを設定しないと、ゲストごとに取得されるパフォーマンス メトリックの数が少なくなります。リソースメータリングの詳細については、Microsoft のドキュメントを参照してください。
 +
-link:https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831661(v=ws.11)["Hyper-V のリソース計測の概要"]
+link:https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831661(v=ws.11)["Hyper-V リソースメータリングの概要"]
 
 +
-link:https://docs.microsoft.com/en-us/powershell/module/hyper-v/enable-vmresourcemetering?view=win10-ps["Enable - VMResourceMetering"]
+link:https://docs.microsoft.com/en-us/powershell/module/hyper-v/enable-vmresourcemetering?view=win10-ps["VMリソースメータリングを有効にする"]
 
 
 
 
-NOTE: Hyper-V データコレクタには Windows Acquisition Unit が必要です。
+NOTE: Hyper-V データ コレクターには Windows Acquisition Unit が必要です。
 
 
 
@@ -72,19 +72,19 @@ NOTE: Hyper-V データコレクタには Windows Acquisition Unit が必要で�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| クラスタIPアドレスまたはフローティングクラスタFQDN | クラスタのIPアドレスまたは完全修飾ドメイン名、またはスタンドアロンの非クラスタハイパーバイザー 
+| クラスタ IP アドレスまたはフローティング クラスタ FQDN | クラスタまたはスタンドアロンの非クラスタ化ハイパーバイザの IP アドレスまたは完全修飾ドメイン名 
 
 
-| ユーザー名 | ハイパーバイザーの管理者のユーザ名です 
+| ユーザー名 | ハイパーバイザーの管理者ユーザー名 
 
 
-| パスワード | ハイパーバイザーのパスワードです 
+| パスワード | ハイパーバイザーのパスワード 
 
 
-| DNSドメインサフィックス | ハイパーバイザーのFQDNをレンダリングするために単純なホスト名と組み合わせたホスト名サフィックス 
+| DNSドメインサフィックス | 単純なホスト名と組み合わせてハイパーバイザーの FQDN を表現するホスト名サフィックス 
 |===
 
 
@@ -92,7 +92,7 @@ NOTE: Hyper-V データコレクタには Windows Acquisition Unit が必要で�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
 | インベントリポーリング間隔（分） | デフォルトは20分です。 
@@ -101,4 +101,4 @@ NOTE: Hyper-V データコレクタには Windows Acquisition Unit が必要で�
 
 == トラブルシューティング
 
-このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

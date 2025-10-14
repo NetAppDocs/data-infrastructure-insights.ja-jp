@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reporting_schema_diagrams.html 
 keywords: Schema, DB Schema, premium, dwh, data warehouse 
-summary: レポートスキーマの図 
+summary: レポートスキーマ図 
 ---
-= Data Infrastructure Insightsのレポートスキーマ図
+= Data Infrastructure Insightsレポートスキーマダイアグラム
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,16 +14,16 @@ summary: レポートスキーマの図
 
 
 [role="lead"]
-このドキュメントでは、レポートデータベースのスキーマ図について説明します。
+このドキュメントでは、レポート データベースのスキーマ ダイアグラムを示します。
 
 
-NOTE: レポート機能はData Infrastructure Insightsで使用できlink:concept_subscribing_to_cloud_insights.html["Premium Edition の場合"]ます。
+NOTE: レポート機能は、Data Infrastructure Insightsで利用できます。link:concept_subscribing_to_cloud_insights.html["プレミアムエディション"] 。
 
 
 
-== Inventory Datamart のサービスです
+== 在庫データマート
 
-次の図は、インベントリデータマートを説明しています。
+次の画像は在庫データマートを説明しています。
 
 
 
@@ -39,45 +39,45 @@ image:apps_annot.jpg["アプリケーション"]
 
 
 
-=== Kubernetes指標
+=== Kubernetes メトリクス
 
 image:k8s.jpg["Kubernetes"]
 
 
 
-==== Kubernetes Cluster Metricsファクト
+==== Kubernetes クラスターメトリクスの事実
 
-image:k8s_cluster_metrics_fact.jpg["Kubernetes Cluster Metricsファクト"]
-
-
-
-==== Kubernetes Namespace Metricsファクト
-
-image:k8s_namespace_metrics_fact.jpg["Kubernetes Namespace Metricsファクト"]
+image:k8s_cluster_metrics_fact.jpg["Kubernetes クラスターメトリクスの事実"]
 
 
 
-==== Kubernetes Node Metricsファクト
+==== Kubernetes 名前空間メトリクスの事実
 
-image:k8s_node_metrics_fact.jpg["Kubernetes Node Metricsファクト"]
-
-
-
-==== Kubernetes PVC Metricsファクト
-
-image:k8s_pvc_metrics_fact.jpg["Kubernetes PVC Metricsファクト"]
+image:k8s_namespace_metrics_fact.jpg["Kubernetes 名前空間メトリクスの事実"]
 
 
 
-==== Kubernetes Workload Metricsファクト
+==== Kubernetes ノードメトリクスの事実
 
-image:k8s_workload_metrics_fact.jpg["Kubernetes Workload Metricsファクト"]
+image:k8s_node_metrics_fact.jpg["Kubernetes ノードメトリクスの事実"]
+
+
+
+==== Kubernetes PVC メトリクスの事実
+
+image:k8s_pvc_metrics_fact.jpg["Kubernetes PVC メトリクスの事実"]
+
+
+
+==== Kubernetes ワークロード メトリクスの事実
+
+image:k8s_workload_metrics_fact.jpg["Kubernetes ワークロード メトリクスの事実"]
 
 
 
 === NAS
 
-image:nas.jpg["NAS"]
+image:nas.jpg["nas"]
 
 
 
@@ -93,7 +93,7 @@ image:connectivity.jpg["ポート接続"]
 
 
 
-=== SAN ファブリック
+=== SANファブリック
 
 image:fabric.jpg["SANファブリック"]
 
@@ -101,11 +101,11 @@ image:fabric.jpg["SANファブリック"]
 
 === ストレージ
 
-image:storage.jpg["ストレージ"]
+image:storage.jpg["storage"]
 
 
 
-=== ストレージノード
+=== ストレージ ノード
 
 image:storage_node.jpg["ストレージノード"]
 
@@ -113,14 +113,14 @@ image:storage_node.jpg["ストレージノード"]
 
 === VM
 
-image:vm.jpg["仮想マシン"]
+image:vm.jpg["virtual machine（仮想マシン）"]
 
 '''
 
 
-== Capacity Datamartの略
+== 容量データマート
 
-次の図は、容量データマートを示しています。
+次の画像は容量データマートを説明しています。
 
 
 
@@ -130,63 +130,63 @@ image:Chargeback_Fact.jpg["チャージバック"]
 
 
 
-=== ディスクグループの容量
+=== ディスクグループ容量
 
-image:Disk_Group_Capacity.jpg["ディスクグループの容量"]
-
-
-
-=== ファイルシステムの利用率
-
-image:fs_util.jpg["ファイルシステムの利用率"]
+image:Disk_Group_Capacity.jpg["ディスクグループ容量"]
 
 
 
-=== 内部ボリューム容量
+=== ファイルシステムの使用率
 
-image:Internal_Volume_Capacity_Fact.jpg["内部ボリューム容量"]
-
-
-
-=== Kubernetes PVの容量
-
-image:k8s_pvc_capacity_fact.jpg["Kubernetes PVの容量"]
+image:fs_util.jpg["ファイルシステムの使用率"]
 
 
 
-=== ポートの容量
+=== 内部容積容量
 
-image:ports.png["ポートの容量"]
-
-
-
-=== qtree 容量
-
-image:Qtree_Capacity_Fact.jpg["qtree 容量"]
+image:Internal_Volume_Capacity_Fact.jpg["内部容積容量"]
 
 
 
-=== ストレージ容量の削減比率
+=== Kubernetes PV 容量
 
-image:efficiency.jpg["ストレージ容量の削減比率"]
-
-
-
-=== ストレージおよびストレージプールの容量
-
-image:Storage_and_Storage_Pool_Capacity_Fact.jpg["ストレージおよびストレージプールの容量"]
+image:k8s_pvc_capacity_fact.jpg["Kubernetes PV 容量"]
 
 
 
-=== ストレージノードの容量
+=== ポート容量
 
-image:Storage_Node_Capacity_Fact.jpg["ストレージノードの容量"]
+image:ports.png["ポート容量"]
 
 
 
-=== VM 容量
+=== Qtree容量
 
-image:VM_Capacity_Fact.jpg["VM 容量"]
+image:Qtree_Capacity_Fact.jpg["Qtree容量"]
+
+
+
+=== ストレージ容量効率
+
+image:efficiency.jpg["ストレージ容量効率"]
+
+
+
+=== Storage and Storage Pool Capacity
+
+image:Storage_and_Storage_Pool_Capacity_Fact.jpg["Storage and Storage Pool Capacity"]
+
+
+
+=== ストレージノード容量
+
+image:Storage_Node_Capacity_Fact.jpg["ストレージノード容量"]
+
+
+
+=== VM容量
+
+image:VM_Capacity_Fact.jpg["VM容量"]
 
 
 
@@ -199,160 +199,160 @@ image:Volume_Capacity.jpg["ボリューム容量"]
 
 == パフォーマンスデータマート
 
-次の図は、パフォーマンスデータマートを説明しています。
+次の画像はパフォーマンス データマートを説明しています。
 
 
 
-=== アプリケーションボリューム毎時パフォーマンス
+=== アプリケーションボリュームの時間別パフォーマンス
 
-image:application_performance_fact.jpg["アプリケーションボリューム毎時パフォーマンス"]
+image:application_performance_fact.jpg["アプリケーションボリュームの時間別パフォーマンス"]
 
 
 
 === クラスタスイッチのパフォーマンス
 
-image:cluster_switch_performance_fact.jpg["クラスタスイツチノハフロマンス"]
+image:cluster_switch_performance_fact.jpg["クラスタスイッチのパフォーマンス"]
 
 
 
-=== ディスクの日次パフォーマンス
+=== ディスクの1日あたりパフォーマンス
 
-image:disk_daily_performance_fact.jpg["ディスクの日次パフォーマンス"]
+image:disk_daily_performance_fact.jpg["ディスクの1日あたりパフォーマンス"]
 
 
 
-=== Disk Hourly Performance の 2 つの機能が
+=== ディスクの時間別パフォーマンス
 
-image:disk_hourly_performance_fact.jpg["Disk Hourly Performance の 2 つの機能が"]
+image:disk_hourly_performance_fact.jpg["ディスクの時間別パフォーマンス"]
 
 
 
-=== Host Hourly Performanceの略
+=== ホストの時間別パフォーマンス
 
-image:host_performance_fact.jpg["Host Hourly Performanceの略"]
+image:host_performance_fact.jpg["ホストの時間別パフォーマンス"]
 
 
 
-=== ホストVMの日次パフォーマンス
+=== ホストVMの毎日のパフォーマンス
 
-image:host_vm_daily_performance_fact.jpg["ホストVMの日次パフォーマンス"]
+image:host_vm_daily_performance_fact.jpg["ホストVMの毎日のパフォーマンス"]
 
 
 
-=== ホストVMの時間単位のパフォーマンス
+=== ホストVMの時間別パフォーマンス
 
-image:host_vm_hourly_performance_fact.jpg["ホストVMの時間単位のパフォーマンス"]
+image:host_vm_hourly_performance_fact.jpg["ホストVMの時間別パフォーマンス"]
 
 
 
-=== 内部ボリューム毎時パフォーマンス
+=== 内部容積の1時間当たりのパフォーマンス
 
-image:internal_volume_performance_fact.jpg["内部ボリューム毎時パフォーマンス"]
+image:internal_volume_performance_fact.jpg["内部容積の1時間当たりのパフォーマンス"]
 
 
 
-=== 内部ボリュームの日次パフォーマンス
+=== 内部ボリュームの日々のパフォーマンス
 
-image:internal_volume_daily_performance_fact.jpg["内部ボリュームの日次パフォーマンス"]
+image:internal_volume_daily_performance_fact.jpg["内部ボリュームの日々のパフォーマンス"]
 
 
 
-=== qtree ：日次パフォーマンス
+=== Qtree デイリーパフォーマンス
 
-image:QtreeDailyPerformanceFact.jpg["qtree ：日次パフォーマンス"]
+image:QtreeDailyPerformanceFact.jpg["Qtree デイリーパフォーマンス"]
 
 
 
-=== 1時間あたりのqtreeパフォーマンス
+=== Qtree 時間別パフォーマンス
 
-image:QtreeHourlyPerformanceFact.jpg["qtreeの時間単位のパフォーマンス"]
+image:QtreeHourlyPerformanceFact.jpg["Qtree の時間別パフォーマンス"]
 
 
 
-=== ストレージノードの日次パフォーマンス
+=== ストレージノードの日々のパフォーマンス
 
-image:storage_node_daily_performance_fact.jpg["ストレージノードの日次パフォーマンス"]
+image:storage_node_daily_performance_fact.jpg["ストレージノードの日々のパフォーマンス"]
 
 
 
-=== Storage Node Hourly Performance の略
+=== ストレージノードの時間別パフォーマンス
 
-image:storage_node_hourly_performance_fact.jpg["Storage Node Hourly Performance の略"]
+image:storage_node_hourly_performance_fact.jpg["ストレージノードの時間別パフォーマンス"]
 
 
 
-=== Switch Hourly Performance for Host
+=== ホストのスイッチ時間別パフォーマンス
 
-image:switch_performance_for_host_hourly_fact.jpg["Switch Hourly Performance for Host"]
+image:switch_performance_for_host_hourly_fact.jpg["ホストのスイッチ時間別パフォーマンス"]
 
 
 
-=== Switch Hourly Performance for Port
+=== ポートのスイッチ時間別パフォーマンス
 
-image:switch_performance_for_port_hourly_fact.jpg["Switch Hourly Performance for Port"]
+image:switch_performance_for_port_hourly_fact.jpg["ポートのスイッチ時間別パフォーマンス"]
 
 
 
-=== Switch Hourly Performance for Storage の略
+=== ストレージのスイッチ時間別パフォーマンス
 
-image:switch_performance_for_storage_hourly_fact.jpg["Switch Hourly Performance for Storage の略"]
+image:switch_performance_for_storage_hourly_fact.jpg["ストレージのスイッチ時間別パフォーマンス"]
 
 
 
-=== Switch Hourly Performance for Tape
+=== テープのスイッチ時間別パフォーマンス
 
-image:switch_performance_for_tape_hourly_fact.jpg["Switch Hourly Performance for Tape"]
+image:switch_performance_for_tape_hourly_fact.jpg["テープのスイッチ時間別パフォーマンス"]
 
 
 
-=== VM パフォーマンス
+=== VMパフォーマンス
 
-image:vm_hourly_performance_fact.png["VM パフォーマンス"]
+image:vm_hourly_performance_fact.png["VMパフォーマンス"]
 
 
 
-=== ホストの VM の日次パフォーマンス
+=== ホストのVM日次パフォーマンス
 
-image:vm_daily_performance_fact.png["ホストの VM の日次パフォーマンス"]
+image:vm_daily_performance_fact.png["ホストのVM日次パフォーマンス"]
 
 
 
-=== ホストの VM 1 時間ごとのパフォーマンス
+=== ホストのVM時間別パフォーマンス
 
-image:vmware_host_performance_fact.jpg["1時間ごとのVMホストパフォーマンス"]
+image:vmware_host_performance_fact.jpg["VM の 1 時間ごとのホストパフォーマンス"]
 
 
 
-=== ホストの VM の日次パフォーマンス
+=== ホストのVM日次パフォーマンス
 
-image:vm_daily_performance_fact.png["ホストの VM の日次パフォーマンス"]
+image:vm_daily_performance_fact.png["ホストのVM日次パフォーマンス"]
 
 
 
-=== ホストの VM 1 時間ごとのパフォーマンス
+=== ホストのVM時間別パフォーマンス
 
-image:vm_hourly_performance_fact.png["ホストの VM 1 時間ごとのパフォーマンス"]
+image:vm_hourly_performance_fact.png["ホストのVM時間別パフォーマンス"]
 
 
 
-=== VMDK の日次パフォーマンス
+=== VMDK の日々のパフォーマンス
 
-image:vmdk_daily_performance_fact.jpg["VMDK の日次パフォーマンス"]
+image:vmdk_daily_performance_fact.jpg["VMDK の日々のパフォーマンス"]
 
 
 
-=== VMDK 毎時パフォーマンス
+=== VMDK の時間別パフォーマンス
 
-image:vmdk_hourly_performance_fact.jpg["VMDK 毎時パフォーマンス"]
+image:vmdk_hourly_performance_fact.jpg["VMDK の時間別パフォーマンス"]
 
 
 
-=== 1 時間ごとのボリュームパフォーマンス
+=== ボリューム時間別パフォーマンス
 
-image:volume_performance_fact.jpg["1 時間ごとのボリュームパフォーマンス"]
+image:volume_performance_fact.jpg["ボリューム時間別パフォーマンス"]
 
 
 
-=== ボリュームの日次パフォーマンス
+=== 取引量日次パフォーマンス
 
-image:volume_daily_performance_fact.jpg["ボリュームの日次パフォーマンス"]
+image:volume_daily_performance_fact.jpg["取引量日次パフォーマンス"]

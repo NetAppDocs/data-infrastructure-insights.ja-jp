@@ -2,15 +2,15 @@
 sidebar: sidebar 
 permalink: task_dc_dell_xc_series.html 
 keywords: data collector, Dell, EMC, xc 
-summary: Dell EMC XC シリーズデータコレクタの設定 
+summary: Dell EMC XC シリーズ データ コレクターを構成します。 
 ---
-= Dell EMC XC シリーズデータコレクタ
+= Dell EMC XCシリーズデータコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insightsは、このデータコレクタを使用して、Dell EMC XCシリーズストレージアレイのインベントリとパフォーマンスの情報を検出します。
+Data Infrastructure Insights は、このデータ コレクターを使用して、Dell EMC XC シリーズ ストレージ アレイのインベントリとパフォーマンス情報を検出します。
 
 
 
@@ -18,16 +18,16 @@ Data Infrastructure Insightsは、このデータコレクタを使用して、D
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| プリズム外部 IP アドレス | XCサーバのIPアドレス 
+| Prism外部IPアドレス | XCサーバーのIPアドレス 
 
 
-| ユーザー名 | XCサーバのユーザ名 
+| ユーザー名 | XCサーバーのユーザー名 
 
 
-| パスワード | XCサーバのパスワード 
+| パスワード | XCサーバーで使用するパスワード 
 |===
 
 
@@ -35,19 +35,19 @@ Data Infrastructure Insightsは、このデータコレクタを使用して、D
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| TCPポート | XC サーバーとの TCP 通信に使用されるポート 
+| TCPポート | XCサーバーとのTCP通信に使用するポート 
 
 
-| インベントリポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは60分です。 
+| インベントリポーリング間隔（分） | インベントリ ポーリングの間隔。デフォルトは60分です。 
 
 
-| パフォーマンスポーリング間隔（分） | パフォーマンスのポーリング間隔デフォルトは300秒です。 
+| パフォーマンスポーリング間隔（分） | パフォーマンス ポーリングの間隔。デフォルトは300秒です。 
 |===
 
 
 == トラブルシューティング
 
-詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

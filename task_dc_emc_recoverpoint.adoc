@@ -2,29 +2,29 @@
 sidebar: sidebar 
 permalink: task_dc_emc_recoverpoint.html 
 keywords: data collector, RecoverPoint, EMC, DELL 
-summary: Dell EMC RecoverPoint データコレクタの構成 
+summary: DELL EMC RecoverPoint データ コレクターを構成します。 
 ---
-= Dell EMC RecoverPoint データコレクタ
+= Dell EMC RecoverPointデータコレクター
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-EMC RecoverPoint データコレクタの主な用途は、 RecoverPoint ストレージアプライアンスによって促進されるボリューム間レプリケーション関係を検出することです。このコレクタは、 RecoverPoint アプライアンス自体も検出します。Dell/EMC では、 VM 用の VMware バックアップ解決策 「 RecoverPoint for VMS 」を販売していますが、このコレクタではサポートされていません
+EMC RecoverPoint データ コレクターの主な使用例は、RecoverPoint ストレージ アプライアンスによって実現されるボリューム間のレプリケーション関係を検出することです。このコレクターは、Recoverpoint アプライアンス自体も検出します。  Dell/EMCはVMwareのVMwareバックアップソリューション「RecoverPoint for VMs」を販売していますが、このコレクターではサポートされていません。
 
-データコレクタを設定するには、ストレージプロセッサの IP アドレス、および読み取り専用のユーザ名とパスワードが必要です。
+構成の場合、データ コレクターには、ストレージ プロセッサの IP アドレスと読み取り専用のユーザー名とパスワードが必要です。
 
-EMC RecoverPoint データコレクタは、 RecoverPoint が他のストレージアレイ間で調整するボリューム間レプリケーション関係を収集します。Data Infrastructure Insightsは、各RecoverPointクラスタのストレージアレイを表示し、そのクラスタ上のノードとストレージポートのインベントリデータを収集します。ストレージプールまたはボリュームのデータは収集されません。
+EMC RecoverPoint データ コレクターは、R​​ecoverPoint が他のストレージ アレイ間で調整するボリューム間のレプリケーション関係を収集します。 Data Infrastructure Insights は、各 RecoverPoint クラスターのストレージ アレイを表示し、そのクラスター上のノードとストレージ ポートのインベントリ データを収集します。ストレージ プールまたはボリューム データは収集されません。
 
 
 
 == 要件
 
-このデータコレクタを設定するには、次の情報が必要です。
+このデータ コレクターを構成するには、次の情報が必要です。
 
-* ストレージプロセッサの IP アドレスまたは完全修飾ドメイン名
-* 読み取り専用のユーザ名とパスワード
-* ポート 443 経由での REST API へのアクセス
+* ストレージプロセッサのIPアドレスまたは完全修飾ドメイン名
+* 読み取り専用のユーザー名とパスワード
+* ポート443経由のREST APIアクセス
 
 
 
@@ -33,16 +33,16 @@ EMC RecoverPoint データコレクタは、 RecoverPoint が他のストレー�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| RecoverPoint のアドレス | RecoverPoint クラスタの IP アドレスまたは完全修飾ドメイン名 
+| RecoverPointのアドレス | RecoverPoint クラスタの IP アドレスまたは完全修飾ドメイン名 
 
 
-| ユーザー名 | RecoverPoint クラスタのユーザ名 
+| ユーザー名 | RecoverPointクラスタのユーザー名 
 
 
-| パスワード | RecoverPoint クラスタのパスワード 
+| パスワード | RecoverPointクラスタに使用されるパスワード 
 |===
 
 
@@ -50,19 +50,19 @@ EMC RecoverPoint データコレクタは、 RecoverPoint が他のストレー�
 
 [cols="2*"]
 |===
-| フィールド | 製品説明 
+| フィールド | 説明 
 
 
-| TCPポート | RecoverPoint クラスタへの接続に使用する TCP ポート 
+| TCPポート | Recoverpoint クラスタへの接続に使用される TCP ポート 
 
 
-| インベントリポーリング間隔（分） | インベントリのポーリング間隔。デフォルトは20分です。 
+| インベントリポーリング間隔（分） | インベントリ ポーリングの間隔。デフォルトは20分です。 
 
 
-| 除外クラスタ | ポーリング時に対象から除外するクラスタの ID または名前をカンマで区切ったリスト。 
+| 除外されたクラスター | ポーリング時に除外するクラスター ID または名前のコンマ区切りリスト。 
 |===
 
 
 == トラブルシューティング
 
-このData Collectorの詳細については、のページまたはをlink:reference_data_collector_support_matrix.html["Data Collector サポートマトリックス"]参照してlink:concept_requesting_support.html["サポート"]ください。
+このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

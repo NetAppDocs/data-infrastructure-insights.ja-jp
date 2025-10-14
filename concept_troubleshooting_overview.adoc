@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_troubleshooting_overview.html 
-summary: このセクションでは、Data Infrastructure Insights環境の問題のトラブルシューティングに役立つヒントやアドバイスを紹介します。 
+summary: このセクションでは、Data Infrastructure Insights環境における問題のトラブルシューティングに役立つヒントとコツを紹介します。 
 keywords:  
 ---
 = Data Infrastructure Insightsの問題のトラブルシューティング
@@ -10,8 +10,8 @@ keywords:
 
 
 [role="lead"]
-このセクションでは、Data Infrastructure Insights環境で問題が発生した場合のトラブルシューティングのアドバイスについて説明します。
+このセクションのトピックでは、 Data Infrastructure Insights環境で問題が発生した場合のトラブルシューティングのアドバイスを提供します。
 
-左側のメニューでカテゴリをクリックすると、そのカテゴリのトラブルシューティング情報が表示されます。
+左側のメニューのカテゴリをクリックすると、そのカテゴリのトラブルシューティング情報が表示されます。
 
-トラブルシューティングやその他のlink:concept_requesting_support.html["サポートする"]情報については、Data Infrastructure Insightsの[ヘルプ]>[サポート]ページを参照してください。
+トラブルシューティングやその他の情報については、link:concept_requesting_support.html["support"]詳細については、 Data Infrastructure Insights の*ヘルプ > サポート* ページをご覧ください。
