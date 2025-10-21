@@ -7,6 +7,10 @@ summary: Data Infrastructure Insights は、インフラストラクチャの変
 = インフラストラクチャ変更分析
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -37,6 +41,12 @@ image:infraChange_filter_dropdown.png["インフラストラクチャ変更フ�
 フィルター設定の下のステータス セクションから、現在最も多くのアラートがある上位 3 つのリソースを含む主要なアラートまたは変更に直接移動することもできます。
 
 image:Change_Analysis_filters_and_status.png["ステータスとアラートや変更へのクイックリンク"]
+
+
+
+== 長期警報に関する注意事項
+
+24 時間を超えてアクティブなままのアラートは、24 時間ごとにアラートと変更のリストに表示されるため、同じアラートが複数回リストに表示される場合があることに注意してください。これらのアラートはそれぞれ同じアラート ID、同じ開始時刻などを持ち、アラートが解決されるまで「アラート中」のステータスになります。
 
 
 
