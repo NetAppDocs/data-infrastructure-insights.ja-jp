@@ -12776,7 +12776,6 @@
   <block id="83e49813b50f1fc5e03ffde57c985102" category="paragraph">24 時間を超えてアクティブなままのアラートは、24 時間ごとにアラートと変更のリストに表示されるため、同じアラートが複数回リストに表示される場合があることに注意してください。これらのアラートはそれぞれ同じアラート ID、同じ開始時刻などを持ち、アラートが解決されるまで「アラート中」のステータスになります。</block>
   <block id="079090a1dc96bbd4e45426ceeedd592f" category="summary">カスタム メトリックとログ モニターを作成し、自動化されたアラートと通知を使用して、インフラストラクチャのパフォーマンス、容量しきい値、および重要なイベントをプロアクティブに追跡します。</block>
   <block id="883d09869adb0b8fae6c4387af23b6d4" category="paragraph">インフラストラクチャ リソース全体のパフォーマンスしきい値、ログ イベント、および異常を追跡するようにモニターを構成します。ノードの書き込み遅延、ストレージ容量、アプリケーション パフォーマンスなどのメトリックのカスタム アラートを作成し、これらの条件が満たされたときに通知を受け取ります。</block>
-  <block id="a7cd6a99f9ca0fccc58590218d395239" category="paragraph">メトリック モニターは、ストレージ、スイッチ、ホスト、VM などのインベントリ オブジェクト、およびONTAP Advanced や Kubernetes データなどの統合メトリックに適用されます。インベントリ オブジェクトを監視する場合、「グループ化」方法を選択できないことに注意してください。ただし、統合データを監視する場合はグループ化が許可されます。</block>
   <block id="70b37ea4cf45e401178bb71faa1e50fe" category="section-title">マルチコンディションモニター</block>
   <block id="6e8d7620a4a0bc7614ae9936242cc79e" category="paragraph">2 番目の条件を追加して、メトリック モニターをさらに絞り込むこともできます。「+ セカンダリメトリック条件の追加」プロンプトを展開し、追加の条件を構成するだけです。</block>
   <block id="c7c9e436435c4770e86c98098336f9a2" category="inline-image-macro">2番目の条件を設定する</block>
@@ -12786,4 +12785,16 @@
   <block id="f5efcf93de96054f67b29d58662ad5c6" category="list-text">発生間隔には、[_15 分_] の期間で [_連続_] を選択します。</block>
   <block id="95e94216ef8b85a76727809c3dfcbcc0" category="inline-link-macro">ONTAPデータ管理</block>
   <block id="2520cfbb37bc8bbd2fc91278c73eb838" category="list-text">ONTAP REST コレクターでは FPolicy メトリックはサポートされていないことに注意してください (Workload Security データ コレクターは FPolicy サーバーを使用し、FPolicy メトリックを使用すると Workload Security データ収集アクティビティを監視できます)。Fpolicyメトリックをサポートするには、 <block ref="5887f651a571af9233df120cb7d32347" category="inline-link-macro-rx"></block> コレクタ。</block>
+  <block id="b2422fa602be830d9f1a2469dd70ca20" category="inline-link-macro">NetApp ONTAP AFX</block>
+  <block id="83cd27100a931554f0e05219011edf39" category="cell"><block ref="83cd27100a931554f0e05219011edf39" category="inline-link-macro-rx"></block></block>
+  <block id="14ec544dd26342f2315dc51923b34e66" category="summary">ONTAP AFXコレクター</block>
+  <block id="aaab7580be4232835e9f12e5691f118f" category="doc">NetApp ONTAP AFX データコレクター</block>
+  <block id="e395c9addcba424f5bda562994dfecbe" category="cell">ボリューム/ FlexVol/ FlexGroup</block>
+  <block id="1574b47ca9477a3fc7635017b8f4ca0b" category="cell">Qtree/フレックスツリー</block>
+  <block id="16aac8a4d65f63c39da98362e32e250d" category="cell">Qtree (タイプ: Explixit/Default)</block>
+  <block id="84ace9fb8e132c96d1dfcd31447efedc" category="cell">S3 バケット</block>
+  <block id="1143dbaa613581e6f7e9245d88a5a30d" category="cell">Qtree (タイプ: バケット)</block>
+  <block id="26beb8e28a6498b161cc513e4d05c9f5" category="cell">ストレージポッド/ストレージ可用性ゾーン</block>
+  <block id="474d2ef9225b003245e9f5a40297e1e8" category="cell">SVM (ストレージ仮想マシン)</block>
+  <block id="07ab2cfb4a15dea7a3c4679e886966f3" category="sidebar">ONTAP AFX</block>
 </blocks>
