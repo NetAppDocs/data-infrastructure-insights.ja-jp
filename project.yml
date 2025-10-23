@@ -417,8 +417,6 @@ sidebar:
         entries:
         - title: Cloud Volumes ONTAP
           url: "/task_dc_na_cloud_volumes_ontap.html"
-        - title: AWS 向け Cloud Volumes サービス
-          url: "/task_dc_na_cloud_volumes.html"
         - title: ONTAP AFX
           url: "/task_dc_na_ontap_afx.html"
         - title: ONTAP ASA （オールSANアレイ）r2

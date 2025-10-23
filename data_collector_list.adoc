@@ -1,12 +1,16 @@
 ---
 sidebar: sidebar 
 permalink: data_collector_list.html 
-summary: サポートされているデータ コレクターのリスト。 
+summary: Data Infrastructure Insightsでサポートされているすべてのデータ コレクターのアルファベット順の参照リスト。インフラストラクチャとサービスの種類別にまとめられています。 
 keywords: data collector, vendor, infrastructure, integration, service 
 ---
-= Data Infrastructure Insightsデータコレクターリスト
+= Data Infrastructure Insightsデータコレクターリファレンスリスト
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -218,9 +222,6 @@ Data Infrastructure Insightsでサポートされているデータ コレクタ
 
 
 | link:task_dc_na_cloud_volumes_ontap.html["NetAppCloud Volumes ONTAP"] | インフラ 
-
-
-| link:task_dc_na_cloud_volumes.html["AWS 向けNetApp Cloud Volumes サービス"] | インフラ 
 
 
 | link:task_dc_na_cloud_connection.html["ONTAP 9.9以降向けNetAppクラウド接続"] | インフラ 

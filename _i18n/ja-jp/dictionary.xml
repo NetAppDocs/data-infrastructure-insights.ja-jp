@@ -3882,8 +3882,6 @@
   <block id="16442b20a2319083af65dedb2d7e942e" category="paragraph">ダッシュボードをすべてのユーザーと共有するか、編集権限または読み取り専用権限を持つ特定のユーザーと共有するかを選択できます。</block>
   <block id="1dcba5cd7d6049883623c0653a2031f6" category="inline-image-macro">編集権限または読み取り権限でダッシュボードを共有するためのドロップダウン</block>
   <block id="ac0466f21ebde71eed9f3673b4c7da1b" category="paragraph"><block ref="ac0466f21ebde71eed9f3673b4c7da1b" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3305ac26b15ec00c4372c85a08bb7042" category="summary">サポートされているデータ コレクターのリスト。</block>
-  <block id="3a6b9b02361ff37889bb4453f5ce5933" category="doc">Data Infrastructure Insightsデータコレクターリスト</block>
   <block id="4a67aaff87a4b62a93d49b26e8eab486" category="paragraph">Data Infrastructure Insights は、多くのベンダーやサービスからのさまざまなデータ コレクターをサポートしています。</block>
   <block id="247727b698ccc6204ad7466cac97b566" category="paragraph">データ コレクターは次のタイプに分類されます。</block>
   <block id="3688337d7dae83e1ae45c29303993fc2" category="list-text">インフラストラクチャ: ストレージ アレイ、スイッチ、ハイパーバイザー、バックアップ デバイスなどのベンダー デバイスから取得されます。</block>
@@ -4022,8 +4020,6 @@
   <block id="4d9746bceefe2b6bd2586d1c3e4d2733" category="cell"><block ref="4d9746bceefe2b6bd2586d1c3e4d2733" category="inline-link-macro-rx"></block></block>
   <block id="b988e43525055930d8d214d3116d4c04" category="inline-link-macro">NetAppCloud Volumes ONTAP</block>
   <block id="ecf8390ebf4bfbf85b7308b7ca58aaa1" category="cell"><block ref="ecf8390ebf4bfbf85b7308b7ca58aaa1" category="inline-link-macro-rx"></block></block>
-  <block id="91cd47436c04c106182959241ee93b9d" category="inline-link-macro">AWS 向けNetApp Cloud Volumes サービス</block>
-  <block id="3d569988d784be7b4a432df70e13153d" category="cell"><block ref="3d569988d784be7b4a432df70e13153d" category="inline-link-macro-rx"></block></block>
   <block id="acb242e4a47b7f1537825e1c4eacc87a" category="inline-link-macro">ONTAP 9.9以降向けNetAppクラウド接続</block>
   <block id="32b322f0c18e116c5d878598d8fedae2" category="cell"><block ref="32b322f0c18e116c5d878598d8fedae2" category="inline-link-macro-rx"></block></block>
   <block id="995d9995da501d3734932d95524f1a35" category="inline-link-macro">NetApp Data ONTAP 7-Mode</block>
@@ -10162,17 +10158,6 @@
   <block id="34727dd01aaa3e0d53fd68d429bbff53" category="doc">ONTAP 9.9+ データコレクター向けNetApp Cloud Connection</block>
   <block id="0803ffc49bb5d009027ad578d29858b8" category="paragraph">このデータ コレクターは、 ONTAP 9.9+ CVO、 AFF、およびFASシステムからのデータ収集をサポートするためにクラウド接続を作成します。</block>
   <block id="fb915b764f3baecfa629ff22686e14ee" category="admonition">このデータ コレクターは、2023 年 4 月 4 日以降、 Data Infrastructure Insightsにインストールできなくなり、2023 年 7 月にすべてのData Infrastructure Insightsインストールから削除されます。</block>
-  <block id="aa660f33d4c20ae2b92aa73acb4c5828" category="summary">AWS データコレクター用のNetApp Cloud Volumes Services を構成する</block>
-  <block id="6d719c7976115879cdcafb7922e7e5fd" category="doc">NetApp Cloud Volumes Services for AWS データコレクター</block>
-  <block id="85930060216df642a21fd8c262d1cc6c" category="paragraph">このデータ コレクターは、 NetApp Cloud Volumes Services for AWS 構成からのインベントリ収集をサポートします。</block>
-  <block id="4aacf3bc449dad1d249c2fd81ea2e532" category="cell">クラウドボリュームリージョン</block>
-  <block id="4378310503f4a4c4ba83139f38afb7b2" category="cell">NetApp Cloud Volumes Services for AWS のリージョン</block>
-  <block id="d876ff8da67c3731ae25d8335a4168b4" category="cell">APIキー</block>
-  <block id="66859c6a7a598a12f20c8244126d4b34" category="cell">Cloud Volumes APIキー</block>
-  <block id="5eb6bb157528b365f84c27bb4784031b" category="cell">シークレット キー</block>
-  <block id="9447267c06cce84dba179c481872fb16" category="cell">Cloud Volumes 秘密鍵</block>
-  <block id="36d35d8bdb33f254c1406a404bc7c125" category="cell">次のようなエラーが表示されました: 「リクエストの実行に失敗しました: &lt;AWS リージョンエンドポイント&gt;:8080 [&lt;AWS リージョンエンドポイント&gt;/AWS リージョンエンドポイント IP&gt;] への接続に失敗しました: 接続がタイムアウトしました: GET \https://&lt;AWS リージョンエンドポイント FQDN&gt;:8080/v1/Storage/IPRanges HTTP/1.1」</block>
-  <block id="f51fb2108c9628f317aa92174475a004" category="cell">その<block ref="588cebdad26ee4a9a3bb08c290310eb7" category="inline-link-macro-rx"></block>Data Infrastructure Insightsが Acquisition Unit と通信するために使用されるものは、Data Infrastructure Insightsとデータ コレクター自体の間では通信しません。試すことができるいくつかのことを次に示します。取得ユニットが FQDN を解決し、必要なポートに到達できることを確認します。エラー メッセージで指定されたエンドポイントに到達するためにプロキシが必要ないことを確認します。 Curl を使用して、取得ユニットとエンドポイント間の通信をテストできます。このテストではプロキシを使用していないことを確認してください。例: root@acquisitionunit# curl -s -H accept:application/json -H "Content-type: application/json" -H api-key:&lt;データコレクターの認証情報で使用される API キー -H secret-key:&lt;データコレクターの認証情報で使用される秘密キー&gt; -X GET \https://&lt;AWS リージョンエンドポイント&gt;:8080/v1/Storage/IPRanges</block>
   <block id="47407ceeb441f7c5d1eac8ca6060c4b7" category="summary">NetApp Cloud Volumes ONTAPデータコレクターを構成する</block>
   <block id="a7544b3f9e0cc7c642c8b55af45cc192" category="doc">NetApp Cloud Volumes ONTAPデータコレクター</block>
   <block id="2285e08ef18a1a3f2e02b335409147d7" category="paragraph">このデータ コレクターは、Cloud Volumes ONTAP構成からのインベントリ収集をサポートします。</block>
@@ -10391,8 +10376,6 @@
   <block id="bca66716b9ca2d13a4c28be69b276777" category="cell">3.3</block>
   <block id="caab88a7f89273838ab79f84c1c8a49d" category="summary">NetApp E シリーズ REST データ コレクターを構成します。</block>
   <block id="7d9a2bf43caef4a2c2ccab31b58ad1fb" category="doc">NetApp Eシリーズ RESTデータコレクター</block>
-  <block id="02bbac9de1d6cf62350e13b0ebc66279" category="paragraph">NetApp E シリーズ REST データ コレクターは、インベントリとパフォーマンス データを収集します。コレクターは、同じ構成を使用して同じデータを報告するファームウェア 7.x+ をサポートします。  REST コレクターは、ストレージ プールの暗号化ステータスと、関連するディスクおよびボリュームの暗号化ステータスを監視し、ストレージ ノードの CPU 使用率をパフォーマンス カウンターとして提供します。これは、従来のSANtricity E シリーズ コレクターでは提供されていない機能です。</block>
-  <block id="06026757f9dde1467a9d040a8e0ca5e8" category="paragraph">Cloud Insights は、REST を使用してNetApp E シリーズから次のインベントリ情報を取得します。取得した資産の種類ごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。</block>
   <block id="199cdaad4b2e2da65f3c12904a570c15" category="inline-link-macro">EシリーズSANtricity API</block>
   <block id="025b66c3feb7622d3e2d83b097539fc0" category="list-text">このコレクターは、*ネイティブ REST API 機能*を備えた E シリーズ モデル アレイのみをサポートします。 E シリーズ組織は、古い E シリーズ アレイ用に、アレイ外でインストール可能な REST API ディストリビューションを出荷します。このコレクターでは、そのシナリオはサポートされていません。古いアレイをお使いのユーザーは、引き続きData Infrastructure Insightsを使用してください。<block ref="1e9e2e04984e423436b9d1423e41c8ce" category="inline-link-macro-rx"></block>コレクタ。</block>
   <block id="1dec37be48852b1e80d1d4ddd48a1698" category="list-text">「E シリーズ コントローラの IP アドレス」フィールドは、2 つの IP/ホスト名のコンマ区切り文字列をサポートします。コレクターは、最初の IP/ホスト名にアクセスできない場合、インテリジェントに 2 番目の IP/ホスト名を試行します。</block>
@@ -12743,7 +12726,6 @@
   <block id="140864078aeca1c7c35b4beb33c53c34" category="sidebar">Microsoft</block>
   <block id="c5865855c43d734069987786177edd98" category="sidebar">Hyper-V</block>
   <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
-  <block id="b81efc5684c71c82d1f7592812e5af66" category="sidebar">AWS 向け Cloud Volumes サービス</block>
   <block id="d97291003c6a6e6615571bf02531ca30" category="sidebar">ONTAP ASA （オールSANアレイ）r2</block>
   <block id="9c58e11f96200548fd2f5932b391509a" category="sidebar">ONTAPデータ管理ソフトウェア</block>
   <block id="bf9973f393dbc9824e3e96f831e12c25" category="sidebar">ONTAP RESTコレクター</block>
@@ -12797,4 +12779,9 @@
   <block id="26beb8e28a6498b161cc513e4d05c9f5" category="cell">ストレージポッド/ストレージ可用性ゾーン</block>
   <block id="474d2ef9225b003245e9f5a40297e1e8" category="cell">SVM (ストレージ仮想マシン)</block>
   <block id="07ab2cfb4a15dea7a3c4679e886966f3" category="sidebar">ONTAP AFX</block>
+  <block id="8a3c7a91b37c85b11fcedc99bf01705d" category="summary">Data Infrastructure Insightsでサポートされているすべてのデータ コレクターのアルファベット順の参照リスト。インフラストラクチャとサービスの種類別にまとめられています。</block>
+  <block id="3f98097ad0f17344bf7bd5127344ba03" category="doc">Data Infrastructure Insightsデータコレクターリファレンスリスト</block>
+  <block id="a7cd6a99f9ca0fccc58590218d395239" category="paragraph">メトリック モニターは、ストレージ、スイッチ、ホスト、VM などのインベントリ オブジェクト、およびONTAP Advanced や Kubernetes データなどの統合メトリックに適用されます。インベントリ オブジェクトを監視する場合、「グループ化」方法を選択できないことに注意してください。ただし、統合データを監視する場合はグループ化が許可されます。</block>
+  <block id="c712dc09bb9c9243894a5127306517ba" category="paragraph">NetApp E シリーズ REST データ コレクターは、インベントリ、ログ、パフォーマンス データを収集します。コレクターは、同じ構成を使用して同じデータを報告するファームウェア 7.x+ をサポートします。  REST コレクターは、ストレージ プール、ディスク、ボリュームの暗号化ステータス、ストレージ ノードの CPU 使用率を監視し、従来のSANtricity E シリーズ コレクターでは提供されていないログ機能も提供します。</block>
+  <block id="e997ccbcc3dc041951b04d1a57ba2999" category="paragraph">Data Infrastructure Insights は、REST を使用してNetApp E シリーズから次のインベントリ情報を取得します。取得した資産の種類ごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。</block>
 </blocks>
