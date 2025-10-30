@@ -12784,4 +12784,13 @@
   <block id="a7cd6a99f9ca0fccc58590218d395239" category="paragraph">メトリック モニターは、ストレージ、スイッチ、ホスト、VM などのインベントリ オブジェクト、およびONTAP Advanced や Kubernetes データなどの統合メトリックに適用されます。インベントリ オブジェクトを監視する場合、「グループ化」方法を選択できないことに注意してください。ただし、統合データを監視する場合はグループ化が許可されます。</block>
   <block id="c712dc09bb9c9243894a5127306517ba" category="paragraph">NetApp E シリーズ REST データ コレクターは、インベントリ、ログ、パフォーマンス データを収集します。コレクターは、同じ構成を使用して同じデータを報告するファームウェア 7.x+ をサポートします。  REST コレクターは、ストレージ プール、ディスク、ボリュームの暗号化ステータス、ストレージ ノードの CPU 使用率を監視し、従来のSANtricity E シリーズ コレクターでは提供されていないログ機能も提供します。</block>
   <block id="e997ccbcc3dc041951b04d1a57ba2999" category="paragraph">Data Infrastructure Insights は、REST を使用してNetApp E シリーズから次のインベントリ情報を取得します。取得した資産の種類ごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。</block>
+  <block id="57e1771ce1e6d595e42a3b886ca50109" category="section-title">2025年11月</block>
+  <block id="62a254ee95eae896e983f0fa134680f4" category="section-title">パーソナライズされたホームページを設定する</block>
+  <block id="090655f61ce1a2016b2b1f7d8a300b0d" category="paragraph">任意のData Infrastructure Insightsページをパーソナライズされたホームページとして設定することで、毎日の監視ワークフローを効率化します。各ユーザーは、重要なダッシュボード、アラート、インフラストラクチャの健全性、ワークロードのセキュリティなど、自分にとって重要なものに集中するために、異なるホームページを選択できます。</block>
+  <block id="7ddd781b2ae78fc386e83cd8e2c0692e" category="inline-image-macro">ホームページの設定、幅=300</block>
+  <block id="55cc3fafb7135c031d4e8b64565d201a" category="paragraph"><block ref="55cc3fafb7135c031d4e8b64565d201a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7cbf92f9cdc81c507070533c182c6855" category="section-title">自動ダッシュボードグループ化で整理整頓</block>
+  <block id="344e2ec56c6114e245d66d3978073950" category="paragraph">インポートされたギャラリー ダッシュボードを論理カテゴリに自動的に整理するインテリジェントなグループ化により、ダッシュボードのエクスペリエンスを変革します。新しいグループ化機能により、ダッシュボードのインポートが簡単になり、各ダッシュボードがその機能と環境との関連性に基づいて適切なグループに配置されます。</block>
+  <block id="251972b93cab79073298e6ad6678a0be" category="inline-image-macro">インポート中のギャラリーグループ、幅=500</block>
+  <block id="99d6cc3c987c34af31c72d3213e5e764" category="paragraph"><block ref="99d6cc3c987c34af31c72d3213e5e764" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
