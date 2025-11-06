@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_feature_tutorials.html 
-summary: Data Infrastructure Insights には、さまざまなタスクの実行方法を示すチュートリアルがあります。 
+summary: ステップバイステップのビデオチュートリアルは、ダッシュボード、クエリ、監視、トラブルシューティングなどのData Infrastructure Insights機能を習得するのに役立ちます。 
 keywords: onboarding, getting started, video, tutorial, resolution, dashboard, query, troubleshooting 
 ---
-= 機能チュートリアル
+= ビデオチュートリアルを始める
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ keywords: onboarding, getting started, video, tutorial, resolution, dashboard, q
 
 
 [role="lead"]
-Data Infrastructure Insights には、問題を迅速かつ簡単にトラブルシューティングし、企業環境に関する分析情報を提供できる便利な機能が満載されています。強力なクエリを使用してデータを簡単に検索し、ダッシュボードでデータを視覚化し、設定したデータしきい値について電子メールアラートを送信します。
+ステップバイステップのビデオ ガイドと進捗チェックリストを備えた機能チュートリアルを使用して、Data Infrastructure Insightsを効率的に学習します。すぐに生産性を高めるために設計された実践的なチュートリアルを通じて、ダッシュボードの作成、クエリの構築、監視の設定、問題のトラブルシューティングなどの重要なスキルを習得します。
 
 
 
@@ -38,3 +38,19 @@ NOTE: チュートリアルは、終了するまで好きな順序で何度で�
 === チェックリストを無視する
 
 スタートアップ チェックリストは、チェックリストの下部にある [次回表示しない] リンクをクリックするまで表示されます。チェックリストを閉じた後でも、メッセージ ヘッダー バーから各チェックリストを閉じるまで、該当する各Data Infrastructure Insightsページでチュートリアルを引き続き利用できます。
+
+
+
+== ビデオチュートリアル
+
+詳細については、次のビデオをご覧ください。
+
+link:https://media.netapp.com/video-detail/248621bd-6619-5dc8-9718-5d78d0fd21da/turn-raw-data-into-actionable-insights["生データを実用的な洞察に変える"^]
+
+link:https://media.netapp.com/video-detail/5a293f3c-c655-5879-9133-1a32aaa140e8/create-powerful-dashboards-with-netapp["NetAppで強力なダッシュボードを作成する"^]
+
+link:https://media.netapp.com/video-detail/0e62b784-8456-5ef7-8879-f0352135a0f1/simplified-troubleshooting-with-vm-analyzer["VM Analyzer によるトラブルシューティングの簡素化"^]
+
+link:https://media.netapp.com/video-detail/d0530e0b-a222-52e7-92b1-dbeeee41b712/explore-and-analyze-with-queries-in-data-infrastructure-insights["Data Infrastructure Insightsのクエリを使用して探索および分析する"^]
+
+link:https://media.netapp.com/video-detail/43497a8e-f648-56b7-9bc7-8d5d4274510f/proactive-infrastructure-monitoring-with-alerts-and-monitors["アラートとモニターによるプロアクティブなインフラストラクチャ監視"^]

@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_cs_getting_started.html 
-keywords: collectors, data collectors, configure, introduction, browsers , Cloud Secure 
-summary: 簡単な手順でWorkload Securityを使い始めることができます 
+keywords: collectors, data collectors, configure, introduction, browsers, Cloud Secure 
+summary: ユーザー アクティビティを監視し、セキュリティの脅威を検出するために、Workload Security エージェントとデータ コレクターを展開します。 
 ---
 = ワークロードセキュリティ入門
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Workload Security を使用してユーザー アクティビティを監視する前に、完了する必要がある設定タスクがあります。
+Workload Security は、ユーザー アクティビティを監視し、ストレージ環境における潜在的なセキュリティ脅威を検出するのに役立ちます。監視を開始する前に、エージェント、データ コレクター、およびディレクトリ サービスを構成して、包括的なセキュリティ監視の基盤を確立する必要があります。
 
 Workload Security システムはエージェントを使用して、ストレージ システムからのアクセス データとディレクトリ サービス サーバーからのユーザー情報を収集します。
 
@@ -28,19 +32,14 @@ link:concept_cs_agent_requirements.html["エージェントの要件"]
 
 link:task_cs_add_agent.html["エージェントを追加"]
 
-link:https://netapp.hubs.vidyard.com/watch/Lce7EaGg7NZfvCUw4Jwy5P?["*ビデオ*: エージェントの展開"]
 
 
+| ユーザーディレクトリコネクタを構成する | link:task_config_user_dir_connect.html["ユーザーディレクトリコネクタの追加"] 
 
-| ユーザーディレクトリコネクタを構成する | link:task_config_user_dir_connect.html["ユーザーディレクトリコネクタの追加"] link:https://netapp.hubs.vidyard.com/watch/NEmbmYrFjCHvPps7QMy8me?["*ビデオ*: Active Directory 接続"] 
 
-
-| データコレクターを構成する | *ワークロード セキュリティ > コレクター* をクリックし、設定するデータ コレクターをクリックします。ドキュメントのデータ コレクター ベンダー リファレンス セクションを参照してください。link:https://netapp.hubs.vidyard.com/watch/YSQrcYA7DKXbj1UGeLYnSF?["*ビデオ*: ONTAP SVM 接続"] 
+| データコレクターを構成する | *ワークロード セキュリティ > コレクター* をクリックし、設定するデータ コレクターをクリックします。コレクター情報については、ドキュメントのデータ コレクター ベンダー リファレンス セクションを参照してください。 
 
 
 | ユーザーアカウントを作成する | link:concept_user_roles.html["ユーザーアカウントの管理"] 
-
-
-| トラブルシューティング | link:https://netapp.hubs.vidyard.com/watch/Fs8N2w9wBtsFGrhRH9X85U?["*ビデオ*: トラブルシューティング"] 
 |===
 Workload Security は他のツールとも統合できます。例えば、link:http://docs.netapp.com/us-en/cloudinsights/CloudInsights_CloudSecure_Splunk_integration_guide.pdf["このガイドをご覧ください"] Splunk との統合について。
