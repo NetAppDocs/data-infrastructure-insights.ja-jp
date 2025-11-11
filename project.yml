@@ -27,12 +27,12 @@ sidebar:
       url: "/security_admin_tool.html"
   - title: はじめに
     entries:
+    - title: 機能チュートリアル
+      url: "/concept_feature_tutorials.html"
     - title: データの収集
       entries:
       - title: 概要
         url: "/task_getting_started_with_cloud_insights.html"
-      - title: 機能チュートリアル
-        url: "/concept_feature_tutorials.html"
       - title: 取得ユニットの要件
         url: "/concept_acquisition_unit_requirements.html"
       - title: 取得ユニットの設定
