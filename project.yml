@@ -401,8 +401,6 @@ sidebar:
           url: "/task_dc_ibm_cs.html"
         - title: システムストレージ DS8000 シリーズ
           url: "/task_dc_ibm_ds.html"
-        - title: PowerVM
-          url: "/task_dc_ibm_powervm.html"
         - title: Sanボリュームコントローラ（SVC）
           url: "/task_dc_ibm_svc.html"
         - title: XIV/A9000
