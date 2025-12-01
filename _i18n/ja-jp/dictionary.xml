@@ -4624,9 +4624,7 @@
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">オープンソース</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知ファイルには、 NetAppソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が提供されます。</block>
   <block id="c7f50a9f133f1f71a9f91fe12f7c7f7e" category="inline-link-macro">Data Infrastructure Insights （旧Cloud Insights）に関するお知らせ</block>
-  <block id="32344df03ee279db932571d5121eebc2" category="paragraph"><block ref="32344df03ee279db932571d5121eebc2" category="inline-link-macro-rx"></block></block>
   <block id="4d8cd5134c1193f4d301c7e6bcaa38a7" category="inline-link-macro">Workload Security（旧Cloud Secure）に関するお知らせ</block>
-  <block id="af88d796899408a2445389775634dda1" category="paragraph"><block ref="af88d796899408a2445389775634dda1" category="inline-link-macro-rx"></block></block>
   <block id="65be717dc296d58230cdf6471cf551c6" category="summary">パフォーマンス、容量、構成、コンポーネントのアラートに基づく統合スコアリングを使用してインフラストラクチャの健全性を監視し、問題をプロアクティブに解決します。</block>
   <block id="48f51aa9a5737857bbd298bfb874281e" category="doc">インフラストラクチャの健全性を監視する</block>
   <block id="9af3e29dc9d4dd7c03ed034e837cae19" category="paragraph">Data Infrastructure Insights は、ストレージ環境のパフォーマンス、容量、構成、コンポーネントの状態を追跡する包括的なインフラストラクチャのヘルス監視を提供します。ヘルススコアは、これらのカテゴリ全体のモニターアラートに基づいて計算され、システムのヘルスを統合的に表示して、問題をプロアクティブに解決できるようになります。</block>
@@ -12774,4 +12772,6 @@
   <block id="2a0a2208c984d848c76e3dc480d25f5a" category="cell">大規模な構成の場合、コレクターを一時停止するのではなく、Pin と Unpin を使用することをお勧めします。ピンとピン解除の使用中に一時停止したり再開したりする必要はありません。顧客はエージェントとコレクターを固定したままにして、新しいバージョンに関する電子メール通知を受信したら、30 日以内にエージェントを 1 つずつ選択的にアップグレードすることができます。このアプローチにより、fpolicies への遅延の影響が最小限に抑えられ、アップグレード プロセスをより細かく制御できるようになります。</block>
   <block id="4c4482e1695529fa7b313efe35876587" category="cell">次のいずれかのライセンス バージョンを実行しているコンピューター: * Microsoft Windows 11 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 このコンピューターでは、他のアプリケーション レベルのソフトウェアを実行しないでください。専用サーバーをお勧めします。</block>
   <block id="96e0bc41f601636412c93ccf60fffb89" category="cell">100 Mbps/1 Gbps イーサネット接続、静的 IP アドレス、および Acquisition Unit から *.cloudinsights.netapp.com またはData Infrastructure Insightsテナント (つまり \https://&lt;tenant_id&gt;.c01.cloudinsights.netapp.com) へのポート 80 または 443 (送信) 接続が必要です。取得ユニットと各データ収集装置間の要件については、<block ref="be56515064596049a4b61d9d1a149cf9" category="inline-link-macro-rx"></block> 。組織でインターネット アクセスにプロキシの使用が必要な場合は、組織のプロキシの動作を理解し、 Data Infrastructure Insightsが機能するための特定の例外を探す必要がある場合があります。たとえば、組織ではデフォルトでアクセスをブロックし、例外的に特定の Web サイト/ドメインへのアクセスのみを許可していますか? もしそうなら、次のドメインを例外リストに追加する必要があります: *.cloudinsights.netapp.com 詳細については、プロキシについてお読みください。<block ref="05c875968683001fc59f206218314b72" category="inline-link-macro-rx"></block>または<block ref="554efdd06704a764ab0a7e3947e279ff" category="inline-link-macro-rx"></block>。</block>
+  <block id="122dd1e429ff23356474c1c076ac2789" category="paragraph"><block ref="122dd1e429ff23356474c1c076ac2789" category="inline-link-macro-rx"></block></block>
+  <block id="a4c2ef5fd8277b59eacc9e5d6fd74bfa" category="paragraph"><block ref="a4c2ef5fd8277b59eacc9e5d6fd74bfa" category="inline-link-macro-rx"></block></block>
 </blocks>
