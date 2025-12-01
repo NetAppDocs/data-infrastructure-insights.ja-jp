@@ -5,8 +5,17 @@ summary: 取得ユニットとして使用するサーバーまたは VM は、�
 keywords: AU, acquisition unit, requirements, sizing 
 ---
 = 取得ユニットの要件
+:toc: macro
 :hardbreaks:
+:toclevels: 1
 :allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
 
 
 [role="lead"]
@@ -22,7 +31,7 @@ keywords: AU, acquisition unit, requirements, sizing
 | コンポーネント | Linux 要件 | Windows の要件 
 
 
-| オペレーティング システム | 次のいずれかのライセンス版を実行しているコンピュータ: * AlmaLinux 9.3～9.5 * Centos (64ビット): 7.2～7.9、8.1～8.4、Stream 8、Stream 9 * Debian (64ビット): 9～12 * OpenSUSE Leap 15.1～15.6 * Oracle Enterprise Linux (64ビット): 7.5～7.9、8.1～8.10、9.3～9.6 * Red Hat (64ビット): 7.2～7.9、8.1～8.10、9.1～9.6 * Rocky 9.0～9.5 * SUSE Linux Enterprise Server 15、15 SP2～15 SP6 * Ubuntu Server: 18.04、20.04、22.04、24.04 LTS * SELinux on上記のプラットフォーム このコンピューターでは、他のアプリケーション レベルのソフトウェアは実行しないでください。専用サーバーをお勧めします。  SELinux で実行している場合は、取得ユニットシステムで次のコマンドを実行することをお勧めします: sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights | 次のいずれかのライセンス バージョンを実行しているコンピューター: * Microsoft Windows 10 64 ビット * Microsoft Windows 11 * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 このコンピューターでは、他のアプリケーション レベルのソフトウェアを実行しないでください。専用サーバーをお勧めします。 
+| オペレーティング システム | 次のいずれかのライセンス版を実行しているコンピュータ: * AlmaLinux 9.3～9.5 * Centos (64ビット): 7.2～7.9、8.1～8.4、Stream 8、Stream 9 * Debian (64ビット): 9～12 * OpenSUSE Leap 15.1～15.6 * Oracle Enterprise Linux (64ビット): 7.5～7.9、8.1～8.10、9.3～9.6 * Red Hat (64ビット): 7.2～7.9、8.1～8.10、9.1～9.6 * Rocky 9.0～9.5 * SUSE Linux Enterprise Server 15、15 SP2～15 SP6 * Ubuntu Server: 18.04、20.04、22.04、24.04 LTS * SELinux on上記のプラットフォーム このコンピューターでは、他のアプリケーション レベルのソフトウェアは実行しないでください。専用サーバーをお勧めします。  SELinux で実行している場合は、取得ユニットシステムで次のコマンドを実行することをお勧めします: sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights | 次のいずれかのライセンス バージョンを実行しているコンピューター: * Microsoft Windows 11 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 このコンピューターでは、他のアプリケーション レベルのソフトウェアを実行しないでください。専用サーバーをお勧めします。 
 
 
 | CPU | 2つのCPUコア | 同じ 
@@ -34,7 +43,7 @@ keywords: AU, acquisition unit, requirements, sizing
 | 使用可能なディスク容量 | 50 GB (100 GB を推奨) Linux の場合、ディスク領域は次のように割り当てる必要があります: /opt/netapp 10 GB (大規模環境の場合は 20 GB) /var/log/netapp 40 GB (大規模環境の場合は 80 GB) /tmp インストール時に少なくとも 1 GB 使用可能 | 50 GB 
 
 
-| ネットワーク | 100 Mbps/1 Gbps イーサネット接続、静的 IP アドレス、および Acquisition Unit から *.cloudinsights.netapp.com またはData Infrastructure Insightsテナント (つまり \https://<tenant_id>.c01.cloudinsights.netapp.com) へのポート 80 または 443 (送信) 接続が必要です。取得ユニットと各データ収集装置間の要件については、link:data_collector_list.html["データコレクター"] 。組織でインターネット アクセスにプロキシの使用が必要な場合は、組織のプロキシの動作を理解し、 Data Infrastructure Insightsが機能するための特定の例外を探す必要がある場合があります。たとえば、組織ではデフォルトでアクセスをブロックし、例外的に特定の Web サイト/ドメインへのアクセスのみを許可していますか? もしそうなら、次のドメインを例外リストに追加する必要があります: *.cloudinsights.netapp.com 詳細については、プロキシについてお読みください。link:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["ここ（Linux）"]またはlink:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["こちら（Windows）"]。  AU からData Infrastructure Insightsへの「アウトバウンド」ポート 443 を開く必要があることに注意してください。 | 同じ 
+| ネットワーク | 100 Mbps/1 Gbps イーサネット接続、静的 IP アドレス、および Acquisition Unit から *.cloudinsights.netapp.com またはData Infrastructure Insightsテナント (つまり \https://<tenant_id>.c01.cloudinsights.netapp.com) へのポート 80 または 443 (送信) 接続が必要です。取得ユニットと各データ収集装置間の要件については、link:data_collector_list.html["データコレクター"] 。組織でインターネット アクセスにプロキシの使用が必要な場合は、組織のプロキシの動作を理解し、 Data Infrastructure Insightsが機能するための特定の例外を探す必要がある場合があります。たとえば、組織ではデフォルトでアクセスをブロックし、例外的に特定の Web サイト/ドメインへのアクセスのみを許可していますか? もしそうなら、次のドメインを例外リストに追加する必要があります: *.cloudinsights.netapp.com 詳細については、プロキシについてお読みください。link:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["ここ（Linux）"]またはlink:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["こちら（Windows）"]。 | 同じ 
 
 
 | 権限 | 取得ユニット サーバーに対する Sudo 権限。  /tmp は exec 権限でマウントする必要があります。 | 取得ユニットサーバーの管理者権限 
