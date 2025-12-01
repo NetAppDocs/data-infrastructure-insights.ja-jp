@@ -47,6 +47,6 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 通知ファイルには、 NetAppソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が提供されます。
 
-link:media/DII_ON-PREM_Notice_Nov2025.pdf["Data Infrastructure Insights （旧Cloud Insights）に関するお知らせ"]
+link:media/DII_ON-PREM_Notice_Nov2025.pdf["Data Infrastructure Insights （旧Cloud Insights）に関するお知らせ、window=_blank"]
 
-link:media/DII_WS_Notice_Nov2025.pdf["Workload Security（旧Cloud Secure）に関するお知らせ"]
+link:media/DII_WS_Notice_Nov2025.pdf["Workload Security（旧Cloud Secure）に関するお知らせ、window=_blank"]
