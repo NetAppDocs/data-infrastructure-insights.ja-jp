@@ -12772,4 +12772,33 @@
   <block id="cd013bdb6b746502669588c8bf28fe47" category="paragraph">*問題:* Workload Security を有効にすると、 ONTAP のパフォーマンスに影響が出ます。レイテンシが散発的に高くなり、IOPS が散発的に低くなります。 *これを試してください:* ONTAP をWorkload Security とともに使用している場合、 ONTAPで遅延の問題が発生することがあります。これには、次に示すように、いくつかの理由が考えられます。<block ref="5b7caa0ef6cc830703e594488c525913" category="inline-link-macro-rx"></block> 、<block ref="b861ec6ca06b8e18b9d090dd75b00a26" category="inline-link-rx"></block> 、<block ref="a5fade3ab29d18b9b976189fcb9919ed" category="inline-link-rx"></block> 、<block ref="8899da2205eee6e62b28641da3533e12" category="inline-link-rx"></block> 、<block ref="c9d1d03c1b92a8bbffc617ad493e8619" category="inline-link-rx"></block> 。これらの問題はすべてONTAP 9.13.1 以降で修正されているため、これらの新しいバージョンのいずれかを使用することを強くお勧めします。</block>
   <block id="c8a935e32ab223552b7728caf4cbcd40" category="paragraph">*問題:* コレクターがエラー状態にあり、次のメッセージが表示されます: コネクタがエラー状態です。 失敗の理由: SVM &lt;SVM 名&gt; で永続ストアを構成できませんでした。 理由: SVM "&lt;SVM Name&gt;" 内のボリューム "&lt;volumeName&gt;" に適したアグリゲートが見つかりません。 理由: 集計 "&lt;aggregateName&gt;" のパフォーマンス情報は現在利用できません。サービス名: 監査。失敗の理由: SVM に永続的ストアを設定できませんでした。&lt;svm name=""&gt;&lt;/svm&gt;理由:ボリューム「」に適したアグリゲートが&lt;volumename&gt;SVM「&lt;svm name=""&gt;」&lt;/svm&gt;に&lt;/volumename&gt;見つかりません。理由: アグリゲート「」のパフォーマンス情報&lt;aggregatename&gt;は現在使用できません。&lt;/aggregatename&gt;数分待ってからもう一度コマンドを実行してください。</block>
   <block id="807b576f46b09baeb51689a411fd7e90" category="paragraph">*次の操作を試してください:* 数分待ってからコレクターを再起動します。</block>
+  <block id="1da664a432a920207ac67730bfcf1104" category="summary">レポートで使用する注釈を公開および非公開にする方法を学習します。</block>
+  <block id="d0f8afd8d5b97350096da4410f6ef70a" category="doc">レポート用の注釈の公開と非公開</block>
+  <block id="13e4b27f5005e5c64c5a41690660de1d" category="paragraph">レポートやデータ ウェアハウスで使用するために注釈を公開する方法と、不要になった注釈を適切に非公開にする方法について説明します。</block>
+  <block id="f3b7c338e6a3f535c74857d42d70a81c" category="section-title">レポート用の注釈の公開</block>
+  <block id="327b3bc4d967a2317701d7010944307f" category="paragraph">Data Infrastructure Insightsで注釈を作成したら、それをレポートで使用するために公開できます。</block>
+  <block id="0caee252e5487de862dbefa3eec1a462" category="section-title">注釈を公開する手順</block>
+  <block id="29f6016632227f8bf6976c7869bc72c3" category="list-text">*「観察可能性」&gt;「強化」&gt;「注釈」ページに移動し、「レポートの注釈」タブを選択します。</block>
+  <block id="9e504f94b5be9a2b018e55cf728ac22a" category="list-text">公開する注釈を見つけます。</block>
+  <block id="35e76d3e8b05c29f4ff6b2da44ea4921" category="list-text">注釈を選択し、[レポートに公開] を選択します。また、「履歴データに適用」を選択して、履歴レポートの実行時に注釈を使用できるようにすることもできます。</block>
+  <block id="30931bf6e020a646ad57086874ca6074" category="list-text">公開されると、注釈はレポートで使用できるようになります。</block>
+  <block id="396e1f080d09a5d2f02eb4001ac6fc8c" category="list-text">注釈は、次の ETL 実行後のレポートで使用するために公開されます。</block>
+  <block id="5717734bfc2f355942edbd3696406818" category="paragraph">注釈を参照するレポートでは、公開された値が使用されます。公開後に注釈を変更した場合、その変更をレポートに反映させるには、再度公開する必要がある場合があります。</block>
+  <block id="ebcb6aeee3884fde3993f0df7ebca547" category="section-title">レポート用の注釈を非公開にする</block>
+  <block id="161b2f38480450dbc7b8b35dc2e547c6" category="paragraph">レポートで注釈が使用されないように、注釈を削除または非公開にする必要がある場合があります。たとえば、注釈が不要になったり、レポートに表示すべきでない古い情報が含まれている場合があります。</block>
+  <block id="52de2e815a8847eed14eefcdb8df04e2" category="section-title">注釈を非公開にする手順</block>
+  <block id="56b5e5aeff1cd3d66dfa9e7aae2e1fb8" category="paragraph">注釈を非公開にする前に、この操作によって注釈を使用している既存のレポートに影響が及ぶことに注意してください。レポートでは、注釈参照を削除するために編集や専門サービスの支援が必要になる場合があります。</block>
+  <block id="537ba4575bf20a44a021d6a6c2160c2f" category="list-text">Data Infrastructure Insightsユーザー インターフェースで、[レポートの注釈] タブに移動します。</block>
+  <block id="0baff86dba25c761b8e10de5e631d2da" category="list-text">非公開にする注釈を見つけます。</block>
+  <block id="f4f03ad26635dcdf26cd79ebbdf3f095" category="list-text">注釈が公開されているオブジェクトごとに、注釈の選択を解除し、[保存] を選択します。</block>
+  <block id="1e45f500f939c3c6933da32b0094ed0c" category="list-text">まだ注釈を参照しているクエリやルールを削除して、注釈が「使用中」としてマークされていないことを確認します。</block>
+  <block id="612361128d3425b6d566099c3a73e114" category="list-text">次回の ETL 実行後、注釈は非公開になります。</block>
+  <block id="80186bee24a1384dd0fdcbe103ad297a" category="list-text">ETL が完了したら、テナント側で不要になった注釈は注釈のリストから削除できます。</block>
+  <block id="69ba397c22afed002692190d13724b2e" category="paragraph">注釈は、適切に非公開にされるまで、データ ウェアハウスに引き続き表示されます。最初に非公開にせずに「注釈」ページから注釈を削除するだけでは、古いデータが残り、既存のレポートに表示される可能性があります。完全に削除するには、上記の非公開手順に従ってください。</block>
+  <block id="fde5f00a6e30ac6f54a7295f2e712c69" category="section-title">既存のレポートへの影響</block>
+  <block id="046dafc771f597ba528c92397d5f99e6" category="paragraph">注釈を削除または非公開にするには、それらの注釈を参照する既存のレポートを変更する必要がある場合があります。次の点を考慮してください。</block>
+  <block id="3c26ba7c1113869b4804e6a406f52ba7" category="list-text">注釈をフィルターまたはディメンションとして使用するレポートは更新する必要があります。</block>
+  <block id="c77b295eb8d3480880ff044a7823cdd9" category="list-text">依存レポートを更新せずに注釈を削除すると、それらのレポートでエラーや予期しない結果が返される可能性があります。</block>
+  <block id="3da85052d2ffffd1cb6352186fe0393a" category="list-text">複雑なシナリオでは、レポートの修復を支援するために専門サービスが必要になる場合があります。</block>
+  <block id="4f9b9c5804f57ab98a1eb0bbdc93ee28" category="paragraph">注釈を非公開にする前に、注釈に依存するすべてのレポートを確認することをお勧めします。</block>
 </blocks>
