@@ -6778,7 +6778,6 @@
   <block id="3f1a7a2048c619e7b3997ddc8b02ae5e" category="inline-link-macro">設定する必要があります</block>
   <block id="6c1006735c24c4966ad5668af1361000" category="list-text">エージェント<block ref="a64dfb2e19772579ec5e757e77e2d502" category="inline-link-macro-rx"></block>データ コレクターを構成する前に。</block>
   <block id="3db922049dfe42d0844cfa65ca213434" category="list-text">ユーザー ディレクトリ コネクタが適切に構成されていることを確認してください。適切に構成されていない場合、「アクティビティ フォレンジック」ページのイベントには、実際のユーザーの名前 (Active Directory に保存されている名前) ではなく、エンコードされたユーザー名が表示されます。</block>
-  <block id="b8667da3102e0adbbd2fe25017f00394" category="list-text">• ONTAP永続ストアは 9.14.1 からサポートされます。</block>
   <block id="1c0d6e11904414aa4c18ec80cc712c68" category="list-text">最適なパフォーマンスを得るために、FPolicyサーバをストレージ システムと同一のサブネットに設定することを推奨します。</block>
   <block id="94a83cc87aa6db24b6f7e05b3ab3031d" category="list-text">次の 2 つの方法のいずれかを使用して SVM を追加する必要があります。</block>
   <block id="f27bbbf5360c428e454f91df4646ca7c" category="list-text">クラスタ IP、SVM 名、クラスタ管理ユーザー名とパスワードを使用します。  *_これが推奨される方法です。_*</block>
@@ -6787,7 +6786,6 @@
   <block id="4f063ab303b475997c571fed2a4d2d7e" category="inline-xref">「権限に関する注意事項」</block>
   <block id="63d71c9c8919be72ed5d5d19a3aea524" category="list-text">完全な管理者クラスタ/SVM管理ユーザー名とパスワードを使用できない場合、または使用したくない場合は、以下に記載されているように、より低い権限を持つカスタムユーザーを作成できます。<block ref="00e97c40bcd2b78ce8600bf90267e3e7" category="inline-xref-macro-rx"></block>以下のセクションをご覧ください。このカスタム ユーザーは、SVM またはクラスタ アクセス用に作成できます。</block>
   <block id="eb75aeb3b4b2b9734ba3e52f5483f0b2" category="inline-link-macro">ONTAPのドキュメント</block>
-  <block id="af3222f57064502de0a6067116f97f3e" category="list-text">o 以下の「権限に関する注意」セクションで説明されているように、少なくとも csrole の権限を持つロールを持つ AD ユーザーを使用することもできます。また、<block ref="d4aa194db895e3203d834756bc431bad" category="inline-link-macro-rx"></block> 。</block>
   <block id="af53996a121bcf0b43c612a8465b5398" category="list-text">次のコマンドを実行して、SVM に正しいアプリケーションが設定されていることを確認します。</block>
   <block id="cce32d87b6a1e3cf5567d9c84f96be3f" category="inline-image-macro">SVMコマンド出力例</block>
   <block id="d056d5eb1e184e9c1ac10b7b898406c4" category="paragraph">出力例:<block ref="c5dea5ffbc3dcabd33992848de2142cc" category="inline-image-macro-rx" type="image"></block></block>
@@ -11967,8 +11965,6 @@
   <block id="9308a4a251c0b6f099fc32506e41c24d" category="inline-image-macro">ワークロード セキュリティ コレクター エラーの詳細リンク</block>
   <block id="6a6fcf99d83d56b2429dfa3ef83b50a0" category="paragraph"><block ref="6a6fcf99d83d56b2429dfa3ef83b50a0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="182ce87180fe5b09fa1710d1b249ecf0" category="paragraph">既知の問題とその解決策を以下に説明します。</block>
-  <block id="23d35f04a6305a542c62e0793452c9ad" category="paragraph">*問題:* データ コレクターがしばらく実行され、ランダムな時間の経過後に停止し、次のエラーが発生します: 「エラー メッセージ: コネクタがエラー状態です。サービス名: 監査。失敗の理由: 外部ポリシー サーバーが過負荷です。</block>
-  <block id="85501d33ecd840c5761971c7b55e894c" category="paragraph">*これを試してください:* ONTAPからのイベント レートは、エージェント ボックスが処理できるレートよりもはるかに高かったです。そのため接続は終了しました。</block>
   <block id="6cbdb7b222e25139b815f11a8bf316b0" category="paragraph">切断が発生したときの CloudSecure のピーク トラフィックを確認します。これは、*CloudSecure &gt; アクティビティフォレンジック &gt; すべてのアクティビティ* ページから確認できます。</block>
   <block id="fb318561d723fea4bf5cfc32c9f76869" category="paragraph">ピーク集約トラフィックがエージェント ボックスで処理できる量を超える場合は、エージェント ボックスでのコレクター展開のサイズ設定方法について、イベント レート チェッカー ページを参照してください。</block>
   <block id="df5d9f6706ba32a91dad936fdd8c31ec" category="paragraph">2021 年 3 月 4 日より前にエージェントがエージェント ボックスにインストールされていた場合は、エージェント ボックスで次のコマンドを実行します。</block>
@@ -12035,13 +12031,6 @@
   <block id="1728bd23561a7ad8c0a5ece1af1fc9e1" category="inline-link">1438207</block>
   <block id="36e30a439910e67f76754ab0874aef1b" category="inline-link">1479704</block>
   <block id="7e18cc81c15bd72df03b7461c26d6e4a" category="inline-link">1354659</block>
-  <block id="fde38d88f8244f8a7b724b900bd7e422" category="paragraph">|Workload Security を有効にすると、 ONTAP のパフォーマンスに影響が出ます。レイテンシが散発的に高くなり、IOPS が散発的に低くなります。 | ONTAP をWorkload Security と組み合わせて使用​​している場合、 ONTAPで遅延の問題が発生することがあります。これには、次に示すように、いくつかの理由が考えられます。<block ref="5b7caa0ef6cc830703e594488c525913" category="inline-link-macro-rx"></block> 、<block ref="b861ec6ca06b8e18b9d090dd75b00a26" category="inline-link-rx"></block> 、<block ref="a5fade3ab29d18b9b976189fcb9919ed" category="inline-link-rx"></block> 、<block ref="8899da2205eee6e62b28641da3533e12" category="inline-link-rx"></block> 、<block ref="c9d1d03c1b92a8bbffc617ad493e8619" category="inline-link-rx"></block> 。これらの問題はすべてONTAP 9.13.1 以降で修正されているため、これらの新しいバージョンのいずれかを使用することを強くお勧めします。</block>
-  <block id="392c3c278e79c8048452de58dff9fd56" category="paragraph">*問題:* データコレクターにエラーがあり、このエラーメッセージが表示されます。 「エラー: コネクタはエラー状態です。サービス名: 監査。失敗の理由: SVM svm_test でポリシーを構成できませんでした。理由: zapi フィールド events の値が見つかりません。  「*これを試してください:*</block>
-  <block id="bcb838cbc5adbbb585ffd4e501e4b07b" category="list-text">NFS サービスのみが設定された新しい SVM から開始します。</block>
-  <block id="55007273037aed04d07e70999d5153b2" category="list-text">Workload Security にONTAP SVM データ コレクターを追加します。  Workload Security でONTAP SVM データ コレクターを追加するときに、CIFS が SVM の許可されたプロトコルとして設定されます。</block>
-  <block id="c5e48108c2128269b181c77142f6e2c0" category="list-text">Workload Security のデータ コレクターにエラーが表示されるまで待ちます。</block>
-  <block id="bc71f49bfafa6a1dbe64216acd61b88e" category="list-text">CIFS サーバーは SVM 上に設定されていないため、左側に示すように、このエラーが Workload Security によって表示されます。</block>
-  <block id="10b2e2acac1b3fff1d033229848652e2" category="list-text">ONTAP SVM データ コレクターを編集し、許可されたプロトコルとして CIF のチェックを外します。データコレクターを保存します。  NFS プロトコルのみを有効にして実行を開始します。</block>
   <block id="8202c6a36256606217ad100be587d707" category="paragraph">*問題:* データ コレクターに次のエラー メッセージが表示されます:「エラー: 2 回の再試行でコレクターの状態を判別できませんでした。コレクターをもう一度再起動してください (エラー コード: AGENT008)」。  *これを試してみてください:*</block>
   <block id="f2e1c8f11a6d114e56889c093ddb4738" category="list-text">「データ コレクター」ページで、エラーが発生しているデータ コレクターの右までスクロールし、3 つのドット メニューをクリックします。 _編集_を選択します。データコレクターのパスワードをもう一度入力してください。 _Save_ ボタンを押してデータ コレクターを保存します。データ コレクターが再起動し、エラーが解決されるはずです。</block>
   <block id="96f9921aa76d3057450b4f8f037c88c6" category="list-text">エージェント マシンに十分な CPU または RAM の余裕がないため、DSC が失敗する可能性があります。マシン内のエージェントに追加されているデータ コレクターの数を確認してください。  20 を超える場合は、エージェント マシンの CPU および RAM 容量を増やしてください。 CPU と RAM が増加すると、DSC は自動的に初期化状態になり、その後実行状態になります。サイズガイドをご覧ください<block ref="830ad31fe88c5bf31dcfcc5f15ccdf0e" category="inline-link-macro-rx"></block>。</block>
@@ -12774,4 +12763,13 @@
   <block id="7d7c3dfbfa0b1113cc98af5bc93293c2" category="inline-link-macro">Workload Security（旧Cloud Secure）に関するお知らせ、window=_blank</block>
   <block id="c69944d365e084328c890394ddd7fec5" category="paragraph"><block ref="c69944d365e084328c890394ddd7fec5" category="inline-link-macro-rx"></block></block>
   <block id="f17c7e32a4fcdb4c787f412cf3181bea" category="cell">管理者と同じ権限に加え、SSO 認証と ID フェデレーション構成も管理します。追加の所有者を割り当てたり、マネージド サービス プロバイダー (MSP) マスター テナントにクライアントを追加したりすることもできます。</block>
+  <block id="6794662d08bc33fcbd95c93345331eb3" category="list-text">ONTAP永続ストアは 9.14.1 からサポートされます。</block>
+  <block id="19d46baa06f3b8d834f231a48a441888" category="inline-link-macro">FPolicy ベストプラクティスに関する KB 記事</block>
+  <block id="0623520805216507062e9d9ca05fa78b" category="list-text">Workload Security FPolicy設定に関する包括的なベストプラクティスと推奨事項については、<block ref="97c620a93781a0c1a84d537888788cd2" category="inline-link-macro-rx"></block> 。</block>
+  <block id="12e43e942c5c37f57af4651b24d50099" category="list-text">以下の「権限に関する注意」セクションで説明されているように、少なくとも csrole の権限を持つロールを持つ AD ユーザーを使用することもできます。また、<block ref="d4aa194db895e3203d834756bc431bad" category="inline-link-macro-rx"></block> 。</block>
+  <block id="17783c6591a255b301970d912178040b" category="paragraph">*問題:* データ コレクターがしばらく実行され、ランダムな時間の経過後に停止し、次のエラーが発生します: 「エラー メッセージ: コネクタがエラー状態です。サービス名: 監査。失敗の理由: 外部ポリシー サーバーが過負荷です。*これを試してください:* ONTAPからのイベント レートは、エージェント ボックスが処理できるレートよりもはるかに高かったです。そのため接続は終了しました。</block>
+  <block id="2e67c3e48e3cc19256e526889902b06c" category="paragraph">{空の}</block>
+  <block id="cd013bdb6b746502669588c8bf28fe47" category="paragraph">*問題:* Workload Security を有効にすると、 ONTAP のパフォーマンスに影響が出ます。レイテンシが散発的に高くなり、IOPS が散発的に低くなります。 *これを試してください:* ONTAP をWorkload Security とともに使用している場合、 ONTAPで遅延の問題が発生することがあります。これには、次に示すように、いくつかの理由が考えられます。<block ref="5b7caa0ef6cc830703e594488c525913" category="inline-link-macro-rx"></block> 、<block ref="b861ec6ca06b8e18b9d090dd75b00a26" category="inline-link-rx"></block> 、<block ref="a5fade3ab29d18b9b976189fcb9919ed" category="inline-link-rx"></block> 、<block ref="8899da2205eee6e62b28641da3533e12" category="inline-link-rx"></block> 、<block ref="c9d1d03c1b92a8bbffc617ad493e8619" category="inline-link-rx"></block> 。これらの問題はすべてONTAP 9.13.1 以降で修正されているため、これらの新しいバージョンのいずれかを使用することを強くお勧めします。</block>
+  <block id="c8a935e32ab223552b7728caf4cbcd40" category="paragraph">*問題:* コレクターがエラー状態にあり、次のメッセージが表示されます: コネクタがエラー状態です。 失敗の理由: SVM &lt;SVM 名&gt; で永続ストアを構成できませんでした。 理由: SVM "&lt;SVM Name&gt;" 内のボリューム "&lt;volumeName&gt;" に適したアグリゲートが見つかりません。 理由: 集計 "&lt;aggregateName&gt;" のパフォーマンス情報は現在利用できません。サービス名: 監査。失敗の理由: SVM に永続的ストアを設定できませんでした。&lt;svm name=""&gt;&lt;/svm&gt;理由:ボリューム「」に適したアグリゲートが&lt;volumename&gt;SVM「&lt;svm name=""&gt;」&lt;/svm&gt;に&lt;/volumename&gt;見つかりません。理由: アグリゲート「」のパフォーマンス情報&lt;aggregatename&gt;は現在使用できません。&lt;/aggregatename&gt;数分待ってからもう一度コマンドを実行してください。</block>
+  <block id="807b576f46b09baeb51689a411fd7e90" category="paragraph">*次の操作を試してください:* 数分待ってからコレクターを再起動します。</block>
 </blocks>

@@ -35,8 +35,12 @@ ONTAP SVM データ コレクターを使用すると、Workload Security はNet
 * SVM にはいくつかのサブタイプがあります。これらのうち、_default_、_sync_source_、および _sync_destination_ のみがサポートされています。
 * エージェントlink:task_cs_add_agent.html["設定する必要があります"]データ コレクターを構成する前に。
 * ユーザー ディレクトリ コネクタが適切に構成されていることを確認してください。適切に構成されていない場合、「アクティビティ フォレンジック」ページのイベントには、実際のユーザーの名前 (Active Directory に保存されている名前) ではなく、エンコードされたユーザー名が表示されます。
-* • ONTAP永続ストアは 9.14.1 からサポートされます。
+* ONTAP永続ストアは 9.14.1 からサポートされます。
 * 最適なパフォーマンスを得るために、FPolicyサーバをストレージ システムと同一のサブネットに設定することを推奨します。
+
+
+[[fpolicy-best-practices]]
+* Workload Security FPolicy設定に関する包括的なベストプラクティスと推奨事項については、link:https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/DII_Storage_Workload_Security__Fpolicy_Best_Practice_and_Recommendations["FPolicy ベストプラクティスに関する KB 記事"^] 。
 * 次の 2 つの方法のいずれかを使用して SVM を追加する必要があります。
 +
 ** クラスタ IP、SVM 名、クラスタ管理ユーザー名とパスワードを使用します。  *_これが推奨される方法です。_*
@@ -47,7 +51,7 @@ ONTAP SVM データ コレクターを使用すると、Workload Security はNet
 ** SVM Vserver管理IP、ユーザー名、パスワードを使用する
 ** 完全な管理者クラスタ/SVM管理ユーザー名とパスワードを使用できない場合、または使用したくない場合は、以下に記載されているように、より低い権限を持つカスタムユーザーを作成できます。<<a-note-about-permissions,「権限に関する注意事項」>>以下のセクションをご覧ください。このカスタム ユーザーは、SVM またはクラスタ アクセス用に作成できます。
 +
-*** o 以下の「権限に関する注意」セクションで説明されているように、少なくとも csrole の権限を持つロールを持つ AD ユーザーを使用することもできます。また、link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.pow-adm-auth-rbac%2FGUID-0DB65B04-71DB-43F4-9A0F-850C93C4896C.html["ONTAPのドキュメント"] 。
+*** 以下の「権限に関する注意」セクションで説明されているように、少なくとも csrole の権限を持つロールを持つ AD ユーザーを使用することもできます。また、link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.pow-adm-auth-rbac%2FGUID-0DB65B04-71DB-43F4-9A0F-850C93C4896C.html["ONTAPのドキュメント"] 。
 
 
 
