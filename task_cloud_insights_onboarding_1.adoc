@@ -43,9 +43,9 @@ Data Infrastructure Insightsの詳細を確認したり、デモをリクエス�
 
 == Data Infrastructure Insightsの無料トライアルを開始する
 
-Data Infrastructure Insightsに初めてログインする場合は、 Data Infrastructure Insightsオファーの下にある *無料トライアルを開始* をクリックします。  Data Infrastructure Insights、テナントを配置するリージョンの選択など、会社のテナントの作成手順を案内します。
+Data Infrastructure Insightsに初めてログインする場合は、 Data Infrastructure Insightsが提供するすべての内容を読み、_開始する準備_ができたら、[トライアルをリクエスト] をクリックして情報を入力してください。
 
-image:trial_region_selector.png["Data Infrastructure Insightsテナントをホストするリージョンの選択"]
+トライアルテナントのセットアップの一環として、テナントをホストするリージョンと、テナントを AWS に配置するか Azure に配置するかを選択します。
 
 テナントの作成が完了したら、コンソールの資格情報を使用してログインし、 Data Infrastructure Insightsの 30 日間無料トライアルを開始します。このトライアル期間中、 Data Infrastructure Insightsが提供する機能を試すことができます。
 

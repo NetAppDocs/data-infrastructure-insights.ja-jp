@@ -6986,9 +6986,6 @@
   <block id="a46b8a484704b65f978247cb9b3901aa" category="paragraph">メールアドレスとパスワードを入力してください。次に、NetApp のクラウド オファリング ページに移動します。</block>
   <block id="4ec4e4954d48db50650c5ec49007cf27" category="paragraph">Data Infrastructure Insightsの詳細を確認したり、デモをリクエストしたりするには、「分析と制御」 &gt; 「可観測性」に移動してください。</block>
   <block id="eeecd13aa136e65aaedc64374c7415bc" category="section-title">Data Infrastructure Insightsの無料トライアルを開始する</block>
-  <block id="f596c7c5f04ed4be7cad8a6bac5f0b64" category="paragraph">Data Infrastructure Insightsに初めてログインする場合は、 Data Infrastructure Insightsオファーの下にある *無料トライアルを開始* をクリックします。  Data Infrastructure Insights、テナントを配置するリージョンの選択など、会社のテナントの作成手順を案内します。</block>
-  <block id="d6fc6f290827ae120b8547b3660afe0e" category="inline-image-macro">Data Infrastructure Insightsテナントをホストするリージョンの選択</block>
-  <block id="0959e45a1edcdcaa7f540365665b3986" category="paragraph"><block ref="0959e45a1edcdcaa7f540365665b3986" category="inline-image-macro-rx" type="image"></block></block>
   <block id="13d2916279db639fea18a00088e8cb21" category="paragraph">テナントの作成が完了したら、コンソールの資格情報を使用してログインし、 Data Infrastructure Insightsの 30 日間無料トライアルを開始します。このトライアル期間中、 Data Infrastructure Insightsが提供する機能を試すことができます。</block>
   <block id="3b1f676d06286548e11b332567f42bbd" category="inline-link-macro">購読を開始する</block>
   <block id="b48d78927dd619cab2e6b7fde5ffb6b1" category="paragraph">無料トライアル期間中は、<block ref="822a67eb96671d13fff372a75b259713" category="inline-link-macro-rx"></block>いつでもData Infrastructure Insightsにアクセスできます。サブスクライブすると、現在のサブスクリプションに基づいてData Infrastructure Insights機能を使用できます。</block>
@@ -11834,128 +11831,7 @@
   <block id="ae4768c261eca8a6c88e3f5101e586e5" category="summary">AgentConfiguration オプションを使用してNetApp Kubernetes Monitoring Operator を構成します。</block>
   <block id="9c64a0e0a0e22cc18b7137e967889926" category="doc">Kubernetes モニタリング オペレーターの設定オプション</block>
   <block id="a2c6fd0b23854404c386430346919db8" category="paragraph">その<block ref="025a80672f7feae526479c9984c435c7" category="inline-link-macro-rx"></block> AgentConfiguration ファイルを通じて、幅広いカスタマイズオプションが提供されます。リソース制限、収集間隔、プロキシ設定、許容値、コンポーネント固有の設定を構成して、Kubernetes 環境の監視を最適化できます。これらのオプションを使用して、Telegraf、kube-state-metrics、ログ収集、ワークロードマッピング、変更管理、その他の監視コンポーネントをカスタマイズできます。</block>
-  <block id="2d18be6c8402f4ca0cb26ce68adc0564" category="paragraph">以下の表は、_AgentConfiguration_ ファイルの可能なオプションを示しています。</block>
-  <block id="b33aed8f3134996703dc39f9a7c95783" category="cell">エージェント</block>
-  <block id="4e49d105e5ecfd95da78eb980f698488" category="cell">オペレーターがインストールできるすべてのコンポーネントに共通の構成オプション。これらは「グローバル」オプションとみなすことができます。</block>
-  <block id="286bec770910c4da609323e21222e283" category="cell">dockerリポジトリ</block>
-  <block id="ea55ba51f0b69383ec5bb89cabada638" category="cell">Data Infrastructure Insights Dockerリポジトリではなく、お客様のプライベートDockerリポジトリからイメージをプルするためのdockerRepoオーバーライド。デフォルトはData Infrastructure Insights Dockerリポジトリです。</block>
-  <block id="994be3a18bf7e0a16ab2be2d5c1643ae" category="cell">dockerImagePullSecret</block>
-  <block id="8e8bb119221ff93e3f93bea9ae89444f" category="cell">オプション: 顧客のプライベート リポジトリのシークレット。</block>
-  <block id="343d28c140c3f5ce20a1ac3f8f7dae2c" category="cell">クラスター名</block>
-  <block id="82b5c50bc4616a08a16b907f9dd29573" category="cell">すべての顧客クラスターの中でクラスターを一意に識別するフリーテキストフィールドです。DataData Infrastructure Insightsテナント全体で一意である必要があります。デフォルトは、顧客がUIの「クラスター名」フィールドに入力した値です。</block>
-  <block id="5c7af4a6b686285084e62f255503c141" category="cell">プロキシ形式: proxy: server: port: username: password: noProxy: isTelegrafProxyEnabled: isAuProxyEnabled: isFluentbitProxyEnabled: isCollectorProxyEnabled:</block>
-  <block id="f8ac74d8a3668ddf89efeb8e806ca908" category="cell">プロキシを設定するかどうかはオプションです。これは通常、顧客の企業プロキシです。</block>
-  <block id="0c8011c6947aae43789eb8972c306e85" category="cell">OperatorのTelegrafインストールをカスタマイズできる設定オプション</block>
-  <block id="fe071453b5b9af9d9a481afb504f78cb" category="cell">コレクション間隔</block>
-  <block id="43087b2e6dfc2a4eecd03be4305fb0cb" category="cell">メトリクス収集間隔（秒単位）（最大60秒）</block>
-  <block id="2129471bf14899d19206e2b1aa6c00ca" category="cell">dsCPU制限</block>
-  <block id="718918f6bff9fdd2a6292afbe4549d0b" category="cell">Telegraf DS の CPU 制限</block>
-  <block id="5eeea2f6351dff2df3a80bcff5cdd5be" category="cell">dsMemLimit</block>
-  <block id="bf35f5b9d6933443b78e7cd6b5b24039" category="cell">Telegraf DSのメモリ制限</block>
-  <block id="32baad7599efdd63fc7dd0ebd6fb0462" category="cell">dsCPUリクエスト</block>
-  <block id="fb50fe579fe2186737910f4faafbfae2" category="cell">Telegraf DSのCPU要求</block>
-  <block id="4fd630053ba42e53bf847444b5857abf" category="cell">dsMemRequest</block>
-  <block id="03a9d404d5e9073d007d6e38a710ebb1" category="cell">Telegraf DSのメモリ要求</block>
-  <block id="00edda16a430ed1a43f73b6b6f8e5230" category="cell">rsCPU制限</block>
-  <block id="be5f478627c9d3676f638d423c9b320b" category="cell">Telegraf RS の CPU 制限</block>
-  <block id="19db0dd97225788d8cd2ac82554de9d3" category="cell">rsメモリ制限</block>
-  <block id="7ad3bdf2f332902d109247d0c3970fb4" category="cell">Telegraf RS のメモリ制限</block>
-  <block id="1be922c4a70261e6656d70f9cc86dde2" category="cell">rsCPUリクエスト</block>
-  <block id="76b9e3aaffb44c3c4a7084bd7430088d" category="cell">Telegraf RSのCPU要求</block>
-  <block id="b3e9404f7fb1acb7c3d66e587a4c411b" category="cell">rsメモリリクエスト</block>
-  <block id="dce1fa2cb47347aa09d7dceac624c5f7" category="cell">Telegraf RS のメモリ要求</block>
-  <block id="6fd605953233d5564943f85815683d62" category="cell">特権実行</block>
-  <block id="03d93e1826c4b75f5882487510637b6a" category="cell">telegraf DaemonSet の _telegraf-mountstats-poller_ コンテナを特権モードで実行します。  Kubernetes ノードで SELinux が有効になっている場合は、これを true に設定します。</block>
-  <block id="324bdfa0e3afdc96a6b7ec1a6d383285" category="cell">特権実行</block>
-  <block id="853d5e0ee500d0a29752a0f7c287f08d" category="cell">telegraf DaemonSet の telegraf コンテナを特権モードで実行するには、runDsPrivileged を true に設定します。</block>
-  <block id="986b07451fa1766c43f2eead1470731c" category="cell">バッチサイズ</block>
-  <block id="f73038607dbfd988c8ed06aa707b67b6" category="inline-link-macro">Telegraf 設定ドキュメント</block>
-  <block id="4a686d41d5d06d7af488bce13a4b6b1c" category="cell">見る<block ref="1220f98ff4e67fb30a54b092e87489e7" category="inline-link-macro-rx"></block></block>
-  <block id="977c5d665ca82fa3d9d007ab47991cab" category="cell">バッファ制限</block>
-  <block id="3d5beabcc75357b9f0517b37a51d848b" category="cell">ラウンド間隔</block>
-  <block id="0457354b493031778121a8634e49db5e" category="cell">コレクションジッター</block>
-  <block id="e2794d8f12719281eff5601251c8a680" category="cell">精度</block>
-  <block id="43a58acb58cbbbfc1abb27f189ec375c" category="cell">フラッシュ間隔</block>
-  <block id="e177bfc26cdd2bb790365e538eef32a6" category="cell">フラッシュジッター</block>
-  <block id="8bdbcdcecbcc5e3e45877e3a15ebe124" category="cell">出力タイムアウト</block>
-  <block id="bb0a12c3834207119851374142a76ac0" category="cell">ds許容範囲</block>
-  <block id="77e9ea38d66b01840eaf712dab598ce0" category="cell">telegraf-ds 追加の許容範囲。</block>
-  <block id="569d3e422e1e57a8d8f17b102bb10bfc" category="cell">rs許容範囲</block>
-  <block id="0a1cb9f6e7c89d89c765fdd1efa6183b" category="cell">telegraf-rs 追加の許容範囲。</block>
-  <block id="6b0d087c4bacdd4357f49c495293bdde" category="cell">アグリゲーター後のスキッププロセッサ</block>
-  <block id="412ea2434c00799606f268b4aa2b35dc" category="cell">保護なし</block>
-  <block id="9091b3fb9f4d43844af8dc0a973c67e0" category="inline-link-macro">既知のTelegrafの問題</block>
-  <block id="d466d69e5a5f62e5d6773f7d399fe086" category="cell">これを参照してください <block ref="0dcd3ea27696029fecb8ccd7e247f633" category="inline-link-macro-rx"></block>。<block ref="3a41393afb053a415e6dc30cf704d899" prefix=" " category="inline-code"></block>フラグ。</block>
-  <block id="0860569a69c3584507ee09f4be585418" category="cell">安全でないK8sSkipVerify</block>
-  <block id="3008cd3125cccc003fa13335717e556e" category="cell">IP SANの不足によりTelegrafが証明書を検証できない場合は、検証スキップを有効にしてみてください。</block>
-  <block id="81beb48dd63a014bf8c446eeeb319a2e" category="cell">Operatorのkube state metricsのインストールをカスタマイズできる設定オプション</block>
-  <block id="8804d25db5f16b9db006116b6edf45bc" category="cell">CPU制限</block>
-  <block id="8b673d5f702e58efd947465ead5c9647" category="cell">kube-state-metrics デプロイメントの CPU 制限</block>
-  <block id="65a010afe1e2186ecb5c9ef8cf978e2d" category="cell">メモリ制限</block>
-  <block id="e49ddab01d68c08aeef7fdff59e6def6" category="cell">kube-state-metrics デプロイメントのメモリ制限</block>
-  <block id="664e65ce2a5a996437f898217e74c9dd" category="cell">CPUリクエスト</block>
-  <block id="3237c3bd0df775b78c9dafaf3c9bf9e6" category="cell">Kube 状態メトリックのデプロイメントに対する CPU 要求</block>
-  <block id="c8f947b6b972e9866cc682a82d5ec34a" category="cell">メモリリクエスト</block>
-  <block id="03dd8511b379b0b92595299b980d36e4" category="cell">Kube 状態メトリックのデプロイメントのメモリ要求</block>
-  <block id="55b558c7ef820e6e00e5993b9e55d93b" category="cell">リソース</block>
-  <block id="3b720d9649ae501d73e8f8c4a7a15348" category="cell">キャプチャするリソースのコンマ区切りリスト。例: cronjobs、daemonsets、deployments、ingresses、jobs、namespaces、nodes、persistentvolumeclaims、persistentvolumes、pods、replicasets、resourcequotas、services、statefulsets</block>
-  <block id="d6c26478ca41a23cc9741a4e92576269" category="cell">寛容</block>
-  <block id="c511c601aee805f46f3767063104cdd8" category="cell">kube-state-metrics の追加の許容範囲。</block>
-  <block id="c84711fe6ad5fa23070462b2086412e2" category="cell">kube-state-metrics がラベルをキャプチャするリソースのコンマ区切りリスト +++ 例: cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*] +++</block>
-  <block id="d795ec2d0a164433572a8d5d91b8fae0" category="cell">オペレータのログ収集とインストールをカスタマイズできる構成オプション</block>
-  <block id="031104420a282e1bdb63e280c40a4938" category="cell">ヘッドから読み取る</block>
-  <block id="d7ff51440723c6bba696ef19f757a8af" category="cell">true/false、Fluent Bit がログを先頭から読み取るかどうか</block>
-  <block id="90272dda245ae1fb3cf197e91a8689dc" category="cell">timeout</block>
-  <block id="6136e8e4f59c6ebf3a47733e15cd8f8f" category="cell">タイムアウト（秒）</block>
-  <block id="a28f540659f42fa52be34b45558bb6c6" category="cell">dnsモード</block>
-  <block id="5c0864cc25dbf397d47948de9ac342f1" category="cell">TCP/UDP、DNSのモード</block>
-  <block id="7e7b391c65060e4613a7fb96bfd2ef31" category="cell">流暢なビット許容度</block>
-  <block id="035bf5f67349238f72eae5d508efac99" category="cell">fluent-bit-ds 追加の許容範囲。</block>
-  <block id="8776d1f0ee4232b1c2ff5bc38e4b2603" category="cell">イベントエクスポーターの許容範囲</block>
-  <block id="bac5ce71f32beb834c27a988cad33543" category="cell">イベント エクスポーターの追加の許容範囲。</block>
-  <block id="b6544593f70ff0a8915cbd1f9aabb49f" category="cell">イベントエクスポーターのmaxEventAgeSeconds</block>
-  <block id="ec57a05c2326d433af7b24b3adb77f1a" category="cell">イベント エクスポーターの最大イベント有効期間。見る<block ref="6708727d05fa40eed58ce8404e60b4a3" category="inline-link-rx"></block></block>
-  <block id="8edfed76354af11279c58c2d91948eda" category="cell">fluent-bit-containerLogPath</block>
-  <block id="3150c73f1d1522f3b831f0d591077194" category="cell">デフォルトでは、Fluentbit DaemonSet は、Kubernetes コンテナ ログにアクセスしたり読み取ったりするために、/var/log および /var/lib/docker/containers ホスト パスをマウントします。  Kubernetes がコンテナ ログをデフォルト以外の場所に配置するように構成されている場合は、このオプションを使用して Fluentbit DaemonSet を変更し、デフォルト以外のパスをマウントします。</block>
-  <block id="6f70b1b29646b4f3864aa8abbbca1c59" category="cell">ワークロードマップ</block>
-  <block id="f39ed19a7c5e5e2b0cff68ee1bedc0ef" category="cell">ワークロード マップの収集と Operator のインストールをカスタマイズできる構成オプション。</block>
-  <block id="27f8013ee549a9c4b57f90e2187cfe5f" category="cell">ネットオブザーバーDSのCPU制限</block>
-  <block id="579e696b8054af08af33dfd55dfad78b" category="cell">ネットオブザーバー DS のメモリ制限</block>
-  <block id="967cc12aa2f5f95e9e26d28fae3bd7b3" category="cell">ネットオブザーバーDSのCPU要求</block>
-  <block id="0ae1bca85ce414d0f1862e84b9f66acc" category="cell">ネットオブザーバー DS のメモリ要求</block>
-  <block id="1de805c2687b2c30b46a937270519488" category="cell">メトリック集約間隔</block>
-  <block id="8d5efaeb90931394d0afdcc8d00b6b90" category="cell">メトリック集約間隔（秒）</block>
-  <block id="c561450e999b4dfedfdbbc8b48e36db7" category="cell">bpfポーリング間隔</block>
-  <block id="a75c6546b06d6f58867213c5349a5f15" category="cell">BPFポーリング間隔（秒）</block>
-  <block id="3b7c5615013c6b42362845591653e503" category="cell">DNSルックアップを有効にする</block>
-  <block id="1d2b775d8b166dda0a22ca0ffa3f537c" category="cell">true/false、DNSルックアップを有効にする</block>
-  <block id="287ab13fa00dc2700e0567bc50f5a663" category="cell">l4-寛容</block>
-  <block id="bef6178937f26cf5776d5c67e6c1d23c" category="cell">net-observer-l4-ds 追加の許容範囲。</block>
-  <block id="e04813a849ce9da2afe9f3bfcaf85f0e" category="cell">true/false - Kubernetes ノードで SELinux が有効になっている場合は、runPrivileged を true に設定します。</block>
-  <block id="78835e1c315b219e4c62fc613fdfd311" category="cell">変更管理</block>
-  <block id="02b609b32da65dbc17b9446c8542f3dd" category="cell">Kubernetes 変更管理と分析の構成オプション</block>
-  <block id="75f551b07991fea9589bce25b6abb363" category="cell">change-observer-watch-rs の CPU 制限</block>
-  <block id="6e753299d008aca89690ad5b5c6b784f" category="cell">change-observer-watch-rs のメモリ制限</block>
-  <block id="582e83d73d36aa6674624867468704da" category="cell">change-observer-watch-rs の CPU 要求</block>
-  <block id="d73c96f8e69fcf08ffd440cc16f573af" category="cell">change-observer-watch-rs のメモリ要求</block>
-  <block id="f7b8b6cbce2f95ef7109d41adce08b69" category="cell">ワークロード障害宣言間隔（秒）</block>
-  <block id="02c3ccd1d51babc54da2759d79e61c5c" category="cell">ワークロードのデプロイメントが成功しなかった場合に失敗としてマークされるまでの間隔（秒）</block>
-  <block id="fded60399ef22b3b04bd3856d344233b" category="cell">ワークロードデプロイアグリゲート間隔（秒）</block>
-  <block id="f5d43bfb3eaf806884e4936fc4453865" category="cell">ワークロードのデプロイメントを組み合わせて送信する頻度（秒単位）</block>
-  <block id="fb937d63289578595fb05fc626554661" category="cell">非ワークロードデプロイアグリゲート間隔秒数</block>
-  <block id="e4685d20c866cca50df5bea5e4230497" category="cell">非ワークロードデプロイメントを組み合わせて送信する頻度（秒単位）</block>
-  <block id="6d53bc2f7711e2d9a24631defb23b18f" category="cell">編集する用語</block>
-  <block id="532aa006f97c495d1734618405645779" category="cell">環境変数名とデータマップで使用される正規表現のセット。値は編集されます。例:「pwd」、「password」、「token」、「apikey」、「api-key」、「jwt」</block>
-  <block id="44011a6b8af68cc46d2d0dfb669fd887" category="cell">追加の注目種</block>
-  <block id="ac3fd52049b8a2c3ba2e8b8a5eff74e0" category="cell">コレクターが監視するデフォルトの種類のセットから監視する追加の種類をコンマで区切ったリスト</block>
-  <block id="20e3bce2d07b4e6d70959f7793b18bc9" category="cell">ウォッチから無視する種類</block>
-  <block id="003936f0b815c468a99ed57f900f3d8a" category="cell">コレクターが監視するデフォルトの種類のセットから監視から無視する種類のコンマ区切りリスト</block>
-  <block id="eee9690c1174453d706353a8a678c8a1" category="cell">ログ記録アグレッシブ間隔秒数</block>
-  <block id="284d60e68534479175e5c3f018cecc45" category="cell">コレクターから CI にログレコードが送信される頻度</block>
-  <block id="73f0200abaec8d804a671e6ce4dac861" category="cell">時計の許容範囲</block>
-  <block id="bab1b701df004b067b068da86a62e2cf" category="cell">change-observer-watch-ds 追加の許容範囲。短縮された単一行形式のみ。例: '{キー: taint1、演算子: Exists、効果: NoSchedule},{キー: taint2、演算子: Exists、効果: NoExecute}'</block>
   <block id="349a396fe021418ac0edbee3b447f4d5" category="section-title">サンプル AgentConfiguration ファイル</block>
-  <block id="05275b3b3aecea67df39f7c8383f0251" category="paragraph">以下はサンプルの _AgentConfiguration_ ファイルです。</block>
   <block id="d16d9bd2acb667a5f9b107ea67afbca8" category="summary">ワークロード セキュリティ データ コレクターのトラブルシューティング</block>
   <block id="f9d23cdace7f417c3e782c1bc693dd56" category="doc">ONTAP SVM データコレクタのトラブルシューティング</block>
   <block id="cd340fe1a6cf5e3a42e4f1d2eae63efb" category="paragraph">Workload Security はデータ コレクターを使用して、デバイスからファイルおよびユーザー アクセス データを収集します。ここでは、このコレクターに関する問題のトラブルシューティングのヒントを見つけることができます。</block>
@@ -12801,4 +12677,7 @@
   <block id="c77b295eb8d3480880ff044a7823cdd9" category="list-text">依存レポートを更新せずに注釈を削除すると、それらのレポートでエラーや予期しない結果が返される可能性があります。</block>
   <block id="3da85052d2ffffd1cb6352186fe0393a" category="list-text">複雑なシナリオでは、レポートの修復を支援するために専門サービスが必要になる場合があります。</block>
   <block id="4f9b9c5804f57ab98a1eb0bbdc93ee28" category="paragraph">注釈を非公開にする前に、注釈に依存するすべてのレポートを確認することをお勧めします。</block>
+  <block id="84782b0fddf642f36f6d0ca7585d8709" category="paragraph">Data Infrastructure Insightsに初めてログインする場合は、 Data Infrastructure Insightsが提供するすべての内容を読み、_開始する準備_ができたら、[トライアルをリクエスト] をクリックして情報を入力してください。</block>
+  <block id="513dc3996a984c81efa261ee7da82ea7" category="paragraph">トライアルテナントのセットアップの一環として、テナントをホストするリージョンと、テナントを AWS に配置するか Azure に配置するかを選択します。</block>
+  <block id="29ecb4e96ebb9048c6e2055bd8edfec9" category="paragraph">以下に、各オプションの説明を含むサンプルの _AgentConfiguration_ ファイルを示します。</block>
 </blocks>
