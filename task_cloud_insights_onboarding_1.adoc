@@ -55,7 +55,7 @@ Data Infrastructure Insightsに初めてログインする場合は、 Data Infr
 
 == Sign inて出発
 
-テナントが作成されると、いつでもNetApp Consoleポータルにログインして、link:https://services.cloud.netapp.com["クラウド サービス"]ページに移動し、「*Data Infrastructure Insightsに移動*」を選択します。
+テナントが作成されると、いつでもNetApp BlueXPポータルにログインして、 link:https://services.cloud.netapp.com["クラウド サービス"] ページに移動し、「*Data Infrastructure Insightsに移動*」を選択します。
 
 ブラウザを開いて、 Data Infrastructure Insightsテナント URL に直接アクセスすることもできます。次に例を示します。
 

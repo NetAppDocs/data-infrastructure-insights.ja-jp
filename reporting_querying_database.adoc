@@ -7,6 +7,10 @@ keywords: reporting, cognos, data warehouse, dwh, API
 = API経由でレポートデータベースにアクセスする
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
