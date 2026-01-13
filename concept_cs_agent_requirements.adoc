@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_agent_requirements.html 
-summary: エージェントとして使用するサーバーまたはVMは、最小要件を満たしている必要があります。 
+summary: 最適なパフォーマンスとデータ収集を実現するために、Workload Security Agent の展開環境がオペレーティング システム、CPU、メモリ、およびディスク領域の最小要件を満たしていることを確認します。 
 keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cloud Secure 
 ---
 = ワークロード セキュリティ エージェントの要件

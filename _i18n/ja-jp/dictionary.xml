@@ -573,7 +573,6 @@
   <block id="710c77cfc8d2136c51aad6a8316043b9" category="cell">*これを試してみてください:*</block>
   <block id="3e31734df6f02c9ad9cd0dc7c1f65a98" category="cell">モニターがエクスポートされたことを通知する監査メッセージが表示されます。</block>
   <block id="256a0ce1cb9ac99794371e404aa7446e" category="cell">カスタム モニター構成のエクスポートは通常、 NetAppエンジニアが新機能の開発およびテスト中に使用します。このメッセージが表示されることを予期していなかった場合は、監査対象のアクションに指定されたユーザーのアクションを調べるか、サポートにお問い合わせください。</block>
-  <block id="03b8f305db2c82bc6a850a57ec12d044" category="summary">エージェントとして使用するサーバーまたはVMは、最小要件を満たしている必要があります。</block>
   <block id="a7ef8f0bed1d94220b7abd3877b10643" category="doc">ワークロード セキュリティ エージェントの要件</block>
   <block id="bee347f35c7a237c1f2d5d7193252244" category="inline-link-macro">ワークロードセキュリティエージェントをインストールする</block>
   <block id="1de0df19f89310a1407a7686c6dcad7c" category="paragraph">絶対です<block ref="588188a9e8b5d243fbdbf4e2ce1c4421" category="inline-link-macro-rx"></block>データ収集者から情報を取得するため。エージェントをインストールする前に、環境がオペレーティング システム、CPU、メモリ、およびディスク領域の要件を満たしていることを確認してください。</block>
@@ -626,7 +625,6 @@
   <block id="46a1d0dbde96d466dadd916b9b7a7d65" category="section-title">システムのサイズ設定</block>
   <block id="b81e4f797b30e131d43ea14e3bc8322c" category="inline-link-macro">イベントレートチェッカー</block>
   <block id="1a46e02a3754d0daf83001fffc7c7c46" category="paragraph">参照<block ref="fd6f609b977fb641a06defa631019934" category="inline-link-macro-rx"></block>サイズに関する情報についてはドキュメントを参照してください。</block>
-  <block id="dda85f45002252de774eae20d8d3bb21" category="summary">Workload Security には、CMDB などの他のアプリケーションと統合するための強力な API が含まれています。</block>
   <block id="0865b3ed9f5211e6fe35eddac5b1aaa3" category="doc">ワークロードセキュリティAPI</block>
   <block id="1b1fb3360bd2eea985279f6fcc2ef45f" category="paragraph">Workload Security API を使用すると、 NetApp の顧客と独立系ソフトウェア ベンダー (ISV) は、Workload Security を CMDB や他のチケット システムなどの他のアプリケーションと統合できます。</block>
   <block id="1a152a606ca16a6eef5f2e9ac9b4c824" category="paragraph">API アクセスの要件:</block>
@@ -647,11 +645,7 @@
   <block id="9691b74510440e767ebe140708556d4a" category="paragraph">スクリプトは _/opt/netapp/cloudsecure/agent/export-script_ にあります。同じディレクトリにある README ファイルに使用方法が記載されています。</block>
   <block id="b33ce51cf90f2cebc1848ee9bdd86a73" category="paragraph">スクリプトを呼び出すコマンドの例を次に示します。</block>
   <block id="4cee2cbc95e55efcd827954ec63679ef" category="paragraph">主なパラメータ: -<block ref="86768c9197497f61803d2cccda886c2b" prefix=" " category="inline-code"></block> : 要求された時間範囲を 12 時間間隔に分割します。  -<block ref="90bf4ae9a260a1dab39cf85f9b78e62f" prefix=" " category="inline-code"></block> : 3 つのスレッドを使用してこれらの間隔を並列に取得します。</block>
-  <block id="d26ec9bd59920d141e6767082f0524dc" category="summary">スクリプトを使用すると、ワークロードセキュリティのテストやデモンストレーションのためにランサムウェア攻撃をシミュレートできます。</block>
-  <block id="fca4fedbe53af4420a279beead573bdf" category="doc">ワークロードセキュリティ：攻撃のシミュレーション</block>
-  <block id="85bec7dd725b26542ae7c0d1c759836a" category="paragraph">このページの指示に従って、付属のランサムウェア シミュレーション スクリプトを使用して、Workload Security をテストまたはデモンストレーションするための攻撃をシミュレートできます。</block>
   <block id="c8722d0a5f0f718756806afb0f63faf3" category="section-title">始める前に注意すべきこと</block>
-  <block id="ee817f2b2a73b759041de15700c640ab" category="list-text">ランサムウェア シミュレーション スクリプトは Linux でのみ動作します。シミュレーション スクリプトは、ユーザーがONTAP ARP を Workload Security と統合した場合に、高信頼度アラートも生成する必要があります。</block>
   <block id="61622ea1d4086909bd90c0efc1d6a2e5" category="list-text">Workload Security は、 ONTAPバージョンが 9.15 以上の場合にのみ、NFS 4.1 で生成されたイベントとアラートを検出します。</block>
   <block id="16fa78539f96944e79f64b961036e74d" category="list-text">スクリプトは、Workload Security エージェントのインストール ファイルに付属しています。  Workload Security エージェントがインストールされているどのマシンでも利用できます。</block>
   <block id="749376c343309b5abf1f8bc2f1e6e9f7" category="list-text">Workload Security エージェント マシン自体でスクリプトを実行できます。別の Linux マシンを準備する必要はありません。ただし、別のシステムでスクリプトを実行したい場合は、スクリプトをコピーしてそこで実行するだけです。</block>
@@ -703,7 +697,6 @@
   <block id="9adc0908c00f75ca29814b238088a0cd" category="list-text">これにより、「test_dataset」というディレクトリの下のマウントフォルダ内に、さまざまな拡張子を持つ100個の空でないファイルが作成されます。</block>
   <block id="155946ddf8d31167ae2abad50439caac" category="section-title">コレクターを再開する</block>
   <block id="58d83dc1e6706a52cd311f9c66f193d5" category="paragraph">これらの手順を実行する前にコレクターを一時停止した場合は、サンプル ファイルが作成されたら必ずコレクターを再開してください。</block>
-  <block id="e6e76755f42136002c51ecb7c7acc410" category="paragraph">ランサムウェアアラートを生成するには、Workload Security でランサムウェアアラートをシミュレートする付属のスクリプトを実行します。</block>
   <block id="210e93b8c7253e00f2206b155a242c53" category="list-text">エージェントのインストール ディレクトリ (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/shell/simulate_attack.sh) からスクリプトをターゲットのマウント場所にコピーします。</block>
   <block id="66a8eca27475656430ae411ce0277447" category="list-text">マウントされたディレクトリ (例: /root/demo) 内のスクリプトを使用して次のコマンドを実行し、テスト データセットを暗号化します。</block>
   <block id="71242fab4b4978991a34104b8fa81ff5" category="list-text">これにより、「test_dataset」ディレクトリの下に作成されたサンプル ファイルが暗号化されます。</block>
@@ -715,7 +708,6 @@
   <block id="bb37a91d3a7d038f7f196d7f342f5d41" category="list-text">監視対象SVMのONTAPバージョンが9.11.1以上</block>
   <block id="9ce553df4934ac43b957143d21b265ff" category="list-text">ONTAP Autonomous Ransomware Protection が構成済み</block>
   <block id="ea7f417542fef98806d54f7dcd8a2d26" category="list-text">Workload Security データ コレクターがクラスター モードに追加されました。</block>
-  <block id="7a59fff38776feaa8a27e18c15f3f839" category="paragraph">Workload Security はユーザーの行動に基づいてランサムウェアのパターンを検出し、 ONTAP ARP はファイル内の暗号化アクティビティに基づいてランサムウェアのアクティビティを検出します。</block>
   <block id="59c0cecf99f5b7877b7f320da1734140" category="paragraph">条件が満たされると、Workload Security はアラートを高信頼度アラートとしてマークします。</block>
   <block id="560a82b95d26c61a25e2894422b4eec0" category="paragraph">アラート リスト ページの高信頼度アラートの例:</block>
   <block id="dfbab6292d93300a244b9e81de9798af" category="inline-image-macro">高信頼度アラートの例、リストページ</block>
@@ -724,9 +716,7 @@
   <block id="4864e30f3543ce6ffefe6866cd4df439" category="inline-image-macro">高信頼度アラートの例、詳細ページ</block>
   <block id="8901b7a1034f6e31fa7c2f5929bdd211" category="paragraph"><block ref="8901b7a1034f6e31fa7c2f5929bdd211" category="inline-image-macro-rx" type="image"></block></block>
   <block id="36aed75d347e158fecfc525dc1d66a22" category="section-title">アラートを複数回トリガーする</block>
-  <block id="95d269995653ffa8a24d0a028366adbc" category="paragraph">Workload Security はユーザーの行動を学習し、24 時間以内に同じユーザーに対してランサムウェア攻撃が繰り返された場合、アラートを生成しません。</block>
   <block id="7000a55791f1de1983f9adc601ad2e4e" category="paragraph">別のユーザーで新しいアラートを生成するには、同じ手順（テスト データを作成し、テスト データを暗号化する）を再度実行してください。</block>
-  <block id="b3431d54476e0f70ea6fc00bae48572b" category="summary">このスクリプトは、 ONTAP SVM DSCをインストールする前にSVMのイベントレートを確認するために実行できます。</block>
   <block id="2723c4d559ff96bb42870d86c109708e" category="doc">SVM イベント レート チェッカー (エージェント サイジング ガイド)</block>
   <block id="0a2bd44573247d8e7748ce7d2d2a4b8f" category="paragraph">イベント レート チェッカーは、 ONTAP SVM データ コレクターをインストールする前に SVM 内の NFS/SMB の組み合わせイベント レートをチェックし、1 台のエージェント マシンで監視できる SVM の数を確認するために使用されます。イベント レート チェッカーをサイズ設定ガイドとして使用し、セキュリティ環境の計画に役立ちます。</block>
   <block id="40202f910a40e1ff8a02506c288b507e" category="paragraph">エージェントは最大 50 個のデータ コレクターをサポートできます。</block>
@@ -779,9 +769,7 @@
   <block id="ecb5fa18c7cd0623faea3969f936f4c3" category="cell">いいえ。SVM の数が増えても、スクリプトは最大 5 分間実行されます。</block>
   <block id="ce3d712deda180dd445bfed60562d712" category="cell">既存のエージェントでイベント レート チェッカーを実行するとどうなりますか?</block>
   <block id="697ee668360d1c19e858e5fdd25062e6" category="cell">既存のエージェントに対してイベント レート チェッカーを実行すると、SVM のレイテンシが増加する可能性があります。イベント レート チェッカーの実行中、この増加は一時的なものになります。</block>
-  <block id="e885f70b36e77978775e5bda02528ac9" category="summary">Workload Security はONTAP Autonomous Ransomware Protection と統合され、ランサムウェアの検出能力が向上します。</block>
   <block id="c296d8324f9fa4f890b4ead0f69bfac3" category="doc">ONTAP Autonomous Ransomware Protectionとの統合</block>
-  <block id="d444ab62db0a690e837242dfd8b87acc" category="paragraph">ONTAP Autonomous Ransomware Protection（ARP）機能は、NAS（NFS および SMB）環境でのワークロード分析を使用して、ランサムウェア攻撃の兆候となる可能性のある異常なファイル内アクティビティをプロアクティブに検出し、警告します。</block>
   <block id="6c92285fa6d3e827b198d120ea3ac674" category="inline-link-macro">ここをクリックしてください。</block>
   <block id="383c3a61ab1ee0baf884d10441d965bd" category="paragraph">ARPに関する追加の詳細とライセンス要件については、以下をご覧ください。<block ref="aaf4977c10e4402f9516d11af3df8368" category="inline-link-macro-rx"></block> 。</block>
   <block id="ff6fdbfb37dfe403ad9c574855ccdb01" category="paragraph">Workload Security はONTAPと統合して ARP イベントを受信し、追加の分析および自動応答レイヤーを提供します。</block>
@@ -806,7 +794,6 @@
   <block id="e0e1895e03a77da5552db43fbdeaeea6" category="paragraph">ARP イベントにより生成されたアラートのサンプルを以下に示します。</block>
   <block id="b83a60c5de546ea3d085bb1ce6636d9a" category="inline-image-macro">ランサムウェアアラートのトップセクション</block>
   <block id="ed862f710faf8808be6c0eb3e9619e30" category="paragraph"><block ref="4f633f9ad87e78d3d93ed9f152d5549a" category="inline-image-macro-rx" type="image"></block> <block ref="45e1a131f383b4a3d591b6b7f4008d87" category="inline-image-macro-rx" type="image"></block> <block ref="1fc0e7df8bd287d2b4b5569c861bc29d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="333fa709635d0e011dd99c908e02bd40" category="paragraph">高信頼バナーは、攻撃がファイル暗号化アクティビティとともにランサムウェアの動作を示していることを示します。暗号化されたファイルのグラフには、ARP ソリューションによってボリューム暗号化アクティビティが検出されたタイムスタンプが示されます。</block>
   <block id="e646e16bee8b32e6ea29e30d01970a6c" category="section-title">制限事項</block>
   <block id="56684562f1f82eb99e69650845acd6ad" category="paragraph">SVM が Workload Security によって監視されていないが、 ONTAPによって ARP イベントが生成されている場合でも、そのイベントは Workload Security によって受信され、表示されます。ただし、アラートに関連するフォレンジック情報やユーザー マッピングは取得または表示されません。</block>
   <block id="1f8b585533464977d763d893abd63588" category="paragraph">既知の問題とその解決策を次の表に示します。</block>
@@ -3678,7 +3665,6 @@
   <block id="fb4e4dc5cb185934a7a50a8b788d9a18" category="inline-image-macro">アクセス拒否イベントの例</block>
   <block id="ad7abfbe23406b97a783bcc153795841" category="paragraph"><block ref="ad7abfbe23406b97a783bcc153795841" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f765e14da4a389313572532a2db01804" category="summary">Workload Security は、異常なユーザー アクティビティや潜在的な攻撃が発生した場合にアラートを作成します。アラート ページにはこれらのアクティビティがリストされ、簡単に素早く調査できます。</block>
-  <block id="42dbd44948498b2c6399cada3f8bce3c" category="paragraph">「ワークロード セキュリティ アラート」ページには、最近の攻撃や警告のタイムラインが表示され、各問題の詳細を表示できます。</block>
   <block id="ec463f286fdd66eb02ef994e465aa5ef" category="inline-image-macro">アラートリスト</block>
   <block id="710f7e812945643ee105a9bd2d01a01f" category="paragraph"><block ref="710f7e812945643ee105a9bd2d01a01f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b92071d61c88498171928745ca53078b" category="section-title">アラート</block>
@@ -3723,12 +3709,9 @@
   <block id="98d65924ba5e4c9e08f01233aceb15b8" category="list-text">攻撃中のファイルアクティビティを示すグラフ</block>
   <block id="150371e71cf9ac0249f420076a2e5358" category="section-title">関連ユーザーセクション:</block>
   <block id="db67b2fbfe663dec3bafb30754f82043" category="paragraph">このセクションには、ユーザーのトップアクティビティのグラフなど、潜在的な攻撃に関与したユーザーの詳細が表示されます。</block>
-  <block id="7cbf4ba3df1c84539924c37da16db19b" category="paragraph">アラート ページ (この例では、潜在的なランサムウェア攻撃を示しています):<block ref="5ff4dcf9689ef64057d8e82508557b5f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="6c9d686a827f50aa2feb7087b665c481" category="paragraph">詳細ページ (この例では、潜在的なランサムウェア攻撃を示しています):<block ref="9d19bd7639e249113839e28d2fea9963" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6baf1e00d599761ac0cdbee221c4569c" category="section-title">_スナップショットを撮る_アクション</block>
   <block id="37fa3057780441193fd46b687aef4974" category="paragraph">Workload Security は、悪意のあるアクティビティが検出されると自動的にスナップショットを取得してデータを保護し、データが安全にバックアップされることを保証します。</block>
   <block id="7683f342a6f18a36645f19f6332de56e" category="inline-link-macro">自動応答ポリシー</block>
-  <block id="d27b2fb629cc2c24086da7257eb32814" category="paragraph">定義できます<block ref="5def0187ac3a4d928905bc1e2b8dece3" category="inline-link-macro-rx"></block>ランサムウェア攻撃やその他の異常なユーザーアクティビティが検出されたときにスナップショットを取得します。アラート ページから手動でスナップショットを取得することもできます。</block>
   <block id="bf69429297f9f42186bf9ad016e6efd6" category="section-title">アラート通知</block>
   <block id="8c8959fb2c9aef71d75a9af4ab87c3ee" category="paragraph">アラートに関するアクションごとに、アラートの電子メール通知がアラート受信者リストに送信されます。アラートの受信者を設定するには、*管理 &gt; 通知* をクリックし、各受信者の電子メール アドレスを入力します。</block>
   <block id="2c4a65782f3fcd193e8e3aab503fa515" category="section-title">保持ポリシー</block>
@@ -3745,7 +3728,6 @@
   <block id="1e325041509ea982dbf0cb285dc1f84d" category="cell">これはまれなシナリオです。この問題が発生した場合は、 ONTAPにログインし、古いアラートのスナップショットを手動で取得してください。</block>
   <block id="7490716e612a9644196d7f0a4d26b1fe" category="cell">_アラートの詳細_ ページで、_スナップショットの取得_ ボタンの下に「前回の試行が失敗しました」というエラー メッセージが表示されます。エラーの上にマウスを置くと、「ID を持つデータ コレクターの Invoke API コマンドがタイムアウトしました」と表示されます。</block>
   <block id="f538ceb4d07ca88305f431846ed6973f" category="cell">これは、SVM の LIF がONTAPで _disabled_ 状態の場合に、SVM 管理 IP を介してデータ コレクターが Workload Security に追加されたときに発生する可能性があります。 ONTAPで特定の LIF を有効にし、Workload Security から _手動でスナップショットを取得_ をトリガーします。スナップショットアクションは成功します。</block>
-  <block id="5439b902968ffabf767c31e6ae62e61b" category="summary">潜在的な攻撃（ランサムウェアなど）やアクティビティの警告に対する自動対応ポリシーを設定できます。</block>
   <block id="df6a21f670066b82b5409a049dec0efe" category="doc">自動応答ポリシー</block>
   <block id="e5da02c738b911c42fb0a45a5b76c8d9" category="paragraph">レスポンス ポリシーは、攻撃や異常なユーザー動作が発生した場合に、スナップショットを取得したり、ユーザー アクセスを制限したりするなどのアクションをトリガーします。</block>
   <block id="8816114441548a7f4d390de764f25ad9" category="paragraph">特定のデバイスまたはすべてのデバイスにポリシーを設定できます。応答ポリシーを設定するには、*管理 &gt; 自動応答ポリシー* を選択し、適切な *+ ポリシー* ボタンをクリックします。攻撃または警告のポリシーを作成できます。</block>
@@ -3772,9 +3754,7 @@
   <block id="b979e86b9a609c9d9015d0b66fb3475b" category="paragraph">高度な機械学習とユーザー行動の異常検出により、異常なデータアクセスを警告します。</block>
   <block id="9c0408c775a2b61052a2e700a89f396f" category="section-title">コンプライアンス</block>
   <block id="8e1e51e30cfb4cb618e7ad56db2cefcd" category="paragraph">オンプレミスまたはクラウドに保存されている重要な企業データへのユーザー データ アクセスを監査することで、企業のコンプライアンスを確保します。</block>
-  <block id="cf10c2b301ad472a4aba146a0e505098" category="summary">Workload Security Alerts の通知用の電子メール アドレスを追加します。</block>
   <block id="12c5785c0da06ba105803155a192752d" category="doc">アラート、警告、エージェント/データソースコレクターの正常性に関する電子メール通知の構成</block>
-  <block id="9491cdf060c59bf0f883c94db8cfe73d" category="paragraph">Workload Security アラートの受信者を設定するには、*管理 &gt; 通知* をクリックし、各受信者の適切なセクションに電子メール アドレスを入力します。</block>
   <block id="d788a1b203813004b96af5724b63cb70" category="section-title">潜在的な攻撃の警告と警告</block>
   <block id="0913d37e3bac65fbe05c7263d286ef60" category="paragraph">_潜在的な攻撃_ アラート通知を送信するには、[_潜在的な攻撃アラートの送信_] セクションに受信者のメール アドレスを入力します。アラートのすべてのアクションについて、アラート受信者リストに電子メール通知が送信されます。</block>
   <block id="971a81b1c11c1b1948e93ef28402c3f4" category="paragraph">_警告_ 通知を送信するには、[_警告アラートの送信_] セクションに受信者のメール アドレスを入力します。</block>
@@ -3784,7 +3764,6 @@
   <block id="cfbd8d8f411f08c4641b2905bdc80139" category="list-text">ヘルスアラートは、エージェント/コレクターが少なくとも 1 時間レポートを停止した後にのみ送信されます。</block>
   <block id="c973f23a4328dc0e33a2614912736bb0" category="list-text">エージェントまたはデータ コレクターが長期間切断された場合でも、指定された 24 時間以内に対象の受信者に送信される電子メール通知は 1 件のみです。</block>
   <block id="30a17963216c2665ef68b2a0cba05de6" category="list-text">エージェントに障害が発生した場合、1 つのアラートが送信されます (コレクターごとに 1 つではありません)。電子メールには、影響を受けるすべての SVM のリストが含まれます。</block>
-  <block id="6aa9d0b40df0476a0e5d6cba51a44816" category="list-text">Active Directory 収集の失敗は警告として報告されますが、ランサムウェアの検出には影響しません。</block>
   <block id="1c694b0b295603bad9f0fa0c7f151567" category="list-text">「はじめに」セットアップ リストに、新しい「電子メール通知の構成」フェーズが追加されました。</block>
   <block id="3b1c56e7c6b15724089ac1fbd8291af2" category="section-title">エージェントとデータコレクターのアップグレード通知の受信</block>
   <block id="1f56a492ab24b15ab7bdf4b716067acd" category="list-text">「データ収集ヘルスアラート」にメール ID を入力します。</block>
@@ -3792,10 +3771,7 @@
   <block id="f7e530357a9fe13372b34f49bcbf5513" category="list-text">エージェントおよびデータ コレクターのアップグレードに関する電子メール通知は、計画されたアップグレードの 1 日前に電子メール ID に送信されます。</block>
   <block id="be8e3ac01b05912cba21f26369a5a852" category="cell">「データ コレクターのヘルス アラート」に電子メール ID が表示されますが、通知を受信できません。</block>
   <block id="3cd7d46a06774e1cc6f2ece4407891a3" category="cell">通知メールは、 NetApp Data Infrastructure Insightsドメイン (_accounts@service.cloudinsights.netapp.com_) から送信されます。一部の企業では、外部ドメインからの受信メールをブロックします。  NetApp Data Infrastructure Insightsドメインからの外部通知がホワイトリストに登録されていることを確認します。</block>
-  <block id="392b73413f817556c91d974c59c48d26" category="summary">Workload Securityを使用すると、妨害行為が疑われる場合にユーザーアクセスを制限できます。</block>
   <block id="680aba4527b5f65899e6a3d8b5ef2457" category="doc">ユーザーアクセスのブロック</block>
-  <block id="54fc3d93cd49948e1764882084d106cc" category="paragraph">攻撃が検出されると、Workload Security はファイルシステムへのユーザー アクセスをブロックして攻撃を阻止できます。アクセスは、自動応答ポリシーを使用して自動的にブロックすることも、アラートまたはユーザーの詳細ページから手動でブロックすることもできます。</block>
-  <block id="7aedbe09972610c1d6a6d90587580682" category="paragraph">ユーザー アクセスをブロックする場合は、ブロック期間を定義する必要があります。選択した期間が終了すると、ユーザー アクセスは自動的に復元されます。アクセス ブロックは、SMB プロトコルと NFS プロトコルの両方でサポートされています。</block>
   <block id="036ce35e40fa3fbcc9c9e500c29c6bf9" category="paragraph">ユーザーは SMB に対して直接ブロックされ、攻撃の原因となっているホスト マシンの IP アドレスは NFS に対してブロックされます。これらのマシン IP アドレスは、Workload Security によって監視されるストレージ仮想マシン (SVM) へのアクセスがブロックされます。</block>
   <block id="f19379ce165a902f81548ae9d7b2e07c" category="paragraph">たとえば、Workload Security が 10 個の SVM を管理しており、そのうち 4 個の SVM に対して自動応答ポリシーが設定されているとします。攻撃が 4 つの SVM のいずれかから発生した場合、ユーザーのアクセスは 10 個の SVM すべてでブロックされます。スナップショットは元の SVM で引き続き作成されます。</block>
   <block id="7dd607950e587603a00a1a965723c7c1" category="paragraph">4 つの SVM があり、そのうち 1 つの SVM が SMB 用、1 つの SVM が NFS 用、残りの 2 つが NFS と SMB の両方用に設定されている場合、攻撃が 4 つの SVM のいずれかから発生した場合、すべての SVM がブロックされます。</block>
@@ -7000,7 +6976,6 @@
   <block id="c4207c205277b5cad1577163a6bae022" category="admonition">Data Infrastructure Insightsからログアウトすると、コンソールからもログアウトされます。コンソール サインインを使用する他のNetApp Cloud サービスからもログアウトされます。</block>
   <block id="8463a61dd94ff5934036d4c8a8936e32" category="section-title">非アクティブ時のタイムアウト</block>
   <block id="db8ff6a5dfcebcb4f9f3077c3acd8c0a" category="paragraph">デフォルトでは、コンソールは 6 時間 (360 分) にわたってアクティビティがない場合にユーザーをログアウトします。アクティビティに関係なく、ユーザーは 7 日後にログアウトされます。</block>
-  <block id="5b5f6636f455e00151ff6c4d5e1be19c" category="summary">Workload Security はデータ コレクターを使用して、デバイスからファイルおよびユーザー アクセス データを収集します。</block>
   <block id="fde8afa3fd65a9f38d9b11377453846e" category="doc">Cloud Volumes ONTAPとAmazon FSx for NetApp ONTAPコレクターの構成</block>
   <block id="c45671a9389f697917f0b33d12822c51" category="section-title">Cloud Volumes ONTAPストレージ構成</block>
   <block id="2ffc6472f9d6abaf761bbe2e6a0385ce" category="paragraph">Workload Security Agent をホストするための単一ノード/HA AWS インスタンスを構成するには、 OnCommand Cloud Volumes ONTAPドキュメントを参照してください。<block ref="caca64b8e9927e0ea8e8b0158b9e47cd" category="inline-link-rx"></block></block>
@@ -12076,11 +12051,8 @@
   <block id="5e0f4fcd8e020652408a2ed8c1c6513d" category="list-text">他のNetApp Cloud Central 製品に切り替えることができるメニューが画面の右上隅に移動しました。</block>
   <block id="f998abe6d6e1433185e617432fa562a7" category="summary">アラートを減らすには、許可されたファイル タイプ リストにファイル拡張子を追加します。</block>
   <block id="2b38e4e9371e68c324f4d975aeec0b8b" category="doc">許可されるファイルタイプのポリシー</block>
-  <block id="3a0a3011be8f34f267c24177c748de10" category="paragraph">既知のファイル拡張子に対するランサムウェア攻撃が検出され、「アラート」画面でアラートが生成されている場合は、そのファイル拡張子を「許可されたファイルの種類」リストに追加して、不要なアラートを防ぐことができます。</block>
   <block id="66c0454949e8e45058f66b8dbe1d1a38" category="paragraph">*ワークロード セキュリティ &gt; ポリシー* に移動し、_許可されたファイル タイプ ポリシー_ タブに移動します。</block>
   <block id="8c06b62ca830efbad93bfb2ce294e0ef" category="paragraph"><block ref="8c06b62ca830efbad93bfb2ce294e0ef" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="bdf27b4c983630ae6531f89136fe0963" category="paragraph">_許可されたファイルの種類_ リストに追加されると、その許可されたファイルの種類に対してランサムウェア攻撃アラートは生成されなくなります。  _許可されるファイルの種類_ ポリシーは、ランサムウェアの検出にのみ適用されることに注意してください。</block>
-  <block id="492f463a35ea215d77ae021c64cddb64" category="paragraph">たとえば、_test.txt_ という名前のファイルが _test.txt.abc_ に名前変更され、Workload Security が _.abc_ 拡張子のためにランサムウェア攻撃を検出した場合、_.abc_ 拡張子を _allowed file types_ リストに追加できます。リストに追加されると、_.abc_ 拡張子を持つファイルに対してランサムウェア攻撃が生成されなくなります。</block>
   <block id="b778d3252b5cc52999f0c844a033362f" category="paragraph">許可されるファイル タイプは、完全一致 (例: 「.abc」) または表現 (例: 「.*type」、「.type*」、または「*type*」) にすることができます。  「.a*c」、「.p*f」型の式はサポートされていません。</block>
   <block id="3ee2ba16702e3b406dd125b347f5f30b" category="summary">Workload Security エージェントは手動でインストールまたは更新できるため、テナントにインストールされたソフトウェアをより細かく制御できます。</block>
   <block id="5ecfbb1f5f3536161517dc33155eaa58" category="doc">Workload Security エージェントとコレクターの手動インストール</block>
@@ -12468,9 +12440,7 @@
   <block id="abc492c54ab99cf963d50d67acb42565" category="sidebar">イベント レート チェッカー (エージェント サイジング ガイド)</block>
   <block id="a8df87f53c1b831dfc886e69dec19144" category="sidebar">アクティビティフォレンジック - すべてのアクティビティ</block>
   <block id="f9aae5fda8d810a29f12d1e61b4ab25f" category="sidebar">ユーザ</block>
-  <block id="9b5911ec569b49f0ae81ecb2c9067806" category="sidebar">ONTAP自律型ランサムウェア保護の統合</block>
   <block id="1c31d515d2e78422350a8dfc6a331a38" category="sidebar">ONTAPアクセス拒否の統合</block>
-  <block id="c52c39354f4ad29d5eea2036eb6bf8a9" category="sidebar">ランサムウェア攻撃のシミュレーション</block>
   <block id="c836566b25407f9b00af0ee750a250a6" category="sidebar">Webhookの作成</block>
   <block id="8c4223ab469f8b3e9d1aa30d51cf4390" category="sidebar">Discord Webhookの例</block>
   <block id="9129ee5b293413b88d69268ce77a5a06" category="sidebar">PagerDuty Webhookの例</block>
@@ -12617,10 +12587,8 @@
   <block id="f6bd61a684c7e1301e78da3db50d1837" category="paragraph">Workload Security は、ユーザー アクティビティを監視し、ストレージ環境における潜在的なセキュリティ脅威を検出するのに役立ちます。監視を開始する前に、エージェント、データ コレクター、およびディレクトリ サービスを構成して、包括的なセキュリティ監視の基盤を確立する必要があります。</block>
   <block id="d49a8da0de1eee7dc793284699bb0bab" category="cell"><block ref="d49a8da0de1eee7dc793284699bb0bab" category="inline-link-macro-rx"></block></block>
   <block id="adf5d1319b5bafa4d304b195ab11a3ac" category="cell">*ワークロード セキュリティ &gt; コレクター* をクリックし、設定するデータ コレクターをクリックします。コレクター情報については、ドキュメントのデータ コレクター ベンダー リファレンス セクションを参照してください。</block>
-  <block id="a893b5195474a4c9b110269be2b309ef" category="summary">Workload Security エージェントは、ユーザー アクティビティを監視し、ストレージ環境内のセキュリティ上の脅威を検出します。</block>
   <block id="9997d0de04e698d72bb27c409e5255ee" category="doc">ワークロードセキュリティエージェントの導入</block>
   <block id="c3c0e3736c092f9f194505694468ca8b" category="inline-link-macro">システム要件</block>
-  <block id="9d604ddbc2f20e3c4cd0e75c950e6c53" category="paragraph">Workload Security エージェントは、ユーザー アクティビティを監視し、ストレージ インフラストラクチャ全体で潜在的なセキュリティ脅威を検出するために不可欠です。このガイドでは、環境にエージェントを展開するための手順を段階的に説明します。始める前に、エージェントサーバーが <block ref="e9ae60f62ad52c07bed4d959ac93cbbc" category="inline-link-macro-rx"></block>。</block>
   <block id="cd47dd01745339787e4c7300389401f2" category="section-title">ベストプラクティス</block>
   <block id="5f1d8e43e03545d4e832f35d2653f7ff" category="paragraph">Workload Security エージェントを設定する前に、次の点に留意してください。</block>
   <block id="1d0bcc6be95579ec1173901dc82ecc6d" category="cell">一時停止と再開</block>
@@ -12693,4 +12661,40 @@
   <block id="d388ca982366ad7a8a7a165d21919f84" category="paragraph">テナントの作成が完了したら、コンソールの資格情報を使用してログインし、 Data Infrastructure Insightsの 30 日間無料トライアルを開始します。このトライアル期間中、 Data Infrastructure Insightsが提供する機能を試すことができます。</block>
   <block id="a361d4c5b26cab224e5aad972ef9f92f" category="paragraph">テナントが作成されると、いつでもNetApp BlueXPポータルにログインして、 <block ref="37a150e92f05332b5bc5a56046c3177c" category="inline-link-macro-rx"></block> ページに移動し、「*Data Infrastructure Insightsに移動*」を選択します。</block>
   <block id="ed35afa558b996b37265533db9af5399" category="sidebar">レポートへの注釈の公開</block>
+  <block id="d19e16fd482ca29d2c0ef4fb8523357a" category="summary">最適なパフォーマンスとデータ収集を実現するために、Workload Security Agent の展開環境がオペレーティング システム、CPU、メモリ、およびディスク領域の最小要件を満たしていることを確認します。</block>
+  <block id="c4942feafc272d7da2ce90634dc0120d" category="summary">安全なトークンベースの認証を備えたREST APIを介してワークロード セキュリティ データにアクセスし、CMDB、チケット システム、その他のエンタープライズ アプリケーションと統合します。</block>
+  <block id="3dec3952c02d73a04d326f3624f668f6" category="summary">付属のシミュレーション スクリプトを使用して攻撃をシミュレートし、アラート生成と応答ポリシーを検証することで、Workload Security 検出機能をテストおよび検証します。</block>
+  <block id="c7ea3cec531081ee09f563d84422d157" category="doc">ワークロードセキュリティ: 異常なファイル改ざんのシミュレーション</block>
+  <block id="3e350b01c804205b973dbd44adc54728" category="paragraph">このページの手順を使用すると、付属のファイル改ざんシミュレーション スクリプトを使用して、Workload Security のテストまたはデモンストレーションのためにファイル改ざんをシミュレートできます。</block>
+  <block id="67f556940660f0bafe2738969d389877" category="list-text">ファイル改ざんシミュレーション スクリプトは Linux でのみ動作します。シミュレーション スクリプトは、ユーザーがONTAP ARP を Workload Security と統合した場合に、高信頼度アラートも生成する必要があります。</block>
+  <block id="6465f8a9b5dccc316104b56b41de2db0" category="paragraph">ファイル改ざんアラートを生成するには、Workload Security でファイル改ざんアラートをシミュレートする付属のスクリプトを実行します。</block>
+  <block id="2a9bccccecd980381e18178287c921b4" category="paragraph">Workload Security はユーザーの行動に基づいてファイルの改ざんパターンを検出し、 ONTAP ARP はファイル内の暗号化アクティビティに基づいてファイルの改ざんアクティビティを検出します。</block>
+  <block id="a68622796ba5ea9694219b0cbfbae6b0" category="paragraph">Workload Security はユーザーの行動を学習し、同じユーザーに対して 24 時間以内にファイル改ざん攻撃が繰り返された場合、アラートを生成しません。</block>
+  <block id="d1de6a785681750f7fd87d382642893e" category="paragraph">r--- サイドバー: サイドバー パーマリンク: concept_cs_event_rate_checker.html 概要: SVM イベント レート チェッカーを使用して NFS/SMB イベント レートを測定し、Workload Security データ コレクターを導入する前に最適なエージェントのサイズを決定します。キーワード: イベント、チェッカー、レート、サイズ設定、クラウド セキュア ---</block>
+  <block id="8013d871b4070a5d3848e4faa21e67d9" category="summary">Workload Security とONTAP Autonomous Protection を統合して相関分析、自動応答、フォレンジック調査機能を実現し、攻撃検出を強化します。</block>
+  <block id="0ed52d2d20f5fbf80a330283d4aa9a72" category="paragraph">ONTAP Autonomous Protection 機能は、NAS (NFS および SMB) 環境でのワークロード分析を使用して、悪意のある攻撃や不正なデータ変更を示唆する可能性のある異常なファイル内アクティビティをプロアクティブに検出し、警告します。</block>
+  <block id="8ec1d8886c9b4b48a45eb683d80b184e" category="paragraph">信頼性が高いバナーは、攻撃によってファイル暗号化アクティビティとともにファイル改ざん動作が行われたことを示します。暗号化されたファイルのグラフには、ARP ソリューションによってボリューム暗号化アクティビティが検出されたタイムスタンプが示されます。</block>
+  <block id="56adf418335195f68828ddd83fd50548" category="paragraph">ワークロード セキュリティ アラート ページには、詳細な調査ツールとともに、検出された脅威と警告の包括的なタイムラインが表示されます。アラートの詳細を表示し、ステータスの更新を管理し、条件でフィルタリングし、ユーザー アクティビティを追跡して、セキュリティ インシデントを効率的に調査して対応します。</block>
+  <block id="3ba65a7b57bde3d2f95e6dad96e575d5" category="inline-image-macro">ファイル改ざんアラートの例</block>
+  <block id="f1f63c95d00cc2549a1787fe41e36715" category="paragraph">アラート ページ (この例では、潜在的なファイル改ざん攻撃を示しています): <block ref="6a7e65573e881b5b52bf16119aa9b16d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="41a5a43c24278078d3b80a7578a3a1c3" category="inline-image-macro">ファイル改ざんの詳細ページの例</block>
+  <block id="4a4a4b8fd74bec537d778837186d3eec" category="paragraph">詳細ページ (この例では、潜在的なファイル改ざん攻撃を示しています): <block ref="0c605ac34e65472f084a8e37ac3dc156" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4b4fbdbe248fc035585aeb5a0e8087c0" category="paragraph">定義できます <block ref="5def0187ac3a4d928905bc1e2b8dece3" category="inline-link-macro-rx"></block> ファイル改ざん攻撃やその他の異常なユーザーアクティビティが検出されたときにスナップショットを取得します。アラート ページから手動でスナップショットを取得することもできます。</block>
+  <block id="a9996cbd4cac46323215dfb495845c42" category="summary">スナップショット、ユーザー アクセス制限、脅威や疑わしい動作に関する Webhook 通知など、セキュリティ インシデント発生時に即座にアクションを実行するための自動応答ポリシーを構成します。</block>
+  <block id="1d78ee56ccc2ec0a973d6c1b8dc3539f" category="summary">Storage Workload Security の内部脅威検出、ハイブリッド環境全体の一元化された可視性、異常検出とコンプライアンスのための高度な機械学習により、データを保護します。</block>
+  <block id="271be754535c9ed78f2f75d64082cbe9" category="summary">潜在的な攻撃、セキュリティ警告、エージェント/データ コレクターの正常性状態に関するアラートをリアルタイムで受信するように電子メール通知を構成します。</block>
+  <block id="b149bcf300f96b3d1dca583412de6c8a" category="paragraph">電子メール通知により、潜在的な攻撃、セキュリティ警告、インフラストラクチャの健全性の問題が発生したときに、それらについて最新情報を入手できます。各受信者の責任に合わせたリアルタイムアラートを受信するには、[管理] &gt; [通知] 設定で受信者の電子メール アドレスを構成します。</block>
+  <block id="94563d75d3a246c950039b0a255e3ddb" category="list-text">Active Directory コレクションの失敗は警告として報告されますが、脅威の検出には影響しません。</block>
+  <block id="44b44dae2990432b7bd93090c41c82f9" category="summary">侵害を受けたユーザーのアクセスを自動または手動で制限することで、検出された攻撃を直ちに停止し、複数のストレージ ボリュームにわたるファイル システムへのさらなる損害を防ぎます。</block>
+  <block id="3ae0920baa189ad91236ecb40a2f8386" category="doc">攻撃を阻止するためにユーザーアクセスをブロックする</block>
+  <block id="f5e00f5f92f705e11a73ffc71d728163" category="paragraph">侵害を受けたユーザーからのアクセスをブロックして検出された攻撃を直ちに停止し、さらなるデータの損傷や流出を防ぎます。Workload Security では、自動応答ポリシーによる自動ブロックと、アラートまたはユーザー詳細ページからの手動介入の両方が可能になり、セキュリティ対応を柔軟に制御できます。アクセス制限は、監視対象のすべてのストレージ ボリュームに自動的に適用され、自動復元には時間制限があります。</block>
+  <block id="686e492758f398a51b847e4945a5c465" category="summary">Cloud Volumes ONTAPおよびAmazon FSx for NetApp ONTAP用の Workload Security データコレクターを設定し、クラウド ストレージ インフラストラクチャ全体でファイルアクセスやユーザーアクティビティを監視し、脅威を検出します。</block>
+  <block id="5afd7fa5e62c2403ed8182f2954c6011" category="paragraph">Cloud Volumes ONTAPおよびAmazon FSx for NetApp ONTAP用の Workload Security データコレクターを構成して、クラウド ストレージ インフラストラクチャ全体のファイルとユーザー アクセスを監視します。このガイドでは、AWS にエージェントをデプロイし、クラウド ストレージ インスタンスに接続するための手順を段階的に説明します。</block>
+  <block id="c2ba90ec94460d090816ee7ba6a3ed97" category="summary">Workload Security エージェントを導入して、ユーザー アクティビティを監視し、セキュリティの脅威を検出し、ストレージ インフラストラクチャを保護します。</block>
+  <block id="515af4442237a2919b0f5a1e82922445" category="paragraph">Workload Security エージェントは、ユーザー アクティビティを監視し、ストレージ インフラストラクチャ全体で潜在的なセキュリティ脅威を検出するために不可欠です。このガイドでは、ステップバイステップのインストール手順、エージェント管理のベスト プラクティス (一時停止/再開、ピン留め/ピン留め解除機能を含む)、および展開後の構成要件について説明します。始める前に、エージェントサーバーが <block ref="e9ae60f62ad52c07bed4d959ac93cbbc" category="inline-link-macro-rx"></block>。</block>
+  <block id="db1a2df035e9cd0bcdfb55db52e3e64b" category="paragraph">既知のファイル拡張子に対するファイル改ざん攻撃が検出され、[アラート] 画面でアラートが生成されている場合は、そのファイル拡張子を _許可されたファイルの種類_ リストに追加して、不要なアラートを防ぐことができます。</block>
+  <block id="8d791b80cd3ffee28fe92eaeb570182d" category="paragraph">_許可されたファイル タイプ_ リストに追加されると、その許可されたファイル タイプに対してファイル改ざん攻撃アラートは生成されなくなります。_許可されるファイルの種類_ ポリシーは、ファイルの改ざん検出にのみ適用されることに注意してください。</block>
+  <block id="7af3f2f9c8eaa3a8ff61f839001e8ca0" category="paragraph">たとえば、_test.txt_ という名前のファイルが _test.txt.abc_ に名前変更され、Workload Security が _.abc_ 拡張子のためにファイル改ざん攻撃を検出した場合、_.abc_ 拡張子を _allowed file types_ リストに追加できます。リストに追加されると、_.abc_ 拡張子を持つファイルに対してファイル改ざん攻撃が生成されなくなります。</block>
+  <block id="374bdbda42629b3859daec6506078b36" category="sidebar">ONTAP自律保護統合</block>
+  <block id="5273cec606b6768f8394e2ae1566c7f6" category="sidebar">攻撃のシミュレーション</block>
 </blocks>

@@ -271,13 +271,13 @@ sidebar:
       url: "/cs_automated_response_policies.html"
     - title: 許可されるファイルタイプのポリシー
       url: "/ws_allowed_file_types.html"
-    - title: ONTAP自律型ランサムウェア保護の統合
+    - title: ONTAP自律保護統合
       url: "/concept_cs_integration_with_ontap_arp.html"
     - title: ONTAPアクセス拒否の統合
       url: "/concept_ws_integration_with_ontap_access_denied.html"
     - title: ユーザーアクセスのブロック
       url: "/cs_restrict_user_access.html"
-    - title: ランサムウェア攻撃のシミュレーション
+    - title: 攻撃のシミュレーション
       url: "/concept_cs_attack_simulator.html"
     - title: メール通知
       url: "/cs_notifications_email.html"

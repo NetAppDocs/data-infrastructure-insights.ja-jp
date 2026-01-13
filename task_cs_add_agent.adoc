@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_cs_add_agent.html 
 keywords: agent, Workload Security, installation, Cloud Secure 
-summary: Workload Security エージェントは、ユーザー アクティビティを監視し、ストレージ環境内のセキュリティ上の脅威を検出します。 
+summary: Workload Security エージェントを導入して、ユーザー アクティビティを監視し、セキュリティの脅威を検出し、ストレージ インフラストラクチャを保護します。 
 ---
 = ワークロードセキュリティエージェントの導入
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Workload Security エージェントは、ユーザー アクティビ�
 
 
 [role="lead"]
-Workload Security エージェントは、ユーザー アクティビティを監視し、ストレージ インフラストラクチャ全体で潜在的なセキュリティ脅威を検出するために不可欠です。このガイドでは、環境にエージェントを展開するための手順を段階的に説明します。始める前に、エージェントサーバーが link:concept_cs_agent_requirements.html["システム要件"]。
+Workload Security エージェントは、ユーザー アクティビティを監視し、ストレージ インフラストラクチャ全体で潜在的なセキュリティ脅威を検出するために不可欠です。このガイドでは、ステップバイステップのインストール手順、エージェント管理のベスト プラクティス (一時停止/再開、ピン留め/ピン留め解除機能を含む)、および展開後の構成要件について説明します。始める前に、エージェントサーバーが link:concept_cs_agent_requirements.html["システム要件"]。
 
 
 

@@ -2,15 +2,19 @@
 sidebar: sidebar 
 permalink: task_config_cs_incloud.html 
 keywords: Cloud, Storage, AWS, Cloud Volumes, Cloud ONTAP, firewall, VPC, Subnet,  cloud secure 
-summary: Workload Security はデータ コレクターを使用して、デバイスからファイルおよびユーザー アクセス データを収集します。 
+summary: Cloud Volumes ONTAPおよびAmazon FSx for NetApp ONTAP用の Workload Security データコレクターを設定し、クラウド ストレージ インフラストラクチャ全体でファイルアクセスやユーザーアクティビティを監視し、脅威を検出します。 
 ---
 = Cloud Volumes ONTAPとAmazon FSx for NetApp ONTAPコレクターの構成
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Workload Security はデータ コレクターを使用して、デバイスからファイルおよびユーザー アクセス データを収集します。
+Cloud Volumes ONTAPおよびAmazon FSx for NetApp ONTAP用の Workload Security データコレクターを構成して、クラウド ストレージ インフラストラクチャ全体のファイルとユーザー アクセスを監視します。このガイドでは、AWS にエージェントをデプロイし、クラウド ストレージ インスタンスに接続するための手順を段階的に説明します。
 
 
 

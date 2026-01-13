@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: cs_automated_response_policies.html 
-keywords: alert, snapshot, ransomware, attack 
-summary: 潜在的な攻撃（ランサムウェアなど）やアクティビティの警告に対する自動対応ポリシーを設定できます。 
+keywords: alert, snapshot, ransomware, attack, tampering 
+summary: スナップショット、ユーザー アクセス制限、脅威や疑わしい動作に関する Webhook 通知など、セキュリティ インシデント発生時に即座にアクションを実行するための自動応答ポリシーを構成します。 
 ---
 = 自動応答ポリシー
 :hardbreaks:

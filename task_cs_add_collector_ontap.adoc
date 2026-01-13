@@ -7,6 +7,10 @@ summary: データコレクターの追加
 = NetApp ONTAPデータコレクターの構成
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

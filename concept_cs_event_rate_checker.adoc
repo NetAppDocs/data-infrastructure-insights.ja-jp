@@ -1,13 +1,12 @@
----
-sidebar: sidebar 
-permalink: concept_cs_event_rate_checker.html 
-summary: このスクリプトは、 ONTAP SVM DSCをインストールする前にSVMのイベントレートを確認するために実行できます。 
-keywords: event, checker, rate, sizing, cloud secure 
----
 = SVM イベント レート チェッカー (エージェント サイジング ガイド)
-:hardbreaks:
 :allow-uri-read: 
 
+
+r--- サイドバー: サイドバー パーマリンク: concept_cs_event_rate_checker.html 概要: SVM イベント レート チェッカーを使用して NFS/SMB イベント レートを測定し、Workload Security データ コレクターを導入する前に最適なエージェントのサイズを決定します。キーワード: イベント、チェッカー、レート、サイズ設定、クラウド セキュア ---
+
+
+
+= SVM イベント レート チェッカー (エージェント サイジング ガイド)
 
 [role="lead"]
 イベント レート チェッカーは、 ONTAP SVM データ コレクターをインストールする前に SVM 内の NFS/SMB の組み合わせイベント レートをチェックし、1 台のエージェント マシンで監視できる SVM の数を確認するために使用されます。イベント レート チェッカーをサイズ設定ガイドとして使用し、セキュリティ環境の計画に役立ちます。

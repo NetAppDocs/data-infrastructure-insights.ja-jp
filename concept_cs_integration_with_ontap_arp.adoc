@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_integration_with_ontap_arp.html 
-summary: Workload Security はONTAP Autonomous Ransomware Protection と統合され、ランサムウェアの検出能力が向上します。 
+summary: Workload Security とONTAP Autonomous Protection を統合して相関分析、自動応答、フォレンジック調査機能を実現し、攻撃検出を強化します。 
 keywords: ransomware, ARP, Protection, Security 
 ---
 = ONTAP Autonomous Ransomware Protectionとの統合
@@ -10,7 +10,7 @@ keywords: ransomware, ARP, Protection, Security
 
 
 [role="lead"]
-ONTAP Autonomous Ransomware Protection（ARP）機能は、NAS（NFS および SMB）環境でのワークロード分析を使用して、ランサムウェア攻撃の兆候となる可能性のある異常なファイル内アクティビティをプロアクティブに検出し、警告します。
+ONTAP Autonomous Protection 機能は、NAS (NFS および SMB) 環境でのワークロード分析を使用して、悪意のある攻撃や不正なデータ変更を示唆する可能性のある異常なファイル内アクティビティをプロアクティブに検出し、警告します。
 
 ARPに関する追加の詳細とライセンス要件については、以下をご覧ください。link:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["ここをクリックしてください。"] 。
 
@@ -62,7 +62,7 @@ ARP イベントにより生成されたアラートのサンプルを以下に�
 
 image:CS_Ransomware_Example_1.png["ランサムウェアアラートのトップセクション"] image:CS_Ransomware_Example_2.png["ランサムウェアアラートのトップセクション"] image:CS_Ransomware_Example_3.png["ランサムウェアアラートのトップセクション"]
 
-高信頼バナーは、攻撃がファイル暗号化アクティビティとともにランサムウェアの動作を示していることを示します。暗号化されたファイルのグラフには、ARP ソリューションによってボリューム暗号化アクティビティが検出されたタイムスタンプが示されます。
+信頼性が高いバナーは、攻撃によってファイル暗号化アクティビティとともにファイル改ざん動作が行われたことを示します。暗号化されたファイルのグラフには、ARP ソリューションによってボリューム暗号化アクティビティが検出されたタイムスタンプが示されます。
 
 
 

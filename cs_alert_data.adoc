@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: cs_alert_data.html 
-keywords: alert, attack, ransomware, activity, security, abnormal 
+keywords: alert, attack, ransomware, activity, security, abnormal, tampering 
 summary: Workload Security は、異常なユーザー アクティビティや潜在的な攻撃が発生した場合にアラートを作成します。アラート ページにはこれらのアクティビティがリストされ、簡単に素早く調査できます。 
 ---
 = アラート
@@ -14,7 +14,7 @@ summary: Workload Security は、異常なユーザー アクティビティや�
 
 
 [role="lead"]
-「ワークロード セキュリティ アラート」ページには、最近の攻撃や警告のタイムラインが表示され、各問題の詳細を表示できます。
+ワークロード セキュリティ アラート ページには、詳細な調査ツールとともに、検出された脅威と警告の包括的なタイムラインが表示されます。アラートの詳細を表示し、ステータスの更新を管理し、条件でフィルタリングし、ユーザー アクティビティを追跡して、セキュリティ インシデントを効率的に調査して対応します。
 
 image:CloudSecureAlertsListPage.png["アラートリスト"]
 
@@ -102,9 +102,9 @@ image:CloudSecureChangeAlertStatus.png["アラートステータスの変更"]
 
 このセクションには、ユーザーのトップアクティビティのグラフなど、潜在的な攻撃に関与したユーザーの詳細が表示されます。
 
-アラート ページ (この例では、潜在的なランサムウェア攻撃を示しています):image:RansomwareAlertExample.png["ランサムウェアアラートの例"]
+アラート ページ (この例では、潜在的なファイル改ざん攻撃を示しています): image:RansomwareAlertExample.png["ファイル改ざんアラートの例"]
 
-詳細ページ (この例では、潜在的なランサムウェア攻撃を示しています):image:RansomwareDetailPageExample.png["ランサムウェアの詳細ページの例"]
+詳細ページ (この例では、潜在的なファイル改ざん攻撃を示しています): image:RansomwareDetailPageExample.png["ファイル改ざんの詳細ページの例"]
 
 
 
@@ -112,7 +112,7 @@ image:CloudSecureChangeAlertStatus.png["アラートステータスの変更"]
 
 Workload Security は、悪意のあるアクティビティが検出されると自動的にスナップショットを取得してデータを保護し、データが安全にバックアップされることを保証します。
 
-定義できますlink:cs_automated_response_policies.html["自動応答ポリシー"]ランサムウェア攻撃やその他の異常なユーザーアクティビティが検出されたときにスナップショットを取得します。アラート ページから手動でスナップショットを取得することもできます。
+定義できます link:cs_automated_response_policies.html["自動応答ポリシー"] ファイル改ざん攻撃やその他の異常なユーザーアクティビティが検出されたときにスナップショットを取得します。アラート ページから手動でスナップショットを取得することもできます。
 
 自動スナップショットが取得されました:image:AlertActionsAutomaticExample.png["アラートアクション画面、1000"]
 

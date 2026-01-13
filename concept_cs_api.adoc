@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_cs_api.html 
 keywords: api, access, token, swagger 
-summary: Workload Security には、CMDB などの他のアプリケーションと統合するための強力な API が含まれています。 
+summary: 安全なトークンベースの認証を備えたREST APIを介してワークロード セキュリティ データにアクセスし、CMDB、チケット システム、その他のエンタープライズ アプリケーションと統合します。 
 ---
 = ワークロードセキュリティAPI
 :hardbreaks:

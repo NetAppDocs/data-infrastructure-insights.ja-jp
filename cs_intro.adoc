@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: cs_intro.html 
 keywords: CloudSecure, Cloud Secure 
-summary: 概要 
+summary: Storage Workload Security の内部脅威検出、ハイブリッド環境全体の一元化された可視性、異常検出とコンプライアンスのための高度な機械学習により、データを保護します。 
 ---
 = ストレージワークロードセキュリティについて
 :hardbreaks:
