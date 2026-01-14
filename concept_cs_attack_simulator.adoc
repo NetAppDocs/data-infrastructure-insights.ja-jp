@@ -4,7 +4,7 @@ permalink: concept_cs_attack_simulator.html
 keywords: ransomware, simulation, simulator, restrict, attack 
 summary: 付属のシミュレーション スクリプトを使用して攻撃をシミュレートし、アラート生成と応答ポリシーを検証することで、Workload Security 検出機能をテストおよび検証します。 
 ---
-= ワークロードセキュリティ: 異常なファイル改ざんのシミュレーション
+= ワークロードセキュリティ: ファイル改ざんのシミュレーション
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -3671,7 +3671,6 @@
   <block id="7397074a443dab350a0b46b445bd42b6" category="paragraph">アラート リストには、選択した時間範囲内で発生した潜在的な攻撃および/または警告の合計数を示すグラフと、その時間範囲内で発生した攻撃および/または警告のリストが表示されます。グラフ内の開始時間と終了時間のスライダーを調整することで、時間範囲を変更できます。</block>
   <block id="183537e26fed4b4329d37cb02da5ae53" category="paragraph">各アラートには次の内容が表示されます。</block>
   <block id="0a36ca304e21eb8063b7869dea7a355b" category="paragraph">*潜在的な攻撃:*</block>
-  <block id="8a684cc8084b02b93384f0bfc436d63c" category="list-text">_潜在的な攻撃_の種類（例：ランサムウェアや妨害行為）</block>
   <block id="b81879140b6197b1eee86a1d325a0a81" category="list-text">潜在的な攻撃が_検出された_日時</block>
   <block id="5efe06a62d35c2fe7354ce05b69e8db6" category="list-text">アラートの_ステータス_:</block>
   <block id="f0617472d6b597b6d93003c4c1003ad6" category="list-text">*新規*: これは新しいアラートのデフォルトです。</block>
@@ -3697,9 +3696,7 @@
   <block id="95951a9f2b55d55d45a17decd61a620c" category="list-text">_攻撃/警告_の種類</block>
   <block id="3cd43e4673aa76de346f402ec291bd4a" category="list-text">アラート/警告を引き起こしたユーザー</block>
   <block id="f5d13b5070432d74ba3be2fb78559747" category="section-title">アラートの詳細ページ</block>
-  <block id="acd90b04487305df2bc9ead72d1b4d5b" category="paragraph">アラート リスト ページのアラート リンクをクリックすると、アラートの詳細ページが開きます。アラートの詳細は、攻撃またはアラートの種類によって異なる場合があります。たとえば、ランサムウェア攻撃の詳細ページには次のような情報が表示される場合があります。</block>
   <block id="328e24be37340d63de24fd6618cca8e1" category="section-title">概要セクション:</block>
-  <block id="8771316aacd1c4b06854e0e9f30a545c" category="list-text">攻撃の種類（ランサムウェア、妨害行為）とアラートID（Workload Securityによって割り当てられる）</block>
   <block id="d5a18d6d3a7fe43fabf57a19bb702f39" category="list-text">攻撃が検出された日時</block>
   <block id="9edcf7f99dfc7a9e521c7ad085287595" category="list-text">実行されたアクション (たとえば、自動スナップショットが取得されました)。スナップショットの時刻は、概要セクションのすぐ下に表示されます。</block>
   <block id="680ed5ca6ba49d9bc8a5ffda83850464" category="list-text">ステータス（新規、進行中など）</block>
@@ -12664,13 +12661,11 @@
   <block id="d19e16fd482ca29d2c0ef4fb8523357a" category="summary">最適なパフォーマンスとデータ収集を実現するために、Workload Security Agent の展開環境がオペレーティング システム、CPU、メモリ、およびディスク領域の最小要件を満たしていることを確認します。</block>
   <block id="c4942feafc272d7da2ce90634dc0120d" category="summary">安全なトークンベースの認証を備えたREST APIを介してワークロード セキュリティ データにアクセスし、CMDB、チケット システム、その他のエンタープライズ アプリケーションと統合します。</block>
   <block id="3dec3952c02d73a04d326f3624f668f6" category="summary">付属のシミュレーション スクリプトを使用して攻撃をシミュレートし、アラート生成と応答ポリシーを検証することで、Workload Security 検出機能をテストおよび検証します。</block>
-  <block id="c7ea3cec531081ee09f563d84422d157" category="doc">ワークロードセキュリティ: 異常なファイル改ざんのシミュレーション</block>
   <block id="3e350b01c804205b973dbd44adc54728" category="paragraph">このページの手順を使用すると、付属のファイル改ざんシミュレーション スクリプトを使用して、Workload Security のテストまたはデモンストレーションのためにファイル改ざんをシミュレートできます。</block>
   <block id="67f556940660f0bafe2738969d389877" category="list-text">ファイル改ざんシミュレーション スクリプトは Linux でのみ動作します。シミュレーション スクリプトは、ユーザーがONTAP ARP を Workload Security と統合した場合に、高信頼度アラートも生成する必要があります。</block>
   <block id="6465f8a9b5dccc316104b56b41de2db0" category="paragraph">ファイル改ざんアラートを生成するには、Workload Security でファイル改ざんアラートをシミュレートする付属のスクリプトを実行します。</block>
   <block id="2a9bccccecd980381e18178287c921b4" category="paragraph">Workload Security はユーザーの行動に基づいてファイルの改ざんパターンを検出し、 ONTAP ARP はファイル内の暗号化アクティビティに基づいてファイルの改ざんアクティビティを検出します。</block>
   <block id="a68622796ba5ea9694219b0cbfbae6b0" category="paragraph">Workload Security はユーザーの行動を学習し、同じユーザーに対して 24 時間以内にファイル改ざん攻撃が繰り返された場合、アラートを生成しません。</block>
-  <block id="d1de6a785681750f7fd87d382642893e" category="paragraph">r--- サイドバー: サイドバー パーマリンク: concept_cs_event_rate_checker.html 概要: SVM イベント レート チェッカーを使用して NFS/SMB イベント レートを測定し、Workload Security データ コレクターを導入する前に最適なエージェントのサイズを決定します。キーワード: イベント、チェッカー、レート、サイズ設定、クラウド セキュア ---</block>
   <block id="8013d871b4070a5d3848e4faa21e67d9" category="summary">Workload Security とONTAP Autonomous Protection を統合して相関分析、自動応答、フォレンジック調査機能を実現し、攻撃検出を強化します。</block>
   <block id="0ed52d2d20f5fbf80a330283d4aa9a72" category="paragraph">ONTAP Autonomous Protection 機能は、NAS (NFS および SMB) 環境でのワークロード分析を使用して、悪意のある攻撃や不正なデータ変更を示唆する可能性のある異常なファイル内アクティビティをプロアクティブに検出し、警告します。</block>
   <block id="8ec1d8886c9b4b48a45eb683d80b184e" category="paragraph">信頼性が高いバナーは、攻撃によってファイル暗号化アクティビティとともにファイル改ざん動作が行われたことを示します。暗号化されたファイルのグラフには、ARP ソリューションによってボリューム暗号化アクティビティが検出されたタイムスタンプが示されます。</block>
@@ -12697,4 +12692,9 @@
   <block id="7af3f2f9c8eaa3a8ff61f839001e8ca0" category="paragraph">たとえば、_test.txt_ という名前のファイルが _test.txt.abc_ に名前変更され、Workload Security が _.abc_ 拡張子のためにファイル改ざん攻撃を検出した場合、_.abc_ 拡張子を _allowed file types_ リストに追加できます。リストに追加されると、_.abc_ 拡張子を持つファイルに対してファイル改ざん攻撃が生成されなくなります。</block>
   <block id="374bdbda42629b3859daec6506078b36" category="sidebar">ONTAP自律保護統合</block>
   <block id="5273cec606b6768f8394e2ae1566c7f6" category="sidebar">攻撃のシミュレーション</block>
+  <block id="5da98f5c78418524ecf144084929f19e" category="doc">ワークロードセキュリティ: ファイル改ざんのシミュレーション</block>
+  <block id="e192cb4cca3f754a1b50fdf853ce74a4" category="summary">Workload Security データ コレクターを展開する前に、SVM イベント レート チェッカーを使用して NFS/SMB イベント レートを測定し、最適なエージェントのサイズを決定します。</block>
+  <block id="ec054c68e1c4c037a34f69b34cbcf8ae" category="list-text">_潜在的な攻撃_の種類（例：ファイルの改ざんや妨害行為）</block>
+  <block id="5d6d5d308daaaae7ed88d035f629ea81" category="paragraph">アラート リスト ページのアラート リンクをクリックすると、アラートの詳細ページが開きます。アラートの詳細は、攻撃またはアラートの種類によって異なる場合があります。たとえば、ファイル改ざん攻撃の詳細ページには、次のような情報が表示される場合があります。</block>
+  <block id="a93ee3ea015fa995d5cf6a3a088e6f7b" category="list-text">攻撃の種類（ファイル改ざん、妨害行為）とアラートID（Workload Securityによって割り当てられる）</block>
 </blocks>
