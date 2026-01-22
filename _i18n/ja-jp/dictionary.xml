@@ -717,9 +717,6 @@
   <block id="8901b7a1034f6e31fa7c2f5929bdd211" category="paragraph"><block ref="8901b7a1034f6e31fa7c2f5929bdd211" category="inline-image-macro-rx" type="image"></block></block>
   <block id="36aed75d347e158fecfc525dc1d66a22" category="section-title">アラートを複数回トリガーする</block>
   <block id="7000a55791f1de1983f9adc601ad2e4e" category="paragraph">別のユーザーで新しいアラートを生成するには、同じ手順（テスト データを作成し、テスト データを暗号化する）を再度実行してください。</block>
-  <block id="2723c4d559ff96bb42870d86c109708e" category="doc">SVM イベント レート チェッカー (エージェント サイジング ガイド)</block>
-  <block id="0a2bd44573247d8e7748ce7d2d2a4b8f" category="paragraph">イベント レート チェッカーは、 ONTAP SVM データ コレクターをインストールする前に SVM 内の NFS/SMB の組み合わせイベント レートをチェックし、1 台のエージェント マシンで監視できる SVM の数を確認するために使用されます。イベント レート チェッカーをサイズ設定ガイドとして使用し、セキュリティ環境の計画に役立ちます。</block>
-  <block id="40202f910a40e1ff8a02506c288b507e" category="paragraph">エージェントは最大 50 個のデータ コレクターをサポートできます。</block>
   <block id="3b31c3fb3c507b79d3f86f2b1e3392f5" category="section-title">要件：</block>
   <block id="70087224b93e8179deda7438fae8e843" category="list-text">クラスターIP</block>
   <block id="baf16fe3173b840f1197987b16b3a8fc" category="list-text">クラスター管理者のユーザー名とパスワード</block>
@@ -6853,7 +6850,6 @@
   <block id="7a69a2fce9a9acb9c8a84936863c1330" category="paragraph">コレクターが一時停止中にONTAP上に新しいボリュームなどが作成された場合は、Workload Security はデータを収集せず、それらのボリュームなどはダッシュボードやテーブルに反映されないことに注意してください。</block>
   <block id="14fe64769d4df689f51e13f60c5ec439" category="admonition">コレクターにユーザーが制限されている場合、コレクターを一時停止することはできません。コレクターを一時停止する前に、ユーザー アクセスを復元します。</block>
   <block id="0d55775dbf06cf5596fe0f5c3363f19a" category="list-text">一時停止中のコレクターで構成された設定に従ってスナップショットの消去は実行されません。</block>
-  <block id="f8b4c5607366d38cf806b0860c9cc5e4" category="list-text">EMS イベント ( ONTAP ARP など) は、一時停止中のコレクターでは処理されません。つまり、 ONTAP がランサムウェア攻撃を識別した場合、 Data Infrastructure Insights Workload Security はそのイベントを取得できません。</block>
   <block id="7e41836b686c17a31fd348a24ad244d1" category="list-text">一時停止中のコレクターに対しては、ヘルス通知メールは送信されません。</block>
   <block id="3683774ed8a4e1ec359bda17c740e07d" category="list-text">一時停止中のコレクターでは、手動または自動のアクション (スナップショットやユーザーのブロックなど) はサポートされません。</block>
   <block id="fa80f305470263b5f75374e020afeacd" category="list-text">エージェントまたはコレクターのアップグレード、エージェント VM の再起動、またはエージェント サービスの再起動が発生すると、一時停止中のコレクターは _一時停止_ 状態のままになります。</block>
@@ -12697,4 +12693,12 @@
   <block id="ec054c68e1c4c037a34f69b34cbcf8ae" category="list-text">_潜在的な攻撃_の種類（例：ファイルの改ざんや妨害行為）</block>
   <block id="5d6d5d308daaaae7ed88d035f629ea81" category="paragraph">アラート リスト ページのアラート リンクをクリックすると、アラートの詳細ページが開きます。アラートの詳細は、攻撃またはアラートの種類によって異なる場合があります。たとえば、ファイル改ざん攻撃の詳細ページには、次のような情報が表示される場合があります。</block>
   <block id="a93ee3ea015fa995d5cf6a3a088e6f7b" category="list-text">攻撃の種類（ファイル改ざん、妨害行為）とアラートID（Workload Securityによって割り当てられる）</block>
+  <block id="f8bdbc77da683d1b2ca16732bb4d002a" category="doc">イベントレートチェッカー：エージェントサイジングガイド</block>
+  <block id="bada0c7fb23bdf61ed978484adc0aca1" category="paragraph">データコレクタを導入する前に、SVM によって生成される NFS および SMB イベントレートを測定することで、最適な Agent マシンのサイジングを決定します。Event Rate Checker スクリプトは、容量制限（Agent あたり最大 50 のデータコレクタ）を理解し、Agent インフラストラクチャが予想されるイベント量を処理して信頼性の高い脅威検出を実現できることを確認するのに役立ちます。</block>
+  <block id="0c71d53cc58e4ed316ec358109fe1aa2" category="section-title">ONTAP Multi Admin Verify（MAV）の注意事項</block>
+  <block id="808c106d880adde347d6a92e2e5ff7d0" category="paragraph">スナップショットの作成と削除やユーザー ブロック（SMB）などの一部の機能は、ご使用のバージョンのONTAPに追加されたMAVコマンドによっては機能しない場合があります。</block>
+  <block id="65616ef887eaf295f980029948d91e79" category="paragraph">以下の手順に従って、MAV コマンドに除外を追加し、Workload Security がスナップショットを作成または削除したり、ユーザーをブロックしたりできるようにします。</block>
+  <block id="87f1c49b01ac2f7b86716ee6218bc5f6" category="paragraph">スナップショットの作成と削除を許可するコマンド：</block>
+  <block id="7842bb93d1b19afc39c751d0dddcf4ac" category="paragraph">ユーザーのブロックを許可するコマンド：</block>
+  <block id="6a1af23a5137b0b5dbe87d4b59b0deeb" category="list-text">EMS イベント（ONTAP ARP など）は、一時停止中のコレクターでは処理されません。つまり、ONTAP がファイル改ざん攻撃を検知した場合、Data Infrastructure Insights Workload Security はそのイベントを取得できません。</block>
 </blocks>

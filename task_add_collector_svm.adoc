@@ -112,6 +112,23 @@ image:ws_test_connection_success_example.png["ワークロードセキュリテ�
 
 
 
+== ONTAP Multi Admin Verify（MAV）の注意事項
+
+スナップショットの作成と削除やユーザー ブロック（SMB）などの一部の機能は、ご使用のバージョンのONTAPに追加されたMAVコマンドによっては機能しない場合があります。
+
+以下の手順に従って、MAV コマンドに除外を追加し、Workload Security がスナップショットを作成または削除したり、ユーザーをブロックしたりできるようにします。
+
+スナップショットの作成と削除を許可するコマンド：
+
+....
+multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !*cloudsecure_*"
+multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !*cloudsecure_*"
+....
+ユーザーのブロックを許可するコマンド：
+
+ multi-admin-verify rule delete -operation set
+
+
 == ユーザーアクセスブロックの前提条件
 
 以下の点に留意してくださいlink:cs_restrict_user_access.html["ユーザーアクセスのブロック"]:
@@ -318,7 +335,7 @@ NOTE: コレクターにユーザーが制限されている場合、コレク�
 次の事項に注意してください。
 
 * 一時停止中のコレクターで構成された設定に従ってスナップショットの消去は実行されません。
-* EMS イベント ( ONTAP ARP など) は、一時停止中のコレクターでは処理されません。つまり、 ONTAP がランサムウェア攻撃を識別した場合、 Data Infrastructure Insights Workload Security はそのイベントを取得できません。
+* EMS イベント（ONTAP ARP など）は、一時停止中のコレクターでは処理されません。つまり、ONTAP がファイル改ざん攻撃を検知した場合、Data Infrastructure Insights Workload Security はそのイベントを取得できません。
 * 一時停止中のコレクターに対しては、ヘルス通知メールは送信されません。
 * 一時停止中のコレクターでは、手動または自動のアクション (スナップショットやユーザーのブロックなど) はサポートされません。
 * エージェントまたはコレクターのアップグレード、エージェント VM の再起動、またはエージェント サービスの再起動が発生すると、一時停止中のコレクターは _一時停止_ 状態のままになります。

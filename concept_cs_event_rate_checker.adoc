@@ -4,7 +4,7 @@ permalink: concept_cs_event_rate_checker.html
 summary: Workload Security データ コレクターを展開する前に、SVM イベント レート チェッカーを使用して NFS/SMB イベント レートを測定し、最適なエージェントのサイズを決定します。 
 keywords: event, checker, rate, sizing, cloud secure 
 ---
-= SVM イベント レート チェッカー (エージェント サイジング ガイド)
+= イベントレートチェッカー：エージェントサイジングガイド
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,7 @@ keywords: event, checker, rate, sizing, cloud secure
 
 
 [role="lead"]
-イベント レート チェッカーは、 ONTAP SVM データ コレクターをインストールする前に SVM 内の NFS/SMB の組み合わせイベント レートをチェックし、1 台のエージェント マシンで監視できる SVM の数を確認するために使用されます。イベント レート チェッカーをサイズ設定ガイドとして使用し、セキュリティ環境の計画に役立ちます。
-
-エージェントは最大 50 個のデータ コレクターをサポートできます。
+データコレクタを導入する前に、SVM によって生成される NFS および SMB イベントレートを測定することで、最適な Agent マシンのサイジングを決定します。Event Rate Checker スクリプトは、容量制限（Agent あたり最大 50 のデータコレクタ）を理解し、Agent インフラストラクチャが予想されるイベント量を処理して信頼性の高い脅威検出を実現できることを確認するのに役立ちます。
 
 
 
