@@ -574,8 +574,6 @@
   <block id="3e31734df6f02c9ad9cd0dc7c1f65a98" category="cell">モニターがエクスポートされたことを通知する監査メッセージが表示されます。</block>
   <block id="256a0ce1cb9ac99794371e404aa7446e" category="cell">カスタム モニター構成のエクスポートは通常、 NetAppエンジニアが新機能の開発およびテスト中に使用します。このメッセージが表示されることを予期していなかった場合は、監査対象のアクションに指定されたユーザーのアクションを調べるか、サポートにお問い合わせください。</block>
   <block id="a7ef8f0bed1d94220b7abd3877b10643" category="doc">ワークロード セキュリティ エージェントの要件</block>
-  <block id="bee347f35c7a237c1f2d5d7193252244" category="inline-link-macro">ワークロードセキュリティエージェントをインストールする</block>
-  <block id="1de0df19f89310a1407a7686c6dcad7c" category="paragraph">絶対です<block ref="588188a9e8b5d243fbdbf4e2ce1c4421" category="inline-link-macro-rx"></block>データ収集者から情報を取得するため。エージェントをインストールする前に、環境がオペレーティング システム、CPU、メモリ、およびディスク領域の要件を満たしていることを確認してください。</block>
   <block id="0d9233050a9086b67df84f668963e42d" category="cell">次のいずれかのライセンス版を実行しているコンピュータ: * AlmaLinux 9.4 (64 ビット) ～ 9.5 (64 ビット)、10 (64 ビット) (SELinux を含む) * CentOS Stream 9 (64 ビット) * Debian 11 (64 ビット)、12 (64 ビット) (SELinux を含む) * OpenSUSE Leap 15.3 (64 ビット) ～ 15.6 (64 ビット) * Oracle Linux 8.10 (64 ビット)、9.1 (64 ビット) ～ 9.6 (64 ビット) (SELinux を含む) * Red Hat Enterprise Linux 8.10 (64 ビット)、9.1 (64 ビット) ～ 9.6 (64 ビット)、10 (64 ビット) (SELinux を含む) * Rocky 9.4 (64 ビット) ～ 9.6 (64 ビット) (SELinux を含む) * SUSE Linux Enterprise Server 15 SP4 (64 ビット) ～ 15 SP6 (64 ビット)、SELinux を含む * Ubuntu 20.04 LTS (64 ビット)、22.04 LTS (64 ビット)、24.04 LTS (64 ビット) このコンピューターでは、他のアプリケーション レベルのソフトウェアを実行しないでください。専用サーバーをお勧めします。</block>
   <block id="c441ee50c88f6e5e3a7c69fc69dad8b8" category="cell">コマンド</block>
   <block id="92094f10227c0d6e4da9a65b1cc23700" category="cell">インストールには「unzip」が必要です。さらに、インストール、スクリプトの実行、アンインストールには「sudo su –」コマンドが必要です。</block>
@@ -626,7 +624,6 @@
   <block id="b81e4f797b30e131d43ea14e3bc8322c" category="inline-link-macro">イベントレートチェッカー</block>
   <block id="1a46e02a3754d0daf83001fffc7c7c46" category="paragraph">参照<block ref="fd6f609b977fb641a06defa631019934" category="inline-link-macro-rx"></block>サイズに関する情報についてはドキュメントを参照してください。</block>
   <block id="0865b3ed9f5211e6fe35eddac5b1aaa3" category="doc">ワークロードセキュリティAPI</block>
-  <block id="1b1fb3360bd2eea985279f6fcc2ef45f" category="paragraph">Workload Security API を使用すると、 NetApp の顧客と独立系ソフトウェア ベンダー (ISV) は、Workload Security を CMDB や他のチケット システムなどの他のアプリケーションと統合できます。</block>
   <block id="1a152a606ca16a6eef5f2e9ac9b4c824" category="paragraph">API アクセスの要件:</block>
   <block id="c32ef84ff5ca99a73e37c8f28fa25ae5" category="list-text">API トークンの管理は、管理者ロールを持つ Workload Security ユーザーによって実行されます。</block>
   <block id="1a996d988f997b5127990972bac65132" category="paragraph">最新の API 情報は、Workload Security にログインし、*管理 &gt; API アクセス* に移動すると見つかります。  *API ドキュメント* リンクをクリックします。  API ドキュメントは Swagger ベースであり、API の簡単な説明と使用方法の情報を提供し、テナントで試用することができます。</block>
@@ -660,7 +657,6 @@
   <block id="6a2eb10d0f7d8e6c5942069b7aa730bf" category="section-title">Linux で NFS エクスポートをマウントするには:</block>
   <block id="dd94533008fec4ee5889a56fd78e2a26" category="paragraph">NFS バージョン 4.1 をマウントしないでください。これは Fpolicy ではサポートされていません。</block>
   <block id="edf63ae7e3cf0cd744884c156cab7abb" category="section-title">Linux で CIFS をマウントするには:</block>
-  <block id="d39b1e189739fcc0a92bdb5bb1b3e4d0" category="section-title">ONTAP Autonomous ランサムウェア保護を有効にする（オプション）:</block>
   <block id="ad3dd38cdf18de03b5ea7c975f541873" category="paragraph">ONTAPクラスタのバージョンが 9.11.1 以上の場合は、 ONTAPコマンド コンソールで次のコマンドを実行して、 ONTAPランサムウェア保護サービスを有効にできます。</block>
   <block id="a22c6eb3597528c16b0d46880ae4b1ae" category="paragraph">次に、データ コレクターを設定します。</block>
   <block id="5e7fe8c41f8a34a29dc01b5eced565e8" category="list-text">Workload Security エージェントをまだ設定していない場合は設定します。</block>
@@ -1776,8 +1772,6 @@
   <block id="53a0194fe3f870afed16b77d60056dfb" category="paragraph"><block ref="53a0194fe3f870afed16b77d60056dfb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2fae32629d4ef4fc6341f1751b405e45" category="section-title">セキュリティ</block>
   <block id="45d58050fc83f658d533966b07ead592" category="inline-link-macro">* ONTAP 9 向けNetAppセキュリティ強化ガイド*</block>
-  <block id="95d10eb69527c16122bd44ec553d0f7c" category="paragraph">セキュリティ ダッシュボードでは、ハードウェアとソフトウェアのボリューム暗号化、ランサムウェア対策ステータス、クラスター認証方法のグラフが表示され、現在のセキュリティ状況をすぐに確認できます。セキュリティ基準は、<block ref="a1c84b5f46cbbd9a263e3a5732ed7485" category="inline-link-macro-rx"></block> 。</block>
-  <block id="c3ccbe813e27865c5c1154a78b3b9abd" category="paragraph">暗号化またはランサムウェア対策のいずれかを選択して、環境を詳しく調べます。</block>
   <block id="48709e503decae3f55aa524537948025" category="inline-image-macro">ONTAP Essentials セキュリティダッシュボード</block>
   <block id="1c29918b357b596e616f50e0877d45de" category="paragraph"><block ref="1c29918b357b596e616f50e0877d45de" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ac05d0fca214dab8244e52fd39ca3562" category="inline-link-macro">クラスターコンプライアンスカテゴリ</block>
@@ -1855,16 +1849,9 @@
   <block id="b865b0f0f94674aa0d7878e2253f2c1b" category="doc">プレビュー機能</block>
   <block id="8a0d14c15291ab894b50ee0f241e5564" category="paragraph">Data Infrastructure Insights、新しい機能と機能を _プレビュー_ 形式で紹介します。プレビュー機能は、制限された環境または制限された容量で利用可能になります。</block>
   <block id="43680febd505de2083039d0fe7ca8947" category="paragraph">これらの機能の 1 つ以上をプレビューすることにご興味がある場合は、 NetApp の営業チームに詳細をお問い合わせください。</block>
-  <block id="5f06573aae905166447bf8d646c6bf89" category="summary">クエリの概要</block>
-  <block id="fadb076bccad39c075c50bfa7f81bc31" category="doc">クエリで使用されるアセット</block>
-  <block id="aa62093500fa6cc2a1aea70e53e331b8" category="paragraph">クエリを使用すると、ユーザーが選択した基準 (注釈など) に基づいてテナント上の資産とメトリックを詳細なレベルで検索し、ネットワークを監視およびトラブルシューティングできます。</block>
-  <block id="01baf5f78b2649e6a38c88d12944a3d9" category="paragraph">アセットに注釈を自動的に割り当てる注釈ルールにはクエリが必要であることに注意してください。</block>
   <block id="9d35c72b549fae1c4f5338d76241f908" category="paragraph">テナント上の物理または仮想インベントリ資産（および関連するメトリック）や、Kubernetes やONTAP Advanced Data などの統合によって提供されるメトリックをクエリできます。</block>
   <block id="5d7a3696457a40dffd58bd71e9fde963" category="section-title">在庫資産</block>
-  <block id="a53ff308ba1fe0b1b1c8fad46fc5711f" category="paragraph">クエリ、ダッシュボード ウィジェット、カスタム アセット ランディング ページで、次のアセット タイプを使用できます。フィルター、式、表示に使用できるフィールドとカウンターは、アセット タイプによって異なります。すべてのアセットがすべてのウィジェット タイプで使用できるわけではありません。</block>
-  <block id="1859b7335980eb552916a01fd55cb7e4" category="list-text">汎用デバイス</block>
   <block id="9effcdd7159a9a08dcdb0202ae58c1a8" category="list-text">iSCSI セッション</block>
-  <block id="9dd74c86de55dd54fcf3bc98e9bfa861" category="list-text">iSCSI ネットワーク ポータル</block>
   <block id="ac70412e939d72a9234cdebb1af5867b" category="list-text">パス</block>
   <block id="d2d5c3e087f684e56b5b81d6212d7ccb" category="list-text">クォータ</block>
   <block id="5a95a425f74314a96f13a2f136992178" category="list-text">共有</block>
@@ -4339,7 +4326,6 @@
   <block id="9ea8e80fba8d6edb71449d6ac523870d" category="list-text">リソース利用の最適化</block>
   <block id="f7c53246bda8892727562ecf03b2af88" category="list-text">表示ノイズを最小限に抑えて質問に答えるための高度なフィルターを備えた組み込みまたはカスタマイズ可能なダッシュボード</block>
   <block id="5f0e583e0b23c4014b3313af93160414" category="list-text">ONTAPストレージ運用の健全性を確認する </block>
-  <block id="30b80265dc62edf963a3ac0e34dc03e5" category="list-text">最も貴重なビジネス資産であるデータをランサムウェアやデータ破壊攻撃から保護します</block>
   <block id="bf647454e36069fd16f1a7a35cf6a865" category="section-title">はじめに</block>
   <block id="5abbdfc8c583cbf03ce02e46c06a6aa5" category="inline-link-macro">*始めましょう*</block>
   <block id="f4c2bc844e861dbf16d626ef6fe4fa50" category="list-text">どうすれば<block ref="bdc33e916e289637bc8ce0319e314c7f" category="inline-link-macro-rx"></block>Data Infrastructure Insightsで?</block>
@@ -12654,7 +12640,6 @@
   <block id="d388ca982366ad7a8a7a165d21919f84" category="paragraph">テナントの作成が完了したら、コンソールの資格情報を使用してログインし、 Data Infrastructure Insightsの 30 日間無料トライアルを開始します。このトライアル期間中、 Data Infrastructure Insightsが提供する機能を試すことができます。</block>
   <block id="a361d4c5b26cab224e5aad972ef9f92f" category="paragraph">テナントが作成されると、いつでもNetApp BlueXPポータルにログインして、 <block ref="37a150e92f05332b5bc5a56046c3177c" category="inline-link-macro-rx"></block> ページに移動し、「*Data Infrastructure Insightsに移動*」を選択します。</block>
   <block id="ed35afa558b996b37265533db9af5399" category="sidebar">レポートへの注釈の公開</block>
-  <block id="d19e16fd482ca29d2c0ef4fb8523357a" category="summary">最適なパフォーマンスとデータ収集を実現するために、Workload Security Agent の展開環境がオペレーティング システム、CPU、メモリ、およびディスク領域の最小要件を満たしていることを確認します。</block>
   <block id="c4942feafc272d7da2ce90634dc0120d" category="summary">安全なトークンベースの認証を備えたREST APIを介してワークロード セキュリティ データにアクセスし、CMDB、チケット システム、その他のエンタープライズ アプリケーションと統合します。</block>
   <block id="3dec3952c02d73a04d326f3624f668f6" category="summary">付属のシミュレーション スクリプトを使用して攻撃をシミュレートし、アラート生成と応答ポリシーを検証することで、Workload Security 検出機能をテストおよび検証します。</block>
   <block id="3e350b01c804205b973dbd44adc54728" category="paragraph">このページの手順を使用すると、付属のファイル改ざんシミュレーション スクリプトを使用して、Workload Security のテストまたはデモンストレーションのためにファイル改ざんをシミュレートできます。</block>
@@ -12701,4 +12686,23 @@
   <block id="87f1c49b01ac2f7b86716ee6218bc5f6" category="paragraph">スナップショットの作成と削除を許可するコマンド：</block>
   <block id="7842bb93d1b19afc39c751d0dddcf4ac" category="paragraph">ユーザーのブロックを許可するコマンド：</block>
   <block id="6a1af23a5137b0b5dbe87d4b59b0deeb" category="list-text">EMS イベント（ONTAP ARP など）は、一時停止中のコレクターでは処理されません。つまり、ONTAP がファイル改ざん攻撃を検知した場合、Data Infrastructure Insights Workload Security はそのイベントを取得できません。</block>
+  <block id="afcbb40976cebf8be35fcb3f20455f79" category="summary">ワークロード セキュリティ エージェントでは、ファイル アクセスを効果的に監視し、ストレージ インフラストラクチャ全体でセキュリティの脅威を検出するために、特定のオペレーティング システム、CPU、メモリ、およびディスク領域の仕様が必要です。</block>
+  <block id="97c248485e6832f3e4517d8b6d423060" category="inline-link-macro">Workload Security エージェントのインストール</block>
+  <block id="6acb715af86a62a0077ac01d43f7b01c" category="paragraph">ワークロード・セキュリティ・エージェントは、OS、CPU、メモリ、ディスク容量の最小要件を満たす専用サーバーに導入することで、最適な監視および脅威検出パフォーマンスを確保できます。このガイドでは、<block ref="4ce477e73552de4dc5af67c1b8fdac41" category="inline-link-macro-rx"></block>前に必要なハードウェアおよびネットワーク要件を規定しています。これには、サポート対象のLinuxディストリビューション、ネットワーク接続ルール、システムサイジングのガイダンスが含まれます。</block>
+  <block id="37e0d4c7df80d6e4c0423f121f2d93d8" category="paragraph">安全なトークンベース認証で保護された REST API を使用して、Workload Security をエンタープライズ エコシステムに統合できます。フォレンジック アクティビティ データの取得、API アクセス トークンの管理、CMDB、チケット システム、その他のアプリケーションとのカスタム統合の開発が可能です。インタラクティブな Swagger ドキュメントでは、完全な API 仕様が提供されており、エンドポイントを直接テストできます。</block>
+  <block id="949cc8d1af819d8e6ec37390121bfa5f" category="section-title">ONTAP Autonomous Ransomware Protection を有効にする（オプション）：</block>
+  <block id="67a5e480424bf6f9914a3b18393465e6" category="paragraph">セキュリティダッシュボードでは、ハードウェアおよびソフトウェアによるボリューム暗号化、ファイル改ざん対策の状況、クラスター認証方法などのグラフが表示され、現在のセキュリティ状況を瞬時に確認できます。セキュリティ基準は、<block ref="a1c84b5f46cbbd9a263e3a5732ed7485" category="inline-link-macro-rx"></block>で定義された推奨事項に基づいて評価されます。</block>
+  <block id="7b46122c94da7a23999d34f71661a1c2" category="paragraph">暗号化またはファイル改ざん防止カウントのいずれかを選択して、環境を詳しく調べます。</block>
+  <block id="07a15244af601ef7f53e10ad7cf2a65e" category="summary">インベントリ資産と統合メトリックを照会して、ストレージ、コンピューティング、ネットワーク リソースを含むインフラストラクチャ全体のパフォーマンスを監視、トラブルシューティング、分析します。</block>
+  <block id="c1dac515d770b50607db68702d91b2dd" category="doc">アセットとメトリクスのクエリ</block>
+  <block id="c154de8d96ee3aafd9f63d6d8b3821af" category="paragraph">インフラストラクチャの物理資産と仮想資産をクエリすることで、パフォーマンスの監視、問題のトラブルシューティング、注釈などのカスタム基準に基づいたきめ細かな検索を実行できます。Data Infrastructure Insightsは、ストレージアレイやホストからアプリケーションや仮想マシンまで、多様な資産タイプを対象としたクエリに加え、Kubernetes、Docker、ONTAP Advanced Dataの統合メトリクスも提供し、包括的な可視性を実現します。</block>
+  <block id="a4814d069f57e94e2edb62e919af014a" category="paragraph">アセットに自動的にアノテーションを割り当てるアノテーション ルールを使用するには、クエリを全員に共有する必要があります。クエリの共有の詳細については、以下をご覧ください。</block>
+  <block id="0ee1f19142dfe0c3765dfcf205abe414" category="paragraph">すべてのインベントリ（インフラストラクチャとも呼ばれる）アセット タイプ（ストレージ、スイッチ、VM、アプリケーションなど）は、クエリ、ダッシュボード ウィジェット、カスタマイズされたアセット ランディング ページで使用できます。フィルター、式、表示に使用できるフィールドとカウンターは、アセット タイプによって異なります。</block>
+  <block id="b4ca152efced4e02c83a7d308fb6c8f9" category="section-title">クエリの共有</block>
+  <block id="272c613cf4f758ba99243b78ee690f84" category="paragraph">クエリへのアクセスを制御するには、クエリを表示および編集できるユーザーを選択します。デフォルトでは、新しいクエリは非公開で、自分だけが閲覧できます。また、柔軟な権限レベル（Read-Only または Edit）を設定して、特定のユーザーまたは組織全体と共有することもできます。</block>
+  <block id="72d8dd50b70908191773606963bf3036" category="paragraph">クエリをすべてのユーザーと共有するか、編集権限または読み取り専用権限を持つ特定のユーザーと共有するかを選択できます。</block>
+  <block id="b01d373f18f5a51146c5d824cbfb409e" category="admonition">アカウント所有者権限を持つユーザーは、プライバシー設定に関係なく、すべてのクエリを表示できます。</block>
+  <block id="7143e0c9aefa0103fd7fde4a2b1f1e3c" category="doc">アラートの理解と調査</block>
+  <block id="a760de6056552c07e9447d9e4aa8ddd8" category="list-text">最も貴重なビジネス資産であるデータを、ファイルの改ざんやデータ破壊攻撃から保護します</block>
+  <block id="ad616b1714b32991576ec7cd2b8832a8" category="sidebar">ダッシュボード アクセスの管理</block>
 </blocks>

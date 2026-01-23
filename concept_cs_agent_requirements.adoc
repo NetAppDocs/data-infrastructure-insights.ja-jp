@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_agent_requirements.html 
-summary: 最適なパフォーマンスとデータ収集を実現するために、Workload Security Agent の展開環境がオペレーティング システム、CPU、メモリ、およびディスク領域の最小要件を満たしていることを確認します。 
+summary: ワークロード セキュリティ エージェントでは、ファイル アクセスを効果的に監視し、ストレージ インフラストラクチャ全体でセキュリティの脅威を検出するために、特定のオペレーティング システム、CPU、メモリ、およびディスク領域の仕様が必要です。 
 keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cloud Secure 
 ---
 = ワークロード セキュリティ エージェントの要件
@@ -14,7 +14,7 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 
 
 [role="lead"]
-絶対ですlink:task_cs_add_agent.html["ワークロードセキュリティエージェントをインストールする"]データ収集者から情報を取得するため。エージェントをインストールする前に、環境がオペレーティング システム、CPU、メモリ、およびディスク領域の要件を満たしていることを確認してください。
+ワークロード・セキュリティ・エージェントは、OS、CPU、メモリ、ディスク容量の最小要件を満たす専用サーバーに導入することで、最適な監視および脅威検出パフォーマンスを確保できます。このガイドでは、link:task_cs_add_agent.html["Workload Security エージェントのインストール"]前に必要なハードウェアおよびネットワーク要件を規定しています。これには、サポート対象のLinuxディストリビューション、ネットワーク接続ルール、システムサイジングのガイダンスが含まれます。
 
 [cols="36,60"]
 |===

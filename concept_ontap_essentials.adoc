@@ -7,6 +7,10 @@ keywords: dashboard, widget, ontap, overview, insight
 = ONTAPエッセンシャル
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -72,9 +76,9 @@ image:DataProtectionDashboard_ClusterList.png["データ保護クラスターリ
 
 == セキュリティ
 
-セキュリティ ダッシュボードでは、ハードウェアとソフトウェアのボリューム暗号化、ランサムウェア対策ステータス、クラスター認証方法のグラフが表示され、現在のセキュリティ状況をすぐに確認できます。セキュリティ基準は、link:https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf["* ONTAP 9 向けNetAppセキュリティ強化ガイド*"] 。
+セキュリティダッシュボードでは、ハードウェアおよびソフトウェアによるボリューム暗号化、ファイル改ざん対策の状況、クラスター認証方法などのグラフが表示され、現在のセキュリティ状況を瞬時に確認できます。セキュリティ基準は、link:https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf["* ONTAP 9 向けNetAppセキュリティ強化ガイド*"]で定義された推奨事項に基づいて評価されます。
 
-暗号化またはランサムウェア対策のいずれかを選択して、環境を詳しく調べます。
+暗号化またはファイル改ざん防止カウントのいずれかを選択して、環境を詳しく調べます。
 
 image:OE_SecurityDashboard.png["ONTAP Essentials セキュリティダッシュボード"]
 

@@ -1,18 +1,22 @@
 ---
 sidebar: sidebar 
 permalink: concept_querying_assets.html 
-summary: クエリの概要 
+summary: インベントリ資産と統合メトリックを照会して、ストレージ、コンピューティング、ネットワーク リソースを含むインフラストラクチャ全体のパフォーマンスを監視、トラブルシューティング、分析します。 
 keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, Host, Internal Volume, iSCSI, Network, Portal, Path, Port, Qtree, Quota, Share, Storage, Node, Pool, SVM, Switch, Tape, VMDK, Virtual Machine, VM, Volume, Zone, Member 
 ---
-= クエリで使用されるアセット
+= アセットとメトリクスのクエリ
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-クエリを使用すると、ユーザーが選択した基準 (注釈など) に基づいてテナント上の資産とメトリックを詳細なレベルで検索し、ネットワークを監視およびトラブルシューティングできます。
+インフラストラクチャの物理資産と仮想資産をクエリすることで、パフォーマンスの監視、問題のトラブルシューティング、注釈などのカスタム基準に基づいたきめ細かな検索を実行できます。Data Infrastructure Insightsは、ストレージアレイやホストからアプリケーションや仮想マシンまで、多様な資産タイプを対象としたクエリに加え、Kubernetes、Docker、ONTAP Advanced Dataの統合メトリクスも提供し、包括的な可視性を実現します。
 
-アセットに注釈を自動的に割り当てる注釈ルールにはクエリが必要であることに注意してください。
+アセットに自動的にアノテーションを割り当てるアノテーション ルールを使用するには、クエリを全員に共有する必要があります。クエリの共有の詳細については、以下をご覧ください。
 
 テナント上の物理または仮想インベントリ資産（および関連するメトリック）や、Kubernetes やONTAP Advanced Data などの統合によって提供されるメトリックをクエリできます。
 
@@ -20,34 +24,7 @@ keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, 
 
 == 在庫資産
 
-クエリ、ダッシュボード ウィジェット、カスタム アセット ランディング ページで、次のアセット タイプを使用できます。フィルター、式、表示に使用できるフィールドとカウンターは、アセット タイプによって異なります。すべてのアセットがすべてのウィジェット タイプで使用できるわけではありません。
-
-* Application
-* データストア
-* ディスク
-* ファブリック
-* 汎用デバイス
-* ホスト
-* 内部容積
-* iSCSI セッション
-* iSCSI ネットワーク ポータル
-* パス
-* ポート
-* qtree
-* クォータ
-* 共有
-* ストレージ
-* ストレージ ノード
-* ストレージ プール
-* Storage Virtual Machine（SVM）
-* スイッチ
-* Tape
-* VMDK
-* 仮想マシン
-* Volume
-* ゾーン
-* ゾーンメンバー
-
+すべてのインベントリ（インフラストラクチャとも呼ばれる）アセット タイプ（ストレージ、スイッチ、VM、アプリケーションなど）は、クエリ、ダッシュボード ウィジェット、カスタマイズされたアセット ランディング ページで使用できます。フィルター、式、表示に使用できるフィールドとカウンターは、アセット タイプによって異なります。
 
 
 
@@ -56,3 +33,14 @@ keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, 
 インベントリ資産とそれに関連するパフォーマンス メトリックのクエリに加えて、Kubernetes または Docker によって生成されたメトリックや、 ONTAP Advanced Metrics で提供されるメトリックなどの *統合データ* メトリックもクエリできます。
 
 image:QueryPageFilter.png["統合クエリフィルターの例"]
+
+
+
+== クエリの共有
+
+クエリへのアクセスを制御するには、クエリを表示および編集できるユーザーを選択します。デフォルトでは、新しいクエリは非公開で、自分だけが閲覧できます。また、柔軟な権限レベル（Read-Only または Edit）を設定して、特定のユーザーまたは組織全体と共有することもできます。
+
+クエリをすべてのユーザーと共有するか、編集権限または読み取り専用権限を持つ特定のユーザーと共有するかを選択できます。
+
+
+NOTE: アカウント所有者権限を持つユーザーは、プライバシー設定に関係なく、すべてのクエリを表示できます。

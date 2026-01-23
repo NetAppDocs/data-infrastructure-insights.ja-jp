@@ -67,7 +67,7 @@ mount -t cifs //10.193.77.91/sharedfolderincluster /root/destinationfolder/ -o u
 ----
 
 
-==== ONTAP Autonomous ランサムウェア保護を有効にする（オプション）:
+==== ONTAP Autonomous Ransomware Protection を有効にする（オプション）：
 
 ONTAPクラスタのバージョンが 9.11.1 以上の場合は、 ONTAPコマンド コンソールで次のコマンドを実行して、 ONTAPランサムウェア保護サービスを有効にできます。
 
