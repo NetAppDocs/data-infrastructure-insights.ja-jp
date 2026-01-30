@@ -15,8 +15,6 @@ sidebar:
     url: "/index.html"
   - title: 最新情報
     url: "/concept_whats_new.html"
-  - title: Data Infrastructure Insightsへのサインアップ
-    url: "/task_cloud_insights_onboarding_1.html"
   - title: セキュリティ
     entries:
     - title: セキュリティプラクティス

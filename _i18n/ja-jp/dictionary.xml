@@ -6929,32 +6929,6 @@
   <block id="28bfcc900291ea8fe66d8be36f439a1b" category="summary">Data Infrastructure Insightsにサインアップし、テナントを作成します。</block>
   <block id="9be58f2fc8b11ec837406376ca6b3e2a" category="doc">Data Infrastructure Insightsインサイトオンボーディング</block>
   <block id="549ae8b6dea4926a2af206c5d7300fc5" category="paragraph">Data Infrastructure Insightsの使用を開始する前に、* NetApp Console* ポータルにサインアップする必要があります。  NetApp Consoleのログイン情報をすでにお持ちの場合は、簡単な手順でData Infrastructure Insightsの無料トライアルを開始できます。</block>
-  <block id="bb793de9cdfd6b52adc5dea5b6228679" category="section-title">NetApp Consoleアカウントの作成</block>
-  <block id="b4e0df93660adc2e97f2f5484451c415" category="paragraph">NetAppのクラウドサービスを開始するには、<block ref="5b0deb840231d6f2646d7cf25956c35a" category="inline-link-macro-rx"></block> *開始*をクリックします。</block>
-  <block id="1e26781b207fa848ce81c7268cf016a7" category="list-text">まだサインアップしていない場合は、「サインアップ」を選択してください</block>
-  <block id="05d2a837df7692f0d65e4466b2fb05bd" category="list-text">有効なビジネス用メールアドレスを入力し、パスワードを選択してください。</block>
-  <block id="ad66d403ef43ddd58a7b527874c51878" category="list-text">会社名と氏名を入力してください。</block>
-  <block id="895a961645c5f6456e2cc43102e1de8a" category="list-text">利用規約に同意して、[続行] を選択します。</block>
-  <block id="d127182d44408d014798631913d1e97f" category="list-text">コンソールで開始手順を説明します。</block>
-  <block id="f691976da142019af74f673d9e988d66" category="section-title">すでにNetApp Consoleログインを持っている場合はどうなりますか?</block>
-  <block id="2a76d74bf06e79d6a8243138ab8d0572" category="paragraph">NetApp Consoleアカウントを取得したら、<block ref="5b0deb840231d6f2646d7cf25956c35a" category="inline-link-macro-rx"></block>ポータルページ。</block>
-  <block id="a46b8a484704b65f978247cb9b3901aa" category="paragraph">メールアドレスとパスワードを入力してください。次に、NetApp のクラウド オファリング ページに移動します。</block>
-  <block id="4ec4e4954d48db50650c5ec49007cf27" category="paragraph">Data Infrastructure Insightsの詳細を確認したり、デモをリクエストしたりするには、「分析と制御」 &gt; 「可観測性」に移動してください。</block>
-  <block id="eeecd13aa136e65aaedc64374c7415bc" category="section-title">Data Infrastructure Insightsの無料トライアルを開始する</block>
-  <block id="3b1f676d06286548e11b332567f42bbd" category="inline-link-macro">購読を開始する</block>
-  <block id="b48d78927dd619cab2e6b7fde5ffb6b1" category="paragraph">無料トライアル期間中は、<block ref="822a67eb96671d13fff372a75b259713" category="inline-link-macro-rx"></block>いつでもData Infrastructure Insightsにアクセスできます。サブスクライブすると、現在のサブスクリプションに基づいてData Infrastructure Insights機能を使用できます。</block>
-  <block id="2c4bb88652ba26d23266d851053ba465" category="section-title">Sign inて出発</block>
-  <block id="27e0956311428740c19b40a7a971c7ef" category="inline-link-macro">クラウド サービス</block>
-  <block id="206cb1224c200bbbd73cfa4118ad7c1e" category="paragraph">ブラウザを開いて、 Data Infrastructure Insightsテナント URL に直接アクセスすることもできます。次に例を示します。</block>
-  <block id="9834a50024d1c9eb92d1d75e4f1fc3fa" category="paragraph">簡単にアクセスしてブックマークできるように、各ユーザーの招待メールにも URL が含まれます。ユーザーがまだコンソールにログインしていない場合は、ログインするように求められます。</block>
-  <block id="955402d5e1e7fb2ed3dc9cdbbcb35826" category="admonition">新しいユーザーは、テナント URL にアクセスする前に、コンソールへのアクセスにサインアップする必要があります。</block>
-  <block id="da115c4fc9cae6fc87764395ef9ff331" category="inline-link-macro">*データ収集を開始*</block>
-  <block id="587f396a83dde1056c9bf606ffc535f7" category="paragraph">新しいテナントに初めてログインすると、設定のガイドが表示されます。<block ref="2949f1254245e371c2d697f481723a7e" category="inline-link-macro-rx"></block> 。</block>
-  <block id="cc580c5eecd9c28053db6de1830561ee" category="section-title">ログアウト</block>
-  <block id="21360340baae34a3a426d1ff1dbc116f" category="paragraph">Data Infrastructure Insightsからログアウトするには、*ユーザー名* をクリックし、*ログアウト* を選択します。コンソールのサインイン画面に戻ります。</block>
-  <block id="c4207c205277b5cad1577163a6bae022" category="admonition">Data Infrastructure Insightsからログアウトすると、コンソールからもログアウトされます。コンソール サインインを使用する他のNetApp Cloud サービスからもログアウトされます。</block>
-  <block id="8463a61dd94ff5934036d4c8a8936e32" category="section-title">非アクティブ時のタイムアウト</block>
-  <block id="db8ff6a5dfcebcb4f9f3077c3acd8c0a" category="paragraph">デフォルトでは、コンソールは 6 時間 (360 分) にわたってアクティビティがない場合にユーザーをログアウトします。アクティビティに関係なく、ユーザーは 7 日後にログアウトされます。</block>
   <block id="fde8afa3fd65a9f38d9b11377453846e" category="doc">Cloud Volumes ONTAPとAmazon FSx for NetApp ONTAPコレクターの構成</block>
   <block id="c45671a9389f697917f0b33d12822c51" category="section-title">Cloud Volumes ONTAPストレージ構成</block>
   <block id="2ffc6472f9d6abaf761bbe2e6a0385ce" category="paragraph">Workload Security Agent をホストするための単一ノード/HA AWS インスタンスを構成するには、 OnCommand Cloud Volumes ONTAPドキュメントを参照してください。<block ref="caca64b8e9927e0ea8e8b0158b9e47cd" category="inline-link-rx"></block></block>
@@ -12340,7 +12314,6 @@
   <block id="69f2e3246807adb3f4d29d9480ac71fd" category="inline-image-macro">Webhook を表示する攻撃ポリシー ダイアログを追加する</block>
   <block id="149360851d3e95c4b6af6d5b468af365" category="paragraph"><block ref="149360851d3e95c4b6af6d5b468af365" category="inline-image-macro-rx" type="image"></block></block>
   <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">最新情報</block>
-  <block id="ab5cb6794af58d6cd4132b44aa3d3d04" category="sidebar">Data Infrastructure Insightsへのサインアップ</block>
   <block id="c3f4c9cd8970b25325783f3caeab9867" category="sidebar">セキュリティプラクティス</block>
   <block id="87c6157f200d5f2c85eeda2dc68852f6" category="sidebar">何をどこに保管するか</block>
   <block id="55b171ae91c4f30690df081e54631deb" category="sidebar">データの収集</block>
@@ -12622,8 +12595,6 @@
   <block id="c77b295eb8d3480880ff044a7823cdd9" category="list-text">依存レポートを更新せずに注釈を削除すると、それらのレポートでエラーや予期しない結果が返される可能性があります。</block>
   <block id="3da85052d2ffffd1cb6352186fe0393a" category="list-text">複雑なシナリオでは、レポートの修復を支援するために専門サービスが必要になる場合があります。</block>
   <block id="4f9b9c5804f57ab98a1eb0bbdc93ee28" category="paragraph">注釈を非公開にする前に、注釈に依存するすべてのレポートを確認することをお勧めします。</block>
-  <block id="84782b0fddf642f36f6d0ca7585d8709" category="paragraph">Data Infrastructure Insightsに初めてログインする場合は、 Data Infrastructure Insightsが提供するすべての内容を読み、_開始する準備_ができたら、[トライアルをリクエスト] をクリックして情報を入力してください。</block>
-  <block id="513dc3996a984c81efa261ee7da82ea7" category="paragraph">トライアルテナントのセットアップの一環として、テナントをホストするリージョンと、テナントを AWS に配置するか Azure に配置するかを選択します。</block>
   <block id="29ecb4e96ebb9048c6e2055bd8edfec9" category="paragraph">以下に、各オプションの説明を含むサンプルの _AgentConfiguration_ ファイルを示します。</block>
   <block id="0a511b85d77f15f39fbbd23442b32001" category="section-title">2025年12月</block>
   <block id="02c6c8e70973eaa6f06450fcaad33a5f" category="section-title">共有クエリによるクエリアクセスの制御</block>
@@ -12637,8 +12608,6 @@
   <block id="7bf60aa4367d13bdf4be42c9055afecc" category="paragraph"><block ref="7bf60aa4367d13bdf4be42c9055afecc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f3dd02ae7c2c35817a35bc27eb8af50f" category="section-title">よりクリーンなダッシュボードの視覚化</block>
   <block id="6838668755c364765b40cf38648de55f" category="paragraph">ダッシュボードのデザインが改善され、最も重要な情報を把握しやすくなりました。ウィジェットを区切るドロップ シャドウ ボーダーによって視覚的な明瞭性が向上し、区切り線が削除されたことで乱雑さが軽減され、データの分析に集中できるようになりました。これらの改良により、よりクリーンで直感的なダッシュボード エクスペリエンスが実現し、傾向や異常をより迅速かつ容易に発見できるようになります。</block>
-  <block id="d388ca982366ad7a8a7a165d21919f84" category="paragraph">テナントの作成が完了したら、コンソールの資格情報を使用してログインし、 Data Infrastructure Insightsの 30 日間無料トライアルを開始します。このトライアル期間中、 Data Infrastructure Insightsが提供する機能を試すことができます。</block>
-  <block id="a361d4c5b26cab224e5aad972ef9f92f" category="paragraph">テナントが作成されると、いつでもNetApp BlueXPポータルにログインして、 <block ref="37a150e92f05332b5bc5a56046c3177c" category="inline-link-macro-rx"></block> ページに移動し、「*Data Infrastructure Insightsに移動*」を選択します。</block>
   <block id="ed35afa558b996b37265533db9af5399" category="sidebar">レポートへの注釈の公開</block>
   <block id="c4942feafc272d7da2ce90634dc0120d" category="summary">安全なトークンベースの認証を備えたREST APIを介してワークロード セキュリティ データにアクセスし、CMDB、チケット システム、その他のエンタープライズ アプリケーションと統合します。</block>
   <block id="3dec3952c02d73a04d326f3624f668f6" category="summary">付属のシミュレーション スクリプトを使用して攻撃をシミュレートし、アラート生成と応答ポリシーを検証することで、Workload Security 検出機能をテストおよび検証します。</block>
@@ -12705,4 +12674,5 @@
   <block id="7143e0c9aefa0103fd7fde4a2b1f1e3c" category="doc">アラートの理解と調査</block>
   <block id="a760de6056552c07e9447d9e4aa8ddd8" category="list-text">最も貴重なビジネス資産であるデータを、ファイルの改ざんやデータ破壊攻撃から保護します</block>
   <block id="ad616b1714b32991576ec7cd2b8832a8" category="sidebar">ダッシュボード アクセスの管理</block>
+  <block id="1a69a00931f550995a9d19745f714169" category="paragraph">この手順は現在更新中です。後ほどご確認ください。</block>
 </blocks>
