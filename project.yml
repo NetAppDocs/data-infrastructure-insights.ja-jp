@@ -291,7 +291,7 @@ sidebar:
         url: "/ws_webhook_example_pagerduty.html"
       - title: Slack Webhookの例
         url: "/ws_webhook_example_slack.html"
-      - title: チームWebhookの例
+      - title: Teams Webhook の例
         url: "/ws_webhook_example_teams.html"
     - title: ワークロードセキュリティAPI
       url: "/concept_cs_api.html"
