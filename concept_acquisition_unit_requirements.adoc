@@ -5,17 +5,12 @@ summary: 取得ユニットとして使用するサーバーまたは VM は、�
 keywords: AU, acquisition unit, requirements, sizing 
 ---
 = 取得ユニットの要件
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -31,7 +26,7 @@ keywords: AU, acquisition unit, requirements, sizing
 | コンポーネント | Linux 要件 | Windows の要件 
 
 
-| オペレーティング システム | 次のいずれかのライセンス版を実行しているコンピュータ: * AlmaLinux 9.3～9.5 * Centos (64ビット): 7.2～7.9、8.1～8.4、Stream 8、Stream 9 * Debian (64ビット): 9～12 * OpenSUSE Leap 15.1～15.6 * Oracle Enterprise Linux (64ビット): 7.5～7.9、8.1～8.10、9.3～9.6 * Red Hat (64ビット): 7.2～7.9、8.1～8.10、9.1～9.6 * Rocky 9.0～9.5 * SUSE Linux Enterprise Server 15、15 SP2～15 SP6 * Ubuntu Server: 18.04、20.04、22.04、24.04 LTS * SELinux on上記のプラットフォーム このコンピューターでは、他のアプリケーション レベルのソフトウェアは実行しないでください。専用サーバーをお勧めします。  SELinux で実行している場合は、取得ユニットシステムで次のコマンドを実行することをお勧めします: sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights | 次のいずれかのライセンス バージョンを実行しているコンピューター: * Microsoft Windows 11 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 このコンピューターでは、他のアプリケーション レベルのソフトウェアを実行しないでください。専用サーバーをお勧めします。 
+| オペレーティング システム | 次のいずれかのライセンス版を実行しているコンピューター：* AlmaLinux 9.5、10 * Centos（64ビット）：Stream 9 * Debian（64ビット）：11から13 * OpenSUSE Leap 15.2から15.6、16 * Oracle Enterprise Linux（64ビット）：8.10、9.2、9.4、9.6、10 * Red Hat（64ビット）：8.10、9.2、9.4、9.6、10 * Rocky 9.2から9.6 * SUSE Linux Enterprise Server 15 SP4から15 SP7、16 * Ubuntu Server：20.04、22.04、24.04 LTS * 上記プラットフォーム上のSELinux このコンピューターでは、他のアプリケーションレベルのソフトウェアを実行しないでください。専用サーバーをお勧めします。SELinuxで実行している場合は、取得ユニットシステムで次のコマンドを実行することをお勧めします：sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights | 次のいずれかのライセンス バージョンを実行しているコンピューター: * Microsoft Windows 11 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 このコンピューターでは、他のアプリケーション レベルのソフトウェアを実行しないでください。専用サーバーをお勧めします。 
 
 
 | CPU | 2つのCPUコア | 同じ 

@@ -165,7 +165,6 @@
   <block id="129f8880167531920bb3396830948e86" category="cell">Linux 要件</block>
   <block id="033d64e0352a24070b4d6ba6e37207af" category="cell">Windows の要件</block>
   <block id="696c660ff8d9323e55146a6dbd4e4088" category="cell">オペレーティング システム</block>
-  <block id="cd016f59e3bce345c5a22a0c73b84bc2" category="cell">次のいずれかのライセンス版を実行しているコンピュータ: * AlmaLinux 9.3～9.5 * Centos (64ビット): 7.2～7.9、8.1～8.4、Stream 8、Stream 9 * Debian (64ビット): 9～12 * OpenSUSE Leap 15.1～15.6 * Oracle Enterprise Linux (64ビット): 7.5～7.9、8.1～8.10、9.3～9.6 * Red Hat (64ビット): 7.2～7.9、8.1～8.10、9.1～9.6 * Rocky 9.0～9.5 * SUSE Linux Enterprise Server 15、15 SP2～15 SP6 * Ubuntu Server: 18.04、20.04、22.04、24.04 LTS * SELinux on上記のプラットフォーム このコンピューターでは、他のアプリケーション レベルのソフトウェアは実行しないでください。専用サーバーをお勧めします。  SELinux で実行している場合は、取得ユニットシステムで次のコマンドを実行することをお勧めします: sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights</block>
   <block id="2b55387dd066c5bac646ac61543d152d" category="cell">CPU</block>
   <block id="36b415ace97b614344903d1d039cc60d" category="cell">2つのCPUコア</block>
   <block id="c90a13d8ec8fe53c6bb33fe10af6f2fe" category="cell">同じ</block>
@@ -12693,4 +12692,5 @@
   <block id="3771b23dadd43c39046622dbcb4c17e4" category="list-text">「Webhook をテスト」をクリックして、エラーがないことを確認します。</block>
   <block id="c20e86538672d1ab3ab8e3a5c2961e28" category="list-text">Webhook を保存します。</block>
   <block id="beda12a678062ce581606c88344f4e06" category="sidebar">Teams Webhook の例</block>
+  <block id="e18f38a263784d686e9a0d45d5416285" category="cell">次のいずれかのライセンス版を実行しているコンピューター：* AlmaLinux 9.5、10 * Centos（64ビット）：Stream 9 * Debian（64ビット）：11から13 * OpenSUSE Leap 15.2から15.6、16 * Oracle Enterprise Linux（64ビット）：8.10、9.2、9.4、9.6、10 * Red Hat（64ビット）：8.10、9.2、9.4、9.6、10 * Rocky 9.2から9.6 * SUSE Linux Enterprise Server 15 SP4から15 SP7、16 * Ubuntu Server：20.04、22.04、24.04 LTS * 上記プラットフォーム上のSELinux このコンピューターでは、他のアプリケーションレベルのソフトウェアを実行しないでください。専用サーバーをお勧めします。SELinuxで実行している場合は、取得ユニットシステムで次のコマンドを実行することをお勧めします：sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights</block>
 </blocks>
