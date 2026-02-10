@@ -46,6 +46,100 @@ image:ws_webhook_teams_example.png["ワークロード セキュリティ チー
 
 
 
+=== アダプティブカードテンプレートを使用してTeams通知を作成する手順
+
+. メッセージ本文を次のテンプレートに置き換えます：
++
+....
+  {
+  "type": "message",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.2",
+        "body": [
+          {
+            "type": "TextBlock",
+            "text": "%%severity%% Alert: %%synopsis%%",
+            "wrap": true,
+            "weight": "Bolder",
+            "size": "Large"
+          },
+          {
+            "type": "TextBlock",
+            "text": "%%detected%%",
+            "wrap": true,
+            "isSubtle": true,
+            "spacing": "Small"
+          },
+          {
+            "type": "FactSet",
+            "facts": [
+              {
+                "title": "User",
+                "value": "%%userName%%"
+              },
+              {
+                "title": "Attack/Abnormal Behavior",
+                "value": "%%type%%"
+              },
+              {
+                "title": "Action taken",
+                "value": "%%actionTaken%%"
+              },
+              {
+                "title": "Files encrypted",
+                "value": "%%filesEncrypted%%"
+              },
+              {
+                "title": "Encrypted files suffix",
+                "value": "%%encryptedFilesSuffix%%"
+              },
+              {
+                "title": "Files deleted",
+                "value": "%%filesDeleted%%"
+              },
+              {
+                "title": "Activity Change Rate",
+                "value": "%%changePercentage%%"
+              },
+              {
+                "title": "Severity",
+                "value": "%%severity%%"
+              },
+              {
+                "title": "Status",
+                "value": "%%status%%"
+              },
+              {
+                "title": "Notes",
+                "value": "%%note%%"
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.OpenUrl",
+            "title": "View Details",
+            "url": "https://%%cloudInsightsHostname%%/%%alertDetailsPageUrl%%"
+          }
+        ]
+      }
+    }
+  ]
+}
+....
+. Power Automate Flows を使用している場合、URL 内のクエリパラメータはエンコードされた形式になります。入力する前に URL をデコードする必要があります。
+. 「Webhook をテスト」をクリックして、エラーがないことを確認します。
+. Webhook を保存します。
+
+
+
+
 == Webhook経由の通知
 
 Webhook 経由でイベントを通知するには、[_Workload Security_] > [ポリシー] に移動します。  _+攻撃ポリシー_または_+警告ポリシー_を選択します。

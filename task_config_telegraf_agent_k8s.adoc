@@ -93,10 +93,10 @@ cosign copy <DII container registry>/netapp-monitoring:<image version> <private 
 
 === 手動アップグレード
 
-既存の Operator に AgentConfiguration が存在するかどうかを判断します (名前空間がデフォルトの _netapp-monitoring_ でない場合は、適切な名前空間に置き換えます)。
+既存の Operator に _AgentConfiguration_ が存在するかどうかを判断します（名前空間がデフォルトの _netapp-monitoring_ でない場合は、適切な名前空間に置き換えます）：
 
  kubectl -n netapp-monitoring get agentconfiguration netapp-ci-monitoring-configuration
-AgentConfiguration が存在する場合:
+_AgentConfiguration_ が存在する場合：
 
 * <<installing-the-kubernetes-monitoring-operator,インストール>>既存のオペレータよりも最新のオペレータを優先します。
 +
@@ -105,7 +105,7 @@ AgentConfiguration が存在する場合:
 
 
 
-AgentConfigurationが存在しない場合は、次のようになります。
+_AgentConfiguration_ が存在しない場合：
 
 * Data Infrastructure Insightsによって認識されるクラスター名をメモします (名前空間がデフォルトの netapp-monitoring でない場合は、適切な名前空間に置き換えてください)。
 +
@@ -117,7 +117,7 @@ AgentConfigurationが存在しない場合は、次のようになります。
 * <<installing-the-kubernetes-monitoring-operator,インストール>>最新のオペレーター。
 +
 ** 同じクラスター名を使用します。
-** 最新の Operator YAML ファイルをダウンロードした後、デプロイする前に、agent_backup.yaml にあるカスタマイズをダウンロードした operator-config.yaml に移植します。
+** 最新の Operator YAML ファイルをダウンロードした後、デプロイする前に、_agent_backup.yaml_ にあるカスタマイズをダウンロードした _operator-config.yaml_ に移植します。
 ** 必ず<<using-a-custom-or-private-docker-repository,最新のコンテナイメージを取得する>>カスタム リポジトリを使用している場合。
 
 
@@ -191,7 +191,7 @@ Kube-State-Metricsの詳細については、以下を参照してください�
 オペレーターをデプロイした後、次のコマンドを使用してこのリソースを編集することもできます。
 
  kubectl -n netapp-monitoring edit AgentConfiguration
-デプロイされたオペレーターのバージョンが AgentConfiguration をサポートしているかどうかを確認するには、次のコマンドを実行します。
+デプロイされたオペレーターのバージョンが _AgentConfiguration_ をサポートしているかどうかを確認するには、次のコマンドを実行します：
 
  kubectl get crd agentconfigurations.monitoring.netapp.com
 「サーバーからのエラー (NotFound)」というメッセージが表示された場合は、AgentConfiguration を使用する前にオペレーターをアップグレードする必要があります。
@@ -226,7 +226,7 @@ Kubernetes オペレーティング モニターのインストールに使用�
 
 Kubernetes クラスターがData Infrastructure Insights環境と通信するために使用するプロキシについては、これらの手順をすべて読んだ後、Kubernetes Monitoring Operator をインストールしてください。
 
-Kubernetes モニタリング オペレーターをデプロイする前に、operator-config.yaml の AgentConfiguration の proxy セクションを構成します。
+Kubernetes Monitoring Operator をデプロイする前に、_operator-config.yaml_ の _AgentConfiguration_ のプロキシセクションを設定します。
 
 [listing]
 ----
@@ -286,7 +286,7 @@ operator-deployment.yaml の monitoring-operator デプロイメントを編集�
 image: <docker repo of the enterprise/corp docker repo>/ci-kube-rbac-proxy:<ci-kube-rbac-proxy version>
 image: <docker repo of the enterprise/corp docker repo>/netapp-monitoring:<version>
 ....
-新しい docker リポジトリの場所を反映するように、operator-config.yaml の AgentConfiguration を編集します。プライベート リポジトリ用に新しい imagePullSecret を作成します。詳細については、_https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/_ を参照してください。
+新しい docker リポジトリの場所を反映するように、_operator-config.yaml_ の _AgentConfiguration_ を編集します。プライベートリポジトリ用の新しい imagePullSecret を作成します。詳細については、_https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/_ を参照してください。
 
 [listing]
 ----
@@ -300,9 +300,25 @@ agent:
 ----
 
 
+==== 長期パスワード用の API アクセストークン
+
+一部の環境（プロキシリポジトリなど）では、Data Infrastructure Insights docker リポジトリの長期パスワードが必要です。インストール時に UI で提供されるパスワードは 24 時間のみ有効です。それを使用する代わりに、API アクセストークンを docker リポジトリパスワードとして使用できます。このパスワードは、API アクセストークンが有効である限り有効です。この特定の目的のために新しい API アクセストークンを生成することも、既存のものを使用することもできます。
+
+link:task_config_telegraf_agent.html#manually-create-an-api-access-token["こちらをお読みください"]新しいAPIアクセストークンを作成する手順については、こちらをご覧ください。
+
+ダウンロードした _operator-secrets.yaml_ ファイルから既存の API アクセス トークンを抽出するには、ユーザーは以下を実行できます：
+
+`grep '\.dockerconfigjson' operator-secrets.yaml |sed 's/.*\.dockerconfigjson: //g' |base64 -d |jq`
+
+実行中のオペレーターインストールから既存のAPIアクセストークンを抽出するには、ユーザーは以下を実行できます：
+
+`kubectl -n netapp-monitoring get secret netapp-ci-docker -o jsonpath='{.data.\.dockerconfigjson}' |base64 -d |jq`
+
+
+
 === OpenShift の手順
 
-OpenShift 4.6 以降で実行している場合は、_operator-config.yaml_ の AgentConfiguration を編集して、_runPrivileged_ 設定を有効にする必要があります。
+OpenShift 4.6 以降で実行している場合は、_operator-config.yaml_ の _AgentConfiguration_ を編集して _runPrivileged_ 設定を有効にする必要があります：
 
 ....
 # Set runPrivileged to true SELinux is enabled on your kubernetes nodes
@@ -437,7 +453,7 @@ Kubernetes モニタリング オペレーターの設定中に問題が発生�
 | クラスター内に存在する Kubernetes CronJobs に対して収集されているメトリックが表示されません。 | Kubernetesのバージョンを確認してください（つまり `kubectl version`）。  v1.20.x 以下の場合、これは予想される制限です。  Kubernetes Monitoring Operator とともにデプロイされた kube-state-metrics リリースは、v1.CronJob のみをサポートします。 Kubernetes 1.20.x 以下では、CronJob リソースは v1beta.CronJob にあります。その結果、kube-state-metrics は CronJob リソースを見つけることができません。 
 
 
-| オペレーターをインストールすると、telegraf-ds ポッドは CrashLoopBackOff 状態になり、ポッド ログに「su: 認証失敗」と表示されます。 | _AgentConfiguration_ の telegraf セクションを編集し、_dockerMetricCollectionEnabled_ を false に設定します。詳細については、オペレーターのlink:telegraf_agent_k8s_config_options.html["設定オプション"]。  ... 仕様: ... テレグラフ: ...           - 名前: docker 実行モード: - DaemonSet 置換: - キー: DOCKER_UNIX_SOCK_PLACEHOLDER 値: unix:///run/docker.sock ...... 
+| オペレーターをインストールすると、telegraf-ds ポッドは CrashLoopBackOff 状態になり、ポッド ログに「su: 認証失敗」と表示されます。 | _AgentConfiguration_ の telegraf セクションを編集し、_dockerMetricCollectionEnabled_ を false に設定します。詳細については、オペレーターのlink:telegraf_agent_k8s_config_options.html["設定オプション"]を参照してください。... spec：... telegraf：...- name：docker run-mode：- DaemonSet substitutions：- key：DOCKER_UNIX_SOCK_PLACEHOLDER value：unix:///run/docker.sock ...... 
 
 
 | Telegraf ログに次のようなエラー メッセージが繰り返し表示されます: E!  [エージェント] 出力への書き込みエラー: http: Post "\https://<tenant_url>/rest/v1/lake/ingest/influxdb": コンテキストの期限が切れました (ヘッダーの待機中に Client.Timeout を超えました) | _AgentConfiguration_ の telegraf セクションを編集し、_outputTimeout_ を 10 秒に増やします。詳細については、オペレーターのlink:telegraf_agent_k8s_config_options.html["設定オプション"]。 
@@ -484,7 +500,7 @@ fluent-bit:
 | Telegraf は、ロック可能なメモリが不足しているために警告を発したりクラッシュしたりします。 | 基盤となるオペレーティング システム/ノードで Telegraf のロック可能なメモリの制限を増やしてみてください。制限を増やすことができない場合は、NKMO エージェント構成を変更し、_unprotected_ を _true_ に設定します。これにより、Telegraf はロックされたメモリ ページを予約しないように指示されます。復号化された秘密がディスクにスワップアウトされる可能性があるため、セキュリティ上のリスクが生じる可能性がありますが、ロックされたメモリを予約できない環境での実行が可能になります。  _unprotected_ 設定オプションの詳細については、link:telegraf_agent_k8s_config_options.html["設定オプション"]ページ。 
 
 
-| Telegraf から次のような警告メッセージが表示されます: _W!  [inputs.diskio] "vdc" のディスク名を収集できません: /dev/vdc の読み取りエラー: そのようなファイルまたはディレクトリはありません_ | Kubernetes モニタリング オペレーターの場合、これらの警告メッセージは無害であり、無視しても問題ありません。  または、AgentConfiguration の telegraf セクションを編集し、_runDsPrivileged_ を true に設定します。詳細については、link:telegraf_agent_k8s_config_options.html["オペレータの設定オプション"] 。 
+| Telegraf から次のような警告メッセージが表示されます: _W!  [inputs.diskio] "vdc" のディスク名を収集できません: /dev/vdc の読み取りエラー: そのようなファイルまたはディレクトリはありません_ | Kubernetes Monitoring Operator の場合、これらの警告メッセージは無害であり、無視しても問題ありません。または、AgentConfiguration の telegraf セクションを編集し、_runDsPrivileged_ を true に設定します。詳細については、link:telegraf_agent_k8s_config_options.html["オペレータの設定オプション"]を参照してください。 
 
 
 | Fluent-bit ポッドが次のエラーで失敗しています: [2024/10/16 14:16:23] [error] [/src/fluent-bit/plugins/in_tail/tail_fs_inotify.c:360 errno=24] 開いているファイルが多すぎます [2024/10/16 14:16:23] [error] 入力 tail.0 の初期化に失敗しました [2024/10/16 14:16:23] [error] [engine] 入力の初期化に失敗しました  a| 
@@ -512,5 +528,8 @@ Fluent-bit を再起動します。
 
 
 | Telegraf DS ポッドは、TLS 証明書を検証できないために kubernetes 入力プラグインが HTTP リクエストを実行できないことに関連するエラーを報告しています。例: E!  [inputs.kubernetes] プラグインのエラー: HTTPリクエストの送信中にエラーが発生しました"https://<kubelet_IP>:10250/stats/summary":[]得る"https://<kubelet_IP>:10250/stats/summary":[]tls: 証明書の検証に失敗しました: x509: IP SANが含まれていないため、<kubelet_IP>の証明書を検証できません | これは、kubelet が自己署名証明書を使用している場合、および/または指定された証明書の証明書の _Subject Alternative Name_ リストに <kubelet_IP> が含まれていない場合に発生します。これを解決するには、ユーザーはlink:telegraf_agent_k8s_config_options.html["エージェント構成"]、_telegraf:insecureK8sSkipVerify_ を _true_ に設定します。これにより、Telegraf 入力プラグインが検証をスキップするように設定されます。あるいは、ユーザーはkubeletを次のように設定することができます。link:https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/["サーバーTLSブートストラップ"]これにより、「certificates.k8s.io」API からの証明書要求がトリガーされます。 
+
+
+| Fluent-bit ポッドで次のエラーが発生し、ポッドを起動できません：026/01/12 20:20:32] [error] [sqldb] error=unable to open database file [2026/01/12 20:20:32] [error] [input:tail:tail.0] db: could not create 'in_tail_files' table [2026/01/12 20:20:32] [error] [input:tail:tail.0] could not open/create database [2026/01/12 20:20:32] [error] failed initialize input tail.0 [2026/01/12 20:20:32] [error] [engine] input initialization failed | DBファイルが存在するホストディレクトリに適切な読み取り / 書き込み権限があることを確認してください。具体的には、ホストディレクトリは非ルートユーザーに読み取り / 書き込み権限を付与する必要があります。デフォルトのDBファイルの場所は、fluent-bit-dbFile _agentconfiguration_ オプションで上書きされない限り、/var/log/ です。SELinuxが有効になっている場合は、fluent-bit-seLinuxOptionsType agentconfigurationオプションを 'spc_t' に設定してみてください。 
 |===
 追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

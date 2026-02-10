@@ -7181,20 +7181,16 @@
   <block id="3e70b4412d3a3b92cd10a9e1453fc282" category="section-title">以前実行していたバージョンにロールバックする</block>
   <block id="4d8704d77f12b96a935cdf09de6c94be" category="paragraph">プッシュボタン アップグレード機能を使用してアップグレードし、アップグレード後 7 日以内に現在のバージョンのオペレーターに問題が発生した場合は、アップグレード プロセス中に作成されたスナップショットを使用して、以前実行していたバージョンにダウングレードできます。ロールバックするクラスターの横にあるメニューをクリックし、[_ロールバック_] を選択します。</block>
   <block id="95168a3a05a80c7b596b36a7ec8218c4" category="section-title">手動アップグレード</block>
-  <block id="59f9e8b92a6bc55e991031f0b5fea324" category="paragraph">既存の Operator に AgentConfiguration が存在するかどうかを判断します (名前空間がデフォルトの _netapp-monitoring_ でない場合は、適切な名前空間に置き換えます)。</block>
-  <block id="bb5c0afa0b80550de02b1ac19c1226b4" category="paragraph">AgentConfiguration が存在する場合:</block>
   <block id="349838fb1d851d3e2014b9fe39203275" category="inline-xref">インストール</block>
   <block id="47a3c2ef85d7b8f59098e0a3e25e7fed" category="list-text"><block ref="69b3420fb24fd81786681a7bce7bbc4d" category="inline-xref-macro-rx"></block>既存のオペレータよりも最新のオペレータを優先します。</block>
   <block id="f60428f53f8ec06db7eeb3c6dc8a3ec1" category="inline-xref">最新のコンテナイメージを取得する</block>
   <block id="727021f9728a61f5f57027c22e99ed17" category="list-text">必ず<block ref="70886476cda3a9669d1d2ba99218e076" category="inline-xref-macro-rx"></block>カスタム リポジトリを使用している場合。</block>
-  <block id="a7e8df3295c386ff0d7a33ebd0ce4762" category="paragraph">AgentConfigurationが存在しない場合は、次のようになります。</block>
   <block id="7c2ea0e402732ba1c1013065d22d7297" category="list-text">Data Infrastructure Insightsによって認識されるクラスター名をメモします (名前空間がデフォルトの netapp-monitoring でない場合は、適切な名前空間に置き換えてください)。</block>
   <block id="af43624bdc80303ec074448a745b7a3c" category="list-text">既存の Operator のバックアップを作成します (名前空間がデフォルトの netapp-monitoring でない場合は、適切な名前空間に置き換えます)。</block>
   <block id="a27dfe771799a09fd55fea73286eb6ab" category="inline-xref">アンインストール</block>
   <block id="68a0b7243f029dd3130a0fb114a7ca00" category="list-text"><block ref="4cb6ecff5b560ef65768b9939bfe491e" category="inline-xref-macro-rx"></block>既存のオペレータ。</block>
   <block id="a87371c8f3e6091825251b0817597ab0" category="list-text"><block ref="69b3420fb24fd81786681a7bce7bbc4d" category="inline-xref-macro-rx"></block>最新のオペレーター。</block>
   <block id="4c42e83b5a46ef16402aa2bea7ab525e" category="list-text">同じクラスター名を使用します。</block>
-  <block id="9e274d61eab1c1a3b088854ed50639ff" category="list-text">最新の Operator YAML ファイルをダウンロードした後、デプロイする前に、agent_backup.yaml にあるカスタマイズをダウンロードした operator-config.yaml に移植します。</block>
   <block id="bf4f601d0ebbcc54c415c3eb689c82f3" category="section-title">Kubernetes モニタリング オペレーターの停止と起動</block>
   <block id="ac3978dbb1caac278e3d6b9932b85966" category="paragraph">Kubernetes モニタリング オペレーターを停止するには:</block>
   <block id="faf3019197a41959b7aba9bcfa3023da" category="paragraph">Kubernetes モニタリング オペレーターを起動するには:</block>
@@ -7216,14 +7212,12 @@
   <block id="cac54dc379f23a7aed8745bde8386662" category="inline-link-macro">利用可能な設定</block>
   <block id="8baa15e22ac6c7ee4ce4e0a88da9798e" category="paragraph">最も頻繁に変更される設定は、_AgentConfiguration_ カスタム リソースで構成できます。オペレーターをデプロイする前に、_operator-config.yaml_ ファイルを編集してこのリソースを編集できます。このファイルには、コメントアウトされた設定の例が含まれています。リストを見る<block ref="d0a687c4569dc784e63f3960b33ab7c7" category="inline-link-macro-rx"></block>オペレーターの最新バージョン。</block>
   <block id="27aa502b8f8f23143b77f0800d6dd42f" category="paragraph">オペレーターをデプロイした後、次のコマンドを使用してこのリソースを編集することもできます。</block>
-  <block id="3ab04e244a91c8a73c48633c62ac613a" category="paragraph">デプロイされたオペレーターのバージョンが AgentConfiguration をサポートしているかどうかを確認するには、次のコマンドを実行します。</block>
   <block id="51ba9262aad7e83aa5f74ed6dc93a039" category="paragraph">「サーバーからのエラー (NotFound)」というメッセージが表示された場合は、AgentConfiguration を使用する前にオペレーターをアップグレードする必要があります。</block>
   <block id="7a7f1dddc2fef7ed16175a3e2e424b3f" category="paragraph">Kubernetes モニタリング オペレーターをインストールするために、テナント上でプロキシを使用できる場所は 2 つあります。これらは同じプロキシ システムである場合もあれば、別のプロキシ システムである場合もあります。</block>
   <block id="92caa6668b03ccf88ed2c1dbef632933" category="paragraph">これらのいずれかまたは両方にプロキシを使用する場合、Kubernetes Operating Monitor をインストールするには、まずプロキシがData Infrastructure Insights環境との良好な通信を許可するように構成されていることを確認する必要があります。プロキシがあり、Operator をインストールするサーバー/VM からData Infrastructure Insightsにアクセスできる場合は、プロキシは適切に構成されている可能性があります。</block>
   <block id="4cf131cb570986a48574d0708d4c8b35" category="paragraph">Kubernetes オペレーティング モニターのインストールに使用するプロキシについては、Operator をインストールする前に、_http_proxy/https_proxy_ 環境変数を設定します。一部のプロキシ環境では、_no_proxy environment_ 変数も設定する必要がある場合があります。</block>
   <block id="e25c898cccd50c035eb1941a8411ba8b" category="paragraph">変数を設定するには、Kubernetes モニタリング オペレーターをインストールする前に、システムで次の手順を実行します。</block>
   <block id="8abad16925d189288490bd9d8b5e034c" category="paragraph">Kubernetes クラスターがData Infrastructure Insights環境と通信するために使用するプロキシについては、これらの手順をすべて読んだ後、Kubernetes Monitoring Operator をインストールしてください。</block>
-  <block id="6b883170f6284320691d7cfefa3f48e3" category="paragraph">Kubernetes モニタリング オペレーターをデプロイする前に、operator-config.yaml の AgentConfiguration の proxy セクションを構成します。</block>
   <block id="e79dbc8635cd754ff3943b0362cd5a36" category="paragraph">デフォルトでは、Kubernetes Monitoring Operator はData Infrastructure Insightsリポジトリからコンテナ イメージをプルします。監視のターゲットとして Kubernetes クラスターが使用されており、そのクラスターがカスタムまたはプライベート Docker リポジトリまたはコンテナー レジストリからのみコンテナー イメージをプルするように構成されている場合は、Kubernetes 監視オペレーターに必要なコンテナーへのアクセスを構成する必要があります。</block>
   <block id="b1dbe9124bd000f8918a20bf61bc24f6" category="list-text">ci-kube-rbac-プロキシ</block>
   <block id="67efe5df179f0f50a5a5e82fd46a07fc" category="list-text">ci-ksm</block>
@@ -7282,7 +7276,6 @@
   <block id="02230bab9788e4843408e124331bb1ca" category="cell">クラスター内に存在する Kubernetes CronJobs に対して収集されているメトリックが表示されません。</block>
   <block id="b3b6bea000b13acbfcb412bad49ee494" category="cell">Kubernetesのバージョンを確認してください（つまり<block ref="4fc58818ca77fb3a60cbd34a7f7d5071" prefix=" " category="inline-code"></block>）。  v1.20.x 以下の場合、これは予想される制限です。  Kubernetes Monitoring Operator とともにデプロイされた kube-state-metrics リリースは、v1.CronJob のみをサポートします。 Kubernetes 1.20.x 以下では、CronJob リソースは v1beta.CronJob にあります。その結果、kube-state-metrics は CronJob リソースを見つけることができません。</block>
   <block id="45698e13b1c2f7241751839133834506" category="cell">オペレーターをインストールすると、telegraf-ds ポッドは CrashLoopBackOff 状態になり、ポッド ログに「su: 認証失敗」と表示されます。</block>
-  <block id="e77701e8957afb414a45ca434ef7f000" category="cell">_AgentConfiguration_ の telegraf セクションを編集し、_dockerMetricCollectionEnabled_ を false に設定します。詳細については、オペレーターの<block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>。  ... 仕様: ... テレグラフ: ...           - 名前: docker 実行モード: - DaemonSet 置換: - キー: DOCKER_UNIX_SOCK_PLACEHOLDER 値: unix:///run/docker.sock ......</block>
   <block id="802997bcb8e9581226b3000b8b611b1c" category="cell">Telegraf ログに次のようなエラー メッセージが繰り返し表示されます: E!  [エージェント] 出力への書き込みエラー: http: Post "\https://&lt;tenant_url&gt;/rest/v1/lake/ingest/influxdb": コンテキストの期限が切れました (ヘッダーの待機中に Client.Timeout を超えました)</block>
   <block id="5a581223d2fea6c45a7ac1278334f8c1" category="cell">_AgentConfiguration_ の telegraf セクションを編集し、_outputTimeout_ を 10 秒に増やします。詳細については、オペレーターの<block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>。</block>
   <block id="4f05106cca363b0f3c492314ab777534" category="cell">一部のイベント ログの _involvedobject_ データが見つかりません。</block>
@@ -7310,7 +7303,6 @@
   <block id="9953ac1176fec4ceef2b233ecd286c7b" category="cell">基盤となるオペレーティング システム/ノードで Telegraf のロック可能なメモリの制限を増やしてみてください。制限を増やすことができない場合は、NKMO エージェント構成を変更し、_unprotected_ を _true_ に設定します。これにより、Telegraf はロックされたメモリ ページを予約しないように指示されます。復号化された秘密がディスクにスワップアウトされる可能性があるため、セキュリティ上のリスクが生じる可能性がありますが、ロックされたメモリを予約できない環境での実行が可能になります。  _unprotected_ 設定オプションの詳細については、<block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>ページ。</block>
   <block id="d2402cb2e8bc53d6f0ea3a592a927071" category="cell">Telegraf から次のような警告メッセージが表示されます: _W!  [inputs.diskio] "vdc" のディスク名を収集できません: /dev/vdc の読み取りエラー: そのようなファイルまたはディレクトリはありません_</block>
   <block id="d167beea70a778e86c7a57bc2bd4338a" category="inline-link-macro">オペレータの設定オプション</block>
-  <block id="1f3c6b9eb496e3586cb89ac14caca626" category="cell">Kubernetes モニタリング オペレーターの場合、これらの警告メッセージは無害であり、無視しても問題ありません。  または、AgentConfiguration の telegraf セクションを編集し、_runDsPrivileged_ を true に設定します。詳細については、<block ref="ebda7113c4f0b0fd6090a6c2a6162dc1" category="inline-link-macro-rx"></block> 。</block>
   <block id="828b70096630fbae314b6b8a4022c2d3" category="cell">Fluent-bit ポッドが次のエラーで失敗しています: [2024/10/16 14:16:23] [error] [/src/fluent-bit/plugins/in_tail/tail_fs_inotify.c:360 errno=24] 開いているファイルが多すぎます [2024/10/16 14:16:23] [error] 入力 tail.0 の初期化に失敗しました [2024/10/16 14:16:23] [error] [engine] 入力の初期化に失敗しました</block>
   <block id="4c7e0efe737f180965ee5c651fc247df" category="paragraph">クラスター内の _fsnotify_ 設定を変更してみます。</block>
   <block id="354078bb27a2ab00cc965db863bbe682" category="paragraph">Fluent-bit を再起動します。</block>
@@ -12676,4 +12668,29 @@
   <block id="ad616b1714b32991576ec7cd2b8832a8" category="sidebar">ダッシュボード アクセスの管理</block>
   <block id="1a69a00931f550995a9d19745f714169" category="paragraph">この手順は現在更新中です。後ほどご確認ください。</block>
   <block id="ab5cb6794af58d6cd4132b44aa3d3d04" category="sidebar">Data Infrastructure Insightsへのサインアップ</block>
+  <block id="017db8357e64ddb2e41630e07c556c17" category="paragraph">既存の Operator に _AgentConfiguration_ が存在するかどうかを判断します（名前空間がデフォルトの _netapp-monitoring_ でない場合は、適切な名前空間に置き換えます）：</block>
+  <block id="71e56d8dc562ba6525c8592046f68012" category="paragraph">_AgentConfiguration_ が存在する場合：</block>
+  <block id="aea7876c0fcf2d6bb3bd4df2f60ff442" category="paragraph">_AgentConfiguration_ が存在しない場合：</block>
+  <block id="6d98d6fa93fab92d887e8cbba88bb3c9" category="list-text">最新の Operator YAML ファイルをダウンロードした後、デプロイする前に、_agent_backup.yaml_ にあるカスタマイズをダウンロードした _operator-config.yaml_ に移植します。</block>
+  <block id="a2c5c9ed2cfd796e2fa991e3ec4d2ed6" category="paragraph">デプロイされたオペレーターのバージョンが _AgentConfiguration_ をサポートしているかどうかを確認するには、次のコマンドを実行します：</block>
+  <block id="2d216b955180b5366a46ab13cea76c79" category="paragraph">Kubernetes Monitoring Operator をデプロイする前に、_operator-config.yaml_ の _AgentConfiguration_ のプロキシセクションを設定します。</block>
+  <block id="23dd082c5fae705a8ae3f5e2a44d157d" category="paragraph">新しい docker リポジトリの場所を反映するように、_operator-config.yaml_ の _AgentConfiguration_ を編集します。プライベートリポジトリ用の新しい imagePullSecret を作成します。詳細については、_https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/_ を参照してください。</block>
+  <block id="21d198dbb991af1db5069bb51d22d506" category="section-title">長期パスワード用の API アクセストークン</block>
+  <block id="0b55a8de0fa7e236b1e898699fd950d6" category="paragraph">一部の環境（プロキシリポジトリなど）では、Data Infrastructure Insights docker リポジトリの長期パスワードが必要です。インストール時に UI で提供されるパスワードは 24 時間のみ有効です。それを使用する代わりに、API アクセストークンを docker リポジトリパスワードとして使用できます。このパスワードは、API アクセストークンが有効である限り有効です。この特定の目的のために新しい API アクセストークンを生成することも、既存のものを使用することもできます。</block>
+  <block id="8acc82c66b1534666593df5e46ba9b51" category="inline-link-macro">こちらをお読みください</block>
+  <block id="2db1dc28cb10f0bacd2dfe2a2502521e" category="paragraph"><block ref="80163dfb712919489c1440e1af1ce80c" category="inline-link-macro-rx"></block>新しいAPIアクセストークンを作成する手順については、こちらをご覧ください。</block>
+  <block id="3a92af63fb0dbfb3fb4c50844d4e6226" category="paragraph">ダウンロードした _operator-secrets.yaml_ ファイルから既存の API アクセス トークンを抽出するには、ユーザーは以下を実行できます：</block>
+  <block id="17b15ada08a59825a040f1bfd86330d9" category="paragraph"><block ref="dcbd6d0a6636d4e728bacac25d8ec372" prefix="" category="inline-code"></block></block>
+  <block id="8907a57d03f024ba26a5ed6588ca4877" category="paragraph">実行中のオペレーターインストールから既存のAPIアクセストークンを抽出するには、ユーザーは以下を実行できます：</block>
+  <block id="9ca564a2b84b7e6b27df5be0b6a657cd" category="paragraph"><block ref="7dabc26725e27da4827b9fe642dd2038" prefix="" category="inline-code"></block></block>
+  <block id="c2c2ad2d6b726995fdb32dbf29d2189e" category="paragraph">OpenShift 4.6 以降で実行している場合は、_operator-config.yaml_ の _AgentConfiguration_ を編集して _runPrivileged_ 設定を有効にする必要があります：</block>
+  <block id="566ab1672deaaeddb8f73b03838f0642" category="cell">_AgentConfiguration_ の telegraf セクションを編集し、_dockerMetricCollectionEnabled_ を false に設定します。詳細については、オペレーターの<block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>を参照してください。... spec：... telegraf：...- name：docker run-mode：- DaemonSet substitutions：- key：DOCKER_UNIX_SOCK_PLACEHOLDER value：unix:///run/docker.sock ......</block>
+  <block id="f706cf0f0319c0d8a1756d4dd2efaa5e" category="cell">Kubernetes Monitoring Operator の場合、これらの警告メッセージは無害であり、無視しても問題ありません。または、AgentConfiguration の telegraf セクションを編集し、_runDsPrivileged_ を true に設定します。詳細については、<block ref="ebda7113c4f0b0fd6090a6c2a6162dc1" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="8a398765d9480ef0a8dec93952d8eba6" category="cell">Fluent-bit ポッドで次のエラーが発生し、ポッドを起動できません：026/01/12 20:20:32] [error] [sqldb] error=unable to open database file [2026/01/12 20:20:32] [error] [input:tail:tail.0] db: could not create 'in_tail_files' table [2026/01/12 20:20:32] [error] [input:tail:tail.0] could not open/create database [2026/01/12 20:20:32] [error] failed initialize input tail.0 [2026/01/12 20:20:32] [error] [engine] input initialization failed</block>
+  <block id="19df898e84b2a11ee6e02ec8d86ac84e" category="cell">DBファイルが存在するホストディレクトリに適切な読み取り / 書き込み権限があることを確認してください。具体的には、ホストディレクトリは非ルートユーザーに読み取り / 書き込み権限を付与する必要があります。デフォルトのDBファイルの場所は、fluent-bit-dbFile _agentconfiguration_ オプションで上書きされない限り、/var/log/ です。SELinuxが有効になっている場合は、fluent-bit-seLinuxOptionsType agentconfigurationオプションを 'spc_t' に設定してみてください。</block>
+  <block id="1e8789eeeafc6f5cded0b8e336c55e66" category="section-title">アダプティブカードテンプレートを使用してTeams通知を作成する手順</block>
+  <block id="77cefe808c0d0437a2a44f1685a4dec9" category="list-text">メッセージ本文を次のテンプレートに置き換えます：</block>
+  <block id="32d27ad98b4b043c62f61de16291608e" category="list-text">Power Automate Flows を使用している場合、URL 内のクエリパラメータはエンコードされた形式になります。入力する前に URL をデコードする必要があります。</block>
+  <block id="3771b23dadd43c39046622dbcb4c17e4" category="list-text">「Webhook をテスト」をクリックして、エラーがないことを確認します。</block>
+  <block id="c20e86538672d1ab3ab8e3a5c2961e28" category="list-text">Webhook を保存します。</block>
 </blocks>
