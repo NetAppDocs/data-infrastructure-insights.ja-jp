@@ -12693,4 +12693,5 @@
   <block id="c20e86538672d1ab3ab8e3a5c2961e28" category="list-text">Webhook を保存します。</block>
   <block id="beda12a678062ce581606c88344f4e06" category="sidebar">Teams Webhook の例</block>
   <block id="e18f38a263784d686e9a0d45d5416285" category="cell">次のいずれかのライセンス版を実行しているコンピューター：* AlmaLinux 9.5、10 * Centos（64ビット）：Stream 9 * Debian（64ビット）：11から13 * OpenSUSE Leap 15.2から15.6、16 * Oracle Enterprise Linux（64ビット）：8.10、9.2、9.4、9.6、10 * Red Hat（64ビット）：8.10、9.2、9.4、9.6、10 * Rocky 9.2から9.6 * SUSE Linux Enterprise Server 15 SP4から15 SP7、16 * Ubuntu Server：20.04、22.04、24.04 LTS * 上記プラットフォーム上のSELinux このコンピューターでは、他のアプリケーションレベルのソフトウェアを実行しないでください。専用サーバーをお勧めします。SELinuxで実行している場合は、取得ユニットシステムで次のコマンドを実行することをお勧めします：sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights</block>
+  <block id="ddb78a0715fab46562d8ee8102cea78c" category="list-text">ポート 443（または設定されている場合は 8443）</block>
 </blocks>

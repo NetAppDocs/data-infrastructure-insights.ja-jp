@@ -7,6 +7,10 @@ keywords: data collector, queries, create, storagegrid
 = NetApp StorageGRIDデータコレクター
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -51,7 +55,7 @@ Data Infrastructure Insights は、 NetApp StorageGRIDコレクターから次�
 
 * StorageGRIDホスト IP アドレス
 * メトリッククエリとテナントアクセスのロールが割り当てられたユーザーのユーザー名とパスワード
-* ポート443
+* ポート 443（または設定されている場合は 8443）
 
 
 
