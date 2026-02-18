@@ -13878,4 +13878,5 @@
   <block id="7a1fe47a1aa444b45e1475e2c2b156bc" category="cell">StorageGRID（Grid Manager）の管理IPアドレス</block>
   <block id="0eb50b790bd551aaef2bbefbd077cd1b" category="cell">StorageGRID（Grid Manager）へのログインに使用する名前</block>
   <block id="9730a2702facd53c375d1f62e4d662a2" category="cell">StorageGRID（Grid Manager）へのログインに使用するパスワード</block>
+  <block id="749045de0e520f5ad8cff4d4635dd0d8" category="admonition">DII サイトは、選択した Console Organization に関連付けられます。組織が複数ある場合は、DII テナントに関連付ける適切な組織を選択してください。</block>
 </blocks>

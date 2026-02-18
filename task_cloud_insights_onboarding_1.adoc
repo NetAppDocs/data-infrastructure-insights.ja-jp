@@ -37,6 +37,9 @@ NetApp Console アカウントを取得したら、link:https://console.netapp.c
 
 画面上部のドロップダウンから組織を選択します。
 
+
+NOTE: DII サイトは、選択した Console Organization に関連付けられます。組織が複数ある場合は、DII テナントに関連付ける適切な組織を選択してください。
+
 左上のメインメニューから、*ガバナンス > Data Infrastructure Insights*を選択します。
 
 
