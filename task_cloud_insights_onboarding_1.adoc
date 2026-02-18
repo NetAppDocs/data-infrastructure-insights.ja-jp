@@ -14,6 +14,56 @@ keywords: onboarding, new user
 
 
 [role="lead"]
-Data Infrastructure Insightsの使用を開始する前に、* NetApp Console* ポータルにサインアップする必要があります。  NetApp Consoleのログイン情報をすでにお持ちの場合は、簡単な手順でData Infrastructure Insightsの無料トライアルを開始できます。
+Data Infrastructure Insightsでの作業を開始する前に、NetApp Consoleポータルでサインアップする必要があります。すでにNetApp Consoleのログインをお持ちの場合は、いくつかの簡単な手順でData Infrastructure Insightsの無料トライアルを開始できます。
 
-この手順は現在更新中です。後ほどご確認ください。
+
+
+== NetApp Console アカウントの作成
+
+NetAppのクラウドサービスを開始するには、link:https://console.netapp.com/["* NetApp Console*"^]にアクセスして*開始*をクリックします。
+
+* まだサインアップしていない場合は、*Sign Up*を選択してください
+* 有効なビジネス用メールアドレスを入力し、パスワードを選択してください。
+* 会社名と氏名を入力してください。
+* 利用規約に同意して、*Continue* を選択します。
+* Console では、開始ワークフローを案内します。
+
+
+
+
+=== すでにNetApp Consoleログインをお持ちの場合はどうすればよいですか？
+
+NetApp Console アカウントを取得したら、link:https://console.netapp.com/["NetApp Console"] ポータルページで *Log In* を選択するだけです。
+
+画面上部のドロップダウンから組織を選択します。
+
+左上のメインメニューから、*ガバナンス > Data Infrastructure Insights*を選択します。
+
+
+
+== Data Infrastructure Insights無料トライアルを開始する
+
+開始する準備ができたら、*30 日間の無料トライアルを開始*を選択します。サイトをホストする地域を選択し、その他の指示に従います。
+
+DII サイトを作成するには、「Org Admin」ロールが必要であることに注意してください。
+
+コンソールは、Data Infrastructure Insights（DII）サイトのオンボーディング準備が完了したことを通知します。*オンボーディングを開始*ボタンを選択してサイトをセットアップします。
+
+オンボーディングプロセスが完了する前に中断した場合は、Consoleに再度ログインして*オンボーディングを完了*してください。
+
+オンボーディングが完了すると、コンソールにテナントの使用準備が完了したことが通知されます。*Data Infrastructure Insightsの起動*を選択して開始します。一部のデータ（インベントリなど）はすぐに使用できますが、他のデータ（パフォーマンス監視など）は意味のあるものにするために取得に時間がかかる場合があります。
+
+
+
+== ログアウト
+
+Data Infrastructure Insightsからログアウトするには、*ユーザー名*をクリックし、*ログアウト*を選択します。
+
+
+NOTE: Data Infrastructure Insightsからログアウトすると、コンソールからログアウトされます。コンソールサインインを使用する他のNetAppクラウドサービスからもログアウトされます。
+
+
+
+=== 非アクティブ時のタイムアウト
+
+デフォルトでは、Consoleは6時間（360分）にわたってアクティビティがない場合にユーザーをログアウトします。アクティビティに関係なく、ユーザーは7日後にログアウトされます。

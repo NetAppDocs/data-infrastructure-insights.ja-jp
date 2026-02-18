@@ -67,13 +67,13 @@ Data Infrastructure Insights は、 NetApp StorageGRIDコレクターから次�
 | フィールド | 説明 
 
 
-| StorageGRIDホスト IP アドレス | StorageGRIDアプライアンスの管理仮想IPアドレス 
+| StorageGRIDホスト IP アドレス | StorageGRID（Grid Manager）の管理IPアドレス 
 
 
-| ユーザー名 | StorageGRIDアプライアンスにログインするために使用する名前 
+| ユーザー名 | StorageGRID（Grid Manager）へのログインに使用する名前 
 
 
-| パスワード | StorageGRIDアプライアンスにログインするために使用するパスワード 
+| パスワード | StorageGRID（Grid Manager）へのログインに使用するパスワード 
 |===
 
 
