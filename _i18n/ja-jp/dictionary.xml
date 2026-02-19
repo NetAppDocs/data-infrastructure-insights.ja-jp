@@ -13879,4 +13879,72 @@
   <block id="0eb50b790bd551aaef2bbefbd077cd1b" category="cell">StorageGRID（Grid Manager）へのログインに使用する名前</block>
   <block id="9730a2702facd53c375d1f62e4d662a2" category="cell">StorageGRID（Grid Manager）へのログインに使用するパスワード</block>
   <block id="749045de0e520f5ad8cff4d4635dd0d8" category="admonition">DII サイトは、選択した Console Organization に関連付けられます。組織が複数ある場合は、DII テナントに関連付ける適切な組織を選択してください。</block>
+  <block id="d55e67726729808ea6f67b165600c105" category="summary">Data Infrastructure Insights の AI アシスタントを使用すると、データを要約したり、洞察を探ったり、問題をトラブルシューティングしたり、リソースを計画したりできます。</block>
+  <block id="accab30482cee85eb4e017db64428cad" category="doc">Data Infrastructure Insights AIアシスタント</block>
+  <block id="6804300f32b2dfd7358cbef13acc4c27" category="paragraph">*Data Infrastructure Insights AI Assistant* は、インフラストラクチャデータをより効率的に処理できるように設計されています。情報を分析し、洞察を発見し、運用上の課題を解決し、リソースに関する情報に基づいた意思決定を行うのに役立ちます。</block>
+  <block id="e7cc6c745169e0af46fdfb09b867c22c" category="paragraph">DII AI アシスタントは限定プレビューとしてご利用いただけます。Data Infrastructure Insights プレビュー機能<block ref="ee58f03d7eaea0665aa8a572992ca1b8" category="inline-link-macro-rx"></block>。</block>
+  <block id="b6ed013ce4b16673bae45126733837ff" category="paragraph">AI アシスタントは、AWS にデプロイされた Data Infrastructure Insights テナントのみで利用できます。</block>
+  <block id="01a593a05ec8086d16c6d465263a2f9f" category="inline-image-macro">AIアシスタントのサンプル質問</block>
+  <block id="18aabc8cd51ce3494b256e8195526a85" category="paragraph"><block ref="18aabc8cd51ce3494b256e8195526a85" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f58b0ee974430595788a16d0bcde2c33" category="section-title">インフラストラクチャの新しいインテリジェントパートナーをご紹介します</block>
+  <block id="ac512591ec703428212f282a69b68d6b" category="paragraph">AI アシスタントは、データとのやり取りの方法を変革し、複雑なクエリを簡単な会話に変えます。隠れたパターンを即座に発見し、トラブルシューティングを加速し、データ主体の意思決定を自信を持って行うことができます。次のような質問に即座に回答が得られます：</block>
+  <block id="87c323a02eb373f2f5154a593236b49a" category="list-text">許容できない遅延が継続した場合に警告するようにモニターを構成するにはどうすればよいですか？</block>
+  <block id="d7bd01231d44983bd6370a499a124481" category="list-text">環境内で使用率が最も高い上位のストレージプールは何ですか？</block>
+  <block id="6901ef6009bc5d9c00833c9090aa30cf" category="list-text">過去 1 時間に生成されたアラートの数はいくつですか？</block>
+  <block id="48cc458fd1657654f64c60bae2b12c3e" category="list-text">収集されるログの最も一般的なタイプは何ですか？</block>
+  <block id="88058d05eae2bfa31ce1daf9f1af8607" category="list-text">どのホストの CPU 使用率が最も高いですか？</block>
+  <block id="d4b43c6c4b6712eb880da1176352d222" category="list-text">環境内で監視できる資産タイプは何ですか？</block>
+  <block id="05ce505287e46580b1958ceda1a48f14" category="list-text">現在アクティブな重大なアラートはありますか？</block>
+  <block id="f8575cf3234d3a71bfcac8fe3ec655d0" category="list-text">ストレージシステムの全体的な健全性ステータスはどうですか？</block>
+  <block id="56fdc89bcfb8177ae27782f7803cbcdb" category="list-text">最も多くのメモリを消費している仮想マシンはどれですか？</block>
+  <block id="0b8904f678a37d1153da26510caeac05" category="list-text">システムにはいくつのモニターが設定されていますか？</block>
+  <block id="7acf2c0112bebac877a33b61ec96b56a" category="section-title">AIアシスタントを使用する前に</block>
+  <block id="01ea9d4395c142fe0a85fffdc8bdcd12" category="list-text">AI アシスタントはあなたを支援するように設計されています。正確さを追求していますが、最良の結果を得るためには、出力を人間の監視下で検証することを強くお勧めします。</block>
+  <block id="efff4d34a730a1682b1f44faa2d952cb" category="list-text">あなたと同僚の安全とプライバシーのため、個人を特定できる情報（PII）を入力しないでください。</block>
+  <block id="3e776ea9184366df6cf82ba01ee389e8" category="list-text">データの安全を確保するために、機密情報や秘密情報は入力しないでください。</block>
+  <block id="25568be837cb00c81f49c6c7f14323d4" category="inline-link-macro">NetApp Data Processing補遺</block>
+  <block id="20b24ff87bebf48817d3f0121617e88d" category="inline-link-macro">NetAppプライバシー ポリシー</block>
+  <block id="12e699559691bd3a438e052cd6bf3f5f" category="list-text"><block ref="fd543e73e84ebd55cfd7b33f3155d2e7" category="inline-link-macro-rx"></block>と<block ref="e0be5a78043215130ed137b894ec3c29" category="inline-link-macro-rx"></block>をお読みください。</block>
+  <block id="26a90de31f36fc014c8ad8737de2d220" category="section-title">AI アシスタントがあなたと連携します</block>
+  <block id="3f0c43a14bf5fb33649094a9127d5db0" category="paragraph">DII AI アシスタントは、IT インフラストラクチャのデータに関する質問に答えるのに役立ちます。これを効果的に行うには、ユーザーのリクエストを理解するとともに、リクエストに応答するために必要な具体的なデータも理解する必要があります。</block>
+  <block id="20f949a09d10cfcaeafc3c460bd995f9" category="paragraph">DII システムには、次のようなさまざまな種類のデータが含まれています：</block>
+  <block id="8ad781265b3547e99c943175d79a179f" category="list-text">資産テレメトリ（ホスト、ストレージ、VM など）</block>
+  <block id="b5af341d46ef69cb0af57ccb7bd5720c" category="list-text">データレイクのメトリクス（Kubernetes、NetAppストレージ、VMware）</block>
+  <block id="cce75571d6535c6e46ca8316dc56b78a" category="list-text">さまざまなシステムからのログ</block>
+  <block id="491b6830a2d7e3da393bd35fe1d674bd" category="list-text">異常を示す可能性のあるアラート</block>
+  <block id="8b535ff38c9b852fd885033ac8638d2a" category="paragraph">最適なエクスペリエンスを得るには、Assistant に次の具体的な情報を提供してください：</block>
+  <block id="6249360bea48aa600de4eaaceaecabb1" category="list-text">分析したいデータのタイプ（特定の資産、指標、システムなど）、</block>
+  <block id="81bba36ecc862e80fc8fba5830993041" category="list-text">関心のある期間と</block>
+  <block id="747f32611560f7ea60cbda274f04ef16" category="list-text">懸念している特定の問題の種類（パフォーマンスの問題、容量の問題、エラーなど）</block>
+  <block id="45610fa97924ab075b8ebed42722b019" category="section-title">アシスタントへのアクセス</block>
+  <block id="629c55deaa1b75250df975fe5485d218" category="paragraph">DII AI アシスタントを呼び出すには、画面の下隅にあるフクロウのアイコンを選択するだけです。「オーナー」ロールを持つユーザーは、テナント上の他のユーザーが AI アシスタントを利用する前に利用規約に同意する必要があります。</block>
+  <block id="f67a424fefeb5e523fcbb4c9247bc6d9" category="inline-image-macro">dii_ai_assistant_icon</block>
+  <block id="a48b93c62e0c2ec4c09405cadd96b7da" category="paragraph"><block ref="a48b93c62e0c2ec4c09405cadd96b7da" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="be90349da04be71a620e68314d810f7f" category="section-title">2026年2月</block>
+  <block id="ad3362691040d433cbf22ab397dc84aa" category="section-title">インフラに関する即座のインテリジェントな回答</block>
+  <block id="28cae4dd9c57dbe8a35cbe00a743a292" category="paragraph">インフラストラクチャの新しいインテリジェントパートナーをご紹介します：*Data Infrastructure Insights AI アシスタント*は、データとのやり取りの方法を変革し、複雑なクエリを簡単な会話に変えます。隠れたパターンを即座に発見し、トラブルシューティングを加速し、データ主体の意思決定を自信を持って行うことができます。次のような質問に即座に答えが得られます：</block>
+  <block id="7e83213ae37d2231b72b1f96b096ddeb" category="inline-image-macro">AIアシスタントアイコン</block>
+  <block id="14f7de7f8564e731023379f8117cae1b" category="paragraph">DII AI アシスタント プレビューは、AWS リージョンでホストされているサービスを利用して、ほとんどのお客様に現在ご利用いただけます。Azure リージョンでも近日中にご利用いただけるようになります。<block ref="b77b95325de7e3e625a811db4f47869c" category="inline-link-macro-rx"></block>Data Infrastructure Insights プレビュー機能について。<block ref="ef81c0041379574a84edd0f82a7689e7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0fd9a21defe0a1ec8e4b10c890230f25" category="section-title">改善の監視</block>
+  <block id="a94b18666f4037c59ea76567b7b3779c" category="section-title">重複することなく、システムモニターをより速くカスタマイズ</block>
+  <block id="b4092a4b68e89ab9df5e0a783d45fda3" category="paragraph">ニーズに合わせてデフォルトのシステムモニターを直接変更します。名前、フィルター、グループ化を1か所で変更できます。簡単な調整のために重複したモニターを作成する必要はありません。便利なバナーにより、どのモニターがカスタマイズされているかがわかるため、監視構成を完全に把握できます。</block>
+  <block id="1249738b40c3ebf7497218f6b63980ac" category="section-title">一括操作でモニター管理を効率化</block>
+  <block id="6f7d5936fb01283fdfc635ef0c2b2b11" category="paragraph">一括アクションを通じて複数のモニターを一度に管理します。モニターのグループのヘルスモニタリング設定をすばやく調整して、時間を節約し、複雑さを軽減します。監視戦略を、数分ではなく数秒で全面的に更新します。</block>
+  <block id="7c9a169da8415e07b317a279fd557d57" category="section-title">インフラの健全性スコアを最も重要な点に集中させる</block>
+  <block id="2d749cca30ef1dad32e18ba4441c474d" category="paragraph">正確性と関連性を維持するために、Infrastructure Healthスコアから特定のオブジェクトを除外します。Infrastructure Healthダッシュボードを表示しているときに、モニターの設定を変更せずに、優先順位を下げるオブジェクトを即座に削除します。これにより、ビジネスの優先順位を決定するインフラストラクチャ要素にアラートが集中します。</block>
+  <block id="aa4ad094ae1edb87ffb733fcc22144c0" category="inline-image-macro">ヘルスモニタリングからオブジェクトを除外する</block>
+  <block id="ebf03326dfbf7b48fe4575709f8c1a51" category="paragraph"><block ref="ebf03326dfbf7b48fe4575709f8c1a51" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="838a5b6e1cef2988995345837447f129" category="inline-link-macro">Acquisition Unit</block>
+  <block id="d9131ac4f67c5c616f8658f3be927811" category="paragraph">現在、以下のLinuxオペレーティングシステムがData Infrastructure Insights <block ref="9d197753af39cfa8d0f06175517b0833" category="inline-link-macro-rx"></block>でサポートされています：</block>
+  <block id="bf1f59b62cdf29b442b8079907309a26" category="list-text">AlmaLinux 9.5 と 10</block>
+  <block id="73d72c578d3f5b335b55d421ee4be972" category="list-text">Centos (64ビット)：Stream 9</block>
+  <block id="78f4d8f51d34ee0c324e6a5277f9b2b3" category="list-text">Debian（64ビット）：11から13</block>
+  <block id="f8d1a8371bb39357a8e0e8d82da3efcc" category="list-text">OpenSUSE Leap 15.2から15.6、16</block>
+  <block id="2ce49b2756d6dcfc59bbf06cc1611bd8" category="list-text">Oracle Enterprise Linux（64ビット）：8.10、9.2、9.4、9.6、10</block>
+  <block id="3aad8ee25a3f60436baf6335487f32f6" category="list-text">Red Hat（64ビット）：8.10、9.2、9.4、9.6、10</block>
+  <block id="421505a482a3fad0342e2d00218e3a10" category="list-text">Rocky 9.2から9.6</block>
+  <block id="93cdc222b02604a207a8fe61cdd802b0" category="list-text">SUSE Linux Enterprise Server 15 SP4 から 15 SP7、16</block>
+  <block id="254437ac6c40fc16c31d2f215400e44f" category="list-text">Ubuntu Server：20.04、22.04、24.04 LTS</block>
+  <block id="ecf8fabbb23da2c68f49fe920a05137b" category="list-text">上記プラットフォーム上の SELinux</block>
+  <block id="3542743c69e8fceb06c77e5e17299c89" category="sidebar">AIアシスタント</block>
 </blocks>

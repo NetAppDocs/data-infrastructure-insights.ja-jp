@@ -15,16 +15,6 @@ sidebar:
     url: "/index.html"
   - title: 最新情報
     url: "/concept_whats_new.html"
-  - title: Data Infrastructure Insightsへのサインアップ
-    url: "/task_cloud_insights_onboarding_1.html"
-  - title: セキュリティ
-    entries:
-    - title: セキュリティプラクティス
-      url: "/security_overview.html"
-    - title: 何をどこに保管するか
-      url: "/security_information_and_region.html"
-    - title: セキュリティ管理ツール
-      url: "/security_admin_tool.html"
   - title: はじめに
     entries:
     - title: 機能チュートリアル
@@ -51,6 +41,18 @@ sidebar:
       url: "/concept_import_from_dashboard_gallery.html"
     - title: ユーザーアカウントとロール
       url: "/concept_user_roles.html"
+  - title: Data Infrastructure Insightsへのサインアップ
+    url: "/task_cloud_insights_onboarding_1.html"
+  - title: セキュリティ
+    entries:
+    - title: セキュリティプラクティス
+      url: "/security_overview.html"
+    - title: 何をどこに保管するか
+      url: "/security_information_and_region.html"
+    - title: セキュリティ管理ツール
+      url: "/security_admin_tool.html"
+  - title: AIアシスタント
+    url: "/ai_for_dii_overview.html"
   - title: データ収集者リスト
     url: "/data_collector_list.html"
   - title: Data Infrastructure Insightsの購読
