@@ -14,7 +14,7 @@ keywords: onboarding, new user
 
 
 [role="lead"]
-Data Infrastructure Insightsでの作業を開始する前に、NetApp Consoleポータルでサインアップする必要があります。すでにNetApp Consoleのログインをお持ちの場合は、いくつかの簡単な手順でData Infrastructure Insightsの無料トライアルを開始できます。
+Data Infrastructure Insightsの使用を開始する前に、*NetApp Console*ポータルにサインアップする必要があります。すでにNetApp Consoleログインをお持ちの場合は、いくつかの簡単な手順でData Infrastructure Insightsの無料トライアルを開始できます。
 
 
 

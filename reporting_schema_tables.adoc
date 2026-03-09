@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: reporting_schema_tables.html 
+summary: レポートで使用するデータ ウェアハウス スキーマ図とテーブル 
+keywords: dwh, data warehouse, schema, reporting 
+---
+= Data Infrastructure Insightsサイト レポート用スキーマ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+このドキュメントでは、レポートデータベースのスキーマテーブルについて説明します。
+
+
+NOTE: レポート機能は、Data Infrastructure Insightsで利用できます。link:concept_subscribing_to_cloud_insights.html["プレミアムエディション"] 。
+
+link:media/capacity_schema_documentation.html["容量スキーマ"]

@@ -7,14 +7,16 @@ keywords: dwh, data warehouse, schema, reporting
 = Data Infrastructure Insightsサイト レポート用スキーマ
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-これらのスキーマ テーブルと図は、Data Infrastructure Insightsサイト レポートの参照としてここに提供されています。
-
-link:https://docs.netapp.com/us-en/cloudinsights/ci_reporting_database_schema.pdf["*スキーマテーブル*"].PDF 形式です。リンクをクリックして開くか、右クリックして [名前を付けて保存] を選択してダウンロードします。
-
-link:reporting_schema_diagrams.html["*スキーマ図*"]
+これらのスキーマテーブルは、Data Infrastructure Insightsレポートの参考資料として提供されています。
 
 
 NOTE: レポート機能は、Data Infrastructure Insightsで利用できます。link:concept_subscribing_to_cloud_insights.html["プレミアムエディション"] 。
+
+link:schema/reporting_schema_capacity.html["スキーマテーブル - 容量"^] link:schema/reporting_schema_capacity_efficiency.html["スキーマテーブル - 容量効率"^] link:schema/reporting_schema_fs_util.html["スキーマテーブル - ファイルシステムの使用率"^] link:schema/reporting_schema_inventory.html["スキーマテーブル - インベントリ"^] link:schema/reporting_schema_performance.html["スキーマテーブル - パフォーマンス"^] link:schema/reporting_schema_ports.html["スキーマテーブル - ポート"^]
