@@ -284,6 +284,9 @@ Data Infrastructure Insightsでサポートされているデータ コレクタ
 | link:task_config_telegraf_redis.html["レディス"] | サービス 
 
 
+| リンク：task_dc_redhat_openshift virtualization.html［Red Hat OpenShift Virtualization ］ | インフラ 
+
+
 | link:task_config_telegraf_rethinkdb.html["DBを再考する"] | サービス 
 
 
