@@ -1,19 +1,23 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_emc_vplex.html 
-keywords: data collector, VPLEX, EMC 
+keywords: data collector, VPLEX, EMC, vplex, 
 summary: VPLEX データ コレクターを構成しています。 
 ---
 = EMC VPLEXデータコレクターの構成
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 このデータ コレクターは、EMC VPLEX ストレージ システムからインベントリおよびパフォーマンス データを取得します。データ コレクターを構成するには、VPLEX サーバーの IP アドレスと管理レベルのドメイン アカウントが必要です。
 
 
-NOTE: Data Infrastructure Insightsによる Vplex クラスターからのパフォーマンス収集では、Data Infrastructure Insights がSCP ベースのファイル コピーを介して取得する .CSV ファイルとログを入力するために、パフォーマンス アーカイブ サービスが動作している必要があります。 NetApp は、多くの Vplex ファームウェア アップグレード/管理ステーションの更新によってこの機能が動作しなくなることを確認しました。このようなアップグレードを計画しているお客様は、計画しているアップグレードによってこの機能が使用できなくなるかどうか、またそうなる場合はパフォーマンスの可視性のギャップを最小限に抑えるためにどのようにこの機能を再度有効にできるかを Dell/EMC に事前に問い合わせることをお勧めします。  Cloud Insight の Vplex パフォーマンス コードは、各ポーリングで、予想されるすべてのファイルが存在するかどうか、およびそれらが適切に更新されているかどうかを評価します。ファイルが欠落しているか古くなっている場合、 Data Infrastructure Insights はパフォーマンス収集の失敗をログに記録します。
+NOTE: Data Infrastructure Insights の VPLEX クラスタからのパフォーマンス収集には、Data Infrastructure Insights が SCP ベースのファイルコピーを介して取得する .CSV ファイルとログを入力するために、パフォーマンスアーカイブサービスが動作している必要があります。NetApp は、多くの VPLEX ファームウェアアップグレード/管理ステーションの更新により、この機能が動作しなくなることを確認しています。このようなアップグレードを計画しているお客様は、計画しているアップグレードによってこの機能が使用できなくなるかどうか、またそうなる場合はパフォーマンスの可視性のギャップを最小限に抑えるためにどのようにこの機能を再度有効にできるかを Dell/EMC に事前に問い合わせることをお勧めします。Cloud Insight の VPLEX パフォーマンスコードは、各ポーリングで、すべての期待されるファイルが存在するかどうか、そしてそれらが適切に更新されているかどうかを評価します。ファイルが欠落しているか古くなっている場合は、Data Infrastructure Insights はパフォーマンス収集の失敗をログに記録します。
 
 
 

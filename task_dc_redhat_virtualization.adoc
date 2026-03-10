@@ -7,6 +7,10 @@ summary: Red Hat Virtualization データコレクターを構成します。
 = Red Hat Virtualization データコレクター
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

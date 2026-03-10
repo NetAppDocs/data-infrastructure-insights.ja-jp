@@ -47,9 +47,6 @@ Data Infrastructure Insightsでサポートされているデータ コレクタ
 | link:task_dc_ms_azure.html["Azure VM と VHD"] | インフラ 
 
 
-| link:task_dc_brocade_bna.html["Brocadeネットワーク アドバイザー (BNA)"] | インフラ 
-
-
 | link:task_dc_brocade_fc_switch.html["Brocadeファイバーチャネルスイッチ"] | インフラ 
 
 
@@ -126,9 +123,6 @@ Data Infrastructure Insightsでサポートされているデータ コレクタ
 
 
 | link:task_config_telegraf_flink.html["フリンク"] | サービス 
-
-
-| link:task_dc_fujitsu_eternus.html["富士通 ETERNUS DX"] | インフラ 
 
 
 | link:task_dc_google_cloud.html["Google コンピューティングとストレージ"] | インフラ 
@@ -221,12 +215,6 @@ Data Infrastructure Insightsでサポートされているデータ コレクタ
 | link:task_dc_na_cloud_volumes_ontap.html["NetAppCloud Volumes ONTAP"] | インフラ 
 
 
-| link:task_dc_na_cloud_connection.html["ONTAP 9.9以降向けNetAppクラウド接続"] | インフラ 
-
-
-| link:task_dc_na_7mode.html["NetApp Data ONTAP 7-Mode"] | インフラ 
-
-
 | link:task_dc_na_eseries.html["NetApp Eシリーズ"] | インフラ 
 
 
@@ -282,6 +270,9 @@ Data Infrastructure Insightsでサポートされているデータ コレクタ
 
 
 | link:task_config_telegraf_puppetagent.html["操り人形エージェント"] | サービス 
+
+
+| link:task_dc_pure_flashblade.html["Pure FlashBlade"] | インフラ 
 
 
 | link:task_dc_pure_flasharray.html["ピュアストレージ フラッシュアレイ"] | インフラ 

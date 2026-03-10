@@ -3841,8 +3841,6 @@
   <block id="c570274e8fb013719523945c6aff02f1" category="cell"><block ref="c570274e8fb013719523945c6aff02f1" category="inline-link-macro-rx"></block></block>
   <block id="4f24197d0503e262d29c81199ac0627c" category="inline-link-macro">Azure VM と VHD</block>
   <block id="e00ad4181c9c1bb044b8dda82a2eb37c" category="cell"><block ref="e00ad4181c9c1bb044b8dda82a2eb37c" category="inline-link-macro-rx"></block></block>
-  <block id="c3dc9f108879520f071bfe791b64d931" category="inline-link-macro">Brocadeネットワーク アドバイザー (BNA)</block>
-  <block id="72981d1d7e5b9b8d922639718df6b13d" category="cell"><block ref="72981d1d7e5b9b8d922639718df6b13d" category="inline-link-macro-rx"></block></block>
   <block id="0491f979e459c21ca1a650d5bee1bedf" category="inline-link-macro">Brocadeファイバーチャネルスイッチ</block>
   <block id="6ae88aee808190aba1b5e4acb58392b7" category="cell"><block ref="6ae88aee808190aba1b5e4acb58392b7" category="inline-link-macro-rx"></block></block>
   <block id="764f447ccb3bf87ad75ec71c633b9966" category="inline-link-macro">BrocadeFOS REST</block>
@@ -3895,8 +3893,6 @@
   <block id="3a1038b8fbe1e88b4f3c1b247da07798" category="cell"><block ref="3a1038b8fbe1e88b4f3c1b247da07798" category="inline-link-macro-rx"></block></block>
   <block id="39ba7675313c799c9b706c8928b535f6" category="inline-link-macro">フリンク</block>
   <block id="f1161d8aad902843d64ca7e6b3db0f14" category="cell"><block ref="f1161d8aad902843d64ca7e6b3db0f14" category="inline-link-macro-rx"></block></block>
-  <block id="0ac136d62167ae2749430a7b083e6d88" category="inline-link-macro">富士通 ETERNUS DX</block>
-  <block id="99a28d8d1439c7da877285fec312185a" category="cell"><block ref="99a28d8d1439c7da877285fec312185a" category="inline-link-macro-rx"></block></block>
   <block id="12087a5da9bcdb90a9ac3a7931c38b46" category="inline-link-macro">Google コンピューティングとストレージ</block>
   <block id="8e0a555918ddd0d3171e923d8ec8927b" category="cell"><block ref="8e0a555918ddd0d3171e923d8ec8927b" category="inline-link-macro-rx"></block></block>
   <block id="1215f8190533dfdf63d2224a6d88266f" category="inline-link-macro">Google Cloud NetApp Volumes</block>
@@ -3957,10 +3953,6 @@
   <block id="4d9746bceefe2b6bd2586d1c3e4d2733" category="cell"><block ref="4d9746bceefe2b6bd2586d1c3e4d2733" category="inline-link-macro-rx"></block></block>
   <block id="b988e43525055930d8d214d3116d4c04" category="inline-link-macro">NetAppCloud Volumes ONTAP</block>
   <block id="ecf8390ebf4bfbf85b7308b7ca58aaa1" category="cell"><block ref="ecf8390ebf4bfbf85b7308b7ca58aaa1" category="inline-link-macro-rx"></block></block>
-  <block id="acb242e4a47b7f1537825e1c4eacc87a" category="inline-link-macro">ONTAP 9.9以降向けNetAppクラウド接続</block>
-  <block id="32b322f0c18e116c5d878598d8fedae2" category="cell"><block ref="32b322f0c18e116c5d878598d8fedae2" category="inline-link-macro-rx"></block></block>
-  <block id="995d9995da501d3734932d95524f1a35" category="inline-link-macro">NetApp Data ONTAP 7-Mode</block>
-  <block id="2e59af567907cf6ad1ae87c0cac8e6dd" category="cell"><block ref="2e59af567907cf6ad1ae87c0cac8e6dd" category="inline-link-macro-rx"></block></block>
   <block id="0311befd4f8a4eb64d5f02957a8b1d99" category="inline-link-macro">NetApp Eシリーズ</block>
   <block id="263caec9c413672e1829ba1b317a5b42" category="cell"><block ref="263caec9c413672e1829ba1b317a5b42" category="inline-link-macro-rx"></block></block>
   <block id="8fd194517d64c215a9c8b5e2b8d0f67e" category="inline-link-macro">NetApp Eシリーズ REST</block>
@@ -9156,7 +9148,6 @@
   <block id="b9249fd328314d6a7d2f42e8e3c6b5d4" category="summary">VPLEX データ コレクターを構成しています。</block>
   <block id="60681db287042fdbd55c4c2ed95ce0f0" category="doc">EMC VPLEXデータコレクターの構成</block>
   <block id="dbbc7759d6fa847682027ce2d68707f9" category="paragraph">このデータ コレクターは、EMC VPLEX ストレージ システムからインベントリおよびパフォーマンス データを取得します。データ コレクターを構成するには、VPLEX サーバーの IP アドレスと管理レベルのドメイン アカウントが必要です。</block>
-  <block id="8f3f7ce90dce9ce91bcc07b31bdc1b6b" category="admonition">Data Infrastructure Insightsによる Vplex クラスターからのパフォーマンス収集では、Data Infrastructure Insights がSCP ベースのファイル コピーを介して取得する .CSV ファイルとログを入力するために、パフォーマンス アーカイブ サービスが動作している必要があります。 NetApp は、多くの Vplex ファームウェア アップグレード/管理ステーションの更新によってこの機能が動作しなくなることを確認しました。このようなアップグレードを計画しているお客様は、計画しているアップグレードによってこの機能が使用できなくなるかどうか、またそうなる場合はパフォーマンスの可視性のギャップを最小限に抑えるためにどのようにこの機能を再度有効にできるかを Dell/EMC に事前に問い合わせることをお勧めします。  Cloud Insight の Vplex パフォーマンス コードは、各ポーリングで、予想されるすべてのファイルが存在するかどうか、およびそれらが適切に更新されているかどうかを評価します。ファイルが欠落しているか古くなっている場合、 Data Infrastructure Insights はパフォーマンス収集の失敗をログに記録します。</block>
   <block id="b9e79e40b10e4cd3212004f5560b2da1" category="paragraph">Data Infrastructure Insights は、VPLEX データ コレクターから次のインベントリ情報を取得します。取得した資産の種類ごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。</block>
   <block id="7bfa30721c5e726ff17e3f972237a82c" category="cell">エンジン</block>
   <block id="4aa531638ba8a3023953a131c634e8d1" category="cell">デバイス、システム範囲</block>
@@ -10222,7 +10213,6 @@
   <block id="755b12aafe5dc12ab98be034e0bc593a" category="cell">「無効なログイン資格情報」と「ポリシーにより許可されていません」または「権限がありません」というエラー メッセージが表示される</block>
   <block id="e3023c7402b94962861565244cb9f3d0" category="cell">Pure http インターフェース経由で Pure ユーザー アカウントとパスワードを検証します</block>
   <block id="ea0b91ea0d8c2da2db5e90fb9a4e9e26" category="doc">Pure Storage FlashBlade データコレクター</block>
-  <block id="0dc4fd6064fea67266d1837f3d33b6e0" category="paragraph">Data Infrastructure Insightsは、 Pure Storage FlashBladeデータコレクターを使用して、REST APIバージョン2を公開するFlashBladeクラスターからインベントリとパフォーマンスデータを収集します。</block>
   <block id="26c7e129f928f6ba8485b8308659b929" category="cell">オブジェクトストレージバケット</block>
   <block id="c307e1b8edd2b5d784d81d211f67c2e5" category="list-text">ストレージシステムのIPアドレスまたは完全修飾ドメイン名</block>
   <block id="ae4fab3dbcbe018dadb4c33b8b70b2e8" category="list-text">理想的には無期限の有効期間を持つ API トークン。読み取り専用レベルのユーザーで十分です。</block>
@@ -12376,7 +12366,6 @@
   <block id="bb88c75c573c51be16c7d85804e7a9fe" category="sidebar">Nutanix</block>
   <block id="30162ed78b6c10f731411f2fc440c24f" category="sidebar">Oracle</block>
   <block id="d30973809f2e4238b7eb2bac9241674c" category="sidebar">Pure</block>
-  <block id="1d9fc183665bd1e195391190be506894" category="sidebar">Red Hat</block>
   <block id="38d38399d4a7514463d665125ae50a4a" category="sidebar">ルーブリックCDM</block>
   <block id="56079badd056a19303cc26e6a4fcc7e0" category="sidebar">VMware</block>
   <block id="8683de0aa24eead7d9ee8d3fdaa00cbc" category="sidebar">データコレクターリファレンス - サービス</block>
@@ -14658,4 +14647,10 @@
   <block id="e30ec09a4c79b55e1ccfc1955c76c379" category="cell">switchLevel</block>
   <block id="e10c8c70fc9c70d82df6e3c2ea10ceed" category="cell">スイッチレベル</block>
   <block id="549ae8b6dea4926a2af206c5d7300fc5" category="paragraph">Data Infrastructure Insightsの使用を開始する前に、*NetApp Console*ポータルにサインアップする必要があります。すでにNetApp Consoleログインをお持ちの場合は、いくつかの簡単な手順でData Infrastructure Insightsの無料トライアルを開始できます。</block>
+  <block id="93e49907cf8d9ecec89d856c3d49fb2f" category="inline-link-macro">Pure FlashBlade</block>
+  <block id="f92f77015be3ec66c79ba43a2aec5f69" category="cell"><block ref="f92f77015be3ec66c79ba43a2aec5f69" category="inline-link-macro-rx"></block></block>
+  <block id="52e4ed377cdb874dec547eb79615f673" category="admonition">Data Infrastructure Insights の VPLEX クラスタからのパフォーマンス収集には、Data Infrastructure Insights が SCP ベースのファイルコピーを介して取得する .CSV ファイルとログを入力するために、パフォーマンスアーカイブサービスが動作している必要があります。NetApp は、多くの VPLEX ファームウェアアップグレード/管理ステーションの更新により、この機能が動作しなくなることを確認しています。このようなアップグレードを計画しているお客様は、計画しているアップグレードによってこの機能が使用できなくなるかどうか、またそうなる場合はパフォーマンスの可視性のギャップを最小限に抑えるためにどのようにこの機能を再度有効にできるかを Dell/EMC に事前に問い合わせることをお勧めします。Cloud Insight の VPLEX パフォーマンスコードは、各ポーリングで、すべての期待されるファイルが存在するかどうか、そしてそれらが適切に更新されているかどうかを評価します。ファイルが欠落しているか古くなっている場合は、Data Infrastructure Insights はパフォーマンス収集の失敗をログに記録します。</block>
+  <block id="de9fcff157c3fd05f707a7b227a45275" category="summary">Pure FlashBlade Storageデータコレクタの設定</block>
+  <block id="c0c126a33a6cd3661eae0fb5eca89c2d" category="paragraph">Data Infrastructure Insightsは、Pure StorageFlashBladeデータコレクタを使用して、REST APIのバージョン2を公開するFlashBladeクラスタからインベントリデータとパフォーマンスデータを収集します。</block>
+  <block id="80e910f35b12e9c61335fa88de36edd0" category="sidebar">Red Hat Virtualization</block>
 </blocks>
