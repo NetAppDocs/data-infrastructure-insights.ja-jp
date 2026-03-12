@@ -34,18 +34,15 @@
   <block id="302f46075983be9c47bafd103c8fbf36" category="paragraph">使用したい API に固有の例については、Swagger ページを参照してください。</block>
   <block id="45268bdcc9ffe3a5807e75085e768efb" category="section-title">API タイプ</block>
   <block id="14b84a3791e7a10fe4d65ea9a7ff7363" category="paragraph">Data Infrastructure Insights API はカテゴリベースで、現在次のタイプが含まれています。</block>
-  <block id="16d532fd527f8b9de1c866f621fb7569" category="list-text">ASSETS タイプには、アセット、クエリ、および検索 API が含まれます。</block>
   <block id="bf9403ca9242451b7ef055feae5711bb" category="list-text">アセット: 最上位レベルのオブジェクトを列挙し、特定のオブジェクトまたはオブジェクト階層を取得します。</block>
   <block id="90782e54bcf29265124126b5b3be24ad" category="list-text">クエリ: Data Infrastructure Insightsクエリを取得および管理します。</block>
   <block id="c9de14b5a5af8684e29a00e86f5ea9f1" category="list-text">インポート: 注釈またはアプリケーションをインポートし、オブジェクトに割り当てます</block>
   <block id="cfce3085ae85f2087671061798f85476" category="list-text">検索: オブジェクトの一意の ID または完全な名前を知らなくても、特定のオブジェクトを検索します。</block>
   <block id="c7ff46f17aacbcc8f9caba752c2fd410" category="list-text">DATA COLLECTION タイプは、データ コレクターを取得および管理するために使用されます。</block>
-  <block id="c13a40ffc26f5f762f6de126cf232cf5" category="list-text">DATA INGESTIONタイプは、Telegrafエージェントなどから取り込みデータとカスタムメトリックを取得および管理するために使用されます。</block>
   <block id="e2838ba9f29d27f412035bd037388732" category="list-text">LOG INGESTIONはログデータを取得および管理するために使用されます</block>
   <block id="c99f25325f86d3f0c79c43f7e35c908e" category="inline-link-macro">API Swaggerドキュメント</block>
   <block id="133f61531451649a036c6c806600058c" category="paragraph">今後、追加のタイプや API が利用可能になる可能性があります。最新のAPI情報は、<block ref="26737cef142923769504b229d3be204d" category="inline-link-macro-rx"></block> 。</block>
   <block id="7bc31a95e4a1ee6f8948af20440df0c6" category="inline-link-macro">ユーザ ロール</block>
-  <block id="63c9291ffc47b71cb537e7ecab415dab" category="paragraph">ユーザーがアクセスできるAPIの種類は、<block ref="ead2141fb682d81a2f0b1deca7bb95c5" category="inline-link-macro-rx"></block>各Data Infrastructure Insights機能セット (監視、ワークロード セキュリティ、レポート) に備わっています。</block>
   <block id="f62c375c71b04a523593c5019e4aa100" category="section-title">インベントリトラバーサル</block>
   <block id="475ea4ca6d29c1eb379b49090f81aea7" category="paragraph">このセクションでは、Data Infrastructure Insightsオブジェクトの階層を移動する方法について説明します。</block>
   <block id="c22744ffcc9ee65a97cb166bcf41b4f4" category="section-title">トップレベルオブジェクト</block>
@@ -14547,4 +14544,7 @@
   <block id="dd0f9294fa313d494966ae16cbe89435" category="paragraph">Data Infrastructure Insights AI アシスタントはプレビュー版が利用可能で、次の機能強化が含まれています：</block>
   <block id="e609c64ff8e8c15f1ce845903ca2db7e" category="list-text">Azure リージョンの可用性：DII サイトが Azure でホストされているお客様のために、Data Infrastructure Insights アシスタントがサポートできるようになりました。</block>
   <block id="056a97d89a4b6d30acf8e9b86d3ed172" category="list-text">最大7日間のデータ：アシスタントは最大7日間の高解像度のメトリックにアクセスできるようになり、より広範囲のデータ分析と洞察が可能になります。</block>
+  <block id="e43d8f702818ecf5597859f98ff1e993" category="list-text">ASSETS タイプには、アセット、クエリ、および検索 API が含まれます。Data Infrastructure Insights アセットの属性とメトリックは、「odata」と呼ばれることもあります。これらの API は通常、/rest/v1/asset または /rest/v1/query を介してアクセスされます。詳細については、<block ref="622b990b99495c7072e19eb08becc13e" category="inline-xref-macro-rx"></block>を参照してください。</block>
+  <block id="627c6b105244e1b95d64a8f71c382473" category="list-text">DATA INGESTION タイプは、Telegraf エージェントなどからの取り込みデータとカスタムメトリックを取得および管理するために使用されます。これらは「データレイク」または「レイク」メトリックと呼ばれることもあります。これらの API は通常、/rest/v1/lake を通じてアクセスされます。詳細については、<block ref="622b990b99495c7072e19eb08becc13e" category="inline-xref-macro-rx"></block>を参照してください。</block>
+  <block id="d14a20e4ad37ea89f3a29854e5a1934c" category="paragraph">ユーザーがアクセスできるAPIの種類は、各Data Infrastructure Insights機能セット（Observability、Workload Security、Reporting）で持っている<block ref="ead2141fb682d81a2f0b1deca7bb95c5" category="inline-link-macro-rx"></block>にも依存します。</block>
 </blocks>
