@@ -4369,82 +4369,7 @@
   <block id="5881a1f9bf083ef4c9a0abd664075f34" category="paragraph">「変更分析」では、次のケースのアラートを追跡します。</block>
   <block id="367c81232bd8558294db17c024d0946c" category="list-text">_logs.vmware.events_ および _logs.netapp.ems_ のログ タイプに関するログ モニターからのアラート。</block>
   <block id="872f5111182c06c0a1eab9dfbad521ad" category="list-text">上記のオブジェクト タイプに関するメトリック モニターからのアラート。変更分析でこれらを追跡するには、[グループ化] フィールドでこれらを選択する必要があります。</block>
-  <block id="851540d32e033a0c14b63879881da871" category="summary">Insights は、Kubernetes スペースがいついっぱいになるかを予測するのに役立ちます。</block>
-  <block id="4fef891481b95674ba195bcf5ebf7efb" category="doc">洞察：Kubernetes 名前空間のスペース不足</block>
-  <block id="b9e3092d2cb5cd78b84419a18b48afcf" category="paragraph">テナントのスペースが不足することは決して良い状況ではありません。  Data Infrastructure Insights は、 Kubernetes の永続ボリュームがいっぱいになるまでの時間を予測するのに役立ちます。</block>
-  <block id="8dc9b2ee1508011b53e7f0f04a3b46a8" category="paragraph">_Kubernetes 名前空間のスペース不足_ インサイトでは、スペース不足になるリスクがある Kubernetes 名前空間のワークロードを把握でき、各永続ボリュームがいっぱいになるまでの残り日数を推定できます。</block>
-  <block id="f2c0221f294a823d827a375c35966fc9" category="paragraph">このインサイトは、*ダッシュボード &gt; インサイト* に移動すると表示できます。</block>
-  <block id="6f6740f128ff4e7b81b3e550f00f9705" category="inline-image-macro">スペース不足の危険性がある K8s 名前空間内のワークロードのリスト</block>
-  <block id="9cd0fe5cef5af60f762c34beb874081a" category="paragraph"><block ref="9cd0fe5cef5af60f762c34beb874081a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b5d4ddc25dbf8207f2bee2e686857aa1" category="paragraph">ワークロードをクリックすると、Insight の詳細ページが開きます。このページには、ワークロード容量の傾向を示すグラフと、次の内容を示す表が表示されます。</block>
-  <block id="531d617d072da086d2a88b4381d112d7" category="list-text">ワークロード名</block>
-  <block id="5594ad451661776d3680f239ed48baa0" category="list-text">影響を受ける永続ボリューム</block>
-  <block id="60883d911c538f3168c126825cfa1804" category="list-text">満杯になるまでの予測時間（日数）</block>
-  <block id="0e1f0238958c9e1538d02888144645f7" category="list-text">永続ボリュームの容量</block>
-  <block id="95458ffe03f081fb38d0e5630d7836c6" category="list-text">バックエンド ストレージ リソースが影響を受けており、合計容量のうち現在の容量が使用されています。このリンクをクリックすると、バックエンド ボリュームの詳細なランディング ページが開きます。</block>
-  <block id="9b6de7d57253456e4f416bcef90b76e5" category="inline-image-macro">詳細を示すワークロード テーブル</block>
-  <block id="e589c155ffae6696761533f45ef69b7c" category="paragraph"><block ref="e589c155ffae6696761533f45ef69b7c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="cc327506f222e6ab4e0ec6a024dcbe7b" category="section-title">スペースが不足している場合はどうすればいいですか?</block>
-  <block id="35e8ae7798ae468988eef02594bca5d5" category="paragraph">インサイト ページで、*+ 推奨事項を表示* をクリックして、考えられる解決策を表示します。スペースが不足した場合の最も簡単なオプションは常に容量を追加することです。Data Data Infrastructure Insights は、目標の 60 日間の予測まで容量がいっぱいになるまでの時間を延長するために追加する最適な容量を示します。その他の推奨事項も表​​示されます。</block>
-  <block id="501f2f9df98b83cc872cd59f0493d08d" category="inline-image-macro">60日間のTTFに戻るために追加する容量</block>
-  <block id="1349caff32af26b4b92540943cbbecc2" category="paragraph"><block ref="1349caff32af26b4b92540943cbbecc2" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="103ede5225263a5f8e396b6adb9b4898" category="paragraph">ここでは、このインサイトへの便利なリンクをコピーして、ページをブックマークしたり、チームと簡単に共有したりすることもできます。</block>
-  <block id="6d35f83ec0df4672769520e5d6df1cd5" category="summary">Insights では、リソースの使用状況と傾向を確認できます。</block>
-  <block id="f1c9e9af80bb533618f5bdefe333747d" category="doc">洞察</block>
-  <block id="4e97535a9ad440d2d327ab364bb7a0ec" category="paragraph">Insights を使用すると、リソースの使用状況やそれが他のリソースに与える影響、またはフル稼働までの時間の分析などを調べることができます。</block>
-  <block id="93b6b2ecbe8e38118f0e38a7f128eb90" category="paragraph">多数の Insights が利用可能です。詳細を確認するには、*ダッシュボード &gt; インサイト* に移動します。アクティブなインサイト (現在発生しているインサイト) はメイン タブに表示され、非アクティブなインサイトは [非アクティブなインサイト] タブに表示されます。非アクティブなインサイトとは、以前はアクティブだったが、現在は発生していないインサイトです。</block>
-  <block id="fe9a216d65384f5afb0047e612bf386e" category="section-title">インサイトの種類</block>
-  <block id="9e9013279f80acdb151d7cad5bc3f7d8" category="section-title">ストレス下における共有リソース</block>
-  <block id="3c4504abf11b507f4b8e1fa6354331ea" category="paragraph">影響の大きいワークロードは、共有リソース内の他のワークロードのパフォーマンスを低下させる可能性があります。これにより、共有リソースにストレスがかかります。  Data Infrastructure Insights は、リソースの飽和状態とテナントへの影響を調査するのに役立つツールを提供します。<block ref="de4400096db30b5f709799778e050e2c" category="inline-link-macro-rx"></block></block>
-  <block id="c1c7efc58c7b64cc21f3ae15934e8271" category="section-title">Kubernetes 名前空間のスペース不足</block>
-  <block id="806f6dbcc954f0a88489885f517d1d1d" category="paragraph">Kubernetes 名前空間のスペース不足インサイトでは、スペース不足になるリスクがある Kubernetes 名前空間のワークロードが表示され、各スペースがいっぱいになるまでの残り日数の見積もりも表示されます。<block ref="604196d3b206e62dba15152db76beddc" category="inline-link-macro-rx"></block></block>
-  <block id="db08e6b1d619064fa3fd2035f5926d18" category="paragraph">_Reclaim ONTAP Cold Storage_ Insight は、 ONTAPシステム上のボリュームのコールド容量、潜在的なコスト/電力節約、推奨されるアクション項目に関するデータを提供します。<block ref="82cab8f639b07ead699dc071830d992e" category="inline-link-macro-rx"></block></block>
   <block id="d59048f21fd887ad520398ce677be586" category="inline-link-macro">詳細情報</block>
-  <block id="102e3d38f56cb877356cf974fdeb3270" category="admonition">これはプレビュー機能であり、改善が進むにつれて変更される可能性があります。<block ref="ee58f03d7eaea0665aa8a572992ca1b8" category="inline-link-macro-rx"></block> Data Infrastructure Insightsプレビュー機能について。</block>
-  <block id="9d6898c9d6fff2bd62d85b66643bb3d1" category="doc">洞察: ONTAPコールド ストレージの再利用</block>
-  <block id="0d76fbb36f181c92649274af9d5b537e" category="paragraph">_Reclaim ONTAP Cold Storage_ Insight は、 ONTAPシステム上のボリュームのコールド容量、潜在的なコスト/電力節約、推奨されるアクション項目に関するデータを提供します。</block>
-  <block id="385dd98ce9aff23db04e71230c28efd7" category="paragraph">これらの Insights を表示するには、*Dashboards &gt; Insights* に移動し、_Reclaim ONTAP Cold Storage_ Insight を確認します。この Insight では、Data Infrastructure Insightsがコールド ストレージを検出した場合にのみ影響を受けるストレージがリストされ、それ以外の場合は「すべてクリア」メッセージが表示されます。</block>
-  <block id="d752ee7de9162d5e0fa475e8a383ea29" category="paragraph">30 日未満のコールド データは表示されないことに注意してください。</block>
-  <block id="da69b960f5bb93c02fdd4886868836f6" category="inline-image-macro">コールドデータのある 3 つのストレージを示すインサイト リスト</block>
-  <block id="7718245a70dcc6279bf8af86a72c2e35" category="paragraph"><block ref="7718245a70dcc6279bf8af86a72c2e35" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="930fd15ae62cafe82d62d6912f307087" category="paragraph">Insight の説明には、「コールド」として検出されたデータの量と、そのデータが保存されているストレージが簡単に示されます。この表には、コールド データを含むワークロードの数も表示されます。</block>
-  <block id="7cc631429c391f70b58e64999f7fbe48" category="inline-link-macro">NetAppのTCO計算ツール</block>
-  <block id="cdb12d4961181c6c0d6f14a1a17cfd87" category="paragraph">リストからインサイトを選択すると、データをクラウドに移動する、または統合ディスクを停止する推奨事項や、それらの推奨事項を実装することで実現できる推定コストと電力節約などの詳細を示すページが開きます。このページには、<block ref="928b307e42240e05f4c78ed4745d6f3a" category="inline-link-macro-rx"></block>数字を試してみましょう。</block>
-  <block id="c2022a18b75555c824458ee568cfdfca" category="inline-image-macro">コールドデータパワー情報</block>
-  <block id="6a79fd430dc36a8f17aaf2f28988d6e6" category="paragraph"><block ref="6a79fd430dc36a8f17aaf2f28988d6e6" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="5259ae4afb5996ff48788b2fa720114c" category="section-title">推奨</block>
-  <block id="a5048bf2003cf033b80e3fa2e33502f8" category="paragraph">[インサイト] ページで、[*推奨事項*] を展開して、次のオプションを確認します。</block>
-  <block id="f77e48bcc98143a3f6bd8bcc492be286" category="list-text">未使用のワークロード（ゾンビ）を低コストのストレージ層（HDD）に移動する</block>
-  <block id="987152d50a80bdf0820a4f1fd1771f81" category="paragraph">ゾンビ フラグ、コールド ストレージ、日数を利用して、最もコールドで大量のデータを見つけ、ワークロードをより低コストのストレージ層 (ハード ディスク ストレージを使用するストレージ プールなど) に移動します。ワークロードは、30 日以上重要な IO 要求を受信していない場合、「ゾンビ」と見なされます。</block>
-  <block id="c8abb3322f2d9026ffca3cbd29c6e9ba" category="list-text">未使用のワークロードを削除する</block>
-  <block id="42bb4c2dadbccfef009beef19eb60c44" category="paragraph">使用されていないワークロードを確認し、それらをアーカイブするか、ストレージ システムから削除することを検討します。</block>
-  <block id="30dc3fa30dc934a0d0aa98e3789e46c2" category="list-text">NetAppのファブリックプールソリューションを検討してください</block>
-  <block id="27130393c9a69c9ac4259ad677b7e09b" category="inline-link-macro">ファブリックプールソリューション</block>
-  <block id="a7c5cd98f24711202e2a8089e206922c" category="paragraph">NetAppの<block ref="6dfc63a251a9b042b77c667e40f20df9" category="inline-link-macro-rx"></block>コールド データを低コストのクラウド ストレージに自動的に階層化することで、パフォーマンス層の効率性を高め、リモート データ保護を実現します。</block>
-  <block id="b0bad3786567c06c6ba5f9c05f89f0fb" category="section-title">視覚化と探索</block>
-  <block id="f9a5f3e9d6c824797a0884341490f583" category="paragraph">グラフと表では追加の傾向情報が提供され、個々のワークロードを詳細に調べることもできます。</block>
-  <block id="046d0c83fcc2f8749fd500daded4836a" category="inline-image-macro">コールドデータ概要グラフ</block>
-  <block id="907a69f25ca7c9e8619e2c59a67ab607" category="inline-image-macro">コールドデータワークロードテーブル</block>
-  <block id="e185f5cf502ca7079fb5eb3b60a77e41" category="paragraph"><block ref="e9ec82200521512971fafc4c0e21c2af" category="inline-image-macro-rx" type="image"></block> <block ref="d2dfbff86c21669b3c15073a169ec8ac" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2d78443087bc495d923e93521efb0c1d" category="doc">洞察：ストレス下における共有リソース</block>
-  <block id="d408de43e7eda32b1b6e501c05dc38ce" category="paragraph">影響の大きいワークロードは、共有リソース内の他のワークロードのパフォーマンスを低下させる可能性があります。これにより、共有リソースにストレスがかかります。  Data Infrastructure Insights は、リソースの飽和状態とテナントへの影響を調査するのに役立つツールを提供します。</block>
-  <block id="aea124b45b62324984b67a059ea0da7f" category="paragraph">*要求の厳しいワークロード* とは、共有ストレージ プール内の他のリソースに現在影響を与えていると特定されているワークロードです。これらのワークロードは、たとえば IOPS を高め、影響を受けるワークロードの IOPS を低下させます。要求の厳しいワークロードは、_高消費ワークロード_と呼ばれることもあります。</block>
-  <block id="7bddab02c6c096040f0edf52e1623868" category="paragraph">*影響を受けるワークロード* とは、共有ストレージ プール内の消費量の多いワークロードの影響を受けるワークロードです。これらのワークロードでは、要求の厳しいワークロードが原因で、IOPS が低下したり、レイテンシが長くなったりしています。</block>
-  <block id="f4addcedcbf7b58a235a6de1cfeb96b7" category="paragraph">Data Infrastructure Insights が主要なコンピューティング ワークロードを検出しなかった場合、ボリュームまたは内部ボリューム自体がワークロードとして認識されることに注意してください。これは、要求の厳しいワークロードと影響を受けるワークロードの両方に適用されます。</block>
-  <block id="bf306d07c3ed41852c5f9cb551a07b59" category="paragraph">IOPS が共有ストレージ プール内の他のリソースまたはワークロードに影響を与えていると判断された場合、*競合* または *飽和* が発生します。</block>
-  <block id="0b34f00d1d4a3885b35a431a55efeb18" category="section-title">要求の厳しいワークロード</block>
-  <block id="ae8f504ff2e83723f08fc4f873fcdca5" category="paragraph">共有リソース内の要求が厳しく、影響を受けているワークロードを調べるには、*ダッシュボード &gt; インサイト* をクリックし、*ストレスがかかっている共有リソース* インサイトを選択します。</block>
-  <block id="923231dd5cc497f857ab7bc31259567c" category="inline-image-macro">インサイトメニュー</block>
-  <block id="4ad858c99ade794af9d0e0a1491e01bc" category="paragraph"><block ref="4ad858c99ade794af9d0e0a1491e01bc" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="decacd0d9c5727c8132dacde092c0382" category="paragraph">Data Infrastructure Insights には、飽和が検出されたワークロードのリストが表示されます。  Data Infrastructure Insightsでは、少なくとも 1 つの _要求の厳しいリソース_ *または* _影響を受けたリソース_ が検出されたワークロードが表示されることに注意してください。</block>
-  <block id="d7c664bf82d9e14603a845f0ffe47993" category="paragraph">ワークロードをクリックすると、その詳細ページが表示されます。上のグラフには、競合/飽和が発生している共有リソース (ストレージ プールなど) のアクティビティが表示されます。</block>
-  <block id="2ca1e64d0a4fdfcf135961f6931ac68b" category="inline-image-macro">競合を示す共有リソース</block>
-  <block id="6345c18147755da14a72a1bcc448c878" category="paragraph"><block ref="6345c18147755da14a72a1bcc448c878" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7e4a0aeb0ee372dc4742c55ad85d4088" category="paragraph">その下には、要求の厳しいワークロードと、それらの要求の厳しいワークロードによって影響を受けるワークロードを示す 2 つのグラフがあります。</block>
-  <block id="bea93c5448a53dbeae5f078ae207efa5" category="paragraph"><block ref="416a8d7353098379fdb36ba6e8aa6da8" category="inline-image-macro-rx" type="image"></block> <block ref="abda75af4f4de4a9d5c96cfad5c94c77" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9eb156b99e347ad63f9400c9ff3d5387" category="paragraph">各テーブルの下には、競合に影響を与えている、または競合の影響を受けるワークロードやリソースのリストがあります。リソース (VM など) をクリックすると、そのリソースの詳細ページが開きます。ワークロードをクリックすると、関連するポッドを表示するクエリ ページが開きます。リンクによって空のクエリが開かれる場合は、影響を受けるポッドがアクティブな競合の一部ではなくなったことが原因である可能性があることに注意してください。クエリの時間範囲を変更して、より広い範囲またはより限定された範囲でポッド リストを表示できます。</block>
-  <block id="53baeaedbb25410f6c630cdbea1ddb6b" category="paragraph">テナントの飽和の可能性を減らす、または排除するために実行できる手順はいくつかあります。これらは、ページ上の *+ 推奨事項を表示* リンクを展開すると表示されます。試すことができるいくつかの方法を以下に示します。</block>
-  <block id="ac62625b23d0635d3eaed0e05c830d36" category="paragraph">最後に、「*インサイト リンクをコピー*」をクリックしてページの URL をクリップボードにコピーし、同僚と簡単に共有できるようになります。</block>
   <block id="5142ab8747c5da1b5115ffa35bacd522" category="summary">Kubernetes の変更の追跡がこれまで以上に簡単になりました。</block>
   <block id="d75550072217b58f67a7216961c2bb8c" category="doc">Kubernetes 変更分析</block>
   <block id="9ec645581caafa9fbb6d571ba008b9cc" category="paragraph">Kubernetes Change Analytics は、K8s 環境への最近の変更をワンストップで表示します。アラートと展開ステータスを簡単に確認できます。  Change Analytics を使用すると、すべてのデプロイメントと構成の変更を追跡し、それを K8s サービス、インフラストラクチャ、クラスターの健全性およびパフォーマンスと相関させることができます。</block>
@@ -14427,7 +14352,6 @@
   <block id="1297bab76f52eaf87c4bead6d91c5747" category="paragraph">*主キー：*volumeName、storageIdentifier</block>
   <block id="a19ba3643626c0da85c3de321b7fb564" category="cell">lastAccessed</block>
   <block id="5215d51f00cbd59bd4f5379564dd2607" category="cell">最終アクセスタイムスタンプ</block>
-  <block id="7786ae506eee52b626dcc8402f829f17" category="paragraph"><block ref="7786ae506eee52b626dcc8402f829f17" category="inline-link-macro-rx"></block></block>
   <block id="649d30b7cac0604fb3207f769101f157" category="list-text">internal_volume_capacity_fact（1対多）</block>
   <block id="22c529c0f957ddcd1f77511e82dfbfc4" category="list-text">chargeback_fact（1対多）</block>
   <block id="5dd9e2d63020dda622b0aab04bb64243" category="list-text">vm_capacity_fact（1対多）</block>
@@ -14526,25 +14450,16 @@
   <block id="de9fcff157c3fd05f707a7b227a45275" category="summary">Pure FlashBlade Storageデータコレクタの設定</block>
   <block id="c0c126a33a6cd3661eae0fb5eca89c2d" category="paragraph">Data Infrastructure Insightsは、Pure StorageFlashBladeデータコレクタを使用して、REST APIのバージョン2を公開するFlashBladeクラスタからインベントリデータとパフォーマンスデータを収集します。</block>
   <block id="80e910f35b12e9c61335fa88de36edd0" category="sidebar">Red Hat Virtualization</block>
-  <block id="96d302563986f9d75dc51085e4c183d6" category="cell">リンク：task_dc_redhat_openshift virtualization.html［Red Hat OpenShift Virtualization ］</block>
-  <block id="8dfbd1afa40d818910ea903f9d52f6ec" category="summary">Red Hat OpenShift Virtualization データコレクターの設定。</block>
-  <block id="50993793783c5f33ae8f736a95dca1b9" category="doc">Red Hat OpenShift Virtualization データコレクター</block>
-  <block id="6fd44ae5a42d6b33248d329cbbddaa88" category="paragraph">DII Red Hat OpenShift Virtualization コレクターは、OpenShift Virtualization 環境で実行されている OSV コンピューティングワークロードを検出しようとします - このコレクターはすべての Open Shift ポッドを検出するわけではありません。これは HTTPS REST API ベースのコレクターです。OSV クラスターごとに 1 つのコレクターを作成することをお勧めします。</block>
-  <block id="0e2f53883090c3b63a953261cdb19325" category="paragraph">このコレクターの認証方法は、サービス アカウントにバインドされた認証トークンです。ユーザー アカウントとトークンの両方を作成するには：</block>
-  <block id="f2c430952fd20f76b24810e2e6f8dace" category="paragraph">これら 3 つのコマンドを実行し、エラーがないか確認します。</block>
-  <block id="8a8ad6f9b43737bda614d744a8286cc4" category="paragraph">コマンドが完了すると：</block>
-  <block id="9fb84dc506591e78ff3f6f8ac2f00e6e" category="paragraph">これにより、ユーザーにバインドされたトークンが作成されます。</block>
-  <block id="0cf40b0b5f29b2928f214370b73c4fac" category="paragraph">最後に、OSV 管理者に次のコマンドを実行してもらうこともできます：</block>
-  <block id="7af44018c8c76e698e986a0c0db08e5f" category="paragraph">これにより、管理用のホスト名/IP アドレスが返されます。各 DII OSV コレクターは、OSV 管理用の IP/ホスト名を指す必要があります。</block>
-  <block id="e62768229563f11ca5fd49a1482ae7a8" category="list-text">REST APIを介したポート443経由のRed Hat OpenShift VirtualizationサーバーのIPアドレス</block>
-  <block id="07bc27033bbe069dd4fcfa7e7287df66" category="cell">RHOVへのHTTPS通信に使用されるポート</block>
   <block id="db2f9342403e0e147464a85b899ec12c" category="sidebar">Red Hat OpenShift Virtualization</block>
   <block id="cc7e5505fa4bc50f5457fa8f8b55f94f" category="section-title">2026年3月</block>
-  <block id="c62d7b96ff17fd52f5c5b5957d12ce47" category="section-title">DII の AI アシスタントは誰でもご利用いただけます。</block>
-  <block id="dd0f9294fa313d494966ae16cbe89435" category="paragraph">Data Infrastructure Insights AI アシスタントはプレビュー版が利用可能で、次の機能強化が含まれています：</block>
-  <block id="e609c64ff8e8c15f1ce845903ca2db7e" category="list-text">Azure リージョンの可用性：DII サイトが Azure でホストされているお客様のために、Data Infrastructure Insights アシスタントがサポートできるようになりました。</block>
-  <block id="056a97d89a4b6d30acf8e9b86d3ed172" category="list-text">最大7日間のデータ：アシスタントは最大7日間の高解像度のメトリックにアクセスできるようになり、より広範囲のデータ分析と洞察が可能になります。</block>
   <block id="e43d8f702818ecf5597859f98ff1e993" category="list-text">ASSETS タイプには、アセット、クエリ、および検索 API が含まれます。Data Infrastructure Insights アセットの属性とメトリックは、「odata」と呼ばれることもあります。これらの API は通常、/rest/v1/asset または /rest/v1/query を介してアクセスされます。詳細については、<block ref="622b990b99495c7072e19eb08becc13e" category="inline-xref-macro-rx"></block>を参照してください。</block>
   <block id="627c6b105244e1b95d64a8f71c382473" category="list-text">DATA INGESTION タイプは、Telegraf エージェントなどからの取り込みデータとカスタムメトリックを取得および管理するために使用されます。これらは「データレイク」または「レイク」メトリックと呼ばれることもあります。これらの API は通常、/rest/v1/lake を通じてアクセスされます。詳細については、<block ref="622b990b99495c7072e19eb08becc13e" category="inline-xref-macro-rx"></block>を参照してください。</block>
   <block id="d14a20e4ad37ea89f3a29854e5a1934c" category="paragraph">ユーザーがアクセスできるAPIの種類は、各Data Infrastructure Insights機能セット（Observability、Workload Security、Reporting）で持っている<block ref="ead2141fb682d81a2f0b1deca7bb95c5" category="inline-link-macro-rx"></block>にも依存します。</block>
+  <block id="57919acc530156af753aec7b4f2f3fd0" category="section-title">AI Assistant が一般提供開始となりました</block>
+  <block id="f58fde87057b6940a6342bbe077ef420" category="paragraph">Data Infrastructure Insights AI アシスタントは、AWS 上でホストされている DII サイトをご利用のすべてのお客様に一般提供を開始しました。</block>
+  <block id="0e03cca45a1184995a9ec2d51413668b" category="paragraph">AzureサイトのAIアシスタントはまだプレビュー版であることにご注意ください。一般提供開始のお知らせについては、このスペースをご覧ください。</block>
+  <block id="74909051b7c24faefceb41b1c2f67f3f" category="section-title">Infrastructure Insightsで削除された機能</block>
+  <block id="eeca18d86334ede222257bab8c195d15" category="paragraph">DII の「Infrastructure Insights」機能である _Shared Resources Under Stress_、_Kubernetes Namespaces Running out of Space_、_Reclaiming ONTAP Cold Storage_ は、DII では利用できなくなりました。</block>
+  <block id="b222969a0e0fca1c5ae1f58770c55fd3" category="summary">2020年からData Infrastructure Insightsで利用可能な新機能</block>
+  <block id="3535e34a6ea939a9c4a64fcb08c9f72d" category="doc">Data Infrastructure Insightsの最新情報 - アーカイブ2020</block>
 </blocks>

@@ -93,16 +93,6 @@ sidebar:
         url: "/concept_log_explorer.html"
       - title: 非アクティブなデバイスの識別
         url: "/task_identify_inactive_devices.html"
-    - title: 洞察
-      entries:
-      - title: 概要
-        url: "/insights_overview.html"
-      - title: ストレス下における共有リソース
-        url: "/insights_shared_resources_under_stress.html"
-      - title: Kubernetes 名前空間のスペース不足
-        url: "/insights_k8s_namespaces_running_out_of_space.html"
-      - title: ONTAPコールド ストレージの再利用
-        url: "/insights_reclaim_ontap_cold_storage.html"
     - title: モニターとアラート
       entries:
       - title: モニターの作成
