@@ -26,7 +26,40 @@ keywords: AU, acquisition unit, requirements, sizing
 | コンポーネント | Linux 要件 | Windows の要件 
 
 
-| オペレーティング システム | 次のいずれかのライセンス版を実行しているコンピューター：* AlmaLinux 9.5、10 * Centos（64ビット）：Stream 9 * Debian（64ビット）：11から13 * OpenSUSE Leap 15.2から15.6、16 * Oracle Enterprise Linux（64ビット）：8.10、9.2、9.4、9.6、10 * Red Hat（64ビット）：8.10、9.2、9.4、9.6、10 * Rocky 9.2から9.6 * SUSE Linux Enterprise Server 15 SP4から15 SP7、16 * Ubuntu Server：20.04、22.04、24.04 LTS * 上記プラットフォーム上のSELinux このコンピューターでは、他のアプリケーションレベルのソフトウェアを実行しないでください。専用サーバーをお勧めします。SELinuxで実行している場合は、取得ユニットシステムで次のコマンドを実行することをお勧めします：sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights | 次のいずれかのライセンス バージョンを実行しているコンピューター: * Microsoft Windows 11 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 このコンピューターでは、他のアプリケーション レベルのソフトウェアを実行しないでください。専用サーバーをお勧めします。 
+| オペレーティング システム  a| 
+以下のいずれかのライセンス版を実行しているコンピュータ：
+
+* AlmaLinux 9.5、10
+* Centos (64ビット)：Stream 9
+* Debian（64ビット）：11から13
+* OpenSUSE Leap 15.2から15.6、16
+* Oracle Enterprise Linux（64ビット）：8.10、9.2、9.4、9.6、10
+* Red Hat（64ビット）：8.10、9.2、9.4、9.6、10
+* Rocky 9.2から9.6
+* SUSE Linux Enterprise Server 15 SP4 から 15 SP7、16
+* Ubuntu Server：20.04、22.04、24.04 LTS
+* 上記プラットフォーム上の SELinux
+
+
+このコンピュータでは、他のアプリケーションレベルのソフトウェアは一切実行しないでください。専用サーバーのご利用をお勧めします。
+
+SELinuxを使用している場合は、取得ユニットシステムで以下のコマンドを実行することをお勧めします：
+
+....
+sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?"
+sudo restorecon -R /opt/netapp/cloudinsights
+.... a| 
+以下のいずれかのライセンス版を実行しているコンピュータ：
+
+* Microsoft Windows Server 11
+* Microsoft Windows Server 2016
+* Microsoft Windows Server 2019
+* Microsoft Windows Server 2022
+* Microsoft Windows Server 2025
+
+
+このコンピュータでは、他のアプリケーションレベルのソフトウェアは一切実行しないでください。専用サーバーのご利用をお勧めします。
+
 
 
 | CPU | 2つのCPUコア | 同じ 
@@ -35,7 +68,18 @@ keywords: AU, acquisition unit, requirements, sizing
 | メモリ | 8GBのRAM | 同じ 
 
 
-| 使用可能なディスク容量 | 50 GB (100 GB を推奨) Linux の場合、ディスク領域は次のように割り当てる必要があります: /opt/netapp 10 GB (大規模環境の場合は 20 GB) /var/log/netapp 40 GB (大規模環境の場合は 80 GB) /tmp インストール時に少なくとも 1 GB 使用可能 | 50 GB 
+| 使用可能なディスク容量  a| 
+50 GB（100 GB推奨）
+
+Linuxの場合、ディスク容量は次のように割り当てる必要があります：
+
+* /opt/netapp 10 GB（大規模環境の場合は 20 GB）
+* /var/log/netapp 40 GB（大規模環境の場合は 80 GB）
+* インストール中は/tmpに少なくとも1GBの空き容量が必要です。
+
+
+ファイルシステムは、そのオーバーヘッドのためにいくらかの領域を使用する場合があります。これらは、インストール前に_利用可能_である必要がある最小限の領域です。
+| 50 GB 
 
 
 | ネットワーク | 100 Mbps/1 Gbps イーサネット接続、静的 IP アドレス、および Acquisition Unit から *.cloudinsights.netapp.com またはData Infrastructure Insightsテナント (つまり \https://<tenant_id>.c01.cloudinsights.netapp.com) へのポート 80 または 443 (送信) 接続が必要です。取得ユニットと各データ収集装置間の要件については、link:data_collector_list.html["データコレクター"] 。組織でインターネット アクセスにプロキシの使用が必要な場合は、組織のプロキシの動作を理解し、 Data Infrastructure Insightsが機能するための特定の例外を探す必要がある場合があります。たとえば、組織ではデフォルトでアクセスをブロックし、例外的に特定の Web サイト/ドメインへのアクセスのみを許可していますか? もしそうなら、次のドメインを例外リストに追加する必要があります: *.cloudinsights.netapp.com 詳細については、プロキシについてお読みください。link:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["ここ（Linux）"]またはlink:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["こちら（Windows）"]。 | 同じ 

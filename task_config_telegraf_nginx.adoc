@@ -7,10 +7,17 @@ summary: Nginxデータコレクターの設定
 = Nginx データコレクター
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Data Infrastructure Insights は、このデータ コレクターを使用して Nginx からメトリックを収集します。
+
+
+NOTE: このコレクターは非推奨です。2027年1月以降は利用できなくなります。
 
 
 

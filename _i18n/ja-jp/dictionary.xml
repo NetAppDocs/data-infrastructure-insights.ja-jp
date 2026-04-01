@@ -168,7 +168,6 @@
   <block id="4789f23283b3a61f858b641a1bef19a3" category="cell">メモリ</block>
   <block id="83626eda7582435cdf0eb139d5cc8972" category="cell">8GBのRAM</block>
   <block id="da65b8cea76748b286bd905feef4a5fa" category="cell">使用可能なディスク容量</block>
-  <block id="e51abfd3fc3e12a9fe8f5f800312a852" category="cell">50 GB (100 GB を推奨) Linux の場合、ディスク領域は次のように割り当てる必要があります: /opt/netapp 10 GB (大規模環境の場合は 20 GB) /var/log/netapp 40 GB (大規模環境の場合は 80 GB) /tmp インストール時に少なくとも 1 GB 使用可能</block>
   <block id="6aaa2ffc817cac34a806a149bee36350" category="cell">50 GB</block>
   <block id="eec89088ee408b80387155272b113256" category="cell">ネットワーク</block>
   <block id="2f704538f6c9d6459a97314be98124e2" category="inline-link-macro">データコレクター</block>
@@ -8686,14 +8685,12 @@
   <block id="ef7830d32fe70ad0f843821a2a4f10e4" category="cell">XCサーバーとのTCP通信に使用するポート</block>
   <block id="36188b71a27eabbba08e545a83d62055" category="summary">DELL EMC Data Domain データ コレクターを構成します。</block>
   <block id="ffcfe5fed071732290c9355893581d7d" category="doc">DELL EMC Data Domain データコレクター</block>
-  <block id="bdc3274e97745e1635f0d41c124ddb66" category="paragraph">このデータ コレクターは、DELL EMC Data Domain 重複排除ストレージ システムからインベントリとパフォーマンス情報を収集します。このデータ コレクターを構成するには、特定の構成手順と使用上の推奨事項に従う必要があります。</block>
   <block id="70d1bd7bbccf2d53c6864e712d14cf29" category="paragraph">Data Infrastructure Insights は、 Data Domain データ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。</block>
   <block id="4410ec34d9e6c1a68100ca0ce033fb17" category="cell">アレイ</block>
   <block id="b80d18b0b26e4cbb83a956dc537e214f" category="cell">FCポート</block>
   <block id="6c202452e44c42e323204da2a3a3c24a" category="cell">ファイルシステム</block>
   <block id="5c50d3c1da7fd2f47df616d0d012d1d4" category="cell">NFSとCIFSの共有</block>
   <block id="dc496e57d71615841c66e4c990c6f335" category="cell">ファイルシェア</block>
-  <block id="6bc725cd9439cdaa75d76ca867d8a678" category="paragraph">注: これらは一般的な用語のマッピングのみであり、このデータ収集ツールのすべてのケースを反映しているわけではありません。</block>
   <block id="4e086ec2792b9a6a42607af390d811f3" category="list-text">Data DomainデバイスのIPアドレス</block>
   <block id="461c620bef9b3a3b77c6117d659fd3e0" category="list-text">Data Domainストレージへの読み取り専用ユーザー名とパスワード</block>
   <block id="85a4f04076ca6c3570fadcf452957688" category="list-text">SSH、ポート22</block>
@@ -10143,10 +10140,8 @@
   <block id="51408f1c75ab7bcc90f67b3ab1801733" category="cell">APIトークン</block>
   <block id="0507fa02ffd6a1be1f4496a833b194eb" category="summary">Red Hat Virtualization データコレクターを構成します。</block>
   <block id="6609776175436f74c8fb3530cfff6f27" category="doc">Red Hat Virtualization データコレクター</block>
-  <block id="5f46815146ffa354dc2f5c63d9854bcc" category="paragraph">Data Infrastructure Insights は、 Red Hat Virtualization データコレクターを使用して、仮想化された Linux および Microsoft Windows ワークロードからインベントリ データを収集します。</block>
   <block id="8b60c89058c8a36aacae9d3ecd007639" category="cell">ストレージドメイン</block>
   <block id="524c6421ae67a40ab9a2d81082989e67" category="cell">論理ユニット</block>
-  <block id="1252e68ee9820a25a4fa53cba5316613" category="list-text">REST API 経由のポート 443 経由の RHEV サーバーの IP アドレス</block>
   <block id="1755c36c6d233fd7d643efcf91b29322" category="list-text">読み取り専用のユーザー名とパスワード</block>
   <block id="1f6ab089a965189e0e2e5d53aba2bc6a" category="list-text">RHEV バージョン 3.0 以上</block>
   <block id="6ddc0c44488bfc939598a18e8646face" category="cell">RHEV サーバの IP アドレス</block>
@@ -12318,8 +12313,6 @@
   <block id="f5efcf93de96054f67b29d58662ad5c6" category="list-text">発生間隔には、[_15 分_] の期間で [_連続_] を選択します。</block>
   <block id="95e94216ef8b85a76727809c3dfcbcc0" category="inline-link-macro">ONTAPデータ管理</block>
   <block id="2520cfbb37bc8bbd2fc91278c73eb838" category="list-text">ONTAP REST コレクターでは FPolicy メトリックはサポートされていないことに注意してください (Workload Security データ コレクターは FPolicy サーバーを使用し、FPolicy メトリックを使用すると Workload Security データ収集アクティビティを監視できます)。Fpolicyメトリックをサポートするには、 <block ref="5887f651a571af9233df120cb7d32347" category="inline-link-macro-rx"></block> コレクタ。</block>
-  <block id="b2422fa602be830d9f1a2469dd70ca20" category="inline-link-macro">NetApp ONTAP AFX</block>
-  <block id="83cd27100a931554f0e05219011edf39" category="cell"><block ref="83cd27100a931554f0e05219011edf39" category="inline-link-macro-rx"></block></block>
   <block id="14ec544dd26342f2315dc51923b34e66" category="summary">ONTAP AFXコレクター</block>
   <block id="aaab7580be4232835e9f12e5691f118f" category="doc">NetApp ONTAP AFX データコレクター</block>
   <block id="e395c9addcba424f5bda562994dfecbe" category="cell">ボリューム/ FlexVol/ FlexGroup</block>
@@ -12384,7 +12377,6 @@
   <block id="751c3e0cbbd3c7bba533140abe0f0dde" category="inline-xref">ピン留め/ピン留め解除の手順</block>
   <block id="55f4b0c8991710156e1d9a114af60fe1" category="cell">ピンを解除すると、すぐに最新バージョン (利用可能な場合) が取得され、エージェントとコレクターがアップグレードされます。このアップグレード中、fpolicies は切断され、再接続されます。この機能は、自動アップグレードのタイミングを制御したいお客様向けに設計されています。以下を参照<block ref="2271de46efd5da417e9db9f2ab23550b" category="inline-xref-macro-rx"></block>。</block>
   <block id="2a0a2208c984d848c76e3dc480d25f5a" category="cell">大規模な構成の場合、コレクターを一時停止するのではなく、Pin と Unpin を使用することをお勧めします。ピンとピン解除の使用中に一時停止したり再開したりする必要はありません。顧客はエージェントとコレクターを固定したままにして、新しいバージョンに関する電子メール通知を受信したら、30 日以内にエージェントを 1 つずつ選択的にアップグレードすることができます。このアプローチにより、fpolicies への遅延の影響が最小限に抑えられ、アップグレード プロセスをより細かく制御できるようになります。</block>
-  <block id="4c4482e1695529fa7b313efe35876587" category="cell">次のいずれかのライセンス バージョンを実行しているコンピューター: * Microsoft Windows 11 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 このコンピューターでは、他のアプリケーション レベルのソフトウェアを実行しないでください。専用サーバーをお勧めします。</block>
   <block id="96e0bc41f601636412c93ccf60fffb89" category="cell">100 Mbps/1 Gbps イーサネット接続、静的 IP アドレス、および Acquisition Unit から *.cloudinsights.netapp.com またはData Infrastructure Insightsテナント (つまり \https://&lt;tenant_id&gt;.c01.cloudinsights.netapp.com) へのポート 80 または 443 (送信) 接続が必要です。取得ユニットと各データ収集装置間の要件については、<block ref="be56515064596049a4b61d9d1a149cf9" category="inline-link-macro-rx"></block> 。組織でインターネット アクセスにプロキシの使用が必要な場合は、組織のプロキシの動作を理解し、 Data Infrastructure Insightsが機能するための特定の例外を探す必要がある場合があります。たとえば、組織ではデフォルトでアクセスをブロックし、例外的に特定の Web サイト/ドメインへのアクセスのみを許可していますか? もしそうなら、次のドメインを例外リストに追加する必要があります: *.cloudinsights.netapp.com 詳細については、プロキシについてお読みください。<block ref="05c875968683001fc59f206218314b72" category="inline-link-macro-rx"></block>または<block ref="554efdd06704a764ab0a7e3947e279ff" category="inline-link-macro-rx"></block>。</block>
   <block id="f17c7e32a4fcdb4c787f412cf3181bea" category="cell">管理者と同じ権限に加え、SSO 認証と ID フェデレーション構成も管理します。追加の所有者を割り当てたり、マネージド サービス プロバイダー (MSP) マスター テナントにクライアントを追加したりすることもできます。</block>
   <block id="6794662d08bc33fcbd95c93345331eb3" category="list-text">ONTAP永続ストアは 9.14.1 からサポートされます。</block>
@@ -12531,7 +12523,6 @@
   <block id="3771b23dadd43c39046622dbcb4c17e4" category="list-text">「Webhook をテスト」をクリックして、エラーがないことを確認します。</block>
   <block id="c20e86538672d1ab3ab8e3a5c2961e28" category="list-text">Webhook を保存します。</block>
   <block id="beda12a678062ce581606c88344f4e06" category="sidebar">Teams Webhook の例</block>
-  <block id="e18f38a263784d686e9a0d45d5416285" category="cell">次のいずれかのライセンス版を実行しているコンピューター：* AlmaLinux 9.5、10 * Centos（64ビット）：Stream 9 * Debian（64ビット）：11から13 * OpenSUSE Leap 15.2から15.6、16 * Oracle Enterprise Linux（64ビット）：8.10、9.2、9.4、9.6、10 * Red Hat（64ビット）：8.10、9.2、9.4、9.6、10 * Rocky 9.2から9.6 * SUSE Linux Enterprise Server 15 SP4から15 SP7、16 * Ubuntu Server：20.04、22.04、24.04 LTS * 上記プラットフォーム上のSELinux このコンピューターでは、他のアプリケーションレベルのソフトウェアを実行しないでください。専用サーバーをお勧めします。SELinuxで実行している場合は、取得ユニットシステムで次のコマンドを実行することをお勧めします：sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights</block>
   <block id="ddb78a0715fab46562d8ee8102cea78c" category="list-text">ポート 443（または設定されている場合は 8443）</block>
   <block id="6e7162cfd0e31a7db490a51939253ab9" category="list-text">HPE Alletra 9080</block>
   <block id="193eabb9a17fd246abfc9b708de0fb7f" category="list-text">HPE_3PAR 20450</block>
@@ -14444,8 +14435,6 @@
   <block id="e30ec09a4c79b55e1ccfc1955c76c379" category="cell">switchLevel</block>
   <block id="e10c8c70fc9c70d82df6e3c2ea10ceed" category="cell">スイッチレベル</block>
   <block id="549ae8b6dea4926a2af206c5d7300fc5" category="paragraph">Data Infrastructure Insightsの使用を開始する前に、*NetApp Console*ポータルにサインアップする必要があります。すでにNetApp Consoleログインをお持ちの場合は、いくつかの簡単な手順でData Infrastructure Insightsの無料トライアルを開始できます。</block>
-  <block id="93e49907cf8d9ecec89d856c3d49fb2f" category="inline-link-macro">Pure FlashBlade</block>
-  <block id="f92f77015be3ec66c79ba43a2aec5f69" category="cell"><block ref="f92f77015be3ec66c79ba43a2aec5f69" category="inline-link-macro-rx"></block></block>
   <block id="52e4ed377cdb874dec547eb79615f673" category="admonition">Data Infrastructure Insights の VPLEX クラスタからのパフォーマンス収集には、Data Infrastructure Insights が SCP ベースのファイルコピーを介して取得する .CSV ファイルとログを入力するために、パフォーマンスアーカイブサービスが動作している必要があります。NetApp は、多くの VPLEX ファームウェアアップグレード/管理ステーションの更新により、この機能が動作しなくなることを確認しています。このようなアップグレードを計画しているお客様は、計画しているアップグレードによってこの機能が使用できなくなるかどうか、またそうなる場合はパフォーマンスの可視性のギャップを最小限に抑えるためにどのようにこの機能を再度有効にできるかを Dell/EMC に事前に問い合わせることをお勧めします。Cloud Insight の VPLEX パフォーマンスコードは、各ポーリングで、すべての期待されるファイルが存在するかどうか、そしてそれらが適切に更新されているかどうかを評価します。ファイルが欠落しているか古くなっている場合は、Data Infrastructure Insights はパフォーマンス収集の失敗をログに記録します。</block>
   <block id="de9fcff157c3fd05f707a7b227a45275" category="summary">Pure FlashBlade Storageデータコレクタの設定</block>
   <block id="c0c126a33a6cd3661eae0fb5eca89c2d" category="paragraph">Data Infrastructure Insightsは、Pure StorageFlashBladeデータコレクタを使用して、REST APIのバージョン2を公開するFlashBladeクラスタからインベントリデータとパフォーマンスデータを収集します。</block>
@@ -14462,4 +14451,44 @@
   <block id="eeca18d86334ede222257bab8c195d15" category="paragraph">DII の「Infrastructure Insights」機能である _Shared Resources Under Stress_、_Kubernetes Namespaces Running out of Space_、_Reclaiming ONTAP Cold Storage_ は、DII では利用できなくなりました。</block>
   <block id="b222969a0e0fca1c5ae1f58770c55fd3" category="summary">2020年からData Infrastructure Insightsで利用可能な新機能</block>
   <block id="3535e34a6ea939a9c4a64fcb08c9f72d" category="doc">Data Infrastructure Insightsの最新情報 - アーカイブ2020</block>
+  <block id="627f42d17d7ea3d6e54846b3aac2b49f" category="paragraph">以下のいずれかのライセンス版を実行しているコンピュータ：</block>
+  <block id="62f84edfc095da652c65bd53d752ae9f" category="list-text">AlmaLinux 9.5、10</block>
+  <block id="e4b10322d174dad1b342b960d4db4a1a" category="paragraph">このコンピュータでは、他のアプリケーションレベルのソフトウェアは一切実行しないでください。専用サーバーのご利用をお勧めします。</block>
+  <block id="ad1be19da774dae802b440155ce7d99e" category="paragraph">SELinuxを使用している場合は、取得ユニットシステムで以下のコマンドを実行することをお勧めします：</block>
+  <block id="c05e480e3f21ed06330149211021128c" category="list-text">Microsoft Windows Server 11</block>
+  <block id="74dd40aa9a6635d79204e610e8324c38" category="list-text">Microsoft Windows Server 2016</block>
+  <block id="1ee2c5253c485a81cfff8c8e3e23a23f" category="list-text">Microsoft Windows Server 2019</block>
+  <block id="6ed0120f37738e825d889dcb299d9251" category="list-text">Microsoft Windows Server 2022</block>
+  <block id="6e6b7efb9f9c24d5ca212d65430689fd" category="list-text">Microsoft Windows Server 2025</block>
+  <block id="4f9edfe2d639bdf84659ce06867169be" category="paragraph">50 GB（100 GB推奨）</block>
+  <block id="cd7b5f0dcf0b21cd4f7309088a390cc0" category="paragraph">Linuxの場合、ディスク容量は次のように割り当てる必要があります：</block>
+  <block id="edad7b7dcf5cc00b2dda3c18951100a2" category="list-text">/opt/netapp 10 GB（大規模環境の場合は 20 GB）</block>
+  <block id="bb8581977ca7a9a1f259d38b9862e60a" category="list-text">/var/log/netapp 40 GB（大規模環境の場合は 80 GB）</block>
+  <block id="747ac0c92d8f5c3aa0f9c512ce6cddcf" category="list-text">インストール中は/tmpに少なくとも1GBの空き容量が必要です。</block>
+  <block id="c5c33f7f872335cb93ed44e9b04d0a42" category="paragraph">ファイルシステムは、そのオーバーヘッドのためにいくらかの領域を使用する場合があります。これらは、インストール前に_利用可能_である必要がある最小限の領域です。</block>
+  <block id="f1e2a8b4ad8172c17aa60b03b39227c4" category="inline-link-macro">Pure Storage FlashBlade</block>
+  <block id="6b27f70000f03c5a24fb70b6ed340d8e" category="cell"><block ref="6b27f70000f03c5a24fb70b6ed340d8e" category="inline-link-macro-rx"></block></block>
+  <block id="079cdcfd43abfa5548c437b1a50427fb" category="inline-link-macro">Red Hat OpenShift Virtualization</block>
+  <block id="bd6345d055b68904ea42423102195045" category="cell"><block ref="bd6345d055b68904ea42423102195045" category="inline-link-macro-rx"></block></block>
+  <block id="d818fc83532d27c308cb47649bd5ec02" category="admonition">このコレクターは非推奨です。2027年1月以降は利用できなくなります。</block>
+  <block id="faf4a8391186fe75061a56efa03cbe77" category="paragraph">このデータコレクターは、DELL EMC Data Domain重複排除ストレージシステムからインベントリ情報を収集します。このデータコレクターを設定するには、従うべき特定の設定手順と使用上の推奨事項があります。</block>
+  <block id="8dfbd1afa40d818910ea903f9d52f6ec" category="summary">Red Hat OpenShift Virtualization データコレクターの設定。</block>
+  <block id="50993793783c5f33ae8f736a95dca1b9" category="doc">Red Hat OpenShift Virtualization データコレクター</block>
+  <block id="6fd44ae5a42d6b33248d329cbbddaa88" category="paragraph">DII Red Hat OpenShift Virtualization コレクターは、OpenShift Virtualization 環境で実行されている OSV コンピューティングワークロードを検出しようとします - このコレクターはすべての Open Shift ポッドを検出するわけではありません。これは HTTPS REST API ベースのコレクターです。OSV クラスターごとに 1 つのコレクターを作成することをお勧めします。</block>
+  <block id="0e2f53883090c3b63a953261cdb19325" category="paragraph">このコレクターの認証方法は、サービス アカウントにバインドされた認証トークンです。ユーザー アカウントとトークンの両方を作成するには：</block>
+  <block id="f2c430952fd20f76b24810e2e6f8dace" category="paragraph">これら 3 つのコマンドを実行し、エラーがないか確認します。</block>
+  <block id="8a8ad6f9b43737bda614d744a8286cc4" category="paragraph">コマンドが完了すると：</block>
+  <block id="9fb84dc506591e78ff3f6f8ac2f00e6e" category="paragraph">これにより、ユーザーにバインドされたトークンが作成されます。</block>
+  <block id="0cf40b0b5f29b2928f214370b73c4fac" category="paragraph">最後に、OSV 管理者に次のコマンドを実行してもらうこともできます：</block>
+  <block id="7af44018c8c76e698e986a0c0db08e5f" category="paragraph">これにより、管理用のホスト名/IP アドレスが返されます。各 DII OSV コレクターは、OSV 管理用の IP/ホスト名を指す必要があります。</block>
+  <block id="e62768229563f11ca5fd49a1482ae7a8" category="list-text">REST APIを介したポート443経由のRed Hat OpenShift VirtualizationサーバーのIPアドレス</block>
+  <block id="07bc27033bbe069dd4fcfa7e7287df66" category="cell">RHOVへのHTTPS通信に使用されるポート</block>
+  <block id="6b4e228e21f03e0f137a5d82c17defab" category="paragraph">Red Hat Virtualization用のDIIデータコレクターは、オープンソースプロジェクトoVirt、およびOracle Linux Virtualization Managerもサポートしています。このデータコレクターは、REST APIを介して管理ステーションのHTTPSインターフェイスと通信します。</block>
+  <block id="154535c2753f4d1eedc433e63b2e796f" category="list-text">REST API経由でポート443を介したRHV/oVirt/OLVMサーバーのIPアドレス/ホスト名</block>
+  <block id="aee702f6738b473d9ebf07b43255af32" category="list-text">RHV Version 3.0+/Ovirt 4.0+/OLVM 4.0+</block>
+  <block id="e4d0cf9093fde0665165a53499aff00b" category="cell">RHV/Ovirt/OLVM サーバーの IP アドレス</block>
+  <block id="cb5cba13a9dcf03bdccf20db87fe2d0c" category="cell">管理ステーションのIPアドレス</block>
+  <block id="c304b6eec4c1c5c3c0517f83640ef6e3" category="cell">パフォーマンス収集を有効にする</block>
+  <block id="10558b4f829f071034d968780bb7a36e" category="cell">パフォーマンス ポーリング間隔（秒）</block>
+  <block id="6f159883a7f482d97fbfbd3597406382" category="cell">デフォルトは900です</block>
 </blocks>

@@ -7,6 +7,10 @@ summary: VMware データ コレクターを構成します。
 = VMware VSphere データコレクターの構成
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

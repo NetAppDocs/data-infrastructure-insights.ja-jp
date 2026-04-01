@@ -7,10 +7,17 @@ summary: Redisデータコレクターの構成
 = Redis データコレクター
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Data Infrastructure Insights は、このデータ コレクターを使用して Redis からメトリックを収集します。  Redis は、データベース、キャッシュ、メッセージ ブローカーとして使用されるオープン ソースのインメモリ データ構造ストアであり、文字列、ハッシュ、リスト、セットなどのデータ構造をサポートしています。
+
+
+NOTE: このコレクターは非推奨です。2027年1月以降は利用できなくなります。
 
 
 

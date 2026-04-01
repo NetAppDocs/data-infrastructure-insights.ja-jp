@@ -1,0 +1,109 @@
+---
+sidebar: sidebar 
+permalink: task_dc_redhat_openshift_virtualization.html 
+keywords: data collector, Red Hat OpenShift Virtualization 
+summary: Red Hat OpenShift Virtualization データコレクターの設定。 
+---
+= Red Hat OpenShift Virtualization データコレクター
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+DII Red Hat OpenShift Virtualization コレクターは、OpenShift Virtualization 環境で実行されている OSV コンピューティングワークロードを検出しようとします - このコレクターはすべての Open Shift ポッドを検出するわけではありません。これは HTTPS REST API ベースのコレクターです。OSV クラスターごとに 1 つのコレクターを作成することをお勧めします。
+
+このコレクターの認証方法は、サービス アカウントにバインドされた認証トークンです。ユーザー アカウントとトークンの両方を作成するには：
+
+....
+oc create sa acq-readonly-cluster-user -n default
+oc adm policy add-cluster-role-to-user cluster-reader -z acq-readonly-cluster-user --rolebinding-name acq-readonly-cluster-user-binding
+oc adm policy add-cluster-role-to-user cluster-monitoring-view -z acq-readonly-cluster-user --rolebinding-name acq-readonly-cluster-monitor-user-binding
+....
+これら 3 つのコマンドを実行し、エラーがないか確認します。
+
+コマンドが完了すると：
+
+ oc sa new-token acq-readonly-cluster-user
+これにより、ユーザーにバインドされたトークンが作成されます。
+
+最後に、OSV 管理者に次のコマンドを実行してもらうこともできます：
+
+ oc cluster-info
+これにより、管理用のホスト名/IP アドレスが返されます。各 DII OSV コレクターは、OSV 管理用の IP/ホスト名を指す必要があります。
+
+
+
+== 用語
+
+Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
+
+[cols="2*"]
+|===
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
+
+
+| ディスク | 仮想ディスク 
+
+
+| ホスト | ホスト 
+
+
+| 仮想マシン | 仮想マシン 
+
+
+| ストレージドメイン | データ ストア 
+
+
+| 論理ユニット | LUN 
+|===
+注: これらは一般的な用語のマッピングのみであり、このデータ コレクターのすべてのケースを反映しているわけではありません。
+
+
+
+== 要件
+
+* REST APIを介したポート443経由のRed Hat OpenShift VirtualizationサーバーのIPアドレス
+* 読み取り専用のユーザー名とパスワード
+* RHEV バージョン 3.0 以上
+
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 説明 
+
+
+| RHEV サーバの IP アドレス | ストレージシステムのIPアドレス 
+
+
+| ユーザ名 | 管理者権限を持つユーザー名 
+
+
+| 管理者権限アカウントのパスワード | パスワード 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 説明 
+
+
+| HTTPS通信ポート | RHOVへのHTTPS通信に使用されるポート 
+
+
+| インベントリポーリング間隔（分） | デフォルトは20分です。 
+|===
+
+
+== トラブルシューティング
+
+このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

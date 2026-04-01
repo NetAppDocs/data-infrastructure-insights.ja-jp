@@ -7,10 +7,17 @@ summary: Elasticsearch データコレクターの構成
 = Elasticsearch データコレクター
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Data Infrastructure Insights は、このデータ コレクターを使用して Elasticsearch からメトリックを収集します。
+
+
+NOTE: このコレクターは非推奨です。2027年1月以降は利用できなくなります。
 
 . *Observability > Collectors* から、*+ Data Collector* をクリックします。  Elasticsearch を選択します。
 +

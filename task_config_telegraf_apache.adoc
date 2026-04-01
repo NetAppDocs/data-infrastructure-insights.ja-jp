@@ -7,10 +7,17 @@ summary: Apacheデータコレクターの設定
 = Apache データコレクター
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 このデータ コレクターを使用すると、テナント上の Apache サーバーからデータを収集できます。
+
+
+NOTE: このコレクターは非推奨です。2027年1月以降は利用できなくなります。
 
 .前提条件
 * Apache HTTP Serverがセットアップされ、適切に実行されている必要があります。

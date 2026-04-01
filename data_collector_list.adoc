@@ -233,9 +233,6 @@ Data Infrastructure Insightsでサポートされているデータ コレクタ
 | link:task_dc_na_ontap_rest.html["NetApp ONTAP RESTコレクター"] | インフラ 
 
 
-| link:task_dc_na_ontap_afx.html["NetApp ONTAP AFX"] | インフラ 
-
-
 | link:task_dc_na_ontap_all_san_array.html["NetApp ONTAP ASA r2（オールSANアレイ）コレクター"] | インフラ 
 
 
@@ -272,13 +269,16 @@ Data Infrastructure Insightsでサポートされているデータ コレクタ
 | link:task_config_telegraf_puppetagent.html["操り人形エージェント"] | サービス 
 
 
-| link:task_dc_pure_flashblade.html["Pure FlashBlade"] | インフラ 
-
-
 | link:task_dc_pure_flasharray.html["ピュアストレージ フラッシュアレイ"] | インフラ 
 
 
+| link:task_dc_pure_flashblade.html["Pure Storage FlashBlade"] | インフラ 
+
+
 | link:task_dc_redhat_virtualization.html["レッドハット仮想化"] | インフラ 
+
+
+| link:task_dc_redhat_openshift_virtualization.html["Red Hat OpenShift Virtualization"] | インフラ 
 
 
 | link:task_config_telegraf_redis.html["レディス"] | サービス 
