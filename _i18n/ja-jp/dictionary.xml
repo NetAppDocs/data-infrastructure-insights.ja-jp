@@ -12462,7 +12462,6 @@
   <block id="db1a2df035e9cd0bcdfb55db52e3e64b" category="paragraph">既知のファイル拡張子に対するファイル改ざん攻撃が検出され、[アラート] 画面でアラートが生成されている場合は、そのファイル拡張子を _許可されたファイルの種類_ リストに追加して、不要なアラートを防ぐことができます。</block>
   <block id="8d791b80cd3ffee28fe92eaeb570182d" category="paragraph">_許可されたファイル タイプ_ リストに追加されると、その許可されたファイル タイプに対してファイル改ざん攻撃アラートは生成されなくなります。_許可されるファイルの種類_ ポリシーは、ファイルの改ざん検出にのみ適用されることに注意してください。</block>
   <block id="7af3f2f9c8eaa3a8ff61f839001e8ca0" category="paragraph">たとえば、_test.txt_ という名前のファイルが _test.txt.abc_ に名前変更され、Workload Security が _.abc_ 拡張子のためにファイル改ざん攻撃を検出した場合、_.abc_ 拡張子を _allowed file types_ リストに追加できます。リストに追加されると、_.abc_ 拡張子を持つファイルに対してファイル改ざん攻撃が生成されなくなります。</block>
-  <block id="374bdbda42629b3859daec6506078b36" category="sidebar">ONTAP自律保護統合</block>
   <block id="5273cec606b6768f8394e2ae1566c7f6" category="sidebar">攻撃のシミュレーション</block>
   <block id="5da98f5c78418524ecf144084929f19e" category="doc">ワークロードセキュリティ: ファイル改ざんのシミュレーション</block>
   <block id="e192cb4cca3f754a1b50fdf853ce74a4" category="summary">Workload Security データ コレクターを展開する前に、SVM イベント レート チェッカーを使用して NFS/SMB イベント レートを測定し、最適なエージェントのサイズを決定します。</block>
@@ -14491,4 +14490,15 @@
   <block id="c304b6eec4c1c5c3c0517f83640ef6e3" category="cell">パフォーマンス収集を有効にする</block>
   <block id="10558b4f829f071034d968780bb7a36e" category="cell">パフォーマンス ポーリング間隔（秒）</block>
   <block id="6f159883a7f482d97fbfbd3597406382" category="cell">デフォルトは900です</block>
+  <block id="ea178ff6db0ce95c8cbc3246d6650cb9" category="summary">アラートの送信を減らすには、ファイル拡張子をアラート除外リストに追加してください。</block>
+  <block id="d183e2d7c0392d5cf66d1908be8211c1" category="doc">アラート除外</block>
+  <block id="ee91b4dd26cc357eaf6f92f8e70239f0" category="paragraph">既知のファイル拡張子に対してファイル改ざん攻撃が検出され、アラート画面でアラートが生成されている場合、そのファイル拡張子を_アラート除外_リストに追加することで不要なアラートを防ぐことができます。これは_許可されたファイルタイプ_リストとも考えられます。なぜなら、Workload Securityはそれらのファイルが改ざんによるアラートを回避することを許可するためです。</block>
+  <block id="44e5ffe8f45ef48f6d55fd323a14ebd5" category="paragraph">*Workload Security &gt; Policies*に移動し、_Alert Exclusions_タブを開きます。</block>
+  <block id="b81cf913eebf1b9b3172d1df8992971e" category="inline-image-macro">アラート対象から除外できるファイルタイプ</block>
+  <block id="a7b62f8b775b1075063ceb3d8a408b10" category="paragraph"><block ref="a7b62f8b775b1075063ceb3d8a408b10" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0ca499fad2902c1886076f6a79993648" category="paragraph">許可されたファイルタイプのリストに追加されると、そのファイルタイプに対してファイル改ざん攻撃のアラートは生成されなくなります。アラート除外ポリシーは、ファイル改ざんの検出にのみ適用されることに注意してください。</block>
+  <block id="c40c4ea70475c0ba0841ba534492332d" category="paragraph">例えば、_test.txt_ という名前のファイルが _test.txt.abc_ に名前変更され、Workload Security が _.abc_ 拡張子のためにファイル改ざん攻撃を検出した場合、_.abc_ 拡張子を許可されたファイルタイプのリストに追加できます。リストに追加されると、_.abc_ 拡張子を持つファイルに対してファイル改ざん攻撃は発生しなくなります。</block>
+  <block id="670039cd8e2f07d8b36e77f11294bedb" category="paragraph">許可されるファイルの種類は、完全一致（例：「.abc」）または式（例：「*.type」、「.type*」、または「.*type*」）です。「.a*c」、「.p*f」の型の式はサポートされていません。</block>
+  <block id="3720ff11b9d0e04f7fd96e22ff7a745f" category="paragraph">監査のために、「Set By」と「Set Date」という追加属性が導入されました。既存のファイルタイプは、これらの属性の値が両方とも「migrated」に設定された状態で、新しい形式に移行されます。</block>
+  <block id="9b5911ec569b49f0ae81ecb2c9067806" category="sidebar">ONTAP自律型ランサムウェア対策の統合</block>
 </blocks>

@@ -261,9 +261,9 @@ sidebar:
         url: "/forensic_user_overview.html"
     - title: 自動応答ポリシー
       url: "/cs_automated_response_policies.html"
-    - title: 許可されるファイルタイプのポリシー
-      url: "/ws_allowed_file_types.html"
-    - title: ONTAP自律保護統合
+    - title: アラート除外
+      url: "/ws_alert_exclusions.html"
+    - title: ONTAP自律型ランサムウェア対策の統合
       url: "/concept_cs_integration_with_ontap_arp.html"
     - title: ONTAPアクセス拒否の統合
       url: "/concept_ws_integration_with_ontap_access_denied.html"

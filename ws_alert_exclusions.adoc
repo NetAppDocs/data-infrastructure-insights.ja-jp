@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: ws_alert_exclusions.html 
+keywords: workload security, cloud secure, include list, allowed, file types, ransomware, tampering, exclusion, alerts 
+summary: アラートの送信を減らすには、ファイル拡張子をアラート除外リストに追加してください。 
+---
+= アラート除外
+:allow-uri-read: 
+
+
+[role="lead"]
+既知のファイル拡張子に対してファイル改ざん攻撃が検出され、アラート画面でアラートが生成されている場合、そのファイル拡張子を_アラート除外_リストに追加することで不要なアラートを防ぐことができます。これは_許可されたファイルタイプ_リストとも考えられます。なぜなら、Workload Securityはそれらのファイルが改ざんによるアラートを回避することを許可するためです。
+
+*Workload Security > Policies*に移動し、_Alert Exclusions_タブを開きます。
+
+image:ws_alert_exclusions_list.png["アラート対象から除外できるファイルタイプ"]
+
+許可されたファイルタイプのリストに追加されると、そのファイルタイプに対してファイル改ざん攻撃のアラートは生成されなくなります。アラート除外ポリシーは、ファイル改ざんの検出にのみ適用されることに注意してください。
+
+例えば、_test.txt_ という名前のファイルが _test.txt.abc_ に名前変更され、Workload Security が _.abc_ 拡張子のためにファイル改ざん攻撃を検出した場合、_.abc_ 拡張子を許可されたファイルタイプのリストに追加できます。リストに追加されると、_.abc_ 拡張子を持つファイルに対してファイル改ざん攻撃は発生しなくなります。
+
+許可されるファイルの種類は、完全一致（例：「.abc」）または式（例：「*.type」、「.type*」、または「.*type*」）です。「.a*c」、「.p*f」の型の式はサポートされていません。
+
+監査のために、「Set By」と「Set Date」という追加属性が導入されました。既存のファイルタイプは、これらの属性の値が両方とも「migrated」に設定された状態で、新しい形式に移行されます。
