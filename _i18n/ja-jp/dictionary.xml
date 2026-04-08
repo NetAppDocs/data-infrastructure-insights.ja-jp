@@ -14492,13 +14492,21 @@
   <block id="6f159883a7f482d97fbfbd3597406382" category="cell">デフォルトは900です</block>
   <block id="ea178ff6db0ce95c8cbc3246d6650cb9" category="summary">アラートの送信を減らすには、ファイル拡張子をアラート除外リストに追加してください。</block>
   <block id="d183e2d7c0392d5cf66d1908be8211c1" category="doc">アラート除外</block>
-  <block id="ee91b4dd26cc357eaf6f92f8e70239f0" category="paragraph">既知のファイル拡張子に対してファイル改ざん攻撃が検出され、アラート画面でアラートが生成されている場合、そのファイル拡張子を_アラート除外_リストに追加することで不要なアラートを防ぐことができます。これは_許可されたファイルタイプ_リストとも考えられます。なぜなら、Workload Securityはそれらのファイルが改ざんによるアラートを回避することを許可するためです。</block>
-  <block id="44e5ffe8f45ef48f6d55fd323a14ebd5" category="paragraph">*Workload Security &gt; Policies*に移動し、_Alert Exclusions_タブを開きます。</block>
-  <block id="b81cf913eebf1b9b3172d1df8992971e" category="inline-image-macro">アラート対象から除外できるファイルタイプ</block>
-  <block id="a7b62f8b775b1075063ceb3d8a408b10" category="paragraph"><block ref="a7b62f8b775b1075063ceb3d8a408b10" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0ca499fad2902c1886076f6a79993648" category="paragraph">許可されたファイルタイプのリストに追加されると、そのファイルタイプに対してファイル改ざん攻撃のアラートは生成されなくなります。アラート除外ポリシーは、ファイル改ざんの検出にのみ適用されることに注意してください。</block>
-  <block id="c40c4ea70475c0ba0841ba534492332d" category="paragraph">例えば、_test.txt_ という名前のファイルが _test.txt.abc_ に名前変更され、Workload Security が _.abc_ 拡張子のためにファイル改ざん攻撃を検出した場合、_.abc_ 拡張子を許可されたファイルタイプのリストに追加できます。リストに追加されると、_.abc_ 拡張子を持つファイルに対してファイル改ざん攻撃は発生しなくなります。</block>
-  <block id="670039cd8e2f07d8b36e77f11294bedb" category="paragraph">許可されるファイルの種類は、完全一致（例：「.abc」）または式（例：「*.type」、「.type*」、または「.*type*」）です。「.a*c」、「.p*f」の型の式はサポートされていません。</block>
-  <block id="3720ff11b9d0e04f7fd96e22ff7a745f" category="paragraph">監査のために、「Set By」と「Set Date」という追加属性が導入されました。既存のファイルタイプは、これらの属性の値が両方とも「migrated」に設定された状態で、新しい形式に移行されます。</block>
   <block id="9b5911ec569b49f0ae81ecb2c9067806" category="sidebar">ONTAP自律型ランサムウェア対策の統合</block>
+  <block id="1fe01bac09fca89fb6f196d8c95401dc" category="paragraph">アラート除外機能を使用すると、特定のファイルの種類、ユーザー、ディレクトリパスに対するアラートの生成を抑制できます。これを使用すると、アラートパターンに一致する可能性のある既知の想定されるアクティビティを除外することで、誤検知を減らすことができます。</block>
+  <block id="3b39eff6bd46ab915c26d8ab9ed7bb91" category="paragraph">アラート除外はテナントごとに設定され、以下の項目が含まれます：</block>
+  <block id="1ce4fd7b116c43c936cc8ddbaa51ce99" category="inline-link-macro">ファイル拡張子</block>
+  <block id="f49e387bd8ac75fdab8d848695d1de88" category="list-text">ファイルタイプ：特定の<block ref="10b52059d1feedcec024042c1bbd1e91" category="inline-link-macro-rx"></block>でファイル改ざんアラートを抑制する</block>
+  <block id="aa4f2113791c12393a66ffe706420102" category="list-text">ユーザー：選択したユーザーによってトリガーされたアラートを抑制します。</block>
+  <block id="ecfbace61ab4dd6175d43a276330b05d" category="list-text">パス：選択したディレクトリパス（ジャンクションパスから始まる最大4階層）でのアクティビティに関するアラートを抑制します。</block>
+  <block id="099aaf46fa32549a39916446ecf1fe7e" category="inline-link-macro">許可されているファイルタイプ</block>
+  <block id="0dd69cce6b9e3a8a53769caf0047d503" category="paragraph">ファイルタイプの除外（「許可されたファイルタイプのポリシー」とも呼ばれる）が更新され、<block ref="38cbb5c947813aa64b0054e34231a6d7" category="inline-link-macro-rx"></block>に説明されています。</block>
+  <block id="70c2babfc037807dc9d1d94e48e6b818" category="paragraph">ユーザーの除外リストは先行入力でサポートされており、管理者はアラートから除外するユーザーを選択できます。</block>
+  <block id="ab217818a7f8d6405dd619210434e25f" category="paragraph">ディレクトリ除外機能は、ジャンクションパスから始まる最大4階層のディレクトリパスをサポートします。</block>
+  <block id="33b828c8fb435b67f3a4a321adbc89c1" category="paragraph">個々のユーザーおよびディレクトリパスは、それぞれの除外リストに追加または削除できます。各リストのすべてのエントリには、いつ誰によってリストに追加されたかの情報が含まれており、この情報は監査目的で使用されます。</block>
+  <block id="b2bc711706213f5680535c284278fd8a" category="section-title">除外事項と監査を管理する</block>
+  <block id="4cc0f970741fc7eef05a2f6890f15228" category="list-text">管理者は、ファイル拡張子、個々のユーザー、またはパスをいつでも追加または削除できます。</block>
+  <block id="49a160591030eb82ba36b624f5514398" category="list-text">各除外エントリには、それを設定した管理者の名前と設定日が記録されます。この情報は監査のために保持されます。</block>
+  <block id="430f66c61c1d6e05ef92945c7107306f" category="paragraph"><block ref="430f66c61c1d6e05ef92945c7107306f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4d06e3dd77aaee13a5d969e19fc7acf6" category="paragraph"><block ref="4d06e3dd77aaee13a5d969e19fc7acf6" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
