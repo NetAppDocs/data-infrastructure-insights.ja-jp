@@ -14495,12 +14495,9 @@
   <block id="9b5911ec569b49f0ae81ecb2c9067806" category="sidebar">ONTAP自律型ランサムウェア対策の統合</block>
   <block id="1fe01bac09fca89fb6f196d8c95401dc" category="paragraph">アラート除外機能を使用すると、特定のファイルの種類、ユーザー、ディレクトリパスに対するアラートの生成を抑制できます。これを使用すると、アラートパターンに一致する可能性のある既知の想定されるアクティビティを除外することで、誤検知を減らすことができます。</block>
   <block id="3b39eff6bd46ab915c26d8ab9ed7bb91" category="paragraph">アラート除外はテナントごとに設定され、以下の項目が含まれます：</block>
-  <block id="1ce4fd7b116c43c936cc8ddbaa51ce99" category="inline-link-macro">ファイル拡張子</block>
-  <block id="f49e387bd8ac75fdab8d848695d1de88" category="list-text">ファイルタイプ：特定の<block ref="10b52059d1feedcec024042c1bbd1e91" category="inline-link-macro-rx"></block>でファイル改ざんアラートを抑制する</block>
   <block id="aa4f2113791c12393a66ffe706420102" category="list-text">ユーザー：選択したユーザーによってトリガーされたアラートを抑制します。</block>
   <block id="ecfbace61ab4dd6175d43a276330b05d" category="list-text">パス：選択したディレクトリパス（ジャンクションパスから始まる最大4階層）でのアクティビティに関するアラートを抑制します。</block>
   <block id="099aaf46fa32549a39916446ecf1fe7e" category="inline-link-macro">許可されているファイルタイプ</block>
-  <block id="0dd69cce6b9e3a8a53769caf0047d503" category="paragraph">ファイルタイプの除外（「許可されたファイルタイプのポリシー」とも呼ばれる）が更新され、<block ref="38cbb5c947813aa64b0054e34231a6d7" category="inline-link-macro-rx"></block>に説明されています。</block>
   <block id="70c2babfc037807dc9d1d94e48e6b818" category="paragraph">ユーザーの除外リストは先行入力でサポートされており、管理者はアラートから除外するユーザーを選択できます。</block>
   <block id="ab217818a7f8d6405dd619210434e25f" category="paragraph">ディレクトリ除外機能は、ジャンクションパスから始まる最大4階層のディレクトリパスをサポートします。</block>
   <block id="33b828c8fb435b67f3a4a321adbc89c1" category="paragraph">個々のユーザーおよびディレクトリパスは、それぞれの除外リストに追加または削除できます。各リストのすべてのエントリには、いつ誰によってリストに追加されたかの情報が含まれており、この情報は監査目的で使用されます。</block>
@@ -14509,4 +14506,12 @@
   <block id="49a160591030eb82ba36b624f5514398" category="list-text">各除外エントリには、それを設定した管理者の名前と設定日が記録されます。この情報は監査のために保持されます。</block>
   <block id="430f66c61c1d6e05ef92945c7107306f" category="paragraph"><block ref="430f66c61c1d6e05ef92945c7107306f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4d06e3dd77aaee13a5d969e19fc7acf6" category="paragraph"><block ref="4d06e3dd77aaee13a5d969e19fc7acf6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="147e7f8d7d8064d51ff49f93c07adfeb" category="paragraph">*ワークロード セキュリティ &gt; ポリシー*に移動し、*アラートの除外*タブを選択します。</block>
+  <block id="9bf079c262098280af19e475b460e655" category="list-text">ファイルタイプ：特定の<block ref="e9fd5a7947ff579f7dabe8508e9cb8cd" category="inline-xref-macro-rx"></block>でファイル改ざんアラートを抑制する</block>
+  <block id="3596850f01f0deb9d5aecf72b1462619" category="paragraph">ファイル拡張子を_許可されたファイルタイプ_のリストに追加することで、不要なアラートの発生を防ぐことができます。</block>
+  <block id="c6b621c33fa4f966db8e8fc0013ade5e" category="paragraph">*+File Type* を選択して、アラートで許可されるファイルタイプのリストにファイルタイプを追加します。</block>
+  <block id="a29d1a88246db4532c1e6dec57fad276" category="inline-image-macro">許可するファイルタイプを追加</block>
+  <block id="e805eed5e1733a26a8b20a94b4a681d5" category="paragraph"><block ref="e805eed5e1733a26a8b20a94b4a681d5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="492f463a35ea215d77ae021c64cddb64" category="paragraph">例えば、_test.txt_ という名前のファイルが _test.txt.abc_ に名前変更され、Workload Security が _.abc_ 拡張子によってランサムウェア攻撃を検出した場合、_.abc_ 拡張子を _許可されたファイル タイプ_ リストに追加できます。リストに追加されると、拡張子が _.abc_ のファイルに対してランサムウェア攻撃は発生しなくなります。</block>
+  <block id="318685a1827ca5f4280e59d71f7d1438" category="paragraph">許可されるファイルタイプは、完全一致（例：「.abc」）または式（例：++.*type++、++.type*++、または++.*type*++）です。.a*c、.p*f タイプの式はサポートされていません。</block>
 </blocks>
