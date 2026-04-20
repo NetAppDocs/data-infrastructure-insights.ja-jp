@@ -273,6 +273,8 @@ sidebar:
       url: "/concept_cs_attack_simulator.html"
     - title: メール通知
       url: "/cs_notifications_email.html"
+    - title: 監査イベントの表示
+      url: "/ws_audit_events.html"
     - title: Webhook通知
       entries:
       - title: Webhookの作成

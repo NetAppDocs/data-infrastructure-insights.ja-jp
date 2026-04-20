@@ -1906,7 +1906,6 @@
   <block id="8e2e894a8f2d0c798eda10b04a6aae2c" category="inline-link-macro">クラウドデータサービスサポート登録</block>
   <block id="960807b3a38d77ca1916570b1732dda1" category="inline-xref">サポートを有効にする</block>
   <block id="801ef9b405d4e49db3e3da2aa073e5f6" category="admonition">登録が必要です<block ref="5dae4a2b8da6e9eee160d72287b835e3" category="inline-xref-macro-rx"></block>NetApp Cloud 製品向け。登録するには、NetAppの<block ref="c5b01460a42d58b3ab6bc662dda87194" category="inline-link-macro-rx"></block>。</block>
-  <block id="1674a792a0bf779b22729331c5646696" category="paragraph">サポート セッション中にNetAppサポート エンジニアがData Infrastructure Insightsテナントにアクセスできるようにするには、ボックスをオンにすることを強くお勧めします。これにより、エンジニアが問題をトラブルシューティングし、迅速に解決できるようになります。問題が解決した場合、またはサポート セッションが終了したら、ボックスのチェックを外すことができます。</block>
   <block id="26bf81182a5b7a20da27b311cdf97f3d" category="paragraph">以下のいずれかの方法でサポートをリクエストできます。これらのサポート オプションを使用するには、アクティブなData Infrastructure Insightsサブスクリプションが必要です。</block>
   <block id="e145a699aa519b4431527a84030fe1fd" category="inline-link-macro">*電話*</block>
   <block id="d509e88fe0d420e546f838c2bf3149e4" category="list-text"><block ref="d509e88fe0d420e546f838c2bf3149e4" category="inline-link-macro-rx"></block></block>
@@ -14038,4 +14037,57 @@
   <block id="b3e41e2fae7745b697dbed9b6f854aa1" category="inline-image-macro">ファイルタイプリスト</block>
   <block id="28460fbd00b73b7255d03888d8c1d8e5" category="paragraph"><block ref="28460fbd00b73b7255d03888d8c1d8e5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3720ff11b9d0e04f7fd96e22ff7a745f" category="paragraph">監査のために、「Set By」と「Set Date」という追加属性が導入されました。既存のファイルタイプは、これらの属性の値が両方とも「migrated」に設定された状態で、新しい形式に移行されます。</block>
+  <block id="50910271cc7ffda5c5f9d1e0841741da" category="paragraph">NetAppサポートエンジニアがサポートセッション中にData Infrastructure Insightsサイトにアクセスできるようにするチェックボックスをオンにすることを強くお勧めします。これにより、エンジニアは問題のトラブルシューティングを行い、迅速な解決を支援することができます。サポートエンジニアがお客様のサイトにアクセスできる間は、管理者レベルのすべての機能を実行できます。</block>
+  <block id="4568a4a8282d9407a4d8fa1b8e3256db" category="paragraph">問題が解決した場合、またはサポートセッションが終了した場合は、チェックボックスのチェックを外してください。</block>
+  <block id="fc7d05f9009e90b92a15aad926bca249" category="section-title">2026年4月</block>
+  <block id="7a62dee07c327e2cb645ca3b768833e5" category="section-title">Data Infrastructure Insightsはこれまで以上にあなたの環境を熟知しています</block>
+  <block id="03f3540edfca404eee2edf4a846ae64c" category="paragraph">Data Infrastructure Insights の AI がお客様のセットアップを理解する方法を強化しました。応答する前に、サービスの現在の使用状況、構成、およびパフォーマンスパターンに関するより豊富なコンテキストを活用します。その結果、一般的な出発点ではなく、お客様の環境を反映した初期ガイダンスが得られ、有用な回答にたどり着くまでに必要なフォローアップが少なくなります。</block>
+  <block id="9bbfda6f09499778d37c749e10e5cd09" category="paragraph">例えば、ストレージデバイスに移動すると、AIアシスタントが次のような質問に対してワンクリックで回答を提供します：</block>
+  <block id="5048355a939962882b19e9978c6de9b4" category="list-text">このストレージの容量利用率の傾向はどうなっているのか、そしてどのStoragePoolsが最も多くのスペースを消費していますか？</block>
+  <block id="bd0fc56b14454f1ee18d759d4af08ed3" category="list-text">このデバイスの過去24時間における容量利用率の推移を見せていただけますか？</block>
+  <block id="aa7271070bccbdb553337d1d11a546e3" category="list-text">このストレージで最も多くのスペースを消費しているボリュームはどれですか？</block>
+  <block id="d166bd4cdca169a67a613a26fe8770ce" category="paragraph">'''nt1.png[テーブルウィジェットの単位管理]</block>
+  <block id="3d2f1005746d7db51821bc629f7d4407" category="paragraph">ランサムウェア攻撃の可能性に関する詳細ページ：-Screen" view：テーブルウィジェットは、左側にオブジェクト/グループを表示し、右側にオブジェクトデータ（属性/メトリック）を表示します。</block>
+  <block id="af730d8a2733a784c669eb49b4d22282" category="paragraph">+ <block ref="d39f912f84d3b7c6330ea5e1e4443c8f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e81234c807cc73fff59051e85698456e" category="paragraph">alueウィジェット（書式設定付き）] <block ref="ea343c0c42e5fd6968847a90104062ca" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="460cdd4165472896cc30053fb384c428" category="summary">Workload Security における監査イベント</block>
+  <block id="7fb266e1b99b0df47eb66e941859d665" category="doc">Workload Securityイベントの監査</block>
+  <block id="fd353ad75bcbf126fad9d6e35df7010e" category="paragraph">予期される変更（追跡のため）と予期されない変更（トラブルシューティングのため）の両方を特定します。Workload Securityシステムのイベントとユーザーアクティビティの監査証跡を表示します。</block>
+  <block id="b314a4439b8566362801e323965bf155" category="paragraph">監査ページを表示するには、メニューの「管理者」＞「監査」をクリックしてください。監査ページが表示され、各監査エントリについて以下の詳細情報が表示されます：</block>
+  <block id="7067e58a52148d6e3da60108b4cb4632" category="list-text">時間 - イベントまたはアクティビティの日時</block>
+  <block id="dcf0e3103586dbddc36cc5f26dd6d51b" category="list-text">ユーザー - アクティビティを開始したユーザー</block>
+  <block id="592d7521568335e69f92257bfd22601a" category="list-text">役割 - Workload Securityにおけるユーザーの役割（ゲスト、ユーザー、管理者）</block>
+  <block id="d458ab911d522e4254ae9cdb7ea03d01" category="list-text">IP - イベントに関連付けられた IP アドレス</block>
+  <block id="cee813c8d86d250fd1721645d6a49210" category="list-text">アクション - アクティビティのタイプ（例：Login、Create、Update）</block>
+  <block id="b778dd43a738838d7aedce9b33722775" category="list-text">カテゴリ - アクティビティのカテゴリ。</block>
+  <block id="bb69c620668e5f23beee0ab1f6d31feb" category="list-text">詳細 - アクティビティの詳細</block>
+  <block id="c55f7a21d0556f5e2a47dfadc3db35eb" category="list-text">アプリケーションの種類 - 監査対象アプリケーションの種類：Observability または Workload Security。Workload Security 監査のみをフィルタリングする場合に使用してください。</block>
+  <block id="d3c127671fefcc305b5b0cd625930c99" category="paragraph">監査対象となるワークロードセキュリティイベントには、以下のものが含まれますが、これらに限定されません：</block>
+  <block id="b981e0dae483c1a14d3b270f0e8d681d" category="list-text">Workload Securityポリシーの変更。</block>
+  <block id="a91253205277455090eab8c5a3e473f7" category="list-text">新しいデータソースコレクター（DSC）の作成。</block>
+  <block id="8de59a86651a9ded38a04188020fc715" category="list-text">DSCの変更。</block>
+  <block id="19ad19904ebcc391059146b35ba84e48" category="list-text">エージェントの作成。</block>
+  <block id="142aa86c9595fdc63ca5a62c72da36c2" category="list-text">ユーザー管理タスク。</block>
+  <block id="57cf5599ed02e41c904c5aec9626eb8e" category="list-text">APIトークンタスク。</block>
+  <block id="dc765b359c5775d41944b793d09a3932" category="list-text">列ヘッダーの矢印をクリックすると、エントリの並べ替え順序を昇順（上向き矢印）または降順（下向き矢印）に変更できます。デフォルトでは、テーブルにはエントリが時間の降順で表示されます。</block>
+  <block id="41c36fad069bf8a1082e9771d559d08a" category="cell">BOS-PRD12-S12、BOS-PRD23-S12などを返します</block>
+  <block id="029951cc57b3f3a2cda102ab83d0abd6" category="cell">上記のNoneと同様ですが、このフォームを使用してテキストのみのフィールドでNULL値を検索することもできます</block>
+  <block id="ccfa30aa0938ab67a7679bbea544264c" category="cell">正確なリテラル文字列NetApp*を含む結果を返します</block>
+  <block id="19cd526896c693b10dc83f3dfdd95e21" category="paragraph">Workload Securityによって監査されるイベントとアクションは、以下の大まかな分野に分類できます：</block>
+  <block id="db050c29be972955f848d2d9d2dd72e1" category="list-text">ユーザーアカウント：ログイン、ログアウト、ロール変更など</block>
+  <block id="1d2e077cee83d150598faec15ea17c00" category="list-text">エージェント：作成、削除、アップグレード、ピン留め、ピン留め解除など</block>
+  <block id="2bc80cebb4c3b4f2d3dd432b71a86e5a" category="paragraph">例：_Agent Agent-Boston-1 が削除されました。_ _一括操作により、エージェントのバージョン 1.760.0 へのアップグレードが開始されました。_</block>
+  <block id="6b85b8fcb108efd5eab030cd4d4c1ae2" category="list-text">Data/User directory Collector：追加、削除、変更、アップグレード、延期/再開、エージェントの変更、再起動など。</block>
+  <block id="4174f8c445719b2709668eee5bb25e3f" category="paragraph">例：_Data collector Collector-Boston1 removed, type ONTAP SVM_ _Agent: Agent-Boston-1, Cluster IP 10.193.88.36, SVM demoGroupShares2_ _Collector ONTAP SVM upgrade to version 1.417.0 initiated by bulk operation_</block>
+  <block id="2fc86cef217040ea0a462d14ed05d456" category="list-text">自動応答ポリシー：追加、更新、削除、有効化、無効化など</block>
+  <block id="05ddd33845ee9d48f9f00fecb4f05c26" category="paragraph">例：_自動化された攻撃ポリシーPolicy-Boston1が更新されました。プロパティDevicesが更新されました、古い値：[Device(name=svm_boston1, dataSourceId=39fb3b9c-9dd4-4961-bc27-23eb0b6f9ab7)]、新しい値：[Device(name=demoGroupShares2, dataSourceId=5b9f5b74-4533-4852-909d-8886582a4359)]_</block>
+  <block id="fe9b88cc6db0265d6416e971d1310fa9" category="list-text">ユーザーのブロック/ブロック解除：自動または手動によるユーザーのブロックおよびブロック解除。</block>
+  <block id="284fec9bfe780248e6008075cd114b78" category="paragraph">例：_自動応答の一環として、ユーザー Safwan Langley に対して 2 時間のブロックが開始されました_</block>
+  <block id="37cfc303a71404ba535148a7f3a71dc8" category="list-text">APIキー：追加、削除など</block>
+  <block id="79ab318c3ccfe5611271096aff6f6cc1" category="paragraph">例：_Workload Security API アクセストークン JPick-SWS が作成されました_</block>
+  <block id="4235fac9f067231cbf0cf4321c23e71c" category="list-text">通知：メールアドレスの変更など</block>
+  <block id="5bdbcf91442b859f44c25dd16160394f" category="paragraph">例：_Recipient ci-alerts-notifications-dl created_</block>
+  <block id="dde532224b6de8f2bcf14526c241e11e" category="paragraph">監査表示の結果を.CSVファイルにエクスポートすることで、データを分析したり、他のアプリケーションにインポートしたりすることができます。手順1.監査ページで、希望する期間と必要なフィルターを設定します。Workload Securityは、設定したフィルタリング条件と期間に一致する監査エントリのみをエクスポートします。2.表の右上にある「エクスポート」ボタンをクリックしてください。表示された監査イベントは、最大10,000行まで.CSVファイルにエクスポートされます。</block>
+  <block id="e63e4cacc359b740fa0bc5ab6ea0ba8d" category="paragraph">Workload Securityが監査データを保持する期間は、お客様のサブスクリプションによって異なります：</block>
+  <block id="db33137206c4f6b3edeb7dda117f05dd" category="sidebar">監査イベントの表示</block>
 </blocks>
