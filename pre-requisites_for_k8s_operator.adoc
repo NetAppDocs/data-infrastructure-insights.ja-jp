@@ -8,6 +8,9 @@ summary: Data Infrastructure Insights は、 Kubernetes 上の統合データの
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
