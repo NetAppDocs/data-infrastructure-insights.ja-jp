@@ -14030,7 +14030,6 @@
   <block id="d01a003326568eee4579a0b14096808a" category="list-text">各除外エントリには、それを設定した管理者の名前と設定日が記録されます。この情報は監査のために保管されます。</block>
   <block id="502a3077dba0d1ad6f92723157947eb2" category="section-title">ユーザーとパス</block>
   <block id="fbe64a9bdbefe7d8e246dbe4db973fd6" category="list-text">ユーザー除外リスト：アラートの対象から除外するユーザーを追加します。</block>
-  <block id="7f21f675f8b42bfe63a9f7bf4d897cb0" category="list-text">ディレクトリ除外リスト：ジャンクションパスから始まる最大4階層のディレクトリパスをサポートします。</block>
   <block id="f12b42eece54a56ffab836a42eb37488" category="section-title">ファイルタイプ</block>
   <block id="137e136f6b4d96d6452fec8d0ed99197" category="paragraph">ファイルタイプリストに追加されると、その許可されたファイルタイプに対してファイル改ざん攻撃のアラートは生成されなくなります。ファイルタイプポリシーは、ファイル改ざんの検出にのみ適用されることに注意してください。</block>
   <block id="b3e41e2fae7745b697dbed9b6f854aa1" category="inline-image-macro">ファイルタイプリスト</block>
@@ -14094,4 +14093,5 @@
   <block id="7ecd430509607d1a2c2f3ffad808df91" category="list-text">正規表現を使用するルールでは、正規表現、形式、および大文字と小文字の区別の選択が必要です。</block>
   <block id="9372fa792b7b3d019662b44dd2963355" category="section-title">ルールの一時停止と再開</block>
   <block id="716da8f41fd22d5cd56ad74991f757ba" category="paragraph">ルールの実行を停止するには、ルールの右側のメニューから「一時停止」を選択するか、複数のルールを選択して「一括操作」ドロップダウンから「一時停止」を選択します。ルール実行を再開する際も、同様の方法を使用できます。</block>
+  <block id="baac891fc4329aa8b558fa7560c83369" category="list-text">ディレクトリ除外リスト：ジャンクションパスから始まる最大4階層のディレクトリパスをサポートします。このパス以下のすべてのサブディレクトリとファイルは、アラート生成の対象から除外されます。ディレクトリパスにおけるワイルドカードはサポートされていません。</block>
 </blocks>
