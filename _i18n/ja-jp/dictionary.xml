@@ -3706,8 +3706,6 @@
   <block id="df6a21f670066b82b5409a049dec0efe" category="doc">自動応答ポリシー</block>
   <block id="e5da02c738b911c42fb0a45a5b76c8d9" category="paragraph">レスポンス ポリシーは、攻撃や異常なユーザー動作が発生した場合に、スナップショットを取得したり、ユーザー アクセスを制限したりするなどのアクションをトリガーします。</block>
   <block id="8816114441548a7f4d390de764f25ad9" category="paragraph">特定のデバイスまたはすべてのデバイスにポリシーを設定できます。応答ポリシーを設定するには、*管理 &gt; 自動応答ポリシー* を選択し、適切な *+ ポリシー* ボタンをクリックします。攻撃または警告のポリシーを作成できます。</block>
-  <block id="29d142bb0759eaeb3b47bf1809087cc7" category="inline-image-macro">Webhookドロップダウンを表示する攻撃ポリシーダイアログを追加する</block>
-  <block id="9c3cfe368d37e834800103686eba11c1" category="paragraph"><block ref="9c3cfe368d37e834800103686eba11c1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="10519a96ebde07deba902eb606bf97ff" category="paragraph">ポリシーは一意の名前で保存する必要があります。</block>
   <block id="168e31fead9fc72274b5723b0c86d27f" category="paragraph">自動応答アクション (スナップショットの取得など) を無効にするには、アクションのチェックを外してポリシーを保存するだけです。</block>
   <block id="3218ac0e5f26253bd8724ab98d8f5e02" category="inline-link-macro">アラートの詳細ページ</block>
@@ -14094,4 +14092,6 @@
   <block id="9372fa792b7b3d019662b44dd2963355" category="section-title">ルールの一時停止と再開</block>
   <block id="716da8f41fd22d5cd56ad74991f757ba" category="paragraph">ルールの実行を停止するには、ルールの右側のメニューから「一時停止」を選択するか、複数のルールを選択して「一括操作」ドロップダウンから「一時停止」を選択します。ルール実行を再開する際も、同様の方法を使用できます。</block>
   <block id="baac891fc4329aa8b558fa7560c83369" category="list-text">ディレクトリ除外リスト：ジャンクションパスから始まる最大4階層のディレクトリパスをサポートします。このパス以下のすべてのサブディレクトリとファイルは、アラート生成の対象から除外されます。ディレクトリパスにおけるワイルドカードはサポートされていません。</block>
+  <block id="fc6be75876bcdad138173b62e9ab5c17" category="inline-image-macro">ウェブフックのドロップダウンを表示する攻撃ポリシーの追加ダイアログ、width=300</block>
+  <block id="7cb01fa627551da61643f2eab2af39fb" category="paragraph"><block ref="7cb01fa627551da61643f2eab2af39fb" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
