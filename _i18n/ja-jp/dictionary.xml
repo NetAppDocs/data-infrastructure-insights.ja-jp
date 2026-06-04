@@ -13291,7 +13291,6 @@
   <block id="d55e67726729808ea6f67b165600c105" category="summary">Data Infrastructure Insights の AI アシスタントを使用すると、データを要約したり、洞察を探ったり、問題をトラブルシューティングしたり、リソースを計画したりできます。</block>
   <block id="accab30482cee85eb4e017db64428cad" category="doc">Data Infrastructure Insights AIアシスタント</block>
   <block id="6804300f32b2dfd7358cbef13acc4c27" category="paragraph">*Data Infrastructure Insights AI Assistant* は、インフラストラクチャデータをより効率的に処理できるように設計されています。情報を分析し、洞察を発見し、運用上の課題を解決し、リソースに関する情報に基づいた意思決定を行うのに役立ちます。</block>
-  <block id="b6ed013ce4b16673bae45126733837ff" category="paragraph">AI アシスタントは、AWS にデプロイされた Data Infrastructure Insights テナントのみで利用できます。</block>
   <block id="01a593a05ec8086d16c6d465263a2f9f" category="inline-image-macro">AIアシスタントのサンプル質問</block>
   <block id="18aabc8cd51ce3494b256e8195526a85" category="paragraph"><block ref="18aabc8cd51ce3494b256e8195526a85" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f58b0ee974430595788a16d0bcde2c33" category="section-title">インフラストラクチャの新しいインテリジェントパートナーをご紹介します</block>
@@ -13325,7 +13324,6 @@
   <block id="81bba36ecc862e80fc8fba5830993041" category="list-text">関心のある期間と</block>
   <block id="747f32611560f7ea60cbda274f04ef16" category="list-text">懸念している特定の問題の種類（パフォーマンスの問題、容量の問題、エラーなど）</block>
   <block id="45610fa97924ab075b8ebed42722b019" category="section-title">アシスタントへのアクセス</block>
-  <block id="629c55deaa1b75250df975fe5485d218" category="paragraph">DII AI アシスタントを呼び出すには、画面の下隅にあるフクロウのアイコンを選択するだけです。「オーナー」ロールを持つユーザーは、テナント上の他のユーザーが AI アシスタントを利用する前に利用規約に同意する必要があります。</block>
   <block id="f67a424fefeb5e523fcbb4c9247bc6d9" category="inline-image-macro">dii_ai_assistant_icon</block>
   <block id="a48b93c62e0c2ec4c09405cadd96b7da" category="paragraph"><block ref="a48b93c62e0c2ec4c09405cadd96b7da" category="inline-image-macro-rx" type="image"></block></block>
   <block id="be90349da04be71a620e68314d810f7f" category="section-title">2026年2月</block>
@@ -13355,7 +13353,6 @@
   <block id="3542743c69e8fceb06c77e5e17299c89" category="sidebar">AIアシスタント</block>
   <block id="f7836ca926de84b06b0b4bcbe4b8b756" category="inline-link-macro">Data Infrastructure Insights（Workload Securityを含む）に関するお知らせ、window=_blank</block>
   <block id="135e17e82c7d3d3d83bd8b0737be432e" category="paragraph"><block ref="135e17e82c7d3d3d83bd8b0737be432e" category="inline-link-macro-rx"></block></block>
-  <block id="58e3397ecaf63f320f4993fc5844d736" category="paragraph">DII AI アシスタントは限定プレビューとしてご利用いただけます。Data Infrastructure Insights プレビュー機能<block ref="b77b95325de7e3e625a811db4f47869c" category="inline-link-macro-rx"></block>。</block>
   <block id="b6b93d34f92b439117e54d9343c7efda" category="section-title">現在のプレビュー：</block>
   <block id="559de301b9b7af9f5b932d860f605701" category="list-text"><block ref="7a32ab5261b86b8c9a5d88b540c79f2d" category="inline-link-macro-rx"></block>プレビュー。</block>
   <block id="ca39a60f24fda5dbbda8809fbd3fe717" category="inline-link-macro">*Data Infrastructure Insights AIアシスタント*</block>
@@ -14094,4 +14091,18 @@
   <block id="baac891fc4329aa8b558fa7560c83369" category="list-text">ディレクトリ除外リスト：ジャンクションパスから始まる最大4階層のディレクトリパスをサポートします。このパス以下のすべてのサブディレクトリとファイルは、アラート生成の対象から除外されます。ディレクトリパスにおけるワイルドカードはサポートされていません。</block>
   <block id="fc6be75876bcdad138173b62e9ab5c17" category="inline-image-macro">ウェブフックのドロップダウンを表示する攻撃ポリシーの追加ダイアログ、width=300</block>
   <block id="7cb01fa627551da61643f2eab2af39fb" category="paragraph"><block ref="7cb01fa627551da61643f2eab2af39fb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="512346de0e4492551e58519f2ff8f02f" category="section-title">自然に会話する</block>
+  <block id="606eca1dc0574688efcace9e5442ec65" category="paragraph">AIアシスタントは現在10以上の言語に対応しており、チームメンバーは各自の好みの言語で自然にコミュニケーションを取ることができます。全リストを見る<block ref="7bcc2d9bce066141171b475332938f67" category="inline-link-macro-rx"></block>。</block>
+  <block id="f66b0e86f32ecd67a023b86cf46bdc84" category="paragraph">DII AIアシスタントを呼び出すには、画面下隅にあるフクロウのアイコンを選択するだけです。「Owner」または「Admin」の役割を持つユーザーは、テナント上でAIアシスタントを利用する前に、利用規約に同意する必要があります。</block>
+  <block id="c21446b3ecfb30ed6c2760d686bd4578" category="section-title">2026年6月</block>
+  <block id="c42129b932facb2cf7437f8dda2d1024" category="section-title">グローバルチームのための、よりスマートなAIアシスタント</block>
+  <block id="2cf12b65895eb4c6ea2aa563a3a928c2" category="paragraph">AIアシスタントは現在10以上の言語に対応しており、チームメンバーは各自の好みの言語で自然にコミュニケーションを取ることができます。全リストを見る<block ref="76aebc4f8810ba81b56db38cff83be8e" category="inline-link-macro-rx"></block>。</block>
+  <block id="f4651ef2bf0573c7c2ed9812ec1e1a9c" category="section-title">インフラストラクチャ属性変更のための新しいモニタ</block>
+  <block id="a8d07c89b5ad1be0c9666289c7c31f2e" category="paragraph">属性モニターが利用可能になり、データセンター間で資産が移動した場合、ストレージプールが暗号化されていない場合、または属性が変更された場合に、チームに自動的にアラートを送信できるようになりました。これは構成の基準値を維持するのに役立ち、新規導入や変更の際に何も見落とされないようにするのに役立ちます。</block>
+  <block id="1077e7a3935b3725c8350a2c88a1253f" category="inline-image-macro">属性モニターがモニタータイプに追加されます</block>
+  <block id="2a7170fd3e143b93657f08d8a1c590f9" category="paragraph"><block ref="2a7170fd3e143b93657f08d8a1c590f9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3fb1bd69332231cdc75d8db242aaf294" category="section-title">動的でコンテキストが豊富なメッセージを使用して、よりスマートなアラートとwebhookを構築します。</block>
+  <block id="ca168714d12ff6410e26984f67b83474" category="paragraph">モニターまたはwebhookを作成する際は、アラートの説明、webhookのURL、ヘッダー、または本文に「%」と入力するだけで、動的に表示される利用可能なオブジェクト属性と注釈のリストから選択できます。アラートに適切なコンテキストを与えることで、明確性を向上させ、webhookとの連携を強化し、応答時間を短縮できます。</block>
+  <block id="42bb2765b945bf3e0e9843ba7c1b0426" category="inline-image-macro">モニターの説明内の属性リスト、幅=400</block>
+  <block id="5c686c3f80c47e575d3c5b2f79e6da4b" category="paragraph"><block ref="5c686c3f80c47e575d3c5b2f79e6da4b" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
