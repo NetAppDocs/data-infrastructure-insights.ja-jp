@@ -14105,4 +14105,8 @@
   <block id="ca168714d12ff6410e26984f67b83474" category="paragraph">モニターまたはwebhookを作成する際は、アラートの説明、webhookのURL、ヘッダー、または本文に「%」と入力するだけで、動的に表示される利用可能なオブジェクト属性と注釈のリストから選択できます。アラートに適切なコンテキストを与えることで、明確性を向上させ、webhookとの連携を強化し、応答時間を短縮できます。</block>
   <block id="42bb2765b945bf3e0e9843ba7c1b0426" category="inline-image-macro">モニターの説明内の属性リスト、幅=400</block>
   <block id="5c686c3f80c47e575d3c5b2f79e6da4b" category="paragraph"><block ref="5c686c3f80c47e575d3c5b2f79e6da4b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e236cc945d03142b030da5f8ca3552ad" category="section-title">ワークスペースの拡大、散らかりの軽減</block>
+  <block id="0c57b296d9e6f421b799470406b41595" category="paragraph">DIIのナビゲーションメニューは、Consoleの色や動作に合わせた新しいデザインになり、より統一感のある操作感を実現しました。これまで静的だったメインメニューは、より作業スペースを集中させ、画面上のスペースを効率的に活用するために、デフォルトで折りたたまれるようになります。左上隅にあるハンバーガーアイコン（☰）をクリックするだけでアクセスできます。</block>
+  <block id="638f6b8d99e1422bc23e131d2c84c24d" category="section-title">インテリジェントなAIアシスタンスでデバイスの可視性を拡大</block>
+  <block id="8cc9ca78507aef920c11566fc08c38ca" category="paragraph">AIを活用したデバイス識別により、新規デバイスの導入プロセスを迅速化します。Data Infrastructure Insightsが環境を分析し、自動デバイス解決ルールを提案することで、より多くのデバイスを迅速に識別して管理するのに役立ちます。AIが生成したルールを確認して承認するだけで、DIIが残りの処理をすべて行い、インフラストラクチャ全体におけるデバイスの可視性と管理を向上させます。</block>
 </blocks>
