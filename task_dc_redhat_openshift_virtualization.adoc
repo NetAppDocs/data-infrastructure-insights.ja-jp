@@ -25,10 +25,10 @@ oc adm policy add-cluster-role-to-user cluster-monitoring-view -z acq-readonly-c
 ....
 これら 3 つのコマンドを実行し、エラーがないか確認します。
 
-コマンドが完了すると：
+コマンドが完了したら、次を実行します：
 
- oc sa new-token acq-readonly-cluster-user
-これにより、ユーザーにバインドされたトークンが作成されます。
+ oc create token acq-readonly-cluster-user --duration=8760h
+これにより、ユーザーに紐づけられたトークンが作成されます。注：トークンの有効期間を設定することを推奨します。トークンの有効期限が切れると、データ収集が「接続に失敗しました」というエラーで失敗することに注意してください。
 
 最後に、OSV 管理者に次のコマンドを実行してもらうこともできます：
 

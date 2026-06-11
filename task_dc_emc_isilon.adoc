@@ -7,6 +7,10 @@ summary: 'Dell EMC PowerScale (旧 Isilon) データ コレクターを構成し
 = Dell EMC PowerScaleデータコレクター
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

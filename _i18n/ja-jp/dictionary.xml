@@ -13990,8 +13990,6 @@
   <block id="6fd44ae5a42d6b33248d329cbbddaa88" category="paragraph">DII Red Hat OpenShift Virtualization コレクターは、OpenShift Virtualization 環境で実行されている OSV コンピューティングワークロードを検出しようとします - このコレクターはすべての Open Shift ポッドを検出するわけではありません。これは HTTPS REST API ベースのコレクターです。OSV クラスターごとに 1 つのコレクターを作成することをお勧めします。</block>
   <block id="0e2f53883090c3b63a953261cdb19325" category="paragraph">このコレクターの認証方法は、サービス アカウントにバインドされた認証トークンです。ユーザー アカウントとトークンの両方を作成するには：</block>
   <block id="f2c430952fd20f76b24810e2e6f8dace" category="paragraph">これら 3 つのコマンドを実行し、エラーがないか確認します。</block>
-  <block id="8a8ad6f9b43737bda614d744a8286cc4" category="paragraph">コマンドが完了すると：</block>
-  <block id="9fb84dc506591e78ff3f6f8ac2f00e6e" category="paragraph">これにより、ユーザーにバインドされたトークンが作成されます。</block>
   <block id="0cf40b0b5f29b2928f214370b73c4fac" category="paragraph">最後に、OSV 管理者に次のコマンドを実行してもらうこともできます：</block>
   <block id="7af44018c8c76e698e986a0c0db08e5f" category="paragraph">これにより、管理用のホスト名/IP アドレスが返されます。各 DII OSV コレクターは、OSV 管理用の IP/ホスト名を指す必要があります。</block>
   <block id="e62768229563f11ca5fd49a1482ae7a8" category="list-text">REST APIを介したポート443経由のRed Hat OpenShift VirtualizationサーバーのIPアドレス</block>
@@ -14109,4 +14107,18 @@
   <block id="0c57b296d9e6f421b799470406b41595" category="paragraph">DIIのナビゲーションメニューは、Consoleの色や動作に合わせた新しいデザインになり、より統一感のある操作感を実現しました。これまで静的だったメインメニューは、より作業スペースを集中させ、画面上のスペースを効率的に活用するために、デフォルトで折りたたまれるようになります。左上隅にあるハンバーガーアイコン（☰）をクリックするだけでアクセスできます。</block>
   <block id="638f6b8d99e1422bc23e131d2c84c24d" category="section-title">インテリジェントなAIアシスタンスでデバイスの可視性を拡大</block>
   <block id="8cc9ca78507aef920c11566fc08c38ca" category="paragraph">AIを活用したデバイス識別により、新規デバイスの導入プロセスを迅速化します。Data Infrastructure Insightsが環境を分析し、自動デバイス解決ルールを提案することで、より多くのデバイスを迅速に識別して管理するのに役立ちます。AIが生成したルールを確認して承認するだけで、DIIが残りの処理をすべて行い、インフラストラクチャ全体におけるデバイスの可視性と管理を向上させます。</block>
+  <block id="b60f27931c3ae71e254e2b744656329e" category="inline-link-macro">Qumulo REST</block>
+  <block id="d5f6f6770076a4cff24cf687c1f3ce72" category="cell"><block ref="d5f6f6770076a4cff24cf687c1f3ce72" category="inline-link-macro-rx"></block></block>
+  <block id="e11d6c7f4644f952faf6dce5c4b295ad" category="summary">Qumulo RESTデータコレクタの設定</block>
+  <block id="d3b9d1ab118852a73d2b9221ede10370" category="doc">Qumulo RESTデータコレクター</block>
+  <block id="a7236bb9d36106126af2861383d145e2" category="paragraph">Data Infrastructure Insightsは、このコレクターを使用して、Qumuloストレージからインベントリデータとパフォーマンスデータを取得します。</block>
+  <block id="b23a87bcdf03ab57cf9c989bf91c2e39" category="list-text">QumuloクラスターのIPアドレス／完全修飾ドメイン名</block>
+  <block id="6b163e0e6c238a01d0ce91c0c83e4f0c" category="cell">QumuloのIPアドレス</block>
+  <block id="0a4db5a5d79afd66b50465ed8b623a2d" category="cell">QumuloストレージのIPアドレスまたは完全修飾ドメイン名</block>
+  <block id="b011dcc2f56365d26e263f3ed75cdfa7" category="cell">Qumuloのユーザー名</block>
+  <block id="f37b44ac7ba2560a5f36f58586dc6502" category="cell">Qumuloで使用されるパスワード</block>
+  <block id="77c91f11c388cc00f02f729cfee3aa51" category="cell">インベントリポーリング間隔。デフォルトは30です。</block>
+  <block id="10c51e7fed3d0622297f012b6ed375ff" category="cell">パフォーマンスポーリング間隔。デフォルトは5です。</block>
+  <block id="d08016e5c5be3fa70d21f77cdf152be2" category="paragraph">コマンドが完了したら、次を実行します：</block>
+  <block id="6d0f6de7ebc4523de6bfdcd599b62bf1" category="paragraph">これにより、ユーザーに紐づけられたトークンが作成されます。注：トークンの有効期間を設定することを推奨します。トークンの有効期限が切れると、データ収集が「接続に失敗しました」というエラーで失敗することに注意してください。</block>
 </blocks>

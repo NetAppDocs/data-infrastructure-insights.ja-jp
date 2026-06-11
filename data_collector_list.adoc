@@ -209,6 +209,9 @@ Data Infrastructure Insightsでサポートされているデータ コレクタ
 | link:task_dc_pure_flashblade.html["Pure Storage FlashBlade"] | インフラ 
 
 
+| link:task_dc_qumulo_rest.html["Qumulo REST"] | インフラ 
+
+
 | link:task_dc_redhat_virtualization.html["レッドハット仮想化"] | インフラ 
 
 

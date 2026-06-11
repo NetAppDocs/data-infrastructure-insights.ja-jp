@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: task_dc_qumulo_rest.html 
+keywords: data collector, qumulo, rest 
+summary: Qumulo RESTデータコレクタの設定 
+---
+= Qumulo RESTデータコレクター
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Data Infrastructure Insightsは、このコレクターを使用して、Qumuloストレージからインベントリデータとパフォーマンスデータを取得します。
+
+
+
+== 用語
+
+Data Infrastructure Insights は、このデータ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
+
+[cols="2*"]
+|===
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
+
+
+| ドライブ | ディスク 
+
+
+| クラスタ | ストレージ 
+
+
+| ノード | ストレージ ノード 
+
+
+| OneFS ファイルシステム | 内部容積 
+
+
+| OneFS ファイルシステム | ストレージ プール 
+
+
+| qtree | qtree 
+|===
+注: これらは一般的な用語のマッピングのみであり、このデータ コレクターのすべてのケースを反映しているわけではありません。
+
+
+
+== 要件
+
+このデータ コレクターを構成するには、次の情報が必要です。
+
+* ユーザーアカウントとパスワード。このアカウントは管理者/ルートである必要はありませんが、サービス アカウントにかなりの数の読み取り専用権限を付与する必要があります - 下の表を参照してください
+* QumuloクラスターのIPアドレス／完全修飾ドメイン名
+* ポート8080へのHTTPSアクセス
+
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 説明 
+
+
+| QumuloのIPアドレス | QumuloストレージのIPアドレスまたは完全修飾ドメイン名 
+
+
+| ユーザー名 | Qumuloのユーザー名 
+
+
+| パスワード | Qumuloで使用されるパスワード 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 説明 
+
+
+| HTTPSポート | デフォルトは 8080 です。 
+
+
+| インベントリポーリング間隔（分） | インベントリポーリング間隔。デフォルトは30です。 
+
+
+| パフォーマンスポーリング間隔（分） | パフォーマンスポーリング間隔。デフォルトは5です。 
+|===
+
+
+== トラブルシューティング
+
+追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。
