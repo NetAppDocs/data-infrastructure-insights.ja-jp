@@ -14121,4 +14121,6 @@
   <block id="10c51e7fed3d0622297f012b6ed375ff" category="cell">パフォーマンスポーリング間隔。デフォルトは5です。</block>
   <block id="d08016e5c5be3fa70d21f77cdf152be2" category="paragraph">コマンドが完了したら、次を実行します：</block>
   <block id="6d0f6de7ebc4523de6bfdcd599b62bf1" category="paragraph">これにより、ユーザーに紐づけられたトークンが作成されます。注：トークンの有効期間を設定することを推奨します。トークンの有効期限が切れると、データ収集が「接続に失敗しました」というエラーで失敗することに注意してください。</block>
+  <block id="90e0071503be9324e2266cfd3368d18a" category="list-text">ポート8000へのHTTPSアクセス</block>
+  <block id="bdda6785fe5c26b462fa0a87d4327560" category="cell">デフォルトは8000です。</block>
 </blocks>
