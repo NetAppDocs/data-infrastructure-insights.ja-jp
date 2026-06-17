@@ -14124,4 +14124,6 @@
   <block id="90e0071503be9324e2266cfd3368d18a" category="list-text">ポート8000へのHTTPSアクセス</block>
   <block id="bdda6785fe5c26b462fa0a87d4327560" category="cell">デフォルトは8000です。</block>
   <block id="606930ccd6550cc24fe845f69572c586" category="list-text">少なくとも読み取り権限を持つユーザーアカウントとパスワード。</block>
+  <block id="38fbce916138020848ac3b594a6648d0" category="section-title">ログインメッセージで重要な最新情報を共有</block>
+  <block id="7260908f665e8b3c02f0fce13c7ea541" category="paragraph">カスタマイズ可能なログインメッセージで、チームに常に情報を共有し、連携を徹底させましょう。重要なお知らせ、メンテナンススケジュール、ポリシーの更新などを、ユーザーがログインした際に直接通知できます。マークダウンに対応しているため、メッセージを分かりやすくフォーマットし、重要な情報がすべての DII ユーザーに確実に届くようにできます。管理者権限を持つアカウントは、管理者メニューの「通知」から設定を確認できます。</block>
 </blocks>
