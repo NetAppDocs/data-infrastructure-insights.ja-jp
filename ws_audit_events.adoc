@@ -13,6 +13,7 @@ keywords: workload security, audit, events
 :imagesdir: ./media/
 
 
+[role="lead"]
 予期される変更（追跡のため）と予期されない変更（トラブルシューティングのため）の両方を特定します。Workload Securityシステムのイベントとユーザーアクティビティの監査証跡を表示します。
 
 

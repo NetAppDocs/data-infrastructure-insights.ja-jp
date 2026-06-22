@@ -93,7 +93,7 @@ sidebar:
         url: "/concept_log_explorer.html"
       - title: 非アクティブなデバイスの識別
         url: "/task_identify_inactive_devices.html"
-    - title: モニターとアラート
+    - title: 監視、アラート、通知
       entries:
       - title: モニターの作成
         url: "/task_create_monitor.html"
@@ -117,6 +117,8 @@ sidebar:
           url: "/task_webhook_example_slack.html"
         - title: Webhook の例 - チーム
           url: "/task_webhook_example_teams.html"
+      - title: ログインメッセージ
+        url: "/login_message_popup.html"
     - title: 注釈の操作
       entries:
       - title: 注釈の定義

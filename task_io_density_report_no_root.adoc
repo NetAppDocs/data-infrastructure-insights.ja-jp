@@ -1,12 +1,16 @@
 ---
 sidebar: sidebar 
 permalink: task_io_density_report_no_root.html 
-summary: 高 I/O 密度を照会する場合は、ルート ボリュームを除外する必要があります。 
-keywords: NetApp, root volume, high I/O, 
+summary: 高いI/O密度をクエリする場合、ルートボリュームを除外する必要があります。 
+keywords: NetApp, root volume, high IO, 
 ---
 = IO密度レポートが内部データボリュームのみを記述することを保証する
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
