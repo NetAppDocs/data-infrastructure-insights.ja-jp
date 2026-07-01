@@ -281,6 +281,11 @@ NetApp Monitoring Operator インストール タイルから「イメージ プ
 * ci-net-オブザーバー
 
 
+変更分析
+
+* ci-k8s-change-observer
+
+
 企業ポリシーに従って、オペレーターの Docker イメージをプライベート/ローカル/エンタープライズ Docker リポジトリにプッシュします。リポジトリ内のこれらのイメージへのイメージ タグとディレクトリ パスが、 Data Infrastructure Insightsリポジトリのものと一致していることを確認します。
 
 operator-deployment.yaml の monitoring-operator デプロイメントを編集し、すべてのイメージ参照を変更してプライベート Docker リポジトリを使用します。
@@ -534,5 +539,8 @@ Fluent-bit を再起動します。
 
 
 | Fluent-bit ポッドで次のエラーが発生し、ポッドを起動できません：026/01/12 20:20:32] [error] [sqldb] error=unable to open database file [2026/01/12 20:20:32] [error] [input:tail:tail.0] db: could not create 'in_tail_files' table [2026/01/12 20:20:32] [error] [input:tail:tail.0] could not open/create database [2026/01/12 20:20:32] [error] failed initialize input tail.0 [2026/01/12 20:20:32] [error] [engine] input initialization failed | DBファイルが存在するホストディレクトリに適切な読み取り / 書き込み権限があることを確認してください。具体的には、ホストディレクトリは非ルートユーザーに読み取り / 書き込み権限を付与する必要があります。デフォルトのDBファイルの場所は、fluent-bit-dbFile _agentconfiguration_ オプションで上書きされない限り、/var/log/ です。SELinuxが有効になっている場合は、fluent-bit-seLinuxOptionsType agentconfigurationオプションを 'spc_t' に設定してみてください。 
+
+
+| Telegraf から以下のようなエラーメッセージが表示されますが、Telegraf は起動して実行されます：E! [inputs.kubernetes] プラグインでエラーが発生しました： https://<IP>>:<port>>/pods[] HTTP ステータス 403 Forbidden が返されました | これらのメッセージは、Kubernetesのバージョンが1.33未満の場合に表示される可能性があります。telegrafで使用される「nodes/pods」RBACリソースは、これらのバージョンには存在しません。古いバージョンで必要なRBACリソースについては、operator-additional-permissions.yamlの「Kubernetesバージョン < 1.33の場合」セクションを参照してください。 
 |===
 追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

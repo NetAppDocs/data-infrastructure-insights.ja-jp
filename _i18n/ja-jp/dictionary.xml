@@ -14158,4 +14158,8 @@
   <block id="eda220a2d8b65414dd2552b1cc37aca5" category="sidebar">監視、アラート、通知</block>
   <block id="b3dd2c9c1ffecc51c5a189f2d6c9d4c6" category="sidebar">ログインメッセージ</block>
   <block id="241aeccf602b677945fa5597f1832e5e" category="section-title">ファイル改ざんアラートを生成</block>
+  <block id="3e021c6004e444ced45e08a6ac9e1e61" category="paragraph">変更分析</block>
+  <block id="25a317566de430ddfd2c6f4b3fdea612" category="list-text">ci-k8s-change-observer</block>
+  <block id="9da5aa79f5375ccea3c84723b5759557" category="cell">Telegraf から以下のようなエラーメッセージが表示されますが、Telegraf は起動して実行されます：E! [inputs.kubernetes] プラグインでエラーが発生しました：<block ref="6d1752bb8ee46f6164f07ea885d5c072" category="inline-link-rx"></block> HTTP ステータス 403 Forbidden が返されました</block>
+  <block id="51635ff11969666db6bdeaf0c68d58b0" category="cell">これらのメッセージは、Kubernetesのバージョンが1.33未満の場合に表示される可能性があります。telegrafで使用される「nodes/pods」RBACリソースは、これらのバージョンには存在しません。古いバージョンで必要なRBACリソースについては、operator-additional-permissions.yamlの「Kubernetesバージョン &lt; 1.33の場合」セクションを参照してください。</block>
 </blocks>
