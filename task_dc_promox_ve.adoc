@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: task_dc_promox_ve.html 
+keywords: data collector, Promox VirtVirtual Environmentalization 
+summary: Proxmox Virtual Environment データコレクターの設定。 
+---
+= Red Hat OpenShift Virtualization データコレクター
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+DII Promox仮想環境コレクターは、インベントリデータを収集します。これはHTTPS REST APIベースのコレクターです。
+
+
+
+== 用語
+
+Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
+
+[cols="2*"]
+|===
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
+
+
+| ディスク | 仮想ディスク 
+
+
+| ホスト | ホスト 
+
+
+| 仮想マシン | 仮想マシン 
+
+
+| ストレージドメイン | データ ストア 
+
+
+| 論理ユニット | LUN 
+|===
+注: これらは一般的な用語のマッピングのみであり、このデータ コレクターのすべてのケースを反映しているわけではありません。
+
+
+
+== 構成
+
+[cols="2*"]
+|===
+| フィールド | 説明 
+
+
+| ホスト名または IP アドレス | ホスト名 ストレージシステムのIPアドレス 
+
+
+| APIトークンID | アクセスにはAPI tokenが必要です 
+
+
+| APIトークンシークレット | 上記トークンのシークレット 
+|===
+
+
+== 高度な設定
+
+[cols="2*"]
+|===
+| フィールド | 説明 
+
+
+| HTTPS通信ポート | HTTPS通信に使用されるポート（デフォルト8006） 
+
+
+| インベントリポーリング間隔（分） | デフォルトは20分です。 
+|===
+
+
+== トラブルシューティング
+
+このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

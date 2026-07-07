@@ -8645,26 +8645,6 @@
   <block id="992a67d3dca96bca02f3f0f78e2a1cfd" category="cell">XtremIO管理サーバーのパスワード</block>
   <block id="a93bcb5a82072c389a3b8a73489512f7" category="cell">TCP ポート</block>
   <block id="0787e82546099bff5ac87c0c5d9ce7a3" category="cell">XTremIO 管理サーバーに接続するために使用される TCP ポート。デフォルトは 443 です。</block>
-  <block id="9fa4e650cd8691fa4e931e43145e4dfd" category="summary">Fujitsu Eternus データ コレクターの構成。</block>
-  <block id="76bbf6e63b5bbafbef5f94b1231bc156" category="doc">富士通 Eternus データコレクター</block>
-  <block id="27baee321a480862e914c0713eed63ca" category="paragraph">Fujitsu Eternus データ コレクターは、ストレージ システムへの管理レベルのアクセスを使用してインベントリ データを取得します。</block>
-  <block id="356a176551e40cab7b2346474eb8414b" category="paragraph">Data Infrastructure Insights は、 Fujitsu Eternus ストレージから以下のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。</block>
-  <block id="9f66700a9e61cc8f9d73ebf3758934dc" category="cell">シンプール、フレキシブルティアプール、レイドグループ</block>
-  <block id="9a2dd0553643575c114f67eb5af46be9" category="cell">標準ボリューム、スナップ データ ボリューム (SDV)、スナップ データ プール ボリューム (SDPV)、シン プロビジョニング ボリューム (TPV)、フレキシブル ティア ボリューム (FTV)、ワイド ストライピング ボリューム (WSV)</block>
-  <block id="7d023b2b798bae1346a6818191492724" category="cell">チャネルアダプタ</block>
-  <block id="895e3cd28422f162dfb0a18d997e89c7" category="paragraph">注: これらは一般的な用語のマッピングのみであり、このデータ コレクターのすべてのケースを反映しているわけではありません。</block>
-  <block id="9d597b15876cd2c5bb9b786f0f4e5ef4" category="list-text">EternusストレージのIPアドレス（カンマ区切り不可）</block>
-  <block id="46614f5e8cdddc2a44a95b7ec777cc30" category="list-text">SSH 管理レベルのユーザー名とパスワード</block>
-  <block id="ab557c35881f71a55e4fafded4111238" category="list-text">ポート22</block>
-  <block id="3cfd8b82a08186322b61ebdaff18da99" category="list-text">ページスクロールが無効になっていることを確認します（clienv-show-more-scroll disable）</block>
-  <block id="3073eb22ff046851d2773f6b9b9cccd5" category="cell">EternusストレージのIPアドレス</block>
-  <block id="4fa315e5b29dfdb8f82f1868c0a1de5f" category="cell">EternusストレージのIPアドレス</block>
-  <block id="e071ed8c236cffb19cf488375af0496c" category="cell">Eternusストレージのユーザー名</block>
-  <block id="1dc2d051123dfeb19bf13ffe4f1c7781" category="cell">Eternusストレージのパスワード</block>
-  <block id="883febd6f18d92fba02f341c896a50d2" category="cell">「データ取得エラー」と「CLI プロンプト検索エラー」または「シェル結果の最後にプロンプト検索エラー」というエラー メッセージが表示される</block>
-  <block id="1e1dcdf0229ed6e4040c2ded250c7477" category="cell">考えられる原因: ストレージ システムでページ スクロールが有効になっています。考えられる解決策: * 次のコマンドを実行して、ページスクロールを無効にしてみてください: set clienv-show-more -scroll disable</block>
-  <block id="bdaf6ab402ed62b6993826e531f83a19" category="cell">「接続エラー」と「ストレージへの SSH 接続のインスタンス化に失敗しました」または「VirtualCenter への接続のインスタンス化に失敗しました」というエラー メッセージが表示される</block>
-  <block id="f5e86717b7f98bd7a5fa01557cb08665" category="cell">考えられる原因: * 資格情報が正しくありません。  * IP アドレスが正しくありません。  * ネットワークの問題。 * ストレージがダウンしているか、応答しない可能性があります。考えられる解決策: * 入力した資格情報と IP アドレスを確認します。  * SSH クライアントを使用してストレージとの通信を試みます。</block>
   <block id="2af1bc57f00c07afe945f9aa64a9712f" category="summary">Google Compute データコレクターを構成する</block>
   <block id="ed3cd63dd0baae2764478daf8451ac08" category="doc">NetApp Google Compute データコレクター</block>
   <block id="962baa7c5b677a19767f3eb25401b9a3" category="paragraph">このデータ コレクターは、Google Compute クラウド プラットフォーム構成からのインベントリとパフォーマンスの収集をサポートします。このコレクターは、1 つの Google 組織内のすべてのプロジェクト内のすべてのコンピューティング リソースを検出しようとします。  Data Infrastructure Insightsを使用して検出する Google 組織が複数ある場合は、組織ごとに 1 つのData Infrastructure Insightsコレクターをデプロイする必要があります。</block>
@@ -11758,7 +11738,6 @@
   <block id="305d795c0691186d2df68b4fc20ac11c" category="sidebar">VNX ファイル (Celerra)</block>
   <block id="0d72e0c9bde5708a77d39a52ce138dbe" category="sidebar">VNX 統合</block>
   <block id="0f299b4c65ffefdf8b00e0b3345bf685" category="sidebar">エクストリームIO</block>
-  <block id="053f42c6bae3432cae270ea978f7e638" category="sidebar">Fujitsu</block>
   <block id="8b36e9207c24c76e6719268e49201d94" category="sidebar">グーグル</block>
   <block id="44cf206eca8a23c81576d1e81a632654" category="sidebar">HPエンタープライズ</block>
   <block id="dc20128ad51d4736f32ce4774255be05" category="sidebar">HP Alletra 9000とPrimera</block>
@@ -14162,4 +14141,16 @@
   <block id="25a317566de430ddfd2c6f4b3fdea612" category="list-text">ci-k8s-change-observer</block>
   <block id="9da5aa79f5375ccea3c84723b5759557" category="cell">Telegraf から以下のようなエラーメッセージが表示されますが、Telegraf は起動して実行されます：E! [inputs.kubernetes] プラグインでエラーが発生しました：<block ref="6d1752bb8ee46f6164f07ea885d5c072" category="inline-link-rx"></block> HTTP ステータス 403 Forbidden が返されました</block>
   <block id="51635ff11969666db6bdeaf0c68d58b0" category="cell">これらのメッセージは、Kubernetesのバージョンが1.33未満の場合に表示される可能性があります。telegrafで使用される「nodes/pods」RBACリソースは、これらのバージョンには存在しません。古いバージョンで必要なRBACリソースについては、operator-additional-permissions.yamlの「Kubernetesバージョン &lt; 1.33の場合」セクションを参照してください。</block>
+  <block id="55c55b1241c0ea96ea6cef65b10a23e4" category="inline-link-macro">Proxmox Virtual Environment</block>
+  <block id="9ddb2ce85d3b0c6085884776fe61a596" category="cell"><block ref="9ddb2ce85d3b0c6085884776fe61a596" category="inline-link-macro-rx"></block></block>
+  <block id="66036899193ada3425c77162bf9d742c" category="summary">Proxmox Virtual Environment データコレクターの設定。</block>
+  <block id="dc8f767a3f6e8f9b98077b7e9a688c5d" category="paragraph">DII Promox仮想環境コレクターは、インベントリデータを収集します。これはHTTPS REST APIベースのコレクターです。</block>
+  <block id="b720c5170acbb344b34398a9ed4fec4b" category="cell">ホスト名または IP アドレス</block>
+  <block id="32d285f157ad1acefe9dbe844cee7acf" category="cell">ホスト名 ストレージシステムのIPアドレス</block>
+  <block id="606bae1c220a7cd73cdc71a447b328fd" category="cell">APIトークンID</block>
+  <block id="1a07b6dc4baf1e102f15f62b2aa13efc" category="cell">アクセスにはAPI tokenが必要です</block>
+  <block id="9ae9995c158c8b32609b8fd098fa5ff5" category="cell">APIトークンシークレット</block>
+  <block id="923e5171366e1120624f5ea15d195544" category="cell">上記トークンのシークレット</block>
+  <block id="07d3835e20364558e54bb222fac4e80c" category="cell">HTTPS通信に使用されるポート（デフォルト8006）</block>
+  <block id="c0dcddaaad9648f13d2e54741430ea94" category="sidebar">Proxmox VE</block>
 </blocks>
