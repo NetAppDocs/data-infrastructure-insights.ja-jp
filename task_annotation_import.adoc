@@ -21,6 +21,7 @@ NOTE: Data Infrastructure Insights API は、* Data Infrastructure Insights Prem
 
 
 
+[[importing]]
 == インポート
 
 *管理 > APIアクセス*リンクにはlink:API_Overview.html["ドキュメント"]*Assets/Import* API 用。このドキュメントには、.CSV ファイル形式に関する情報が含まれています。
@@ -29,6 +30,7 @@ image:api_assets_import.png["インポートAPI"]
 
 
 
+[[csv-file-format]]
 == .CSVファイル形式
 
 CSV ファイルの一般的な形式は次のとおりです。ファイルの最初の行はインポート フィールドを定義し、フィールドの順序を指定します。その後に、注釈またはアプリケーションごとに個別の行が続きます。すべてのフィールドを定義する必要はありません。ただし、後続の注釈行は定義行と同じ順序に従う必要があります。
@@ -42,6 +44,7 @@ image:api_assets_import_assign.png["インポートと割り当て"]
 
 
 
+[[import-behavior]]
 == インポート動作
 
 インポート操作中、インポートされるオブジェクトとオブジェクト タイプに応じて、データが追加、結合、または置換されます。インポート中は、次の動作に注意してください。

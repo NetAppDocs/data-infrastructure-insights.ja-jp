@@ -18,6 +18,7 @@ summary: ONTAP AFXコレクター
 
 
 
+[[requirements]]
 == 要件
 
 このデータ コレクターを構成して使用するための要件は次のとおりです。
@@ -33,6 +34,7 @@ summary: ONTAP AFXコレクター
 
 
 
+[[a-note-about-permissions]]
 == 権限に関する注意事項
 
 Data Infrastructure InsightsのONTAPダッシュボードの多くは高度なONTAPカウンターに依存しているため、データ コレクターの詳細設定セクションで *高度なカウンター データ収集を有効にする* を有効のままにしておく必要があります。
@@ -83,6 +85,7 @@ restUser       http        password      restRole         no     none
 ----
 
 
+[[migration]]
 == 移住
 
 以前のONTAP (ontapi) データ コレクターから新しいONTAP REST コレクターに移行するには、次の手順を実行します。
@@ -97,9 +100,10 @@ restUser       http        password      restRole         no     none
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -114,9 +118,10 @@ restUser       http        password      restRole         no     none
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -137,11 +142,12 @@ restUser       http        password      restRole         no     none
 |===
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、 ONTAPデータ コレクターからインベントリ、ログ、パフォーマンス データを取得します。取得した資産の種類ごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -174,12 +180,14 @@ Data Infrastructure Insights は、 ONTAPデータ コレクターからイン�
 |===
 
 
+[[ontap-data-management-terminology]]
 == ONTAPデータ管理用語
 
 次の用語は、 ONTAP Data Management ストレージ アセットのランディング ページに表示されるオブジェクトまたは参照に適用されます。これらの条件の多くは他のデータ収集者にも適用されます。
 
 
 
+[[storage]]
 === ストレージ
 
 * モデル – このクラスター内の一意の個別のノード モデル名のカンマ区切りリスト。クラスター内のすべてのノードが同じモデル タイプである場合、モデル名が 1 つだけ表示されます。
@@ -194,6 +202,7 @@ Data Infrastructure Insights は、 ONTAPデータ コレクターからイン�
 
 
 
+[[storage-pool]]
 === ストレージ プール
 
 * ストレージ – このプールが存在するストレージ アレイ。必須。
@@ -210,6 +219,7 @@ Data Infrastructure Insights は、 ONTAPデータ コレクターからイン�
 
 
 
+[[storage-node]]
 === ストレージ ノード
 
 * ストレージ – このノードが属するストレージ アレイ。必須。
@@ -228,6 +238,7 @@ Data Infrastructure Insights は、 ONTAPデータ コレクターからイン�
 
 
 
+[[ontap-power-metrics]]
 == ONTAP電力メトリクス
 
 いくつかのONTAPモデルでは、監視やアラートに使用できるData Infrastructure Insightsの電力メトリックが提供されます。以下のサポートされているモデルとサポートされていないモデルのリストは包括的なものではありませんが、何らかのガイダンスを提供します。一般に、モデルがリストにあるモデルと同じファミリーに属している場合、サポートは同じです。
@@ -242,11 +253,12 @@ FAS2620 FAS3250 FAS3270 FAS500f FAS6280 FAS/ AFF 8020 FAS/ AFF 8040 FAS/ AFF 806
 
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 問題： | これを試してください: 
 

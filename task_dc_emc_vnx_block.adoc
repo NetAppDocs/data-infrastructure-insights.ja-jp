@@ -14,11 +14,12 @@ Data Infrastructure Insights は、 Dell EMC VNX Block Storage (NaviSec) デー�
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、 EMC VNX ブロック ストレージ データ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -41,6 +42,7 @@ Data Infrastructure Insights は、 EMC VNX ブロック ストレージ デー�
 
 
 
+[[requirements]]
 == 要件
 
 データを収集するには、次の要件を満たす必要があります。
@@ -56,15 +58,17 @@ Data Infrastructure Insights は、 EMC VNX ブロック ストレージ デー�
 
 
 
+[[navisphere-command-line-interface-syntax]]
 == NaviSphere コマンドラインインターフェース構文
 
 naviseccli.exe -h <IPアドレス> -user <ユーザー> -password <パスワード> -scope <スコープ、グローバルスコープの場合は0を使用> -port <デフォルトでは443を使用> コマンド
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -82,9 +86,10 @@ naviseccli.exe -h <IPアドレス> -user <ユーザー> -password <パスワー�
 |===
 
 
+[[advanced-configuration]]
 == 詳細設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -99,12 +104,14 @@ naviseccli.exe -h <IPアドレス> -user <ユーザー> -password <パスワー�
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
+[[inventory]]
 === インベントリ
 
 [cols="2a, 2a"]

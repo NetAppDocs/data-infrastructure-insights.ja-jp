@@ -18,6 +18,7 @@ summary: 監査では、Data Infrastructure Insightsシステム内のシステ�
 
 
 
+[[viewing-audited-events]]
 == 監査対象イベントの表示
 
 監査ページを表示するには、メニューの*管理>監査*をクリックします。監査ページが表示され、各監査エントリの次の詳細が提供されます。
@@ -33,6 +34,7 @@ summary: 監査では、Data Infrastructure Insightsシステム内のシステ�
 
 
 
+[[displaying-audit-entries]]
 == 監査エントリの表示
 
 監査エントリを表示するには、いくつかの方法があります。
@@ -50,6 +52,7 @@ image:Audit_Filters.png["監査フィルター"]
 
 
 
+[[more-on-filtering]]
 === フィルタリングの詳細
 
 フィルターを絞り込むには、次のいずれかを使用できます。
@@ -84,6 +87,7 @@ image:Audit_Filters.png["監査フィルター"]
 
 
 
+[[audited-events-and-actions]]
 == 監査対象のイベントとアクション
 
 Data Infrastructure Insightsによって監査されるイベントとアクションは、次の広い領域に分類できます。
@@ -121,6 +125,7 @@ Data Infrastructure Insightsによって監査されるイベントとアクシ�
 
 
 
+[[exporting-audit-events]]
 == 監査イベントのエクスポート
 
 監査表示の結果を .CSV ファイルにエクスポートして、データを分析したり、別のアプリケーションにインポートしたりすることができます。
@@ -134,6 +139,7 @@ Data Infrastructure Insightsによって監査されるイベントとアクシ�
 
 
 
+[[retention-of-audit-data]]
 == 監査データの保持
 
 Data Infrastructure Insights が監査データを保持する期間は、サブスクリプションによって異なります。
@@ -148,6 +154,7 @@ Data Infrastructure Insights が監査データを保持する期間は、サブ
 
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 ここでは、監査に関する問題のトラブルシューティングに関する提案が見つかります。

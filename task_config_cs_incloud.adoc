@@ -18,6 +18,7 @@ Cloud Volumes ONTAPおよびAmazon FSx for NetApp ONTAP用の Workload Security 
 
 
 
+[[cloud-volumes-ontap-storage-configuration]]
 == Cloud Volumes ONTAPストレージ構成
 
 Workload Security Agent をホストするための単一ノード/HA AWS インスタンスを構成するには、 OnCommand Cloud Volumes ONTAPドキュメントを参照してください。https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/index.html[]
@@ -26,6 +27,7 @@ Workload Security Agent をホストするための単一ノード/HA AWS イン
 
 
 
+[[supported-platforms]]
 == サポート対象プラットフォーム
 
 * Cloud Volumes ONTAP は、利用可能なすべてのクラウド サービス プロバイダーでサポートされています。例: Amazon、Azure、Google Cloud。
@@ -34,6 +36,7 @@ Workload Security Agent をホストするための単一ノード/HA AWS イン
 
 
 
+[[agent-machine-configuration]]
 == エージェントマシン構成
 
 エージェント マシンは、クラウド サービス プロバイダーのそれぞれのサブネット内に構成する必要があります。ネットワーク アクセスの詳細については、[エージェントの要件] を参照してください。
@@ -62,6 +65,7 @@ Workload Security Agent として使用するマシンを設定するには、�
 
 
 
+[[install-the-workload-security-agent]]
 == ワークロードセキュリティエージェントをインストールする
 
 . Data Infrastructure Insights環境に管理者またはアカウント所有者としてログインします。
@@ -75,6 +79,7 @@ Workload Security Agent として使用するマシンを設定するには、�
 
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 既知の問題とその解決策を次の表に示します。

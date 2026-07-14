@@ -13,39 +13,46 @@ keywords: features
 :imagesdir: ./media/
 
 
+[[whats-new]]
 [role="lead"]
 NetAppは、製品とサービスを継続的に改善および強化しています。ここでは、Data Infrastructure Insights (旧称Cloud Insights) で利用できる最新の機能の一部を紹介します。
 
 
 
+[[june-2026]]
 == 2026年6月
 
 
 
+[[share-important-updates-with-login-messages]]
 === ログインメッセージで重要な最新情報を共有
 
 カスタマイズ可能なログインメッセージで、チームに常に情報を共有し、連携を徹底させましょう。重要なお知らせ、メンテナンススケジュール、ポリシーの更新などを、ユーザーがログインした際に直接通知できます。マークダウンに対応しているため、メッセージを分かりやすくフォーマットし、重要な情報がすべての DII ユーザーに確実に届くようにできます。管理者権限を持つアカウントは、管理者メニューの「通知」から設定を確認できます。
 
 
 
+[[more-workspace-less-clutter]]
 === ワークスペースの拡大、散らかりの軽減
 
 DIIのナビゲーションメニューは、Consoleの色や動作に合わせた新しいデザインになり、より統一感のある操作感を実現しました。これまで静的だったメインメニューは、より作業スペースを集中させ、画面上のスペースを効率的に活用するために、デフォルトで折りたたまれるようになります。左上隅にあるハンバーガーアイコン（☰）をクリックするだけでアクセスできます。
 
 
 
+[[expand-device-visibility-with-intelligent-ai-assistance]]
 === インテリジェントなAIアシスタンスでデバイスの可視性を拡大
 
 AIを活用したデバイス識別により、新規デバイスの導入プロセスを迅速化します。Data Infrastructure Insightsが環境を分析し、自動デバイス解決ルールを提案することで、より多くのデバイスを迅速に識別して管理するのに役立ちます。AIが生成したルールを確認して承認するだけで、DIIが残りの処理をすべて行い、インフラストラクチャ全体におけるデバイスの可視性と管理を向上させます。
 
 
 
+[[a-smarter-ai-assistant-for-global-teams]]
 === グローバルチームのための、よりスマートなAIアシスタント
 
 AIアシスタントは現在10以上の言語に対応しており、チームメンバーは各自の好みの言語で自然にコミュニケーションを取ることができます。全リストを見るlink:https://platform.claude.com/docs/en/build-with-claude/multilingual-support["ここをクリックしてください。"^]。
 
 
 
+[[new-monitors-for-infrastructure-attribute-changes]]
 === インフラストラクチャ属性変更のための新しいモニタ
 
 属性モニターが利用可能になり、データセンター間で資産が移動した場合、ストレージプールが暗号化されていない場合、または属性が変更された場合に、チームに自動的にアラートを送信できるようになりました。これは構成の基準値を維持するのに役立ち、新規導入や変更の際に何も見落とされないようにするのに役立ちます。
@@ -54,6 +61,7 @@ image:attribute_monitor_in_list.png["属性モニターがモニタータイプ�
 
 
 
+[[build-smarter-alerts-and-webhooks-with-dynamic-context-rich-messages]]
 === 動的でコンテキストが豊富なメッセージを使用して、よりスマートなアラートとwebhookを構築します。
 
 モニターまたはwebhookを作成する際は、アラートの説明、webhookのURL、ヘッダー、または本文に「%」と入力するだけで、動的に表示される利用可能なオブジェクト属性と注釈のリストから選択できます。アラートに適切なコンテキストを与えることで、明確性を向上させ、webhookとの連携を強化し、応答時間を短縮できます。
@@ -63,10 +71,12 @@ image:attribute_list_example.png["モニターの説明内の属性リスト、�
 '''
 
 
+[[april-2026]]
 == 2026年4月
 
 
 
+[[dii-knows-your-environment-better-than-ever]]
 === Data Infrastructure Insightsはこれまで以上にあなたの環境を熟知しています
 
 Data Infrastructure Insights の AI がお客様のセットアップを理解する方法を強化しました。応答する前に、サービスの現在の使用状況、構成、およびパフォーマンスパターンに関するより豊富なコンテキストを活用します。その結果、一般的な出発点ではなく、お客様の環境を反映した初期ガイダンスが得られ、有用な回答にたどり着くまでに必要なフォローアップが少なくなります。
@@ -81,10 +91,12 @@ Data Infrastructure Insights の AI がお客様のセットアップを理解�
 '''
 
 
+[[march-2026]]
 == 2026年3月
 
 
 
+[[ai-assistant-is-now-generally-available]]
 === AI Assistant が一般提供開始となりました
 
 Data Infrastructure Insights AI アシスタントは、AWS 上でホストされている DII サイトをご利用のすべてのお客様に一般提供を開始しました。
@@ -93,16 +105,19 @@ AzureサイトのAIアシスタントはまだプレビュー版であること�
 
 
 
+[[infrastructure-insights-features-removed]]
 === Infrastructure Insightsで削除された機能
 
 DII の「Infrastructure Insights」機能である _Shared Resources Under Stress_、_Kubernetes Namespaces Running out of Space_、_Reclaiming ONTAP Cold Storage_ は、DII では利用できなくなりました。
 
 
 
+[[february-2026]]
 == 2026年2月
 
 
 
+[[instant-intelligent-answers-about-your-infrastructure]]
 === インフラに関する即座のインテリジェントな回答
 
 インフラの新しいインテリジェントパートナーをご紹介します：link:ai_for_dii_overview.html["*Data Infrastructure Insights AIアシスタント*"]は、データとのやり取り方法を変革し、複雑なクエリをシンプルな会話に変えます。隠れたパターンを即座に発見し、トラブルシューティングを加速し、データ主体の意思決定を自信を持って行うことができます。次のような質問に即座に回答が得られます：
@@ -118,6 +133,7 @@ image:ai_assistant_icon.png["AIアシスタントアイコン"]
 
 
 
+[[monitor-improvements]]
 === 改善の監視
 
 
@@ -142,6 +158,7 @@ image:health_monitoring_exclude_object.png["ヘルスモニタリングからオ
 
 
 
+[[operating-system-support]]
 === オペレーティングシステムのサポート
 
 現在、以下のLinuxオペレーティングシステムがData Infrastructure Insights link:concept_acquisition_unit_requirements.html["Acquisition Unit"]でサポートされています：
@@ -161,10 +178,12 @@ image:health_monitoring_exclude_object.png["ヘルスモニタリングからオ
 '''
 
 
+[[december-2025]]
 == 2025年12月
 
 
 
+[[control-query-access-with-shared-queries]]
 === 共有クエリによるクエリアクセスの制御
 
 きめ細かな権限制御を使用して作成したクエリを共有します。変更を防止するには読み取り専用のビューア モードを選択し、変更を許可するには編集モードを選択します。プライベートクエリには作成者がアクセスできますが、共有クエリは注釈ルールで活用したり、特殊なユースケース用に複製したりできるため、組織全体でクエリの使用方法や変更方法を完全に制御できます。
@@ -175,6 +194,7 @@ image:query_sharing_dialog.png["クエリの権限設定、幅=200"]
 
 
 
+[[better-filtering-when-managing-monitors]]
 === モニター管理時のフィルタリングの改善
 
 モニター リストとグループのフィルタリングが改善され、ワイルドカード サポート、複数のフィルタ、含める/除外する機能などが追加されました。
@@ -183,6 +203,7 @@ image:monitor_list_filters.png["新しいモニターフィルタリング、幅
 
 
 
+[[cleaner-dashboard-visualizations]]
 === よりクリーンなダッシュボードの視覚化
 
 ダッシュボードのデザインが改善され、最も重要な情報を把握しやすくなりました。ウィジェットを区切るドロップ シャドウ ボーダーによって視覚的な明瞭性が向上し、区切り線が削除されたことで乱雑さが軽減され、データの分析に集中できるようになりました。これらの改良により、よりクリーンで直感的なダッシュボード エクスペリエンスが実現し、傾向や異常をより迅速かつ容易に発見できるようになります。
@@ -190,10 +211,12 @@ image:monitor_list_filters.png["新しいモニターフィルタリング、幅
 '''
 
 
+[[november-2025]]
 == 2025年11月
 
 
 
+[[set-your-personalized-home-page]]
 === パーソナライズされたホームページを設定する
 
 任意のData Infrastructure Insightsページをパーソナライズされたホームページとして設定することで、毎日の監視ワークフローを効率化します。各ユーザーは、重要なダッシュボード、アラート、インフラストラクチャの健全性、ワークロードのセキュリティなど、自分にとって重要なものに集中するために、異なるホームページを選択できます。
@@ -202,6 +225,7 @@ image:home_page_set.png["ホームページの設定、幅=300"]
 
 
 
+[[stay-organized-with-automatic-dashboard-grouping]]
 === 自動ダッシュボードグループ化で整理整頓
 
 インポートされたギャラリー ダッシュボードを論理カテゴリに自動的に整理するインテリジェントなグループ化により、ダッシュボードのエクスペリエンスを変革します。新しいグループ化機能により、ダッシュボードのインポートが簡単になり、各ダッシュボードがその機能と環境との関連性に基づいて適切なグループに配置されます。
@@ -211,10 +235,12 @@ image:dashboard_gallery_groups.png["インポート中のギャラリーグル�
 '''
 
 
+[[october-2025]]
 == 2025年10月
 
 
 
+[[infrastructure-health-instant-visibility-into-storage-and-fabric-risk]]
 === インフラストラクチャの健全性: ストレージとファブリックのリスクを即座に可視化
 
 新しい *インフラストラクチャの健全性* 機能を使用すると、ストレージとファブリック全体の潜在的なリスクを即座に把握できます。単一の色分けされたダッシュボードにより、統合されたリスクの可視性が得られ、ダウンタイムを最小限に抑え、収益損失を迅速に軽減できます。
@@ -229,6 +255,7 @@ image:infra_health_detailpanel.png["インフラヘルス詳細パネル、幅=6
 
 
 
+[[multi-condition-monitors-for-precise-alerting]]
 === 正確な警告のためのマルチコンディションモニター
 
 オプションの 2 番目の条件をメトリック モニターに追加することで、アラート ノイズを削減し、監視の精度を向上します。アラートは両方の条件が満たされた場合にのみトリガーされるため、最も重要なシナリオに重点を置いた、よりターゲットを絞った通知が提供されます。
@@ -237,6 +264,7 @@ image:multi-condition_monitor_second_condition.png["モニターに2番目の条
 
 
 
+[[query-improvements-at-a-glance-object-details]]
 === クエリの改善: 一目でわかるオブジェクトの詳細
 
 オブジェクト クエリ結果リストの行を選択すると、選択したオブジェクトの詳細パネルが開きます。メトリックと属性 (オブジェクト クエリのデフォルト ビュー)、アラートと変更、パフォーマンス、ヘルス スコアをすばやく表示したり、関連リソースを調べたりできます。関連するオブジェクト情報はすべてすぐに入手できます。
@@ -245,6 +273,7 @@ image:query_slideout_panel.png["クエリスライドアウトパネルの図（
 
 
 
+[[workload-security-improvements]]
 === ワークロードセキュリティの改善
 
 2 つの新しい API により、Workload Security 環境をより詳細に制御できるようになります。
@@ -258,10 +287,12 @@ image:query_slideout_panel.png["クエリスライドアウトパネルの図（
 '''
 
 
+[[august-2025]]
 == 2025年8月
 
 
 
+[[focused-widget-data-at-your-fingertips]]
 === 指先で操作できる集中ウィジェットデータ
 
 ほとんどのウィジェットの新しい *分析* 機能を使用すると、一度に 1 つのウィジェットのデータを詳しく調べることができます。ウィジェットの「分析」ボタンをクリックするだけで詳細ビューが開き、ダッシュボードのコンテキストを離れることなく、基礎となるデータをインタラクティブに探索し、ズームインしてより深い洞察を得ることができます。
@@ -270,6 +301,7 @@ image:widget_analyze_panel.png["ラインウィジェットの分析パネル、
 
 
 
+[[export-and-import-dashboards]]
 === ダッシュボードのエクスポートとインポート
 
 複数のテナントを管理していて、便利なダッシュボードを開発している場合は、ダッシュボードをエクスポートして別のテナントにインポートできます。
@@ -278,18 +310,21 @@ image:dashboard_import_from_file.png["インポートを示す画像"] image:das
 
 
 
+[[enhanced-cloud-integration-google-cloud-netapp-volumes-gcnv-support]]
 === 強化されたクラウド統合: Google Cloud NetApp Volumes (GCNV) のサポート
 
 * Google Cloud NetApp Volumes* (GCNV) が DII のデータ コレクターとして完全にサポートされるようになり、ハイブリッド クラウド監視のエコシステムが完成しました。インフラストラクチャ全体の組織、プール、ボリュームなどの重要なストレージ オブジェクトを可視化します。オンプレミスでもクラウドでも、すべてのストレージ環境を単一のプラットフォームから追跡できるようになりました。
 
 
 
+[[enhanced-storagegrid-monitoring]]
 === 強化されたStorageGRID監視
 
 StorageGRIDログ収集がデフォルトで有効になり、DII にイベント追跡データが提供されるようになりました。また、50 を超えるデフォルトのアラート、リアルタイム イベント追跡、および新しいダッシュボードによって StorageGrid 監視が拡張され、複雑なストレージ グリッド操作が簡素化されました。トラフィック ポリシーとバケットのパフォーマンスに関する詳細な情報を活用して、問題を事前に把握します。
 
 
 
+[[operating-system-support]]
 === オペレーティングシステムのサポート
 
 Data Infrastructure Insights Acquisition Unitsでは、以下のオペレーティングシステムがサポートされるようになりました。link:concept_acquisition_unit_requirements.html["すでにサポートされています"] :
@@ -301,10 +336,12 @@ Data Infrastructure Insights Acquisition Unitsでは、以下のオペレーテ�
 
 
 
+[[june-2025]]
 == 2025年6月
 
 
 
+[[vm-analyzer-holistic-vm-to-storage-visibility-troubleshooting]]
 === VM Analyzer: VMからストレージまでの包括的な可視性とトラブルシューティング
 
 DII の *VM Analyzer* 機能は、仮想化環境の包括的なエンドツーエンドのビューを提供します。 VM Analyzer は、仮想マシンからストレージまでのパス全体をマッピングすることでトラブルシューティングを効率化し、仮想ディスク、VM、ホスト、データストア、ボリューム、ストレージ全体のパフォーマンスの問題をユーザーが迅速に特定できるようにします。直感的なトポロジ ビュー、フィルタリング、詳細なパフォーマンス メトリックにより、管理者はボトルネックを簡単に特定し、トラフィックの不均衡を分析し、全体的なストレージ パフォーマンスを最適化できます。
@@ -313,6 +350,7 @@ image:vm_analyzer_example_with_panel.png["ストレージ システムの VM Ana
 
 
 
+[[operating-system-support]]
 === オペレーティングシステムのサポート
 
 Data Infrastructure Insights Acquisition Unitsでは、以下のオペレーティングシステムがサポートされるようになりました。link:concept_acquisition_unit_requirements.html["すでにサポートされています"] :
@@ -325,10 +363,12 @@ Data Infrastructure Insights Acquisition Unitsでは、以下のオペレーテ�
 '''
 
 
+[[may-2025]]
 == 2025年5月
 
 
 
+[[new-landing-pages-keep-you-in-the-flow]]
 === 新しいランディングページで流れを維持
 
 再設計されたランディング ページには、概要データ、パフォーマンス チャート、相関関係、アラートと変更、主要なリソースなど、必要なものがすべて 1 つのビューに表示されます。
@@ -339,6 +379,7 @@ image:lp_new_design.png["概要とパフォーマンス、および追加リソ�
 
 
 
+[[workload-security-improvements]]
 === ワークロードセキュリティの改善
 
 *ワークロード セキュリティ アラートに Webhook が利用可能になりました*
@@ -355,6 +396,7 @@ image:ws_migrate_collector_to_another_agent.png["移行コレクター、幅=500
 
 
 
+[[csv-asynchronous-export]]
 === .CSV 非同期エクスポート
 
 .CSV へのデータのエクスポートには、エクスポートするデータの量に応じて、数秒から数時間かかる場合があります。  Data Infrastructure Insightsでは、そのデータが非同期的にエクスポートされるようになったため、.CSV がコンパイルされている間も作業を続行できます。
@@ -366,10 +408,12 @@ image:csv_export_async.png["ダウンロード可能な .csv エクスポート�
 '''
 
 
+[[april-2025]]
 == 2025年4月
 
 
 
+[[ml-powered-anomaly-bounds-in-line-widgets-for-proactive-issue-resolution]]
 === プロアクティブな問題解決のためのラインウィジェットにおける ML を活用した異常境界
 
 折れ線グラフまたはスプライン グラフ ウィジェットのパフォーマンスの問題をトラブルシューティングするために、実際のメトリックとともに予想される動作の境界を表示できるようになりました。これにより、正常なメトリックの傾向と異常なメトリックの傾向を区別できます。
@@ -380,6 +424,7 @@ image:expected_bounds_example_showing_spike.png["予想境界は上方にスパ�
 
 
 
+[[optimize-vmware-costs-with-vsan-storage-support]]
 === VSAN ストレージ サポートによる VMware コストの最適化
 
 VM 最適化機能に、VSAN ストレージを備えた VMWare 環境のサポートが含まれるようになりました。  CPU とメモリの使用量に加えて、分析では再利用の推奨事項としてローカル VSAN ストレージが考慮されるようになったため、ライセンス コストをさらに削減できます。
@@ -388,6 +433,7 @@ image:vm_optimization_with_vsan.png["VSAN を使用した VM 最適化の例"]
 
 
 
+[[alert-details-at-your-fingertips]]
 === アラートの詳細をすぐに確認
 
 新しいスライドアウト パネルにより、アラートの調査がこれまで以上に簡単になりました。アラートを選択すると、そのアラートの詳細が表示され、問題を調査しているときに場所を失うことなくアラートを簡単に切り替えることができます。
@@ -396,12 +442,14 @@ image:alert_slideout_example.png["アラートスライドアウトでナビゲ�
 
 
 
+[[workload-security-forensics-asynchronous-export]]
 === ワークロードセキュリティフォレンジック非同期エクスポート
 
 フォレンジック データのエクスポートには、エクスポートするデータの量に応じて、数秒から数時間かかる場合があります。  Workload Security はデータを非同期的にエクスポートするため、.CSV のコンパイル中でも作業を続行できます。
 
 
 
+[[data-collector-notifications-grouped-into-rules]]
 === ルールにグループ化されたデータコレクター通知
 
 データ コレクターで通知を構成している場合、4 月 15 日以降、それらの通知は通知ルールで処理され、受信者が同一のコレクターに対しては単一のルールが適用されます。受取人が異なるコレクターには、別のルールが適用されます。既存のコレクター通知は通知ルールに移行されます。
@@ -409,10 +457,12 @@ image:alert_slideout_example.png["アラートスライドアウトでナビゲ�
 '''
 
 
+[[march-2025]]
 == 2025年3月
 
 
 
+[[enhanced-contextual-navigation-for-efficient-infrastructure-management]]
 === 効率的なインフラストラクチャ管理のための強化されたコンテキストナビゲーション
 
 Data Infrastructure Insightsを活用して運用効率を高め、時間を節約します。現在、コンテキスト メニュー リンクが追加されており、任意のオブジェクトから、デバイス パフォーマンス分析情報の資産ランディング ページ、ネットワーク トポロジの視覚化のための SAN Analyzer、運用認識のログ、構成管理のための Change Analyzer に直接ジャンプできるようになりました。
@@ -423,6 +473,7 @@ image:contextual_menu_example.png["コンテキストメニューの例、幅=50
 
 
 
+[[preserve-the-history-of-removed-assets]]
 === 削除された資産の履歴を保存する
 
 強化されたインフラ変更機能により、移動されて利用できなくなった qtree やボリュームなどの削除された資産の履歴が保存されるようになりました。
@@ -435,6 +486,7 @@ image:infra_change_removed_assets.png["インフラ変更で削除されたア�
 
 
 
+[[kubernetes-operator-push-button-upgrade]]
 === Kubernetes オペレーターのプッシュボタンアップグレード
 
 Kubernetes Operator が最新であることを確認したいですか? DII Kubernetes Collectors クラスター メニューからオンデマンドでオペレーターをアップグレードします。メニューから「アップグレード」を選択するだけで、オペレーターがイメージ署名を検証し、現在のインストールのスナップショットをキャプチャして、アップグレードを実行します。
@@ -445,6 +497,7 @@ image:dii_push_button_upgrade.png["クラスターメニューからのプッシ
 
 
 
+[[test-connectivity-for-storage-workload-security-data-collectors]]
 === ストレージ ワークロード セキュリティ データ コレクターの接続テスト
 
 テスト接続機能は、Data Infrastructure Insights (DII) ワークロード セキュリティでデータ コレクターを設定するときに、エンド ユーザーが障害の具体的な原因を特定できるようにすることを目的としています。これにより、ユーザーはネットワーク通信や役割の不足に関連する問題を自己修正できるようになります。
@@ -453,6 +506,7 @@ image:ws_test_connection_button.png["ワークロードセキュリティテス�
 
 
 
+[[operating-system-support]]
 === オペレーティングシステムのサポート
 
 Data Infrastructure Insights Acquisition Unitsでは、以下のオペレーティングシステムがサポートされるようになりました。link:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["すでにサポートされています"] :
@@ -470,6 +524,7 @@ Data Infrastructure Insights Acquisition Unitsでは、以下のオペレーテ�
 '''
 
 
+[[february-2025]]
 == 2025年2月
 
 ONTAP Essentialsには、最新世代のlink:task_dc_na_ontap_all_san_array.html["ASA"]デバイス。これには、 ONTAP上で実行されているワークロードの VM-LUN トポロジ用の SAN Analyzer が含まれており、現在はData Infrastructure Insights Basic Edition の一部としてNetAppサポートでも利用できます。
@@ -478,6 +533,7 @@ image:ontap_essentials_asa_views.png["ONTAP Essentialsドロップダウンで�
 
 
 
+[[dii-api-usage-tracking-enhance-security-and-efficiency]]
 === DII API使用状況追跡：セキュリティと効率性の向上
 
 管理者ユーザーが利用できる強化された REST API 使用状況追跡により、セキュリティ体制を強化し、リソース管理を合理化します。 API 使用状況の追跡を使用すると、どの API トークンが使用されているか、どの IP アドレスから使用されているか、およびそれらが生成するトラフィックの量を確認できます。トークンを特定の IP アドレスと使用レベルにリンクすることで、システム アクセスと使用傾向に関する強力な分析情報が得られ、安全で効率的な環境を維持し、運用を円滑に進めるために必要な制御が可能になります。
@@ -488,6 +544,7 @@ image:api_usage_analytics_screenshot.png["API使用状況分析の例"]
 
 
 
+[[workload-security-api-to-restrict-users]]
 === ユーザーを制限するワークロードセキュリティAPI
 
 Workload Security でユーザー制限を管理するための新しい API が追加されました。  API を使用すると、ユーザーをブロックまたはブロック解除したり、アクセス制限の期間を変更したりできます。  _cloudsecure_actions.block_ API については、「管理 > API アクセス > API ドキュメント」ページを参照してください。
@@ -495,10 +552,12 @@ Workload Security でユーザー制限を管理するための新しい API が
 '''
 
 
+[[january-2025]]
 == 2025年1月
 
 
 
+[[proactively-manage-risk-with-forensics-grouping]]
 === フォレンジックグループでリスクを積極的に管理
 
 セキュリティとリソース管理機能を強化するために設計された最新機能をご紹介します。高度なグループ化機能と階層的な複数のグループ化のサポートにより、特定のフォルダーにアクセスしたユーザーを簡単に識別し、最もアクティブなユーザーと共有を判断し、アクティブなクライアント IP アドレスを追跡してリスクをプロアクティブに管理できるようになりました。最もアクセスの多いファイルとフォルダーを特定することでストレージと帯域幅の使用を最適化し、ユーザーを識別することでシステム アクセスの制御を強化します。
@@ -507,6 +566,7 @@ image:forensics_activity_example.png["フォレンジック活動追跡の例画
 
 
 
+[[dashboard-access-control]]
 === ダッシュボードのアクセス制御
 
 Data Infrastructure Insightsでは、作成したダッシュボードへのアクセスをより細かく制御できるようになりました。グラフを変更できるユーザーを選択します。潜在的に機密性の高い情報への公開を制御できます。一般公開の準備ができていないダッシュボードをまだ作成中ですか? 共有する準備ができるまで非公開にしておくこともできます。
@@ -516,10 +576,12 @@ image:Dashboard_Sharing_Options.png["ダッシュボード共有オプション"
 '''
 
 
+[[december-2024]]
 == 2024年12月
 
 
 
+[[introducing-san-analyzer-enhanced-visibility-for-block-workloads]]
 === SAN Analyzer のご紹介: ブロック ワークロードの可視性強化
 
 SAN は重要なワークロードの処理において重要な役割を果たしますが、その複雑さにより重大な停止や顧客の混乱が生じる可能性があります。 DII の *SAN Analyzer* を使用すると、SAN の管理がよりシンプルかつ効率的になります。この強力なツールは、エンドツーエンドの可視性を提供し、VM/ホストからネットワーク、LUN、ストレージへの依存関係をマッピングします。  SAN Analyzer は、インタラクティブなトポロジ マップを提供することで、問題を正確に特定し、変更を理解し、データ フローの理解を深めることを可能にします。  SAN Analyzer を使用して複雑な IT 環境での SAN 管理を合理化し、ブロック ワークロードの可視性を向上させます。
@@ -528,6 +590,7 @@ image:san_analyzer_example_with_panel.png["SAN Analyzer のストレージシス
 
 
 
+[[optimize-vm-costs-with-intelligent-host-decommissioning-and-vm-reclamation]]
 === インテリジェントなホスト廃止と VM 再利用による VM コストの最適化
 
 Data Infrastructure Insights は、環境の過去の動作を分析し、短期および長期の予測を確立し、ホストの廃止と、電源がオフになっているアイドル状態の VM の再利用に関する詳細な推奨事項を生成することで、インフラストラクチャとライセンスのコスト管理に役立ちます。これらの推奨事項は、パフォーマンスの安定性を確保し、未使用の容量を解放し、メモリと CPU の割り当てを削減するのに役立ちます。
@@ -536,6 +599,7 @@ image:vm_optimization_summary.png["VM最適化の概要画面"]
 
 
 
+[[uncover-log-insights-with-time-charts-and-table-widget-support]]
 === 時間チャートとテーブルウィジェットのサポートによりログの洞察を明らかに
 
 時間グラフ (棒グラフ、折れ線グラフ、面グラフ) を活用して、繰り返し発生するエラーやアクティビティの急増などのログ データの傾向やパターンを特定し、時間の経過に伴うシステムの動作に関する貴重な分析情報を得ることができます。さらに、テーブルを使用すると、ダッシュボードにログ メッセージを直接含めることができるため、ログの詳細をより包括的に表示できます。
@@ -545,10 +609,12 @@ image:log_insights_dashboard_example.png["ダッシュボードに分析情報�
 '''
 
 
+[[november-2024]]
 == 2024年11月
 
 
 
+[[new-workload-security-alerts-api]]
 === 新しいワークロード セキュリティ アラート API
 
 新しいワークロードセキュリティでフォレンジックアラートの詳細を取得link:concept_cs_api.html["*cloudsecure_forensics.alerts* API"]。
@@ -557,6 +623,7 @@ image:ws_forensics_alerts_api.png["ワークロード セキュリティ フォ�
 
 
 
+[[analyze-configuration-changes-in-your-environment]]
 === 環境内の構成変更を分析する
 
 構成の変更は、現代の IT における問題の最も一般的な原因の 1 つです。Data Infrastructure Insights（DII）の新しいlink:infrastructure_change_analytics.html["変更分析"]機能により、環境で問題を引き起こす変更を明確に把握できます。問題の原因となった可能性のあるデバイスおよび関連インフラストラクチャ コンポーネントのすべての変更を表示することで、トラブルシューティングの時間を短縮します。さらに、あなたやあなたのチームが計画された変更を実行する場合、サービス レベルに影響が出る前にそれらの変更を迅速に検証し、予期しない影響がないことを確認できます。
@@ -565,6 +632,7 @@ image:Change_Analysis_Example_showing_alert-change_correlation.png["インフラ
 
 
 
+[[kubevirt-support-monitor-virtual-machine-workloads-running-within-your-kubernetes-cluster]]
 === KubeVirt サポート: Kubernetes クラスター内で実行されている仮想マシンのワークロードを監視します
 
 DII は現在、OpenShift Virtualization や Harvester などのプラットフォームで使用される Kubernetes ネイティブ仮想化ソリューションである KubeVirt を完全にサポートしています。  Kubernetes クラスター内の仮想マシンとコンテナ ワークロードの両方のメトリック、イベント、構成の変更、ネットワーク トラフィックを完全に可視化します。
@@ -572,10 +640,12 @@ DII は現在、OpenShift Virtualization や Harvester などのプラットフ�
 '''
 
 
+[[october-2024]]
 == 2024年10月
 
 
 
+[[unlock-new-insights-with-custom-expressions-in-monitors]]
 === モニターのカスタム式で新たな洞察を獲得
 
 式を使用すると、メトリックおよび異常検出モニターで算術演算を実行できます。以下に例をいくつか挙げます。
@@ -590,6 +660,7 @@ image:Expressions_In_Monitors.png["メトリックモニターで式を作成す
 
 
 
+[[minimize-alert-disruptions-during-maintenance-period]]
 === メンテナンス期間中のアラートの中断を最小限に抑える
 
 メンテナンス ウィンドウを使用すると、スケジュールされたメンテナンス期間中にアラート通知を抑制できるため、不要な中断を回避できます。
@@ -602,6 +673,7 @@ image:Maintenance_Windows_example.png["メンテナンスウィンドウの例"]
 
 
 
+[[streamline-alert-management-with-new-alert-notification-rules]]
 === 新しいアラート通知ルールでアラート管理を効率化
 
 アラート通知ルールにより、モニターとチーム間の通知管理が簡素化されます。
@@ -612,6 +684,7 @@ image:notification_rule_configure.png["通知ルールのフィルターの設�
 
 
 
+[[log-analytics-in-dashboards]]
 === ダッシュボードのログ分析
 
 ダッシュボードにログ イベントを含めることができるようになり、イベント データを視覚化して、環境をより包括的かつ状況に応じて把握できるようになりました。ダッシュボードを離れずにログを調査し、関連するメトリックを表示します。
@@ -620,6 +693,7 @@ image:log_analytics_bar_graph_example.png["ログ分析の例"]
 
 
 
+[[better-vmware-observability-with-vmware-events]]
 === VMware イベントによる VMware の可観測性の向上
 
 リアルタイム イベントを使用して VMware 環境をプロアクティブに管理およびトラブルシューティングします。 VMware イベントは、VM の移行、リソースの割り当て、ホストの健全性に関する分析情報を提供します。クエリ、ダッシュボード、モニターで使用できるようになりました。  VMware バージョン 8 以上が必要です。  _logs.vmware.events_ ソースを選択するだけです。
@@ -630,6 +704,7 @@ image:vmware_log_events.png["ドロップダウンでのvmwareログの選択"]
 
 
 
+[[data-collector-updates]]
 === データコレクターの更新:
 
 * *Pure FlashBlade*: このコレクターは、REST API バージョン 2 を公開する FlashBlade クラスターからインベントリとパフォーマンス データを収集します。
@@ -638,10 +713,12 @@ image:vmware_log_events.png["ドロップダウンでのvmwareログの選択"]
 '''
 
 
+[[september-2024]]
 == 2024年9月
 
 
 
+[[introducing-data-infrastructure-insights-formerly-cloud-insights]]
 === Data Infrastructure Insights（旧Cloud Insights）のご紹介
 
 2024 年 9 月 24 日火曜日、 NetApp はCloud Insightsの名称を * Data Infrastructure Insights* (DII) に正式に変更しました。これは、Insight ユーザー カンファレンスのメイン ステージ基調講演および Insight カンファレンス製品プレス リリースにおいて、Haiyan Song 氏によって発表されました。
@@ -650,10 +727,12 @@ DII サービスは同じままです。機能の変更や修正はありませ�
 
 
 
+[[august-2024]]
 == 2024年8月
 
 
 
+[[view-data-specific-to-your-time-range]]
 === 時間範囲に固有のデータを表示する
 
 アラートを調査していますか? チャートを拡大しましたか? これらのアクションにより、それらのページの時間範囲が変更されます。これで、その時間範囲をロックし、他のCloud Insightsページに移動して、ロックされた時間範囲に固有のデータを表示できるようになります。調査とトラブルシューティングがずっと簡単になりました。
@@ -662,6 +741,7 @@ image:timerange_lock.png["他のページで使用するために時間範囲を
 
 
 
+[[change-and-change-ratio-analysis]]
 === 変化と変化率（％）分析
 
 変化率の時間集計は、時間の経過に伴うメトリック値の重要な変化と傾向を識別するのに役立ちます。これらの洞察は、特定の時間における大幅な容量増加や単一ポートのパフォーマンスの変化など、何が変化したかを理解するための鍵となります。
@@ -674,6 +754,7 @@ image:change_and_change_ratio_bar_chart.png["変化と変化率の集計の選�
 
 
 
+[[export-log-query-results-to-csv]]
 === ログクエリ結果を .CSV にエクスポートする
 
 ログ クエリの結果を表示するときに、新しい [エクスポート] ボタンをクリックすると、最大 10,000 行を .CSV に簡単にエクスポートできます。これにより、データのアクセス性が向上し、データ分析とレポート作成が容易になり、他のデータ処理ツールとのシームレスな統合が可能になります。
@@ -682,6 +763,7 @@ image:csv_export_button.png["ログクエリページのCSVにエクスポート
 
 
 
+[[resolve-alerts-by-time]]
 === 時間でアラートを解決する
 
 Cloud Insightsでは、監視対象のメトリックが指定された期間にわたって許容範囲内に留まった場合にアラートを解決するオプションが提供されるようになりました。これにより、複数のアラートを 1 つに統合することで、定義されたしきい値を繰り返し超えるメトリックに関連するノイズを削減し、真の問題に集中できるようになります。
@@ -691,10 +773,12 @@ image:resolve_alert_by_time_dropdown.png["時間に基づいてアラートを�
 '''
 
 
+[[july-2024]]
 == 2024年7月
 
 
 
+[[aiops-anomaly-detection]]
 === AIOps: 異常検出
 
 Cloud Insights は機械学習を使用して、環境内のデータ パターンの予期しない変化を検出し、問題を早期に特定できるようにプロアクティブなアラートを提供します。
@@ -709,6 +793,7 @@ image:anomaly_detection_expert_view.png["検出された異常を示すグラフ
 
 
 
+[[workload-security-improvements]]
 === ワークロードセキュリティの改善
 
 *NFS 4.1 サポート*
@@ -723,6 +808,7 @@ SVM データ コレクターは、 ONTAP 9.15.1 以降で、*NFS 4.1* までの
 
 
 
+[[easier-dashboard-navigation]]
 === ダッシュボードのナビゲーションが簡単になりました
 
 この機能は、運用ワークフローを合理化し、チーム間のコラボレーションを容易にすることを目的としています。
@@ -734,10 +820,12 @@ image:Dashboard_Nav_Group_Dropdown.png["現在のダッシュボードと同じ�
 '''
 
 
+[[june-2024]]
 == 2024年6月
 
 
 
+[[operating-system-support]]
 === オペレーティングシステムのサポート
 
 Cloud Insights Acquisition Unitsでは、以下のオペレーティングシステムがサポートされています。link:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["すでにサポートされています"] :
@@ -749,10 +837,12 @@ Cloud Insights Acquisition Unitsでは、以下のオペレーティングシス
 
 
 
+[[may-2024]]
 == 2024年5月
 
 
 
+[[automatically-resolve-alerts-based-on-time]]
 === 時間に基づいてアラートを自動的に解決する
 
 ログ アラートは時間に基づいて解決できるようになりました。アラート条件が発生しなくなった場合、指定された時間が経過すると、 Cloud Insights はアラートを自動的に解決できます。アラートを数分、数時間、または数日で解決することを選択できます。
@@ -762,10 +852,12 @@ image:alerts_resolve_based_on_time.png["経過時間に基づいてアラート�
 '''
 
 
+[[april-2024]]
 == 2024年4月
 
 
 
+[[iscsi-support-for-kubernetes]]
 === Kubernetes の iSCSI サポート
 
 Cloud Insightsでは、Kubernetes に関連付けられた iSCSI ストレージのマッピングがサポートされるようになり、Kubernetes ネットワーク マップを使用してトラブルシューティングを高速化できるほか、レポート経由でチャージバック レポートやショーバック レポートを提供できるようになります。
@@ -774,6 +866,7 @@ image:pod-to-storage.png["ポッドからストレージへの例"]
 
 
 
+[[operating-system-support]]
 === オペレーティングシステムのサポート
 
 Cloud Insights Acquisition Unitsでは、以下のオペレーティングシステムがサポートされています。link:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["すでにサポートされています"] :
@@ -788,10 +881,12 @@ Cloud Insights Acquisition Unitsでは、以下のオペレーティングシス
 '''
 
 
+[[march-2024]]
 == 2024年3月
 
 
 
+[[workload-security-agent-details]]
 === ワークロードセキュリティエージェントの詳細
 
 各 Workload Security エージェントには独自のランディング ページがあり、そこではエージェントに関する概要情報や、そのエージェントに関連付けられているインストール済みのデータ コレクターとユーザー ディレクトリ コレクターを簡単に確認できます。
@@ -800,6 +895,7 @@ image:Agent_Detail_Page.png["エージェント詳細ランディングページ
 
 
 
+[[chart-more-data-more-quickly]]
 === より多くのデータをより速くグラフ化
 
 アセットのランディング ページでデータを分析する場合、エキスパート ビュー チャートに追加データを追加するのは簡単です。ランディング ページの各テーブルで、オブジェクト タイプに関連データがある場合は、そのオブジェクトの上にマウス カーソルを合わせると、「エキスパート ビューに追加」アイコンが表示されます。このアイコンを選択すると、そのオブジェクトが追加リソースに追加され、エキスパート ビュー チャートに表示されます。
@@ -813,10 +909,12 @@ image:LPTableShowChartIcon.png["チャートアイコンを表示"]
 '''
 
 
+[[february-2024]]
 == 2024年2月
 
 
 
+[[usability-improvements]]
 === ユーザビリティの改善
 
 右隅のドロップダウンから [画像としてエクスポート] を選択して、現在のダッシュボードの *スナップショット* を保存します。  Cloud Insights は、現在のウィジェットの状態の .PNG を作成します。
@@ -841,6 +939,7 @@ image:TriggeredOnLink.png["TriggeredOnアラートフィールド内のリンク
 
 
 
+[[see-all-changes-in-your-namespace]]
 === 名前空間内のすべての変更を表示する
 
 Kubernetes 変更分析では、クラスターと名前空間を選択したときに変更のタイムラインを表示できるようになりました。事前にワークロードも選択しておく必要があります。クラスターと名前空間でフィルタリングすると、その名前空間内のすべてのワークロード変更のタイムラインが 1 行に表示されます。
@@ -849,6 +948,7 @@ image:NamespaceTimeline.png["名前空間タイムライン"]
 
 
 
+[[related-logs-for-alerts]]
 === アラートの関連ログ
 
 ログ アラートを表示すると、関連するログ エントリが新しいテーブルに表示されます。ログ エントリは、アラートと同じソースおよび期間内に発生し、同じ条件に該当する場合、関連しているとみなされます。さらに詳しく調べるには、「ログの分析」を選択します。
@@ -857,12 +957,14 @@ image:RelatedLogsTable.png["ログアラートランディングページの関�
 
 
 
+[[collect-ontap-switch-data]]
 === ONTAPスイッチデータの収集
 
 Cloud InsightsはONTAPシステムのバックエンドスイッチからデータを収集できます。データコレクタの_Advanced Configuration_セクションで収集を有効にし、 ONTAPシステムが以下の情報を提供するように設定されていることを確認するだけです。link:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["スイッチ情報"]そして適切なlink:task_dc_na_cdot.html#a-note-about-permissions["権限"]セット。
 
 
 
+[[workload-security-data-collector-api]]
 === ワークロードセキュリティデータコレクターAPI
 
 大規模な環境では、新しいデータ コレクター API を使用して Workload Security コレクターの作成を自動化できます。詳細については、「*管理 > API アクセス > API ドキュメント*」に移動し、「_Workload Security_」API タイプを選択してください。
@@ -870,16 +972,19 @@ Cloud InsightsはONTAPシステムのバックエンドスイッチからデー�
 '''
 
 
+[[january-2024]]
 == 2024年1月
 
 
 
+[[try-cloud-insights-features-you-havent-used-yet]]
 === まだ使っていないCloud Insights の機能を試す
 
 Cloud Insightsの初期トライアルに加えて、以下の機能もご利用いただけます。link:concept_subscribing_to_cloud_insights.html#module-evaluation["モジュール評価"] 。たとえば、 Cloud Insightsに加入していて、ストレージと仮想マシンを監視している場合、Kubernetes を環境に追加すると、Kubernetes Observability の 30 日間の試用期間が自動的に開始されます。  Kubernetes Observability 管理対象ユニットの使用量は、試用期間が終了するまで、サブスクライブした権利にはカウントされません。
 
 
 
+[[how-healthy-are-my-workloads]]
 === 私のワークロードはどの程度健全でしょうか?
 
 ワークロードの健全性は、*Kubernetes > Explore > Workloads* ページで一目で確認できるため、どのワークロードのパフォーマンスが良好で、どのワークロードに支援が必要かをすぐに確認できます。ヘルスの問題がインフラストラクチャ、ネットワーク、または構成の変更に関連しているかどうかを簡単に識別し、ドリルダウンして根本原因を分析します。
@@ -888,6 +993,7 @@ image:WorkloadHealth.png["ワークロードの健全性の概要"]
 
 
 
+[[data-collector-updates]]
 === データコレクターの更新
 
 
@@ -898,6 +1004,7 @@ Data Domain コレクターは、フェイルオーバー イベント全体に�
 
 
 
+[[enhanced-ransomware-detection-ml-algorithm]]
 === 強化されたランサムウェア検出MLアルゴリズム
 
 Workload Security には、最も高度な攻撃をより迅速かつ正確に検出するための新しい第 2 世代のランサムウェア検出 ML アルゴリズムが含まれています。
@@ -906,6 +1013,7 @@ Workload Security には、最も高度な攻撃をより迅速かつ正確に�
 
 
 
+[[deprecated-functionality]]
 === 非推奨の機能
 
 機能が進化するにつれて、機能が廃止されることがあります。  Cloud Insightsで廃止された機能の一部を以下に示します。
@@ -950,10 +1058,12 @@ _cloudsecure_forensics.activities.v1_ API は非推奨になりました。こ�
 '''
 
 
+[[december-2023]]
 == 2023年12月
 
 
 
+[[change-analytics-at-a-glance]]
 === 変更分析の概要
 
 Kuberneteslink:kubernetes_change_analytics.html["変更分析"] Kubernetes 環境の最近の変更を一括して表示します。アラートと展開ステータスを簡単に確認できます。  Change Analytics を使用すると、すべてのデプロイメントと構成の変更を追跡し、それを K8s サービス、インフラストラクチャ、クラスターの健全性およびパフォーマンスと相関させることができます。
@@ -962,6 +1072,7 @@ image:ChangeAnalytitcs_Main_Screen.png["変更分析ダッシュボード"]
 
 
 
+[[kubernetes-workload-performance-dashboard]]
 === Kubernetes ワークロード パフォーマンス ダッシュボード
 
 包括的な Kubernetes ワークロード パフォーマンス ダッシュボードでは、ワークロードのパフォーマンスを一目で確認できます。ボリューム、スループット、レイテンシ、再送信の傾向のグラフと、環境内の各名前空間のワークロード トラフィックの表をすばやく表示します。フィルターを使用すると、関心のある領域に簡単に焦点を合わせることができます。
@@ -972,6 +1083,7 @@ image:K8s_Workload_performance_dashboard.png["ワークロードパフォーマ�
 
 
 
+[[query-details-on-one-screen]]
 === クエリの詳細を1つの画面で表示
 
 クエリで行を選択すると、選択した行の属性、注釈、メトリックの詳細を示すサイド パネルが開き、オブジェクトのランディング ページにドリルダウンすることなく役立つ情報が提供されます。行またはサイド パネル内のリンクを使用すると、簡単にナビゲートできます。
@@ -980,6 +1092,7 @@ image:MetricQuerySlideoutPanel.png["メトリッククエリのスライドア�
 
 
 
+[[data-collector-updates]]
 === データコレクターの更新:
 
 * * Brocade FOS REST*: このコレクターは「プレビュー」から移行され、一般利用可能になりました。注意すべき点:
@@ -994,16 +1107,19 @@ image:MetricQuerySlideoutPanel.png["メトリッククエリのスライドア�
 '''
 
 
+[[november-2023]]
 == 2023年11月
 
 
 
+[[workload-security-pauseresume-a-collector]]
 === ワークロード セキュリティ: コレクターの一時停止/再開
 
 Workload Security では、データ コレクターが _実行中_ 状態の場合、データ コレクターを一時停止できます。コレクターの「3 つのドット」メニューを開き、[一時停止] を選択します。コレクターが一時停止している間は、 ONTAPからデータは収集されず、コレクターからONTAPにデータは送信されません。収集を再開するには、「再開」を選択します。
 
 
 
+[[storage-node-support-information]]
 === ストレージノードのサポート情報
 
 ストレージ ノードのランディング ページの [ユーザー データ] セクションでは、サポート オファリング、現在のステータス、サポート ステータス、保証終了日に関する情報が一目でわかります。 Cloud Insights は現在、 NetAppデバイスに関してのみこの情報を自動公開することに注意してください。また、これらのサポート フィールドは注釈であるため、クエリやダッシュボードで使用できることにも注意してください。
@@ -1012,12 +1128,14 @@ image:StorageNodeSupportData.png["ストレージノードのサポート情報"
 
 
 
+[[map-vmware-tags-to-cloud-insights-annotations]]
 === VMWare タグをCloud Insights のアノテーションにマッピングする
 
 そのlink:task_dc_vmware.html["VMware"]データ コレクターを使用すると、VMWare で構成されている同じ名前のタグを使用して、 Cloud Insights のテキスト注釈を入力できます。
 
 
 
+[[brocade-cli-collector-reliability-enhancements-for-fos-9-1-1c-and-higher-firmware]]
 === Brocade CLI コレクターの信頼性強化 (FOS 9.1.1c 以降のファームウェア)
 
 9.1.1c ファームウェアを実行している一部のBrocade Fibre Channel スイッチでは、特定の CLI コマンドの出力の先頭に「motd」ログイン バナー テキスト、またはユーザーにデフォルトのパスワードを変更するように求める警告が追加される場合があります。  Brocade CLI コレクターは、これら 2 種類の不要なテキストを無視するように強化されました。
@@ -1027,10 +1145,12 @@ image:StorageNodeSupportData.png["ストレージノードのサポート情報"
 '''
 
 
+[[october-2023]]
 == 2023年10月
 
 
 
+[[enhanced-workload-security]]
 === 強化されたワークロードセキュリティ
 
 Workload Security は次のように改善されました。
@@ -1041,12 +1161,14 @@ Workload Security は次のように改善されました。
 
 
 
+[[module-trials]]
 === モジュールトライアル
 
 Cloud Insightsの初期トライアルに加えて、以下の機能もご利用いただけます。link:concept_subscribing_to_cloud_insights.html#module-evaluation["モジュール評価"] 。たとえば、すでに Infrastructure Observability に加入しているが、環境に Kubernetes を追加する場合は、Kubernetes Observability の 30 日間のトライアルが自動的に開始されます。評価期間の終了時に、Kubernetes Observability 管理対象ユニットの使用量に対してのみ課金されます。
 
 
 
+[[restrict-access-to-specified-domains]]
 === 指定されたドメインへのアクセスを制限する
 
 管理者とアカウント所有者は、link:concept_user_roles.html#restricting-access-by-domain["Cloud Insightsへのアクセスを制限する"]指定したドメインにメールを送信します。  *管理 > ユーザー管理* に移動し、_ドメインの制限_ ボタンを選択します。
@@ -1055,6 +1177,7 @@ image:Restrict_Domains_Modal.png["ドメイン制限モーダル"]
 
 
 
+[[data-collector-updates]]
 === データコレクターの更新
 
 次のデータ コレクター/取得ユニットの変更が行われます。
@@ -1066,10 +1189,12 @@ image:Restrict_Domains_Modal.png["ドメイン制限モーダル"]
 '''
 
 
+[[september-2023]]
 == 2023年9月
 
 
 
+[[easily-find-what-you-want-in-the-logs]]
 === ログから必要なものを簡単に見つける
 
 ログクエリ（*オブザーバビリティ > ログクエリ > +新しいログクエリ*）には、link:concept_log_explorer.html#advanced-filtering["機能強化"]ログの探索をより簡単に、より有益なものにします。
@@ -1102,6 +1227,7 @@ image:Log_Query_Group_By_Chart.png["グラフに積み上げ列を表示する�
 
 
 
+[[floating-log-detail-panel]]
 === 「フローティング」ログ詳細パネル
 
 ログ クエリを使用してログを探索する場合、リスト内のエントリを選択すると、そのエントリの詳細パネルが開きます。スライドアウト パネルを「フローティング」(画面の残りの部分の上に表示) するか、「ページ内」(ページ内の独自のフレームとして表示) で表示するかを選択できるようになりました。これらのビューを切り替えるには、パネルの右上隅にある「ページ内 / フローティング」ボタンを選択します。
@@ -1110,6 +1236,7 @@ image:Log_Query_Floating_Detail_Panel.png["ボタンが強調表示された「�
 
 
 
+[[collapse-the-menu]]
 === メニューを折りたたむ
 
 メニューの下にある「最小化」ボタンを選択すると、左側のCloud Insightsナビゲーション メニューを折りたたむことができます。メニューが最小化されているときにアイコンの上にマウスを置くと、どのセクションが開くかを確認できます。アイコンを選択するとメニューが開き、そのセクションに直接移動します。
@@ -1118,6 +1245,7 @@ image:CI_Menu_Minimize_Button.png["メニューを最小化する"]
 
 
 
+[[data-collector-improvements]]
 === データコレクターの改善
 
 Cloud Insightsにより、データ コレクター情報の表示と検索が簡単になりました。
@@ -1131,10 +1259,12 @@ Cloud Insightsにより、データ コレクター情報の表示と検索が�
 '''
 
 
+[[august-2023]]
 == 2023年8月
 
 
 
+[[collecting-isilonpowerscale-logs-and-advanced-analytics-data]]
 === Isilon/PowerScale ログと高度な分析データの収集
 
 Isilon REST および PowerScale REST コレクターには、次の改善が含まれています。
@@ -1154,6 +1284,7 @@ Isilon REST および PowerScale REST コレクターには、次の改善が含
 
 
 
+[[improved-workload-map]]
 === 改善されたワークロードマップ
 
 ワークロード マップは、より使いやすく、ノイズが少なくなっています。同じワークロードと通信するすべての類似した外部サービスを 1 つのノードにグループ化することで、グラフの複雑さが軽減され、サービスがどのように相互接続されているかを理解しやすくなります。
@@ -1162,6 +1293,7 @@ Isilon REST および PowerScale REST コレクターには、次の改善が含
 
 
 
+[[kubernetes-managed-unit-usage-adjustment]]
 === Kubernetes 管理ユニットの使用量の調整
 
 Kubernetes クラスタ環境内のコンピューティング リソースがNetApp Kubernetes Monitoring Operator と基盤となるインフラストラクチャ データ コレクター (VMware など) の両方によってカウントされる場合、これらのリソースの使用量は、管理対象ユニットが最も効率的にカウントされるように調整されます。  Kubernetes MU の調整は、[管理] > [サブスクリプション] ページの [概要] タブと [使用状況] タブの両方で確認できます。
@@ -1172,6 +1304,7 @@ Kubernetes クラスタ環境内のコンピューティング リソースがNe
 
 
 
+[[collectoracquisition-changes]]
 === コレクター/取得の変更:
 
 次のデータ コレクター/取得ユニットの変更が行われます。
@@ -1181,6 +1314,7 @@ Kubernetes クラスタ環境内のコンピューティング リソースがNe
 
 
 
+[[improved-menus]]
 === 改善されたメニュー
 
 お客様のワークフローをより適切にサポートするために、左側のナビゲーション メニューを更新しました。  _Kubernetes_ などの新しいトップレベル項目により、顧客のニーズへの高速アクセスが提供され、統合された管理者コンソールがテナント所有者の役割をサポートします。
@@ -1240,10 +1374,12 @@ ONTAP の基本:
 
 
 
+[[july-2023]]
 == 2023年7月
 
 
 
+[[show-recent-changes]]
 === 最近の変更を表示
 
 データ コレクターのランディング ページに最近の変更のリストが含まれるようになりました。データ コレクターのランディング ページの下部にある [最近の変更] ボタンをクリックするだけで、データ コレクターの最近の変更が表示されます。
@@ -1252,6 +1388,7 @@ image:Recent_Changes_Example.png["最近の変更例"]
 
 
 
+[[operator-improvements]]
 === オペレーターの改善
 
 以下の改善が行われましたlink:telegraf_agent_k8s_config_options.html["Kubernetesオペレーター"]展開:
@@ -1262,12 +1399,14 @@ image:Recent_Changes_Example.png["最近の変更例"]
 
 
 
+[[insight-reclaim-cold-storage]]
 === 洞察：冷蔵倉庫の再利用
 
 Reclaim ONTAP コールド ストレージ Insight が FlexGroups をサポートするようになり、すべてのお客様にご利用いただけるようになりました。
 
 
 
+[[operator-image-signature]]
 === オペレーター画像署名
 
 NetApp Kubernetes Monitoring Operator にプライベート リポジトリを使用するお客様は、Operator のインストール中にイメージ署名公開キーをコピーできるようになり、ダウンロードしたソフトウェアの信頼性を確認できるようになりました。オプションの手順で [イメージ署名の公開キーをコピー] ボタンを選択し、_オペレーター イメージをプライベート リポジトリにアップロード_ します。
@@ -1276,6 +1415,7 @@ image:Operator_Public_Image_Key.png["公開鍵をダウンロードする"]
 
 
 
+[[aggregation-conditional-formatting-and-more-for-queries]]
 === クエリの集計、条件付き書式など
 
 集計、単位選択、条件付き書式、列名の変更はダッシュボードテーブルウィジェットの最も便利な機能の一つであり、これらの同じ機能がlink:task_create_query.html["クエリ"]。
@@ -1286,6 +1426,7 @@ image:Query_Page_Aggregation_etc.png["集計、条件付き書式、単位表示
 
 
 
+[[api-for-audit]]
 === 監査用API
 
 API を使用して監査イベントをクエリまたはエクスポートできるようになりました。詳細については、「管理」>「API アクセス」に移動し、「_API ドキュメント_」リンクを選択してください。
@@ -1294,6 +1435,7 @@ image:Audit_API_Swagger.png["監査用 API Swagger、幅=400"]
 
 
 
+[[data-collector-trident-economy]]
 === データ収集者:Trident・エコノミー
 
 Cloud Insights はTrident Economy Driver をサポートするようになり、次のようなメリットが実現されています。
@@ -1306,10 +1448,12 @@ Cloud Insights はTrident Economy Driver をサポートするようになり、
 '''
 
 
+[[june-2023]]
 == 2023年6月
 
 
 
+[[check-out-your-usage]]
 === 使用状況を確認する
 
 2023 年 6 月から、 Cloud Insights機能セットに基づいて管理対象ユニットの使用状況の内訳が提供されます。インフラストラクチャの管理対象ユニット (MU) の使用状況と、Kubernetes に関連付けられた MU の使用状況をすばやく表示および監視できるようになりました。
@@ -1318,12 +1462,14 @@ image:Metering_Usage.png["使用量の内訳の計測"]
 
 
 
+[[kubernetes-network-monitoring-and-map-is-available-for-all]]
 === Kubernetesネットワーク監視とマップはすべての
 
 そのlink:concept_kubernetes_network_monitoring_and_map.html["_Kubernetes ネットワークパフォーマンスとマップ_"]Kubernetes ワークロード間の依存関係をマッピングすることでトラブルシューティングを簡素化し、Kubernetes ネットワーク パフォーマンスの遅延と異常をリアルタイムで可視化して、ユーザーに影響が及ぶ前にパフォーマンスの問題を特定します。プレビュー期間中に多くのお客様に役立ったと評価いただき、現在では誰でもご利用いただけるようになりました。
 
 
 
+[[collectoracquisition-changes]]
 === コレクター/取得の変更:
 
 次のデータ コレクター/取得ユニットの変更が行われます。
@@ -1334,6 +1480,7 @@ image:Metering_Usage.png["使用量の内訳の計測"]
 
 
 
+[[new-ontap-essentials-dashboards]]
 === 新しいONTAP Essentials ダッシュボード
 
 次のONTAP Essentials ダッシュボードはプレビュー環境で利用可能でしたが、現在はすべてのユーザーが利用できるようになりました。
@@ -1344,6 +1491,7 @@ image:Metering_Usage.png["使用量の内訳の計測"]
 
 
 
+[[additional-system-monitors]]
 === 追加のシステムモニター
 
 Cloud Insightsには次のシステム モニターが含まれています。
@@ -1355,10 +1503,12 @@ Cloud Insightsには次のシステム モニターが含まれています。
 '''
 
 
+[[may-2023]]
 == 2023年5月
 
 
 
+[[improved-kubernetes-monitoring-operator-installation]]
 === Kubernetes モニタリング オペレーターのインストールの改善
 
 インストールと設定link:task_config_telegraf_agent_k8s.html["NetApp Kubernetes 監視オペレーター"]以下の改善により、これまで以上に簡単になりました。
@@ -1372,6 +1522,7 @@ Cloud Insightsには次のシステム モニターが含まれています。
 
 
 
+[[storage-virtualization]]
 === ストレージ仮想化
 
 Cloud Insights は、ローカル ストレージを持つストレージ アレイと他のストレージ アレイの仮想化を区別できます。これにより、インフラストラクチャのフロントエンドからバックエンドに至るまで、コストを関連付け、パフォーマンスを区別できるようになります。
@@ -1380,6 +1531,7 @@ image:StorageVirtualization_StorageSummary.png["仮想ストレージとバッ�
 
 
 
+[[new-webhook-parameters]]
 === 新しいWebhookパラメータ
 
 作成する際はlink:task_create_webhook.html["ウェブフック"]通知では、Webhook 定義に次のパラメータを含めることができるようになりました。
@@ -1390,12 +1542,14 @@ image:StorageVirtualization_StorageSummary.png["仮想ストレージとバッ�
 
 
 
+[[reporting-on-kubernetes-data]]
 === Kubernetesデータのレポート
 
 Cloud Insightsによって収集された Kubernetes データ (永続ボリューム (PV)、PVC、ワークロード、クラスター、名前空間など) がレポートで使用できるようになり、Kubernetes のメトリックに関するチャージバック、傾向分析、予測、TTF 計算、その他のビジネス レポートが可能になります。
 
 
 
+[[default-ontap-system-monitors-enabled-for-new-customers]]
 === 新規顧客向けにデフォルトのONTAPシステム モニターを有効化
 
 新しいCloud Insights環境では、多くのONTAPシステム モニターがデフォルトで有効化（つまり、再開）されています。以前は、ほとんどのモニターはデフォルトで _一時停止_ 状態になっていました。ビジネスニーズは企業によって異なるため、link:task_system_monitors.html["システムモニター"]環境内でアラートを設定し、アラートのニーズに応じてそれぞれを一時停止または再開します。
@@ -1403,10 +1557,12 @@ Cloud Insightsによって収集された Kubernetes データ (永続ボリュ�
 '''
 
 
+[[april-2023]]
 == 2023年4月
 
 
 
+[[kubernetes-performance-monitoring-and-map]]
 === Kubernetes パフォーマンス監視とマップ
 
 そのlink:concept_kubernetes_network_monitoring_and_map.html["_Kubernetes ネットワークパフォーマンスとマップ_"]この機能により、Kubernetes ワークロード間の依存関係をマッピングすることでトラブルシューティングが簡素化されます。 Kubernetes ネットワーク パフォーマンスの遅延と異常をリアルタイムで可視化し、パフォーマンスの問題がユーザーに影響を与える前に特定します。この機能により、組織は Kubernetes トラフィック フローを分析および監査して全体的なコストを削減できます。
@@ -1421,6 +1577,7 @@ Kubernetesパフォーマンスモニタリングとマップは、link:concept_
 
 
 
+[[ontap-essentials-security-dashboard]]
 === ONTAP Essentials セキュリティダッシュボード
 
 そのlink:concept_ontap_essentials.html#security["セキュリティダッシュボード"]ハードウェアとソフトウェアのボリューム暗号化、ランサムウェア対策ステータス、クラスター認証方法のグラフを表示し、現在のセキュリティ状況を即座に確認できます。セキュリティダッシュボードは、link:concept_preview_features.html["プレビュー"]特徴。
@@ -1429,6 +1586,7 @@ image:OE_SecurityDashboard.png["ONTAP Essentials セキュリティダッシュ�
 
 
 
+[[reclaim-ontap-cold-storage]]
 === ONTAPコールド ストレージの再利用
 
 _Reclaim ONTAP Cold Storage_ Insight は、 ONTAPシステム上のボリュームのコールド容量、潜在的なコスト/電力節約、および推奨されるアクション項目に関するデータを提供します。
@@ -1446,6 +1604,7 @@ _Reclaim ONTAP Cold Storage_は、link:concept_preview_features.html["_プレビ
 
 
 
+[[subscription-notification-also-controls-banner-messages]]
 === サブスクリプション通知はバナーメッセージも制御します
 
 サブスクリプション通知の受信者の設定 (管理 > 通知) では、サブスクリプション関連の製品内バナー通知を誰が見るか制御できるようになりました。
@@ -1454,6 +1613,7 @@ image:Subscription_Expiring_Banner.png["2日後に期限切れとなるサブス
 
 
 
+[[reporting-has-a-new-look]]
 === レポートの見た目が新しくなりました
 
 Cloud Insightsレポート画面の外観が新しくなり、メニュー ナビゲーションの一部が変更されていることに気付くでしょう。これらの画面とナビゲーションの変更は、現在更新されています。link:reporting_overview.html["報告文書"] 。
@@ -1462,12 +1622,14 @@ image:Reporting_Menu.png["新しいレポートメニューの外観"]
 
 
 
+[[monitors-paused-by-default]]
 === デフォルトで一時停止するモニター
 
 新しいCloud Insights環境では、次の点に注意してください。link:task_system_monitors.html["システム定義モニター"]デフォルトではアラート通知を送信しません。アラートを受け取りたいモニターに対して、通知を有効にするために、モニターに 1 つ以上の配信方法を追加する必要があります。既存のCloud Insights環境では、現在 _一時停止_ 状態にあるシステム定義モニターのデフォルトの _グローバル_ 通知受信者リストが削除されました。ユーザー定義の通知は変更されず、現在アクティブなシステム定義モニターの通知設定も変更されません。
 
 
 
+[[looking-for-the-api-metering-tab]]
 === API メータリング タブをお探しですか?
 
 API メータリングは、サブスクリプション ページから *管理 > API アクセス* ページに移動されました。
@@ -1475,10 +1637,12 @@ API メータリングは、サブスクリプション ページから *管理 
 '''
 
 
+[[march-2023]]
 == 2023年3月
 
 
 
+[[cloud-connection-for-ontap-9-9-deprecated]]
 === ONTAP 9.9以降のクラウド接続は廃止されました
 
 ONTAP 9.9+ データ コレクターの Cloud Connection は廃止されます。  2023 年 4 月 4 日以降、環境内の Cloud Connection データ コレクターはデータを収集しなくなり、ポーリング時にエラーが表示されます。  Cloud Connection データ コレクターは、以降のアップデートでCloud Insightsから完全に削除されます。
@@ -1488,10 +1652,12 @@ ONTAP 9.9+ データ コレクターの Cloud Connection は廃止されます�
 '''
 
 
+[[january-2023]]
 == 2023年1月
 
 
 
+[[new-log-monitors]]
 === 新しいログモニター
 
 20個近く追加しましたlink:task_system_monitors.html["追加のシステムモニター"]相互接続リンクの破損、ハートビートの問題などを警告します。さらに、 SnapMirror自動再同期、 MetroClusterミラーリング、およびFabricPoolミラー再同期の変更について警告するための 3 つの新しいデータ保護ログ モニターが追加されました。
@@ -1500,6 +1666,7 @@ ONTAP 9.9+ データ コレクターの Cloud Connection は廃止されます�
 
 
 
+[[csv-export-for-all-dashboard-table-widgets]]
 === すべてのダッシュボード テーブル ウィジェットの .CSV エクスポート
 
 データへのアクセス性を確保することは重要であるため、クエリするデータのタイプ (アセットまたは統合) に関係なく、すべてのメトリック クエリ、ダッシュボード テーブル ウィジェット、およびオブジェクト ランディング ページで .CSV エクスポートを利用できるようにしました。
@@ -1509,16 +1676,19 @@ ONTAP 9.9+ データ コレクターの Cloud Connection は廃止されます�
 '''
 
 
+[[december-2022]]
 == 2022年12月
 
 
 
+[[explore-ransomware-protection-and-other-security-features-during-cloud-insights-trial]]
 === Cloud Insightsトライアルでランサムウェア保護やその他のセキュリティ機能をご確認ください
 
 本日より、 Cloud Insightsの新しいトライアルにサインアップすると、ランサムウェアの検出や自動ユーザー ブロック応答ポリシーなどのセキュリティ機能を試すことができます。トライアルにまだ登録していない場合は、今すぐ登録してください。
 
 
 
+[[kubernetes-workloads-have-their-own-landing-page]]
 === Kubernetesワークロードには独自のランディングページがあります
 
 ワークロードは Kubernetes 環境の重要な部分であるため、 Cloud Insightsではそれらのワークロードのランディング ページが提供されるようになりました。ここから、Kubernetes ワークロードに影響する問題を表示、調査、トラブルシューティングできます。
@@ -1527,6 +1697,7 @@ image:Kubernetes_Workload_LP.png["Kubernetes ワークロード ランディン�
 
 
 
+[[check-your-checksums]]
 === チェックサムを確認する
 
 Windows および Linux 用エージェントのインストール中にチェックサム値を提供するようご要望がありましたが、これは素晴らしいアイデアだと思いました。それで、ここにあります:
@@ -1535,6 +1706,7 @@ image:Agent_Checksum_Instructions.png["インストール中に表示される�
 
 
 
+[[log-alerting-improvements]]
 === ログアラートの改善
 
 
@@ -1557,6 +1729,7 @@ image:Log_Monitor_Duplicate.png["ログモニターの複製"]
 
 
 
+[[11-new-default-ontap-monitors-covering-snapmirror-for-business-continuity]]
 === ビジネス継続性のためのSnapMirrorをカバーする11の新しいデフォルトのONTAPモニター
 
 12個近くの新しいlink:task_system_monitors.html#snapmirror-for-business-continuity-smbc-mediator-log-monitors["システムモニター"]SnapMirror for Business Continuity (SMBC) の場合、SMBC 証明書とONTAP Mediator の変更について警告します。
@@ -1564,10 +1737,12 @@ image:Log_Monitor_Duplicate.png["ログモニターの複製"]
 '''
 
 
+[[november-2022]]
 == 2022年11月
 
 
 
+[[more-than-40-new-security-data-collection-and-cvo-monitors]]
 === 40 を超える新しいセキュリティ、データ収集、CVO モニター!
 
 Cloud Volumes、セキュリティ、データ保護に関する潜在的な問題を警告するために、数十の新しいシステム定義モニターを追加しました。これらのモニターについてもっと読むlink:task_system_monitors.html#security-monitors["ここをクリックしてください。"]。
@@ -1575,10 +1750,12 @@ Cloud Volumes、セキュリティ、データ保護に関する潜在的な問�
 '''
 
 
+[[october-2022]]
 == 2022年10月
 
 
 
+[[better-and-more-accurate-ransomware-detection-with-ontap-autonomous-ransomware-protection-integration]]
 === ONTAP Autonomous Ransomware Protection の統合により、より優れた正確なランサムウェア検出を実現
 
 Cloud SecureはONTAPとの統合によりランサムウェア検出を向上link:concept_cs_integration_with_ontap_arp.html["自律型ランサムウェア対策"]（ARP）。
@@ -1593,22 +1770,26 @@ Cloud Secureは、潜在的なボリュームファイル暗号化アクティ�
 '''
 
 
+[[september-2022]]
 == 2022年9月
 
 
 
+[[monitors-available-in-basic-edition]]
 === ベーシックエディションで利用可能なモニター
 
 ONTAPlink:task_system_monitors.html["デフォルトのモニター"]Cloud Insights Basic Edition で使用できるようになりました。これには、70 を超えるインフラストラクチャ モニターと 30 のワークロード例が含まれます。
 
 
 
+[[ontap-power-and-storagegrid-dashboards]]
 === ONTAP PowerとStorageGRIDダッシュボード
 
 ダッシュボード ギャラリーには、 ONTAP電力と温度の新しいダッシュボードと、 StorageGRIDの 4 つのダッシュボードが含まれています。環境でONTAP電力メトリックやStorageGRIDデータを収集している場合は、*+ギャラリーから* を選択してこれらのダッシュボードをインポートします。
 
 
 
+[[at-a-glance-threshold-visibility-in-tables]]
 === 表で一目でわかるしきい値の可視性
 
 条件付き書式を使用すると、テーブル ウィジェットで警告レベルと重大レベルのしきい値を設定して強調表示できるため、外れ値や例外的なデータ ポイントを即座に表示できます。
@@ -1617,12 +1798,14 @@ image:ConditionalFormattingExample.png["条件付き書式の例"]
 
 
 
+[[security-monitor]]
 === セキュリティモニター
 
 Cloud Insights は、 ONTAPシステムで FIPS モードが無効になっていることを検出すると、警告を発することができます。詳細はこちらlink:task_system_monitors.html#security-monitors["システムモニター"]、また、近日中にさらに多くのセキュリティ モニターが登場する予定ですので、このページをご覧ください。
 
 
 
+[[chat-from-anywhere]]
 === どこからでもチャット
 
 新しい *ヘルプ > ライブ チャット* リンクを選択すると、任意のCloud Insights画面からNetAppサポート スペシャリストとチャットできます。ヘルプは画面右上の「？」アイコンからご利用いただけます。
@@ -1631,6 +1814,7 @@ image:Help_LiveChat.png["ライブチャットが強調表示されたヘルプ�
 
 
 
+[[new-data-collectors]]
 === 新しいデータ収集者
 
 * Amazon S3 (プレビュー版で利用可能)
@@ -1640,12 +1824,14 @@ image:Help_LiveChat.png["ライブチャットが強調表示されたヘルプ�
 
 
 
+[[other-data-collector-updates]]
 === その他のデータコレクターの更新
 
 すべてのデータ ソースは、取得ユニットの更新やパッチの適用後にパフォーマンス ポーリングを再開するように最適化されるようになりました。
 
 
 
+[[operating-system-support]]
 === オペレーティングシステムのサポート
 
 Cloud Insights Acquisition Unitsでは、以下のオペレーティングシステムがサポートされています。link:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["すでにサポートされています"] :
@@ -1656,10 +1842,12 @@ Cloud Insights Acquisition Unitsでは、以下のオペレーティングシス
 '''
 
 
+[[august-2022]]
 == 2022年8月
 
 
 
+[[cloud-insights-has-a-new-look]]
 === Cloud Insights の外観が新しくなりました。
 
 今月より、「監視と最適化」は *Observability* に名前が変更されました。ダッシュボード、クエリ、アラート、レポートなどのお気に入りの機能はすべてここにあります。さらに、新しい *セキュリティ* メニューの下にあるCloud Secureを探してください。メニューのみが変更され、機能は同じままであることに注意してください。
@@ -1675,6 +1863,7 @@ image:New_Help_Menu_2022.png["ヘルプメニューは右上にあります"]
 
 
 
+[[not-sure-where-to-start-check-out-ontap-essentials]]
 === 処理を開始するには、ONTAP Essentials をチェックしてください!
 
 link:concept_ontap_essentials.html["* ONTAPエッセンシャル*"]は、 NetApp ONTAPインベントリ、ワークロード、データ保護の詳細なビューを提供するダッシュボードとワークフローのセットです。これには、ストレージ容量とパフォーマンスの完全使用までの日数予測も含まれます。高い使用率で実行されているコントローラーがあるかどうかを確認することもできます。  ONTAP Essentials は、 NetApp ONTAP の監視のあらゆるニーズに最適な場所です。
@@ -1685,6 +1874,7 @@ image:ONTAP_Essentials_Menu_and_screen.png["ONTAP Essentialsの概要ダッシ�
 
 
 
+[[storage-data-families-are-merged]]
 === ストレージデータファミリーが統合される
 
 あなたがそれを要求し、今それを手に入れました。ストレージの 2 進数と 10 進数のデータ単位が、ビットやバイトからテビビットやテラバイトまで 1 つのファミリに統合され、ダッシュボードにデータを好みの方法で表示しやすくなりました。データ レートも今では独自の 1 つの大きなファミリーになっています。
@@ -1693,6 +1883,7 @@ image:DataFamilyMerged.png["2 進数と 10 進数のデータ ファミリの結
 
 
 
+[[how-much-power-is-my-storage-using]]
 === ストレージはどれくらいの電力を消費していますか?
 
 netapp_ontap.storage_shelf、netapp_ontap.system_node、および netapp_ontap.cluster (電力消費のみ) メトリックを使用して、 ONTAPストレージ シェルフとノードの電力消費、温度、およびファン速度を表示および監視します。
@@ -1701,6 +1892,7 @@ image:ONTAP_Power_Metrics_1.png["ストレージ電力消費メトリクス"]
 
 
 
+[[features-graduated-from-preview]]
 === プレビューから卒業した機能
 
 以下の機能はプレビューから移行され、すべてのお客様が利用できるようになりました。
@@ -1721,6 +1913,7 @@ image:ONTAP_Power_Metrics_1.png["ストレージ電力消費メトリクス"]
 |===
 
 
+[[hows-my-data-collection-health]]
 === データ収集の健全性はどうですか?
 
 Cloud Insightsには、Acquisition Unit 用の 2 つの新しいハートビート モニターと、データ コレクターの障害を警告する 2 つのモニターが用意されています。これらを使用すると、データ収集に関する問題を迅速に警告することができます。
@@ -1737,24 +1930,28 @@ _Data Collection_ モニター グループでは、次のモニターが利用�
 
 
 
+[[auto-renewing-api-tokens]]
 === 自動更新APIトークン
 
 API アクセス トークンを自動更新に設定できるようになりました。この機能を有効にすると、期限切れのトークンに対して新しい/更新された API アクセス トークンが自動的に生成されます。期限切れのトークンを使用しているCloud Insightsエージェントは、対応する新規または更新された API アクセス トークンを使用するように自動的に更新され、シームレスに動作し続けることができます。トークンを作成するときに、「トークンを自動的に更新する」ボックスをチェックするだけです。この機能は現在、最新のNetApp Kubernetes Monitoring Operator を搭載した Kubernetes プラットフォーム上で実行されているCloud Insightsエージェントでサポートされています。
 
 
 
+[[basic-edition-gives-you-more-than-before]]
 === ベーシックエディションでは、これまで以上の機能が提供されます
 
 試用期間が終了していますが、サブスクリプションが適切かどうかまだわかりませんか? Basic Edition では、現在のONTAPデータ コレクターでCloud Insightsを引き続き使用できるようになっていますが、VMWare バージョン、トポロジ、IOPS/スループット/レイテンシ データも引き続きキャプチャできるようになりました。ストレージ システムのプレミアム サポートを受けているNetApp のお客様は、 Cloud Insightsのサポートも受けられます。
 
 
 
+[[ready-to-learn-more]]
 === さらに詳しく知りたいですか?
 
 NetApp University Cloud Insightsコースへのリンクについては、[ヘルプ] > [サポート] ページの *ラーニング センター* セクションをご覧ください。
 
 
 
+[[operating-system-support]]
 === オペレーティングシステムのサポート
 
 Cloud Insights Acquisition Unitsでは、以下のオペレーティングシステムがサポートされています。link:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["すでにサポートされています"] :
@@ -1765,10 +1962,12 @@ Cloud Insights Acquisition Unitsでは、以下のオペレーティングシス
 '''
 
 
+[[june-2022]]
 == 2022年6月
 
 
 
+[[kubernetes-cluster-saturation-and-other-details]]
 === Kubernetes クラスターの飽和状態とその他の詳細
 
 Cloud Insights、飽和度の詳細と、名前空間とワークロードのより明確なビューを提供する改善されたクラスター詳細ページにより、Kubernetes 環境の探索がこれまで以上に簡単になります。
@@ -1781,6 +1980,7 @@ image:Kubernetes_List_Page_new.png["飽和度数を表示するクラスター�
 
 
 
+[[how-old-is-your-kubernetes-cluster]]
 === あなたの Kubernetes クラスターは何年経っていますか?
 
 あなたのクラスターは世界に登場したばかりですか、それとも長いデジタルライフを経験してきましたか?  Kubernetes ノードで収集される時間メトリックとして _Age_ が追加されました。
@@ -1789,6 +1989,7 @@ image:Kubernetes_Table_Showing_Age.png["Kubernetes ノードテーブルに日�
 
 
 
+[[capacity-time-to-full-forecasting]]
 === 容量満杯までの時間予測
 
 Cloud Insights は、監視対象の内部ボリュームごとに容量がなくなるまでの日数を予測するダッシュボードを提供します。これらの値は、停止のリスクを大幅に軽減するのに役立ちます。
@@ -1801,6 +2002,7 @@ TTF カウンターは、ストレージ、ストレージ プール、ボリュ
 
 
 
+[[whats-changed-in-my-environment]]
 === 私の環境で何が変わったのでしょうか?
 
 ONTAP変更ログ エントリは、ログ エクスプローラーで表示できます。
@@ -1809,6 +2011,7 @@ image:ChangeLogEntries.png["変更ログエントリの例を示す画像"]
 
 
 
+[[operating-system-support]]
 === オペレーティングシステムのサポート
 
 Cloud Insights Acquisition Unitsでは、以下のオペレーティングシステムがサポートされています。link:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["すでにサポートされています"] :
@@ -1819,12 +2022,14 @@ Cloud Insights Acquisition Unitsでは、以下のオペレーティングシス
 
 
 
+[[updated-telegraf-agent]]
 === 更新されたTelegrafエージェント
 
 Telegraf 統合データを取り込むエージェントがバージョン *1.22.3* に更新され、パフォーマンスとセキュリティが向上しました。アップデートを希望するユーザーは、link:task_config_telegraf_agent.html["エージェントのインストール"]ドキュメント。エージェントの以前のバージョンは、ユーザーの操作を必要とせずに引き続き機能します。
 
 
 
+[[preview-features]]
 === プレビュー機能
 
 Cloud Insights では、定期的に数々の魅力的な新しいプレビュー機能を紹介しています。これらの機能の1つ以上をプレビューすることにご興味がある場合は、詳細については NetApp 営業チームまでお問い合わせください。
@@ -1846,10 +2051,12 @@ Cloud Insights では、定期的に数々の魅力的な新しいプレビュ�
 '''
 
 
+[[may-2022]]
 == 2022年5月
 
 
 
+[[chat-live-with-netapp-support]]
 === NetAppサポートとライブチャット
 
 NetAppサポート担当者とライブチャットできるようになりました。 「ヘルプ > サポート」ページで、チャット アイコンをクリックするか、「お問い合わせ」セクションの「チャット」をクリックして、チャット セッションを開始します。チャット サポートは、Standard Edition および Premium Edition ユーザー向けに米国の平日にご利用いただけます。
@@ -1858,6 +2065,7 @@ image:ChatIcon.png["笑顔の上に青いNetApp の「N」が表示されてい�
 
 
 
+[[kubernetes-operator]]
 === Kubernetesオペレーター
 
 Cloud Insightsの高度な Kubernetes モニタリングとクラスター エクスプローラーを使用すると、簡単に起動して実行できるようになります。
@@ -1868,12 +2076,14 @@ Cloud Insightsの高度な Kubernetes モニタリングとクラスター エ�
 
 
 
+[[manage-users-and-invites-with-api]]
 === APIを使用してユーザーと招待を管理する
 
 Cloud Insightsの強力な API を使用して、ユーザーと招待を管理できるようになりました。詳しくはlink:https://docs.netapp.com/us-en/cloudinsights/API_Overview.html["API Swaggerドキュメント"]。
 
 
 
+[[data-collection-alerts]]
 === データ収集アラート
 
 コレクターの失敗により重要なメトリックを見逃さないでください。
@@ -1882,6 +2092,7 @@ Cloud Insightsの強力な API を使用して、ユーザーと招待を管理�
 
 
 
+[[alert-on-ontap-storage-changes]]
 === ONTAPストレージの変更に関するアラート
 
 予期しないストレージの変更によって停止が発生しないようにしてください。
@@ -1890,6 +2101,7 @@ ONTAPシステムで FlexVol、ノード、SVM の変更または削除が検出
 
 
 
+[[preview-features]]
 === プレビュー機能
 
 Cloud Insights では、定期的に数々の魅力的な新しいプレビュー機能を紹介しています。これらの機能の1つ以上をプレビューすることにご興味がある場合は、詳細については NetApp 営業チームまでお問い合わせください。
@@ -1914,16 +2126,19 @@ Cloud Insights では、定期的に数々の魅力的な新しいプレビュ�
 '''
 
 
+[[april-2022]]
 == 2022年4月
 
 
 
+[[share-your-feedback]]
 === フィードバックを共有してください!
 
 皆様のご意見をCloud Insightsの形成に役立てていただきたいと考えています。 NetApp の *Insights to Action* プログラムに参加してポイントと賞品を獲得しましょう。link:https://netapp.co1.qualtrics.com/jfe/form/SV_2aVWcE58J7oIDs1["*今すぐ登録*"] !
 
 
 
+[[updated-dashboard-editor]]
 === ダッシュボードエディターの更新
 
 ダッシュボード作成ツールを全面的に改良し、データをさらに素早く簡単に視覚化できるようになりました。  Cloud Insightsの「ダッシュボード」ページに移動して、既存のダッシュボードを編集したり、ダッシュボード ギャラリーからダッシュボードを追加したり、独自の新しいダッシュボードを作成して確認したりすることができます。
@@ -1943,12 +2158,14 @@ image:CountAggregationExample1.png["カウントを表示する集計ドロッ�
 
 
 
+[[enhanced-monitoring-for-your-kubernetes-infrastructure]]
 === Kubernetes インフラストラクチャの強化された監視
 
 Cloud Insights は、ポッド、デーモンセット、レプリカセットが作成または削除されたときや、新しいデプロイメントが作成されたときにアラートを通知することで、Kubernetes 環境の変更を常に把握できるようにします。  Kubernetes モニターはデフォルトで _一時停止_ 状態になっているため、必要なモニターのみを有効にする必要があります。
 
 
 
+[[preview-features]]
 === プレビュー機能
 
 Cloud Insights では、定期的に数々の魅力的な新しいプレビュー機能を紹介しています。これらの機能の1つ以上をプレビューすることにご興味がある場合は、詳細については NetApp 営業チームまでお問い合わせください。
@@ -1969,6 +2186,7 @@ Cloud Insights では、定期的に数々の魅力的な新しいプレビュ�
 |===
 
 
+[[new-data-collector]]
 === 新しいデータ収集者
 
 * *Cohesity SmartFiles* - この REST API ベースのコレクターは、Cohesity クラスターを取得し、「ビュー」(CI 内部ボリュームとして) やさまざまなノードを検出し、パフォーマンス メトリックを収集します。
@@ -1976,6 +2194,7 @@ Cloud Insights では、定期的に数々の魅力的な新しいプレビュ�
 
 
 
+[[other-data-collector-updates]]
 === その他のデータコレクターの更新
 
 次のデータ コレクターでパフォーマンス データの収集と表示が改善されました。
@@ -1990,16 +2209,19 @@ Cloud Insights では、定期的に数々の魅力的な新しいプレビュ�
 '''
 
 
+[[march-2022]]
 == 2022年3月
 
 
 
+[[cloud-connection-for-ontap-9-9]]
 === ONTAP 9.9以降のクラウド接続
 
 そのlink:task_dc_na_cloud_connection.html["ONTAP 9.9以降向けNetAppクラウド接続"]データ コレクターを使用すると、外部の取得ユニットをインストールする必要がなくなり、トラブルシューティング、メンテナンス、初期導入が簡素化されます。
 
 
 
+[[new-fsx-for-netapp-ontap-monitors]]
 === NetApp ONTAPモニター用の新しい FSx
 
 FSx for NetApp ONTAP環境の監視は、新しいlink:task_system_monitors.html["システム定義モニター"]インフラストラクチャ (メトリック) とワークロード (ログ) の両方に対して。
@@ -2008,6 +2230,7 @@ image:FSx_System_Monitors_Metrics.png["インフラストラクチャ向け FSx 
 
 
 
+[[new-cloud-secure-features-available-to-all]]
 === すべてのユーザーが利用できる新しいCloud Secure機能
 
 現在一般提供されている以下のCloud Secure機能により、環境はこれまで以上に安全になります。
@@ -2025,12 +2248,14 @@ image:FSx_System_Monitors_Metrics.png["インフラストラクチャ向け FSx 
 |===
 
 
+[[updated-telegraf-agent]]
 === 更新されたTelegrafエージェント
 
 Telegraf 統合データを取り込むエージェントがバージョン *1.21.2* に更新され、パフォーマンスとセキュリティが向上しました。アップデートを希望するユーザーは、link:task_config_telegraf_agent.html["エージェントのインストール"]ドキュメント。エージェントの以前のバージョンは、ユーザーの操作を必要とせずに引き続き機能します。
 
 
 
+[[data-collector-updates]]
 === データコレクターの更新
 
 * Broadcom ファイバー チャネル スイッチ データ コレクターは、各インベントリ ポーリングで発行される CLI コマンドの数を削減するように最適化されました。
@@ -2039,10 +2264,12 @@ Telegraf 統合データを取り込むエージェントがバージョン *1.2
 '''
 
 
+[[february-2022]]
 == 2022年2月
 
 
 
+[[cloud-insights-addresses-apache-log4j-vulnerabilities]]
 === Cloud Insights がApache Log4j の脆弱性に対処
 
 顧客のセキュリティはNetAppにとって最優先事項です。  Cloud Insightsには、最近の Apache Log4j の脆弱性を解決するためのソフトウェア ライブラリの更新が含まれています。
@@ -2055,6 +2282,7 @@ link:https://security.netapp.com/advisory/ntap-20211210-0007/["CVE-2021-44228"] 
 
 
 
+[[kubernetes-namespace-detail-page]]
 === Kubernetes 名前空間の詳細ページ
 
 クラスターの名前空間の詳細な情報ページが表示されるようになり、Kubernetes 環境の探索がこれまで以上に簡単になりました。名前空間の詳細ページには、すべてのバックエンド ストレージ リソースとその容量使用率など、名前空間で使用されるすべてのアセットの概要が表示されます。
@@ -2064,16 +2292,19 @@ image:Kubernetes_Namespace_Detail_Example_2.png["Kubernetes 名前空間の詳�
 '''
 
 
+[[december-2021]]
 == 2021年12月
 
 
 
+[[deeper-integration-for-ontap-systems]]
 === ONTAPシステムとのより緊密な統合
 
 NetAppイベント管理システム (EMS) との新しい統合により、 ONTAPハードウェア障害などのアラートが簡素化されます。link:task_system_monitors.html["探索と警告"] Cloud Insightsの低レベルのONTAPメッセージに基づいて、トラブルシューティング ワークフローを通知および改善し、 ONTAP要素管理ツールへの依存をさらに軽減します。
 
 
 
+[[querying-logs]]
 === ログのクエリ
 
 ONTAPシステムの場合、 Cloud Insightsクエリには強力なlink:concept_log_explorer.html["ログエクスプローラー"]EMS ログ エントリを簡単に調査およびトラブルシューティングできます。
@@ -2082,12 +2313,14 @@ image:LogQueryExplorer.png["ログクエリ"]
 
 
 
+[[data-collector-level-notifications]]
 === データコレクターレベルの通知。
 
 アラート用のシステム定義およびカスタム作成されたモニターに加えて、 ONTAPデータ コレクターのアラート通知を設定することもできます。これにより、他のモニター アラートとは独立して、コレクター レベルのアラートの受信者を指定できます。
 
 
 
+[[greater-flexibility-of-cloud-secure-roles]]
 === Cloud Secure の役割の柔軟性の向上
 
 ユーザーは、以下の基準に基づいてCloud Secure機能へのアクセスを許可されます。link:concept_user_roles.html#permission-levels["ロール"]管理者によって設定:
@@ -2108,12 +2341,14 @@ image:LogQueryExplorer.png["ログクエリ"]
 |===
 
 
+[[operating-system-support]]
 === オペレーティングシステムのサポート
 
 CentOS 8.x のサポートは、*CentOS 8 Stream* サポートに置き換えられます。  CentOS 8.x は 2021 年 12 月 31 日にサポートが終了します。
 
 
 
+[[data-collector-updates]]
 === データコレクターの更新
 
 ベンダーの変更を反映するために、いくつかのCloud Insightsデータ コレクター名が追加されました。
@@ -2135,10 +2370,12 @@ CentOS 8.x のサポートは、*CentOS 8 Stream* サポートに置き換えら
 '''
 
 
+[[november-2021]]
 == 2021年11月
 
 
 
+[[adaptive-dashboards]]
 === 適応型ダッシュボード
 
 _属性用の新しい変数とウィジェットで変数を使用する機能_。
@@ -2149,12 +2386,14 @@ image:Variables_Drop_Down_Showing_Annotations.png["変数内のドロップダ�
 
 
 
+[[access-the-reporting-database-via-api]]
 === API経由でレポートデータベースにアクセスする
 
 サードパーティのレポート、ITSM、自動化ツールとの統合のための強化された機能： Cloud Insightsの強力なlink:API_Overview.html["API"]ユーザーは、Cognos レポート環境を経由せずに、 Cloud Insightsレポート データベースを直接クエリできます。
 
 
 
+[[pod-tables-on-vm-landing-page]]
 === VM ランディング ページのポッド テーブル
 
 VM とそれを使用する Kubernetes Pod 間のシームレスなナビゲーション: トラブルシューティングとパフォーマンスのヘッドルーム管理を改善するために、関連付けられている Kubernetes Pod のテーブルが VM ランディング ページに表示されるようになりました。
@@ -2163,6 +2402,7 @@ image:Kubernetes_Pod_Table_on_VM_Page.png["VM ランディング ページ上の
 
 
 
+[[data-collector-updates]]
 === データコレクターの更新
 
 * ECSはストレージとノードのファームウェアを報告するようになりました
@@ -2174,6 +2414,7 @@ image:Kubernetes_Pod_Table_on_VM_Page.png["VM ランディング ページ上の
 
 
 
+[[additional-operating-systems-supported]]
 === サポートされている追加のオペレーティングシステム
 
 Cloud Insights Acquisition Unit は、既にサポートされているオペレーティング システムに加えて、次のオペレーティング システムもサポートしています。
@@ -2186,10 +2427,12 @@ Cloud Insights Acquisition Unit は、既にサポートされているオペレ
 '''
 
 
+[[october-2021]]
 == 2021年10月
 
 
 
+[[filters-on-k8s-explorer-pages]]
 === K8Sエクスプローラーページのフィルター
 
 link:kubernetes_landing_page.html["Kubernetes エクスプローラー"]ページ フィルターを使用すると、Kubernetes クラスター、ノード、ポッドの探索用に表示されるデータを集中的に制御できます。
@@ -2198,6 +2441,7 @@ image:Filter_Kubernetes_Explorer.png["Kubernetes Explorer のフィルタリン�
 
 
 
+[[k8s-data-for-reporting]]
 === レポート用K8sデータ
 
 Kubernetes データがレポートで使用できるようになり、チャージバックやその他のレポートを作成できるようになりました。 Kubernetes チャージバック データをレポートに渡すには、Kubernetes クラスターとそのバックエンド ストレージへのアクティブな接続があり、 Cloud Insights がそこからデータを受信して​​いる必要があります。バックエンド ストレージからデータが受信されない場合、 Cloud Insights はKubernetes オブジェクト データを Reporting に送信できません。
@@ -2206,12 +2450,14 @@ image:Kubernetes_ETL_Example.png["チャージバックレポートに表示さ�
 
 
 
+[[dark-theme-has-arrived]]
 === ダークテーマが登場
 
 多くの方からダーク テーマの要望がありましたが、 Cloud Insights がそれに応えました。明るいテーマと暗いテーマを切り替えるには、ユーザー名の横にあるドロップダウンをクリックします。image:DarkModeSwitch.png["ダークテーマへの切り替えは、ユーザードロップダウンから利用できます。"] image:DarkModeDashboard.png["ダークテーマで表示された典型的なダッシュボードの画像"]
 
 
 
+[[data-collector-support]]
 === データコレクターのサポート
 
 Cloud Insightsデータ コレクターにいくつかの改善を加えました。以下にハイライトをいくつか紹介します。
@@ -2222,16 +2468,19 @@ Cloud Insightsデータ コレクターにいくつかの改善を加えまし�
 '''
 
 
+[[september-2021]]
 == 2021年9月
 
 
 
+[[performance-policies-are-now-monitors]]
 === パフォーマンスポリシーがモニターになりました
 
 Cloud Insights全体で、パフォーマンス ポリシーと違反がモニターとアラートに置き換えられました。link:task_create_monitor.html["モニターによるアラート"]環境内の潜在的な問題や傾向に対する柔軟性と洞察力が向上します。
 
 
 
+[[autocomplete-suggestions-wildcards-and-expressions-in-monitors]]
 === モニターの自動補完候補、ワイルドカード、および式
 
 アラート用のモニターを作成するときに、フィルターの入力が予測的になり、モニターのメトリックや属性を簡単に検索して見つけることができるようになりました。さらに、入力したテキストに基づいてワイルドカード フィルターを作成するオプションもあります。
@@ -2240,12 +2489,14 @@ image:Type-Ahead_Monitor_1.png["モニターの先行入力フィルター"]
 
 
 
+[[updated-telegraf-agent]]
 === 更新されたTelegrafエージェント
 
 Telegraf 統合データを取り込むエージェントがバージョン *1.19.3* に更新され、パフォーマンスとセキュリティが向上しました。アップデートを希望するユーザーは、link:task_config_telegraf_agent.html["エージェントのインストール"]ドキュメント。エージェントの以前のバージョンは、ユーザーの操作を必要とせずに引き続き機能します。
 
 
 
+[[data-collector-support]]
 === データコレクターのサポート
 
 Cloud Insightsデータ コレクターにいくつかの改善を加えました。以下にハイライトをいくつか紹介します。
@@ -2271,16 +2522,19 @@ Cloud Insightsデータ コレクターにいくつかの改善を加えまし�
 '''
 
 
+[[august-2021]]
 == 2021年8月
 
 
 
+[[new-audit-page-user-interface]]
 === 新しい監査ページのユーザーインターフェース
 
 そのlink:concept_audit.html["監査ページ"]よりクリーンなインターフェースを提供し、監査イベントを .CSV ファイルにエクスポートできるようになりました。
 
 
 
+[[enhanced-user-role-management]]
 === 強化されたユーザーロール管理
 
 Cloud Insightsでは、ユーザー ロールとアクセス制御の割り当てをさらに自由に行うことができるようになりました。ユーザーには、監視、レポート、 Cloud Secureの詳細な権限を個別に割り当てることができるようになりました。
@@ -2292,10 +2546,12 @@ link:https://docs.netapp.com/us-en/cloudinsights/concept_user_roles.html["詳細
 '''
 
 
+[[june-2021]]
 == 2021年6月
 
 
 
+[[autocomplete-suggestions-wildcards-and-expressions-in-filters]]
 === フィルターのオートコンプリート候補、ワイルドカード、および式
 
 Cloud Insightsのこのリリースでは、クエリまたはウィジェットでフィルタリングできるすべての名前と値を知る必要がなくなりました。フィルタリングするときは、入力を開始するだけで、Cloud Insights がテキストに基づいて値を提案します。ウィジェットに表示するアプリケーション名や Kubernetes 属性を見つけるために、事前にアプリケーション名や Kubernetes 属性を調べる必要がなくなります。
@@ -2310,6 +2566,7 @@ image:Type-Ahead-Example-ingest.png["ワイルドカードフィルター"]
 
 
 
+[[apis-available-by-edition]]
 === エディション別に利用可能なAPI
 
 Cloud Insightsの強力な API はこれまで以上にアクセスしやすくなり、Alerts API が Standard エディションと Premium エディションで利用できるようになりました。各エディションでは次の API が利用可能です。
@@ -2335,6 +2592,7 @@ Cloud Insightsの強力な API はこれまで以上にアクセスしやすく�
 |===
 
 
+[[kubernetes-pv-and-pod-visibility]]
 === Kubernetes PVとPodの可視性
 
 Cloud Insights は、Kubernetes 環境のバックエンド ストレージの可視性を提供し、Kubernetes Pod と永続ボリューム (PV) に関する分析情報を提供します。単一の Pod の使用状況から PV カウンター、PV、そしてバックエンド ストレージ デバイスに至るまで、IOPS、レイテンシー、スループットなどの PV カウンターを追跡できるようになりました。
@@ -2347,6 +2605,7 @@ image:Kubernetes_PV_Table.png["Kubernetes PV テーブル"] image:Kubernetes_Pod
 
 
 
+[[kubernetes-node-to-vm-links]]
 === Kubernetes ノードから VM へのリンク
 
 Kubernetes ノード ページでクリックすると、ノードの VM ページが開くようになりました。  VM ページには、ノード自体へのリンクも含まれています。
@@ -2355,18 +2614,21 @@ image:Kubernetes_Node_Page_with_VM_Link.png["VMリンクを表示するKubernete
 
 
 
+[[alert-monitors-replacing-performance-policies]]
 === パフォーマンス ポリシーに代わるアラート モニター
 
 複数のしきい値、Webhook および電子メールアラートの配信、単一のインターフェースを使用したすべてのメトリックのアラートなどの追加のメリットを有効にするために、 Cloud Insights は2021 年 7 月から 8 月にかけて、Standard および Premium Edition のお客様を *パフォーマンス ポリシー* から *モニター* に変換します。詳細はこちらlink:https://docs.netapp.com/us-en/cloudinsights/task_create_monitor.html["アラートとモニター"]このエキサイティングな変化にご期待ください。
 
 
 
+[[cloud-secure-supports-nfs]]
 === Cloud SecureはNFSをサポート
 
 Cloud Secure は、 ONTAPデータ収集用の NFS をサポートするようになりました。 SMB および NFS ユーザー アクセスを監視して、ランサムウェア攻撃からデータを保護します。さらに、 Cloud Secure は、NFS ユーザー属性の収集のために Active-Directory および LDAP ユーザー ディレクトリをサポートしています。
 
 
 
+[[cloud-secure-snapshot-purge]]
 === Cloud Secureスナップショットの消去
 
 Cloud Secure は、スナップショット消去設定に基づいてスナップショットを自動的に削除し、ストレージ スペースを節約し、手動でスナップショットを削除する必要性を減らします。
@@ -2375,6 +2637,7 @@ image:CloudSecure_SnapshotPurgeSettings.png["パージ設定"]
 
 
 
+[[cloud-secure-data-collection-speed]]
 === Cloud Secureデータ収集速度
 
 単一のデータ コレクター エージェント システムは、1 秒あたり最大 20,000 件のイベントをCloud Secureに投稿できるようになりました。
@@ -2382,18 +2645,21 @@ image:CloudSecure_SnapshotPurgeSettings.png["パージ設定"]
 '''
 
 
+[[may-2021]]
 == 2021年5月
 
 4 月に行った変更の一部をご紹介します。
 
 
 
+[[updated-telegraf-agent]]
 === 更新されたTelegrafエージェント
 
 Telegraf 統合データを取り込むエージェントがバージョン 1.17.3 に更新され、パフォーマンスとセキュリティが向上しました。アップデートを希望するユーザーは、link:https://docs.netapp.com/us-en/cloudinsights/task_config_telegraf_agent.html["エージェントのインストール"]ドキュメント。エージェントの以前のバージョンは、ユーザーの操作を必要とせずに引き続き機能します。
 
 
 
+[[add-corrective-actions-to-an-alert]]
 === アラートに是正措置を追加する
 
 *アラートの説明を追加*セクションに入力することで、モニターを作成または変更するときに、オプションの説明や追加の洞察や修正アクションを追加できるようになりました。説明はアラートとともに送信されます。  _洞察と是正措置_ フィールドでは、アラートに対処するための詳細な手順とガイダンスが提供され、アラート ランディング ページの概要セクションに表示されます。
@@ -2402,6 +2668,7 @@ image:Monitors_Alert_Description.png["アラートの是正措置と説明"]
 
 
 
+[[cloud-insights-apis-for-all-editions]]
 === すべてのエディション向けのCloud Insights API
 
 API アクセスは、 Cloud Insightsのすべてのエディションで利用できるようになりました。 Basic エディションのユーザーは、取得ユニットとデータ コレクターのアクションを自動化できるようになりました。また、Standard エディションのユーザーは、メトリックを照会したり、カスタム メトリックを取り込んだりすることができます。プレミアム エディションでは、引き続きすべての API カテゴリをフルに使用できます。
@@ -2430,10 +2697,12 @@ APIの使用に関する詳細は、link:API_Overview.html#api-documentation-swa
 '''
 
 
+[[april-2021]]
 == 2021年4月
 
 
 
+[[easier-management-of-monitors]]
 === モニターの管理が簡単
 
 link:task_create_monitor.html#monitor-groups["モニターのグループ化"]環境内のモニターの管理を簡素化します。複数のモニターをグループ化し、1 つとして一時停止できるようになりました。たとえば、インフラストラクチャのスタックで更新が行われている場合、ワンクリックですべてのデバイスからのアラートを一時停止できます。
@@ -2444,6 +2713,7 @@ image:Monitors_GroupList.png["モニターのグループ化"]
 
 
 
+[[enhanced-alerting-options-using-webhooks]]
 === Webhookを使用した強化されたアラートオプション
 
 多くの商用アプリケーションがサポートlink:task_create_webhook.html["ウェブフック"]標準入力インターフェースとして。  Cloud Insights は現在、これらの配信チャネルの多くをサポートしており、Slack、PagerDuty、Teams、Discord のデフォルト テンプレートを提供しているほか、他の多くのアプリケーションをサポートするためにカスタマイズ可能な汎用 Webhook も提供しています。
@@ -2452,12 +2722,14 @@ image:Webhooks_Notifications_sm.png["Webhook通知"]
 
 
 
+[[improved-device-identification]]
 === デバイス識別の改善
 
 監視とトラブルシューティングを改善し、正確なレポートを提供するには、デバイスの IP アドレスやその他の識別子ではなく、デバイスの名前を理解することが役立ちます。  Cloud Insightsには、ルールベースのアプローチを使用して、環境内のストレージと物理ホストデバイスの名前を自動的に識別する方法が組み込まれました。link:concept_device_resolution_overview.html["*デバイスの解像度*"] *管理*メニューで利用できます。
 
 
 
+[[you-asked-for-more]]
 === もっと求めてたよ！
 
 お客様から、データの範囲を視覚化するためのデフォルト オプションを増やしてほしいというご要望が多かったため、時間範囲ピッカーを通じてサービス全体で利用できる次の 5 つの新しい選択肢を追加しました。
@@ -2471,18 +2743,21 @@ image:Webhooks_Notifications_sm.png["Webhook通知"]
 
 
 
+[[multiple-subscriptions-in-one-cloud-insights-environment]]
 === 1 つのCloud Insights環境で複数のサブスクリプション
 
 4 月 2 日より、 Cloud Insights は単一のCloud Insightsインスタンスで、顧客に対して同じエディション タイプの複数のサブスクリプションをサポートします。これにより、顧客はCloud Insightsサブスクリプションの一部をインフラストラクチャの購入と同時に終了できるようになります。複数のサブスクリプションに関するサポートについては、 NetApp の営業部にお問い合わせください。
 
 
 
+[[choose-your-path]]
 === あなたの道を選びなさい
 
 Cloud Insightsを設定する際に、監視とアラートから開始するか、ランサムウェアと内部脅威の検出から開始するかを選択できるようになりました。 Cloud Insights は、選択したパスに基づいて開始環境を構成します。他のパスは後からいつでも設定できます。
 
 
 
+[[easier-cloud-secure-onboarding]]
 === より簡単なCloud Secureオンボーディング
 
 また、新しいステップバイステップのセットアップ チェックリストにより、 Cloud Secureの使用を開始するのがこれまで以上に簡単になりました。
@@ -2494,16 +2769,19 @@ image:CloudSecure_SetupChecklist.png["Cloud Secureチェックリスト"]
 '''
 
 
+[[february-2021]]
 == 2021年2月
 
 
 
+[[updated-telegraf-agent]]
 === 更新されたTelegrafエージェント
 
 Telegraf 統合データを取り込むエージェントがバージョン 1.17.0 に更新され、脆弱性とバグの修正が含まれています。
 
 
 
+[[cloud-cost-analyzer]]
 === クラウドコストアナライザー
 
 過去、現在、および推定支出の詳細なコスト分析を提供し、環境内のクラウド使用状況を可視化する、 NetAppの Spot と Cloud Cost のパワーを体験してください。クラウド コスト ダッシュボードでは、クラウド費用を明確に把握し、個々のワークロード、アカウント、サービスにドリルダウンすることができます。
@@ -2519,6 +2797,7 @@ Cloud Cost は、次のような大きな課題の解決に役立ちます。
 
 
 
+[[querying-for-objects-having-null-values-using-filters]]
 === フィルターを使用して null 値を持つオブジェクトを照会する
 
 Cloud Insightsでは、フィルターを使用して null/none 値を持つ属性とメトリックを検索できるようになりました。このフィルタリングは、次の場所の任意の属性/メトリックに対して実行できます。
@@ -2535,6 +2814,7 @@ image:Filter_Null_Example.png["ドロップダウンのNullフィルター"]
 
 
 
+[[multi-region-support]]
 === マルチリージョンサポート
 
 本日より、世界中のさまざまな地域でCloud Insightsサービスの提供を開始し、米国外に拠点を置くお客様のパフォーマンス向上とセキュリティ強化を実現します。  Cloud Insights/ Cloud Secure は、環境が作成されたリージョンに応じて情報を保存します。
@@ -2544,10 +2824,12 @@ image:Filter_Null_Example.png["ドロップダウンのNullフィルター"]
 '''
 
 
+[[january-2021]]
 == 2021年1月
 
 
 
+[[additional-ontap-metrics-renamed]]
 === 追加のONTAPメトリックの名前が変更されました
 
 ONTAPシステムからのデータ収集の効率を向上するための継続的な取り組みの一環として、次のONTAPメトリックの名前が変更されました。
@@ -2689,6 +2971,7 @@ ONTAPシステムからのデータ収集の効率を向上するための継続
 |===
 
 
+[[new-kubernetes-explorer]]
 === 新しい Kubernetes エクスプローラー
 
 そのlink:kubernetes_landing_page.html["Kubernetes エクスプローラー"]Kubernetes クラスターのシンプルなトポロジ ビューを提供し、専門家でなくても、クラスター レベルからコンテナーやストレージに至るまで、問題と依存関係を迅速に特定できます。
@@ -2701,18 +2984,21 @@ image:Kubernetes_Cluster_Detail_Example.png["Kubernetesエクスプローラー"
 
 
 
+[[acquisition-unit-detail-page]]
 === 取得ユニット詳細ページ
 
 獲得ユニットには独自のランディング ページが用意され、各 AU に関する有用な詳細情報やトラブルシューティングに役立つ情報が提供されるようになりました。そのlink:task_configure_acquisition_unit.html#viewing-au-details["AU詳細ページ"]AU のデータ収集者へのリンクと役立つステータス情報を提供します。
 
 
 
+[[cloud-secure-docker-dependency-removed]]
 === Cloud SecureDocker依存関係の削除
 
 Cloud Secure の Docker への依存関係が削除されました。  Cloud Secureエージェントのインストールに Docker は不要になりました。
 
 
 
+[[reporting-user-roles]]
 === ユーザーロールの報告
 
 Cloud Insights Premium Edition と Reporting をご利用の場合、環境内のすべてのCloud Insightsユーザーに Reporting アプリケーション (Cognos など) へのシングル サインオン (SSO) ログイン権限が付与されます。メニューの *Reports* リンクをクリックすると、Reporting に自動的にログインします。
@@ -2741,6 +3027,7 @@ IMPORTANT: 現在プレミアムエディションをご利用で、レポート
 
 
 
+[[new-api-category-for-data-ingestion]]
 === データ取り込み用の新しい API カテゴリ
 
 Cloud Insights に*データ取り込み* API カテゴリが追加され、カスタム データとエージェントをより細かく制御できるようになりました。この API カテゴリおよびその他の API カテゴリの詳細なドキュメントは、 Cloud Insightsで *[管理] > [API アクセス]* に移動し、[API ドキュメント] リンクをクリックすると見つかります。  AU の詳細ページと AU リスト ページに表示される「メモ」フィールドで AU にコメントを添付することもできます。

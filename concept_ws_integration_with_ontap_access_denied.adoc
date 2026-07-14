@@ -20,6 +20,7 @@ Data Infrastructure Insights Workload Security はONTAPと統合してアクセ�
 
 
 
+[[prerequisites]]
 == 前提条件
 
 * 最小ONTAPバージョン: 9.13.0。
@@ -30,6 +31,7 @@ image:WS_Access_Denied_Enable_in_Collector.png["ONTAPコレクターの詳細設
 
 
 
+[[user-permissions-required]]
 == ユーザー権限が必要です
 
 クラスター管理資格情報を使用してデータ コレクターを追加する場合、新しい権限は必要ありません。
@@ -46,6 +48,7 @@ _SVM_ 認証情報を持つ csuser の場合は、 ONTAPコマンドラインか
 
 
 
+[[access-denied-events]]
 == アクセス拒否イベント
 
 ONTAPシステムからイベントが取得されると、Workload Security Forensics ページに「アクセス拒否」イベントが表示されます。表示される情報に加えて、歯車アイコンからテーブルに「必要なアクティビティ」列を追加することで、特定の操作に不足しているユーザー権限を表示できます。

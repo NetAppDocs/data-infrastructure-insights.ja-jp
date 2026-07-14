@@ -14,6 +14,7 @@ NetApp Data Infrastructure Insights (旧称Cloud Insights) は、インフラス
 
 
 
+[[what-can-data-infrastructure-insights-do-for-me]]
 == Data Infrastructure Insights は何ができるのでしょうか?
 
 Data Infrastructure Insightsはハイブリッド マルチクラウド監視を提供し、インフラストラクチャとワークロードのフルスタックの観測可能性を実現します。
@@ -31,6 +32,7 @@ Data Infrastructure Insightsはハイブリッド マルチクラウド監視を
 '''
 
 
+[[getting-started]]
 == はじめに
 
 * どうすればlink:task_cloud_insights_onboarding_1.html["*始めましょう*"]Data Infrastructure Insightsで?

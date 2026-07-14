@@ -14,6 +14,7 @@ summary: Insights を使用すると、リソースがテナント上の他の�
 
 
 
+[[terminology]]
 === 用語
 
 ワークロードまたはリソースの影響について話すときは、次の定義が役立ちます。
@@ -32,6 +33,7 @@ summary: Insights を使用すると、リソースがテナント上の他の�
 
 
 
+[[high-consuming-workloads]]
 === 消費量の多いワークロード
 
 Data Infrastructure Insightsが検出した消費量の多いワークロードはすべて、_ストレス下にある共有リソース_ インサイトに表示されます。これらのインサイトを表示するには、*Observability > Infrastructure Insights* に移動します。
@@ -48,6 +50,7 @@ image:Insights_Demanding_Workload_Chart.png["厳しい作業負荷チャート"]
 
 
 
+[[what-do-i-do-to-resolve-saturation]]
 === 飽和を解決するにはどうすればいいですか?
 
 テナントの飽和の可能性を減らす、または排除するために実行できる手順はいくつかあります。試すことができるいくつかの方法を以下に示します。

@@ -24,12 +24,14 @@ Data Infrastructure Insightsは、link:task_system_monitors.html["システム�
 
 
 
+[[security-best-practice]]
 == セキュリティのベストプラクティス
 
 Data Infrastructure Insightsアラートは、テナント上のデータ ポイントと傾向を強調するように設計されており、 Data Infrastructure Insightsでは、アラートの受信者として有効な電子メール アドレスを入力できます。安全な環境で作業している場合は、通知を受信するユーザーやアラートにアクセスできるユーザーについて特に注意してください。
 
 
 
+[[metric-or-log-monitor]]
 == メトリックまたはログモニター?
 
 . Data Infrastructure Insightsメニューから、*アラート>モニターの管理*をクリックします。
@@ -56,6 +58,7 @@ image:Monitor_log_or_metric.png["システムまたはログモニターを選�
 
 
 
+[[metric-monitor]]
 === メトリックモニター
 
 . ドロップダウンで、監視するオブジェクト タイプとメトリックを検索して選択します。
@@ -112,6 +115,7 @@ image:Monitor_metric_conditions.png["モニターの条件を定義する"]
 
 
 
+[[log-monitor]]
 === ログモニター
 
 *ログ モニター*を作成するときは、まず利用可能なログ リストから監視するログを選択します。上記のように、利用可能な属性に基づいてフィルタリングできます。  1 つ以上の「グループ化」属性を選択することもできます。
@@ -142,6 +146,7 @@ image:Monitor_log_monitor_resolution.png["アラート解決"]
 
 
 
+[[anomaly-detection-monitor]]
 === 異常検出モニター
 
 . ドロップダウンで、監視するオブジェクト タイプとメトリックを検索して選択します。
@@ -169,6 +174,7 @@ image:AnomalyDetectionMonitorDefineConditions.png["異常検出をトリガー�
 
 
 
+[[select-notification-type-and-recipients]]
 === 通知の種類と受信者を選択する
 
 [チーム通知の設定] セクションでは、電子メールまたは Webhook のどちらでチームに通知するかを選択できます。
@@ -192,6 +198,7 @@ NOTE: ONTAPデータ コレクターの通知は、クラスタ/データ コレ
 
 
 
+[[setting-corrective-actions-or-additional-information]]
 === 是正措置または追加情報の設定
 
 *アラートの説明を追加*セクションに入力することで、オプションの説明や追加の洞察や是正アクションを追加できます。説明は最大 1024 文字まで入力でき、アラートとともに送信されます。洞察/是正措置フィールドは最大 67,000 文字まで入力でき、アラート ランディング ページの概要セクションに表示されます。
@@ -204,6 +211,7 @@ image:Monitors_Alert_Description.png["アラートの是正措置と説明"]
 
 
 
+[[save-your-monitor]]
 === モニターを保存する
 
 . 必要に応じて、モニターの説明を追加できます。
@@ -215,6 +223,7 @@ image:Monitors_Alert_Description.png["アラートの是正措置と説明"]
 
 
 
+[[monitor-list]]
 == モニターリスト
 
 モニター ページには、現在構成されているモニターが一覧表示され、次の情報が表示されます。
@@ -233,6 +242,7 @@ image:Monitors_Alert_Description.png["アラートの是正措置と説明"]
 
 
 
+[[monitor-groups]]
 == モニターグループ
 
 グループ化すると、関連するモニターを表示および管理できます。たとえば、テナント上のストレージ専用のモニター グループを作成したり、特定の受信者リストに関連するモニターを作成したりできます。
@@ -252,12 +262,14 @@ NOTE: カスタム モニターは、一時停止、再開、削除、または�
 
 
 
+[[suspended-monitors]]
 === サスペンドモニター
 
 このグループは、Data Infrastructure Insights が1 つ以上のモニターを一時停止している場合にのみ表示されます。過剰なアラートや継続的なアラートが生成されている場合、モニターは一時停止されることがあります。モニターがカスタム モニターの場合は、継続的なアラートを防止するために条件を変更してから、モニターを再開します。一時停止の原因となった問題が解決されると、モニターは一時停止中のモニター グループから削除されます。
 
 
 
+[[system-defined-monitors]]
 === システム定義モニター
 
 モニターに必要なデバイスやログの可用性が環境に含まれている限り、これらのグループには、 Data Infrastructure Insightsによって提供されるモニターが表示されます。
@@ -268,6 +280,7 @@ NOTE: カスタム モニターは、一時停止、再開、削除、または�
 
 
 
+[[custom-monitor-groups]]
 === カスタムモニターグループ
 
 ニーズに応じて、モニターを含む独自のグループを作成できます。たとえば、ストレージ関連のすべてのモニターのグループが必要な場合があります。
@@ -298,6 +311,7 @@ image:Monitors_PauseGroup.png["グループを一時停止する"]
 
 
 
+[[system-defined-monitors]]
 == システム定義モニター
 
 Data Infrastructure Insights には、メトリックとログの両方に対するシステム定義のモニターが多数含まれています。利用可能なシステム モニターは、テナントに存在するデータ コレクターによって異なります。そのため、データ コレクターが追加されたり、その構成が変更されたりすると、 Data Infrastructure Insightsで使用できるモニターが変わる可能性があります。
@@ -306,6 +320,7 @@ Data Infrastructure Insights には、メトリックとログの両方に対す
 
 
 
+[[more-information]]
 === 詳細情報
 
 * link:task_view_and_manage_alerts.html["アラートの表示と消去"]

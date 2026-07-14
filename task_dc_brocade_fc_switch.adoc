@@ -14,11 +14,12 @@ Data Infrastructure Insights は、 Brocade FC スイッチ (SSH) データ ソ�
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、 Brocade FC スイッチ データ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -47,6 +48,7 @@ Data Infrastructure Insights は、 Brocade FC スイッチ データ コレク�
 
 
 
+[[requirements]]
 == 要件
 
 * Data Infrastructure Insights Acquisition Unit (AU) は、 Brocadeスイッチの TCP ポート 22 への接続を開始して、インベントリ データを収集します。  AU は、パフォーマンス データを収集するために UDP ポート 161 への接続も開始します。
@@ -58,9 +60,10 @@ Data Infrastructure Insights は、 Brocade FC スイッチ データ コレク�
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -87,9 +90,10 @@ Data Infrastructure Insights は、 Brocade FC スイッチ データ コレク�
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -134,15 +138,17 @@ Data Infrastructure Insights は、 Brocade FC スイッチ データ コレク�
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
+[[inventory]]
 === インベントリ
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 問題： | これを試してください: 
 
@@ -163,9 +169,10 @@ Data Infrastructure Insights は、 Brocade FC スイッチ データ コレク�
 |===
 
 
+[[performance]]
 === パフォーマンス
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 問題： | これを試してください: 
 

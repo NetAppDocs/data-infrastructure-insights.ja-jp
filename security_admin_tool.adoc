@@ -18,18 +18,21 @@ Data Infrastructure Insightsには、環境を強化されたセキュリティ�
 
 
 
+[[upgrade-and-installation-considerations]]
 == アップグレードとインストールに関する考慮事項
 
 Insight システムにデフォルト以外のセキュリティ構成が含まれている場合 (つまり、パスワードのキーを変更した場合)、セキュリティ構成をバックアップする必要があります。新しいソフトウェアをインストールしたり、場合によってはソフトウェアをアップグレードしたりすると、システムはデフォルトのセキュリティ構成に戻ります。システムをデフォルト構成に戻す場合、システムが正しく動作するために、デフォルト以外の構成を復元する必要があります。
 
 
 
+[[managing-security-on-the-acquisition-unit]]
 == 買収部門のセキュリティ管理
 
 SecurityAdmin ツールを使用すると、 Data Infrastructure Insightsのセキュリティ オプションを管理できます。このツールは、取得ユニット システムで実行されます。セキュリティ管理には、キーとパスワードの管理、作成したセキュリティ構成の保存と復元、構成をデフォルト設定に復元することが含まれます。
 
 
 
+[[before-you-begin]]
 == 開始する前に
 
 * Acquisition Unit ソフトウェア (SecurityAdmin ツールを含む) をインストールするには、AU システムに対する管理者権限が必要です。
@@ -44,6 +47,7 @@ Linux - /bin/oci-securityadmin.sh
 ....
 
 
+[[using-the-securityadmin-tool]]
 == SecurityAdminツールの使用
 
 SecurityAdmin ツールを対話モード (-i) で起動します。
@@ -126,6 +130,7 @@ SecurityAdmin ツールを終了します。
 
 
 
+[[specifying-a-user-to-run-the-tool]]
 == ツールを実行するユーザーを指定する
 
 制御されたセキュリティ重視の環境の場合は、_cisys_ グループがなくても、特定のユーザーに SecurityAdmin ツールを実行させたい場合があります。
@@ -148,6 +153,7 @@ SecurityAdmin ツールを終了します。
 
 
 
+[[updating-or-removing-proxy]]
 == プロキシの更新または削除
 
 SecurityAdmin ツールを _-pr_ パラメータ付きで実行することで、取得ユニットのプロキシ情報を設定または削除できます。
@@ -194,6 +200,7 @@ Documentation.
  ./securityadmin -pr -upr <arg>
 
 
+[[external-key-retrieval]]
 == 外部キーの取得
 
 UNIX シェル スクリプトを提供すると、取得ユニットによってそのスクリプトが実行され、キー管理システムから *秘密キー* と *公開キー* を取得できます。
@@ -226,6 +233,7 @@ UNIX シェル スクリプトを提供すると、取得ユニットによっ�
 |===
 
 
+[[encrypting-a-password-for-use-in-api]]
 == APIで使用するパスワードの暗号化
 
 オプション 8 を使用すると、パスワードを暗号化して、API 経由でデータ コレクターに渡すことができます。

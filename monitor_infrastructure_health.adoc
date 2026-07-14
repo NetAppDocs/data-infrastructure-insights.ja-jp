@@ -18,6 +18,7 @@ Data Infrastructure Insights は、ストレージ環境のパフォーマンス
 
 
 
+[[the-infrastructure-health-dashboard]]
 == インフラストラクチャヘルスダッシュボード
 
 
@@ -31,6 +32,7 @@ image:infra_health_main_screen.png["インフラの健全性の概要"]
 
 
 
+[[configure-monitors-to-use-for-infrastructure-health]]
 == インフラストラクチャの健全性に使用するモニターを構成する
 
 ヘルススコアは、システム ヘルス計算に含めるように構成されたアラートによって決まります。
@@ -47,6 +49,7 @@ image:infra_health_monitor_advanced_config.png["ヘルス計算に追加する�
 
 
 
+[[health-scores-explained]]
 == 健康スコアの説明
 
 スコアは 0 から 100 までのスケールで表示され、100 が完全な健康状態を表します。現在または最近問題が発生している監視対象インフラストラクチャ オブジェクトでは、次の加重平均に従ってこのスコアが下がります。

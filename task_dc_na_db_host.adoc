@@ -14,15 +14,17 @@ summary: 汎用DBホストリゾルバコレクター
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights はこのコレクターからインベントリを取得します。
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -43,9 +45,10 @@ Data Infrastructure Insights はこのコレクターからインベントリを
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 

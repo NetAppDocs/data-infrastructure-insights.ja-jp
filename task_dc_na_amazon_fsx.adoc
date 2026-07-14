@@ -17,11 +17,12 @@ NOTE: このData Infrastructure Insightsコレクターには、_Filesystem-Scop
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、 FSx- NetAppデータ コレクターからインベントリとパフォーマンス データを取得します。取得した資産の種類ごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -36,12 +37,14 @@ Data Infrastructure Insights は、 FSx- NetAppデータ コレクターから�
 |===
 
 
+[[fsx-netapp-terminology]]
 == FSx- NetApp用語
 
 次の用語は、FSx- NetAppストレージ アセット ランディング ページに表示されるオブジェクトまたは参照に適用されます。これらの条件の多くは、他のデータ収集者にも適用されます。
 
 
 
+[[storage]]
 === ストレージ
 
 * モデル – このクラスター内の一意の個別のモデル名のカンマ区切りリスト。
@@ -55,6 +58,7 @@ Data Infrastructure Insights は、 FSx- NetAppデータ コレクターから�
 
 
 
+[[storage-pool]]
 === ストレージ プール
 
 * ストレージ – このプールが存在するストレージ アレイ。必須。
@@ -66,6 +70,7 @@ Data Infrastructure Insights は、 FSx- NetAppデータ コレクターから�
 
 
 
+[[requirements]]
 == 要件
 
 このデータ コレクターを構成して使用するための要件は次のとおりです。
@@ -77,9 +82,10 @@ Data Infrastructure Insights は、 FSx- NetAppデータ コレクターから�
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -94,6 +100,7 @@ Data Infrastructure Insights は、 FSx- NetAppデータ コレクターから�
 |===
 
 
+[[advanced-metrics]]
 == 高度なメトリクス
 
 このデータ コレクターは、FSx for NetApp ONTAPストレージから次の高度なメトリックを収集します。
@@ -115,15 +122,17 @@ FSx CLI および API コマンドは、Data Infrastructure Insights ZAPI が収
 
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
+[[inventory]]
 === インベントリ
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 問題： | これを試してください: 
 

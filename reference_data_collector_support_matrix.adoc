@@ -18,6 +18,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 
 
 
+[[hp-enterprise-3par-alletra-9000-primera-storeserv-storage]]
 == HP Enterprise 3PAR / Alletra 9000 / Primera StoreServ ストレージ
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -828,6 +829,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[amazon-aws-ec2]]
 == アマゾンAWSEC2
 
 このデータコレクターでサポートされているモデルとバージョン: API バージョン:
@@ -1102,6 +1104,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[amazon-aws-s3]]
 == アマゾンAWSS3
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -1265,6 +1268,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[microsoft-azure-netapp-files]]
 == Microsoft Azure NetApp Files
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -1587,6 +1591,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[brocade-fibre-channel-switches]]
 == Brocadeファイバーチャネルスイッチ
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -2162,6 +2167,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[brocade-network-advisor-http]]
 == Brocadeネットワークアドバイザー HTTP
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -2418,6 +2424,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[brocade-fos-rest]]
 == BrocadeFOS REST
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -2898,6 +2905,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[cisco-mds-nexus-fabric-switches]]
 == Cisco MDS および Nexus ファブリック スイッチ
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -3412,6 +3420,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[cohesity]]
 == 結束力
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -3683,6 +3692,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-celerra-ssh]]
 == EMC Celerra (SSH)
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -3963,6 +3973,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-clariion-navicli]]
 == EMC CLARiX (NaviCLI)
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -4576,6 +4587,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-data-domain-ssh]]
 == EMC データドメイン (SSH)
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -4929,6 +4941,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-ecs]]
 == EMC ECS
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -5260,6 +5273,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[dell-emc-isilon-powerscale-rest]]
 == Dell EMC IsilonとPowerScale Rest
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -5982,6 +5996,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[dell-emc-isilon-powerscale-cli]]
 == Dell EMC Isilon / PowerScale (CLI)
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -6549,6 +6564,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-powerstore-rest]]
 == EMC PowerStore REST
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -7184,6 +7200,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-recoverpoint-http]]
 == EMC RecoverPoint (HTTP)
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -7311,6 +7328,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-scaleio-powerflex-rest]]
 == EMC ScaleIO および PowerFlex REST
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -7525,6 +7543,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-symmetrix-cli]]
 == EMC Symmetrix CLI
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -8388,6 +8407,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[dell-unisphere-rest]]
 == Dell ユニスフィア REST
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -9111,6 +9131,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-vnx-ssh]]
 == EMC VNX (SSH)
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -9796,6 +9817,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-vnxe-unity-unisphere-cli]]
 == EMC VNXe と Unity Unisphere (CLI)
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -10390,6 +10412,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-vplex]]
 == EMC VPLEX
 
 |===
@@ -10469,6 +10492,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-xtremio-http]]
 == EMC XtremIO (HTTP)
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -11026,6 +11050,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[netapp-e-series]]
 == NetApp Eシリーズ
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -11672,6 +11697,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[pure-storage-flashblade-rest]]
 == ピュアストレージ フラッシュブレード REST
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -12045,6 +12071,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[google-cloud-compute]]
 == Google Cloud コンピューティング
 
 このデータコレクターでサポートされているモデルとバージョン: API バージョン:
@@ -12277,6 +12304,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[hds-hcp-https]]
 == HDS HCP (HTTPS)
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -12461,6 +12489,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[hicommand-device-manager]]
 == HiCommand デバイス マネージャー
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -13135,6 +13164,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[hitachi-ops-center]]
 == 日立オプスセンター
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -13822,6 +13852,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[hds-hnas-cli]]
 == HDS HNAS (CLI)
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -14108,6 +14139,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[hpe-nimble-alletra-6000-storage]]
 == HPE Nimble / Alletra 6000 ストレージ
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -14598,6 +14630,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[huawei-oceanstor-resthttps]]
 == Huawei OceanStor（REST/HTTPS）
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -15322,6 +15355,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[ibm-cleversafe]]
 == IBM クレバーセーフ
 
 |===
@@ -15512,6 +15546,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[ibm-ds-8k-dscli]]
 == IBM DS 8K (DSCLI)
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -16011,6 +16046,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[ibm-powervm-ssh]]
 == IBM PowerVM (SSH)
 
 |===
@@ -16192,6 +16228,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[ibm-svc-cli]]
 == IBM SVC (CLI)
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -16939,6 +16976,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[ibm-xiv-a9000-xivcli]]
 == IBM XIV & A9000 (XIVCLI)
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -17171,6 +17209,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[infinidat-infinibox-http]]
 == インフィニダット インフィニボックス (HTTP)
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -17520,6 +17559,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[microsoft-azure-compute]]
 == Microsoft Azure コンピューティング
 
 このデータコレクターでサポートされているモデルとバージョン: API バージョン:
@@ -17776,6 +17816,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[microsoft-hyper-v]]
 == Microsoft Hyper-V
 
 |===
@@ -18257,6 +18298,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[netapp-7-mode]]
 == NetApp 7 モード
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -19239,6 +19281,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[netapp-e-series-rest]]
 == NetApp Eシリーズ REST
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -19609,6 +19652,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[amazon-fsx-for-netapp-ontap]]
 == Amazon FSx for NetApp ONTAP
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -20534,6 +20578,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[netapp-clustered-data-ontap-8-1-1]]
 == NetAppクラスタ化Data ONTAP 8.1.1+
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -22289,6 +22334,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[asa]]
 == ASA
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -22917,6 +22963,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[netapp-ontap-rest]]
 == NetApp ONTAP REST
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -23775,6 +23822,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[netapp-solidfire-8-1]]
 == NetApp SolidFire 8.1 以上
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -24520,6 +24568,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[netapp-storagegrid-https]]
 == NetAppStorageGRID(HTTPS)
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -24903,6 +24952,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[nutanix-storage-rest]]
 == Nutanix ストレージ (REST)
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -25414,6 +25464,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[oracle-zfs-https]]
 == Oracle ZFS (HTTPS)
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -25964,6 +26015,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[pure-storage-flasharray-http]]
 == ピュアストレージ フラッシュアレイ (HTTP)
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -26573,6 +26625,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[red-hat-rhv-rest]]
 == レッドハット RHV (REST)
 
 |===
@@ -26817,6 +26870,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[rubrik-storage]]
 == ルーブリックストレージ
 
 このデータコレクターでサポートされているモデルとバージョン: ファームウェアバージョン:
@@ -27159,6 +27213,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[vast-datastore]]
 == VAST データストア
 
 このデータコレクターでサポートされているモデルとバージョン:
@@ -27571,6 +27626,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[netapp-hci-virtual-center]]
 == NetApp HCI仮想センター
 
 このデータコレクターでサポートされているモデルとバージョン: API バージョン:
@@ -28119,6 +28175,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[vmware-cloud-on-aws]]
 == VMware Cloud on AWS
 
 このデータコレクターでサポートされているモデルとバージョン: API バージョン:
@@ -28461,6 +28518,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[vmware-vsphere-web-services]]
 == VMware vSphere (Web サービス)
 
 このデータコレクターでサポートされているモデルとバージョン: API バージョン:

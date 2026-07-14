@@ -18,6 +18,7 @@ summary: 法医学活動履歴データ
 
 
 
+[[examining-all-activity-data]]
 == すべてのアクティビティデータの調査
 
 *フォレンジック > アクティビティ フォレンジック* をクリックし、*すべてのアクティビティ* タブをクリックして、すべてのアクティビティ ページにアクセスします。このページには、テナントでのアクティビティの概要が示され、次の情報が強調表示されます。
@@ -78,6 +79,7 @@ image:ws_forensics_slideout.png["ユーザーのアクティビティを表示�
 
 
 
+[[filtering-forensic-activity-history-data]]
 == フォレンジック活動履歴データのフィルタリング
 
 データをフィルタリングするには 2 つの方法があります。
@@ -140,6 +142,7 @@ image:Forensic_Activity_Filter.png["エンティティ ファイラー、幅=500
 
 
 
+[[activity-forensics-filter-examples]]
 == アクティビティフォレンジックフィルターの例:
 
 |===
@@ -183,22 +186,26 @@ image:Forensic_Activity_Filter.png["エンティティ ファイラー、幅=500
 
 
 
+[[sorting-forensic-activity-history-data]]
 == フォレンジック活動履歴データの分類
 
 アクティビティ履歴データは、_時間、ユーザー、ソース IP、アクティビティ、_、_エンティティ タイプ_、第 1 レベル フォルダー (ルート)、第 2 レベル フォルダー、第 3 レベル フォルダー、および第 4 レベル フォルダーで並べ替えることができます。デフォルトでは、テーブルは降順の _時間_ 順に並べ替えられ、最新のデータが最初に表示されます。  _Device_ フィールドと _Protocol_ フィールドでは並べ替えが無効になっています。
 
 
 
+[[user-guide-for-asynchronous-exports]]
 == 非同期エクスポートのユーザーガイド
 
 
 
+[[overview]]
 === 概要
 
 Storage Workload Security の非同期エクスポート機能は、大規模なデータのエクスポートを処理するように設計されています。
 
 
 
+[[step-by-step-guide-exporting-data-with-asynchronous-exports]]
 === ステップバイステップガイド: 非同期エクスポートによるデータのエクスポート
 
 . *エクスポートの開始*: エクスポートの希望する期間とフィルターを選択し、エクスポート ボタンをクリックします。
@@ -216,6 +223,7 @@ API 経由でフォレンジック データを抽出するサンプル スク�
 
 
 
+[[column-selection-for-all-activity]]
 == すべてのアクティビティの列選択
 
 _すべてのアクティビティ_ テーブルには、デフォルトで選択した列が表示されます。列を追加、削除、または変更するには、表の右側にある歯車アイコンをクリックし、使用可能な列のリストから選択します。
@@ -224,12 +232,14 @@ image:CloudSecure_ActivitySelection.png["アクティビティセレクター、
 
 
 
+[[activity-history-retention]]
 == アクティビティ履歴の保持
 
 アクティブな Workload Security 環境のアクティビティ履歴は 13 か月間保持されます。
 
 
 
+[[applicability-of-filters-in-forensics-page]]
 == フォレンジックにおけるフィルターの適用性ページ
 
 |===
@@ -252,6 +262,7 @@ image:CloudSecure_ActivitySelection.png["アクティビティセレクター、
 |===
 
 
+[[path-search]]
 == パス検索
 
 / の有無で検索結果は異なります
@@ -284,6 +295,7 @@ image:CloudSecure_ActivitySelection.png["アクティビティセレクター、
 |===
 
 
+[[local-root-svm-user-activity-changes]]
 == ローカルルートSVMユーザーアクティビティの変更
 
 ローカル ルート SVM ユーザーが何らかのアクティビティを実行している場合、NFS 共有がマウントされているクライアントの IP がユーザー名に考慮されるようになり、フォレンジック アクティビティ ページとユーザー アクティビティ ページの両方で root@<ip-address-of-the-client> として表示されます。
@@ -298,6 +310,7 @@ image:CloudSecure_ActivitySelection.png["アクティビティセレクター、
 
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 |===

@@ -14,6 +14,7 @@ summary:
 
 
 
+[[formatting-regular-expressions]]
 == 正規表現のフォーマット
 
 Data Infrastructure Insightsの自動解決用の正規表現を作成するときに、_FORMAT_ というフィールドに値を入力して出力形式を構成できます。
@@ -52,10 +53,12 @@ hostname4-Raleigh-solaris
 
 
 
+[[examples]]
 == 例
 
 
 
+[[example-1-showing-zone-names]]
 === ゾーン名を示す例1
 
 この例では、正規表現を使用してゾーン名からホスト名を抽出します。次のようなゾーン名がある場合は、正規表現を作成できます。
@@ -86,6 +89,7 @@ hostname4-Raleigh-solaris
 
 
 
+[[example-2]]
 === 例2
 
 この例では、最初のアンダースコア「_」までスキップし、E とその後の 2 番目の「_」までのすべてを一致させてから、それ以降のすべてをスキップします。
@@ -98,6 +102,7 @@ hostname4-Raleigh-solaris
 
 
 
+[[example-3]]
 === 例3
 
 正規表現 (下記) の最後のセクションを囲む括弧「()」は、どの部分がホスト名であるかを識別します。  VSAN3 をホスト名にする場合は、[a-zA-Z0-9]+_([a-zA-Z0-9]+).* になります。
@@ -110,6 +115,7 @@ hostname4-Raleigh-solaris
 
 
 
+[[example-4-showing-a-more-complicated-naming-pattern]]
 === より複雑な命名パターンを示す例4
 
 次のようなゾーン名がある場合は、正規表現を作成できます。
@@ -139,6 +145,7 @@ hostname4-Raleigh-solaris
 
 
 
+[[example-5-showing-zone-names-without-a-pattern]]
 === 例5：パターンなしのゾーン名を示す
 
 次のようなゾーン名がある場合は、正規表現を作成できます。
@@ -163,6 +170,7 @@ hostname4-Raleigh-solaris
 
 
 
+[[example-6-showing-computer-names-with-a-pattern]]
 === 例6：パターン付きコンピュータ名の表示
 
 次のようなゾーン名がある場合は、正規表現を作成できます。
@@ -201,6 +209,7 @@ hostname4-Raleigh-solaris
 
 
 
+[[example-7]]
 === 例7
 
 *ゾーン:* myComputerName123_HBA1_Symm1_FA1
@@ -211,6 +220,7 @@ hostname4-Raleigh-solaris
 
 
 
+[[example-8]]
 === 例8
 
 この例では、最初の _ の前にあるすべてのものを検索します。
@@ -225,6 +235,7 @@ hostname4-Raleigh-solaris
 
 
 
+[[example-9]]
 === 例9
 
 この例では、最初の _ の後から 2 番目の _ までのすべてを検索します。
@@ -237,6 +248,7 @@ hostname4-Raleigh-solaris
 
 
 
+[[example-10]]
 === 例10
 
 この例では、ゾーンの例から「MyComputerName123」を抽出します。
@@ -253,6 +265,7 @@ hostname4-Raleigh-solaris
 
 
 
+[[example-11]]
 === 例11
 
 *ゾーン:* Storage1_Switch1_MyComputerName123A_A1_FC1
@@ -263,6 +276,7 @@ hostname4-Raleigh-solaris
 
 
 
+[[example-12]]
 === 例12
 
 角括弧内の ^ (サーカムフレックスまたはキャレット) は式を否定します。たとえば、[^Ff] は大文字または小文字の F 以外のすべてを意味し、[^az] は小文字の a から z 以外のすべてを意味し、上記の例では _ 以外のすべてを意味します。フォーマット ステートメントは、出力ホスト名に「-」を追加します。
@@ -275,6 +289,7 @@ hostname4-Raleigh-solaris
 
 
 
+[[example-13]]
 === 例13
 
 この例では、ストレージ エイリアスは "\" で区切られており、式では "\\" を使用して、文字列で実際に "\" が使用されていること、およびそれらが式自体の一部ではないことを定義する必要があります。
@@ -287,6 +302,7 @@ hostname4-Raleigh-solaris
 
 
 
+[[example-14]]
 === 例14
 
 この例では、ゾーンの例から「PD-RV-W-AD-2」を抽出します。
@@ -299,6 +315,7 @@ hostname4-Raleigh-solaris
 
 
 
+[[example-15]]
 === 例15
 
 この場合のフォーマット設定では、ホスト名に「US-BV-」が追加されます。

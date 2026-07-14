@@ -45,6 +45,7 @@ Webhookチャネルインスタンスは次の要素で構成されています
 |===
 
 
+[[creating-a-webhook]]
 == Webhookの作成
 
 Workload Security Webhook を作成するには、「管理」>「通知」に移動し、「Workload Security Webhooks」タブを選択します。次の画像は、Slack Webhook 作成画面のサンプルを示しています。
@@ -60,6 +61,7 @@ image:ws_webhook_slack_example.png["Workload Security の webhook Slack の例�
 
 
 
+[[parameters-what-are-they-and-how-to-use-them]]
 == パラメーター: パラメーターとは何か、どのように使用するのか?
 
 アラート パラメータは、アラートごとに設定される動的な値です。たとえば、_%%severity%%_ パラメータは、アラートの重大度タイプに置き換えられます。
@@ -68,6 +70,7 @@ image:ws_webhook_slack_example.png["Workload Security の webhook Slack の例�
 
 
 
+[[custom-parameters-and-secrets]]
 === カスタムパラメータとシークレット
 
 このセクションでは、必要なカスタム パラメータやシークレットを追加できます。カスタム パラメータまたはシークレットは、URL またはメッセージ本文に含めることができます。シークレットを使用すると、ユーザーはパスワード、apiKey などの安全なカスタム パラメータを設定できます。
@@ -78,6 +81,7 @@ image:ws_webhook_parameters_example.png["パラメータ付きワークロード
 
 
 
+[[workload-security-webhooks-list-page]]
 == ワークロード セキュリティ Webhook リスト ページ
 
 Webhook リスト ページには、名前、作成者、作成日、ステータス、セキュリティ、最終報告のフィールドが表示されます。注: 「ステータス」列の値は、最後の Webhook トリガーの結果に基づいて変化し続けます。以下はステータス結果の例です。
@@ -115,6 +119,7 @@ Webhook リスト ページには、名前、作成者、作成日、ステー�
 
 
 
+[[configure-webhook-notification-in-alert-policy]]
 == アラートポリシーでWebhook通知を構成する
 
 アラート ポリシーに Webhook 通知を追加するには、「ワークロード セキュリティ」>「ポリシー」に移動し、既存のポリシーを選択するか、新しいポリシーを追加します。  _アクション_ セクション > _Webhook 通知_ ドロップダウンで、必要な Webhook を選択します。
@@ -131,6 +136,7 @@ Webhook 通知はポリシーに関連付けられています。攻撃 (RW/DD/W
 
 
 
+[[workload-security-webhook-examples]]
 === ワークロードセキュリティWebhookの例
 
 Webhooksのlink:ws_webhook_example_slack.html["スラック"]

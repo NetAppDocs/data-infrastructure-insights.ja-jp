@@ -16,6 +16,7 @@ keywords: troubleshooting, problems, browser, login, log in, accessing, access t
 
 
 
+[[login-issues]]
 == ログインに関する問題
 
 |===
@@ -44,6 +45,7 @@ keywords: troubleshooting, problems, browser, login, log in, accessing, access t
 |===
 
 
+[[other-issues]]
 == その他の問題
 
 |===
@@ -62,6 +64,7 @@ keywords: troubleshooting, problems, browser, login, log in, accessing, access t
 |===
 
 
+[[resources]]
 == リソース
 
 追加のトラブルシューティングのヒントについては、link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["NetAppナレッジベース"] (サポートへのサインインが必要です)。

@@ -14,6 +14,7 @@ keywords: asset page, user data, applications, annotations
 
 
 
+[[using-the-user-data-section-to-assign-or-modify-applications]]
 == ユーザーデータセクションを使用してアプリケーションの割り当てまたは変更を行う
 
 テナント上で実行されているアプリケーションを特定の資産 (ホスト、仮想マシン、ボリューム、内部ボリューム、qtree、ハイパーバイザー) に割り当てることができます。ユーザー データ セクションでは、資産に割り当てられたアプリケーションを追加、変更、または削除できます。ボリュームを除くすべての資産タイプに対して、複数のアプリケーションを割り当てることができます。
@@ -37,6 +38,7 @@ keywords: asset page, user data, applications, annotations
 
 
 
+[[using-the-user-data-section-to-assign-or-modify-annotations]]
 == ユーザーデータセクションを使用して注釈を割り当てたり変更したりする
 
 企業の要件に合わせてデータを追跡するためにData Infrastructure Insightsをカスタマイズする場合、注釈と呼ばれる特殊なメモを定義し、それを資産に割り当てることができます。アセット ページのユーザー データ セクションには、アセットに割り当てられた注釈が表示され、そのアセットに割り当てられた注釈を変更することもできます。

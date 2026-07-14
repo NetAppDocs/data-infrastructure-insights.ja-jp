@@ -21,6 +21,7 @@ NOTE: このページはサードパーティの指示を参照しており、�
 
 
 
+[[teams-setup]]
 == Teams のセットアップ:
 
 . Teams でケバブを選択し、Incoming Webhook を検索します。
@@ -33,6 +34,7 @@ image:Webhooks_Teams_Create_Webhook.png["Teams での受信 Webhook"]
 
 
 
+[[create-workload-security-teams-webhook]]
 == ワークロード セキュリティ チームの Webhook を作成します。
 
 . 「管理」>「通知」に移動し、「Workload Security Webhooks」タブを選択します。新しい Webhook を作成するには、[_+ Webhook_] を選択します。
@@ -46,6 +48,7 @@ image:ws_webhook_teams_example.png["ワークロード セキュリティ チー
 
 
 
+[[steps-for-creating-teams-notification-with-adaptive-card-template]]
 === アダプティブカードテンプレートを使用してTeams通知を作成する手順
 
 . メッセージ本文を次のテンプレートに置き換えます：
@@ -140,6 +143,7 @@ image:ws_webhook_teams_example.png["ワークロード セキュリティ チー
 
 
 
+[[notifications-via-webhook]]
 == Webhook経由の通知
 
 Webhook 経由でイベントを通知するには、[_Workload Security_] > [ポリシー] に移動します。  _+攻撃ポリシー_または_+警告ポリシー_を選択します。

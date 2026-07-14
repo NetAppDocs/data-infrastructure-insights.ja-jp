@@ -18,6 +18,7 @@ keywords: onboarding, getting started, video, tutorial, resolution, dashboard, q
 
 
 
+[[checklist-and-video-tutorials]]
 == チェックリストとビデオチュートリアル
 
 Data Infrastructure Insightsテナントに表示される *スタートアップ チェックリスト* には、いくつかの便利なタスクと概念のリストが含まれています。チェックリスト内の項目を選択すると、その概念に適切なData Infrastructure Insightsサイト ページに移動します。たとえば、「ダッシュボードの作成」項目をクリックすると、 Data Infrastructure Insights の*ダッシュボード* ページが開きます。
@@ -35,12 +36,14 @@ NOTE: チュートリアルは、終了するまで好きな順序で何度で�
 
 
 
+[[dismissing-the-checklist]]
 === チェックリストを無視する
 
 スタートアップ チェックリストは、チェックリストの下部にある [次回表示しない] リンクをクリックするまで表示されます。チェックリストを閉じた後でも、メッセージ ヘッダー バーから各チェックリストを閉じるまで、該当する各Data Infrastructure Insightsページでチュートリアルを引き続き利用できます。
 
 
 
+[[video-tutorials]]
 == ビデオチュートリアル
 
 詳細については、次のビデオをご覧ください。

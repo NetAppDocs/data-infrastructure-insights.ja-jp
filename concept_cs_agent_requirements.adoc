@@ -47,6 +47,7 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 |===
 
 
+[[additional-recommendations]]
 == 追加の推奨事項
 
 * *Network Time Protocol (NTP)* または *Simple Network Time Protocol (SNTP)* を使用して、 ONTAPシステムとエージェント マシンの両方の時刻を同期することを強くお勧めします。
@@ -54,6 +55,7 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 
 
 
+[[cloud-network-access-rules]]
 == クラウドネットワークアクセスルール
 
 *米国ベースの*ワークロード セキュリティ環境の場合:
@@ -94,6 +96,7 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 |===
 
 
+[[in-network-rules]]
 == ネットワーク内ルール
 
 [cols="5*"]
@@ -117,6 +120,7 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 |===
 
 
+[[system-sizing]]
 == システムのサイズ設定
 
 参照link:concept_cs_event_rate_checker.html["イベントレートチェッカー"]サイズに関する情報についてはドキュメントを参照してください。

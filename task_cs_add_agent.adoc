@@ -18,6 +18,7 @@ Workload Security エージェントは、ユーザー アクティビティを�
 
 
 
+[[before-you-begin]]
 == 開始前の準備
 
 * インストール、スクリプトの実行、アンインストールには sudo 権限が必要です。
@@ -27,6 +28,7 @@ Workload Security エージェントは、ユーザー アクティビティを�
 
 
 
+[[best-practices]]
 == ベストプラクティス
 
 Workload Security エージェントを設定する前に、次の点に留意してください。
@@ -45,6 +47,7 @@ Workload Security エージェントを設定する前に、次の点に留意�
 |===
 
 
+[[steps-to-install-agent]]
 == エージェントのインストール手順
 
 . Workload Security 環境に管理者またはアカウント所有者としてログインします。
@@ -76,6 +79,7 @@ image::new-agent-detect.png[エージェントのインストール成功のメ�
 
 
 
+[[network-configuration]]
 == ネットワーク構成
 
 Workload Security で使用されるポートを開くには、ローカル システムで次のコマンドを実行します。ポート範囲に関してセキュリティ上の懸念がある場合は、_35000:35100_ などのより狭いポート範囲を使用できます。各 SVM は 2 つのポートを使用します。
@@ -105,6 +109,7 @@ Workload Security で使用されるポートを開くには、ローカル シ�
  35000-55000/tcp
 
 
+[[pinning-an-agent-at-the-current-version]]
 == エージェントを現在のバージョンに「固定」する
 
 デフォルトでは、 Data Infrastructure Insights Workload Security はエージェントを自動的に更新します。自動更新を一時停止して、次のいずれかが発生するまでエージェントを現在のバージョンのままにすることを希望する顧客もいます。
@@ -127,6 +132,7 @@ image:ws_agent_version.png["エージェント テーブルに表示される WS
 
 
 
+[[troubleshooting-agent-errors]]
 == エージェントエラーのトラブルシューティング
 
 既知の問題とその解決策を次の表に示します。

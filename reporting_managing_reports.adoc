@@ -20,6 +20,7 @@ IMPORTANT: レポート権限またはセキュリティを変更する前に、
 
 
 
+[[customizing-a-reports-output-format-and-delivery]]
 == レポートの出力形式と配信のカスタマイズ
 
 レポートの形式と配信方法をカスタマイズできます。
@@ -41,6 +42,7 @@ image:Reporting_Output_and_Delivery.png["レポートの出力と配信"]
 
 
 
+[[copying-a-report-to-the-clipboard]]
 == レポートをクリップボードにコピーする
 
 このプロセスを使用して、レポートをクリップボードにコピーします。
@@ -59,6 +61,7 @@ image:Reporting_Copy_To_Clipboard.png["レポートをクリップボードに�
 
 
 
+[[opening-reports-from-the-clipboard]]
 == クリップボードからレポートを開く
 
 以前にクリップボードにコピーされたレポート仕様を開くことができます。
@@ -80,12 +83,14 @@ image:Reporting_Open_From_Clipboard.png["クリップボードからレポート
 
 
 
+[[editing-an-existing-report]]
 == 既存のレポートの編集
 
 デフォルトの場所でファイルを編集すると、次回のレポート カタログの更新時にレポートが上書きされる危険性があることに注意してください。編集したレポートを新しい名前で保存するか、デフォルト以外の場所に保存することをお勧めします。
 
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 ここでは、レポートに関する問題のトラブルシューティングのヒントを紹介します。

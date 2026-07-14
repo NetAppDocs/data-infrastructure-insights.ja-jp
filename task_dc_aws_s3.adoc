@@ -14,6 +14,7 @@ Data Infrastructure Insights は、 AWS S3 をストレージデータコレク�
 
 
 
+[[requirements]]
 == 要件
 
 ストレージデバイスとして AWS S3 からデータを収集するには、次の情報が必要です。
@@ -33,11 +34,12 @@ Data Infrastructure Insights は、 AWS S3 をストレージデータコレク�
 
 
 
+[[configuration]]
 == 構成
 
 以下の表に従って、データ コレクター フィールドにデータを入力します。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -58,9 +60,10 @@ Data Infrastructure Insights は、 AWS S3 をストレージデータコレク�
 |===
 
 
+[[advanced-configuration]]
 == 詳細設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -78,6 +81,7 @@ Data Infrastructure Insights は、 AWS S3 をストレージデータコレク�
 |===
 
 
+[[iam-access-key]]
 == IAMアクセス キー
 
 アクセスキーは、IAM ユーザーまたは AWS アカウントのルートユーザーの長期的な認証情報です。アクセスキーは、AWS CLI または AWS API へのプログラムによるリクエスト (直接または AWS SDK を使用) に署名するために使用されます。
@@ -86,6 +90,7 @@ Data Infrastructure Insights は、 AWS S3 をストレージデータコレク�
 
 
 
+[[iam-role]]
 == IAM ロール
 
 _IAM ロール_ 認証 (IAM アクセスキー認証ではなく) を使用する場合は、作成または指定するロールに、リソースにアクセスするために必要な適切な権限があることを確認する必要があります。
@@ -102,6 +107,7 @@ IAM ロール _InstanceS3ReadOnly_ を S3 インスタンスにアタッチす�
 
 
 
+[[mapping-amazon-tags-to-data-infrastructure-insights-annotations]]
 == Amazon タグをData Infrastructure Insightsアノテーションにマッピングする
 
 AWS S3 をストレージとして使用するデータコレクターには、S3 で構成されたタグを使用してData Infrastructure Insights の注釈を入力できるオプションが含まれています。注釈の名前は AWS タグとまったく同じにする必要があります。 Data Infrastructure Insights は、常に同じ名前のテキスト タイプの注釈を入力し、他のタイプ (数値、ブール値など) の注釈を入力するように「最善の試み」を行います。注釈が別のタイプであり、データ コレクターが注釈を入力できない場合は、注釈を削除してテキスト タイプとして再作成する必要がある場合があります。
@@ -110,6 +116,7 @@ AWS では大文字と小文字が区別されますが、 Data Infrastructure I
 
 
 
+[[collecting-from-aws-child-accounts]]
 == AWS子アカウントからの収集
 
 Data Infrastructure Insights は、単一の AWS データコレクター内での AWS の子アカウントの収集をサポートします。このコレクションの構成は、AWS 環境で実行されます。
@@ -132,6 +139,7 @@ link:https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.h
 
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

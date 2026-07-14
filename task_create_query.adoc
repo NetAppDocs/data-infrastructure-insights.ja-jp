@@ -37,16 +37,19 @@ image:QuerySelectColumns.png["列を選択"]
 
 
 
+[[see-it-in-action]]
 == 実際に動作を見てみましょう
 
 link:https://media.netapp.com/video-detail/d0530e0b-a222-52e7-92b1-dbeeee41b712/explore-and-analyze-with-queries-in-data-infrastructure-insights["Data Infrastructure Insightsのクエリを使用して探索および分析する (ビデオ)"]
 
 
 
+[[choosing-aggregation-units-conditional-formatting]]
 == 集計、単位、条件付き書式の選択
 
 
 
+[[aggregation-and-units]]
 === 集計と単位
 
 「値」列の場合、表示される値の集計方法と値の表示単位を選択することにより、クエリ結果をさらに絞り込むことができます。これらのオプションは、列の上隅にある「3 つのドット」メニューを選択すると見つかります。
@@ -87,16 +90,19 @@ image:Query_Page_Conditional_Formatting.png["クエリページの条件付き�
 
 
 
+[[save]]
 === 保存
 
 必要な結果を表示するようにクエリを設定したら、[*保存*] ボタンをクリックして、将来使用するためにクエリを保存できます。意味のある一意の名前を付けます。
 
 
 
+[[more-on-filtering]]
 == フィルタリングの詳細
 
 
 
+[[wildcards-and-expressions]]
 === ワイルドカードと式
 
 クエリまたはダッシュボード ウィジェットでテキストまたはリストの値をフィルター処理する場合、入力を開始すると、現在のテキストに基づいて *ワイルドカード フィルター* を作成するオプションが表示されます。このオプションを選択すると、ワイルドカード式に一致するすべての結果が返されます。  NOT または OR を使用して *式* を作成したり、「なし」オプションを選択してフィールド内の null 値をフィルター処理したりすることもできます。
@@ -111,6 +117,7 @@ image:Type-Ahead-Example-Wildcard-DirectSelect.png["ワイルドカードフィ�
 
 
 
+[[refining-filters]]
 === フィルターの調整
 
 フィルターを絞り込むには、次のものを使用できます。
@@ -142,6 +149,7 @@ image:Type-Ahead-Example-Wildcard-DirectSelect.png["ワイルドカードフィ�
 
 
 
+[[filtering-for-boolean-values]]
 === ブール値のフィルタリング
 
 ブール値をフィルタリングする場合、フィルタリングする次の選択肢が表示されることがあります。
@@ -154,6 +162,7 @@ image:Type-Ahead-Example-Wildcard-DirectSelect.png["ワイルドカードフィ�
 
 
 
+[[what-do-i-do-now-that-i-have-query-results]]
 == クエリ結果が得られたので、次に何をすればよいですか?
 
 クエリを実行すると、簡単に注釈を追加したり、アセットにアプリケーションを割り当てたりできるようになります。アプリケーションまたは注釈は、インベントリ資産 (ディスク、ストレージなど) にのみ割り当てることができることに注意してください。統合メトリックは、注釈やアプリケーションの割り当てを行うことはできません。
@@ -164,6 +173,7 @@ image:QueryVolumeBulkActions.png["クエリ一括アクションの例"]
 
 
 
+[[annotation-rules-require-query]]
 == 注釈ルールにはクエリが必要
 
 設定する場合link:task_create_annotation_rules.html["アノテーション ルール"]各ルールには、操作対象となる基礎クエリが必要です。しかし、上で見たように、クエリは必要に応じて広くしたり狭くしたりすることができます。

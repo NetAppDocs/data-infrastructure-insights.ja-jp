@@ -18,6 +18,7 @@ AU ソフトウェアを手動でダウンロードしてインストールす�
 
 
 
+[[performing-a-new-au-install-on-linux]]
 == Linux 上で新しい AU インストールを実行する:
 
 . Data Infrastructure Insightsで、API トークンを作成します。
@@ -103,6 +104,7 @@ image:Manual_AU_one_time_token.png["1回限りのAPIトークンを作成する"
 
 
 
+[[manually-installing-data-collectors]]
 == データコレクターの手動インストール
 
 /collector/patch/datasourceswar/latest API を使用して最新の datasources.war をダウンロードします。
@@ -146,6 +148,7 @@ drwxrwx--- 2 test-user2 test-group-1  4096 Feb 16 10:10 datasources-war-<version
 
 
 
+[[downloading-a-patch]]
 == パッチのダウンロード
 
 /collector/patch/file/{version} API を使用してパッチをダウンロードします。
@@ -189,6 +192,7 @@ drwxrwx--- 2 test-user2 test-group-1  4096 Feb 16 10:10 <patch_file_name>.zip
 
 
 
+[[external-key-retrieval]]
 == 外部キーの取得
 
 UNIX シェル スクリプトを提供すると、取得ユニットによってそのスクリプトが実行され、キー管理システムから *秘密キー* と *公開キー* を取得できます。

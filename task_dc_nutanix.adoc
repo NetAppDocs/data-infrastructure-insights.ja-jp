@@ -2,23 +2,28 @@
 sidebar: sidebar 
 permalink: task_dc_nutanix.html 
 keywords: data collector, Nutanix, NX Series 
-summary: Nutanix データ コレクターを構成します。 
+summary: Nutanix NX データコレクターの設定 
 ---
 = Nutanix NX データコレクター
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Data Infrastructure Insights は、 Nutanix データ コレクターを使用して、Nutanix NX ストレージ システムのインベントリとパフォーマンス データを検出します。
+Data Infrastructure Insights は、Nutanix NX データコレクターを使用して、Nutanix NX ストレージシステムのインベントリデータとパフォーマンスデータを検出します。
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、 Nutanix データ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -38,6 +43,7 @@ Data Infrastructure Insights は、 Nutanix データ コレクターから次�
 
 
 
+[[requirements]]
 == 要件
 
 * クラスタの外部データサービスIPアドレス
@@ -47,9 +53,10 @@ Data Infrastructure Insights は、 Nutanix データ コレクターから次�
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -64,9 +71,10 @@ Data Infrastructure Insights は、 Nutanix データ コレクターから次�
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -81,6 +89,7 @@ Data Infrastructure Insights は、 Nutanix データ コレクターから次�
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

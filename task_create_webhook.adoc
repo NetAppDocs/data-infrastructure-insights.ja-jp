@@ -47,6 +47,7 @@ Webhook チャネル インスタンスは、次の要素で構成されます�
 |===
 
 
+[[creating-a-webhook]]
 == Webhookの作成
 
 Data Infrastructure Insights Webhook を作成するには、*管理 > 通知* に移動し、*Webhooks* タブを選択します。
@@ -65,6 +66,7 @@ image:Webhook_Default_Parameters.png["Data Infrastructure Insightsのデフォ�
 
 
 
+[[parameters-what-are-they-and-how-do-i-use-them]]
 === パラメーター: パラメーターとは何ですか? また、どのように使用しますか?
 
 アラート パラメータは、アラートごとに設定される動的な値です。たとえば、_%%TriggeredOn%%_ パラメータは、アラートがトリガーされたオブジェクトに置き換えられます。
@@ -75,18 +77,21 @@ image:Webhook_Default_Parameters.png["Data Infrastructure Insightsのデフォ�
 
 
 
+[[custom-parameters-and-secrets]]
 === カスタムパラメータとシークレット
 
 このセクションでは、必要なカスタム パラメータやシークレットを追加できます。セキュリティ上の理由から、シークレットが定義されている場合、この Webhook チャネルを変更できるのは Webhook 作成者のみです。他のユーザーにとっては読み取り専用となります。  URL/ヘッダーでは、_%%<secret_name>%%_ のようにシークレットを使用できます。
 
 
 
+[[webhooks-list-page]]
 === Webhooksリストページ
 
 Webhook リスト ページには、名前、作成者、作成日、ステータス、セキュリティ、最終報告のフィールドが表示されます。
 
 
 
+[[choosing-webhook-notification-in-a-monitor]]
 == モニターでWebhook通知を選択する
 
 ウェブフック通知を選択するにはlink:task_create_monitor.html["monitor"]、*アラート > モニターの管理* に移動して目的のモニターを選択するか、新しいモニターを追加します。 _チーム通知の設定_ セクションで、配信方法として _Webhook_ を選択します。アラート レベル (重大、警告、解決済み) を選択し、目的の Webhook を選択します。
@@ -95,6 +100,7 @@ image:Webhook_Monitor_Notify.png["Webhookモニター通知"]
 
 
 
+[[webhook-examples]]
 == Webhook の例:
 
 Webhooksのlink:task_webhook_example_slack.html["スラック"]Webhooksのlink:task_webhook_example_pagerduty.html["ページャーデューティ"]Webhooksのlink:task_webhook_example_teams.html["チーム"]Webhooksのlink:task_webhook_example_discord.html["不和"]

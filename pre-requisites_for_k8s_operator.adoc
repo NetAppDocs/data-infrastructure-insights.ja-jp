@@ -45,6 +45,7 @@ summary: Data Infrastructure Insights は、 Kubernetes 上の統合データの
 |===
 
 
+[[important-things-to-note-before-you-start]]
 == 始める前に注意すべき重要な事項
 
 もしあなたが<<configuring-proxy-support,プロキシ>>、持っている<<using-a-custom-or-private-docker-repository,カスタムリポジトリ>>、または使用中<<openshift-instructions,オープンシフト>>、以下のセクションを注意深くお読みください。
@@ -53,6 +54,7 @@ summary: Data Infrastructure Insights は、 Kubernetes 上の統合データの
 
 
 
+[[configuring-proxy-support]]
 === プロキシサポートの設定
 
 NetApp Kubernetes Monitoring Operator をインストールするために、テナント上でプロキシを使用できる場所は 2 つあります。これらは同じプロキシ システムである場合もあれば、別のプロキシ システムである場合もあります。
@@ -107,6 +109,7 @@ agent:
 ----
 
 
+[[using-a-custom-or-private-docker-repository]]
 === カスタムまたはプライベートDockerリポジトリの使用
 
 デフォルトでは、 NetApp Kubernetes Monitoring Operator は、 Data Infrastructure Insightsリポジトリからコンテナ イメージをプルします。監視のターゲットとして Kubernetes クラスタが使用されており、そのクラスタがカスタムまたはプライベート Docker リポジトリまたはコンテナ レジストリからのみコンテナ イメージをプルするように構成されている場合は、 NetApp Kubernetes Monitoring Operator に必要なコンテナへのアクセスを構成する必要があります。
@@ -155,6 +158,7 @@ agent:
 ----
 
 
+[[openshift-instructions]]
 === OpenShift の手順
 
 OpenShift 4.6 以降で実行している場合は、_operator-config.yaml_ の AgentConfiguration を編集して、_runPrivileged_ 設定を有効にする必要があります。
@@ -167,6 +171,7 @@ Openshift は、一部の Kubernetes コンポーネントへのアクセスを�
 
 
 
+[[permissions]]
 === 権限
 
 監視対象のクラスタに、ClusterRoleを持たないカスタムリソースが含まれている場合、link:https://kubernetes.io/docs/reference/access-authn-authz/rbac/#aggregated-clusterroles["表示する集計"]イベント ログでこれらのリソースを監視するには、オペレーターにこれらのリソースへのアクセスを手動で許可する必要があります。

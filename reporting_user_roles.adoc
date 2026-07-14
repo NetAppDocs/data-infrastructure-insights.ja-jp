@@ -76,6 +76,7 @@ Data Infrastructure Insightsでのユーザー ロールによって、レポー
 |===
 
 
+[[setting-reporting-cognos-email-preferences]]
 == レポート（Cognos）の電子メール設定
 
 
@@ -83,6 +84,7 @@ NOTE: Data Infrastructure Insights Reporting (Cognos アプリケーション) �
 
 
 
+[[what-steps-should-i-take-to-prepare-my-existing-environment-for-enabling-sso]]
 === SSO を有効にするために既存の環境を準備するには、どのような手順を実行する必要がありますか?
 
 レポートが保持されるようにするには、次の手順に従って、すべてのレポートを _My Content_ から _Team Content_ に移行します。テナントで SSO を有効にする前に、これを実行する必要があります。

@@ -14,6 +14,7 @@ Data Infrastructure Insights は、このデータ コレクターを使用し�
 
 
 
+[[installation]]
 == インストール
 
 . *Observability > Collectors* から、*+ Data Collector* をクリックします。  ActiveMQを選択します。
@@ -29,12 +30,14 @@ image:ActiveMQDCConfigWindows.png["ActiveMQの設定"]
 
 
 
+[[setup]]
 == セットアップ
 
 詳細は以下をご覧ください。 http://activemq.apache.org/getting-started.html["ActiveMQドキュメント"]
 
 
 
+[[objects-and-counters]]
 == オブジェクトとカウンター
 
 次のオブジェクトとそのカウンターが収集されます。
@@ -54,6 +57,7 @@ image:ActiveMQDCConfigWindows.png["ActiveMQの設定"]
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページ。

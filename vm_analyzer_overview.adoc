@@ -22,6 +22,7 @@ image:vm_analyzer_example_with_panel_a.png["ストレージ システムの VM A
 
 
 
+[[explore-connections-among-your-assets]]
 == 資産間のつながりを探索する
 
 VM アナライザーを表示するには、*Observability > Analyze > VM Analyzer* を選択します。アプリケーション、仮想マシン、ボリューム、内部ボリュームのフィルターを設定するか、独自のフィルターを追加します。オブジェクトのマップが表示され、接続されたオブジェクトが示されます。オブジェクトの上にマウスを置くと、その接続のトラフィック メトリックが表示されます。
@@ -35,6 +36,7 @@ NOTE: VM Analyzer のフィルターのほとんどは (追加するフィルタ
 
 
 
+[[see-it-in-action]]
 == 実際に動作を見てみましょう
 
 link:https://media.netapp.com/video-detail/0e62b784-8456-5ef7-8879-f0352135a0f1/simplified-troubleshooting-with-vm-analyzer["VM Analyzer によるトラブルシューティングの簡素化 (ビデオ)、window=後で読む"]

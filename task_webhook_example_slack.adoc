@@ -17,6 +17,7 @@ NOTE: このページはサードパーティの指示を参照しており、�
 
 
 
+[[slack-example]]
 == Slackの例:
 
 * へ移動 https://api.slack.com/apps[]新しいアプリを作成します。意味のある名前を付けて、Slack ワークスペースを選択します。
@@ -29,6 +30,7 @@ image:Webhooks_Slack_Create_Webhook.png["Slack Webhookを作成する"]
 
 
 
+[[create-data-infrastructure-insights-webhook]]
 == Data Infrastructure Insights Webhook を作成します。
 
 . Data Infrastructure Insightsで、*管理 > 通知* に移動し、*Webhooks* タブを選択します。新しい Webhook を作成するには、[+Webhook] をクリックします。
@@ -41,6 +43,7 @@ image:Webhooks-Slack_example.png["Slack ウェブフックテンプレート"]
 
 
 
+[[notifications-via-webhook]]
 == Webhook経由の通知
 
 Webhook経由でイベントを通知するには、Data Infrastructure Insightsで*アラート>モニター*に移動し、*+モニター*をクリックして新しいモニターを作成します。link:task_create_monitor.html["monitor"] 。

@@ -18,6 +18,7 @@ Data Infrastructure Insightsの使用を開始する前に、*NetApp Console*ポ
 
 
 
+[[creating-your-netapp-console-account]]
 == NetApp Console アカウントの作成
 
 NetAppのクラウドサービスを開始するには、link:https://console.netapp.com/["* NetApp Console*"^]にアクセスして*開始*をクリックします。
@@ -31,6 +32,7 @@ NetAppのクラウドサービスを開始するには、link:https://console.ne
 
 
 
+[[what-if-i-already-have-a-netapp-console-login]]
 === すでにNetApp Consoleログインをお持ちの場合はどうすればよいですか？
 
 NetApp Console アカウントを取得したら、link:https://console.netapp.com/["NetApp Console"] ポータルページで *Log In* を選択するだけです。
@@ -44,6 +46,7 @@ NOTE: DII サイトは、選択した Console Organization に関連付けられ
 
 
 
+[[starting-your-data-infrastructure-insights-free-trial]]
 == Data Infrastructure Insights無料トライアルを開始する
 
 開始する準備ができたら、*30 日間の無料トライアルを開始*を選択します。サイトをホストする地域を選択し、その他の指示に従います。
@@ -58,6 +61,7 @@ DII サイトを作成するには、「Org Admin」ロールが必要である�
 
 
 
+[[logging-out]]
 == ログアウト
 
 Data Infrastructure Insightsからログアウトするには、*ユーザー名*をクリックし、*ログアウト*を選択します。
@@ -67,6 +71,7 @@ NOTE: Data Infrastructure Insightsからログアウトすると、コンソー�
 
 
 
+[[inactivity-timeout]]
 === 非アクティブ時のタイムアウト
 
 デフォルトでは、Consoleは6時間（360分）にわたってアクティビティがない場合にユーザーをログアウトします。アクティビティに関係なく、ユーザーは7日後にログアウトされます。

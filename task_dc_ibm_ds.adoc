@@ -16,11 +16,12 @@ DS3xxx、DS4xxx、およびDS5xxxデバイスは、link:task_dc_na_eseries.html[
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、 IBM DS データ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -43,6 +44,7 @@ Data Infrastructure Insights は、 IBM DS データ コレクターから次の
 
 
 
+[[requirements]]
 == 要件
 
 このデータ コレクターを構成するには、次のものが必要です。
@@ -56,9 +58,10 @@ Data Infrastructure Insights は、 IBM DS データ コレクターから次の
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -76,9 +79,10 @@ Data Infrastructure Insights は、 IBM DS データ コレクターから次の
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -102,15 +106,17 @@ Data Infrastructure Insights は、 IBM DS データ コレクターから次の
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
+[[inventory]]
 === インベントリ
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 問題： | これを試してください: 
 

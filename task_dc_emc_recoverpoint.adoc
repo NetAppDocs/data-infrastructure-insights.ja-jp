@@ -18,6 +18,7 @@ EMC RecoverPoint データ コレクターは、R​​ecoverPoint が他のス�
 
 
 
+[[requirements]]
 == 要件
 
 このデータ コレクターを構成するには、次の情報が必要です。
@@ -29,9 +30,10 @@ EMC RecoverPoint データ コレクターは、R​​ecoverPoint が他のス�
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -46,9 +48,10 @@ EMC RecoverPoint データ コレクターは、R​​ecoverPoint が他のス�
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -63,6 +66,7 @@ EMC RecoverPoint データ コレクターは、R​​ecoverPoint が他のス�
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

@@ -17,6 +17,7 @@ NOTE: このページはサードパーティの指示を参照しており、�
 
 
 
+[[discord-setup]]
 == Discordの設定:
 
 * Discordでサーバーを選択し、テキストチャンネルの下にあるチャンネル編集（歯車アイコン）を選択します。
@@ -26,6 +27,7 @@ NOTE: このページはサードパーティの指示を参照しており、�
 
 
 
+[[create-data-infrastructure-insights-webhook]]
 == Data Infrastructure Insights Webhook を作成します。
 
 . Data Infrastructure Insightsで、*管理 > 通知* に移動し、*Webhooks* タブを選択します。新しい Webhook を作成するには、[+Webhook] をクリックします。
@@ -41,6 +43,7 @@ NOTE: Webhook をテストするには、メッセージ本文の URL 値を有�
 
 
 
+[[notifications-via-webhook]]
 == Webhook経由の通知
 
 Webhook経由でイベントを通知するには、Data Infrastructure Insightsで*アラート>モニター*に移動し、*+モニター*をクリックして新しいモニターを作成します。link:task_create_monitor.html["monitor"] 。

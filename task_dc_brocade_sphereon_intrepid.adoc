@@ -14,6 +14,7 @@ Data Infrastructure Insights は、 Brocade Sphereon/Intrepid Switch (SNMP) デ�
 
 
 
+[[requirements]]
 == 要件
 
 このデータ コレクターを構成するには、次の要件を満たす必要があります。
@@ -26,9 +27,10 @@ Data Infrastructure Insights は、 Brocade Sphereon/Intrepid Switch (SNMP) デ�
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -49,9 +51,10 @@ Data Infrastructure Insights は、 Brocade Sphereon/Intrepid Switch (SNMP) デ�
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -81,6 +84,7 @@ Data Infrastructure Insights は、 Brocade Sphereon/Intrepid Switch (SNMP) デ�
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

@@ -14,11 +14,12 @@ summary: ONTAPデータコレクター
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、 ONTAPデータ コレクターからインベントリとパフォーマンス データを取得します。取得した資産の種類ごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -45,12 +46,14 @@ Data Infrastructure Insights は、 ONTAPデータ コレクターからイン�
 |===
 
 
+[[ontap-data-management-terminology]]
 == ONTAPデータ管理用語
 
 次の用語は、 ONTAP Data Management ストレージ アセットのランディング ページに表示されるオブジェクトまたは参照に適用されます。これらの条件の多くは他のデータ収集者にも適用されます。
 
 
 
+[[storage]]
 === ストレージ
 
 * モデル – このクラスター内の一意の個別のノード モデル名のカンマ区切りリスト。クラスター内のすべてのノードが同じモデル タイプである場合、モデル名が 1 つだけ表示されます。
@@ -65,6 +68,7 @@ Data Infrastructure Insights は、 ONTAPデータ コレクターからイン�
 
 
 
+[[storage-pool]]
 === ストレージ プール
 
 * ストレージ – このプールが存在するストレージ アレイ。必須。
@@ -81,6 +85,7 @@ Data Infrastructure Insights は、 ONTAPデータ コレクターからイン�
 
 
 
+[[storage-node]]
 === ストレージ ノード
 
 * ストレージ – このノードが属するストレージ アレイ。必須。
@@ -99,6 +104,7 @@ Data Infrastructure Insights は、 ONTAPデータ コレクターからイン�
 
 
 
+[[requirements]]
 == 要件
 
 このデータ コレクターを構成して使用するための要件は次のとおりです。
@@ -121,15 +127,17 @@ Data Infrastructure Insights は、 ONTAPデータ コレクターからイン�
 
 
 
+[[permission-requirements-for-collecting-ontap-switch-metrics]]
 === ONTAPスイッチメトリックの収集に必要な権限
 
 Data Infrastructure Insightsは、コレクターのオプションとしてONTAPクラスタスイッチデータを収集する機能を持っています。<<advanced-configuration,詳細設定>>設定。  Data Infrastructure Insightsコレクターでこれを有効にすることに加えて、 ONTAPシステム自体も*設定*して提供する必要があります。link:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["スイッチ情報"] 、正しいことを確認する<<a-note-about-permissions,権限>>スイッチ データをData Infrastructure Insightsに送信できるようにするために、設定されています。
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -144,9 +152,10 @@ Data Infrastructure Insightsは、コレクターのオプションとしてONTA
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -185,6 +194,7 @@ Data Infrastructure Insightsは、コレクターのオプションとしてONTA
 |===
 
 
+[[ontap-power-metrics]]
 == ONTAP電力メトリクス
 
 いくつかのONTAPモデルでは、監視やアラートに使用できるData Infrastructure Insightsの電力メトリックが提供されます。
@@ -202,6 +212,7 @@ FAS2620 FAS3250 FAS3270 FAS500f FAS6280 FAS/ AFF 8020 FAS/ AFF 8040 FAS/ AFF 806
 
 
 
+[[a-note-about-permissions]]
 == 権限に関する注意事項
 
 Data Infrastructure InsightsのONTAPダッシュボードの多くは高度なONTAPカウンターに依存しているため、データ コレクターの詳細設定セクションで *高度なカウンター データ収集* を有効にする必要があります。
@@ -254,15 +265,17 @@ NOTE: ONTAPアクセス制御が正しく設定されていない場合、 Data 
 
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
+[[inventory]]
 === インベントリ
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 問題： | これを試してください: 
 
@@ -292,9 +305,10 @@ NOTE: ONTAPアクセス制御が正しく設定されていない場合、 Data 
 |===
 
 
+[[performance]]
 === パフォーマンス
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 問題： | これを試してください: 
 

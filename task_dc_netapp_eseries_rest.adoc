@@ -14,11 +14,12 @@ NetApp E シリーズ REST データ コレクターは、インベントリ、�
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、REST を使用してNetApp E シリーズから次のインベントリ情報を取得します。取得した資産の種類ごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -44,6 +45,7 @@ Data Infrastructure Insights は、REST を使用してNetApp E シリーズか�
 
 
 
+[[requirements]]
 == 要件
 
 * アレイ上の各コントローラのIPアドレス
@@ -54,9 +56,10 @@ Data Infrastructure Insights は、REST を使用してNetApp E シリーズか�
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -65,9 +68,10 @@ Data Infrastructure Insights は、REST を使用してNetApp E シリーズか�
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -79,12 +83,14 @@ Data Infrastructure Insights は、REST を使用してNetApp E シリーズか�
 |===
 
 
+[[e-series-terminology-landing-page]]
 == Eシリーズ用語集（ランディングページ）
 
 次の用語は、 NetApp E シリーズ アセット ランディング ページに表示されるオブジェクトまたは参照に適用されます。これらの条件の多くは、他のデータ収集者にも適用されます。
 
 
 
+[[storage]]
 === ストレージ
 
 * モデル – デバイスのモデル名。
@@ -100,6 +106,7 @@ Data Infrastructure Insights は、REST を使用してNetApp E シリーズか�
 
 
 
+[[storage-pool]]
 === ストレージ プール
 
 * ストレージ – このプールが存在するストレージ アレイ。必須
@@ -117,6 +124,7 @@ Data Infrastructure Insights は、REST を使用してNetApp E シリーズか�
 
 
 
+[[storage-node]]
 === ストレージ ノード
 
 * ストレージ – このノードが属するストレージ アレイ。必須
@@ -135,6 +143,7 @@ Data Infrastructure Insights は、REST を使用してNetApp E シリーズか�
 
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータ収集装置に関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

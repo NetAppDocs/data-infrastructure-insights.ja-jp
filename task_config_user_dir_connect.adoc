@@ -111,6 +111,7 @@ Active Directory でデフォルトの属性名が変更されている場合は
 |===
 
 
+[[testing-your-user-directory-collector-configuration]]
 == ユーザーディレクトリコレクターの構成のテスト
 
 次の手順を使用して、LDAP ユーザー権限と属性定義を検証できます。
@@ -131,6 +132,7 @@ image:cs_ADExample.png["AD接続"]
 
 
 
+[[troubleshooting-user-directory-collector-configuration-errors]]
 == ユーザーディレクトリコレクターの構成エラーのトラブルシューティング
 
 次の表では、コレクターの構成中に発生する可能性のある既知の問題と解決策について説明します。

@@ -21,6 +21,7 @@ NOTE: このページはサードパーティの指示を参照しており、�
 
 
 
+[[pagerduty-setup]]
 == PagerDutyのセットアップ:
 
 . PagerDutyで*サービス>サービスディレクトリ*に移動し、*+新しいサービス*ボタンをクリックします。
@@ -48,6 +49,7 @@ image:webhook-pagerduty-4.png["PagerDuty統合選択画面、幅=500"]
 
 
 
+[[create-data-infrastructure-insights-webhook]]
 == Data Infrastructure Insights Webhook を作成します。
 
 . Data Infrastructure Insightsで、*管理 > 通知* に移動し、*Webhooks* タブを選択します。新しい Webhook を作成するには、[+Webhook] をクリックします。
@@ -63,6 +65,7 @@ image:Webhooks_Custom_Secret_Routing_Key.png["ルーティングキーの設定"
 
 
 
+[[pagerduty-to-data-infrastructure-insights-field-mapping]]
 == PagerDuty からData Infrastructure Insightsへのフィールド マッピング
 
 次の表と画像は、PagerDuty とData Infrastructure Insights間のフィールドのマッピングを示しています。
@@ -90,6 +93,7 @@ image:Webhooks-PagerDuty_Fields.png["CI の PagerDuty フィールド"]
 
 
 
+[[notifications-via-webhook]]
 == Webhook経由の通知
 
 Webhook経由でイベントを通知するには、Data Infrastructure Insightsで*アラート>モニター*に移動し、*+モニター*をクリックして新しいモニターを作成します。link:task_create_monitor.html["monitor"] 。

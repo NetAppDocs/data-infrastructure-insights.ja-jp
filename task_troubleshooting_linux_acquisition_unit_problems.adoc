@@ -58,6 +58,7 @@ keywords: AU, acquisition unit, trioubleshooting
 |===
 
 
+[[considerations-about-proxies-and-firewalls]]
 == プロキシとファイアウォールに関する考慮事項
 
 組織でインターネット アクセスにプロキシの使用が必要な場合は、組織のプロキシの動作を理解し、 Data Infrastructure Insightsが機能するための特定の例外を探す必要がある場合があります。次の事項に注意してください。
@@ -80,6 +81,7 @@ Data Infrastructure Insights取得ユニット、および Web ブラウザー�
 
 
 
+[[viewing-proxy-endpoints]]
 === プロキシエンドポイントの表示
 
 オンボーディング中にデータ コレクターを選択するときに [*プロキシ設定*] リンクをクリックするか、[*ヘルプ > サポート*] ページの [_プロキシ設定_] の下のリンクをクリックすると、プロキシ エンドポイントを表示できます。次のような表が表示されます。環境に Workload Security がある場合は、設定されたエンドポイント URL もこのリストに表示されます。
@@ -88,6 +90,7 @@ image:ProxyEndpoints_NewTable.png["プロキシエンドポイントテーブル
 
 
 
+[[resources]]
 == リソース
 
 追加のトラブルシューティングのヒントについては、link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["NetAppナレッジベース"] (サポートへのサインインが必要です)。

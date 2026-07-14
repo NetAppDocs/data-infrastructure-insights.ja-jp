@@ -20,6 +20,7 @@ Data Infrastructure Insights、新しい機能と機能を _プレビュー_ 形
 
 
 
+[[current-previews]]
 == 現在のプレビュー：
 
 * link:ai_for_dii_overview.html["Data Infrastructure Insights AIアシスタント"]プレビュー。

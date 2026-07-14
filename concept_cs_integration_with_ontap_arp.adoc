@@ -30,6 +30,7 @@ Workload Security はONTAPから ARP イベントを受信し、次のアクシ�
 
 
 
+[[prerequisites]]
 == 前提条件
 
 . 最小ONTAPバージョン: 9.11.1
@@ -40,6 +41,7 @@ Workload Security はONTAPから ARP イベントを受信し、次のアクシ�
 
 
 
+[[user-permissions-required]]
 == ユーザー権限が必要です
 
 クラスター管理資格情報を使用している場合は、新しい権限は必要ありません。
@@ -56,6 +58,7 @@ security login role create -role csrole -cmddirname "security anti-ransomware vo
 
 
 
+[[sample-alert]]
 == サンプルアラート
 
 ARP イベントにより生成されたアラートのサンプルを以下に示します。
@@ -66,12 +69,14 @@ image:CS_Ransomware_Example_1.png["ランサムウェアアラートのトップ
 
 
 
+[[limitations]]
 == 制限事項
 
 SVM が Workload Security によって監視されていないが、 ONTAPによって ARP イベントが生成されている場合でも、そのイベントは Workload Security によって受信され、表示されます。ただし、アラートに関連するフォレンジック情報やユーザー マッピングは取得または表示されません。
 
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 既知の問題とその解決策を次の表に示します。

@@ -22,6 +22,7 @@ NOTE: エージェントをインストールする前にインストールフ�
 
 
 
+[[installing-an-agent]]
 == エージェントのインストール
 
 サービス データ コレクターをインストールしていて、まだエージェントを構成していない場合は、まず適切なオペレーティング システム用のエージェントをインストールするように求められます。このトピックでは、次のオペレーティング システムに Telegraf エージェントをインストールする手順について説明します。
@@ -51,6 +52,7 @@ NOTE: プロキシを使用している場合は、Telegraf エージェント�
 
 
 
+[[log-locations]]
 === ログの場所
 
 デフォルトでは、Telegraf ログ メッセージは stdout から次のログ ファイルにリダイレクトされます。
@@ -62,6 +64,7 @@ NOTE: プロキシを使用している場合は、Telegraf エージェント�
 
 
 
+[[windows]]
 === Windows
 
 
@@ -149,6 +152,7 @@ sc.exe delete telegraf
 
 
 
+[[rhel-and-centos]]
 === RHEL と CentOS
 
 
@@ -251,6 +255,7 @@ systemctl stop telegraf (If your operating system is using systemd (CentOS 7+ an
 
 
 
+[[ubuntu-and-debian]]
 === UbuntuとDebian
 
 
@@ -353,12 +358,15 @@ systemctl stop telegraf (If your operating system is using systemd)
 
 
 
+[[verifying-telegraf-package-checksums]]
+[[verifying-checksums]]
 == Telegraf パッケージのチェックサムの検証
 
 Data Infrastructure Insightsエージェント インストーラーは整合性チェックを実行しますが、ダウンロードした Telegraf バイナリをインストールする前に独自の検証を実行することを望むユーザーもいます。これは、インストーラーをダウンロードし、ダウンロードしたパッケージのチェックサムを生成し、そのチェックサムをインストール手順に示されている値と比較することで実行できます。
 
 
 
+[[download-the-installer-package-without-installing]]
 === インストールせずにインストーラーパッケージをダウンロードする
 
 ダウンロードのみの操作 (デフォルトのダウンロードとインストールではなく) を実行するには、ユーザーは UI から取得したエージェント インストール コマンドを編集し、「インストール」オプションを削除します。
@@ -405,6 +413,7 @@ DII からダウンロードしてコピーされたインストール スニペ
 
 
 
+[[verify-checksum-value]]
 === チェックサム値を検証する
 
 チェックサム値を生成するには、適切なプラットフォームに応じて次のコマンドを実行します。
@@ -419,6 +428,7 @@ DII からダウンロードしてコピーされたインストール スニペ
 
 
 
+[[install-the-downloaded-package]]
 === ダウンロードしたパッケージをインストールする
 
 すべてのアーティファクトが適切に検証されたら、次のコマンドを実行してエージェントのインストールを開始できます。
@@ -431,12 +441,14 @@ Windows：
  .\cloudinsights-windows.ps1 -install
 
 
+[[creating-and-using-api-access-tokens]]
 == APIアクセストークンの作成と使用
 
 Telegraf データ取り込み用の API アクセス トークンを作成するには、次のいずれかを実行してください。
 
 
 
+[[create-through-the-data-collector-installation-page]]
 === データコレクターのインストールページから作成する
 
 . 使用するプラットフォーム (Windows、Linux) の Data Collector インストール ページに移動します。
@@ -447,6 +459,7 @@ Telegraf データ取り込み用の API アクセス トークンを作成す�
 
 
 
+[[manually-create-an-api-access-token]]
 === APIアクセストークンを手動で作成する
 
 . [管理] > [API アクセス] に移動します。
@@ -466,6 +479,7 @@ Telegraf データ取り込み用の API アクセス トークンを作成す�
 
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 エージェントの設定中に問題が発生した場合に試すことができるいくつかのこと:

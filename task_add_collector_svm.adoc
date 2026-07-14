@@ -18,6 +18,7 @@ ONTAP SVM データ コレクターを使用すると、Workload Security はNet
 
 
 
+[[before-you-begin]]
 == 開始する前に
 
 * このデータ コレクターは以下でサポートされています。
@@ -79,6 +80,7 @@ ONTAP SVM データ コレクターを使用すると、Workload Security はNet
 
 
 
+[[test-connectivity-for-data-collectors]]
 == データコレクターの接続テスト
 
 テスト接続機能 (2025 年 3 月に導入) は、 Data Infrastructure Insights (DII) ワークロード セキュリティでデータ コレクターを設定するときに、エンド ユーザーが障害の具体的な原因を特定できるようにすることを目的としています。これにより、ユーザーはネットワーク通信や役割の不足に関連する問題を自己修正できるようになります。
@@ -90,6 +92,7 @@ NOTE: ユーザーディレクトリコレクターではテスト接続はサ�
 
 
 
+[[prerequisites-for-connection-testing]]
 === 接続テストの前提条件
 
 * この機能が完全に動作するには、クラスター レベルの認証情報が必要です。
@@ -104,6 +107,7 @@ image:ws_test_connection_button.png["ワークロードセキュリティテス�
 
 
 
+[[test-the-connection]]
 === 接続をテストする
 
 ユーザーはコレクターの追加/編集ページに移動し、クラスター レベルの詳細 (クラスター モードの場合) または SVM レベルの詳細 (SVM モードの場合) を入力して、[接続のテスト] ボタンをクリックできます。  Workload Security はリクエストを処理し、適切な成功または失敗のメッセージを表示します。
@@ -112,6 +116,7 @@ image:ws_test_connection_success_example.png["ワークロードセキュリテ�
 
 
 
+[[things-to-note-for-ontap-multi-admin-verify-mav]]
 == ONTAP Multi Admin Verify（MAV）の注意事項
 
 スナップショットの作成と削除やユーザー ブロック（SMB）などの一部の機能は、ご使用のバージョンのONTAPに追加されたMAVコマンドによっては機能しない場合があります。
@@ -129,6 +134,7 @@ multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snap
  multi-admin-verify rule delete -operation set
 
 
+[[prerequisites-for-user-access-blocking]]
 == ユーザーアクセスブロックの前提条件
 
 以下の点に留意してくださいlink:cs_restrict_user_access.html["ユーザーアクセスのブロック"]:
@@ -141,10 +147,12 @@ multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snap
 
 
 
+[[a-note-about-permissions]]
 == 権限に関する注意事項
 
 
 
+[[permissions-when-adding-via-cluster-management-ip]]
 === *クラスタ管理IP*経由で追加する場合の権限:
 
 クラスタ管理管理者ユーザーを使用して Workload Security がONTAP SVM データ コレクターにアクセスできるようにできない場合は、以下のコマンドに示すように、ロールを持つ「csuser」という名前の新しいユーザーを作成できます。クラスタ管理 IP を使用するように Workload Security データ コレクターを構成するときは、ユーザー名「csuser」と「csuser」のパスワードを使用します。
@@ -175,6 +183,7 @@ security login create -user-or-group-name csuser -application http -authmethod p
 ....
 
 
+[[permissions-when-adding-via-vserver-management-ip]]
 === *Vserver 管理 IP* 経由で追加する場合の権限:
 
 クラスタ管理管理者ユーザーを使用して Workload Security がONTAP SVM データ コレクターにアクセスできるようにできない場合は、以下のコマンドに示すように、ロールを持つ「csuser」という名前の新しいユーザーを作成できます。  Vserver 管理 IP を使用するように Workload Security データ コレクターを構成するときは、ユーザー名「csuser」と「csuser」のパスワードを使用します。
@@ -205,6 +214,7 @@ security login create -user-or-group-name csuser -application http -authmethod p
 ....
 
 
+[[protobuf-mode]]
 === プロトコルバッファモード
 
 このオプションがコレクターの_詳細設定_設定で有効になっている場合、Workload Security は FPolicy エンジンを protobuf モードで設定します。  Protobuf モードは、 ONTAPバージョン 9.15 以降でサポートされています。
@@ -221,6 +231,7 @@ Vserver モード:
  security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
 
 
+[[permissions-for-ontap-autonomous-ransomware-protection-and-ontap-access-denied]]
 === ONTAP Autonomous Ransomware Protection およびONTAPアクセスの権限が拒否されました
 
 クラスター管理資格情報を使用している場合は、新しい権限は必要ありません。
@@ -233,6 +244,7 @@ Vserver モード:
 
 
 
+[[configure-the-data-collector]]
 == データコレクターを構成する
 
 .設定手順
@@ -295,6 +307,7 @@ ONTAP SVM 設定ページが表示されます。各フィールドに必要な�
 
 
 
+[[recommended-configuration-for-metrocluster]]
 == MetroClusterの推奨構成
 
 MetroClusterには以下が推奨されます。
@@ -308,6 +321,7 @@ MetroClusterには以下が推奨されます。
 
 
 
+[[service-policy]]
 == サービス ポリシー
 
 ONTAP *バージョン 9.9.1 以降*でサービス ポリシーを使用する場合、データ ソース コレクターに接続するには、データ サービス _data-nfs_ や _data-cifs_ とともに _data-fpolicy-client_ サービスが必要です。
@@ -323,6 +337,7 @@ ONTAP 9.9.1 より前のバージョンでは、_data-fpolicy-client_ を設定�
 
 
 
+[[play-pause-data-collector]]
 == 再生・一時停止データコレクター
 
 データ コレクターが _実行中_ 状態の場合、収集を一時停止できます。コレクターの「3 つのドット」メニューを開き、[一時停止] を選択します。コレクターが一時停止している間は、 ONTAPからデータは収集されず、コレクターからONTAPにデータは送信されません。つまり、Fpolicy イベントはONTAPからデータ コレクターに流れず、そこからData Infrastructure Insightsに流れません。
@@ -345,6 +360,7 @@ NOTE: コレクターにユーザーが制限されている場合、コレク�
 
 
 
+[[persistent-store]]
 == 永続ストア
 
 永続ストアはONTAP 9.14.1 以降でサポートされています。ボリューム名の指示はONTAP 9.14 と 9.15 で異なることに注意してください。
@@ -371,12 +387,14 @@ security login role create -vserver <vservername> -role csrole -cmddirname "job 
 ....
 
 
+[[migrate-collectors]]
 == コレクターの移行
 
 Workload Security コレクターをあるエージェントから別のエージェントに簡単に移行できるため、エージェント間でコレクターの負荷を効率的に分散できます。
 
 
 
+[[prerequisites]]
 === 前提条件
 
 * ソース エージェントは _connected_ 状態である必要があります。
@@ -391,6 +409,7 @@ Workload Security コレクターをあるエージェントから別のエー�
 
 
 
+[[migrate-collector]]
 === 移行コレクター
 
 コレクターを移行するには、次の手順に従います。
@@ -408,6 +427,7 @@ image:ws_migrate_collector_to_another_agent.png["別のエージェントを選�
 
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 参照link:troubleshooting_collector_svm.html["SVMコレクターのトラブルシューティング"]トラブルシューティングのヒントのページ。

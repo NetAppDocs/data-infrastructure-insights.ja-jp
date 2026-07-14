@@ -20,6 +20,7 @@ image:SupportPageExample.png["サポートページ、幅=600"]
 
 
 
+[[activating-support-entitlement]]
 == サポート資格の有効化
 
 Data Infrastructure Insights は、試用モードで実行しているときにセルフサービス サポートと電子メール サポートを提供します。サービスに加入したら、サポート資格を有効にすることを強くお勧めします。サポート資格を有効にすると、Web チケット システムと電話を介してテクニカル サポートにアクセスできるようになります。登録が完了するまで、デフォルトのサポート モードはセルフ サービスです。見る<<obtaining-support-information,詳細>>下に。
@@ -32,6 +33,7 @@ Data Infrastructure Insights は、試用モードで実行しているときに
 
 
 
+[[option-1-steps-for-a-user-with-a-pre-existing-netapp-support-site-nss-sso-account]]
 === オプション 1: 既存のNetAppサポート サイト (NSS) SSO アカウントを持つユーザーの手順
 
 .手順
@@ -50,6 +52,7 @@ image:ExistingCustomerRegExample.png["既存顧客フォーム"]
 
 
 
+[[option-2-steps-for-a-new-netapp-customer-with-no-pre-existing-netapp-support-site-nss-sso-account]]
 === オプション 2: 既存のNetAppサポート サイト (NSS) SSO アカウントを持たない新しいNetApp顧客向けの手順
 
 .手順
@@ -70,12 +73,14 @@ image:SupportPage_SN_Section-NA.png["SN_スクリーン"]
 
 
 
+[[obtaining-support-information]]
 == サポート情報の入手
 
 NetApp は、さまざまな方法でData Infrastructure Insightsのサポートを提供します。ナレッジベース (KB) 記事やNetAppコミュニティなど、豊富な無料のセルフサポート オプションが 24 時間 365 日ご利用いただけます。Data Infrastructure Insightsに加入しているユーザーは、電話または Web チケットを通じてテクニカル サポートを受けることができます。Web チケットとケース管理には、 NetAppサポート サイト (NSS) SSO アカウントが必要です。
 
 
 
+[[self-service-support]]
 === セルフサービスサポート:
 
 以下のサポート オプションは試用モードで利用可能で、24 時間 365 日無料でご利用いただけます。
@@ -98,6 +103,7 @@ NetApp は、さまざまな方法でData Infrastructure Insightsのサポート
 
 
 
+[[subscription-support]]
 === サブスクリプションサポート
 
 上記のセルフサポート オプションに加えて、 Data Infrastructure Insightsサブスクリプション、または監視対象のNetApp製品やサービスの有料サポートをお持ちの場合は、 NetAppサポート エンジニアと協力して問題を解決することができます。
@@ -127,12 +133,14 @@ image:Support_View_SN.png["サポートSNを表示"]
 
 
 
+[[data-infrastructure-insights-data-collector-support-matrix]]
 == Data Infrastructure Insightsデータコレクターサポートマトリックス
 
 サポートされているデータコレクターに関する情報や詳細は、link:reference_data_collector_support_matrix.html["*Data Infrastructure Insightsデータ コレクター サポート マトリックス*、role="external""] 。
 
 
 
+[[learning-center]]
 === ラーニングセンター
 
 サブスクリプションの種類に関係なく、*ヘルプ > サポート* には、Data Infrastructure Insightsを最大限に活用するのに役立ついくつかのNetApp University コースへのリンクがあります。ぜひチェックしてみてください！

@@ -16,6 +16,7 @@ Data Infrastructure Insights は、 Lenovo データ コレクターを使用し
 
 
 
+[[requirements]]
 == 要件
 
 * Prism外部IPアドレス
@@ -25,9 +26,10 @@ Data Infrastructure Insights は、 Lenovo データ コレクターを使用し
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -42,9 +44,10 @@ Data Infrastructure Insights は、 Lenovo データ コレクターを使用し
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -59,6 +62,7 @@ Data Infrastructure Insights は、 Lenovo データ コレクターを使用し
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

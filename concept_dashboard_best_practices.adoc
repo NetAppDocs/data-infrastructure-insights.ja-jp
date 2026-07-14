@@ -18,6 +18,7 @@ keywords: dashboard, hints, tips, best practice, widgets, metrics,
 
 
 
+[[finding-the-right-metric]]
 == 適切な指標を見つける
 
 Data Infrastructure Insights は、データ コレクターごとに異なる場合がある名前を使用してカウンターとメトリックを取得します。
@@ -64,6 +65,7 @@ Data Infrastructure Insights は、データ コレクターごとに異なる�
 
 
 
+[[finding-the-right-assets]]
 == 適切な資産を見つける
 
 ウィジェットのフィルターや検索で参照できるアセットは、アセットの種類によって異なります。
@@ -96,6 +98,7 @@ Data Infrastructure Insights は、データ コレクターごとに異なる�
 
 
 
+[[scatter-plot-example-knowing-your-axis]]
 == 散布図の例: 軸を知る
 
 散布図ウィジェット内のカウンターの順序を変更すると、データが表示される軸が変更されます。

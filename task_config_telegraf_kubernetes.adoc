@@ -18,18 +18,21 @@ Data Infrastructure Insights は、このデータ コレクターを使用し�
 
 
 
+[[installation]]
 == インストール
 
 Kubernetesのインストール手順については、link:task_config_telegraf_agent_k8s.html["Kubernetes モニタリング オペレーター"]ページ。
 
 
 
+[[about-kube-state-metrics]]
 == Kube-state-metricsについて
 
 Kubernetes モニタリング オペレーターは kube-state-metrics を自動的にインストールします。ユーザーの操作は必要ありません。
 
 
 
+[[kube-state-metrics-counters]]
 === Kube-state-metrics カウンター
 
 NetApp Kubernetes Monitoring Operator は、以下にリストされている kube-state-metrics カウンターを抽出します。各カウンターの詳細については、以下をご覧ください。 https://github.com/kubernetes/kube-state-metrics/tree/main/docs#exposed-metrics[] 。

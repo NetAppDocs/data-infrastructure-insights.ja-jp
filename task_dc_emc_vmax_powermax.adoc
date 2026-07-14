@@ -14,6 +14,7 @@ Data Infrastructure Insights は、環境内の既存の Solutions Enabler サ�
 
 
 
+[[requirements]]
 == 要件
 
 このデータ コレクターを構成する前に、 Data Infrastructure Insights が既存の Solutions Enabler サーバー上のポート 2707 に TCP 接続できることを確認する必要があります。  Data Infrastructure Insights は、そのサーバーからの「symcfg list」出力に表示される、このサーバーに「ローカル」であるすべての Symmetrix アレイを検出します。
@@ -47,11 +48,12 @@ cisys storapid <all>
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、 EMC VMAX/PowerMax データ ソースから次のインベントリ情報を取得します。取得した資産の種類ごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -77,11 +79,12 @@ Data Infrastructure Insights は、 EMC VMAX/PowerMax データ ソースから�
 
 
 
+[[configuration]]
 == 構成
 
 *注:* SMI-S ユーザー認証が有効になっていない場合、 Data Infrastructure Insightsデータ コレクターのデフォルト値は無視されます。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -96,9 +99,10 @@ Data Infrastructure Insights は、 EMC VMAX/PowerMax データ ソースから�
 |===
 
 
+[[advanced-configuration]]
 == 詳細設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -137,11 +141,12 @@ Data Infrastructure Insights は、 EMC VMAX/PowerMax データ ソースから�
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 問題： | これを試してください: 
 

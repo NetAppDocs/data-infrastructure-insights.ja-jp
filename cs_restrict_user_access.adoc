@@ -24,6 +24,7 @@ summary: 侵害を受けたユーザーのアクセスを自動または手動�
 
 
 
+[[prerequisites-for-user-access-blocking]]
 == ユーザーアクセスブロックの前提条件
 
 この機能が動作するには、クラスター レベルの資格情報が必要です。
@@ -45,6 +46,7 @@ security login role create -role csrole -cmddirname "vserver name-mapping" -acce
 
 
 
+[[how-to-enable-the-feature]]
 == この機能を有効にするにはどうすればいいですか?
 
 * Workload Security で、*Workload Security > ポリシー > 自動応答ポリシー* に移動します。  *+攻撃ポリシー*を選択します。
@@ -53,6 +55,7 @@ security login role create -role csrole -cmddirname "vserver name-mapping" -acce
 
 
 
+[[how-to-set-up-automatic-user-access-blocking]]
 == 自動ユーザーアクセスブロックを設定するにはどうすればいいですか?
 
 * 新しい攻撃ポリシーを作成するか、既存の攻撃ポリシーを編集します。
@@ -64,6 +67,7 @@ security login role create -role csrole -cmddirname "vserver name-mapping" -acce
 
 
 
+[[how-to-know-if-there-are-blocked-users-in-the-system]]
 == システム内にブロックされたユーザーがいるかどうかを知るにはどうすればいいですか?
 
 * アラート リスト ページでは、ユーザーがブロックされている場合に画面上部にバナーが表示されます。
@@ -73,6 +77,7 @@ security login role create -role csrole -cmddirname "vserver name-mapping" -acce
 
 
 
+[[restrict-and-manage-user-access-manually]]
 == ユーザーアクセスを手動で制限および管理する
 
 * アラートの詳細画面またはユーザーの詳細画面に移動し、それらの画面からユーザーを手動でブロックまたは復元することができます。
@@ -80,12 +85,14 @@ security login role create -role csrole -cmddirname "vserver name-mapping" -acce
 
 
 
+[[user-access-limitation-history]]
 == ユーザーアクセス制限履歴
 
 アラートの詳細とユーザーの詳細ページのユーザー パネルでは、ユーザーのアクセス制限履歴の監査を表示できます。時間、アクション (ブロック、ブロック解除)、期間、実行されたアクション、手動/自動、NFS の影響を受ける IP などが表示されます。
 
 
 
+[[how-to-disable-the-feature]]
 == 機能を無効にするにはどうすればいいですか?
 
 この機能はいつでも無効にすることができます。システムに制限されたユーザーが存在する場合は、まずそのユーザーのアクセスを復元する必要があります。
@@ -98,6 +105,7 @@ security login role create -role csrole -cmddirname "vserver name-mapping" -acce
 
 
 
+[[manually-restore-ips-for-nfs]]
 == NFSのIPを手動で復元する
 
 Workload Security のトライアルの有効期限が切れた場合、またはエージェント/コレクターがダウンしている場合は、次の手順に従ってONTAPから IP を手動で復元します。
@@ -143,6 +151,7 @@ svm2         test            3       cifs,    0.0.0.0/0             any
 
 
 
+[[manually-restore-users-for-smb]]
 == SMBのユーザーを手動で復元する
 
 Workload Security のトライアルの有効期限が切れた場合、またはエージェント/コレクターがダウンしている場合は、次の手順に従ってONTAPからユーザーを手動で復元します。
@@ -181,6 +190,7 @@ Position Hostname         IP Address/Mask
 
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 |===

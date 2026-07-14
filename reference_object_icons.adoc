@@ -18,18 +18,21 @@ Data Infrastructure Insightsで使用されるオブジェクト アイコン。
 
 
 
+[[infrastructure-icons]]
 == インフラストラクチャアイコン:
 
 image:Icon_Glossary.png["インフラストラクチャアイコンリファレンス"]
 
 
 
+[[kubernetes-icons]]
 == Kubernetes アイコン:
 
 image:K8sIconsWithLabels.png["Kubernetes アイコンリファレンス、幅=180"]
 
 
 
+[[kubernetes-network-performance-monitoring-and-map-icons]]
 == Kubernetes ネットワーク パフォーマンス監視とマップ アイコン:
 
 image:ServiceMap_Icons.png["Kubernetes ネットワークパフォーマンス監視とマップ、幅 = 640"]

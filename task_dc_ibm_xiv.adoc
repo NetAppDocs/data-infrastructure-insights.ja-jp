@@ -14,9 +14,10 @@ IBM XIV および A9000 (CLI) データ コレクターは、XIV コマンド �
 
 
 
+[[terminology]]
 == 用語
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -34,6 +35,7 @@ IBM XIV および A9000 (CLI) データ コレクターは、XIV コマンド �
 |===
 
 
+[[requirements]]
 == 要件
 
 このデータ コレクターを構成して使用するには、次の要件を満たす必要があります。
@@ -45,6 +47,7 @@ IBM XIV および A9000 (CLI) データ コレクターは、XIV コマンド �
 
 
 
+[[performance-requirements]]
 == パフォーマンス要件
 
 パフォーマンス収集の要件は次のとおりです。
@@ -59,9 +62,10 @@ IBM XIV および A9000 (CLI) データ コレクターは、XIV コマンド �
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -82,9 +86,10 @@ IBM XIV および A9000 (CLI) データ コレクターは、XIV コマンド �
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -108,6 +113,7 @@ IBM XIV および A9000 (CLI) データ コレクターは、XIV コマンド �
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

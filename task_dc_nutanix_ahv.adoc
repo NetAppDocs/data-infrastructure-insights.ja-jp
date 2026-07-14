@@ -1,0 +1,107 @@
+---
+sidebar: sidebar 
+permalink: task_dc_nutanix_ahv.html 
+keywords: data collector, Nutanix, AHV Series 
+summary: Nutanix AHV データコレクターの設定。 
+---
+= Nutanix AHVデータコレクター
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nutanix AHVコレクターは、Prism Central v4 REST API（クラスタ管理および仮想マシン管理ネームスペース）を使用して、Nutanix Prism CentralからNutanix Acropolis Hypervisor（AHV）のインベントリと仮想化パフォーマンスを取得します。仮想化ODataモデルでデータを報告します（VirtualizationRootおよび関連するエンティティ：ホスト、仮想マシン、データストア、仮想ディスク、および関係）。
+
+
+
+[[terminology]]
+== 用語
+
+[cols="50,50"]
+|===
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
+
+
+| AHVノード（ホスト） | ホスト 
+
+
+| Prism Central Cluster | ハイパーバイザー（仮想サーバー） 
+
+
+| Acropolis VM | 仮想マシン 
+
+
+| ストレージ コンテナ | データ ストア 
+
+
+| ADSFボリュームグループ | LUN 
+
+
+| VM ディスク | 仮想ディスク 
+|===
+注: これらは一般的な用語のマッピングのみであり、このデータ コレクターのすべてのケースを反映しているわけではありません。
+
+
+
+[[requirements]]
+== 要件
+
+* Prism CentralのIPアドレスまたは完全修飾ドメイン名
+* Prism CentralのローカルまたはLDAPユーザー名とパスワード（インベントリおよびパフォーマンスには読み取り専用アカウントで十分です。管理者権限は不要です）
+* ポート要件：HTTPS 9440
+* Prism Central バージョン pc.2023.x 以降（v3 API）、pc.7.x 以降推奨（v4 API）
+* パフォーマンス指標を使用するには、API v4.0.b1以降（pc.7.3以降）のPrism Centralが必要です。旧バージョンでは、インベントリは収集されますが、パフォーマンスデータは報告されません。
+
+
+
+
+[[configuration]]
+== 構成
+
+[cols="50,50"]
+|===
+| フィールド | 説明 
+
+
+| Prism CentralのIPアドレス | Prism CentralインスタンスのIPアドレスまたはFQDN 
+
+
+| ユーザ名 | Prism Centralのユーザー名 
+
+
+| パスワード | Prism Centralのパスワード 
+|===
+
+
+[[advanced-configuration]]
+== 高度な設定
+
+[cols="50,50"]
+|===
+| フィールド | 説明 
+
+
+| TCP ポート | Prism Centralへの接続に使用されるTCPポート。デフォルトは9440です。 
+
+
+| インベントリポーリング間隔（分） | インベントリ ポーリングの間隔。デフォルトは60分です。 
+
+
+| パフォーマンスポーリング間隔(秒) | パフォーマンス ポーリングの間隔。デフォルトは300秒です。 
+
+
+| HTTPタイムアウト（秒） | HTTPリクエストのタイムアウト。デフォルトは60秒です。 
+
+
+| HTTPリトライ回数 | 一時的な障害発生時のHTTP再試行回数。デフォルト値は3です。 
+|===
+
+
+[[troubleshooting]]
+== トラブルシューティング
+
+このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

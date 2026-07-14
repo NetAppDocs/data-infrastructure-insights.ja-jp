@@ -21,6 +21,7 @@ IMPORTANT: これらのセクションの例は説明のみを目的としてお
 
 
 
+[[creating-a-dashboard]]
 == ダッシュボードの作成
 
 新しいダッシュボードは、次の 2 つの場所のいずれかで作成します。
@@ -31,12 +32,14 @@ IMPORTANT: これらのセクションの例は説明のみを目的としてお
 
 
 
+[[see-it-in-action]]
 == 実際に動作を見てみましょう
 
 link:https://media.netapp.com/video-detail/5a293f3c-c655-5879-9133-1a32aaa140e8["NetAppで強力なダッシュボードを作成する (ビデオ)"]
 
 
 
+[[dashboard-controls]]
 == ダッシュボードコントロール
 
 ダッシュボード画面にはいくつかのコントロールがあります。
@@ -55,6 +58,7 @@ link:https://media.netapp.com/video-detail/5a293f3c-c655-5879-9133-1a32aaa140e8[
 
 
 
+[[widget-types]]
 == ウィジェットの種類
 
 次のウィジェット タイプから選択できます。
@@ -107,6 +111,7 @@ image:time_bar_chart.png["ログデータを表示する時間棒グラフの例
 
 
 
+[[setting-a-dashboard-as-your-home-page]]
 == ダッシュボードをホームページとして設定する
 
 次のいずれかの方法を使用して、テナントの *ホームページ* として設定するダッシュボードを選択できます。

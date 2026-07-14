@@ -14,11 +14,12 @@ Data Infrastructure Insights は、 Oracle ZFS Storage Appliance データ コ�
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、 Oracle ZFS データ コレクターを使用してインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -47,6 +48,7 @@ Data Infrastructure Insights は、 Oracle ZFS データ コレクターを使�
 
 
 
+[[requirements]]
 == 要件
 
 * ZFS コントローラ 1 と ZFS コントローラ 2 のホスト名
@@ -56,6 +58,7 @@ Data Infrastructure Insights は、 Oracle ZFS データ コレクターを使�
 
 
 
+[[required-performance-metrics]]
 == 必要なパフォーマンスメトリック
 
 Oracle ZFS アプライアンスは、ストレージ管理者にパフォーマンス統計をキャプチャするための大きな柔軟性を提供します。  Data Infrastructure Insights、高可用性ペアの各コントローラーが次のメトリックをキャプチャするように構成されている必要があります。
@@ -70,9 +73,10 @@ Oracle ZFS アプライアンスは、ストレージ管理者にパフォーマ
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -90,9 +94,10 @@ Oracle ZFS アプライアンスは、ストレージ管理者にパフォーマ
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -110,12 +115,14 @@ Oracle ZFS アプライアンスは、ストレージ管理者にパフォーマ
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
+[[inventory]]
 === インベントリ
 
 [cols="2a, 2a"]

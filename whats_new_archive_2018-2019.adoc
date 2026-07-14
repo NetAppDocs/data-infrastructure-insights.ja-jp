@@ -13,15 +13,18 @@ keywords: features
 :imagesdir: ./media/
 
 
+[[whats-new]]
 [role="lead"]
 NetAppは、製品とサービスを継続的に改善および強化しています。ここでは、Data Infrastructure Insights (旧称Cloud Insights) で利用できる最新の機能の一部を紹介します。
 
 
 
+[[december-2020]]
 == 2020年12月
 
 
 
+[[simpler-kubernetes-installation]]
 === よりシンプルなKubernetesのインストール
 
 Kubernetes エージェントのインストールが合理化され、ユーザーによる操作が少なくて済むようになりました。link:task_config_telegraf_agent_k8s.html["Kubernetesエージェントのインストール"] Kubernetes データ収集が含まれるようになりました。
@@ -29,10 +32,12 @@ Kubernetes エージェントのインストールが合理化され、ユーザ
 '''
 
 
+[[november-2020]]
 == 2020年11月
 
 
 
+[[additional-dashboards]]
 === 追加のダッシュボード
 
 次の新しいONTAPに特化したダッシュボードがギャラリーに追加され、インポートできるようになりました。
@@ -54,6 +59,7 @@ Kubernetes エージェントのインストールが合理化され、ユーザ
 
 
 
+[[column-rename-in-table-widgets]]
 === テーブルウィジェットの列名の変更
 
 テーブル ウィジェットの [メトリックと属性] セクションの列の名前を変更するには、ウィジェットを編集モードで開き、列の上部にあるメニューをクリックします。新しい名前を入力して [_Save_] をクリックするか、[_Reset_] をクリックして列を元の名前に戻します。
@@ -65,22 +71,26 @@ image:Table_Widget_Column_Rename.png["テーブルウィジェットの列名変
 '''
 
 
+[[october-2020]]
 == 2020年10月
 
 
 
+[[default-expansion-of-integration-data]]
 === 統合データのデフォルトの拡張
 
 テーブル ウィジェットのグループ化により、Kubernetes、 ONTAP Advanced Data、およびエージェント ノードのメトリックのデフォルトの拡張が可能になりました。たとえば、Kubernetes _Nodes_ を _Cluster_ ごとにグループ化すると、テーブルに各クラスターの行が表示されます。次に、各クラスター行を展開して、ノード オブジェクトのリストを表示できます。
 
 
 
+[[basic-edition-technical-support]]
 === ベーシックエディションのテクニカルサポート
 
 テクニカル サポートは、Standard Edition および Premium Edition に加えて、 Cloud Insights Basic Edition の加入者にも利用できるようになりました。さらに、 Cloud Insightsにより、 NetAppサポート チケットを作成するワークフローが簡素化されました。
 
 
 
+[[cloud-secure-public-api]]
 === Cloud SecureパブリックAPI
 
 Cloud Secureはlink:concept_cs_api.html["REST API"]アクティビティとアラートの情報にアクセスします。これは、 Cloud Secure Admin UI を通じて作成された API アクセス トークンを使用することで実現され、その後 REST API へのアクセスに使用されます。これらの REST API の Swagger ドキュメントはCloud Secureと統合されています。
@@ -88,10 +98,12 @@ Cloud Secureはlink:concept_cs_api.html["REST API"]アクティビティとア�
 '''
 
 
+[[september-2020]]
 == 2020年9月
 
 
 
+[[query-page-with-integration-data]]
 === 統合データを含むクエリページ
 
 Cloud Insightsクエリ ページは、統合データ (Kubernetes、 ONTAP Advanced Metrics など) をサポートします。統合データを使用する場合、クエリ結果テーブルには「分割画面」ビューが表示され、左側にオブジェクト/グループ、右側にオブジェクト データ (属性/メトリック) が表示されます。統合データをグループ化するために複数の属性を選択することもできます。
@@ -100,6 +112,7 @@ image:QueryPageIntegrationData.png["統合データを表示するクエリ"]
 
 
 
+[[unit-display-formatting-in-table-widget]]
 === テーブルウィジェットの単位表示書式
 
 メトリック/カウンター データ (ギガバイト、MB/秒など) を表示する列のテーブル ウィジェットで、単位表示フォーマットが利用できるようになりました。メトリックの表示単位を変更するには、列ヘッダーの「3 つのドット」メニューをクリックし、「単位表示」を選択します。利用可能なユニットから選択できます。使用可能な単位は、表示列のメトリック データの種類によって異なります。
@@ -108,18 +121,21 @@ image:TableWidgetUnitManagement1.png["テーブルウィジェットユニット
 
 
 
+[[acquisition-unit-detail-page]]
 === 取得ユニット詳細ページ
 
 獲得ユニットには独自のランディング ページが用意され、各 AU に関する有用な詳細情報やトラブルシューティングに役立つ情報が提供されるようになりました。そのlink:task_configure_acquisition_unit.html#viewing-au-details["AU詳細ページ"]AU のデータ収集者へのリンクと役立つステータス情報を提供します。
 
 
 
+[[cloud-secure-docker-dependency-removed]]
 === Cloud SecureDocker依存関係の削除
 
 Cloud Secure の Docker への依存関係が削除されました。  Cloud Secureエージェントのインストールに Docker は不要になりました。
 
 
 
+[[reporting-user-roles]]
 === ユーザーロールの報告
 
 Cloud Insights Premium Edition と Reporting をご利用の場合、環境内のすべてのCloud Insightsユーザーに Reporting アプリケーション (Cognos など) へのシングル サインオン (SSO) ログイン権限が付与されます。メニューの *Reports* リンクをクリックすると、Reporting に自動的にログインします。
@@ -148,6 +164,7 @@ IMPORTANT: 現在プレミアムエディションをご利用で、レポート
 
 
 
+[[new-api-category-for-data-ingestion]]
 === データ取り込み用の新しい API カテゴリ
 
 Cloud Insights に*データ取り込み* API カテゴリが追加され、カスタム データとエージェントをより細かく制御できるようになりました。この API カテゴリおよびその他の API カテゴリの詳細なドキュメントは、 Cloud Insightsで *[管理] > [API アクセス]* に移動し、[API ドキュメント] リンクをクリックすると見つかります。  AU の詳細ページと AU リスト ページに表示される「メモ」フィールドで AU にコメントを添付することもできます。
@@ -155,10 +172,12 @@ Cloud Insights に*データ取り込み* API カテゴリが追加され、カ�
 '''
 
 
+[[august-2020]]
 == 2020年8月
 
 
 
+[[monitoring-and-alerting]]
 === 監視と警告
 
 ストレージオブジェクト、VM、EC2、ポートのパフォーマンスポリシーを設定する現在の機能に加えて、 Cloud Insights Standard Editionには、link:task_create_monitor.html["モニターを構成する"] Kubernetes、 ONTAP の高度なメトリック、および Telegraf プラグインの統合データのしきい値。アラートをトリガーするオブジェクト メトリックごとにモニターを作成し、警告レベルまたは重大レベルのしきい値の条件を設定し、各レベルに必要な電子メール受信者を指定するだけです。その後、link:task_view_and_manage_alerts.html["アラートの表示と管理"]傾向を追跡したり、問題をトラブルシューティングしたりします。
@@ -168,10 +187,12 @@ image:define_monitor_conditions_2.png["状況を監視する"]
 '''
 
 
+[[july-2020]]
 == 2020年7月
 
 
 
+[[cloud-secure-take-a-snapshot-action]]
 === Cloud Secure_スナップショット_アクション
 
 Cloud Secure は、悪意のあるアクティビティが検出されると自動的にスナップショットを取得してデータを保護し、データが安全にバックアップされることを保証します。
@@ -184,6 +205,7 @@ Cloud Secure は、悪意のあるアクティビティが検出されると自�
 
 
 
+[[metriccounter-updates]]
 === メトリック/カウンターの更新
 
 Cloud Insights UI および REST API では、次の容量カウンターを使用できます。以前は、これらのカウンターはデータ ウェアハウス/レポートでのみ使用可能でした。
@@ -203,6 +225,7 @@ Cloud Insights UI および REST API では、次の容量カウンターを使�
 |===
 
 
+[[cloud-secure-potential-attack-detection]]
 === Cloud Secure潜在的攻撃検出
 
 Cloud Secure は、ランサムウェアなどの潜在的な攻撃を検出できるようになりました。アラート リスト ページでアラートをクリックすると、次の内容を示す詳細ページが開きます。
@@ -219,12 +242,14 @@ Cloud Secure は、ランサムウェアなどの潜在的な攻撃を検出で�
 
 
 
+[[subscribe-to-premium-edition-through-aws]]
 === AWS 経由でプレミアムエディションをサブスクライブする
 
 Cloud Insightsのトライアル期間中は、link:concept_subscribing_to_cloud_insights.html["セルフサブスクライブ"] AWS Marketplace を通じてCloud Insights Standard Edition または Premium Edition にアップグレードできます。以前は、AWS Marketplace を通じて Standard Edition のみにセルフサブスクライブすることができました。
 
 
 
+[[enhanced-table-widget]]
 === 強化されたテーブルウィジェット
 
 ダッシュボード/アセット ページのテーブル ウィジェットには、次の機能強化が含まれています。
@@ -245,6 +270,7 @@ image:TableWidgetLeftRightPanes.png["左ペインと右ペインを表示する�
 
 
 
+[[metrics-filtering]]
 === メトリクスフィルタリング
 
 ウィジェット内のオブジェクトの属性に基づいてフィルタリングすることに加えて、メトリックに基づいてフィルタリングすることもできるようになりました。
@@ -257,6 +283,7 @@ image:IntegrationMetricFilterExample.png["統合メトリックフィルタリ�
 
 
 
+[[ontap-advanced-counter-data]]
 === ONTAP高度なカウンタデータ
 
 Cloud Insights は、 ONTAPデバイスから収集された多数のカウンターとメトリックを提供する、NetApp のONTAP固有の *Advanced Counter Data* を活用します。 ONTAP Advanced Counter Data は、すべてのNetApp ONTAP のお客様がご利用いただけます。これらのメトリックにより、Cloud Insightsウィジェットとダッシュボードでカスタマイズされた幅広い視覚化が可能になります。
@@ -283,12 +310,14 @@ image:ONTAP_Widget_Example2.png["ONTAPウィジェットの例 - WAFL"] image:ON
 
 
 
+[[advanced-counter-dashboards]]
 === 高度なカウンターダッシュボード
 
 Cloud Insights には、_Aggregate Performance_、_Volume Workload_、_Processor Activity_ などのトピックに関するONTAP Advanced Counters の視覚化を開始できるように、さまざまな事前設計されたダッシュボードが付属しています。少なくとも 1 つのONTAPデータ コレクターが設定されている場合は、任意のダッシュボード リスト ページのダッシュボード ギャラリーからこれらをインポートできます。
 
 
 
+[[learn-more]]
 === 詳細情報
 
 ONTAP Advanced Data の詳細については、次のリンクを参照してください。
@@ -299,6 +328,7 @@ ONTAP Advanced Data の詳細については、次のリンクを参照してく
 
 
 
+[[policies-and-violations-menu]]
 === ポリシーと違反メニュー
 
 パフォーマンス ポリシーと違反は、[アラート] メニューに表示されるようになりました。ポリシーと違反の機能は変更されていません。
@@ -307,6 +337,7 @@ image:PoliciesMenuChange.png["ポリシーと違反メニュー"]
 
 
 
+[[updated-telegraf-agent]]
 === 更新されたTelegrafエージェント
 
 Telegraf統合データの取り込みエージェントが更新されましたlink:https://docs.influxdata.com/telegraf/v1.14/["version 1.14"]これにはバグ修正、セキュリティ修正、新しいプラグインが含まれます。
@@ -339,10 +370,12 @@ rules:
 '''
 
 
+[[june-2020]]
 == 2020年6月
 
 
 
+[[simplified-data-collector-error-reporting]]
 === 簡素化されたデータコレクターエラーレポート
 
 データ コレクターのエラーの報告は、データ コレクター ページの [エラー レポートの送信] ボタンを使用すると簡単になります。ボタンをクリックすると、エラーに関する基本情報がNetAppに送信され、問題の調査が促されます。押すと、 Cloud Insights はNetAppに通知されたことを認識し、エラー レポート ボタンが無効になり、そのデータ コレクターのエラー レポートが送信されたことが示されます。ブラウザ ページが更新されるまで、ボタンは無効のままになります。
@@ -351,6 +384,7 @@ image:DCErrorReportButton.png["エラー報告ボタン"]
 
 
 
+[[widget-improvements]]
 === ウィジェットの改善
 
 ダッシュボード ウィジェットに次の改善が加えられました。これらの改善はプレビュー機能とみなされており、すべてのCloud Insights環境で利用できるとは限りません。
@@ -368,10 +402,12 @@ image:MultipleGroupsIntegrationLineChart.png["統合データを表示する際�
 '''
 
 
+[[may-2020]]
 == 2020年5月
 
 
 
+[[reporting-user-roles]]
 === ユーザーロールの報告
 
 レポートに次のロールが追加されました:
@@ -383,6 +419,7 @@ image:MultipleGroupsIntegrationLineChart.png["統合データを表示する際�
 
 
 
+[[cloud-secure-updates]]
 === Cloud Secureアップデート
 
 Cloud Insightsには、次のような最近のCloud Secure の変更が含まれています。
@@ -399,6 +436,7 @@ image:CSActivityForensicsExample.png["エンティティページの例"]
 
 
 
+[[dashboard-grouping]]
 === ダッシュボードのグループ化
 
 ダッシュボードのグループ化により、link:concept_dashboard_features.html#dashboard-groups["ダッシュボードの管理"]あなたにとって関連性のあるものです。関連するダッシュボードをグループに追加して、たとえばストレージや仮想マシンを「ワンストップ」で管理できます。
@@ -409,6 +447,7 @@ image:DashboardGroupNoPin.png["ダッシュボードグループ"]
 
 
 
+[[dashboard-pinning]]
 === ダッシュボードのピン留め
 
 ダッシュボードをピン留めすると、お気に入りが常にリストの上部に表示されます。
@@ -417,6 +456,7 @@ image:DashboardPin.png["ダッシュボードピン"]
 
 
 
+[[tv-mode-and-auto-refresh]]
 === TVモードと自動更新
 
 link:concept_dashboard_features.html#tv-mode-and-auto-refresh["TVモードと自動更新"]ダッシュボードまたはアセット ページでデータをほぼリアルタイムで表示できるようになります。
@@ -430,16 +470,19 @@ TV モードと自動更新を組み合わせることで、 Cloud Insightsデ�
 '''
 
 
+[[april-2020]]
 == 2020年4月
 
 
 
+[[new-dashboard-time-range-choices]]
 === 新しいダッシュボードの時間範囲の選択肢
 
 ダッシュボードやその他の Cloud Insights ページの時間範囲の選択肢に、_過去 1 時間_ と _過去 15 分_ が含まれるようになりました。
 
 
 
+[[cloud-secure-updates]]
 === Cloud Secureアップデート
 
 Cloud Insightsには、次のような最近のCloud Secure の変更が含まれています。
@@ -452,12 +495,14 @@ Cloud Secure は、ファイルとフォルダーに対するすべてのユー�
 
 
 
+[[default-dashboard-time]]
 === デフォルトのダッシュボード時間
 
 ダッシュボードのデフォルトの時間範囲は、24 時間ではなく 3 時間になりました。
 
 
 
+[[optimized-aggregation-times]]
 === 最適化された集約時間
 
 最適化link:concept_dashboard_features.html#aggregating-data["時間集約"]時系列ウィジェット (折れ線グラフ、スプライン グラフ、面グラフ、積み上げ面グラフ) の間隔が 3 時間および 24 時間のダッシュボード/ウィジェットの時間範囲でより頻繁になり、データのグラフ化が高速化されます。
@@ -470,6 +515,7 @@ Cloud Secure は、ファイルとフォルダーに対するすべてのユー�
 
 
 
+[[display-unit-auto-format]]
 === 表示単位の自動フォーマット
 
 ほとんどのウィジェットでは、 Cloud Insightsは値を表示する基本単位（例えば、_メガバイト_、_千_、_パーセント_、_ミリ秒（ms）_など）を認識しており、link:concept_dashboard_features.html#choosing-the-unit-for-displaying-data["自動的にフォーマットする"]ウィジェットを最も読みやすい単位にします。たとえば、1,234,567,890 バイトのデータ値は、1.23 ギビバイトに自動的にフォーマットされます。多くの場合、 Cloud Insights は取得されるデータに最適な形式を認識しています。最適な形式が不明な場合、または自動書式設定を上書きするウィジェットの場合は、必要な形式を選択できます。
@@ -478,6 +524,7 @@ image:used_memory_in_bytes_gb.png["ウィジェットの自動フォーマット
 
 
 
+[[import-annotations-using-api]]
 === APIを使用して注釈をインポートする
 
 Cloud Insights Premium Editionの強力なAPIを使用すると、link:task_annotation_import.html["インポート注釈"] .CSV ファイルを使用してオブジェクトに割り当てます。同様の方法でアプリケーションをインポートし、ビジネス エンティティを割り当てることもできます。
@@ -486,6 +533,7 @@ image:api_assets_import.png["注釈のインポート"]
 
 
 
+[[simpler-widget-selector]]
 === よりシンプルなウィジェットセレクター
 
 ダッシュボードやアセットランディングページへのウィジェットの追加が、すべてのウィジェットタイプを一括表示できる新しいウィジェットセレクターによってさらに簡単になりました。ユーザーはウィジェットタイプのリストをスクロールして追加したいウィジェットを探す必要がなくなりました。新しいセレクターでは、関連ウィジェットが色分けされ、近接性に基づいてグループ化されています。
@@ -495,10 +543,12 @@ image:NewWidgetPicker.png["新しいウィジェットセレクター"]
 '''
 
 
+[[february-2020]]
 == 2020年2月
 
 
 
+[[api-with-premium-edition]]
 === プレミアムエディションのAPI
 
 Cloud Insights Premium Editionには、link:API_Overview.html["強力なAPI"] Cloud Insights をCMDB や他のチケット システムなどの他のアプリケーションと統合するために使用できます。
@@ -511,6 +561,7 @@ image:API_Documentation.png["API ドキュメント"]
 
 
 
+[[initial-polling-after-adding-a-data-collector]]
 === データコレクター追加後の初期ポーリング
 
 以前は、新しいデータ コレクターを構成すると、 Cloud Insights はデータ コレクターをすぐにポーリングして _インベントリ_ データを収集していましたが、構成されたパフォーマンス ポーリング間隔 (通常は 15 分) まで待機して、初期の _パフォーマンス_ データを収集していました。その後、2 回目のパフォーマンス ポーリングを開始する前に別の間隔を待機するため、新しいデータ コレクターから意味のあるデータが取得されるまでに最大 30 分かかります。
@@ -521,6 +572,7 @@ image:API_Documentation.png["API ドキュメント"]
 
 
 
+[[easier-widget-duplication]]
 === ウィジェットの複製が簡単に
 
 ダッシュボードやランディング ページでウィジェットのコピーを作成するのがこれまで以上に簡単になりました。ダッシュボードの編集モードで、ウィジェットのメニューをクリックし、「複製」を選択します。ウィジェット エディターが起動し、元のウィジェットの構成が事前に入力され、ウィジェット名に「コピー」サフィックスが付きます。必要な変更を簡単に行い、新しいウィジェットを保存できます。ウィジェットはダッシュボードの下部に配置され、必要に応じて配置できます。すべての変更が完了したら、ダッシュボードを必ず保存してください。
@@ -529,6 +581,7 @@ image:DuplicateWidget.png["ウィジェットを複製する"]
 
 
 
+[[single-sign-on-sso]]
 === シングルサインオン（SSO）
 
 Cloud Insights Premium Editionでは、管理者は*link:concept_user_roles.html#what-is-identity-federation["シングルサインオン"] * 企業ドメイン内のすべてのユーザーが、個別に招待することなくCloud Insightsに (SSO) アクセスできるようになります。  SSO を有効にすると、同じドメインのメール アドレスを持つすべてのユーザーが、企業の認証情報を使用してCloud Insightsにログインできるようになります。
@@ -539,16 +592,19 @@ NOTE: SSO はCloud Insights Premium Edition でのみ使用可能であり、 Cl
 '''
 
 
+[[january-2020]]
 == 2020年1月
 
 
 
+[[swagger-documentation-for-rest-api]]
 === REST API の Swagger ドキュメント
 
 Swagger では、 Cloud Insightsで利用可能な各 REST API と、その使用方法および構文について説明します。  Cloud Insights APIに関する情報は、link:http://docs.netapp.com/us-en/cloudinsights/API_Overview.html["ドキュメント"] 。
 
 
 
+[[feature-tutorials-progress-bar]]
 === 機能チュートリアルの進捗バー
 
 機能チュートリアルのチェックリストは上部のバナーに移動され、進行状況インジケーターが追加されました。チュートリアルは、終了するまで各ユーザーが利用でき、 Cloud Insightsでいつでも利用できます。link:concept_feature_tutorials.html["ドキュメント"] 。
@@ -557,18 +613,21 @@ image:TutorialProgress.png["チュートリアルチェックリストの進捗�
 
 
 
+[[acquisition-unit-changes]]
 === 取得ユニットの変更
 
 すでにインストールされている AU と同じ名前の Acquisition Unit (AU) をホストまたは VM にインストールする場合、 Cloud Insights はAU 名に「_1」、「_2」などを追加して一意の名前を保証します。これは、最初にCloud Insightsから AU を削除せずに、同じ VM から AU をアンインストールして再インストールする場合にも当てはまります。まったく別の AU 名をご希望ですか? 問題ありません。AU はインストール後に名前を変更できます。
 
 
 
+[[optimized-time-aggregation-in-widgets]]
 === ウィジェットにおける時間集計の最適化
 
 ウィジェットでは、_最適化された_時間集約間隔または設定した_カスタム_間隔を選択できます。最適化された集計では、選択したダッシュボードの時間範囲 (ダッシュボードの時間を上書きする場合はウィジェットの時間範囲) に基づいて、適切な時間間隔が自動的に選択されます。ダッシュボードまたはウィジェットの時間範囲が変更されると、間隔は動的に変化します。
 
 
 
+[[simplified-getting-started-with-cloud-insights-process]]
 === 簡素化された「 Cloud Insightsを使い始める」プロセス
 
 Cloud Insightsの使用を開始するためのプロセスが簡素化され、初回のセットアップがよりスムーズかつ簡単になりました。最初のデータコレクターを選択して、指示に従うだけです。 Cloud Insights、データ コレクターと、必要なエージェントまたは取得ユニットの構成手順を説明します。ほとんどの場合、1 つ以上の初期ダッシュボードがインポートされるため、環境の状況をすぐに把握できるようになります (ただし、 Cloud Insights が意味のあるデータを収集するまでに最大 30 分かかる場合があります)。
@@ -589,28 +648,33 @@ image:Onboarding_Progress.png["進捗バー"]
 '''
 
 
+[[december-2019]]
 == 2019年12月
 
 
 
+[[business-entity-can-be-used-in-filters]]
 === ビジネスエンティティはフィルターで使用できます
 
 ビジネス エンティティの注釈は、クエリ、ウィジェット、パフォーマンス ポリシー、ランディング ページのフィルターで使用できます。
 
 
 
+[[drill-down-available-for-single-value-and-gauge-widgets-and-any-widgets-rolled-to-by-all]]
 === ドリルダウンは、単一値ウィジェットとゲージウィジェット、および「すべて」にロールされたウィジェットで使用できます。
 
 単一値ウィジェットまたはゲージ ウィジェットの値をクリックすると、ウィジェットで使用された最初のクエリの結果を表示するクエリ ページが開きます。さらに、データが「すべて」にまとめられているウィジェットの凡例をクリックすると、ウィジェットで使用された最初のクエリの結果を示すクエリ ページも開きます。
 
 
 
+[[trial-period-extended]]
 === 試用期間延長
 
 Cloud Insightsの無料トライアルにサインアップした新規ユーザーには、30 日間の製品評価期間が与えられます。これは、以前の 14 日間の試用期間からの増加です。
 
 
 
+[[managed-unit-calculation]]
 === 管理単位の計算
 
 Cloud Insightsでの管理対象ユニット (MU) の計算が次のように変更されました。
@@ -624,14 +688,17 @@ Cloud Insightsでの管理対象ユニット (MU) の計算が次のように変
 '''
 
 
+[[november-2019]]
 == 2019年11月
 
 
 
+[[october-2019]]
 == 2019年10月
 
 
 
+[[reporting]]
 === レポート
 
 link:reporting_overview.html["*Cloud Insightsレポート*"]は、定義済みレポートを表示したり、カスタム レポートを作成したりできるビジネス インテリジェンス ツールです。レポートを使用すると、次のタスクを実行できます。
@@ -659,6 +726,7 @@ Cloud Insights Reporting では、チャージバック、消費分析、予測�
 
 
 
+[[active-iq-enhancements]]
 === Active IQの強化
 
 link:concept_activeiq.html["Active IQリスク"]ダッシュボード テーブル ウィジェットで使用できるだけでなく、クエリ可能なオブジェクトとしても利用できるようになりました。次のリスクオブジェクト属性が含まれます: * カテゴリ * 軽減カテゴリ * 潜在的な影響 * リスクの詳細 * 重大度 * ソース * ストレージ * ストレージノード * UI カテゴリ
@@ -666,10 +734,12 @@ link:concept_activeiq.html["Active IQリスク"]ダッシュボード テーブ�
 '''
 
 
+[[september-2019]]
 == 2019年9月
 
 
 
+[[new-gauge-widgets]]
 === 新しいゲージウィジェット
 
 指定したしきい値に基づいて、ダッシュボードに目立つ色で単一値データを表示するための 2 つの新しいウィジェットが利用可能になりました。 *ソリッド ゲージ* または *ブレット ゲージ* のいずれかを使用して値を表示できます。警告範囲内の値はオレンジ色で表示されます。クリティカル範囲の値は赤で表示されます。警告しきい値を下回る値は緑色で表示されます。
@@ -678,6 +748,7 @@ image:Gauge-Solid.png["ソリッド/トラディショナルゲージ"] image:Ga
 
 
 
+[[conditional-color-formatting-for-single-value-widget]]
 === 単一値ウィジェットの条件付きカラー書式設定
 
 設定したしきい値に基づいて、色付きの背景で単一値ウィジェットを表示できるようになりました。
@@ -686,12 +757,14 @@ image:Single-Value Widgets - Formatted.png["フォーマット付きの単一値
 
 
 
+[[invite-users-during-onboarding]]
 === オンボーディング中にユーザーを招待する
 
 オンボーディング プロセスのどの時点でも、[管理] > [ユーザー管理] > [+ ユーザー] をクリックして、追加のユーザーをCloud Insights環境に招待できます。オンボーディングが完了し、データが収集されると、_Guest_ または _User_ のロールを持つユーザーはより大きなメリットを享受できることに注意してください。
 
 
 
+[[data-collector-detail-page-improvement]]
 === データコレクターの詳細ページの改善
 
 データ コレクターの詳細ページが改善され、エラーがより読みやすい形式で表示されるようになりました。エラーはページ上の別のテーブルに表示されるようになり、データ コレクターに複数のエラーがある場合は各エラーが別々の行に表示されます。
@@ -699,16 +772,19 @@ image:Single-Value Widgets - Formatted.png["フォーマット付きの単一値
 '''
 
 
+[[august-2019]]
 == 2019年8月
 
 
 
+[[all-vs-available-data-collectors]]
 === すべてのデータコレクターと利用可能なデータコレクター
 
 環境にデータ コレクターを追加するときに、サブスクリプション レベルに基づいて使用可能なデータ コレクターのみを表示するか、すべてのデータ コレクターを表示するようにフィルターを設定できます。
 
 
 
+[[activeiq-integration]]
 === ActiveIQ統合
 
 Cloud Insights は、 NetApp の顧客とそのハードウェア/ソフトウェア システムに一連の視覚化、分析、およびその他のサポート関連サービスを提供するNetApp ActiveIQ からデータを収集します。 Cloud Insights はONTAPデータ管理システムと統合されます。見るlink:concept_activeiq.html["Active IQ"]詳細についてはこちらをご覧ください。
@@ -716,10 +792,12 @@ Cloud Insights は、 NetApp の顧客とそのハードウェア/ソフトウ�
 '''
 
 
+[[july-2019]]
 == 2019年7月
 
 
 
+[[dashboard-improvements]]
 === ダッシュボードの改善
 
 ダッシュボードとウィジェットは、次の変更により改善されました。
@@ -732,12 +810,14 @@ Cloud Insights は、 NetApp の顧客とそのハードウェア/ソフトウ�
 
 
 
+[[downgrading-to-basic-edition]]
 === ベーシックエディションへのダウングレード
 
 過去 7 日間にポーリングを正常に完了した利用可能なNetAppデバイスが設定されていない場合、Basic Edition へのダウングレードはエラー メッセージとともに失敗します。
 
 
 
+[[collecting-kube-state-metrics]]
 === Kube-State-Metricsの収集
 
 そのlink:task_config_telegraf_kubernetes.html["Kubernetes データコレクター"]kube-state-metrics プラグインからオブジェクトとカウンターを収集するようになり、 Cloud Insightsで監視できるメトリックの数と範囲が大幅に拡大しました。
@@ -745,16 +825,19 @@ Cloud Insights は、 NetApp の顧客とそのハードウェア/ソフトウ�
 '''
 
 
+[[june-2019]]
 == 2019年6月
 
 
 
+[[cloud-insights-editions]]
 === Cloud Insightsエディション
 
 Cloud Insights は、予算とビジネス ニーズに合わせてさまざまなエディションでご利用いただけます。アクティブなNetAppサポート アカウントを持つ既存のNetApp のお客様は、無料の *Basic Edition* で 7 日間のデータ保持とNetAppデータ コレクターへのアクセスを利用できます。また、*Standard Edition* では、データ保持期間の延長、サポートされているすべてのデータ コレクターへのアクセス、専門家によるテクニカル サポートなどをご利用いただけます。利用可能な機能の詳細については、NetAppのlink:https://www.netapp.com/cloud-services/cloud-insights/["Cloud Insights"]サイト。
 
 
 
+[[new-infrastructure-data-collector-netapp-hci]]
 === 新しいインフラストラクチャ データ コレクター: NetApp HCI
 
 * link:task_dc_na_hci.html["NetApp HCI仮想センター"]インフラストラクチャ データ コレクターとして追加されました。  HCI Virtual Center データ コレクターはNetApp HCIホスト情報を収集し、Virtual Center 内のすべてのオブジェクトに対する読み取り専用権限が必要です。
@@ -765,10 +848,12 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 '''
 
 
+[[may-2019]]
 == 2019年5月
 
 
 
+[[new-service-data-collector-kapacitor]]
 === 新しいサービスデータコレクター：Kapacitor
 
 * Kapacitorがサービス用のデータ収集ツールとして追加されました。
@@ -776,6 +861,7 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 
 
 
+[[integration-with-services-via-telegraf]]
 === Telegraf経由のサービスとの統合
 
 スイッチやストレージなどのインフラストラクチャデバイスからのデータ取得に加えて、 Cloud Insightsは、さまざまなオペレーティングシステムとサービスからデータを収集します。link:task_config_telegraf_agent.html["代理店としてのテレグラフ"]統合データの収集用。 Telegraf は、メトリックを収集およびレポートするために使用できるプラグイン駆動型エージェントです。入力プラグインは、システム/OS に直接アクセスしたり、サードパーティの API を呼び出したり、構成されたストリームをリッスンしたりして、エージェントに必要な情報を収集するために使用されます。
@@ -784,6 +870,7 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 
 
 
+[[storage-virtual-machine-assets]]
 === ストレージ仮想マシン資産
 
 * ストレージ仮想マシン (SVM) は、Cloud Insightsでアセットとして利用できます。  SVM には独自のアセット ランディング ページがあり、検索、クエリ、フィルターで表示および使用できます。  SVM はダッシュボード ウィジェットでも使用でき、注釈に関連付けることもできます。
@@ -791,6 +878,7 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 
 
 
+[[reduced-acquisition-unit-system-requirements]]
 === 削減された取得ユニットシステム要件
 
 * 取得ユニット (AU) ソフトウェアのシステム CPU およびメモリ要件が削減されました。新しい要件は次のとおりです。
@@ -809,6 +897,7 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 |===
 
 
+[[additional-platforms-supported]]
 === サポートされている追加のプラットフォーム
 
 * 以下のプラットフォームが現在追加されましたlink:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["Cloud Insightsでサポートされています"]:
@@ -825,10 +914,12 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 '''
 
 
+[[april-2019]]
 == 2019年4月
 
 
 
+[[filter-virtual-machines-by-tags]]
 === タグで仮想マシンをフィルタリング
 
 次のデータ コレクターを構成するときに、タグまたはラベルに応じて仮想マシンをデータ収集に含めるか除外するかをフィルターできます。
@@ -841,10 +932,12 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 '''
 
 
+[[march-2019]]
 == 2019年3月
 
 
 
+[[email-notifications-for-subscription-related-events]]
 === サブスクリプション関連イベントのメール通知
 
 * メールの受信者を選択できますlink:concept_notifications_email.html["通知"]試用期限切れや登録アカウントの変更など、サブスクリプション関連のイベントが発生したとき。これらの通知の受信者は以下の中から選択できます。
@@ -858,6 +951,7 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 
 
 
+[[additional-dashboards]]
 === 追加のダッシュボード
 
 * AWSに特化した次の新しいlink:concept_import_from_dashboard_gallery.html["ダッシュボード"]ギャラリーに追加され、インポート可能になりました:
@@ -871,10 +965,12 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 '''
 
 
+[[february-2019]]
 == 2019年2月
 
 
 
+[[collecting-from-aws-child-accounts]]
 === AWS子アカウントからの収集
 
 * Cloud Insightsはlink:task_dc_amazon_ec2.html#collecting-from-aws-child-accounts["AWS子アカウントからの収集"]単一のデータコレクター内で。  Cloud Insightsアカウントから収集できるように AWS 環境を構成する必要があります。
@@ -882,6 +978,7 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 
 
 
+[[data-collector-naming]]
 === データコレクターの命名
 
 * データ コレクター名には、文字、数字、アンダースコアに加えて、ピリオド (.)、ハイフン (-)、スペース ( ) も使用できるようになりました。名前はスペース、ピリオド、またはハイフンで始まったり終わったりすることはできません。
@@ -889,6 +986,7 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 
 
 
+[[acquisition-unit-for-windows]]
 === Windows用取得ユニット
 
 * Windows サーバー/VM 上でCloud Insights Acquisition Unit を構成できます。  Windowsを確認するlink:concept_acquisition_unit_requirements.html["前提条件"]インストールする前にlink:task_configure_acquisition_unit.html["取得ユニットソフトウェア"]。
@@ -897,10 +995,12 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 '''
 
 
+[[january-2019]]
 == 2019年1月
 
 
 
+[[owner-field-is-more-readable]]
 === 「オーナー」フィールドがより読みやすくなりました
 
 * ダッシュボードとクエリ リストでは、「所有者」フィールドのデータは、以前はユーザーフレンドリな所有者名ではなく、承認 ID 文字列でした。  「所有者」フィールドに、よりシンプルで読みやすい所有者名が表示されるようになりました。
@@ -908,6 +1008,7 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 
 
 
+[[managed-unit-breakdown-on-subscription-page]]
 === サブスクリプションページでの管理ユニットの内訳
 
 * *管理 > サブスクリプション* ページにリストされている各データ コレクターについて、ホストとストレージの管理対象ユニット (MU) 数の内訳と合計を確認できるようになりました。
@@ -916,10 +1017,12 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 '''
 
 
+[[december-2018]]
 == 2018年12月
 
 
 
+[[improvement-of-ui-load-time]]
 === UI読み込み時間の改善
 
 * Cloud Insightsユーザー インターフェース (UI) の初期読み込み時間が大幅に改善されました。メタデータがロードされる状況では、UI の更新時間もこの改善によって短縮されます。
@@ -927,6 +1030,7 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 
 
 
+[[bulk-edit-data-collectors]]
 === データコレクターの一括編集
 
 * 複数のデータ コレクターの情報を同時に編集できます。  *Observability > Collectors* ページで、それぞれの左側にあるボックスをオンにして変更するデータ コレクターを選択し、*Bulk Actions* ボタンをクリックします。  *編集*を選択し、必要なフィールドを変更します。
@@ -937,6 +1041,7 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 
 
 
+[[support-and-subscription-pages-are-available-during-onboarding]]
 === サポートとサブスクリプションのページはオンボーディング中にご利用いただけます
 
 * オンボーディング ワークフロー中に、*ヘルプ > サポート* ページと *管理 > サブスクリプション* ページに移動できます。これらのページから戻ると、ブラウザ タブを閉じていない場合は、オンボーディング ワークフローに戻ります。
@@ -945,10 +1050,12 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 '''
 
 
+[[november-2018]]
 == 2018年11月
 
 
 
+[[subscribe-through-netapp-sales-or-aws-marketplace]]
 === NetApp Sales または AWS Marketplace から申し込む
 
 * Cloud Insights のサブスクリプションと課金は、 NetAppから直接利用できるようになりました。これは、AWS Marketplace を通じて利用できるセルフサービスサブスクリプションに追加されるものです。 *管理 > サブスクリプション* ページに新しい *営業担当者へのお問い合わせ* リンクが表示されます。環境に 1,000 個以上の管理対象ユニット (MU) がある、または 1,000 個以上になると予想されるお客様の場合は、「営業部に問い合わせる」リンクからNetApp の営業部に問い合わせることをお勧めします。
@@ -956,6 +1063,7 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 
 
 
+[[text-annotation-hyperlinks]]
 === テキスト注釈ハイパーリンク
 
 * テキストタイプの注釈にハイパーリンクを含めることができるようになりました。
@@ -963,6 +1071,7 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 
 
 
+[[onboarding-walkthrough]]
 === オンボーディングのウォークスルー
 
 * Cloud Insightsには、新しい環境に初めてログインするユーザー (管理者またはアカウント所有者) 向けのオンボーディング ウォークスルーが追加されました。このチュートリアルでは、取得ユニットのインストール、初期データ コレクターの構成、および 1 つ以上の便利なダッシュボードの選択について説明します。
@@ -970,6 +1079,7 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 
 
 
+[[import-dashboards-from-the-gallery]]
 === ギャラリーからダッシュボードをインポートする
 
 * オンボーディング中にダッシュボードを選択するだけでなく、*ダッシュボード > すべてのダッシュボードを表示* から *+ ギャラリーから* をクリックしてダッシュボードをインポートすることもできます。
@@ -977,6 +1087,7 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 
 
 
+[[duplicating-dashboards]]
 === ダッシュボードの複製
 
 * ダッシュボードを複製する機能が、各ダッシュボードのオプション メニューの選択肢としてダッシュボード リスト ページに追加され、ダッシュボードのメイン ページ自体の [_保存_] メニューからも選択できるようになりました。
@@ -984,6 +1095,7 @@ HCI データ コレクターは HCI 仮想センターからのみ取得する�
 
 
 
+[[cloud-central-products-menu]]
 === Cloud Central製品メニュー
 
 * 他のNetApp Cloud Central 製品に切り替えることができるメニューが画面の右上隅に移動しました。

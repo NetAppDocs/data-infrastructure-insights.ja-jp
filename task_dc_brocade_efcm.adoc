@@ -14,6 +14,7 @@ Data Infrastructure Insights は、 Brocade Enterprise Fabric Connectivity Manag
 
 
 
+[[requirements]]
 == 要件
 
 * EFCM サーバーのネットワーク アドレスまたは完全修飾ドメイン名
@@ -25,9 +26,10 @@ Data Infrastructure Insights は、 Brocade Enterprise Fabric Connectivity Manag
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -42,9 +44,10 @@ Data Infrastructure Insights は、 Brocade Enterprise Fabric Connectivity Manag
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 

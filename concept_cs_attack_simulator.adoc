@@ -18,6 +18,7 @@ summary: 付属のシミュレーション スクリプトを使用して攻撃�
 
 
 
+[[things-to-note-before-you-begin]]
 == 始める前に注意すべきこと
 
 * ファイル改ざんシミュレーション スクリプトは Linux でのみ動作します。シミュレーション スクリプトは、ユーザーがONTAP ARP を Workload Security と統合した場合に、高信頼度アラートも生成する必要があります。
@@ -30,6 +31,7 @@ summary: 付属のシミュレーション スクリプトを使用して攻撃�
 
 
 
+[[guidelines]]
 == ガイドライン:
 
 このスクリプトは、暗号化するファイルが多数 (理想的にはサブフォルダー内のファイルを含む 100 個以上) 含まれているフォルダーを含む SVM で実行する必要があります。ファイルが空でないことを確認してください。
@@ -38,10 +40,12 @@ summary: 付属のシミュレーション スクリプトを使用して攻撃�
 
 
 
+[[steps]]
 == 手順：
 
 
 
+[[prepare-the-system]]
 === システムを準備します。
 
 まず、ターゲットボリュームをマシンにマウントします。  NFS または CIFS エクスポートのいずれかをマウントできます。
@@ -81,6 +85,7 @@ ONTAPクラスタのバージョンが 9.11.1 以上の場合は、 ONTAPコマ�
 
 
 
+[[generate-the-sample-files-programmatically]]
 == プログラムでサンプル ファイルを生成します。
 
 ファイルを作成する前に、まず停止するか、link:task_add_collector_svm.html#play-pause-data-collector["データ収集装置を一時停止する"]処理。
@@ -91,6 +96,7 @@ ONTAPクラスタのバージョンが 9.11.1 以上の場合は、 ONTAPコマ�
 
 
 
+[[shell]]
 === シェル：
 
 . エージェント ボックスにログインします。
@@ -104,6 +110,7 @@ ONTAPクラスタのバージョンが 9.11.1 以上の場合は、 ONTAPコマ�
 
 
 
+[[python]]
 === パイソン:
 
 
@@ -148,18 +155,21 @@ ONTAPクラスタのバージョンが 9.11.1 以上の場合は、 ONTAPコマ�
 
 
 
+[[resume-the-collector]]
 == コレクターを再開する
 
 これらの手順を実行する前にコレクターを一時停止した場合は、サンプル ファイルが作成されたら必ずコレクターを再開してください。
 
 
 
+[[generate-file-tampering-alert]]
 == ファイル改ざんアラートを生成
 
 ファイル改ざんアラートを生成するには、Workload Security でファイル改ざんアラートをシミュレートする付属のスクリプトを実行します。
 
 
 
+[[shell]]
 === シェル：
 
 . エージェントのインストール ディレクトリ (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/shell/simulate_attack.sh) からスクリプトをターゲットのマウント場所にコピーします。
@@ -171,6 +181,7 @@ ONTAPクラスタのバージョンが 9.11.1 以上の場合は、 ONTAPコマ�
 
 
 
+[[python]]
 === パイソン:
 
 . エージェントのインストール ディレクトリ (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/python/simulate_attack.py) からスクリプトをターゲットのマウント場所にコピーします。
@@ -183,6 +194,7 @@ ONTAPクラスタのバージョンが 9.11.1 以上の場合は、 ONTAPコマ�
 
 
 
+[[generate-an-alert-in-workload-security]]
 == ワークロードセキュリティでアラートを生成する
 
 シミュレータ スクリプトの実行が終了すると、数分以内に Web UI にアラートが表示されます。
@@ -208,6 +220,7 @@ image:ws_high_confidence_alert_detail.png["高信頼度アラートの例、詳�
 
 
 
+[[triggering-alert-multiple-times]]
 == アラートを複数回トリガーする
 
 Workload Security はユーザーの行動を学習し、同じユーザーに対して 24 時間以内にファイル改ざん攻撃が繰り返された場合、アラートを生成しません。

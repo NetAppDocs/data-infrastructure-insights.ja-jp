@@ -27,6 +27,7 @@ image:AIQ_Summary_Example.png["ストレージページの概要"]
 
 
 
+[[opening-the-digital-advisor-page]]
 == Digital Advisorページを開く
 
 Digital Advisorページへのリンクをクリックするときに、現在Digital Advisorアカウントにサインインしていない場合は、次の手順を実行してストレージ ノードのDigital Advisorページを表示する必要があります。
@@ -37,12 +38,14 @@ Digital Advisorページへのリンクをクリックするときに、現在Di
 
 
 
+[[querying-for-risks]]
 == リスクの問い合わせ
 
 Data Infrastructure Insightsでは、ストレージまたはストレージ ノード クエリに *monitoring.count* 列を​​追加できます。返された結果にDigital Advisor監視対象ストレージ システムが含まれている場合、monitoring.count 列にはストレージ システムまたはノードのリスクの数が表示されます。
 
 
 
+[[dashboards]]
 == ダッシュボード
 
 Digital Advisorによって監視されるNetApp Clustered Data ONTAPシステムのストレージおよびストレージ ノードのオブジェクト リスクを視覚化するために、ウィジェット (円グラフ、表ウィジェット、棒グラフ、列グラフ、散布図、単一値ウィジェットなど) を構築できます。ストレージまたはストレージ ノードがフォーカスのオブジェクトであるこれらのウィジェットでは、「オブジェクト リスク」を列またはメトリックとして選択できます。

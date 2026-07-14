@@ -18,6 +18,7 @@ keywords: event, checker, rate, sizing, cloud secure
 
 
 
+[[requirements]]
 == 要件：
 
 * クラスターIP
@@ -80,6 +81,7 @@ B + C は A より小さくなければなりません。そうでない場合�
 
 
 
+[[example]]
 == 例
 
 それぞれ 1 秒あたり 100、200、300 イベントのイベント レートを生成する 3 つの SVMS があるとします。
@@ -141,6 +143,7 @@ Overall svm audit_svm is generating 300 events/sec
  [root@ci-cs-data agent]#
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 |===

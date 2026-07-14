@@ -18,11 +18,12 @@ VMware vSphere のデータ コレクターは、VM ゲストおよび ESXi ホ�
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、 VMware vSphere データ コレクターから次のインベントリ情報を取得します。取得した資産の種類ごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -48,6 +49,7 @@ Data Infrastructure Insights は、 VMware vSphere データ コレクターか�
 
 
 
+[[requirements]]
 == 要件
 
 このデータ コレクターを構成するには、次の情報が必要です。
@@ -67,9 +69,10 @@ Data Infrastructure Insights は、 VMware vSphere データ コレクターか�
 
 
 
+[[setup-and-connection]]
 == セットアップと接続
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -81,9 +84,10 @@ Data Infrastructure Insights は、 VMware vSphere データ コレクターか�
 |===
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -98,14 +102,13 @@ Data Infrastructure Insights は、 VMware vSphere データ コレクターか�
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
 詳細構成画面で、*VM パフォーマンス* ボックスをオンにしてパフォーマンス データを収集します。インベントリ収集はデフォルトで有効になっています。次のフィールドを設定できます。
 
-[cols="2*"]
+[cols="50,50"]
 |===
-
-
 | フィールド | 説明 
 
 
@@ -131,6 +134,7 @@ Data Infrastructure Insights は、 VMware vSphere データ コレクターか�
 |===
 
 
+[[mapping-vmware-tags-to-data-infrastructure-insights-annotations]]
 == VMware タグをData Infrastructure Insights のアノテーションにマッピングする
 
 VMware データ コレクターを使用すると、VMware で構成されたタグを使用して、 Data Infrastructure Insights の注釈を入力できます。  DII アノテーション名は VMware *カテゴリ* 名と同一である必要があります。タグは、カテゴリと同じ名前の DII アノテーションのアノテーション値として適用されます。 Data Infrastructure Insights は、常に同じ名前のテキスト タイプの注釈を入力し、他のタイプ (数値、ブール値など) の注釈を入力するように「最善の試み」を行います。注釈が別のタイプであり、データ コレクターが注釈を入力できない場合は、注釈を削除してテキスト タイプとして再作成する必要がある場合があります。
@@ -146,15 +150,17 @@ VMware タグでは大文字と小文字が区別される場合があります�
 
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
+[[inventory]]
 === インベントリ
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 問題： | これを試してください: 
 

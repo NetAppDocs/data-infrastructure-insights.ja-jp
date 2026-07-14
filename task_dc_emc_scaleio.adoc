@@ -14,11 +14,12 @@ ScaleIO/PowerFlex データ コレクターは、ScaleIO および PowerFlex ス
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、 ScaleIO/PowerFlex データ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -41,6 +42,7 @@ Data Infrastructure Insights は、 ScaleIO/PowerFlex データ コレクター�
 
 
 
+[[requirements]]
 == 要件
 
 * 管理者ユーザーアカウントへの読み取り専用アクセス
@@ -49,9 +51,10 @@ Data Infrastructure Insights は、 ScaleIO/PowerFlex データ コレクター�
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -66,11 +69,12 @@ Data Infrastructure Insights は、 ScaleIO/PowerFlex データ コレクター�
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
 インベントリ収集を有効にするには、[インベントリ] チェックボックスをクリックします。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -85,6 +89,7 @@ Data Infrastructure Insights は、 ScaleIO/PowerFlex データ コレクター�
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 追加情報は以下からご覧いただけます。link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

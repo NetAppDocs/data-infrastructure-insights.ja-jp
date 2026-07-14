@@ -27,6 +27,7 @@ _合計カバレッジ_ リンクには、識別されたデバイスの数/構�
 
 
 
+[[adding-a-fibre-channel-device-manually]]
 == ファイバーチャネルデバイスを手動で追加する
 
 デバイス解決のファイバー チャネル識別タブで使用可能な _手動追加_ 機能を使用して、ファイバー チャネル デバイスをData Infrastructure Insightsに手動で追加できます。このプロセスは、将来発見されると予想されるデバイスの事前識別に使用される可能性があります。
@@ -53,6 +54,7 @@ _合計カバレッジ_ リンクには、識別されたデバイスの数/構�
 
 
 
+[[importing-fibre-channel-device-identification-from-a-csv-file]]
 == .CSV ファイルからファイバー チャネル デバイス ID をインポートする
 
 .CSV ファイル内のデバイスのリストを使用して、ファイバー チャネル デバイス ID をData Infrastructure Insights のデバイス解決に手動でインポートできます。
@@ -92,6 +94,7 @@ NOTE: ベスト プラクティスとして、最初にファイバー チャネ
 
 
 
+[[exporting-fibre-channel-device-identifications-to-a-csv-file]]
 == ファイバーチャネルデバイスIDを.CSVファイルにエクスポートする
 
 Data Infrastructure Insights のデバイス解決機能から、既存のファイバー チャネル デバイス ID を .CSV ファイルにエクスポートできます。デバイス ID をエクスポートして変更し、 Data Infrastructure Insightsに再度インポートして、エクスポートした ID に元々一致していたデバイスに類似したデバイスを識別するために使用することができます。

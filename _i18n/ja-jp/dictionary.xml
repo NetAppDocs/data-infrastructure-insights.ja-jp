@@ -7012,10 +7012,6 @@
   <block id="9680829f0eb82d9736ac7fe477135a87" category="paragraph">Kubernetesについて詳しく知る<block ref="2a69bcb19ea6a4db3f5d1b466ff78e77" category="inline-link-macro-rx"></block>。</block>
   <block id="fbc05142fc5476cd7c2dd603607412ee" category="inline-link-macro">* NetApp Kubernetes Monitoring Operator のインストール* ページ</block>
   <block id="c425b824281c7958c5622dd1dc041533" category="paragraph">戻る<block ref="6f93c3205a564eadff1f05e34704d40c" category="inline-link-macro-rx"></block></block>
-  <block id="d8c9294ea12d1c7d12e34008f3ecee39" category="section-title">秘密についてのメモ</block>
-  <block id="bd0f62d92c7b0e5d6e74b4447418c58b" category="paragraph">Kubernetes モニタリング オペレーターがクラスター全体でシークレットを表示する権限を削除するには、インストール前に _operator-setup.yaml_ ファイルから次のリソースを削除します。</block>
-  <block id="1790cdbccc4ddd4389eb90d73e043f4b" category="paragraph">アップグレードの場合は、クラスターからリソースも削除します。</block>
-  <block id="a66e68a20b3b94a700f3a3b9baa06764" category="paragraph">変更分析が有効になっている場合は、_AgentConfiguration_ または _operator-config.yaml_ を変更して、変更管理セクションのコメントを解除し、変更管理セクションの下に _kindsToIgnoreFromWatch: '"secrets"'_ を含めます。この行における一重引用符と二重引用符の存在と位置に注意してください。</block>
   <block id="435f137980b3b041bbc191c90260bf28" category="section-title">Kubernetes モニタリング オペレーター イメージ署名の検証</block>
   <block id="d9348d075dc7b3c91cff99d56dfc327b" category="inline-link-macro">Kubernetesドキュメント</block>
   <block id="d4f8460ff8f7a6b9a2f0fa99bf9124dd" category="paragraph">オペレータのイメージとそれが展開するすべての関連イメージは、 NetAppによって署名されています。インストール前に cosign ツールを使用してイメージを手動で検証したり、Kubernetes アドミッション コントローラーを構成したりすることができます。詳細については、<block ref="1aa503106da392b948a493e0ecf5782d" category="inline-link-macro-rx"></block> 。</block>
@@ -9566,9 +9562,7 @@
   <block id="483afc2b0c89bbcbc08179996afd1bd3" category="list-text">HTTPS ポート: デフォルトは 8443 です。</block>
   <block id="9ae1165f709f672a335b55af672fcede" category="cell">EシリーズコントローラのIPアドレス</block>
   <block id="0e8766b280f750325a542b5489199d1e" category="cell">アレイコントローラのカンマ区切りの IP アドレスおよび/または完全修飾ドメイン名</block>
-  <block id="986117227f9af0228b4c8df932185184" category="summary">Nutanix データ コレクターを構成します。</block>
   <block id="addafe1dd8efeb72ac99a72ca1ce3052" category="doc">Nutanix NX データコレクター</block>
-  <block id="0defc2652f6834277735cb3046565bfa" category="paragraph">Data Infrastructure Insights は、 Nutanix データ コレクターを使用して、Nutanix NX ストレージ システムのインベントリとパフォーマンス データを検出します。</block>
   <block id="1f166cbe19b0fb7c22477b8db8a26668" category="paragraph">Data Infrastructure Insights は、 Nutanix データ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。</block>
   <block id="6590f621515d064417bb91bd8f6cb526" category="cell">Nutanixコンテナ</block>
   <block id="5b02fb8f86f33e62862c6886dbbe655e" category="list-text">読み取り専用のユーザー名とパスワード（ボリューム グループが使用されていない場合）。ボリューム グループが使用されている場合は、管理者のユーザー名とパスワードが必要です。</block>
@@ -13941,8 +13935,6 @@
   <block id="f2c430952fd20f76b24810e2e6f8dace" category="paragraph">これら 3 つのコマンドを実行し、エラーがないか確認します。</block>
   <block id="0cf40b0b5f29b2928f214370b73c4fac" category="paragraph">最後に、OSV 管理者に次のコマンドを実行してもらうこともできます：</block>
   <block id="7af44018c8c76e698e986a0c0db08e5f" category="paragraph">これにより、管理用のホスト名/IP アドレスが返されます。各 DII OSV コレクターは、OSV 管理用の IP/ホスト名を指す必要があります。</block>
-  <block id="e62768229563f11ca5fd49a1482ae7a8" category="list-text">REST APIを介したポート443経由のRed Hat OpenShift VirtualizationサーバーのIPアドレス</block>
-  <block id="07bc27033bbe069dd4fcfa7e7287df66" category="cell">RHOVへのHTTPS通信に使用されるポート</block>
   <block id="6b4e228e21f03e0f137a5d82c17defab" category="paragraph">Red Hat Virtualization用のDIIデータコレクターは、オープンソースプロジェクトoVirt、およびOracle Linux Virtualization Managerもサポートしています。このデータコレクターは、REST APIを介して管理ステーションのHTTPSインターフェイスと通信します。</block>
   <block id="154535c2753f4d1eedc433e63b2e796f" category="list-text">REST API経由でポート443を介したRHV/oVirt/OLVMサーバーのIPアドレス/ホスト名</block>
   <block id="aee702f6738b473d9ebf07b43255af32" category="list-text">RHV Version 3.0+/Ovirt 4.0+/OLVM 4.0+</block>
@@ -14148,9 +14140,40 @@
   <block id="b720c5170acbb344b34398a9ed4fec4b" category="cell">ホスト名または IP アドレス</block>
   <block id="32d285f157ad1acefe9dbe844cee7acf" category="cell">ホスト名 ストレージシステムのIPアドレス</block>
   <block id="606bae1c220a7cd73cdc71a447b328fd" category="cell">APIトークンID</block>
-  <block id="1a07b6dc4baf1e102f15f62b2aa13efc" category="cell">アクセスにはAPI tokenが必要です</block>
   <block id="9ae9995c158c8b32609b8fd098fa5ff5" category="cell">APIトークンシークレット</block>
   <block id="923e5171366e1120624f5ea15d195544" category="cell">上記トークンのシークレット</block>
   <block id="07d3835e20364558e54bb222fac4e80c" category="cell">HTTPS通信に使用されるポート（デフォルト8006）</block>
   <block id="c0dcddaaad9648f13d2e54741430ea94" category="sidebar">Proxmox VE</block>
+  <block id="f45a9049372d3cb48c0a5f07d2274d8a" category="inline-link-macro">Nutanix AHV シリーズ</block>
+  <block id="ad9c1c290afb17645c1abe42082fd356" category="cell"><block ref="ad9c1c290afb17645c1abe42082fd356" category="inline-link-macro-rx"></block></block>
+  <block id="dfc304efa37c8d1373249ddd368bc0be" category="summary">Nutanix NX データコレクターの設定</block>
+  <block id="bf674ae2075eb251d7351d4572cb6146" category="paragraph">Data Infrastructure Insights は、Nutanix NX データコレクターを使用して、Nutanix NX ストレージシステムのインベントリデータとパフォーマンスデータを検出します。</block>
+  <block id="82344ea41e58ba30a6cc73da67f70a0d" category="summary">Nutanix AHV データコレクターの設定。</block>
+  <block id="409fc16cbc3ffe45ff2652a20b5026af" category="doc">Nutanix AHVデータコレクター</block>
+  <block id="c97ef72e065229daeaf079d3a28102bc" category="paragraph">Nutanix AHVコレクターは、Prism Central v4 REST API（クラスタ管理および仮想マシン管理ネームスペース）を使用して、Nutanix Prism CentralからNutanix Acropolis Hypervisor（AHV）のインベントリと仮想化パフォーマンスを取得します。仮想化ODataモデルでデータを報告します（VirtualizationRootおよび関連するエンティティ：ホスト、仮想マシン、データストア、仮想ディスク、および関係）。</block>
+  <block id="f32ed95de6aa2e535b7b91d8c3117993" category="cell">AHVノード（ホスト）</block>
+  <block id="11278cec4d8ea990fd15f6a5c6a67440" category="cell">Prism Central Cluster</block>
+  <block id="4f1cb6638a3cc4b959042237e8410602" category="cell">ハイパーバイザー（仮想サーバー）</block>
+  <block id="2198c50a7eb3774599bba516640050f4" category="cell">Acropolis VM</block>
+  <block id="ab4257e4905356d8c38178fb81298672" category="cell">ストレージ コンテナ</block>
+  <block id="93aad9faf21d772e6638b83df990a5f5" category="cell">ADSFボリュームグループ</block>
+  <block id="5ccc8ca7259b2e94529827201b7eb255" category="cell">VM ディスク</block>
+  <block id="59713d7f655f9c892a64a8cfb1bce50f" category="list-text">Prism CentralのIPアドレスまたは完全修飾ドメイン名</block>
+  <block id="b4cdc83adeeea6f91bf95fe532871bdd" category="list-text">Prism CentralのローカルまたはLDAPユーザー名とパスワード（インベントリおよびパフォーマンスには読み取り専用アカウントで十分です。管理者権限は不要です）</block>
+  <block id="305bb684f75dc043415486c2063d46c4" category="list-text">ポート要件：HTTPS 9440</block>
+  <block id="539110e77db7f1ce573940c3147dbe68" category="list-text">Prism Central バージョン pc.2023.x 以降（v3 API）、pc.7.x 以降推奨（v4 API）</block>
+  <block id="74c15fa6625bc3241b81c66466e0ce42" category="list-text">パフォーマンス指標を使用するには、API v4.0.b1以降（pc.7.3以降）のPrism Centralが必要です。旧バージョンでは、インベントリは収集されますが、パフォーマンスデータは報告されません。</block>
+  <block id="fb7d6f6db43d1bb1043df17e264de78a" category="cell">Prism CentralのIPアドレス</block>
+  <block id="b46321a9cb6ebc3023c7b6ae1f3d8b4f" category="cell">Prism CentralインスタンスのIPアドレスまたはFQDN</block>
+  <block id="893b253db3bdc1ebfb515f1f1cc09f50" category="cell">Prism Centralのユーザー名</block>
+  <block id="0fc00a87efdbecf33bb1448c3eaa5a73" category="cell">Prism Centralのパスワード</block>
+  <block id="ac2fad2f282b0e32c75912e363cfb735" category="cell">Prism Centralへの接続に使用されるTCPポート。デフォルトは9440です。</block>
+  <block id="834593f1f41ad9180f7c06531584872b" category="cell">HTTPタイムアウト（秒）</block>
+  <block id="b8c5ed136238b59bf386d65bf0787acf" category="cell">HTTPリクエストのタイムアウト。デフォルトは60秒です。</block>
+  <block id="625b6c43e9f8c94b5aa84173a04fa961" category="cell">HTTPリトライ回数</block>
+  <block id="c8f99bb6092a052b29e43263274e103f" category="cell">一時的な障害発生時のHTTP再試行回数。デフォルト値は3です。</block>
+  <block id="4a2e4ff5e220e83407c567779aaf9ba1" category="cell">アクセスにはAPIトークンが必要です</block>
+  <block id="4f23d2244ea630f361d554b54b77bf03" category="list-text">REST APIを介したポート6443経由のRed Hat OpenShift VirtualizationサーバーのIPアドレス</block>
+  <block id="427f91a8692cb3d3ee52ca20ff3b659c" category="cell">RHOVとのHTTPS通信に使用されるポート。デフォルトは6443です。</block>
+  <block id="635a6e63b01914992d3584137f9e6ba6" category="sidebar">Nutanix AHV</block>
 </blocks>

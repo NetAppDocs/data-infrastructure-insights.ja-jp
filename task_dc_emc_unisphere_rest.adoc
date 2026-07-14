@@ -20,6 +20,7 @@ Dell/EMC は Unisphere 10.0 までボリュームごとの統計を導入して�
 
 
 
+[[requirements]]
 == 要件
 
 * Unisphere サーバーの IP アドレス/完全修飾ドメイン名
@@ -29,9 +30,10 @@ Dell/EMC は Unisphere 10.0 までボリュームごとの統計を導入して�
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -49,9 +51,10 @@ Dell/EMC は Unisphere 10.0 までボリュームごとの統計を導入して�
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -72,15 +75,17 @@ Dell/EMC は Unisphere 10.0 までボリュームごとの統計を導入して�
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
+[[inventory]]
 === インベントリ
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 問題： | これを試してください: 
 

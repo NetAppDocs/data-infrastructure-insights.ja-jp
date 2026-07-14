@@ -18,6 +18,7 @@ keywords: data collector, queries, create, google, cloud, volumes,
 
 
 
+[[service-account-requirements]]
 == サービスアカウントの要件
 
 * 以下の手順に従ってサービスアカウントを作成する必要があります。link:https://cloud.google.com/iam/docs/creating-managing-service-accounts["サービスアカウントの作成/管理"] 。このサービス アカウントは、_clientId_ と呼ばれる一意の ID によって識別され、ユーザー名として使用されます。
@@ -27,6 +28,7 @@ keywords: data collector, queries, create, google, cloud, volumes,
 
 
 
+[[configuration]]
 == 構成
 
 [cols="50,50"]
@@ -53,6 +55,7 @@ keywords: data collector, queries, create, google, cloud, volumes,
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
 [cols="50,50"]
@@ -73,6 +76,7 @@ keywords: data collector, queries, create, google, cloud, volumes,
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

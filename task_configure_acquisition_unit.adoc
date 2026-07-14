@@ -21,6 +21,7 @@ Data Infrastructure Insightsのセキュリティについて読むlink:security
 
 
 
+[[adding-a-linux-acquisition-unit]]
 == Linux取得ユニットの追加
 
 .開始する前に
@@ -61,6 +62,7 @@ image:NewLinuxAUInstall.png["Linux AU の説明"]
 
 
 
+[[setting-proxy-environment-variables]]
 === プロキシ環境変数の設定
 
 プロキシを使用する環境では、取得ユニットを追加する前にプロキシ環境変数を設定する必要があります。プロキシを構成する手順は、[_取得ユニットの追加_] ダイアログに記載されています。
@@ -76,6 +78,7 @@ image:NewLinuxAUInstall.png["Linux AU の説明"]
 
 
 
+[[proxy-configuration]]
 === プロキシ設定
 
 取得ユニットは、双方向/相互認証を使用して、 Data Infrastructure Insightsサーバーに接続します。クライアント証明書は、認証されるためにData Infrastructure Insightsサーバーに渡す必要があります。これを実現するには、データを復号化せずに https 要求をData Infrastructure Insightsサーバーに転送するようにプロキシを設定する必要があります。
@@ -100,6 +103,7 @@ image:ProxyEndpoints_NewTable.png["プロキシエンドポイントテーブル
 
 
 
+[[adding-a-windows-acquisition-unit]]
 == Windows 取得ユニットの追加
 
 .Windows Acquisition Unit のインストール手順
@@ -133,6 +137,7 @@ image:NewWindowsAUInstall.png["Windows AU インストール"]
 
 
 
+[[proxy-configuration]]
 === プロキシ設定
 
 取得ユニットは、双方向/相互認証を使用して、 Data Infrastructure Insightsサーバーに接続します。クライアント証明書は、認証されるためにData Infrastructure Insightsサーバーに渡す必要があります。これを実現するには、データを復号化せずに https 要求をData Infrastructure Insightsサーバーに転送するようにプロキシを設定する必要があります。
@@ -157,6 +162,7 @@ image:ProxyEndpoints_NewTable.png["プロキシエンドポイントテーブル
 
 
 
+[[uninstalling-an-acquisition-unit]]
 == 取得ユニットのアンインストール
 
 Acquisition Unit ソフトウェアをアンインストールするには、次の手順を実行します。
@@ -201,6 +207,7 @@ image:AU_for_Device_Resolution.png["デバイスの解像度に使用されるAU
 
 
 
+[[reinstalling-an-acquisition-unit]]
 == 取得ユニットの再インストール
 
 同じサーバー/VM に Acquisition Unit を再インストールするには、次の手順に従う必要があります。
@@ -223,6 +230,7 @@ image:AU_for_Device_Resolution.png["デバイスの解像度に使用されるAU
 
 
 
+[[viewing-au-details]]
 == AUの詳細の表示
 
 取得ユニット (AU) の詳細ページには、AU に関する有用な詳細情報と、トラブルシューティングに役立つ情報が提供されます。  AU 詳細ページには次のセクションが含まれています。

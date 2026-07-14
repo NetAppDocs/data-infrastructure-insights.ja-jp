@@ -14,6 +14,7 @@ Lenovo HX データ コレクターは、Lenovo HX ストレージ システム�
 
 
 
+[[requirements]]
 == 要件
 
 このデータ コレクターを構成するには、次の情報が必要です。
@@ -25,11 +26,12 @@ Lenovo HX データ コレクターは、Lenovo HX ストレージ システム�
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、 Lenovo HX データ コレクターから次のインベントリとパフォーマンス情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -53,9 +55,10 @@ Data Infrastructure Insights は、 Lenovo HX データ コレクターから次
 |===
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -70,9 +73,10 @@ Data Infrastructure Insights は、 Lenovo HX データ コレクターから次
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 

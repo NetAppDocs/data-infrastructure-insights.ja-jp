@@ -16,11 +16,12 @@ IBM SAN ボリューム コントローラー (SVC) データ コレクターは
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、 IBM SVC データ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -46,6 +47,7 @@ Data Infrastructure Insights は、 IBM SVC データ コレクターから次�
 
 
 
+[[inventory-requirements]]
 === 在庫要件
 
 * 各SVCクラスタのIPアドレス
@@ -55,6 +57,7 @@ Data Infrastructure Insights は、 IBM SVC データ コレクターから次�
 
 
 
+[[performance-requirements]]
 === パフォーマンス要件
 
 * SVC コンソールは、すべての SVC クラスターに必須であり、SVC 検出基盤パッケージに必要です。
@@ -67,9 +70,10 @@ Data Infrastructure Insights は、 IBM SVC データ コレクターから次�
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -84,9 +88,10 @@ Data Infrastructure Insights は、 IBM SVC データ コレクターから次�
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -101,11 +106,12 @@ Data Infrastructure Insights は、 IBM SVC データ コレクターから次�
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 問題： | これを試してください: 
 
@@ -114,7 +120,7 @@ Data Infrastructure Insights は、 IBM SVC データ コレクターから次�
 |===
 このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 問題： | これを試してください: 
 

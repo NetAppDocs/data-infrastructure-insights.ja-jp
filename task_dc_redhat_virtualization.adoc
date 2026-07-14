@@ -18,11 +18,12 @@ Red Hat Virtualization用のDIIデータコレクターは、オープンソー�
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -45,6 +46,7 @@ Data Infrastructure Insightsによって取得された資産タイプごとに�
 
 
 
+[[requirements]]
 == 要件
 
 * REST API経由でポート443を介したRHV/oVirt/OLVMサーバーのIPアドレス/ホスト名
@@ -54,9 +56,10 @@ Data Infrastructure Insightsによって取得された資産タイプごとに�
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -71,9 +74,10 @@ Data Infrastructure Insightsによって取得された資産タイプごとに�
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -91,6 +95,7 @@ Data Infrastructure Insightsによって取得された資産タイプごとに�
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

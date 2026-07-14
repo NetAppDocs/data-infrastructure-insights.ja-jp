@@ -21,6 +21,7 @@ NOTE: このページはサードパーティの指示を参照しており、�
 
 
 
+[[discord-setup]]
 == Discordの設定:
 
 * Discordでサーバーを選択し、テキストチャンネルの下にあるチャンネル編集（歯車アイコン）を選択します。
@@ -30,6 +31,7 @@ NOTE: このページはサードパーティの指示を参照しており、�
 
 
 
+[[create-workload-security-webhook]]
 == ワークロード セキュリティ Webhook を作成します。
 
 . 「管理」>「通知」に移動し、「_Workload Security Webhooks_」タブを選択します。新しい Webhook を作成するには、「+ Webhook」をクリックします。
@@ -46,6 +48,7 @@ Webhook をテストするには、メッセージ本文の URL 値を有効な 
 
 
 
+[[notifications-via-webhook]]
 == Webhook経由の通知
 
 Webhook 経由でイベントを通知するには、[_Workload Security_] > [ポリシー] に移動します。  _+攻撃ポリシー_または_+警告ポリシー_をクリックします。

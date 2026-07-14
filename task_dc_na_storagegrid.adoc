@@ -27,11 +27,12 @@ NetApp StorageGRIDデータ コレクターは、 StorageGRID構成からのイ�
 ====
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、 NetApp StorageGRIDコレクターから次のインベントリ情報を取得します。取得した資産の種類ごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -49,6 +50,7 @@ Data Infrastructure Insights は、 NetApp StorageGRIDコレクターから次�
 |===
 
 
+[[requirements]]
 == 要件
 
 このデータ ソースを構成するための要件は次のとおりです。
@@ -60,9 +62,10 @@ Data Infrastructure Insights は、 NetApp StorageGRIDコレクターから次�
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -77,9 +80,10 @@ Data Infrastructure Insights は、 NetApp StorageGRIDコレクターから次�
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -91,6 +95,7 @@ Data Infrastructure Insights は、 NetApp StorageGRIDコレクターから次�
 |===
 
 
+[[single-sign-on-sso]]
 == シングルサインオン（SSO）
 
 そのlink:https://docs.netapp.com/sgws-112/index.jsp["StorageGRID"]ファームウェア バージョンには対応する API バージョンがあり、3.0 API 以降のバージョンではシングル サインオン (SSO) ログインがサポートされています。
@@ -111,6 +116,7 @@ Data Infrastructure Insights は、 NetApp StorageGRIDコレクターから次�
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

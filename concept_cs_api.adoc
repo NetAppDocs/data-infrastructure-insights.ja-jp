@@ -24,6 +24,7 @@ API アクセスの要件:
 
 
 
+[[api-documentation-swagger]]
 == APIドキュメント（Swagger）
 
 最新の API 情報は、Workload Security にログインし、*管理 > API アクセス* に移動すると見つかります。  *API ドキュメント* リンクをクリックします。  API ドキュメントは Swagger ベースであり、API の簡単な説明と使用方法の情報を提供し、テナントで試用することができます。
@@ -33,6 +34,7 @@ NOTE: Forensics Activity API を呼び出す場合は、cloudsecure_forensics.ac
 
 
 
+[[api-access-tokens]]
 == APIアクセストークン
 
 Workload Security API を使用する前に、1 つ以上の *API アクセス トークン* を作成する必要があります。アクセス トークンは読み取り権限を付与します。各アクセス トークンの有効期限を設定することもできます。
@@ -65,6 +67,7 @@ NOTE: トークンは、作成プロセス中にクリップボードにコピ�
 
 
 
+[[script-to-extract-data-via-the-api]]
 == API経由でデータを抽出するスクリプト
 
 Workload Security エージェントには、要求された時間範囲をより小さなバッチに分割することで、v2 API への並列呼び出しを容易にするエクスポート スクリプトが含まれています。

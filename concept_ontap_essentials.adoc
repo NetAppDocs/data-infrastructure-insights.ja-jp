@@ -27,6 +27,7 @@ ONTAP Essentials には、過去 7 日間に収集されたデータを含む、
 
 
 
+[[overview]]
 == 概要
 
 探索を開始するには、メインのData Infrastructure Insightsメニューから * ONTAP Essentials* を選択します。
@@ -41,6 +42,7 @@ image:OE_Overview.png["ONTAP Essentialsの概要ダッシュボード"]
 
 
 
+[[data-protection]]
 == データ保護
 
 *データ保護* ページには、*スナップショット コピー* または * SnapMirrorポリシー* によって保護されているボリュームのステータスが表示されます。
@@ -74,6 +76,7 @@ image:DataProtectionDashboard_ClusterList.png["データ保護クラスターリ
 
 
 
+[[security]]
 == セキュリティ
 
 セキュリティダッシュボードでは、ハードウェアおよびソフトウェアによるボリューム暗号化、ファイル改ざん対策の状況、クラスター認証方法などのグラフが表示され、現在のセキュリティ状況を瞬時に確認できます。セキュリティ基準は、link:https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf["* ONTAP 9 向けNetAppセキュリティ強化ガイド*"]で定義された推奨事項に基づいて評価されます。
@@ -151,6 +154,7 @@ SVM の場合、セキュリティ ダッシュボードは次のモニターを
 
 
 
+[[alerts]]
 == アラート
 
 ここでは、テナントのアクティブなアラートを表示し、潜在的な問題をすばやくドリルダウンできます。解決されたアラートを表示するには、[_解決済み_] タブを選択します。
@@ -159,6 +163,7 @@ image:OE_Alerts.png["ONTAP Essentials アラートリスト"]
 
 
 
+[[infrastructure]]
 == インフラ
 
 ONTAP Essentials の *Infrastructure* ページでは、すべての基本的なONTAPオブジェクトに対して事前に構築された (さらにカスタマイズ可能な) クエリを使用して、クラスタの健全性とパフォーマンスを確認できます。調査するオブジェクト タイプ (クラスター、ストレージ プールなど) を選択し、ヘルス情報またはパフォーマンス情報のどちらを表示するかを選択します。フィルターを設定して、個々のシステムを詳細に調べます。
@@ -169,6 +174,7 @@ image:ONTAP_Essentials_Health_Performance.png["ストレージプールのイン
 
 
 
+[[networking]]
 == ネットワーク
 
 ONTAP Essentials Networking を使用すると、FC、NVME FC、イーサネット、iSCSI インフラストラクチャを詳細に把握できます。これらのページでは、クラスター内のポートやそのノードなどを調べることができます。
@@ -177,6 +183,7 @@ image:ONTAP_Essentials_Alerts_Menu.png["ONTAP Essentials ネットワークメ�
 
 
 
+[[workloads]]
 == ワークロード
 
 テナント上の LUN/ボリューム、NFS または SMB 共有、または Qtree 上のワークロードを表示および調査します。

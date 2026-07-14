@@ -20,6 +20,7 @@ Data Infrastructure Insightslink:https://docs.netapp.com/us-en/cloudinsights/con
 
 
 
+[[requirements-for-api-access]]
 == APIアクセスの要件
 
 * アクセスを許可するには、API アクセス トークン モデルが使用されます。
@@ -28,6 +29,7 @@ Data Infrastructure Insightslink:https://docs.netapp.com/us-en/cloudinsights/con
 
 
 
+[[api-documentation-swagger]]
 == APIドキュメント（Swagger）
 
 最新の API 情報は、Data Infrastructure Insightsにログインし、*管理 > API アクセス* に移動すると見つかります。  *API ドキュメント* リンクをクリックします。
@@ -40,6 +42,7 @@ image:API_Swagger_Example.png["API Swaggerの例"]
 
 
 
+[[api-access-tokens]]
 == APIアクセストークン
 
 Data Infrastructure Insights API を使用する前に、1 つ以上の *API アクセス トークン* を作成する必要があります。アクセス トークンは指定された API タイプに使用され、読み取り権限や書き込み権限を付与できます。各アクセス トークンの有効期限を設定することもできます。指定されたタイプのすべての API はアクセス トークンに対して有効です。各トークンにはユーザー名やパスワードはありません。
@@ -77,6 +80,7 @@ NOTE: トークンは、作成プロセス中にクリップボードにコピ�
 
 
 
+[[api-type]]
 == API タイプ
 
 Data Infrastructure Insights API はカテゴリベースで、現在次のタイプが含まれています。
@@ -100,12 +104,14 @@ Data Infrastructure Insights API はカテゴリベースで、現在次のタ�
 
 
 
+[[inventory-traversal]]
 == インベントリトラバーサル
 
 このセクションでは、Data Infrastructure Insightsオブジェクトの階層を移動する方法について説明します。
 
 
 
+[[top-level-objects]]
 === トップレベルオブジェクト
 
 個々のオブジェクトは、リクエスト内で一意のURL（JSONでは「self」と呼ばれます）によって識別され、オブジェクトタイプと内部IDの知識が必要です。一部のトップレベルオブジェクト（ホスト、ストレージなど）については、REST APIを使用して完全なコレクションにアクセスできます。
@@ -118,6 +124,7 @@ API URL の一般的な形式は次のとおりです。
  https://mysite.c01.cloudinsights.netapp.com/rest/v1/assets/storages
 
 
+[[children-and-related-objects]]
 === 子供と関連オブジェクト
 
 ストレージなどの最上位オブジェクトは、他の子オブジェクトや関連オブジェクトに移動するために使用できます。たとえば、特定のストレージのすべてのディスクを取得するには、ストレージの「self」URL を「/disks」と連結します。次に例を示します。
@@ -125,6 +132,7 @@ API URL の一般的な形式は次のとおりです。
  https://<tenant>/rest/v1/assets/storages/4537/disks
 
 
+[[expands]]
 == 拡大
 
 多くの API コマンドは、オブジェクトに関する追加の詳細または関連オブジェクトの URL を提供する *expand* パラメータをサポートしています。
@@ -147,6 +155,7 @@ image:expands.gif["例を拡張する"]
 
 
 
+[[performance-data]]
 == パフォーマンス データ
 
 パフォーマンス データは、多数のデバイスにわたって個別のサンプルとして収集されます。  Data Infrastructure Insights は、1 時間ごとに (デフォルト) パフォーマンス サンプルを集計して要約します。
@@ -188,6 +197,7 @@ image:API_Performance.png["APIパフォーマンスの例"]
 
 
 
+[[object-performance-metrics]]
 == オブジェクトパフォーマンスメトリック
 
 API は、テナント上のオブジェクトの詳細なメトリックを返すことができます。次に例を示します。
@@ -200,6 +210,7 @@ API は、テナント上のオブジェクトの詳細なメトリックを返�
 
 
 
+[[performance-history-data]]
 == パフォーマンス履歴データ
 
 履歴データは、タイムスタンプとカウンター マップのペアのリストとしてパフォーマンス データ内に表示されます。
@@ -215,12 +226,14 @@ image:DiskPerformanceExample.png["ディスクパフォーマンスJSON"]
 
 
 
+[[objects-with-capacity-attributes]]
 == 容量属性を持つオブジェクト
 
 容量属性を持つオブジェクトは、基本データ型と CapacityItem を使用して表現します。
 
 
 
+[[capacityitem]]
 === 容量項目
 
 CapacityItem は単一の論理容量単位です。親オブジェクトによって定義された単位で「value」と「highThreshold」を持ちます。また、容量値の構築方法を説明するオプションの内訳マップもサポートしています。たとえば、100 TB のストレージ プールの合計容量は、値が 100 の CapacityItem になります。内訳には、「データ」に 60 TB、「スナップショット」に 40 TB が割り当てられていることが示される場合があります。
@@ -233,6 +246,7 @@ image:StoragePoolCapacity.png["ストレージプール容量の例"]
 
 
 
+[[using-search-to-look-up-objects]]
 == 検索を使用してオブジェクトを検索する
 
 検索 API はシステムへのシンプルなエントリ ポイントです。 API への唯一の入力パラメータは自由形式の文字列であり、結果の JSON には分類された結果リストが含まれます。タイプは、ストレージ、ホスト、データストアなど、インベントリとは異なる資産タイプです。各タイプには、検索条件に一致するタイプのオブジェクトのリストが含まれます。
@@ -243,6 +257,7 @@ Cloud Insight の RESTful API は、データのシンプルかつ効率的な�
 
 
 
+[[disabling-or-revoking-an-api-token]]
 == APIトークンの無効化または取り消し
 
 API トークンを一時的に無効にするには、API トークン リスト ページで、API の「3 つのドット」メニューをクリックし、「無効」を選択します。同じメニューを使用して [有効にする] を選択すると、いつでもトークンを再度有効にすることができます。
@@ -253,6 +268,7 @@ image:API_Disable_Token.png["APIトークンの無効化または取り消し"]
 
 
 
+[[rotating-expired-api-access-tokens]]
 == 期限切れのAPIアクセストークンのローテーション
 
 API アクセス トークンには有効期限があります。 API アクセス トークンの有効期限が切れると、ユーザーは新しいトークン (読み取り/書き込み権限を持つ _データ インジェスチョン_ タイプ) を生成し、期限切れのトークンの代わりに新しく生成されたトークンを使用するように Telegraf を再構成する必要があります。その方法については、以下の手順で詳しく説明します。

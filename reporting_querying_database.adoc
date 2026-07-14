@@ -21,6 +21,7 @@ NOTE: このドキュメントは、 Data Infrastructure Insights Premium Editio
 
 
 
+[[odata]]
 == 小田田
 
 Data Infrastructure InsightsサイトレポートAPIは、link:https://www.odata.org/["OData v4"]レポート データベースのクエリを実行するための Open Data Protocol (Open Data Protocol) 標準。さらに詳しい情報や詳細については、link:https://www.odata.org/getting-started/basic-tutorial/["このチュートリアル"] OData で。
@@ -29,6 +30,7 @@ Data Infrastructure InsightsサイトレポートAPIは、link:https://www.odata
 
 
 
+[[generating-an-apikey]]
 == APIキーの生成
 
 詳細はこちらlink:API_Overview.html["Data Infrastructure InsightsAPI"]。
@@ -48,6 +50,7 @@ APIキーは次の用途に使えます<<synchronous-or-asynchronous,_同期_ �
 
 
 
+[[direct-query-of-tables]]
 == テーブルの直接クエリ
 
 API キーを設定すると、レポート データベースへの直接クエリが可能になります。長い URL は、表示上の都合上、完全な \https://< Data Infrastructure Insights URL>/rest/v1/dwh-management/odata/ ではなく、\https://.../odata/ のように簡略化される場合があります。
@@ -63,6 +66,7 @@ API キーを設定すると、レポート データベースへの直接クエ
 
 
 
+[[rest-api-examples]]
 == REST APIの例
 
 すべての呼び出しの URL は _\https://< Data Infrastructure Insights URL>/rest/v1/dwh-management/odata_ です。
@@ -107,6 +111,7 @@ API キーを設定すると、レポート データベースへの直接クエ
 ....
 
 
+[[helpful-hints]]
 == 役立つヒント
 
 Reporting API クエリを使用するときは、次の点に留意してください。
@@ -133,6 +138,7 @@ API キーは、Data Infrastructure Insights環境に固有のものになりま
 
 
 
+[[synchronous-or-asynchronous]]
 == 同期か非同期か?
 
 デフォルトでは、API コマンドは同期モードで動作します。つまり、リクエストを送信すると、すぐに応答が返されます。ただし、クエリの実行に長い時間がかかり、リクエストがタイムアウトになる場合があります。これを回避するには、リクエストを非同期的に実行します。非同期モードでは、リクエストは実行を監視できる URL を返します。準備ができたら、URL から結果が返されます。

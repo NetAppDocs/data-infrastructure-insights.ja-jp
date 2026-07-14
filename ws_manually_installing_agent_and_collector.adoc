@@ -14,6 +14,7 @@ summary: Workload Security エージェントは手動でインストールま�
 
 
 
+[[before-you-begin]]
 == 開始前の準備
 
 . Swagger で、「cloudsecure_installers.agent」および「cloudsecure_installers.collector」という名前の API カテゴリが使用可能であることを確認します。そうでない場合、エージェントの手動インストールのサポートは有効になりません。この機能を有効にするには、 NetAppサポートにお問い合わせください。
@@ -25,6 +26,7 @@ image:ws_manual_install_APIs.png["手動インストールAPI"]
 
 
 
+[[installing-a-new-agent]]
 == 新しいエージェントのインストール
 
 . 新しい Workload Security API アクセス トークンを作成します。
@@ -197,6 +199,7 @@ image:ws_agentsPageShowingConnected.png["接続されたエージェントを表
 
 
 
+[[installing-a-new-data-collector]]
 == 新しいデータコレクターをインストールしています。
 
 注: このドキュメントには、「ONTAP SVM データ コレクター」のインストール手順が記載されています。  「Cloud Volumes ONTAPデータコレクター」と「Amazon FSx for NetApp ONTAPデータコレクター」にも同じ手順が適用されます。
@@ -289,6 +292,7 @@ image:ws_collectorPageList.png["コレクターを表示するUIリストペー�
 
 
 
+[[installing-a-new-user-directory-collector]]
 == 新しいユーザーディレクトリコレクターのインストール
 
 注: このドキュメントでは、LDAP コレクターをインストールする手順について説明しました。  AD コレクターのインストールにも同じ手順が適用されます。
@@ -401,6 +405,7 @@ image:ws_LDAP_collector_list.png["UI の LDAP コレクター リスト"]
 
 
 
+[[upgrading-an-agent]]
 == エージェントのアップグレード
 
 エージェント/コレクターの新しいバージョンが利用可能になると、電子メール通知が送信されます。
@@ -487,6 +492,7 @@ image:ws_agentsPageShowingConnected.png["接続されたエージェントを表
 
 
 
+[[upgrading-collectors]]
 == コレクターのアップグレード
 
 注: アップグレード手順は、すべてのタイプのコレクターで同じです。このドキュメントでは、「ONTAP SVM」コレクターのアップグレードについて説明します。
@@ -570,6 +576,7 @@ image:ws_svm_ontap_collector_upgrade_example_json.png["Swagger UI での SVM ア
 
 
 
+[[commons-issues-and-fixes]]
 == Commons の問題と修正。
 
 . AGENT014 エラー

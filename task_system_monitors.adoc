@@ -15,10 +15,12 @@ Data Infrastructure Insights には、メトリックとログの両方に対す
 
 NOTE: 多くのシステム モニターは、デフォルトでは _一時停止_ 状態になっています。モニターの [再開] オプションを選択すると、システム モニターを有効にすることができます。データ コレクターで [Advanced Counter Data Collection] と [Enable ONTAP EMS log collection] が有効になっていることを確認します。これらのオプションは、 ONTAPデータ コレクターの [_Advanced Configuration_] にあります。image:Enable_Log_Monitor_Collection.png["ONTAPの高度なカウンタとEMSログ収集を有効にする"]
 
+[[top]]
 目次:[]
 
 
 
+[[monitor-descriptions]]
 == モニターの説明
 
 システム定義のモニターは、事前定義されたメトリックと条件、および変更できないデフォルトの説明と修正アクションで構成されます。システム定義モニターの通知受信者リストを変更することができます。メトリック、条件、説明、修正アクションを表示したり、受信者リストを変更したりするには、システム定義のモニター グループを開き、リスト内のモニター名をクリックします。
@@ -36,6 +38,7 @@ NOTE: 多くのシステム モニターは、デフォルトでは _一時停�
 
 
 
+[[metric-monitors]]
 === メトリックモニター
 
 |===
@@ -122,6 +125,7 @@ NOTE: 多くのシステム モニターは、デフォルトでは _一時停�
 
 
 
+[[log-monitors]]
 === ログモニター
 
 |===
@@ -292,6 +296,7 @@ NOTE: 多くのシステム モニターは、デフォルトでは _一時停�
 
 
 
+[[anti-ransomware-log-monitors]]
 === ランサムウェア対策ログモニター
 
 |===
@@ -330,6 +335,7 @@ NOTE: 多くのシステム モニターは、デフォルトでは _一時停�
 
 
 
+[[fsx-for-netapp-ontap-monitors]]
 === NetApp ONTAPモニターの FSx
 
 |===
@@ -359,6 +365,7 @@ NOTE: 多くのシステム モニターは、デフォルトでは _一時停�
 
 
 
+[[k8s-monitors]]
 === K8sモニター
 
 |===
@@ -484,6 +491,7 @@ NOTE: 多くのシステム モニターは、デフォルトでは _一時停�
 
 
 
+[[change-log-monitors]]
 === 変更ログモニター
 
 |===
@@ -516,6 +524,7 @@ NOTE: 多くのシステム モニターは、デフォルトでは _一時停�
 
 
 
+[[data-collection-monitors]]
 === データ収集モニター
 
 |===
@@ -536,6 +545,7 @@ NOTE: 多くのシステム モニターは、デフォルトでは _一時停�
 
 
 
+[[security-monitors]]
 === セキュリティモニター
 
 |===
@@ -592,6 +602,7 @@ NOTE: 多くのシステム モニターは、デフォルトでは _一時停�
 
 
 
+[[data-protection-monitors]]
 === データ保護モニター
 
 |===
@@ -609,6 +620,7 @@ NOTE: 多くのシステム モニターは、デフォルトでは _一時停�
 
 
 
+[[cloud-volume-cvo-monitors]]
 === クラウドボリューム（CVO）モニター
 
 |===
@@ -689,6 +701,7 @@ NOTE: 多くのシステム モニターは、デフォルトでは _一時停�
 
 
 
+[[snapmirror-for-business-continuity-smbc-mediator-log-monitors]]
 === SnapMirror for Business Continuity (SMBC) メディエーター ログ モニター
 
 |===
@@ -733,6 +746,7 @@ NOTE: 多くのシステム モニターは、デフォルトでは _一時停�
 
 
 
+[[additional-power-heartbeat-and-miscellaneous-system-monitors]]
 === 追加の電源、ハートビート、およびその他のシステムモニター
 
 |===
@@ -808,6 +822,7 @@ NOTE: 多くのシステム モニターは、デフォルトでは _一時停�
 
 
 
+[[more-information]]
 == 詳細情報
 
 * link:task_view_and_manage_alerts.html["アラートの表示と消去"]

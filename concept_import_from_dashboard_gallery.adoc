@@ -18,6 +18,7 @@ Data Infrastructure Insights は、データに関するビジネス分析情報
 
 
 
+[[importing-from-the-dashboard-gallery]]
 == ダッシュボードギャラリーからのインポート
 
 ギャラリーからダッシュボードをインポートするには、次の手順を実行します。
@@ -36,6 +37,7 @@ Data Infrastructure Insights は、データに関するビジネス分析情報
 
 
 
+[[importing-an-exported-dashboard]]
 == エクスポートしたダッシュボードのインポート
 
 ダッシュボードを*エクスポート*するには、*[Observability] > [Explore] > [All Dashboards]* ページで、ダッシュボードの右側にあるメニューをクリックし、[_Export_] を選択します。複数のダッシュボードを選択し、「一括操作」ドロップダウンから「エクスポート」を選択することもできます。ダッシュボードは、ローカル システム上の .ZIP ファイルに保存されます。

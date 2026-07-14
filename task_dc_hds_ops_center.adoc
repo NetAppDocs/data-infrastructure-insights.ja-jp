@@ -14,11 +14,12 @@ summary: HDS Ops Center データ コレクターを構成します。
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、このデータ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -53,6 +54,7 @@ Data Infrastructure Insights は、このデータ コレクターから次の�
 
 
 
+[[inventory-requirements]]
 == 在庫要件
 
 インベントリ データを収集するには、次のものが必要です。
@@ -63,6 +65,7 @@ Data Infrastructure Insights は、このデータ コレクターから次の�
 
 
 
+[[performance-requirements]]
 == パフォーマンス要件
 
 パフォーマンス データを収集するには、次の要件を満たす必要があります。
@@ -71,9 +74,10 @@ HDS Ops Center「アナライザ」モジュールをインストールする必
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -88,6 +92,7 @@ HDS Ops Center「アナライザ」モジュールをインストールする必
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
 |===

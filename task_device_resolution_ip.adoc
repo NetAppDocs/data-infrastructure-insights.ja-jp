@@ -16,6 +16,7 @@ image:Device_Resolution_IP.png["IPデバイスの解像度"]
 
 
 
+[[adding-ip-devices-manually]]
 == IPデバイスを手動で追加する
 
 IP 識別画面で利用可能な手動追加機能を使用して、IP デバイスをData Infrastructure Insightsに手動で追加できます。
@@ -36,6 +37,7 @@ IP 識別画面で利用可能な手動追加機能を使用して、IP デバ�
 
 
 
+[[importing-ip-device-identification-from-a-csv-file]]
 == .CSV ファイルから IP デバイス ID をインポートする
 
 .CSV ファイル内のデバイス ID のリストを使用して、IP デバイス ID をデバイス解決機能に手動でインポートできます。
@@ -63,6 +65,7 @@ NOTE: ベスト プラクティスとして、最初に IP アドレス識別情
 
 
 
+[[exporting-ip-device-identification-to-a-csv-file]]
 == IPデバイス識別情報を.CSVファイルにエクスポートする
 
 Data Infrastructure Insights のデバイス解決機能から、既存の IP デバイス ID を .CSV ファイルにエクスポートできます。デバイス ID をエクスポートして変更し、 Data Infrastructure Insightsに再度インポートして、エクスポートした ID に元々一致していたデバイスに類似したデバイスを識別するために使用することができます。

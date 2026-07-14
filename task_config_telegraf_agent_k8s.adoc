@@ -18,12 +18,14 @@ Data Infrastructure Insights は、 Kubernetes コレクション用の *Kuberne
 
 
 
+[[before-installing-the-kubernetes-monitoring-operator]]
 == Kubernetesモニタリングオペレーターをインストールする前に
 
 参照link:pre-requisites_for_k8s_operator.html["前提条件"]Kubernetes Monitoring Operator をインストールまたはアップグレードする前に、ドキュメントを参照してください。
 
 
 
+[[installing-the-kubernetes-monitoring-operator]]
 == Kubernetes モニタリング オペレーターのインストール
 
 image:NKMO-Instructions-1.png["オペレータ指示の監視"] image:NKMO-Instructions-2.png["オペレータ指示の監視"]
@@ -43,6 +45,7 @@ image:NKMO-Instructions-1.png["オペレータ指示の監視"] image:NKMO-Instr
 
 
 
+[[kubernetes-monitoring-components]]
 == Kubernetes 監視コンポーネント
 
 Data Infrastructure Insights Kubernetes モニタリングは、次の 4 つのモニタリング コンポーネントで構成されています。
@@ -63,10 +66,13 @@ image:KubernetesModifyDeploymentScreen.png["展開オプションを変更、幅
 
 
 
+[[upgrading-to-the-latest-kubernetes-monitoring-operator]]
+[[upgrading]]
 == 最新のKubernetesモニタリングオペレーターへのアップグレード
 
 
 
+[[dii-push-button-upgrades]]
 === DII プッシュボタンアップグレード
 
 DII Kubernetes Collectors ページから Kubernetes Monitoring Operator をアップグレードできます。アップグレードするクラスターの横にあるメニューをクリックし、「_アップグレード_」を選択します。オペレーターはイメージ署名を検証し、現在のインストールのスナップショットを実行して、アップグレードを実行します。数分以内に、オペレーターのステータスが「アップグレード進行中」から「最新」へと進行していくのが確認できます。エラーが発生した場合は、詳細を表示するにはエラー ステータスを選択し、以下のプッシュ ボタン アップグレードのトラブルシューティング表を参照してください。
@@ -94,6 +100,7 @@ cosign copy <DII container registry>/netapp-monitoring:<image version> <private 
 
 
 
+[[manual-upgrades]]
 === 手動アップグレード
 
 既存の Operator に _AgentConfiguration_ が存在するかどうかを判断します（名前空間がデフォルトの _netapp-monitoring_ でない場合は、適切な名前空間に置き換えます）：
@@ -128,6 +135,7 @@ _AgentConfiguration_ が存在しない場合：
 
 
 
+[[stopping-and-starting-the-kubernetes-monitoring-operator]]
 == Kubernetes モニタリング オペレーターの停止と起動
 
 Kubernetes モニタリング オペレーターを停止するには:
@@ -138,10 +146,12 @@ Kubernetes モニタリング オペレーターを起動するには:
  kubectl -n netapp-monitoring scale deploy monitoring-operator --replicas=1
 
 
+[[uninstalling]]
 == アンインストール
 
 
 
+[[to-remove-the-kubernetes-monitoring-operator]]
 === Kubernetesモニタリングオペレーターを削除するには
 
 Kubernetes モニタリング オペレーターのデフォルトの名前空間は「netapp-monitoring」であることに注意してください。独自の名前空間を設定している場合は、これらのコマンドと後続のすべてのコマンドおよびファイルでその名前空間を置き換えます。
@@ -173,6 +183,7 @@ kubectl delete ns <NAMESPACE>
  kubectl delete scc telegraf-hostaccess
 
 
+[[about-kube-state-metrics]]
 == Kube-state-metricsについて
 
 NetApp Kubernetes Monitoring Operator は、他のインスタンスとの競合を避けるために独自の kube-state-metrics をインストールします。
@@ -181,12 +192,14 @@ Kube-State-Metricsの詳細については、以下を参照してください�
 
 
 
+[[configuringcustomizing-the-operator]]
 == オペレーターの設定/カスタマイズ
 
 これらのセクションには、オペレーター構成のカスタマイズ、プロキシの操作、カスタムまたはプライベート Docker リポジトリの使用、OpenShift の操作に関する情報が含まれています。
 
 
 
+[[configuration-options]]
 === 設定オプション
 
 最も頻繁に変更される設定は、_AgentConfiguration_ カスタム リソースで構成できます。オペレーターをデプロイする前に、_operator-config.yaml_ ファイルを編集してこのリソースを編集できます。このファイルには、コメントアウトされた設定の例が含まれています。リストを見るlink:telegraf_agent_k8s_config_options.html["利用可能な設定"]オペレーターの最新バージョン。
@@ -201,6 +214,7 @@ Kube-State-Metricsの詳細については、以下を参照してください�
 
 
 
+[[configuring-proxy-support]]
 === プロキシサポートの設定
 
 Kubernetes モニタリング オペレーターをインストールするために、テナント上でプロキシを使用できる場所は 2 つあります。これらは同じプロキシ システムである場合もあれば、別のプロキシ システムである場合もあります。
@@ -255,6 +269,7 @@ agent:
 ----
 
 
+[[using-a-custom-or-private-docker-repository]]
 === カスタムまたはプライベートDockerリポジトリの使用
 
 デフォルトでは、Kubernetes Monitoring Operator はData Infrastructure Insightsリポジトリからコンテナ イメージをプルします。監視のターゲットとして Kubernetes クラスターが使用されており、そのクラスターがカスタムまたはプライベート Docker リポジトリまたはコンテナー レジストリからのみコンテナー イメージをプルするように構成されている場合は、Kubernetes 監視オペレーターに必要なコンテナーへのアクセスを構成する必要があります。
@@ -324,6 +339,7 @@ link:task_config_telegraf_agent.html#manually-create-an-api-access-token["こち
 
 
 
+[[openshift-instructions]]
 === OpenShift の手順
 
 OpenShift 4.6 以降で実行している場合は、_operator-config.yaml_ の _AgentConfiguration_ を編集して _runPrivileged_ 設定を有効にする必要があります：
@@ -336,6 +352,7 @@ Openshift は、一部の Kubernetes コンポーネントへのアクセスを�
 
 
 
+[[tolerations-and-taints]]
 === 寛容と汚点
 
 _netapp-ci-telegraf-ds_、_netapp-ci-fluent-bit-ds_、および _netapp-ci-net-observer-l4-ds_ DaemonSets は、すべてのノードでデータを正しく収集するために、クラスター内のすべてのノードでポッドをスケジュールする必要があります。オペレーターは、いくつかのよく知られた *汚染* を許容するように設定されています。ノードにカスタムテイントを設定して、ポッドがすべてのノードで実行されないようにしている場合は、それらのテイントに対して*許容*を作成できます。link:telegraf_agent_k8s_config_options.html["_AgentConfiguration_内"] 。クラスター内のすべてのノードにカスタム テイントを適用した場合は、オペレーター ポッドをスケジュールして実行できるように、オペレーター デプロイメントに必要な許容値も追加する必要があります。
@@ -346,36 +363,7 @@ Kubernetesについて詳しく知るlink:https://kubernetes.io/docs/concepts/sc
 
 
 
-== 秘密についてのメモ
-
-Kubernetes モニタリング オペレーターがクラスター全体でシークレットを表示する権限を削除するには、インストール前に _operator-setup.yaml_ ファイルから次のリソースを削除します。
-
-[listing]
-----
- ClusterRole/netapp-ci<namespace>-agent-secret
- ClusterRoleBinding/netapp-ci<namespace>-agent-secret
-----
-アップグレードの場合は、クラスターからリソースも削除します。
-
-[listing]
-----
- kubectl delete ClusterRole/netapp-ci-<namespace>-agent-secret-clusterrole
- kubectl delete ClusterRoleBinding/netapp-ci-<namespace>-agent-secret-clusterrolebinding
-
-----
-変更分析が有効になっている場合は、_AgentConfiguration_ または _operator-config.yaml_ を変更して、変更管理セクションのコメントを解除し、変更管理セクションの下に _kindsToIgnoreFromWatch: '"secrets"'_ を含めます。この行における一重引用符と二重引用符の存在と位置に注意してください。
-
-....
-change-management:
-  ...
-  # # A comma separated list of kinds to ignore from watching from the default set of kinds watched by the collector
-  # # Each kind will have to be prefixed by its apigroup
-  # # Example: '"networking.k8s.io.networkpolicies,batch.jobs", "authorization.k8s.io.subjectaccessreviews"'
-  kindsToIgnoreFromWatch: '"secrets"'
-  ...
-....
-
-
+[[verifying-kubernetes-monitoring-operator-image-signatures]]
 == Kubernetes モニタリング オペレーター イメージ署名の検証
 
 オペレータのイメージとそれが展開するすべての関連イメージは、 NetAppによって署名されています。インストール前に cosign ツールを使用してイメージを手動で検証したり、Kubernetes アドミッション コントローラーを構成したりすることができます。詳細については、link:https://kubernetes.io/docs/tasks/administer-cluster/verify-signed-artifacts/#verifying-image-signatures["Kubernetesドキュメント"] 。
@@ -401,6 +389,7 @@ The following checks were performed on each of these signatures:
 ----
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 Kubernetes モニタリング オペレーターの設定中に問題が発生した場合に試すことは次のとおりです。

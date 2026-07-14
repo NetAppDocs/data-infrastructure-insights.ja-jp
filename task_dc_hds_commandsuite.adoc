@@ -14,11 +14,12 @@ Hitachi Vantara Command Suite データ コレクターは、HiCommand Device Ma
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、 Hitachi Vantara Command Suite データ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -44,6 +45,7 @@ Data Infrastructure Insights は、 Hitachi Vantara Command Suite データ コ�
 
 
 
+[[storage]]
 === ストレージ
 
 以下の用語は、HDS ストレージ アセット ランディング ページに表示されるオブジェクトまたは参照に適用されます。これらの条件の多くは他のデータ収集者にも適用されます。
@@ -58,6 +60,7 @@ Data Infrastructure Insights は、 Hitachi Vantara Command Suite データ コ�
 
 
 
+[[storage-pool]]
 === ストレージ プール
 
 以下の用語は、HDS ストレージ プール アセット ランディング ページに表示されるオブジェクトまたは参照に適用されます。これらの条件の多くは他のデータ収集者にも適用されます。
@@ -84,6 +87,7 @@ Data Infrastructure Insights は、いかなる犠牲を払ってでも容量の
 
 
 
+[[storage-node]]
 === ストレージ ノード
 
 次の用語は、HDS ストレージ ノード アセット ランディング ページに表示されるオブジェクトまたは参照に適用されます。これらの条件の多くは他のデータ収集者にも適用されます。
@@ -94,6 +98,7 @@ Data Infrastructure Insights は、いかなる犠牲を払ってでも容量の
 
 
 
+[[inventory-requirements]]
 == 在庫要件
 
 インベントリ データを収集するには、次のものが必要です。
@@ -107,6 +112,7 @@ Data Infrastructure Insights は、いかなる犠牲を払ってでも容量の
 
 
 
+[[performance-requirements]]
 == パフォーマンス要件
 
 パフォーマンス データを収集するには、次の要件を満たす必要があります。
@@ -130,9 +136,10 @@ Data Infrastructure Insights は、いかなる犠牲を払ってでも容量の
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -170,6 +177,7 @@ Data Infrastructure Insights は、いかなる犠牲を払ってでも容量の
 
 
 
+[[advanced-configuration]]
 == 高度な設定
 
 |===
@@ -200,15 +208,17 @@ Data Infrastructure Insights は、いかなる犠牲を払ってでも容量の
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
+[[inventory]]
 === インベントリ
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 問題： | これを試してください: 
 
@@ -223,9 +233,10 @@ Data Infrastructure Insights は、いかなる犠牲を払ってでも容量の
 |===
 
 
+[[performance]]
 === パフォーマンス
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 問題： | これを試してください: 
 

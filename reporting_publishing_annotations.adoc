@@ -10,6 +10,7 @@ keywords: reporting, annotations, publish, unpublish, data warehouse, dwh
 
 
 
+[[publishing-and-unpublishing-annotations-for-reporting]]
 == レポート用の注釈の公開と非公開
 
 [role="lead"]
@@ -17,12 +18,14 @@ keywords: reporting, annotations, publish, unpublish, data warehouse, dwh
 
 
 
+[[publishing-annotations-for-reporting]]
 == レポート用の注釈の公開
 
 Data Infrastructure Insightsで注釈を作成したら、それをレポートで使用するために公開できます。
 
 
 
+[[steps-to-publish-annotations]]
 === 注釈を公開する手順
 
 . *「観察可能性」>「強化」>「注釈」ページに移動し、「レポートの注釈」タブを選択します。
@@ -39,12 +42,14 @@ Data Infrastructure Insightsで注釈を作成したら、それをレポート�
 ====
 
 
+[[unpublishing-annotations-for-reporting]]
 == レポート用の注釈を非公開にする
 
 レポートで注釈が使用されないように、注釈を削除または非公開にする必要がある場合があります。たとえば、注釈が不要になったり、レポートに表示すべきでない古い情報が含まれている場合があります。
 
 
 
+[[steps-to-unpublish-annotations]]
 === 注釈を非公開にする手順
 
 注釈を非公開にする前に、この操作によって注釈を使用している既存のレポートに影響が及ぶことに注意してください。レポートでは、注釈参照を削除するために編集や専門サービスの支援が必要になる場合があります。
@@ -64,6 +69,7 @@ Data Infrastructure Insightsで注釈を作成したら、それをレポート�
 ====
 
 
+[[impact-on-existing-reports]]
 == 既存のレポートへの影響
 
 注釈を削除または非公開にするには、それらの注釈を参照する既存のレポートを変更する必要がある場合があります。次の点を考慮してください。

@@ -14,6 +14,7 @@ keywords: query, queries, modify, edit, delete, remove
 
 
 
+[[modifying-a-query]]
 == クエリの変更
 
 .手順
@@ -35,6 +36,7 @@ keywords: query, queries, modify, edit, delete, remove
 
 
 
+[[deleting-a-query]]
 == クエリの削除
 
 クエリを削除するには、[*クエリ*] をクリックし、[*すべてのクエリを表示*] を選択して、次のいずれかを実行します。

@@ -14,6 +14,7 @@ EMC XtremIO データ コレクターは、EMC XtremIO ストレージ システ
 
 
 
+[[requirements]]
 == 要件
 
 EMC XtremIO (HTTP) データ コレクターを構成するには、次のものが必要です。
@@ -25,11 +26,12 @@ EMC XtremIO (HTTP) データ コレクターを構成するには、次のもの
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、 EMC XtremIO データ コレクターから次のインベントリ情報を取得します。 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ ソースを表示またはトラブルシューティングするときは、次の用語に留意してください。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -55,6 +57,7 @@ Data Infrastructure Insights は、 EMC XtremIO データ コレクターから�
 
 
 
+[[requirements]]
 == 要件
 
 * XtremIO 管理サーバー (XMS) ホストの IP アドレス
@@ -63,9 +66,10 @@ Data Infrastructure Insights は、 EMC XtremIO データ コレクターから�
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -80,9 +84,10 @@ Data Infrastructure Insights は、 EMC XtremIO データ コレクターから�
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -97,6 +102,7 @@ Data Infrastructure Insights は、 EMC XtremIO データ コレクターから�
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

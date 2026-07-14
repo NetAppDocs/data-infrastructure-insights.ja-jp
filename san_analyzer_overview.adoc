@@ -20,6 +20,7 @@ image:san_analyzer_example_with_panel.png["SAN Analyzer のストレージシス
 
 
 
+[[explore-connections-among-your-assets]]
 == 資産間のつながりを探索する
 
 SAN アナライザーを表示するには、*Observability > Analyze > SAN Analyzer* を選択します。アプリケーション、ホスト、ファブリック、ストレージのフィルターを設定します。オブジェクトのマップが表示され、接続されたオブジェクトが示されます。オブジェクトの上にマウスを置くと、その接続のトラフィック メトリックが表示されます。
@@ -45,6 +46,7 @@ image:san_analyzer_iscsi_traffic.png["iSCSIトラフィックのハイライト"
 
 
 
+[[troubleshooting-tips]]
 == トラブルシューティングのヒント
 
 問題が発生した場合に試すことができるいくつかのこと:

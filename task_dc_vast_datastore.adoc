@@ -18,6 +18,7 @@ Data Infrastructure Insights は、 VAST DataStore データ コレクターを�
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
@@ -66,6 +67,7 @@ Data Infrastructure Insightsによって取得された資産タイプごとに�
 
 
 
+[[requirements]]
 == 要件
 
 * VAST DataStore システムの IP アドレスまたは完全修飾ドメイン名
@@ -75,9 +77,10 @@ Data Infrastructure Insightsによって取得された資産タイプごとに�
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -92,9 +95,10 @@ Data Infrastructure Insightsによって取得された資産タイプごとに�
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -112,15 +116,17 @@ Data Infrastructure Insightsによって取得された資産タイプごとに�
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
+[[inventory]]
 === インベントリ
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 問題： | これを試してください: 
 

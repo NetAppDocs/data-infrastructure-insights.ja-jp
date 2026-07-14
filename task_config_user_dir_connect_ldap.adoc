@@ -121,6 +121,7 @@ LDAP ディレクトリ サーバーでデフォルトの属性名が変更さ�
 |===
 
 
+[[testing-your-user-directory-collector-configuration]]
 == ユーザーディレクトリコレクターの構成のテスト
 
 次の手順を使用して、LDAP ユーザー権限と属性定義を検証できます。
@@ -140,6 +141,7 @@ image:CloudSecure_LDAPDialog.png["LDAP接続"]
 
 
 
+[[troubleshooting-ldap-directory-collector-configuration-errors]]
 == LDAPディレクトリコレクターの設定エラーのトラブルシューティング
 
 次の表では、コレクターの構成中に発生する可能性のある既知の問題と解決策について説明します。

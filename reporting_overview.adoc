@@ -38,6 +38,7 @@ Data Infrastructure Insights Reporting は、チャージバック、消費分�
 
 
 
+[[accessing-data-infrastructure-insights-reporting]]
 == Data Infrastructure Insightsサイトレポートへのアクセス
 
 メニューの*レポート*リンクをクリックすると、 Data Infrastructure Insightsレポートにアクセスできます。
@@ -46,6 +47,7 @@ Data Infrastructure Insights Reporting は、チャージバック、消費分�
 
 
 
+[[what-is-etl]]
 == ETL とは何ですか?
 
 レポートを扱うときには、「データ ウェアハウス」と「ETL」という用語を耳にするでしょう。  ETL は「抽出、変換、ロード」の略です。  ETL プロセスは、 Data Infrastructure Insightsで収集されたデータを取得し、そのデータをレポートで使用できる形式に変換します。  「データ ウェアハウス」とは、レポートに使用できる収集されたデータを指します。

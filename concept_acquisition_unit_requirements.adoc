@@ -18,6 +18,7 @@ keywords: AU, acquisition unit, requirements, sizing
 
 
 
+[[requirements]]
 == 要件
 
 |===
@@ -92,6 +93,7 @@ Linuxの場合、ディスク容量は次のように割り当てる必要があ
 |===
 
 
+[[additional-recommendations]]
 == 追加の推奨事項
 
 * 正確な監査とデータ レポートのために、*ネットワーク タイム プロトコル (NTP)* または *簡易ネットワーク タイム プロトコル (SNTP)* を使用して取得ユニット マシンの時刻を同期することを強くお勧めします。
@@ -99,6 +101,7 @@ Linuxの場合、ディスク容量は次のように割り当てる必要があ
 
 
 
+[[regarding-sizing]]
 == サイズについて
 
 8 GB のメモリと 50 GB のディスク容量のみでData Infrastructure Insights Acquisition Unit を開始できますが、より大規模な環境では、次の質問を自問する必要があります。

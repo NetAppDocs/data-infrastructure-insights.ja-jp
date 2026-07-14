@@ -49,6 +49,7 @@ NOTE: 大規模なData Infrastructure Insights環境では、注釈ルールの�
 
 
 
+[[modifying-annotation-rules]]
 == 注釈ルールの変更
 
 注釈ルールを変更して、ルールの名前、注釈、注釈の値、またはルールに関連付けられたクエリを変更できます。
@@ -72,6 +73,7 @@ NOTE: 大規模なData Infrastructure Insights環境では、注釈ルールの�
 
 
 
+[[changing-the-order-of-rules]]
 == ルールの順序の変更
 
 注釈ルールは、ルール リストの上から下に向かって処理されます。ルールが処理される順序を変更するには、次の手順を実行します。
@@ -85,6 +87,7 @@ NOTE: 大規模なData Infrastructure Insights環境では、注釈ルールの�
 
 
 
+[[deleting-annotation-rules]]
 == アノテーション ルールの削除
 
 使用されなくなった注釈ルールを削除する必要がある場合があります。

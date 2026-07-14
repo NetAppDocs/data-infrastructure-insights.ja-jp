@@ -18,6 +18,7 @@ Data Infrastructure Insightsは、Pure StorageFlashBladeデータコレクタを
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
@@ -48,6 +49,7 @@ Data Infrastructure Insightsによって取得された資産タイプごとに�
 
 
 
+[[requirements]]
 == 要件
 
 * ストレージシステムのIPアドレスまたは完全修飾ドメイン名
@@ -57,6 +59,7 @@ Data Infrastructure Insightsによって取得された資産タイプごとに�
 
 
 
+[[configuration]]
 == 構成
 
 [cols="50,50"]
@@ -74,6 +77,7 @@ Data Infrastructure Insightsによって取得された資産タイプごとに�
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
 [cols="50,50"]
@@ -94,12 +98,14 @@ Data Infrastructure Insightsによって取得された資産タイプごとに�
 |===
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
+[[inventory]]
 === インベントリ
 
 [cols="50,50"]

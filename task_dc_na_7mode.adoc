@@ -14,6 +14,7 @@ summary: NetApp 7 モード データ コレクターを構成します。
 
 
 
+[[terminology]]
 == 用語
 
 Data Infrastructure Insights は、 NetApp 7 モード データ コレクターから次のインベントリ情報を取得します。取得した資産の種類ごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
@@ -21,7 +22,7 @@ Data Infrastructure Insights は、 NetApp 7 モード データ コレクター
 
 NOTE: このデータ収集者はlink:task_getting_started_with_cloud_insights.html#useful-definitions["非推奨"]。
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | ベンダー/モデル用語 | Data Infrastructure Insights用語 
 
@@ -50,6 +51,7 @@ NOTE: このデータ収集者はlink:task_getting_started_with_cloud_insights.h
 
 
 
+[[requirements]]
 == 要件
 
 このデータ コレクターを構成して使用するには、次のものが必要です。
@@ -71,9 +73,10 @@ NOTE: このデータ収集者はlink:task_getting_started_with_cloud_insights.h
 
 
 
+[[configuration]]
 == 構成
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -97,9 +100,10 @@ NOTE: このデータ収集者はlink:task_getting_started_with_cloud_insights.h
 |===
 
 
+[[advanced-configuration]]
 == 高度な設定
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | フィールド | 説明 
 
@@ -117,6 +121,7 @@ NOTE: このデータ収集者はlink:task_getting_started_with_cloud_insights.h
 |===
 
 
+[[storage-systems-connection]]
 == ストレージシステムの接続
 
 このデータ コレクターのデフォルトの管理ユーザーを使用する代わりに、このデータ コレクターがNetAppストレージ システムからデータを取得できるように、 NetAppストレージ システム上で直接管理権限を持つユーザーを構成することもできます。
@@ -156,15 +161,17 @@ cli-date または cli-snap 権限が付与されていない場合、取得は�
 
 
 
+[[troubleshooting]]
 == トラブルシューティング
 
 このデータ コレクターで問題が発生した場合に試すことができるいくつかのこと:
 
 
 
+[[inventory]]
 === インベントリ
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 問題： | これを試してください: 
 

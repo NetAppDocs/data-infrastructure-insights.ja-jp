@@ -18,6 +18,7 @@ summary: AgentConfiguration オプションを使用してNetApp Kubernetes Moni
 
 
 
+[[sample-agentconfiguration-file]]
 == サンプル AgentConfiguration ファイル
 
 以下に、各オプションの説明を含むサンプルの _AgentConfiguration_ ファイルを示します。

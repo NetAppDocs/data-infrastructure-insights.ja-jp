@@ -16,12 +16,14 @@ image:Kubernetes_Detail_Page_new.png["クラスターの詳細ページ"]
 
 
 
+[[namespace-node-and-pod-counts]]
 == 名前空間、ノード、ポッドの数
 
 ページ上部のカウントには、クラスター内の名前空間、ノード、ポッドの合計数と、現在アラートおよび保留中の popd の数が表示されます。
 
 
 
+[[shared-resources-and-saturation]]
 == 共有リソースと飽和
 
 詳細ページの右上には、現在のクラスターの飽和度がパーセンテージで表示され、時間の経過に伴う最近の傾向を示すグラフも表示されます。クラスターの飽和度は、各時点での CPU、メモリ、またはストレージの飽和度のうち最も高い値です。
@@ -32,6 +34,7 @@ image:Kubernetes_Detail_Page_new.png["クラスターの詳細ページ"]
 
 
 
+[[namespaces]]
 == ネームスペース
 
 「名前空間」タブには、Kubernetes 環境内のすべての名前空間のリストが表示され、CPU とメモリの使用率、および各名前空間のワークロード数が表示されます。名前リンクをクリックして、各名前空間を調べます。
@@ -40,6 +43,7 @@ image:Kubernetes_Namespace_tab_new.png["K8s 環境内の現在の名前空間の
 
 
 
+[[workloads]]
 == ワークロード
 
 同様に、[ワークロード] タブには、各名前空間のワークロードのリストが表示され、CPU とメモリの使用状況も表示されます。名前空間リンクをクリックすると、それぞれの詳細が表示されます。
@@ -48,6 +52,7 @@ image:Kubernetes_Workloads_tab_new.png["K8s 環境内の現在の名前空間の
 
 
 
+[[the-cluster-wheel]]
 == クラスター「ホイール」
 
 image:Kubernetes_Wheel_Section.png["クラスターホイール"]
@@ -74,6 +79,7 @@ image:Kubernetes_Capacity_Info.png["ノード容量と割り当て"]
 
 
 
+[[a-note-about-the-gauges]]
 == ゲージに関する注意
 
 メモリ ゲージと CPU ゲージは、_割り当て可能な容量_ と _合計容量_ の両方に関連して _使用済み_ を表示するため、3 色で表示されます。

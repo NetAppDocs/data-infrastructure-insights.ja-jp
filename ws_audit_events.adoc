@@ -18,6 +18,7 @@ keywords: workload security, audit, events
 
 
 
+[[viewing-audited-events]]
 == 監査対象イベントの表示
 
 監査ページを表示するには、メニューの「管理者」＞「監査」をクリックしてください。監査ページが表示され、各監査エントリについて以下の詳細情報が表示されます：
@@ -44,6 +45,7 @@ keywords: workload security, audit, events
 
 
 
+[[displaying-audit-entries]]
 == 監査エントリの表示
 
 監査エントリを表示するには、いくつかの方法があります。
@@ -55,6 +57,7 @@ keywords: workload security, audit, events
 
 
 
+[[more-on-filtering]]
 == フィルタリングの詳細
 
 フィルターを絞り込むには、次のいずれかを使用できます。
@@ -89,6 +92,7 @@ keywords: workload security, audit, events
 
 
 
+[[audited-events-and-actions]]
 == 監査対象のイベントとアクション
 
 Workload Securityによって監査されるイベントとアクションは、以下の大まかな分野に分類できます：
@@ -122,12 +126,14 @@ Workload Securityによって監査されるイベントとアクションは、
 
 
 
+[[exporting-audit-events]]
 == 監査イベントのエクスポート
 
 監査表示の結果を.CSVファイルにエクスポートすることで、データを分析したり、他のアプリケーションにインポートしたりすることができます。手順1.監査ページで、希望する期間と必要なフィルターを設定します。Workload Securityは、設定したフィルタリング条件と期間に一致する監査エントリのみをエクスポートします。2.表の右上にある「エクスポート」ボタンをクリックしてください。表示された監査イベントは、最大10,000行まで.CSVファイルにエクスポートされます。
 
 
 
+[[retention-of-audit-data]]
 == 監査データの保持
 
 Workload Securityが監査データを保持する期間は、お客様のサブスクリプションによって異なります：

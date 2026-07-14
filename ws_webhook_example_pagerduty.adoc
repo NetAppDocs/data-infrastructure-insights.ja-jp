@@ -21,6 +21,7 @@ NOTE: このページはサードパーティの指示を参照しており、�
 
 
 
+[[pagerduty-setup]]
 == PagerDutyのセットアップ:
 
 . PagerDuty で、*サービス > サービス ディレクトリ* に移動し、*+ 新しいサービス* ボタンをクリックします。
@@ -39,6 +40,7 @@ image:ws_pagerduty_incidents_list.png["Pagerdutyインシデントリストの�
 
 
 
+[[create-workload-security-pagerduty-webhook]]
 == Workload Security PagerDuty Webhook を作成します。
 
 * 「管理」>「通知」に移動し、「_Workload Security Webhooks_」タブを選択します。新しい Webhook を作成するには、「+ Webhook」を選択します。
@@ -53,6 +55,7 @@ image:ws_webhook_pagerduty_example.png["ワークロード セキュリティ Pa
 
 
 
+[[notifications-via-webhook]]
 == Webhook経由の通知
 
 * Webhook 経由でイベントを通知するには、[_Workload Security_] > [ポリシー] に移動します。  _+攻撃ポリシー_または_+警告ポリシー_を選択します。

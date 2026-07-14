@@ -14,6 +14,7 @@ Data Infrastructure Insights は、アカウント所有者、管理者、ユー
 
 
 
+[[permission-levels]]
 == 権限レベル
 
 ユーザー アカウントを作成または変更するには、管理者権限を持つアカウントを使用します。各ユーザー アカウントには、次の権限レベルから各Data Infrastructure Insights機能のロールが割り当てられます。
@@ -37,6 +38,7 @@ Data Infrastructure Insights は、アカウント所有者、管理者、ユー
 
 
 
+[[data-infrastructure-insights-permissions-by-user-role]]
 === ユーザーロール別のData Infrastructure Insightsの権限
 
 次の表は、各ユーザー ロールに付与されるData Infrastructure Insights権限を示しています。
@@ -122,6 +124,7 @@ Data Infrastructure Insights は、アカウント所有者、管理者、ユー
 
 
 
+[[creating-accounts-by-inviting-users]]
 == ユーザーを招待してアカウントを作成する
 
 新しいユーザー アカウントの作成は、NetApp Consoleを通じて行われます。ユーザーは電子メールで送信された招待に応答できますが、ユーザーがコンソールのアカウントを持っていない場合は、招待を承諾できるようにサインアップする必要があります。
@@ -164,6 +167,7 @@ image:UserRoleChoices.png["ユーザーロールの選択"]
 
 
 
+[[modifying-an-existing-users-role]]
 == 既存のユーザーの役割を変更する
 
 既存のユーザーの役割を変更するには（*セカンダリ アカウント所有者*として追加するなど）、次の手順に従います。
@@ -176,6 +180,7 @@ image:UserRoleChoices.png["ユーザーロールの選択"]
 
 
 
+[[to-assign-a-secondary-account-owner]]
 === セカンダリアカウント所有者を割り当てるには
 
 アカウント所有者のロールを別のユーザーに割り当てるには、Observability のアカウント所有者としてログインする必要があります。
@@ -192,6 +197,7 @@ image:Assign_Account_Owner.png["アカウント所有者の選択を示すユー
 
 
 
+[[deleting-users]]
 == ユーザーの削除
 
 管理者ロールを持つユーザーは、ユーザー名をクリックし、ダイアログで [ユーザーの削除] をクリックすることで、ユーザー (たとえば、会社を退職したユーザー) を削除できます。ユーザーはData Infrastructure Insights環境から削除されます。
@@ -200,10 +206,12 @@ image:Assign_Account_Owner.png["アカウント所有者の選択を示すユー
 
 
 
+[[single-sign-on-sso-and-identity-federation]]
 == シングルサインオン（SSO）とアイデンティティフェデレーション
 
 
 
+[[what-is-identity-federation]]
 === アイデンティティフェデレーションとは何ですか?
 
 アイデンティティフェデレーションを使用する場合:
@@ -226,6 +234,7 @@ image:Authentication_Federated.png["フェデレーションを使用した認�
 
 
 
+[[enabling-identity-federation]]
 === アイデンティティフェデレーションの有効化
 
 コンソールは Auth0 を使用して ID フェデレーションを実装し、Active Directory Federation Services (ADFS) や Microsoft Azure Active Directory (AD) などのサービスと統合します。アイデンティティフェデレーションを構成するには、link:https://services.cloud.netapp.com/misc/federation-support["連盟の指示"] 。
@@ -241,6 +250,7 @@ NOTE: Data Infrastructure Insightsで SSO を使用する前に、Identity Feder
 
 
 
+[[single-sign-on-sso-user-auto-provisioning]]
 === シングルサインオン（SSO）ユーザー自動プロビジョニング
 
 管理者は、ユーザーを招待するだけでなく、企業ドメイン内のすべてのユーザーに対して、個別に招待することなく、 Data Infrastructure Insightsへの *シングル サインオン (SSO) ユーザー自動プロビジョニング* アクセスを有効にできます。  SSO を有効にすると、同じドメインの電子メール アドレスを持つすべてのユーザーが、企業の資格情報を使用してData Infrastructure Insightsにログインできるようになります。
@@ -266,6 +276,7 @@ image:Roles_federation_Banner.png["フェデレーションによるユーザー
 
 
 
+[[restricting-access-by-domain]]
 == ドメインによるアクセス制限
 
 Data Infrastructure Insights、指定したドメインのみにユーザー アクセスを制限できます。  *管理 > ユーザー管理* ページで、「ドメインの制限」を選択します。

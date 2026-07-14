@@ -16,6 +16,7 @@ image:KubernetesNodeFiltering.png["Kubernetesノードの詳細ページにフ�
 
 
 
+[[exploring-the-nodes-pods-and-persistent-volumes]]
 == ノードのポッドと永続ボリュームの調査
 
 Data Infrastructure Insights は、 Kubernetes 環境のバックエンド ストレージの可視性を提供し、Kubernetes Pod と永続ボリューム (PV) に関する分析情報を提供します。単一の Pod の使用状況から PV カウンター、PV、そしてバックエンド ストレージ デバイスに至るまで、IOPS、レイテンシー、スループットなどの PV カウンターを追跡できます。
@@ -33,6 +34,7 @@ NOTE: ボリュームまたは内部ボリュームのランディング ペー�
 
 
 
+[[kubernetes-node-to-vm-links]]
 == Kubernetes ノードから VM へのリンク
 
 Kubernetes ノード ページでクリックすると、ノードの VM ページが開きます。  VM ページには、ノード自体へのリンクも含まれています。
