@@ -19,6 +19,25 @@ NetAppは、製品とサービスを継続的に改善および強化してい�
 
 
 
+[[july-2026]]
+== 2026年7月
+
+
+
+[[new-ai-assistant-starting-page]]
+=== 新しいAIアシスタントのスタートページ
+
+DII AIアシスタントに専用のスタートページが追加され、インテリジェントなインフラ分析が前面に押し出されるようになりました。新しい会話をすぐに始めたり、ワンクリックで前回のセッションを再開したり、提案されたプロンプトを使って素早く開始したりできます。
+
+image:AI_dashboard_page_default.png["AIダッシュボードのデフォルト設定、width=800"]
+
+ナビゲーションメニューの「AI Assistant」からスタートページにアクセスするか、左上にある「stars」アイコンを使用してどこからでもAI Assistantを開いてください。
+
+image:AI_dashboard_page_menu.png["AIアシスタントナビゲーションメニュー、幅=600"] image:AI_assistant_access_button.png["どこからでもAIアシスタントにアクセス可能、width=300"]
+
+'''
+
+
 [[june-2026]]
 == 2026年6月
 

@@ -14072,8 +14072,6 @@
   <block id="810bac3bcbfe61628b10fe3df2e0ea96" category="paragraph">管理者は、[管理] &gt; [通知] の [ログインバナー] タブでメッセージを設定できます。</block>
   <block id="22f60aff39394bad553a00e2940bdf11" category="paragraph">このメッセージは基本的なMarkdown形式に対応しているため、太字、斜体、表などの書式設定を適用できます。</block>
   <block id="6a46079dd2d659655fc832470519e71a" category="paragraph">ユーザーが次回ログイン時のみメッセージを表示するか、以降のすべてのログイン時にメッセージを表示するかを選択してください。</block>
-  <block id="6a5f1dd41e7d3fa22fbd71d29b46cea4" category="inline-image-macro">ログインバナー設定</block>
-  <block id="bd6c3bd0a46b9e6da4828acea4a9e315" category="paragraph"><block ref="bd6c3bd0a46b9e6da4828acea4a9e315" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1ef61a1b7e25b910ec7beca0741bd208" category="paragraph">ログインメッセージを閉じるには、ユーザーがログインメッセージを承認する必要があることに注意してください。一度閉じると、それ以降のポップアップ（新機能の更新、利用規約の更新など）が表示されます。</block>
   <block id="38f64824b0d19083b9c439a8b4af41e4" category="admonition">サーバー/VMにエージェントをインストールしたら、Data Infrastructure Insightsは設定したデータコレクタからの収集に加えて、そのシステムからのメトリクスも収集します。これらのメトリクスは「ノード」メトリクスとして収集されます。</block>
   <block id="7fa36585f976625a51b4f3be0f46f0b5" category="cell">カスタムまたはプライベートなDockerリポジトリを使用しており、Kubernetes Monitoring Operatorがそれを正しく認識するようにまだ設定されていない場合、これらのエラーが発生する可能性があります。<block ref="2d47cbc88497421e2fe69677ce7d4cef" category="inline-xref-macro-rx"></block>カスタム/プライベートリポジトリの設定について。</block>
@@ -14176,4 +14174,29 @@
   <block id="4f23d2244ea630f361d554b54b77bf03" category="list-text">REST APIを介したポート6443経由のRed Hat OpenShift VirtualizationサーバーのIPアドレス</block>
   <block id="427f91a8692cb3d3ee52ca20ff3b659c" category="cell">RHOVとのHTTPS通信に使用されるポート。デフォルトは6443です。</block>
   <block id="635a6e63b01914992d3584137f9e6ba6" category="sidebar">Nutanix AHV</block>
+  <block id="a257f7f4b2f6e07845ce567df142ad00" category="section-title">2026年7月</block>
+  <block id="8014692a31dc15996a299cb6c0683d99" category="section-title">新しいAIアシスタントのスタートページ</block>
+  <block id="217f492cb52cc14d717c54a81afbacfe" category="paragraph">DII AIアシスタントに専用のスタートページが追加され、インテリジェントなインフラ分析が前面に押し出されるようになりました。新しい会話をすぐに始めたり、ワンクリックで前回のセッションを再開したり、提案されたプロンプトを使って素早く開始したりできます。</block>
+  <block id="dac1263103d1a0aa0f29eb002af291af" category="inline-image-macro">AIダッシュボードのデフォルト設定、width=800</block>
+  <block id="6c78ab210f62dbc85fe22910374ff62b" category="paragraph"><block ref="6c78ab210f62dbc85fe22910374ff62b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7bd22707614b54a5cb3a8b8f12117bb9" category="paragraph">ナビゲーションメニューの「AI Assistant」からスタートページにアクセスするか、左上にある「stars」アイコンを使用してどこからでもAI Assistantを開いてください。</block>
+  <block id="8946b454436a3b11aac461eaa734adfe" category="inline-image-macro">AIアシスタントナビゲーションメニュー、幅=600</block>
+  <block id="2c8265bfd753072f003bc24b1df77111" category="inline-image-macro">どこからでもAIアシスタントにアクセス可能、width=300</block>
+  <block id="9f6f73922ecce265167332ab3cf87f92" category="paragraph"><block ref="f633ce7b4fef8820f87a799ad31a7cb5" category="inline-image-macro-rx" type="image"></block> <block ref="fefcd3a065be75939d8d47b234d9d0c0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="94187d26105df3824bea268e9ae25535" category="inline-image-macro">ログインバナー設定、width=400</block>
+  <block id="d1e27aaece77e53fc070c0b0ce490e10" category="paragraph"><block ref="d1e27aaece77e53fc070c0b0ce490e10" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="58b6e1ec0b6ec5b4a454251805124640" category="section-title">メンテナンスウィンドウ</block>
+  <block id="3f3ec1c35b7249f193c068e0a8c036d3" category="paragraph">メンテナンスウィンドウを使用すると、選択したオブジェクトやメトリックに対して、アラート通知を抑制する特定のメンテナンス期間をスケジュールできます。例えば、特定のストレージシステムが計画的なアップグレード期間中である場合、そのシステムによってトリガーされるアラート通知を抑制することができます。</block>
+  <block id="df24d8acd06534f618230d46637d6d1b" category="paragraph">指定期間中は、アラートと通知の両方を抑制するか、通知のみを抑制してアラートの検出を継続するかを選択できます。</block>
+  <block id="1aed277c750cbbf8c2859dca8664dada" category="inline-image-macro">メンテナンスウィンドウの例、幅=400</block>
+  <block id="8f42f88b31e1b4f22f40e0ae5ecd38fb" category="paragraph"><block ref="8f42f88b31e1b4f22f40e0ae5ecd38fb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="82bc146aadfdab0e3c7443c79b7f4c8b" category="section-title">メンテナンスウィンドウの作成</block>
+  <block id="4def5c59958a122e22c3d06a018c9ef0" category="paragraph">メンテナンスウィンドウを作成するには：</block>
+  <block id="2b2323dddeb141b098fbcd705e90e359" category="list-text">*Observability* &gt; *Alerts* &gt; *Maintenance Windows* に移動し、*+ Maintenance Window* をクリックします。</block>
+  <block id="610844a278d3d0601b4bc4c27665563e" category="list-text">メンテナンス期間の *Name* を入力してください。最良の結果を得るには、意味があり具体的な名前を付けてください。</block>
+  <block id="c74ae4bc562a9f2edcf63aa39e8fac31" category="list-text">*ストレージデバイス*または*オブジェクト属性*を選択してください。</block>
+  <block id="5760cc9b0c4d4910c5b80c7479b3f2a3" category="list-text">*モニターまたはモニター群*でフィルタリングします。ワイルドカードも使用できます。</block>
+  <block id="ea10176408e9b54a867b0e298e4b4bc2" category="list-text">メンテナンス期間の *Start Time* と *End Time* を選択してください。</block>
+  <block id="de3fd64c52ab8fa6a72c862f6f638fb0" category="list-text">アラートと通知の両方を抑制するか、*通知のみ*を抑制するかを選択してください（アラートはウィンドウ内で引き続き検出されます）。</block>
+  <block id="35d71e914a221fd7fa5e2e2d8c813a2a" category="list-text">*保存*をクリックして、メンテナンス期間を作成します。</block>
 </blocks>
