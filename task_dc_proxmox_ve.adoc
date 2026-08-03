@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: task_dc_proxmox_ve.html 
+keywords: data collector, Proxmox Virtual Environment, PVE 
+summary: Proxmox Virtual Environmentデータコレクターの設定。 
+---
+= Proxmox Virtual Environment データコレクター
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+DII Proxmox仮想環境コレクターは、PVEベースの仮想マシン（LXCコンテナを除く）およびホスト/ハイパーバイザーのインベントリデータとパフォーマンスデータを収集します。これはHTTPS REST APIベースのコレクターであり、TCP 8006でリッスンするpveproxyサービス/デーモンが提供するProxmox REST APIと通信する必要があります。
+
+このデータコレクターは、ユーザー＋トークン認証を使用します。各Proxmoxクラスター上にサービスアカウントを作成し、ユーザーに適切な権限を割り当て、同じ権限を持つAPIトークンを生成する必要があります。Proxmoxユーザーのトークンは、必ずしもユーザーと同じ権限を持つとは限らないことにご注意ください。DIIは通常、グローバルな監査/監視レベルの権限を必要とします。Proxmox UIを介してサービスアカウントを作成する場合は、PathPermisionの開始パスを「/」に設定し、「Propagate」を「Yes」に設定して、最低限、Datastore Audit、Mapping Audit、Pool Audit、SDN Audit、Sys Audit、VM Audit、VM Monitorのロックを解除してください。ユーザーを作成したら、そのユーザー用のアクセストークンを作成できます。トークンが期限切れにならないよう、有効期限を0に設定してトークンを作成することを強くお勧めします。
+
+
+
+[[terminology]]
+== 用語
+
+Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
+
+[cols="50,50"]
+|===
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
+
+
+| ディスク | 仮想ディスク 
+
+
+| ホスト | ホスト 
+
+
+| 仮想マシン | 仮想マシン 
+
+
+| ストレージ | データ ストア 
+|===
+注: これらは一般的な用語のマッピングのみであり、このデータ コレクターのすべてのケースを反映しているわけではありません。
+
+
+
+[[configuration]]
+== 構成
+
+[cols="50,50"]
+|===
+| フィールド | 説明 
+
+
+| ホスト名または IP アドレス | ホスト名 ストレージシステムのIPアドレス 
+
+
+| APIトークンID | アクセスにはAPIトークンが必要です 
+
+
+| APIトークンシークレット | 上記トークンのシークレット 
+|===
+
+
+[[advanced-configuration]]
+== 高度な設定
+
+[cols="50,50"]
+|===
+| フィールド | 説明 
+
+
+| HTTPS通信ポート | HTTPS通信に使用されるポート（デフォルト8006） 
+
+
+| インベントリポーリング間隔（分） | デフォルトは20分です。 
+|===
+
+
+[[troubleshooting]]
+== トラブルシューティング
+
+このデータコレクターに関する追加情報は、link:concept_requesting_support.html["サポート"]ページまたはlink:reference_data_collector_support_matrix.html["データコレクターサポートマトリックス"]。

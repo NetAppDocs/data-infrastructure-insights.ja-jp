@@ -14131,17 +14131,12 @@
   <block id="25a317566de430ddfd2c6f4b3fdea612" category="list-text">ci-k8s-change-observer</block>
   <block id="9da5aa79f5375ccea3c84723b5759557" category="cell">Telegraf から以下のようなエラーメッセージが表示されますが、Telegraf は起動して実行されます：E! [inputs.kubernetes] プラグインでエラーが発生しました：<block ref="6d1752bb8ee46f6164f07ea885d5c072" category="inline-link-rx"></block> HTTP ステータス 403 Forbidden が返されました</block>
   <block id="51635ff11969666db6bdeaf0c68d58b0" category="cell">これらのメッセージは、Kubernetesのバージョンが1.33未満の場合に表示される可能性があります。telegrafで使用される「nodes/pods」RBACリソースは、これらのバージョンには存在しません。古いバージョンで必要なRBACリソースについては、operator-additional-permissions.yamlの「Kubernetesバージョン &lt; 1.33の場合」セクションを参照してください。</block>
-  <block id="55c55b1241c0ea96ea6cef65b10a23e4" category="inline-link-macro">Proxmox Virtual Environment</block>
-  <block id="9ddb2ce85d3b0c6085884776fe61a596" category="cell"><block ref="9ddb2ce85d3b0c6085884776fe61a596" category="inline-link-macro-rx"></block></block>
-  <block id="66036899193ada3425c77162bf9d742c" category="summary">Proxmox Virtual Environment データコレクターの設定。</block>
-  <block id="dc8f767a3f6e8f9b98077b7e9a688c5d" category="paragraph">DII Promox仮想環境コレクターは、インベントリデータを収集します。これはHTTPS REST APIベースのコレクターです。</block>
   <block id="b720c5170acbb344b34398a9ed4fec4b" category="cell">ホスト名または IP アドレス</block>
   <block id="32d285f157ad1acefe9dbe844cee7acf" category="cell">ホスト名 ストレージシステムのIPアドレス</block>
   <block id="606bae1c220a7cd73cdc71a447b328fd" category="cell">APIトークンID</block>
   <block id="9ae9995c158c8b32609b8fd098fa5ff5" category="cell">APIトークンシークレット</block>
   <block id="923e5171366e1120624f5ea15d195544" category="cell">上記トークンのシークレット</block>
   <block id="07d3835e20364558e54bb222fac4e80c" category="cell">HTTPS通信に使用されるポート（デフォルト8006）</block>
-  <block id="c0dcddaaad9648f13d2e54741430ea94" category="sidebar">Proxmox VE</block>
   <block id="f45a9049372d3cb48c0a5f07d2274d8a" category="inline-link-macro">Nutanix AHV シリーズ</block>
   <block id="ad9c1c290afb17645c1abe42082fd356" category="cell"><block ref="ad9c1c290afb17645c1abe42082fd356" category="inline-link-macro-rx"></block></block>
   <block id="dfc304efa37c8d1373249ddd368bc0be" category="summary">Nutanix NX データコレクターの設定</block>
@@ -14157,17 +14152,12 @@
   <block id="93aad9faf21d772e6638b83df990a5f5" category="cell">ADSFボリュームグループ</block>
   <block id="5ccc8ca7259b2e94529827201b7eb255" category="cell">VM ディスク</block>
   <block id="59713d7f655f9c892a64a8cfb1bce50f" category="list-text">Prism CentralのIPアドレスまたは完全修飾ドメイン名</block>
-  <block id="b4cdc83adeeea6f91bf95fe532871bdd" category="list-text">Prism CentralのローカルまたはLDAPユーザー名とパスワード（インベントリおよびパフォーマンスには読み取り専用アカウントで十分です。管理者権限は不要です）</block>
   <block id="305bb684f75dc043415486c2063d46c4" category="list-text">ポート要件：HTTPS 9440</block>
   <block id="539110e77db7f1ce573940c3147dbe68" category="list-text">Prism Central バージョン pc.2023.x 以降（v3 API）、pc.7.x 以降推奨（v4 API）</block>
-  <block id="74c15fa6625bc3241b81c66466e0ce42" category="list-text">パフォーマンス指標を使用するには、API v4.0.b1以降（pc.7.3以降）のPrism Centralが必要です。旧バージョンでは、インベントリは収集されますが、パフォーマンスデータは報告されません。</block>
-  <block id="fb7d6f6db43d1bb1043df17e264de78a" category="cell">Prism CentralのIPアドレス</block>
   <block id="b46321a9cb6ebc3023c7b6ae1f3d8b4f" category="cell">Prism CentralインスタンスのIPアドレスまたはFQDN</block>
   <block id="893b253db3bdc1ebfb515f1f1cc09f50" category="cell">Prism Centralのユーザー名</block>
   <block id="0fc00a87efdbecf33bb1448c3eaa5a73" category="cell">Prism Centralのパスワード</block>
-  <block id="ac2fad2f282b0e32c75912e363cfb735" category="cell">Prism Centralへの接続に使用されるTCPポート。デフォルトは9440です。</block>
   <block id="834593f1f41ad9180f7c06531584872b" category="cell">HTTPタイムアウト（秒）</block>
-  <block id="b8c5ed136238b59bf386d65bf0787acf" category="cell">HTTPリクエストのタイムアウト。デフォルトは60秒です。</block>
   <block id="625b6c43e9f8c94b5aa84173a04fa961" category="cell">HTTPリトライ回数</block>
   <block id="c8f99bb6092a052b29e43263274e103f" category="cell">一時的な障害発生時のHTTP再試行回数。デフォルト値は3です。</block>
   <block id="4a2e4ff5e220e83407c567779aaf9ba1" category="cell">アクセスにはAPIトークンが必要です</block>
@@ -14206,4 +14196,18 @@
   <block id="ed499d4afa165aaf800d50911ee0d6b7" category="paragraph">移行されたSVMのONTAP SVM Data CollectorがRUNNING状態であることを確認してください。必要に応じてコレクターを再起動し、Workload Securityが移行後に正しいクラスタおよび容量メトリクスを収集できるようにしてください。</block>
   <block id="01ee0a41b7ba80a315acf774bca95831" category="paragraph">クラスター容量とSVM容量の両方が合計に含まれている場合、容量が二重に計上されている可能性があります。これは、SVMコレクターの追加、アップグレード、再起動、またはクラスター間でのSVMの移行の直後に発生することがよくあります。</block>
   <block id="d1d2aacb054348275b14473a1f1f31f2" category="paragraph">使用量がサブスクリプション限度額を超えている場合は、アラート発生前後のサブスクリプション使用状況、および報告された物理ストレージ容量を含むObservabilityとSVMコレクターのリストを添えて、NetAppサポートケースを開いてください。</block>
+  <block id="e0a90db369f87ae02adeb16a86201742" category="inline-link-macro">Proxmox Virtual Environment</block>
+  <block id="4a90aaa80c9f510a7ceb078daedd5635" category="cell"><block ref="4a90aaa80c9f510a7ceb078daedd5635" category="inline-link-macro-rx"></block></block>
+  <block id="bf88a9906139e4cb81937529ce5737f7" category="list-text">Prism CentralのローカルまたはLDAPユーザー名とパスワード（読み取り専用アカウントで十分です）</block>
+  <block id="616363ce8a56d3faec8ac114ed04d83b" category="list-text">パフォーマンス指標を使用するには、API v4.0.b1以降（pc.7.3以降）のPrism Centralが必要です。旧バージョンでは、インベントリは収集されますが、パフォーマンスデータは報告されません。</block>
+  <block id="0c215c7eb97b422d3fbcb651a59480b7" category="cell">Prism Central IP / ホスト名</block>
+  <block id="6cb3b4061cdb7e049999801ce8d1d445" category="cell">Prism Centralへの接続に使用されるTCPポート。デフォルト値は9440です。</block>
+  <block id="19b47095e2b176e478290ba0ddfcbdbc" category="cell">インベントリポーリングの間隔。デフォルトは60分です。</block>
+  <block id="d9ac9c87b6001203eb8b39a253943bd2" category="cell">パフォーマンス調査の間隔。デフォルト値は300秒です。</block>
+  <block id="8626d73b80be039d958752c296fa4e7c" category="cell">HTTPリクエストのタイムアウト。デフォルト値は60です。</block>
+  <block id="33c9cb93144548bfcc912b99d1b2555c" category="summary">Proxmox Virtual Environmentデータコレクターの設定。</block>
+  <block id="b37138a3b3b3fcd2958e4e6cc5c5c61b" category="doc">Proxmox Virtual Environment データコレクター</block>
+  <block id="91a0d06a30de7119cf7ba6773ce38416" category="paragraph">DII Proxmox仮想環境コレクターは、PVEベースの仮想マシン（LXCコンテナを除く）およびホスト/ハイパーバイザーのインベントリデータとパフォーマンスデータを収集します。これはHTTPS REST APIベースのコレクターであり、TCP 8006でリッスンするpveproxyサービス/デーモンが提供するProxmox REST APIと通信する必要があります。</block>
+  <block id="7bd4738e9b2442fc6fa7415e88a3298d" category="paragraph">このデータコレクターは、ユーザー＋トークン認証を使用します。各Proxmoxクラスター上にサービスアカウントを作成し、ユーザーに適切な権限を割り当て、同じ権限を持つAPIトークンを生成する必要があります。Proxmoxユーザーのトークンは、必ずしもユーザーと同じ権限を持つとは限らないことにご注意ください。DIIは通常、グローバルな監査/監視レベルの権限を必要とします。Proxmox UIを介してサービスアカウントを作成する場合は、PathPermisionの開始パスを「/」に設定し、「Propagate」を「Yes」に設定して、最低限、Datastore Audit、Mapping Audit、Pool Audit、SDN Audit、Sys Audit、VM Audit、VM Monitorのロックを解除してください。ユーザーを作成したら、そのユーザー用のアクセストークンを作成できます。トークンが期限切れにならないよう、有効期限を0に設定してトークンを作成することを強くお勧めします。</block>
+  <block id="57e13573114577b3af8a0a24aa24d576" category="sidebar">Proxmox VE</block>
 </blocks>
