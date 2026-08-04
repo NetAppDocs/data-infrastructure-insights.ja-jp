@@ -13298,7 +13298,6 @@
   <block id="ecf8fabbb23da2c68f49fe920a05137b" category="list-text">上記プラットフォーム上の SELinux</block>
   <block id="3542743c69e8fceb06c77e5e17299c89" category="sidebar">AIアシスタント</block>
   <block id="f7836ca926de84b06b0b4bcbe4b8b756" category="inline-link-macro">Data Infrastructure Insights（Workload Securityを含む）に関するお知らせ、window=_blank</block>
-  <block id="135e17e82c7d3d3d83bd8b0737be432e" category="paragraph"><block ref="135e17e82c7d3d3d83bd8b0737be432e" category="inline-link-macro-rx"></block></block>
   <block id="b6b93d34f92b439117e54d9343c7efda" category="section-title">現在のプレビュー：</block>
   <block id="559de301b9b7af9f5b932d860f605701" category="list-text"><block ref="7a32ab5261b86b8c9a5d88b540c79f2d" category="inline-link-macro-rx"></block>プレビュー。</block>
   <block id="ca39a60f24fda5dbbda8809fbd3fe717" category="inline-link-macro">*Data Infrastructure Insights AIアシスタント*</block>
@@ -14210,4 +14209,5 @@
   <block id="91a0d06a30de7119cf7ba6773ce38416" category="paragraph">DII Proxmox仮想環境コレクターは、PVEベースの仮想マシン（LXCコンテナを除く）およびホスト/ハイパーバイザーのインベントリデータとパフォーマンスデータを収集します。これはHTTPS REST APIベースのコレクターであり、TCP 8006でリッスンするpveproxyサービス/デーモンが提供するProxmox REST APIと通信する必要があります。</block>
   <block id="7bd4738e9b2442fc6fa7415e88a3298d" category="paragraph">このデータコレクターは、ユーザー＋トークン認証を使用します。各Proxmoxクラスター上にサービスアカウントを作成し、ユーザーに適切な権限を割り当て、同じ権限を持つAPIトークンを生成する必要があります。Proxmoxユーザーのトークンは、必ずしもユーザーと同じ権限を持つとは限らないことにご注意ください。DIIは通常、グローバルな監査/監視レベルの権限を必要とします。Proxmox UIを介してサービスアカウントを作成する場合は、PathPermisionの開始パスを「/」に設定し、「Propagate」を「Yes」に設定して、最低限、Datastore Audit、Mapping Audit、Pool Audit、SDN Audit、Sys Audit、VM Audit、VM Monitorのロックを解除してください。ユーザーを作成したら、そのユーザー用のアクセストークンを作成できます。トークンが期限切れにならないよう、有効期限を0に設定してトークンを作成することを強くお勧めします。</block>
   <block id="57e13573114577b3af8a0a24aa24d576" category="sidebar">Proxmox VE</block>
+  <block id="48c0a89dc87860e6c3b42a70bbd13c53" category="paragraph"><block ref="48c0a89dc87860e6c3b42a70bbd13c53" category="inline-link-macro-rx"></block></block>
 </blocks>
