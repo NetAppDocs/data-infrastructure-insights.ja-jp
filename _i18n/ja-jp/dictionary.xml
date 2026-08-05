@@ -7126,7 +7126,6 @@
   <block id="592b09bd3291d67037bc036b0c714470" category="cell">森林名</block>
   <block id="7d29f1962bf2529a2067967e962ee3dd" category="cell">ディレクトリ構造のフォレスト レベル。フォレスト名では、次の両方の形式が許可されます: _x.y.z_ =&gt; SVM にある直接のドメイン名。  [例: hq.companyname.com] _DC=x、DC=y、DC=z_ =&gt; 相対識別名 [例: DC=hq、DC= companyname、DC=com] または、次のように指定することもできます: _OU=engineering、DC=hq、DC= companyname、DC=com_ [特定の OU engineering でフィルタリングする] _CN=username、OU=engineering、DC=companyname、DC=netapp、DC=com_ [OU &lt;engineering&gt; から &lt;username&gt; を持つ特定のユーザーのみを取得する] _CN=Acrobat Users、CN=Users、DC=hq、DC=companyname、DC=com、O= companyname、L=Boston、S=MA、C=US_ [その組織内のユーザー内のすべての Acrobat ユーザーを取得する] 信頼された Active Directory ドメインもサポートされています。</block>
   <block id="58384d924f3205aaac5f4a09d3b33801" category="cell">バインドDN</block>
-  <block id="6dd0ae1f18b7c9b4d5e3b4eec7ff6352" category="cell">ディレクトリの検索を許可されたユーザー。たとえば、_username@companyname.com_ または _username@domainname.com_ です。さらに、ドメイン読み取り専用権限が必要です。ユーザーは、セキュリティ グループ _読み取り専用ドメイン コントローラー_ のメンバーである必要があります。</block>
   <block id="7066ea6d497311d6e3c4be6a9523999c" category="cell">BINDのパスワード</block>
   <block id="0d91a6f24e197b2dbd20b358e4f84785" category="cell">ディレクトリ サーバーのパスワード (つまり、Bind DN で使用されるユーザー名のパスワード)</block>
   <block id="aebd636047453941f5450b96d44c3195" category="cell">ldap、ldaps、ldap-start-tls</block>
@@ -14210,4 +14209,5 @@
   <block id="7bd4738e9b2442fc6fa7415e88a3298d" category="paragraph">このデータコレクターは、ユーザー＋トークン認証を使用します。各Proxmoxクラスター上にサービスアカウントを作成し、ユーザーに適切な権限を割り当て、同じ権限を持つAPIトークンを生成する必要があります。Proxmoxユーザーのトークンは、必ずしもユーザーと同じ権限を持つとは限らないことにご注意ください。DIIは通常、グローバルな監査/監視レベルの権限を必要とします。Proxmox UIを介してサービスアカウントを作成する場合は、PathPermisionの開始パスを「/」に設定し、「Propagate」を「Yes」に設定して、最低限、Datastore Audit、Mapping Audit、Pool Audit、SDN Audit、Sys Audit、VM Audit、VM Monitorのロックを解除してください。ユーザーを作成したら、そのユーザー用のアクセストークンを作成できます。トークンが期限切れにならないよう、有効期限を0に設定してトークンを作成することを強くお勧めします。</block>
   <block id="57e13573114577b3af8a0a24aa24d576" category="sidebar">Proxmox VE</block>
   <block id="48c0a89dc87860e6c3b42a70bbd13c53" category="paragraph"><block ref="48c0a89dc87860e6c3b42a70bbd13c53" category="inline-link-macro-rx"></block></block>
+  <block id="c84f7a37a2691cf36f1774d52de72e5c" category="cell">ユーザーはディレクトリを検索する権限を与えられています。例：_username@companyname.com_ または _username@domainname.com_</block>
 </blocks>

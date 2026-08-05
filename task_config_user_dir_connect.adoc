@@ -46,7 +46,7 @@ Workload Security は、Active Directory サーバーからユーザー属性を
 | 森林名 | ディレクトリ構造のフォレスト レベル。フォレスト名では、次の両方の形式が許可されます: _x.y.z_ => SVM にある直接のドメイン名。  [例: hq.companyname.com] _DC=x、DC=y、DC=z_ => 相対識別名 [例: DC=hq、DC= companyname、DC=com] または、次のように指定することもできます: _OU=engineering、DC=hq、DC= companyname、DC=com_ [特定の OU engineering でフィルタリングする] _CN=username、OU=engineering、DC=companyname、DC=netapp、DC=com_ [OU <engineering> から <username> を持つ特定のユーザーのみを取得する] _CN=Acrobat Users、CN=Users、DC=hq、DC=companyname、DC=com、O= companyname、L=Boston、S=MA、C=US_ [その組織内のユーザー内のすべての Acrobat ユーザーを取得する] 信頼された Active Directory ドメインもサポートされています。 
 
 
-| バインドDN | ディレクトリの検索を許可されたユーザー。たとえば、_username@companyname.com_ または _username@domainname.com_ です。さらに、ドメイン読み取り専用権限が必要です。ユーザーは、セキュリティ グループ _読み取り専用ドメイン コントローラー_ のメンバーである必要があります。 
+| バインドDN | ユーザーはディレクトリを検索する権限を与えられています。例：_username@companyname.com_ または _username@domainname.com_ 
 
 
 | BINDのパスワード | ディレクトリ サーバーのパスワード (つまり、Bind DN で使用されるユーザー名のパスワード) 
