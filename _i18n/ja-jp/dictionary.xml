@@ -14210,4 +14210,19 @@
   <block id="57e13573114577b3af8a0a24aa24d576" category="sidebar">Proxmox VE</block>
   <block id="48c0a89dc87860e6c3b42a70bbd13c53" category="paragraph"><block ref="48c0a89dc87860e6c3b42a70bbd13c53" category="inline-link-macro-rx"></block></block>
   <block id="c84f7a37a2691cf36f1774d52de72e5c" category="cell">ユーザーはディレクトリを検索する権限を与えられています。例：_username@companyname.com_ または _username@domainname.com_</block>
+  <block id="6327e373cb9d0fbf371b2256065e27ee" category="paragraph">*問題*：コレクターサービスが稼働しているにもかかわらず、1つ以上のデータコレクターが「実行中」ではなく「劣化」と表示されます。</block>
+  <block id="055eb384fa852b687767bb268c418c28" category="paragraph">*これを試してみてください*：ノード上の 1 つ以上の FPolicy 接続が切断されると、SWS は Degraded を報告します。これはシステム障害ではありません。コレクターは引き続き稼働していますが、接続が復旧するまで、該当ノードからの監査イベントが失われる可能性があります。</block>
+  <block id="5871b970a58be1158700074b636e1c5f" category="paragraph">ONTAPは、SVMの運用データLIFを持つ各ノードからFPolicy制御チャネル接続を確立します。ローカルデータLIFを持たないノードは接続できません。参照：</block>
+  <block id="39475af1c92345ffc68386ed4b1a0a0f" category="inline-link-macro">ノードと外部のONTAP FPolicyサーバ間の通信プロセス</block>
+  <block id="7d7a6ac9f8b0b4a140566200f8cc41c3" category="list-text"><block ref="7d7a6ac9f8b0b4a140566200f8cc41c3" category="inline-link-macro-rx"></block></block>
+  <block id="a8586bcde30f3a7086e92d68b265c18d" category="inline-link-macro">ONTAP FPolicyと外部FPolicyサーバの連携</block>
+  <block id="985934cbe9028d56b65bfa3b21aad963" category="list-text"><block ref="985934cbe9028d56b65bfa3b21aad963" category="inline-link-macro-rx"></block></block>
+  <block id="f682e452dc85bb2174061cf42fd8868a" category="inline-link-macro">ONTAP FPolicyを構成するための要件、考慮事項、およびベストプラクティス</block>
+  <block id="351ae455f2a730183e8897803e2cc1ad" category="list-text"><block ref="351ae455f2a730183e8897803e2cc1ad" category="inline-link-macro-rx"></block></block>
+  <block id="4381f5d310695f16c64a241811aa950c" category="paragraph">UIで、切断されているノードを確認し、それらのノードにSVM用のデータLIFが存在するかどうかを確認します。</block>
+  <block id="145d6a54d6a8818e67b1777aef9dfd9c" category="inline-link-macro">KB: 「no local lif present」が原因でFpolicyサーバーに接続できない</block>
+  <block id="c76035114caecd573a508cd95e8d8d6d" category="list-text">リストされたノードにデータLIFがありません：劣化ステータスは無視してください。ローカルデータLIFが存在しない場合、ONTAPはFPolicyが「FPolicyサーバーに接続するためのローカルLIFが存在しません」という理由で切断されたと表示することがありますが、これは想定される動作です。<block ref="17a696575179b878a537e91ff06ec3c2" category="inline-link-macro-rx"></block>を参照してください。今後のSWSリリースでは、この場合にコレクターが劣化としてマークされなくなります。</block>
+  <block id="4f6c09f8f53defdd48fed140cd4550f9" category="list-text">リストされたノードにデータ LIF が存在します：FPolicy が切断されている理由（LIF ダウン／data-fpolicy-client の欠落、ネットワーク／ファイアウォール、または一時的な再起動／フェイルオーバー）を調査してください。</block>
+  <block id="10fcc85a32e000abd9a522eb086aa8b9" category="list-text">注：エージェントインストーラーは、実行中のエージェントが格納されているフォルダとは別のフォルダにダウンロードしてください。</block>
+  <block id="323d0a1ff366ae52ecb4199bd4c94bcc" category="paragraph">例えば、エージェントが「/test_user/apps」で実行されている場合、コマンドは次のようになります：</block>
 </blocks>

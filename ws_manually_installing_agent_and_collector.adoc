@@ -413,6 +413,7 @@ image:ws_LDAP_collector_list.png["UI の LDAP コレクター リスト"]
 . 最新のエージェントインストーラーをダウンロードしてください。
 +
 .. 最新のインストーラーをダウンロードする手順は、「新しいエージェントのインストール」の手順と同様です。 Swagger で、「cloudsecure_installers.agent」>「/v1/cloudsecure/agents/installers/{platform}/latest」API を選択し、プラットフォームに「linux」と入力して、インストーラーの zip ファイルをダウンロードします。代わりに、curl コマンドを使用することもできます。インストーラー ファイルを解凍します。
+.. 注：エージェントインストーラーは、実行中のエージェントが格納されているフォルダとは別のフォルダにダウンロードしてください。
 
 
 . 「cloudsecure-agent-upgrade.sh」ファイルの実行権限を設定します。
@@ -437,9 +438,16 @@ total 153344
 -rw------- 1 root root    16574 Apr 26  2024 cloudsecure-agent-install.sh
 -rwx------ 1 root root     8586 Apr 26  2024 cloudsecure-agent-upgrade.sh
 -rw------- 1 root root 77834660 Apr 26 17:35 cloudsecure-linux-agent-installer-1.618.0.zip
-
 ----
 . 「cloudsecure-agent-upgrade.sh」スクリプトを実行します。スクリプトが正常に実行された場合、出力に「Cloudsecure エージェントが正常にアップグレードされました。」というメッセージが表示されます。
+. 次のコマンドを実行します。
++
+ sudo chown -R cssys:cssys {agent-install-path}/cloudsecure
++
+例えば、エージェントが「/test_user/apps」で実行されている場合、コマンドは次のようになります：
+
++
+ sudo chown -R cssys:cssys /test_user/apps/cloudsecure
 . 次のコマンド「systemctl daemon-reload」を実行します。
 +
 [listing]

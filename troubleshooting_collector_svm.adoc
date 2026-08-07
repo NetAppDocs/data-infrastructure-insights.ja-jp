@@ -262,4 +262,24 @@ Observability ONTAPコレクターおよびワークロードセキュリティS
 {空の}
 
 '''
+*問題*：コレクターサービスが稼働しているにもかかわらず、1つ以上のデータコレクターが「実行中」ではなく「劣化」と表示されます。
+
+*これを試してみてください*：ノード上の 1 つ以上の FPolicy 接続が切断されると、SWS は Degraded を報告します。これはシステム障害ではありません。コレクターは引き続き稼働していますが、接続が復旧するまで、該当ノードからの監査イベントが失われる可能性があります。
+
+ONTAPは、SVMの運用データLIFを持つ各ノードからFPolicy制御チャネル接続を確立します。ローカルデータLIFを持たないノードは接続できません。参照：
+
+* link:https://docs.netapp.com/us-en/ontap/nas-audit/node-fpolicy-server-communication-process-concept.html["ノードと外部のONTAP FPolicyサーバ間の通信プロセス"^]
+* link:https://docs.netapp.com/us-en/ontap/nas-audit/fpolicy-external-fpolicy-servers-concept.html["ONTAP FPolicyと外部FPolicyサーバの連携"^]
+* link:https://docs.netapp.com/us-en/ontap/nas-audit/requirements-best-practices-fpolicy-concept.html["ONTAP FPolicyを構成するための要件、考慮事項、およびベストプラクティス"^]
+
+
+UIで、切断されているノードを確認し、それらのノードにSVM用のデータLIFが存在するかどうかを確認します。
+
+* リストされたノードにデータLIFがありません：劣化ステータスは無視してください。ローカルデータLIFが存在しない場合、ONTAPはFPolicyが「FPolicyサーバーに接続するためのローカルLIFが存在しません」という理由で切断されたと表示することがありますが、これは想定される動作です。link:https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/Fpolicy_server_not_connected_due_to_no_local_lif_present_on_one_or_more_nodes["KB: 「no local lif present」が原因でFpolicyサーバーに接続できない"^]を参照してください。今後のSWSリリースでは、この場合にコレクターが劣化としてマークされなくなります。
+* リストされたノードにデータ LIF が存在します：FPolicy が切断されている理由（LIF ダウン／data-fpolicy-client の欠落、ネットワーク／ファイアウォール、または一時的な再起動／フェイルオーバー）を調査してください。
+
+
+{空の}
+
+'''
 それでも問題が解決しない場合は、[ヘルプ > サポート] ページに記載されているサポート リンクにアクセスしてください。
