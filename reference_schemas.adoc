@@ -19,4 +19,4 @@ keywords: dwh, data warehouse, schema, reporting
 
 NOTE: レポート機能は、Data Infrastructure Insightsで利用できます。link:concept_subscribing_to_cloud_insights.html["プレミアムエディション"] 。
 
-link:schema/reporting_schema_capacity.html["スキーマテーブル - 容量"^] link:schema/reporting_schema_capacity_efficiency.html["スキーマテーブル - 容量効率"^] link:schema/reporting_schema_fs_util.html["スキーマテーブル - ファイルシステムの使用率"^] link:schema/reporting_schema_inventory.html["スキーマテーブル - インベントリ"^] link:schema/reporting_schema_performance.html["スキーマテーブル - パフォーマンス"^] link:schema/reporting_schema_ports.html["スキーマテーブル - ポート"^]
+link:reporting_schema_capacity.html["スキーマテーブル - 容量"] link:reporting_schema_capacity_efficiency.html["スキーマテーブル - 容量効率"] link:reporting_schema_fs_util.html["スキーマテーブル - ファイルシステムの使用率"] link:reporting_schema_inventory.html["スキーマテーブル - インベントリ"] link:reporting_schema_performance.html["スキーマテーブル - パフォーマンス"] link:reporting_schema_ports.html["スキーマテーブル - ポート"]

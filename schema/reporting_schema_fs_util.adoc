@@ -1,0 +1,571 @@
+---
+sidebar: sidebar 
+permalink: reporting_schema_fs_util.html 
+summary: ファイルシステム利用状況のデータ ウェアハウスのスキーマテーブル 
+keywords: dwh, data warehouse, schema, reporting, file system, fs util 
+---
+= ファイルシステム使用率スキーマ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+ソース: *dwh_fs_util* OData エンドポイント — Data Infrastructure Insights
+
+見つかったテーブル数：*8* | 関連付け数：*7*
+
+
+
+[[key-relationships-between-tables]]
+== テーブル間の重要な関係
+
+
+
+[[fsutilfact]]
+=== fs_util_fact
+
+[cols="1,1,1"]
+|===
+| 参照されている（親）テーブル | FK列 | 親PK 
+
+
+| link:#entity-compute_resource_dimension["コンピューティング リソース ディメンション"] | computeResourceTk | tk 
+
+
+| link:#entity-date_dimension["日付ディメンション"] | dateTk | tk 
+
+
+| link:#entity-file_system_dimension["ファイルシステム次元"] | fsTk | tk 
+
+
+| link:#entity-host_dimension["ホスト ディメンション"] | hostTk | tk 
+
+
+| link:#entity-storage_dimension["ストレージ寸法"] | storageTk | tk 
+
+
+| link:#entity-tier_dimension["階層ディメンション"] | tierTk | tk 
+
+
+| link:#entity-vm_dimension["vm_dimension"] | vmTk | tk 
+|===
+
+
+[[tables-fields]]
+== テーブルとフィールド
+
+PK（主キー）FK（外部キー）NOT NULL（必須フィールド）
+
+
+
+[[computeresourcedimension]]
+=== コンピューティング リソース ディメンション
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：compute_resource_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このコンピューティング リソース行のTK。 
+
+
+| 識別子 | 文字列 | はい | コンピューティング リソースの自然識別子。 
+
+
+| 名前 | 文字列 | はい | コンピューティング リソースの名前。 
+
+
+| type | 文字列 | はい | リソースタイプ。 
+
+
+| domain | 文字列 | はい | コンピューティング リソースのドメイン。 
+
+
+| ip | 文字列 | はい | コンピューティング リソースのIPアドレスをカンマ区切りで列挙したリスト。 
+
+
+| オペレーティング システム | 文字列 | はい | コンピューティング リソース上で動作しているオペレーティングシステム。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.compute_resource 内のコンピューティング リソースの GUID 
+
+
+| 最新 | 文字列 | はい | この行がこのコンピューティング リソースの最新の行かどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このコンピューティング リソース行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | 多くの 
+|===
+
+
+[[datedimension]]
+=== 日付ディメンション
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット：date_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付オブジェクトのTK。 
+
+
+| fullDate | DateTimeOffset | はい | 日付オブジェクトの日付。 
+
+
+| dayInMonth | バイト | はい | 日付オブジェクトにおける月の日付。月の最初の日には値 1 が割り当てられます。 
+
+
+| dayInYear | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付オブジェクトにおける、その日付の年内の日数。年の最初の日には1という値が割り当てられます。 
+
+
+| dateYear | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付オブジェクトの年。 
+
+
+| yearLabel | 文字列 | はい | 年を文字列としてフォーマットします 
+
+
+| monthNum | バイト | はい | 日付オブジェクトの月。1月の値は1です。 
+
+
+| monthLabel | 文字列 | はい | 月を文字列としてフォーマットします 
+
+
+| dayInWeekNum | バイト | はい | 日付オブジェクトにおける曜日。日曜日の値は1です。 
+
+
+| 四半期 | バイト | はい | 日付オブジェクトの四半期。第1四半期の値は1です。 
+
+
+| quarterLabel | 文字列 | はい | 四半期を文字列としてフォーマット 
+
+
+| dayInQuarter | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付オブジェクトの四半期における日。四半期の初日の値は 1 です。 
+
+
+| repQuarter | バイト | はい | この日付が、その四半期で利用可能な最初の日付であるかどうかを示します。 
+
+
+| repMonth | バイト | はい | この日付がその月で利用可能な最初の日付であるかどうかを示します。 
+
+
+| repWeek | バイト | はい | この日付がその週で利用可能な最初の日付であるかどうかを示します。 
+
+
+| repDay | バイト | はい | この日付がその日に利用可能な最初の日付であるかどうかを示します。 
+
+
+| repMonthOrLatest | バイト | はい | この日付が報告対象月か最新の日付かを示します。このフラグは、月次レポートに基づいて動作する Datamarts で使用されます。唯一の違いは、当月については最新であるという点です。 
+
+
+| sspFlag | バイト | はい | この日付がストレージおよびストレージプールデータマートで使用されるかどうかを示します。これは、月ごとの代表値と、設定で定義された直近の日数について当てはまります。 
+
+
+| 最新 | 文字列 | はい | この日付が表に記載されている最後の日付であるかどうかを示します。 
+
+
+| 未来 | 文字列 | はい | この日付が将来の日付（予測）なのか、通常の日付なのかを示します。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | 多くの 
+|===
+
+
+[[filesystemdimension]]
+=== ファイルシステム次元
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：file_system_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 次元のTK。 
+
+
+| computeResourceIdentifier | 文字列 | はい | コンピューティング リソースの識別子。自然鍵の一部。 
+
+
+| 名前 | 文字列 | はい | マウントポイントまたはドライブレター。自然キーの一部。 
+
+
+| 場所 | 文字列 | はい | データの保存場所とアクセス方法を示します。例：ローカル、SAN、NAS。場所が不明な場合は、null に設定されます。 
+
+
+| hardwareId | 文字列 | はい | ホスト固有の識別子。不明な場合は null に設定されます。 
+
+
+| type | 文字列 | はい | ファイルシステムの種類。例：NTFS、FAT、UFS、UDF、ZFS、ISO 9660、VXFSなど。不明な場合はnullに設定されます。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.file_system 内のファイルシステムの GUID。 
+
+
+| 最新 | 文字列 | はい | この行がこのファイルシステムにおける最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このファイルシステム行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | 多くの 
+|===
+
+
+[[fsutilfact]]
+=== fs_util_fact
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：fs_util_fact
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk *[PK]* | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 事実のTK。 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["日付ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付は未定です。 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["ホスト ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ホストのTK。 
+
+
+| vmTk *[FK]* →link:#entity-vm_dimension["vm_dimension"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | VMのTK。 
+
+
+| computeResourceTk *[FK]* →link:#entity-compute_resource_dimension["コンピューティング リソース ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | computeResource の TK。 
+
+
+| fsTk *[FK]* →link:#entity-file_system_dimension["ファイルシステム次元"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ファイルシステムのTK。 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["ストレージ寸法"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ストレージのTK。 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["階層ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ティアのTK。 
+
+
+| sizeMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ファイルシステムのサイズ（MB単位）。 
+
+
+| usedMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ファイルシステムの容量のうち、使用済みで利用できない部分。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| ファイルシステム次元 | link:#entity-file_system_dimension["ファイルシステム次元"] | 1つ JOIN：fsTk=link:#entity-file_system_dimension["ファイルシステム次元"].tk 
+
+
+| ストレージ寸法 | link:#entity-storage_dimension["ストレージ寸法"] | 1つのJOIN：storageTk=link:#entity-storage_dimension["ストレージ寸法"].tk 
+
+
+| 階層ディメンション | link:#entity-tier_dimension["階層ディメンション"] | 1つ JOIN：tierTk=link:#entity-tier_dimension["階層ディメンション"].tk 
+
+
+| コンピューティング リソース ディメンション | link:#entity-compute_resource_dimension["コンピューティング リソース ディメンション"] | 1つのJOIN：computeResourceTk=link:#entity-compute_resource_dimension["コンピューティング リソース ディメンション"].tk 
+
+
+| ホスト ディメンション | link:#entity-host_dimension["ホスト ディメンション"] | 1つ JOIN：hostTk=link:#entity-host_dimension["ホスト ディメンション"].tk 
+
+
+| vm_dimension | link:#entity-vm_dimension["vm_dimension"] | 1つ JOIN：vmTk=link:#entity-vm_dimension["vm_dimension"].tk 
+
+
+| 日付ディメンション | link:#entity-date_dimension["日付ディメンション"] | 1つ JOIN：dateTk=link:#entity-date_dimension["日付ディメンション"].tk 
+|===
+
+
+[[hostdimension]]
+=== ホスト ディメンション
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：host_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このホスト行のTK。 
+
+
+| 名前 | 文字列 | はい | ホストの名前。 
+
+
+| 識別子 | 文字列 | はい | デバイスの識別子。 
+
+
+| ip | 文字列 | はい | ホストのIPアドレスをカンマで区切ったリスト。 
+
+
+| オペレーティング システム | 文字列 | はい | ホスト上で動作しているオペレーティングシステム。 
+
+
+| model | 文字列 | はい | 型番。 
+
+
+| メーカー | 文字列 | はい | ホストの製造元。 
+
+
+| URL | 文字列 | はい | Insight Server 内のこのホストへの URL。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.host 内のホストの GUID。 
+
+
+| 最新 | 文字列 | はい | この行がこのホストにとって最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このホスト行が作成された日付のTK。 
+
+
+| dataCenter | 文字列 | はい | dataCenter dwh_dimensions.host_dimension に割り当てられた注釈値 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | 多くの 
+|===
+
+
+[[storagedimension]]
+=== ストレージ寸法
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：storage_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージ配列行のTK。 
+
+
+| 名前 | 文字列 | はい | ストレージ アレイの名前 
+
+
+| 識別子 | 文字列 | はい | デバイスの識別子。 
+
+
+| ip | 文字列 | はい | ストレージアレイのIPアドレス。 
+
+
+| model | 文字列 | はい | ストレージアレイのモデル。 
+
+
+| メーカー | 文字列 | はい | ストレージアレイの製造元。 
+
+
+| serialNumber | 文字列 | はい | ストレージアレイのシリアル番号。 
+
+
+| microcodeVersion | 文字列 | はい | ストレージアレイ上で動作しているファームウェアのバージョン。 
+
+
+| family（ファミリー） | 文字列 | はい | ストレージアレイのファミリー名（例：Clariion、Symmetrix など）。 
+
+
+| URL | 文字列 | はい | Insight Server 内のこのストレージへの URL。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.storage 内のストレージアレイの GUID。 
+
+
+| 最新 | 文字列 | はい | この行がこのストレージにおける最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージアレイ行が作成された日付のTK。 
+
+
+| dataCenter | 文字列 | はい | dataCenter 注釈値が dwh_dimensions.storage_dimension に割り当てられました 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | 多くの 
+|===
+
+
+[[tierdimension]]
+=== 階層ディメンション
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット：tier_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この階層のTK。 
+
+
+| 名前 | 文字列 | はい | 階層を識別するための名称。 
+
+
+| シーケンス | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.annotation_valueで定義されている階層の連番。 
+
+
+| コスト | ダブル | はい | このティアに関連する費用。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.annotation_value 内の階層の GUID。 
+
+
+| 最新 | 文字列 | はい | この行がこの階層における最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この階層行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | 多くの 
+|===
+
+
+[[vmdimension]]
+=== vm_dimension
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：vm_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この仮想マシン行のTK。 
+
+
+| 名前 | 文字列 | はい | 仮想マシンの名前。 
+
+
+| naturalKey | 文字列 | はい | 仮想マシンの自然識別子。 
+
+
+| オペレーティング システム | 文字列 | はい | ゲストオペレーティングシステム。 
+
+
+| virtualCenterIp | 文字列 | はい | 仮想マシンの仮想センターのIPアドレス。 
+
+
+| ips | 文字列 | はい | 仮想マシンのIPアドレスをカンマで区切ったリスト。 
+
+
+| URL | 文字列 | はい | Insight Server 上のこの仮想マシンへの URL。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.hv_virtual_machine 内の仮想マシンの GUID 
+
+
+| 最新 | 文字列 | はい | この行がこの仮想マシンの最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この仮想マシン行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | 多くの 
+|===

@@ -1,0 +1,3521 @@
+---
+sidebar: sidebar 
+permalink: reporting_schema_capacity.html 
+summary: 容量データ ウェアハウスのスキーマテーブル 
+keywords: dwh, data warehouse, schema, reporting, capacity 
+---
+= 容量スキーマ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+ソース: *dwh_capacity* OData エンドポイント — Data Infrastructure Insights
+
+見つかったテーブル数：*44* | 関連付け数：*92*
+
+
+
+[[key-relationships-between-tables]]
+== テーブル間の重要な関係
+
+
+
+[[chargebackfact]]
+=== チャージバック_fact
+
+[cols="1,1,1"]
+|===
+| 参照されている（親）テーブル | FK列 | 親PK 
+
+
+| link:#entity-application_dimension["アプリケーションのディメンション"] | applicationTk | tk 
+
+
+| link:#entity-application_group_dimension["アプリケーショングループディメンション"] | applicationGroupTk | tk 
+
+
+| link:#entity-business_entity_dimension["ビジネスエンティティディメンション"] | businessEntityTk | tk 
+
+
+| link:#entity-date_dimension["日付ディメンション"] | dateTk | tk 
+
+
+| link:#entity-host_dimension["ホスト ディメンション"] | hostTk | tk 
+
+
+| link:#entity-host_group_dimension["ホスト グループのディメンション"] | hostGroupTk | tk 
+
+
+| link:#entity-internal_volume_dimension["内部ボリューム寸法"] | internalVolumeTk | tk 
+
+
+| link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | k8sNamespaceTk | tk 
+
+
+| link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | k8sNamespaceGroupTk | tk 
+
+
+| link:#entity-qtree_dimension["qtree_dimension"] | qtreeTk | tk 
+
+
+| link:#entity-service_level_dimension["サービスレベルの次元"] | serviceLevelTk | tk 
+
+
+| link:#entity-storage_dimension["ストレージ寸法"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["ストレージプールのディメンション"] | storagePoolTk | tk 
+
+
+| link:#entity-tier_dimension["階層ディメンション"] | tierTk | tk 
+|===
+
+
+[[diskgroupcapacityfact]]
+=== ディスクグループ容量ファクト
+
+[cols="1,1,1"]
+|===
+| 参照されている（親）テーブル | FK列 | 親PK 
+
+
+| link:#entity-date_dimension["日付ディメンション"] | dateTk | tk 
+
+
+| link:#entity-disk_group_dimension["ディスク グループのディメンション"] | diskGroupTk | tk 
+
+
+| link:#entity-storage_dimension["ストレージ寸法"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["ストレージプールのディメンション"] | storagePoolTk | tk 
+|===
+
+
+[[diskgroupcapacityfuturefact]]
+=== disk group容量の将来の事実
+
+[cols="1,1,1"]
+|===
+| 参照されている（親）テーブル | FK列 | 親PK 
+
+
+| link:#entity-date_dimension["日付ディメンション"] | dateTk | tk 
+
+
+| link:#entity-disk_group_dimension["ディスク グループのディメンション"] | diskGroupTk | tk 
+
+
+| link:#entity-storage_dimension["ストレージ寸法"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["ストレージプールのディメンション"] | storagePoolTk | tk 
+|===
+
+
+[[internalvolumecapacityfact]]
+=== 内部ボリューム容量のファクト
+
+[cols="1,1,1"]
+|===
+| 参照されている（親）テーブル | FK列 | 親PK 
+
+
+| link:#entity-application_dimension["アプリケーションのディメンション"] | applicationTk | tk 
+
+
+| link:#entity-application_group_dimension["アプリケーショングループディメンション"] | applicationGroupTk | tk 
+
+
+| link:#entity-business_entity_dimension["ビジネスエンティティディメンション"] | businessEntityTk | tk 
+
+
+| link:#entity-date_dimension["日付ディメンション"] | dateTk | tk 
+
+
+| link:#entity-internal_volume_dimension["内部ボリューム寸法"] | internalVolumeTk | tk 
+
+
+| link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | k8sNamespaceTk | tk 
+
+
+| link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | k8sNamespaceGroupTk | tk 
+
+
+| link:#entity-service_level_dimension["サービスレベルの次元"] | serviceLevelTk | tk 
+
+
+| link:#entity-storage_dimension["ストレージ寸法"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["ストレージプールのディメンション"] | storagePoolTk | tk 
+
+
+| link:#entity-tier_dimension["階層ディメンション"] | tierTk | tk 
+|===
+
+
+[[k8spvccapacityfact]]
+=== k8s_pvc_capacity_fact
+
+[cols="1,1,1"]
+|===
+| 参照されている（親）テーブル | FK列 | 親PK 
+
+
+| link:#entity-date_dimension["日付ディメンション"] | dateTk | tk 
+
+
+| link:#entity-k8s_cluster_dimension["k8s_cluster_dimension"] | clusterTk | tk 
+
+
+| link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | namespaceTk | tk 
+
+
+| link:#entity-k8s_pv_dimension["k8s_pv_dimension"] | pvTk | tk 
+
+
+| link:#entity-k8s_pvc_dimension["k8s_pvc_dimension"] | pvcTk | tk 
+|===
+
+
+[[qtreecapacityfact]]
+=== qtree容量ファクト
+
+[cols="1,1,1"]
+|===
+| 参照されている（親）テーブル | FK列 | 親PK 
+
+
+| link:#entity-application_dimension["アプリケーションのディメンション"] | applicationTk | tk 
+
+
+| link:#entity-application_group_dimension["アプリケーショングループディメンション"] | applicationGroupTk | tk 
+
+
+| link:#entity-business_entity_dimension["ビジネスエンティティディメンション"] | businessEntityTk | tk 
+
+
+| link:#entity-date_dimension["日付ディメンション"] | dateTk | tk 
+
+
+| link:#entity-internal_volume_dimension["内部ボリューム寸法"] | internalVolumeTk | tk 
+
+
+| link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | k8sNamespaceTk | tk 
+
+
+| link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | k8sNamespaceGroupTk | tk 
+
+
+| link:#entity-qtree_dimension["qtree_dimension"] | qtreeTk | tk 
+
+
+| link:#entity-service_level_dimension["サービスレベルの次元"] | serviceLevelTk | tk 
+
+
+| link:#entity-storage_dimension["ストレージ寸法"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["ストレージプールのディメンション"] | storagePoolTk | tk 
+
+
+| link:#entity-tier_dimension["階層ディメンション"] | tierTk | tk 
+|===
+
+
+[[sptimetofill]]
+=== sp_time_to_fill
+
+[cols="1,1,1"]
+|===
+| 参照されている（親）テーブル | FK列 | 親PK 
+
+
+| link:#entity-storage_and_storage_pool_capacity_fact["ストレージとストレージプールの容量に関する事実"] | saspFactTk | tk 
+|===
+
+
+[[storageandstoragepoolcapacityfact]]
+=== ストレージとストレージプールの容量に関する事実
+
+[cols="1,1,1"]
+|===
+| 参照されている（親）テーブル | FK列 | 親PK 
+
+
+| link:#entity-date_dimension["日付ディメンション"] | dateTk | tk 
+
+
+| link:#entity-storage_dimension["ストレージ寸法"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["ストレージプールのディメンション"] | storagePoolTk | tk 
+
+
+| link:#entity-tier_dimension["階層ディメンション"] | tierTk | tk 
+|===
+
+
+[[storageandstoragepoolcapacityfuturefact]]
+=== ストレージとストレージプールの容量の将来のファクト
+
+[cols="1,1,1"]
+|===
+| 参照されている（親）テーブル | FK列 | 親PK 
+
+
+| link:#entity-date_dimension["日付ディメンション"] | dateTk | tk 
+
+
+| link:#entity-storage_dimension["ストレージ寸法"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["ストレージプールのディメンション"] | storagePoolTk | tk 
+
+
+| link:#entity-tier_dimension["階層ディメンション"] | tierTk | tk 
+|===
+
+
+[[storagenodecapacityfact]]
+=== ストレージノード容量ファクト
+
+[cols="1,1,1"]
+|===
+| 参照されている（親）テーブル | FK列 | 親PK 
+
+
+| link:#entity-date_dimension["日付ディメンション"] | dateTk | tk 
+
+
+| link:#entity-storage_dimension["ストレージ寸法"] | storageTk | tk 
+
+
+| link:#entity-storage_node_dimension["ストレージノードの寸法"] | storageNodeTk | tk 
+
+
+| link:#entity-tier_dimension["階層ディメンション"] | tierTk | tk 
+|===
+
+
+[[vmcapacityfact]]
+=== vm_capacity_fact
+
+[cols="1,1,1"]
+|===
+| 参照されている（親）テーブル | FK列 | 親PK 
+
+
+| link:#entity-application_dimension["アプリケーションのディメンション"] | applicationTk | tk 
+
+
+| link:#entity-application_group_dimension["アプリケーショングループディメンション"] | applicationGroupTk | tk 
+
+
+| link:#entity-business_entity_dimension["ビジネスエンティティディメンション"] | businessEntityTk | tk 
+
+
+| link:#entity-capacity_type["容量タイプ"] | capacityType | type 
+
+
+| link:#entity-datastore_dimension["データストアのディメンション"] | dataStoreTk | tk 
+
+
+| link:#entity-date_dimension["日付ディメンション"] | dateTk | tk 
+
+
+| link:#entity-host_dimension["ホスト ディメンション"] | hostTk | tk 
+
+
+| link:#entity-host_group_dimension["ホスト グループのディメンション"] | hostGroupTk | tk 
+
+
+| link:#entity-internal_volume_dimension["内部ボリューム寸法"] | internalVolumeTk | tk 
+
+
+| link:#entity-k8s_node_dimension["k8sノードディメンション"] | k8sNodeTk | tk 
+
+
+| link:#entity-qtree_dimension["qtree_dimension"] | qtreeTk | tk 
+
+
+| link:#entity-service_level_dimension["サービスレベルの次元"] | serviceLevelTk | tk 
+
+
+| link:#entity-storage_dimension["ストレージ寸法"] | storageTk | tk 
+
+
+| link:#entity-tier_dimension["階層ディメンション"] | tierTk | tk 
+
+
+| link:#entity-vm_dimension["vm_dimension"] | vmTk | tk 
+|===
+
+
+[[volumefactcurrent]]
+=== 現在のボリューム情報
+
+[cols="1,1,1"]
+|===
+| 参照されている（親）テーブル | FK列 | 親PK 
+
+
+| link:#entity-chargeback_fact["チャージバック_fact"] | chargebackFactTk | tk 
+|===
+
+
+[[volumehistorycapacityfact]]
+=== ボリューム履歴容量の詳細
+
+[cols="1,1,1"]
+|===
+| 参照されている（親）テーブル | FK列 | 親PK 
+
+
+| link:#entity-chargeback_fact["チャージバック_fact"] | chargebackFactTk | tk 
+
+
+| link:#entity-date_dimension["日付ディメンション"] | dateTk | tk 
+
+
+| link:#entity-host_dimension["ホスト ディメンション"] | hostTk | tk 
+
+
+| link:#entity-host_group_dimension["ホスト グループのディメンション"] | hostGroupTk | tk 
+
+
+| link:#entity-internal_volume_dimension["内部ボリューム寸法"] | internalVolumeTk | tk 
+
+
+| link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | k8sNamespaceGroupTk | tk 
+
+
+| link:#entity-qtree_dimension["qtree_dimension"] | qtreeTk | tk 
+
+
+| link:#entity-service_level_dimension["サービスレベルの次元"] | serviceLevelTk | tk 
+
+
+| link:#entity-storage_and_storage_pool_capacity_fact["ストレージとストレージプールの容量に関する事実"] | storageAndSpFactTk | tk 
+
+
+| link:#entity-storage_dimension["ストレージ寸法"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["ストレージプールのディメンション"] | storagePoolTk | tk 
+
+
+| link:#entity-tier_dimension["階層ディメンション"] | tierTk | tk 
+
+
+| link:#entity-volume_dimension["ボリューム寸法"] | volumeTk | tk 
+|===
+
+
+[[tables-fields]]
+== テーブルとフィールド
+
+PK（主キー）FK（外部キー）NOT NULL（必須フィールド）
+
+
+
+[[applicationdimension]]
+=== アプリケーションのディメンション
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：application_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この申請行のTK。 
+
+
+| 名前 | 文字列 | はい | アプリケーション名。 
+
+
+| description | 文字列 | はい | アプリケーションの概要。 
+
+
+| 優先度 | 文字列 | はい | アプリケーションの優先度。 
+
+
+| URL | 文字列 | はい | Insight Server 内のこのアプリケーションの URL。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.application 内のアプリケーションの GUID。 
+
+
+| 最新 | 文字列 | はい | この行がこのアプリケーションにおける最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この申請行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| 内部ボリューム容量のファクト | link:#entity-internal_volume_capacity_fact["内部ボリューム容量のファクト"] | 多くの 
+
+
+| チャージバック_fact | link:#entity-chargeback_fact["チャージバック_fact"] | 多くの 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | 多くの 
+
+
+| qtree容量ファクト | link:#entity-qtree_capacity_fact["qtree容量ファクト"] | 多くの 
+|===
+
+
+[[applicationgroupbridge]]
+=== アプリケーショングループブリッジ
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：application_group_bridge
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| appGroupTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | アプリケーショングループのTK。 
+
+
+| appTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | アプリケーションのTK。 
+
+
+| isRep | 文字列 | はい | このアプリケーションが所属するアプリケーショングループを代表しているかどうかを示します。 
+|===
+
+
+[[applicationgroupdimension]]
+=== アプリケーショングループディメンション
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：application_group_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | アプリケーショングループのTK。 
+
+
+| repApp | 文字列 | はい | アプリケーショングループを表すアプリケーションの名前。 
+
+
+| repAppTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | アプリケーショングループを代表するアプリケーションのTK。 
+
+
+| カーディナリティ | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | アプリケーショングループ内のアプリケーション数。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | アプリケーショングループの行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| 内部ボリューム容量のファクト | link:#entity-internal_volume_capacity_fact["内部ボリューム容量のファクト"] | 多くの 
+
+
+| チャージバック_fact | link:#entity-chargeback_fact["チャージバック_fact"] | 多くの 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | 多くの 
+
+
+| qtree容量ファクト | link:#entity-qtree_capacity_fact["qtree容量ファクト"] | 多くの 
+|===
+
+
+[[businessentitydimension]]
+=== ビジネスエンティティディメンション
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：business_entity_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このビジネスエンティティ行のTK。 
+
+
+| 氏名 | 文字列 | はい | 事業体の名称。 
+
+
+| テナント | 文字列 | はい | テナントの名前。 
+
+
+| lob | 文字列 | はい | 事業内容の名称。 
+
+
+| businessUnit | 文字列 | はい | 事業部門名。 
+
+
+| プロジェクト | 文字列 | はい | プロジェクト名。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.annotation_value 内のビジネスエンティティの GUID。 
+
+
+| 最新 | 文字列 | はい | この行がこの事業体にとって最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このビジネスエンティティ行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| 内部ボリューム容量のファクト | link:#entity-internal_volume_capacity_fact["内部ボリューム容量のファクト"] | 多くの 
+
+
+| チャージバック_fact | link:#entity-chargeback_fact["チャージバック_fact"] | 多くの 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | 多くの 
+
+
+| qtree容量ファクト | link:#entity-qtree_capacity_fact["qtree容量ファクト"] | 多くの 
+|===
+
+
+[[capacitytype]]
+=== 容量タイプ
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：capacity_type
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| 型 *[PK]* | 文字列 | はい |  
+
+
+| 使用済み | 文字列 | はい | ホストおよびアプリケーションによって使用されている容量を示します。 
+
+
+| vmSpecific | 文字列 | はい | vm_capacity_factで使用される型。 
+
+
+| replicationSpecific | 文字列 | はい | 保護／複製機能で使用されるタイプ。 
+
+
+| description | 文字列 | はい | この容量タイプの概要。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | 多くの 
+|===
+
+
+[[cardinals]]
+=== 枢機卿たち
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット：cardinals
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| 桁 | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 0から99までの数字。 
+|===
+
+
+[[chargebackfact]]
+=== チャージバック_fact
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（複数可）：chargeback_fact
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk *[PK]* | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 事実のTK。 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["日付ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付は未定です。 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["ストレージ寸法"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するストレージのTK。 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["ストレージプールのディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するストレージプールのTK。 
+
+
+| internalVolumeTk *[FK]* →link:#entity-internal_volume_dimension["内部ボリューム寸法"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在する内部ボリュームのTK。 
+
+
+| qtreeTk *[FK]* →link:#entity-qtree_dimension["qtree_dimension"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するqtreeのTK。 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["ホスト ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ホストグループを表すホストのTK。 
+
+
+| hostGroupTk *[FK]* →link:#entity-host_group_dimension["ホスト グループのディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ホストグループのTK。 
+
+
+| applicationTk *[FK]* →link:#entity-application_dimension["アプリケーションのディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | アプリケーションのTK。 
+
+
+| applicationGroupTk *[FK]* →link:#entity-application_group_dimension["アプリケーショングループディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | アプリケーショングループのTK。 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["階層ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ティアのTK。 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["サービスレベルの次元"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | サービスレベルのTK。 
+
+
+| businessUnit | 文字列 | はい | qtreeに関連付けられたビジネスユニット。 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["ビジネスエンティティディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 事業体のTK。 
+
+
+| k8sNamespaceTk *[FK]* →link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8s名前空間のTK。 
+
+
+| k8sNamespaceGroupTk *[FK]* →link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8sネームスペースグループのTK。 
+
+
+| protectionType | 文字列 | はい | 保護の種類を指定します。 
+
+
+| storageAccessType | 文字列 | はい | この容量がどのように使用されているかを説明します。ボリュームまたはボリュームが存在するqtree/内部ボリュームの場合はSAN、クラウドストレージの場合はOTHER、それ以外の場合はNAS。 
+
+
+| resourceName | 文字列 | はい | 容量が存在するリソースの名前。リソースタイプが VOLUME の場合は N/A 
+
+
+| resourceType | 文字列 | はい | この容量を得るために、どのような容量が集約されたかを説明します。 
+
+
+| VMによってマッピングされた | 文字列 | はい | このリソースがVMからマッピングされているかどうかを示します 
+
+
+| virtualStorage | 文字列 | はい | この容量がバックエンドストレージによって仮想化されているかどうかを示します。 
+
+
+| プロビジョンド容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | プロビジョニングされた容量。 
+
+
+| 使用容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 使用容量。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| 内部ボリューム寸法 | link:#entity-internal_volume_dimension["内部ボリューム寸法"] | 1つ JOIN:internalVolumeTk=link:#entity-internal_volume_dimension["内部ボリューム寸法"].tk 
+
+
+| ストレージ寸法 | link:#entity-storage_dimension["ストレージ寸法"] | 1つのJOIN：storageTk=link:#entity-storage_dimension["ストレージ寸法"].tk 
+
+
+| ビジネスエンティティディメンション | link:#entity-business_entity_dimension["ビジネスエンティティディメンション"] | 1つ JOIN：businessEntityTk=link:#entity-business_entity_dimension["ビジネスエンティティディメンション"].tk 
+
+
+| ホスト グループのディメンション | link:#entity-host_group_dimension["ホスト グループのディメンション"] | 1つ JOIN：hostGroupTk=link:#entity-host_group_dimension["ホスト グループのディメンション"].tk 
+
+
+| k8s_namespace_group_dimension | link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | 1つのJOIN:k8sNamespaceGroupTk=link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk 
+
+
+| アプリケーショングループディメンション | link:#entity-application_group_dimension["アプリケーショングループディメンション"] | 1つ JOIN：applicationGroupTk=link:#entity-application_group_dimension["アプリケーショングループディメンション"].tk 
+
+
+| k8s_namespace_dimension | link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | 1つのJOIN:k8sNamespaceTk=link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk 
+
+
+| サービスレベルの次元 | link:#entity-service_level_dimension["サービスレベルの次元"] | 1つ JOIN：serviceLevelTk=link:#entity-service_level_dimension["サービスレベルの次元"].tk 
+
+
+| 階層ディメンション | link:#entity-tier_dimension["階層ディメンション"] | 1つ JOIN：tierTk=link:#entity-tier_dimension["階層ディメンション"].tk 
+
+
+| アプリケーションのディメンション | link:#entity-application_dimension["アプリケーションのディメンション"] | 1つ JOIN：applicationTk=link:#entity-application_dimension["アプリケーションのディメンション"].tk 
+
+
+| qtree_dimension | link:#entity-qtree_dimension["qtree_dimension"] | 1つの JOIN：qtreeTk=link:#entity-qtree_dimension["qtree_dimension"].tk 
+
+
+| ストレージプールのディメンション | link:#entity-storage_pool_dimension["ストレージプールのディメンション"] | 1つのJOIN：storagePoolTk=link:#entity-storage_pool_dimension["ストレージプールのディメンション"].tk 
+
+
+| ホスト ディメンション | link:#entity-host_dimension["ホスト ディメンション"] | 1つ JOIN：hostTk=link:#entity-host_dimension["ホスト ディメンション"].tk 
+
+
+| 日付ディメンション | link:#entity-date_dimension["日付ディメンション"] | 1つ JOIN：dateTk=link:#entity-date_dimension["日付ディメンション"].tk 
+
+
+| 現在のボリューム情報 | link:#entity-volume_fact_current["現在のボリューム情報"] | 多くの 
+
+
+| ボリューム履歴容量の詳細 | link:#entity-volume_history_capacity_fact["ボリューム履歴容量の詳細"] | 多くの 
+|===
+
+
+[[datastoredimension]]
+=== データストアのディメンション
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：datastore_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このデータストア行のTK。 
+
+
+| naturalKey | 文字列 | はい | データストアのOID。 
+
+
+| 名前 | 文字列 | はい | データストアの名前。 
+
+
+| moid | 文字列 | はい | データストアの管理対象オブジェクトID。 
+
+
+| virtualCenterIp | 文字列 | はい | データストアの仮想センターのIPアドレス。 
+
+
+| URL | 文字列 | はい | Insight Server 内のこのデータストアへの URL。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.hv_data_store内のデータストアのGUID 
+
+
+| 最新 | 文字列 | はい | この行がこのデータストアの最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このデータストア行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | 多くの 
+|===
+
+
+[[datedimension]]
+=== 日付ディメンション
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット：date_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付オブジェクトのTK。 
+
+
+| fullDate | DateTimeOffset | はい | 日付オブジェクトの日付。 
+
+
+| dayInMonth | バイト | はい | 日付オブジェクトにおける月の日付。月の最初の日には値 1 が割り当てられます。 
+
+
+| dayInYear | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付オブジェクトにおける、その日付の年内の日数。年の最初の日には1という値が割り当てられます。 
+
+
+| dateYear | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付オブジェクトの年。 
+
+
+| yearLabel | 文字列 | はい | 年を文字列としてフォーマットします 
+
+
+| monthNum | バイト | はい | 日付オブジェクトの月。1月の値は1です。 
+
+
+| monthLabel | 文字列 | はい | 月を文字列としてフォーマットします 
+
+
+| dayInWeekNum | バイト | はい | 日付オブジェクトにおける曜日。日曜日の値は1です。 
+
+
+| 四半期 | バイト | はい | 日付オブジェクトの四半期。第1四半期の値は1です。 
+
+
+| quarterLabel | 文字列 | はい | 四半期を文字列としてフォーマット 
+
+
+| dayInQuarter | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付オブジェクトの四半期における日。四半期の初日の値は 1 です。 
+
+
+| repQuarter | バイト | はい | この日付が、その四半期で利用可能な最初の日付であるかどうかを示します。 
+
+
+| repMonth | バイト | はい | この日付がその月で利用可能な最初の日付であるかどうかを示します。 
+
+
+| repWeek | バイト | はい | この日付がその週で利用可能な最初の日付であるかどうかを示します。 
+
+
+| repDay | バイト | はい | この日付がその日に利用可能な最初の日付であるかどうかを示します。 
+
+
+| repMonthOrLatest | バイト | はい | この日付が報告対象月か最新の日付かを示します。このフラグは、月次レポートに基づいて動作する Datamarts で使用されます。唯一の違いは、当月については最新であるという点です。 
+
+
+| sspFlag | バイト | はい | この日付がストレージおよびストレージプールデータマートで使用されるかどうかを示します。これは、月ごとの代表値と、設定で定義された直近の日数について当てはまります。 
+
+
+| 最新 | 文字列 | はい | この日付が表に記載されている最後の日付であるかどうかを示します。 
+
+
+| 未来 | 文字列 | はい | この日付が将来の日付（予測）なのか、通常の日付なのかを示します。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| 内部ボリューム容量のファクト | link:#entity-internal_volume_capacity_fact["内部ボリューム容量のファクト"] | 多くの 
+
+
+| チャージバック_fact | link:#entity-chargeback_fact["チャージバック_fact"] | 多くの 
+
+
+| ディスクグループ容量ファクト | link:#entity-disk_group_capacity_fact["ディスクグループ容量ファクト"] | 多くの 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | 多くの 
+
+
+| disk group容量の将来の事実 | link:#entity-disk_group_capacity_future_fact["disk group容量の将来の事実"] | 多くの 
+
+
+| qtree容量ファクト | link:#entity-qtree_capacity_fact["qtree容量ファクト"] | 多くの 
+
+
+| k8s_pvc_capacity_fact | link:#entity-k8s_pvc_capacity_fact["k8s_pvc_capacity_fact"] | 多くの 
+
+
+| ストレージとストレージプールの容量に関する事実 | link:#entity-storage_and_storage_pool_capacity_fact["ストレージとストレージプールの容量に関する事実"] | 多くの 
+
+
+| ボリューム履歴容量の詳細 | link:#entity-volume_history_capacity_fact["ボリューム履歴容量の詳細"] | 多くの 
+
+
+| ストレージとストレージプールの容量の将来のファクト | link:#entity-storage_and_storage_pool_capacity_future_fact["ストレージとストレージプールの容量の将来のファクト"] | 多くの 
+
+
+| ストレージノード容量ファクト | link:#entity-storage_node_capacity_fact["ストレージノード容量ファクト"] | 多くの 
+|===
+
+
+[[diskgroupcapacityfact]]
+=== ディスクグループ容量ファクト
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット：disk_group_capacity_fact
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk *[PK]* | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 事実のTK。 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["日付ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付は未定です。 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["ストレージ寸法"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ディスク グループが存在するストレージの TK。 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["ストレージプールのディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ディスク グループが存在するストレージプールのTK。 
+
+
+| diskGroupTk *[FK]* →link:#entity-disk_group_dimension["ディスク グループのディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ディスク グループのTK。 
+
+
+| 容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ディスク グループの使用可能な容量。 
+
+
+| 使用容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ディスク グループの使用済み容量。 
+
+
+| 物理ディスク容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ディスク グループの物理容量。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| ディスク グループのディメンション | link:#entity-disk_group_dimension["ディスク グループのディメンション"] | 1つのJOIN：diskGroupTk=link:#entity-disk_group_dimension["ディスク グループのディメンション"].tk 
+
+
+| ストレージ寸法 | link:#entity-storage_dimension["ストレージ寸法"] | 1つのJOIN：storageTk=link:#entity-storage_dimension["ストレージ寸法"].tk 
+
+
+| ストレージプールのディメンション | link:#entity-storage_pool_dimension["ストレージプールのディメンション"] | 1つのJOIN：storagePoolTk=link:#entity-storage_pool_dimension["ストレージプールのディメンション"].tk 
+
+
+| 日付ディメンション | link:#entity-date_dimension["日付ディメンション"] | 1つ JOIN：dateTk=link:#entity-date_dimension["日付ディメンション"].tk 
+|===
+
+
+[[diskgroupcapacityfuturefact]]
+=== disk group容量の将来の事実
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：disk_group_capacity_future_fact
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk *[PK]* | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 事実のTK。 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["日付ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付ディメンションのTK。 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["ストレージ寸法"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するストレージのTK。 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["ストレージプールのディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するストレージプールのTK。 
+
+
+| diskGroupTk *[FK]* →link:#entity-disk_group_dimension["ディスク グループのディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するディスク グループのTK。 
+
+
+| 容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ストレージアレイによって報告されたディスク グループの使用可能容量（MB単位）。 
+
+
+| 使用容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ストレージアレイによって報告されたディスク グループの使用容量（MB）。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| ディスク グループのディメンション | link:#entity-disk_group_dimension["ディスク グループのディメンション"] | 1つのJOIN：diskGroupTk=link:#entity-disk_group_dimension["ディスク グループのディメンション"].tk 
+
+
+| ストレージ寸法 | link:#entity-storage_dimension["ストレージ寸法"] | 1つのJOIN：storageTk=link:#entity-storage_dimension["ストレージ寸法"].tk 
+
+
+| ストレージプールのディメンション | link:#entity-storage_pool_dimension["ストレージプールのディメンション"] | 1つのJOIN：storagePoolTk=link:#entity-storage_pool_dimension["ストレージプールのディメンション"].tk 
+
+
+| 日付ディメンション | link:#entity-date_dimension["日付ディメンション"] | 1つ JOIN：dateTk=link:#entity-date_dimension["日付ディメンション"].tk 
+|===
+
+
+[[diskgroupdimension]]
+=== ディスク グループのディメンション
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：disk_group_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このディスク グループ行のTK。 
+
+
+| 名前 | 文字列 | はい | ディスク グループの名前。 
+
+
+| 識別子 | 文字列 | はい | ディスク グループの識別子。 
+
+
+| vendorDiskGroupType | 文字列 | はい | ディスク グループのベンダータイプ。 
+
+
+| diskType | 文字列 | はい | ディスク グループ内のディスクの種類。 
+
+
+| ステータス | 文字列 | はい | ディスク グループのステータス。 
+
+
+| 冗長性 | 文字列 | はい | ディスク グループの冗長性。 
+
+
+| isVirtual | 文字列 | はい | ディスク グループが仮想であるかどうかを示します。 
+
+
+| vendorTier | 文字列 | はい | ディスク グループのベンダー階層。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.disk_group 内のディスク グループの GUID 
+
+
+| 最新 | 文字列 | はい | この行がこのディスク グループの最新の行かどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このディスク グループ行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| ディスクグループ容量ファクト | link:#entity-disk_group_capacity_fact["ディスクグループ容量ファクト"] | 多くの 
+
+
+| disk group容量の将来の事実 | link:#entity-disk_group_capacity_future_fact["disk group容量の将来の事実"] | 多くの 
+|===
+
+
+[[hostdimension]]
+=== ホスト ディメンション
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：host_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このホスト行のTK。 
+
+
+| 名前 | 文字列 | はい | ホストの名前。 
+
+
+| 識別子 | 文字列 | はい | デバイスの識別子。 
+
+
+| ip | 文字列 | はい | ホストのIPアドレスをカンマで区切ったリスト。 
+
+
+| オペレーティング システム | 文字列 | はい | ホスト上で動作しているオペレーティングシステム。 
+
+
+| model | 文字列 | はい | 型番。 
+
+
+| メーカー | 文字列 | はい | ホストの製造元。 
+
+
+| URL | 文字列 | はい | Insight Server 内のこのホストへの URL。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.host 内のホストの GUID。 
+
+
+| 最新 | 文字列 | はい | この行がこのホストにとって最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このホスト行が作成された日付のTK。 
+
+
+| dataCenter | 文字列 | はい | dataCenter dwh_dimensions.host_dimension に割り当てられた注釈値 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| チャージバック_fact | link:#entity-chargeback_fact["チャージバック_fact"] | 多くの 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | 多くの 
+
+
+| ボリューム履歴容量の詳細 | link:#entity-volume_history_capacity_fact["ボリューム履歴容量の詳細"] | 多くの 
+|===
+
+
+[[hostgroupbridge]]
+=== ホスト グループ ブリッジ
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：host_group_bridge
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| hostGroupTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ホストグループのTK。 
+
+
+| hostTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ホストのTK。 
+
+
+| isRep | 文字列 | はい | このホストが所属するホストグループを代表しているかどうかを示します。 
+|===
+
+
+[[hostgroupdimension]]
+=== ホスト グループのディメンション
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：host_group_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ホストグループのTK。 
+
+
+| repHost | 文字列 | はい | ホストグループを代表するホストの名前。 
+
+
+| repHostTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ホストグループを代表するホストのTK。 
+
+
+| カーディナリティ | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ホストグループ内のホスト数。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このホストグループ行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| チャージバック_fact | link:#entity-chargeback_fact["チャージバック_fact"] | 多くの 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | 多くの 
+
+
+| ボリューム履歴容量の詳細 | link:#entity-volume_history_capacity_fact["ボリューム履歴容量の詳細"] | 多くの 
+|===
+
+
+[[internalvolumecapacityfact]]
+=== 内部ボリューム容量のファクト
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（複数可）：internal_volume_capacity_fact
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk *[PK]* | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 事実のTK。 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["日付ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付は未定です。 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["ストレージ寸法"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 内部ボリュームが存在するストレージのTK。 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["ストレージプールのディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 内部ボリュームが存在するストレージプールのTK。 
+
+
+| internalVolumeTk *[FK]* →link:#entity-internal_volume_dimension["内部ボリューム寸法"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 内部ボリュームのTK。 
+
+
+| virtualStorageTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | これが仮想内部ボリュームである場合の、フロントエンドアレイのTK。それ以外の場合、値はN/Aです。 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["階層ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ティアのTK。 
+
+
+| applicationTk *[FK]* →link:#entity-application_dimension["アプリケーションのディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | アプリケーションのTK。 
+
+
+| applicationGroupTk *[FK]* →link:#entity-application_group_dimension["アプリケーショングループディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | アプリケーショングループのTK。 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["サービスレベルの次元"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | サービスレベルのTK。 
+
+
+| businessUnit | 文字列 | はい | 内部ボリュームに関連付けられたビジネスユニット。 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["ビジネスエンティティディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 事業体のTK。 
+
+
+| k8sNamespaceTk *[FK]* →link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8s名前空間のTK。 
+
+
+| k8sNamespaceGroupTk *[FK]* →link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8sネームスペースグループのTK。 
+
+
+| storageAccessType | 文字列 | はい | この内部ボリュームがどのように使用されているかを説明します。ボリュームが保存されている場合はSAN、そうでない場合はNAS。 
+
+
+| protectionType | 文字列 | はい | この内部ボリュームの保護タイプを指定します。レプリカでない場合は N/A です。 
+
+
+| 割り当て済み容量（MB） | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 内部ボリュームに割り当てられた合計容量。 
+
+
+| 消費容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この内部ボリュームがストレージプールから消費する容量。 
+
+
+| 使用容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この内部ボリュームで使用されている総容量。 
+
+
+| 使用済みデータ容量（MB） | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | スナップショットを除いた、この内部ボリュームの使用済み容量。 
+
+
+| 未使用容量（MB） | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 内部ボリュームにデータを書き込むための利用可能な容量。 
+
+
+| snapshotAllocatedCapacityMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この内部ボリューム上のスナップショット用に割り当てられた容量。 
+
+
+| スナップショット使用容量（MB） | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この内部ボリューム上のスナップショットによって使用される容量。 
+
+
+| totalCloneSavedCapacityMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | クローン内部ボリュームが、元の内部ボリュームと共有する容量。 
+
+
+| dedupeRatio | ダブル | はい | この内部ボリュームにおける重複排除圧縮率。 
+
+
+| 重複排除節約GB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この内部ボリュームの重複排除圧縮（GB単位）。 
+
+
+| rawToUsableRatio | ダブル | はい | ディスクの生容量と内部ボリュームの使用可能容量の比率。RAIDレベルやその他のオーバーヘッドの影響を受けます。 
+
+
+| snapshotCount | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この内部ボリューム上のスナップショットの数。 
+
+
+| lastSnapshotTime | DateTimeOffset | はい | 前回のスナップショットの時刻。 
+
+
+| compressionRatio | ダブル | はい | この内部ボリュームの圧縮率。 
+
+
+| 圧縮節約GB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この内部ボリュームの圧縮（GB単位）。 
+
+
+| compressionSavingsPercent | ダブル | はい | この内部ボリュームの圧縮率（％）。 
+
+
+| objectStoreUsedSpaceGB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | オブジェクトストアがこの内部ボリュームで使用した容量（GB単位） 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| サービスレベルの次元 | link:#entity-service_level_dimension["サービスレベルの次元"] | 1つ JOIN：serviceLevelTk=link:#entity-service_level_dimension["サービスレベルの次元"].tk 
+
+
+| 内部ボリューム寸法 | link:#entity-internal_volume_dimension["内部ボリューム寸法"] | 1つ JOIN:internalVolumeTk=link:#entity-internal_volume_dimension["内部ボリューム寸法"].tk 
+
+
+| ストレージ寸法 | link:#entity-storage_dimension["ストレージ寸法"] | 1つのJOIN：storageTk=link:#entity-storage_dimension["ストレージ寸法"].tk 
+
+
+| 階層ディメンション | link:#entity-tier_dimension["階層ディメンション"] | 1つ JOIN：tierTk=link:#entity-tier_dimension["階層ディメンション"].tk 
+
+
+| ビジネスエンティティディメンション | link:#entity-business_entity_dimension["ビジネスエンティティディメンション"] | 1つ JOIN：businessEntityTk=link:#entity-business_entity_dimension["ビジネスエンティティディメンション"].tk 
+
+
+| アプリケーションのディメンション | link:#entity-application_dimension["アプリケーションのディメンション"] | 1つ JOIN：applicationTk=link:#entity-application_dimension["アプリケーションのディメンション"].tk 
+
+
+| ストレージプールのディメンション | link:#entity-storage_pool_dimension["ストレージプールのディメンション"] | 1つのJOIN：storagePoolTk=link:#entity-storage_pool_dimension["ストレージプールのディメンション"].tk 
+
+
+| 日付ディメンション | link:#entity-date_dimension["日付ディメンション"] | 1つ JOIN：dateTk=link:#entity-date_dimension["日付ディメンション"].tk 
+
+
+| k8s_namespace_group_dimension | link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | 1つのJOIN:k8sNamespaceGroupTk=link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk 
+
+
+| アプリケーショングループディメンション | link:#entity-application_group_dimension["アプリケーショングループディメンション"] | 1つ JOIN：applicationGroupTk=link:#entity-application_group_dimension["アプリケーショングループディメンション"].tk 
+
+
+| k8s_namespace_dimension | link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | 1つのJOIN:k8sNamespaceTk=link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk 
+|===
+
+
+[[internalvolumedimension]]
+=== 内部ボリューム寸法
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（複数可）：internal_volume_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この内部ボリューム行のTK。 
+
+
+| 名前 | 文字列 | はい | 内部ボリュームの名前。 
+
+
+| 識別子 | 文字列 | はい | 内部ボリュームの識別子。 
+
+
+| storagePoolIdentifier | 文字列 | はい | この内部ボリュームが存在するストレージプールの識別子。 
+
+
+| storageName | 文字列 | はい | この内部ボリュームが存在するストレージの名前。 
+
+
+| storageIP | 文字列 | はい | この内部ボリュームが存在するストレージのIPアドレス。 
+
+
+| type | 文字列 | はい | 内部ボリュームタイプ。 
+
+
+| virtualStorage | 文字列 | はい | 指定するVirtualStorage（例：vFiler） 
+
+
+| spaceGuarantee | 文字列 | はい | 内部ボリュームのスペース保証。 
+
+
+| thinProvisioningSupported | 文字列 | はい | 内部ボリュームに対してシンプロビジョニングはサポートされていますか？ 
+
+
+| thinProvisioned | 文字列 | はい | 内部ボリュームはシンプロビジョニングされていますか。 
+
+
+| uuid | 文字列 | はい | 内部ボリュームのUUID。 
+
+
+| flexGroupIdentifier | 文字列 | はい | FlexGroup この内部ボリュームが属する識別子。 
+
+
+| URL | 文字列 | はい | Insight Server内のこの内部ボリュームへのURL。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.internal_volume 内の内部ボリュームの GUID 
+
+
+| 最新 | 文字列 | はい | この行がこの内部ボリュームの最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この内部ボリューム行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| 内部ボリューム容量のファクト | link:#entity-internal_volume_capacity_fact["内部ボリューム容量のファクト"] | 多くの 
+
+
+| チャージバック_fact | link:#entity-chargeback_fact["チャージバック_fact"] | 多くの 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | 多くの 
+
+
+| qtree容量ファクト | link:#entity-qtree_capacity_fact["qtree容量ファクト"] | 多くの 
+
+
+| ボリューム履歴容量の詳細 | link:#entity-volume_history_capacity_fact["ボリューム履歴容量の詳細"] | 多くの 
+|===
+
+
+[[k8sclusterdimension]]
+=== k8s_cluster_dimension
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット：k8s_cluster_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このクラスター行のTK。 
+
+
+| 識別子 | 文字列 | はい | クラスターの一意の識別子。 
+
+
+| 名前 | 文字列 | はい | クラスタの名前。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.k8s_cluster 内のクラスターの GUID 
+
+
+| 最新 | 文字列 | はい | この行がこのクラスターにおける最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このクラスタ行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| k8s_pvc_capacity_fact | link:#entity-k8s_pvc_capacity_fact["k8s_pvc_capacity_fact"] | 多くの 
+|===
+
+
+[[k8snamespacedimension]]
+=== k8s_namespace_dimension
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット：k8s_namespace_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この名前空間行のTK。 
+
+
+| 識別子 | 文字列 | はい | 名前空間の一意の識別子。 
+
+
+| 名前 | 文字列 | はい | 名前空間の名前。 
+
+
+| clusterName | 文字列 | はい | 名前空間のクラスタ名。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.k8s_namespace 内の名前空間の GUID 
+
+
+| 最新 | 文字列 | はい | この行がこの名前空間における最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この名前空間行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| 内部ボリューム容量のファクト | link:#entity-internal_volume_capacity_fact["内部ボリューム容量のファクト"] | 多くの 
+
+
+| チャージバック_fact | link:#entity-chargeback_fact["チャージバック_fact"] | 多くの 
+
+
+| qtree容量ファクト | link:#entity-qtree_capacity_fact["qtree容量ファクト"] | 多くの 
+
+
+| k8s_pvc_capacity_fact | link:#entity-k8s_pvc_capacity_fact["k8s_pvc_capacity_fact"] | 多くの 
+|===
+
+
+[[k8snamespacegroupbridge]]
+=== k8s_namespace_group_bridge
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：k8s_namespace_group_bridge
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| k8sNamespaceGroupTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8sネームスペースグループのTK。 
+
+
+| k8sNamespaceTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8s名前空間のTK。 
+
+
+| isRep | 文字列 | はい | このk8sネームスペースが、そのk8sネームスペースグループを代表しているかどうかを示します。 
+|===
+
+
+[[k8snamespacegroupdimension]]
+=== k8s_namespace_group_dimension
+
+
+
+[[top]]
+=== ↑トップ
+
+Entity Set(s)：k8s_namespace_group_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8sネームスペースグループのTK。 
+
+
+| repK8sNamespace | 文字列 | はい | k8sネームスペースグループを表すアプリケーションの名前。 
+
+
+| repK8sNamespaceTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | グループを表すk8sネームスペースのTK。 
+
+
+| カーディナリティ | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | アプリケーショングループ内のk8sネームスペースの数。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8s名前空間グループ行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| 内部ボリューム容量のファクト | link:#entity-internal_volume_capacity_fact["内部ボリューム容量のファクト"] | 多くの 
+
+
+| チャージバック_fact | link:#entity-chargeback_fact["チャージバック_fact"] | 多くの 
+
+
+| qtree容量ファクト | link:#entity-qtree_capacity_fact["qtree容量ファクト"] | 多くの 
+
+
+| ボリューム履歴容量の詳細 | link:#entity-volume_history_capacity_fact["ボリューム履歴容量の詳細"] | 多くの 
+|===
+
+
+[[k8snodedimension]]
+=== k8sノードディメンション
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット：k8s_node_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このノード行のTK。 
+
+
+| 識別子 | 文字列 | はい | ノードの一意の識別子。 
+
+
+| 名前 | 文字列 | はい | ノードの名前。 
+
+
+| clusterName | 文字列 | はい | ノードのクラスタ名。 
+
+
+| internalIp | 文字列 | はい | K8Sノードの内部IPアドレス 
+
+
+| osImage | 文字列 | はい | K8SノードのOSイメージ 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.k8s_node内のノードのGUID 
+
+
+| 最新 | 文字列 | はい | この行がこのノードの最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このノード行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | 多くの 
+|===
+
+
+[[k8spvdimension]]
+=== k8s_pv_dimension
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット：k8s_pv_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このPV行のTK。 
+
+
+| 識別子 | 文字列 | はい | PVの固有識別子。 
+
+
+| 名前 | 文字列 | はい | PVの名前。 
+
+
+| clusterName | 文字列 | はい | PVのクラスター名。 
+
+
+| 段階 | 文字列 | はい | K8S永続ボリュームのフェーズ（Bound など） 
+
+
+| pvcName | 文字列 | はい | K8SパーシステントボリュームがバインドされているPVCの名前 
+
+
+| storageClass | 文字列 | はい | K8S永続ボリュームのストレージクラス名 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.k8s_pv内のPVCのGUID 
+
+
+| 最新 | 文字列 | はい | この行がこのPVの最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このpv行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| k8s_pvc_capacity_fact | link:#entity-k8s_pvc_capacity_fact["k8s_pvc_capacity_fact"] | 多くの 
+|===
+
+
+[[k8spvccapacityfact]]
+=== k8s_pvc_capacity_fact
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット：k8s_pvc_capacity_fact
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk *[PK]* | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 事実のTK。 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["日付ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付ディメンションのTK。 
+
+
+| pvcTk *[FK]* →link:#entity-k8s_pvc_dimension["k8s_pvc_dimension"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8s PVCのTK。 
+
+
+| clusterTk *[FK]* →link:#entity-k8s_cluster_dimension["k8s_cluster_dimension"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8sクラスターのTK。 
+
+
+| namespaceTk *[FK]* →link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8s名前空間のTK。 
+
+
+| pvTk *[FK]* →link:#entity-k8s_pv_dimension["k8s_pv_dimension"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8s pv の TK。 
+
+
+| pvSizeBytes | ダブル | はい | K8S永続ボリュームのサイズ（バイト単位） 
+
+
+| pvcSizeBytes | ダブル | はい | K8S永続ボリューム要求のサイズ（バイト単位） 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| k8s_pvc_dimension | link:#entity-k8s_pvc_dimension["k8s_pvc_dimension"] | 1つのJOIN：pvcTk=link:#entity-k8s_pvc_dimension["k8s_pvc_dimension"].tk 
+
+
+| k8s_cluster_dimension | link:#entity-k8s_cluster_dimension["k8s_cluster_dimension"] | 1つのJOIN：clusterTk=link:#entity-k8s_cluster_dimension["k8s_cluster_dimension"].tk 
+
+
+| k8s_namespace_dimension | link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | 1つのJOIN：namespaceTk=link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk 
+
+
+| 日付ディメンション | link:#entity-date_dimension["日付ディメンション"] | 1つ JOIN：dateTk=link:#entity-date_dimension["日付ディメンション"].tk 
+
+
+| k8s_pv_dimension | link:#entity-k8s_pv_dimension["k8s_pv_dimension"] | 1つ参加：pvTk=link:#entity-k8s_pv_dimension["k8s_pv_dimension"].tk 
+|===
+
+
+[[k8spvcdimension]]
+=== k8s_pvc_dimension
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット：k8s_pvc_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このPVC列のTK。 
+
+
+| 識別子 | 文字列 | はい | PVCの固有識別子。 
+
+
+| 名前 | 文字列 | はい | PVCの名称。 
+
+
+| clusterName | 文字列 | はい | PVCのクラスター名。 
+
+
+| namespaceName | 文字列 | はい | PVC の名前空間名。 
+
+
+| pvName | 文字列 | はい | このPVCに接続されているPVの名前。 
+
+
+| 段階 | 文字列 | はい | K8S永続ボリューム要求のフェーズ（Bound など） 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.k8s_pvcにあるPVCのGUID 
+
+
+| 最新 | 文字列 | はい | この行がこのPVCの最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このPVC列が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| k8s_pvc_capacity_fact | link:#entity-k8s_pvc_capacity_fact["k8s_pvc_capacity_fact"] | 多くの 
+|===
+
+
+[[k8sworkloaddimension]]
+=== k8s_workload_dimension
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット：k8s_workload_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このワークロード行のTK。 
+
+
+| 識別子 | 文字列 | はい | ワークロードの一意の識別子。 
+
+
+| 名前 | 文字列 | はい | ワークロードの名前。 
+
+
+| clusterName | 文字列 | はい | ワークロードのクラスタ名。 
+
+
+| namespaceName | 文字列 | はい | ワークロードの名前空間名。 
+
+
+| type | 文字列 | はい | ワークロードの種類（Pod、StatefulSetなど） 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.k8s_workload内のワークロードのGUID 
+
+
+| 最新 | 文字列 | はい | この行がこのワークロードの最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このワークロード行が作成された日付のTK。 
+|===
+
+
+[[qtreecapacityfact]]
+=== qtree容量ファクト
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：qtree_capacity_fact
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk *[PK]* | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 事実のTK。 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["日付ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付は未定です。 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["ストレージ寸法"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | qtreeが存在するストレージのTK。 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["ストレージプールのディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | qtreeが存在するストレージプールのTK。 
+
+
+| internalVolumeTk *[FK]* →link:#entity-internal_volume_dimension["内部ボリューム寸法"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | qtreeが存在する内部ボリュームのTK。 
+
+
+| qtreeTk *[FK]* →link:#entity-qtree_dimension["qtree_dimension"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | qtreeのTK。 
+
+
+| virtualStorageTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このqtreeが仮想内部ボリューム上にある場合、フロントエンドアレイのTK。それ以外の場合、値はN/Aです。 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["階層ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ティアのTK。 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["サービスレベルの次元"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | サービスレベルのTK。 
+
+
+| applicationTk *[FK]* →link:#entity-application_dimension["アプリケーションのディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | アプリケーションのTK。 
+
+
+| applicationGroupTk *[FK]* →link:#entity-application_group_dimension["アプリケーショングループディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | アプリケーショングループのTK。 
+
+
+| businessUnit | 文字列 | はい | qtreeに関連付けられたビジネスユニット。 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["ビジネスエンティティディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 事業体のTK。 
+
+
+| k8sNamespaceTk *[FK]* →link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8s名前空間のTK。 
+
+
+| k8sNamespaceGroupTk *[FK]* →link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8sネームスペースグループのTK。 
+
+
+| storageAccessType | 文字列 | はい | このqtreeがどのように使用されているかを説明します。ボリュームがある場合はSAN、それ以外の場合はNAS。 
+
+
+| protectionType | 文字列 | はい | この容量の保護タイプを指定します。レプリカでない場合は N/A です。 
+
+
+| ハードリミット容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | クォータによってこの qtree に課されたディスク容量の上限。この上限を超えると、データを書き込むことができなくなります。 
+
+
+| softLimitCapacityMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | クォータによってこの qtree に課されたディスク容量の制限。制限値を超えると警告が表示されますが、データの書き込みは引き続き可能です。 
+
+
+| 使用容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 割り当てに設定されたハードキャパシティ制限とソフトキャパシティ制限に対して使用されたキャパシティ。 
+
+
+| rawToUsableRatio | ダブル | はい | qtree のディスク生容量と使用可能容量の比率。RAID レベルやその他のオーバーヘッドの影響を受けます。 
+
+
+| missingQuotaLimits | 文字列 | はい | ハードリミットとソフトリミットのうち、どれが欠落していてデフォルト値で初期化されたかを示します。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| 内部ボリューム寸法 | link:#entity-internal_volume_dimension["内部ボリューム寸法"] | 1つ JOIN:internalVolumeTk=link:#entity-internal_volume_dimension["内部ボリューム寸法"].tk 
+
+
+| ストレージ寸法 | link:#entity-storage_dimension["ストレージ寸法"] | 1つのJOIN：storageTk=link:#entity-storage_dimension["ストレージ寸法"].tk 
+
+
+| ビジネスエンティティディメンション | link:#entity-business_entity_dimension["ビジネスエンティティディメンション"] | 1つ JOIN：businessEntityTk=link:#entity-business_entity_dimension["ビジネスエンティティディメンション"].tk 
+
+
+| k8s_namespace_group_dimension | link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | 1つのJOIN:k8sNamespaceGroupTk=link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk 
+
+
+| アプリケーショングループディメンション | link:#entity-application_group_dimension["アプリケーショングループディメンション"] | 1つ JOIN：applicationGroupTk=link:#entity-application_group_dimension["アプリケーショングループディメンション"].tk 
+
+
+| k8s_namespace_dimension | link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | 1つのJOIN:k8sNamespaceTk=link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk 
+
+
+| サービスレベルの次元 | link:#entity-service_level_dimension["サービスレベルの次元"] | 1つ JOIN：serviceLevelTk=link:#entity-service_level_dimension["サービスレベルの次元"].tk 
+
+
+| 階層ディメンション | link:#entity-tier_dimension["階層ディメンション"] | 1つ JOIN：tierTk=link:#entity-tier_dimension["階層ディメンション"].tk 
+
+
+| アプリケーションのディメンション | link:#entity-application_dimension["アプリケーションのディメンション"] | 1つ JOIN：applicationTk=link:#entity-application_dimension["アプリケーションのディメンション"].tk 
+
+
+| qtree_dimension | link:#entity-qtree_dimension["qtree_dimension"] | 1つの JOIN：qtreeTk=link:#entity-qtree_dimension["qtree_dimension"].tk 
+
+
+| ストレージプールのディメンション | link:#entity-storage_pool_dimension["ストレージプールのディメンション"] | 1つのJOIN：storagePoolTk=link:#entity-storage_pool_dimension["ストレージプールのディメンション"].tk 
+
+
+| 日付ディメンション | link:#entity-date_dimension["日付ディメンション"] | 1つ JOIN：dateTk=link:#entity-date_dimension["日付ディメンション"].tk 
+|===
+
+
+[[qtreedimension]]
+=== qtree_dimension
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（複数可）：qtree_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このqtree行のTK。 
+
+
+| 名前 | 文字列 | はい | qtreeの名前。 
+
+
+| 識別子 | 文字列 | はい | qtreeの識別子。 
+
+
+| storageIdentifier | 文字列 | はい | このqtreeが存在するストレージの識別子。 
+
+
+| type | 文字列 | はい | qtreeタイプ。 
+
+
+| URL | 文字列 | はい | Insight Server 内のこの qtree への URL。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.qtree 内の qtree の GUID 
+
+
+| 最新 | 文字列 | はい | この行がこの qtree の最新の行かどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このqtree行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| チャージバック_fact | link:#entity-chargeback_fact["チャージバック_fact"] | 多くの 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | 多くの 
+
+
+| qtree容量ファクト | link:#entity-qtree_capacity_fact["qtree容量ファクト"] | 多くの 
+
+
+| ボリューム履歴容量の詳細 | link:#entity-volume_history_capacity_fact["ボリューム履歴容量の詳細"] | 多くの 
+|===
+
+
+[[serviceleveldimension]]
+=== サービスレベルの次元
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：service_level_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このサービスレベルの行のTK。 
+
+
+| 名前 | 文字列 | はい | サービスレベルを識別するための名称。 
+
+
+| シーケンス | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.annotation_valueで定義されているサービスレベルの連番。 
+
+
+| コスト | ダブル | はい | このサービスレベルに関連する費用。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.annotation_value 内のサービスレベルの GUID。 
+
+
+| 最新 | 文字列 | はい | この行がこのサービスレベルにおける最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このサービスレベルの行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| 内部ボリューム容量のファクト | link:#entity-internal_volume_capacity_fact["内部ボリューム容量のファクト"] | 多くの 
+
+
+| チャージバック_fact | link:#entity-chargeback_fact["チャージバック_fact"] | 多くの 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | 多くの 
+
+
+| qtree容量ファクト | link:#entity-qtree_capacity_fact["qtree容量ファクト"] | 多くの 
+
+
+| ボリューム履歴容量の詳細 | link:#entity-volume_history_capacity_fact["ボリューム履歴容量の詳細"] | 多くの 
+|===
+
+
+[[sptimetofill]]
+=== sp_time_to_fill
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：sp_time_to_fill
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| saspFactTk *[PK]* | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ストレージとストレージプールの事実のTK。 
+
+
+| daysToStoragePoolFull | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | UsedCapacityが容量と等しくなるまでの日数 
+
+
+| dateAtStoragePoolFull | DateTimeOffset | はい | UsedCapacityが容量と等しくなる日付 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| ストレージとストレージプールの容量に関する事実 | link:#entity-storage_and_storage_pool_capacity_fact["ストレージとストレージプールの容量に関する事実"] | 1つのJOIN：saspFactTk=link:#entity-storage_and_storage_pool_capacity_fact["ストレージとストレージプールの容量に関する事実"].tk 
+|===
+
+
+[[storageandstoragepoolcapacityfact]]
+=== ストレージとストレージプールの容量に関する事実
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット：storage_and_storage_pool_capacity_fact
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk *[PK]* | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 事実のTK。 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["日付ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付ディメンションのTK。 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["ストレージプールのディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するストレージプールのTK。 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["ストレージ寸法"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するストレージのTK。 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["階層ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ティアのTK。 
+
+
+| バックエンド | 文字列 | はい | StoragePoolがバックエンドの場合はTrue 
+
+
+| isVirtual | 文字列 | はい | StoragePoolが仮想の場合はTrue 
+
+
+| 容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ストレージアレイによって報告された、ストレージプールに割り当てられた容量（MB単位）。 
+
+
+| 生容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量 * rawToUsableRatio 
+
+
+| 使用容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ストレージアレイによって報告された、ストレージプールで使用されている容量（MB単位）。 
+
+
+| 使用済み生容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | usedCapcacity * rawToUsableRatio 
+
+
+| スナップショット使用容量（MB） | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ストレージプールレベルのスナップショットに使用される容量（MB） 
+
+
+| スナップショット使用済み生容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | スナップショット使用容量MB * rawToUsableRatio 
+
+
+| softLimitCapacityMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ストレージプールのシンプロビジョニングにおける容量制限（MB単位）。 
+
+
+| 未構成のRawCapacityMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 構成されていないストレージの生容量（故障したディスク、予備ディスク、未使用ディスクを含む）をMB単位で示します。 
+
+
+| 予備未加工容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 予備ディスクの未フォーマット容量（MB単位）。 
+
+
+| 失敗した生容量（MB） | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 故障したディスクの生容量（MB）。 
+
+
+| volumeCapacityMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージプール上の全ボリュームのプロビジョニング済み容量（MB単位）。 
+
+
+| 未使用ボリューム容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージプール上の未使用ボリュームのプロビジョニング済み容量（MB単位）。 
+
+
+| volumeConsumedCapacityMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージプール上のボリュームが消費する物理容量（MB単位）。 
+
+
+| マッピング済みボリューム容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージプール上のマッピングされたボリュームのプロビジョニング済み容量（MB単位）。 
+
+
+| maskedVolumeCapacityMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージプール上のマスクされたボリュームのプロビジョニング済み容量（MB単位）。 
+
+
+| 内部ボリューム割り当て容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージプール上の内部ボリュームに割り当てられた総容量（MB単位）。 
+
+
+| 内部ボリューム使用容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージプール内の内部ボリュームの総使用容量（MB単位）。 
+
+
+| internalVolumeConsumedCapacityMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージプール内の内部ボリュームが消費する容量（MB単位）。 
+
+
+| dedupeRatio | ダブル | はい | このストレージプールの重複排除率 
+
+
+| 重複排除節約GB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージプールにおける重複排除容量（GB単位）。 
+
+
+| compressionRatio | ダブル | はい | このストレージプールの圧縮率 
+
+
+| 圧縮節約GB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージプールの圧縮量（GB単位）。 
+
+
+| compressionSavingsPercent | ダブル | はい | このストレージプールの圧縮率（％）。 
+
+
+| compactionRatio | ダブル | はい | このストレージプールのコンパクション比率 
+
+
+| 圧縮による節約容量（GB） | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージプールの圧縮量（GB単位）。 
+
+
+| objectStoreUsedSpaceGB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | オブジェクトストアがこのストレージプールで使用した容量（GB単位） 
+
+
+| provisionedIops | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージにプロビジョニングされたIOPS。 
+
+
+| provisionedThroughput | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージに割り当てられたスループット（MiB/s）。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| ストレージ寸法 | link:#entity-storage_dimension["ストレージ寸法"] | 1つのJOIN：storageTk=link:#entity-storage_dimension["ストレージ寸法"].tk 
+
+
+| 階層ディメンション | link:#entity-tier_dimension["階層ディメンション"] | 1つ JOIN：tierTk=link:#entity-tier_dimension["階層ディメンション"].tk 
+
+
+| ストレージプールのディメンション | link:#entity-storage_pool_dimension["ストレージプールのディメンション"] | 1つのJOIN：storagePoolTk=link:#entity-storage_pool_dimension["ストレージプールのディメンション"].tk 
+
+
+| 日付ディメンション | link:#entity-date_dimension["日付ディメンション"] | 1つ JOIN：dateTk=link:#entity-date_dimension["日付ディメンション"].tk 
+
+
+| sp_time_to_fill | link:#entity-sp_time_to_fill["sp_time_to_fill"] | 多くの 
+
+
+| ボリューム履歴容量の詳細 | link:#entity-volume_history_capacity_fact["ボリューム履歴容量の詳細"] | 多くの 
+|===
+
+
+[[storageandstoragepoolcapacityfuturefact]]
+=== ストレージとストレージプールの容量の将来のファクト
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット：storage_and_storage_pool_capacity_future_fact
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk *[PK]* | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 事実のTK。 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["日付ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付ディメンションのTK。 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["ストレージプールのディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するストレージプールのTK。 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["ストレージ寸法"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するストレージのTK。 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["階層ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ティアのTK。 
+
+
+| バックエンド | 文字列 | はい | StoragePoolがバックエンドの場合はTrue 
+
+
+| isVirtual | 文字列 | はい | StoragePoolが仮想の場合はTrue 
+
+
+| 容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ストレージアレイによって報告された、ストレージプールに割り当てられた容量（MB単位）。 
+
+
+| 生容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量 * rawToUsableRatio 
+
+
+| 使用容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ストレージアレイによって報告された、ストレージプールで使用されている容量（MB単位）。 
+
+
+| 使用済み生容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | usedCapacity * rawToUsableRatio 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| ストレージ寸法 | link:#entity-storage_dimension["ストレージ寸法"] | 1つのJOIN：storageTk=link:#entity-storage_dimension["ストレージ寸法"].tk 
+
+
+| 階層ディメンション | link:#entity-tier_dimension["階層ディメンション"] | 1つ JOIN：tierTk=link:#entity-tier_dimension["階層ディメンション"].tk 
+
+
+| ストレージプールのディメンション | link:#entity-storage_pool_dimension["ストレージプールのディメンション"] | 1つのJOIN：storagePoolTk=link:#entity-storage_pool_dimension["ストレージプールのディメンション"].tk 
+
+
+| 日付ディメンション | link:#entity-date_dimension["日付ディメンション"] | 1つ JOIN：dateTk=link:#entity-date_dimension["日付ディメンション"].tk 
+|===
+
+
+[[storagedimension]]
+=== ストレージ寸法
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：storage_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージ配列行のTK。 
+
+
+| 名前 | 文字列 | はい | ストレージ アレイの名前 
+
+
+| 識別子 | 文字列 | はい | デバイスの識別子。 
+
+
+| ip | 文字列 | はい | ストレージアレイのIPアドレス。 
+
+
+| model | 文字列 | はい | ストレージアレイのモデル。 
+
+
+| メーカー | 文字列 | はい | ストレージアレイの製造元。 
+
+
+| serialNumber | 文字列 | はい | ストレージアレイのシリアル番号。 
+
+
+| microcodeVersion | 文字列 | はい | ストレージアレイ上で動作しているファームウェアのバージョン。 
+
+
+| family（ファミリー） | 文字列 | はい | ストレージアレイのファミリー名（例：Clariion、Symmetrix など）。 
+
+
+| URL | 文字列 | はい | Insight Server 内のこのストレージへの URL。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.storage 内のストレージアレイの GUID。 
+
+
+| 最新 | 文字列 | はい | この行がこのストレージにおける最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージアレイ行が作成された日付のTK。 
+
+
+| dataCenter | 文字列 | はい | dataCenter 注釈値が dwh_dimensions.storage_dimension に割り当てられました 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| 内部ボリューム容量のファクト | link:#entity-internal_volume_capacity_fact["内部ボリューム容量のファクト"] | 多くの 
+
+
+| チャージバック_fact | link:#entity-chargeback_fact["チャージバック_fact"] | 多くの 
+
+
+| ディスクグループ容量ファクト | link:#entity-disk_group_capacity_fact["ディスクグループ容量ファクト"] | 多くの 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | 多くの 
+
+
+| disk group容量の将来の事実 | link:#entity-disk_group_capacity_future_fact["disk group容量の将来の事実"] | 多くの 
+
+
+| qtree容量ファクト | link:#entity-qtree_capacity_fact["qtree容量ファクト"] | 多くの 
+
+
+| ストレージとストレージプールの容量に関する事実 | link:#entity-storage_and_storage_pool_capacity_fact["ストレージとストレージプールの容量に関する事実"] | 多くの 
+
+
+| ボリューム履歴容量の詳細 | link:#entity-volume_history_capacity_fact["ボリューム履歴容量の詳細"] | 多くの 
+
+
+| ストレージとストレージプールの容量の将来のファクト | link:#entity-storage_and_storage_pool_capacity_future_fact["ストレージとストレージプールの容量の将来のファクト"] | 多くの 
+
+
+| ストレージノード容量ファクト | link:#entity-storage_node_capacity_fact["ストレージノード容量ファクト"] | 多くの 
+|===
+
+
+[[storagenodecapacityfact]]
+=== ストレージノード容量ファクト
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット：storage_node_capacity_fact
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk *[PK]* | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 事実のTK。 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["日付ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付は未定です。 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["ストレージ寸法"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ディスク グループが存在するストレージの TK。 
+
+
+| storageNodeTk *[FK]* →link:#entity-storage_node_dimension["ストレージノードの寸法"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ストレージ ノードのTK。 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["階層ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ティアのTK。 
+
+
+| totalNodeCapacityUtilizationMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ストレージ ノードの合計容量（MB） 
+
+
+| usableNodeCapacityUtilizationMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 利用可能なストレージ ノード容量（MB） 
+
+
+| 使用ノード容量利用率MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 使用済みストレージ ノード容量（MB） 
+
+
+| 使用済みMetaDataノード容量利用率MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 使用済みストレージ ノードメタデータ容量（MB） 
+
+
+| 許可されているMetaDataノード容量使用量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ストレージ ノードのメタデータ許容容量（MB） 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| ストレージノードの寸法 | link:#entity-storage_node_dimension["ストレージノードの寸法"] | 1つ JOIN：storageNodeTk=link:#entity-storage_node_dimension["ストレージノードの寸法"].tk 
+
+
+| ストレージ寸法 | link:#entity-storage_dimension["ストレージ寸法"] | 1つのJOIN：storageTk=link:#entity-storage_dimension["ストレージ寸法"].tk 
+
+
+| 階層ディメンション | link:#entity-tier_dimension["階層ディメンション"] | 1つ JOIN：tierTk=link:#entity-tier_dimension["階層ディメンション"].tk 
+
+
+| 日付ディメンション | link:#entity-date_dimension["日付ディメンション"] | 1つ JOIN：dateTk=link:#entity-date_dimension["日付ディメンション"].tk 
+|===
+
+
+[[storagenodedimension]]
+=== ストレージノードの寸法
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：storage_node_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージ ノード行のTK。 
+
+
+| 名前 | 文字列 | はい | ストレージ ノードの名前。 
+
+
+| 識別子 | 文字列 | はい | ストレージ ノードの識別子。 
+
+
+| version | 文字列 | はい | ストレージ ノードのバージョン。 
+
+
+| model | 文字列 | はい | ストレージ ノードのモデル。 
+
+
+| serialNumber | 文字列 | はい | SerialNumberはストレージ ノードのシリアル番号です。 
+
+
+| siteName | 文字列 | はい | ストレージ ノードのサイト名。 
+
+
+| URL | 文字列 | はい | Insight Server 内のこのストレージ ノードへの URL。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.storage_node 内のストレージ ノードの GUID 
+
+
+| 最新 | 文字列 | はい | この行がこのストレージ ノードの最新の行かどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージ ノード行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| ストレージノード容量ファクト | link:#entity-storage_node_capacity_fact["ストレージノード容量ファクト"] | 多くの 
+|===
+
+
+[[storagepooldimension]]
+=== ストレージプールのディメンション
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：storage_pool_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージプール行のTK。 
+
+
+| 識別子 | 文字列 | はい | デバイスの識別子。 
+
+
+| 名前 | 文字列 | はい | ストレージプールの名前。 
+
+
+| storageName | 文字列 | はい | このストレージプールが存在するストレージの名前。 
+
+
+| storageIP | 文字列 | はい | このストレージプールが存在するストレージのIPアドレス。 
+
+
+| type | 文字列 | はい | ストレージプールタイプ（例：RAID、AGGREGATEなど）。 
+
+
+| 冗長性 | 文字列 | はい | ストレージプールの冗長性。 
+
+
+| thinProvisioningSupported | 文字列 | はい | ストレージプールがシンプロビジョニングをサポートしているかどうかを示します。 
+
+
+| isVirtual | 文字列 | はい | 「仮想」とは、アレイ仮想化におけるフロントエンドストレージプールであることを示します。 
+
+
+| usesFlashPools | 文字列 | はい | このストレージプールがフラッシュプールを使用しているかどうかを示します。 
+
+
+| URL | 文字列 | はい | Insight Server 内のこのストレージプールへの URL。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.storage_pool 内のストレージプールの GUID 
+
+
+| 最新 | 文字列 | はい | この行がこのストレージプールにおける最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このストレージプール行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| 内部ボリューム容量のファクト | link:#entity-internal_volume_capacity_fact["内部ボリューム容量のファクト"] | 多くの 
+
+
+| チャージバック_fact | link:#entity-chargeback_fact["チャージバック_fact"] | 多くの 
+
+
+| ディスクグループ容量ファクト | link:#entity-disk_group_capacity_fact["ディスクグループ容量ファクト"] | 多くの 
+
+
+| disk group容量の将来の事実 | link:#entity-disk_group_capacity_future_fact["disk group容量の将来の事実"] | 多くの 
+
+
+| qtree容量ファクト | link:#entity-qtree_capacity_fact["qtree容量ファクト"] | 多くの 
+
+
+| ストレージとストレージプールの容量に関する事実 | link:#entity-storage_and_storage_pool_capacity_fact["ストレージとストレージプールの容量に関する事実"] | 多くの 
+
+
+| ボリューム履歴容量の詳細 | link:#entity-volume_history_capacity_fact["ボリューム履歴容量の詳細"] | 多くの 
+
+
+| ストレージとストレージプールの容量の将来のファクト | link:#entity-storage_and_storage_pool_capacity_future_fact["ストレージとストレージプールの容量の将来のファクト"] | 多くの 
+|===
+
+
+[[tierdimension]]
+=== 階層ディメンション
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット：tier_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この階層のTK。 
+
+
+| 名前 | 文字列 | はい | 階層を識別するための名称。 
+
+
+| シーケンス | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.annotation_valueで定義されている階層の連番。 
+
+
+| コスト | ダブル | はい | このティアに関連する費用。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.annotation_value 内の階層の GUID。 
+
+
+| 最新 | 文字列 | はい | この行がこの階層における最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この階層行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| 内部ボリューム容量のファクト | link:#entity-internal_volume_capacity_fact["内部ボリューム容量のファクト"] | 多くの 
+
+
+| チャージバック_fact | link:#entity-chargeback_fact["チャージバック_fact"] | 多くの 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | 多くの 
+
+
+| qtree容量ファクト | link:#entity-qtree_capacity_fact["qtree容量ファクト"] | 多くの 
+
+
+| ストレージとストレージプールの容量に関する事実 | link:#entity-storage_and_storage_pool_capacity_fact["ストレージとストレージプールの容量に関する事実"] | 多くの 
+
+
+| ボリューム履歴容量の詳細 | link:#entity-volume_history_capacity_fact["ボリューム履歴容量の詳細"] | 多くの 
+
+
+| ストレージとストレージプールの容量の将来のファクト | link:#entity-storage_and_storage_pool_capacity_future_fact["ストレージとストレージプールの容量の将来のファクト"] | 多くの 
+
+
+| ストレージノード容量ファクト | link:#entity-storage_node_capacity_fact["ストレージノード容量ファクト"] | 多くの 
+|===
+
+
+[[vmcapacityfact]]
+=== vm_capacity_fact
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：vm_capacity_fact
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk *[PK]* | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 事実のTK。 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["日付ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付は未定です。 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["ホスト ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ホストグループを表すホストのTK。 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["ストレージ寸法"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するストレージのTK。 
+
+
+| virtualStorageTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量がバックエンドアレイにある場合の、フロントエンドアレイのTK。それ以外の場合、値はN/Aです。 
+
+
+| internalVolumeTk *[FK]* →link:#entity-internal_volume_dimension["内部ボリューム寸法"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在する内部ボリュームのTK。 
+
+
+| qtreeTk *[FK]* →link:#entity-qtree_dimension["qtree_dimension"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するqtreeのTK。 
+
+
+| hostGroupTk *[FK]* →link:#entity-host_group_dimension["ホスト グループのディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ホストグループのTK。 
+
+
+| applicationTk *[FK]* →link:#entity-application_dimension["アプリケーションのディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | アプリケーショングループを表すアプリケーションのTK。 
+
+
+| applicationGroupTk *[FK]* →link:#entity-application_group_dimension["アプリケーショングループディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | アプリケーショングループのTK。 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["階層ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ティアのTK。 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["サービスレベルの次元"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | サービスレベルのTK。 
+
+
+| vmTk *[FK]* →link:#entity-vm_dimension["vm_dimension"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 仮想マシンのTK。 
+
+
+| dataStoreTk *[FK]* →link:#entity-datastore_dimension["データストアのディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | データストアのTK。 
+
+
+| dataStoreName | 文字列 | はい | 容量を格納するデータストアの名前。 
+
+
+| dataStoreId | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.host 内のデータストアの GUID - データストアがインベントリから削除されると null に設定されます。 
+
+
+| virtualCenterIp | 文字列 | はい | 仮想センターIP。 
+
+
+| businessUnit | 文字列 | はい | 容量に関連付けられているビジネスユニット。 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["ビジネスエンティティディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 事業体のTK。 
+
+
+| k8sNodeTk *[FK]* →link:#entity-k8s_node_dimension["k8sノードディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8sノードのTK。 
+
+
+| storageAccessType | 文字列 | はい | ストレージへのアクセス方法の種類。指定可能な値は、NAS、SAN、またはUNKNOWNです。 
+
+
+| capacityType *[FK]* →link:#entity-capacity_type["容量タイプ"].type | 文字列 | はい | 容量の使用状況を識別します。データストアの容量は、特定の時点では必ず1つの用途にのみ使用されます。 
+
+
+| actualMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 使用されているデータストア容量（またはRDM仮想ディスク容量）。この測定では、シンプロビジョニングと重複排除を使用してバックエンドストレージで行われた節約効果は考慮されません。 
+
+
+| プロビジョンドMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | VMに割り当てられた容量。この測定には、VMDKファイルやその他の仮想マシン関連ファイルが含まれます。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| 内部ボリューム寸法 | link:#entity-internal_volume_dimension["内部ボリューム寸法"] | 1つ JOIN:internalVolumeTk=link:#entity-internal_volume_dimension["内部ボリューム寸法"].tk 
+
+
+| ストレージ寸法 | link:#entity-storage_dimension["ストレージ寸法"] | 1つのJOIN：storageTk=link:#entity-storage_dimension["ストレージ寸法"].tk 
+
+
+| ビジネスエンティティディメンション | link:#entity-business_entity_dimension["ビジネスエンティティディメンション"] | 1つ JOIN：businessEntityTk=link:#entity-business_entity_dimension["ビジネスエンティティディメンション"].tk 
+
+
+| k8sノードディメンション | link:#entity-k8s_node_dimension["k8sノードディメンション"] | 1つのJOIN：k8sNodeTk=link:#entity-k8s_node_dimension["k8sノードディメンション"].tk 
+
+
+| ホスト グループのディメンション | link:#entity-host_group_dimension["ホスト グループのディメンション"] | 1つ JOIN：hostGroupTk=link:#entity-host_group_dimension["ホスト グループのディメンション"].tk 
+
+
+| vm_dimension | link:#entity-vm_dimension["vm_dimension"] | 1つ JOIN：vmTk=link:#entity-vm_dimension["vm_dimension"].tk 
+
+
+| アプリケーショングループディメンション | link:#entity-application_group_dimension["アプリケーショングループディメンション"] | 1つ JOIN：applicationGroupTk=link:#entity-application_group_dimension["アプリケーショングループディメンション"].tk 
+
+
+| サービスレベルの次元 | link:#entity-service_level_dimension["サービスレベルの次元"] | 1つ JOIN：serviceLevelTk=link:#entity-service_level_dimension["サービスレベルの次元"].tk 
+
+
+| 容量タイプ | link:#entity-capacity_type["容量タイプ"] | 1つのJOIN：capacityType=link:#entity-capacity_type["容量タイプ"].type 
+
+
+| 階層ディメンション | link:#entity-tier_dimension["階層ディメンション"] | 1つ JOIN：tierTk=link:#entity-tier_dimension["階層ディメンション"].tk 
+
+
+| アプリケーションのディメンション | link:#entity-application_dimension["アプリケーションのディメンション"] | 1つ JOIN：applicationTk=link:#entity-application_dimension["アプリケーションのディメンション"].tk 
+
+
+| データストアのディメンション | link:#entity-datastore_dimension["データストアのディメンション"] | 1つの JOIN：dataStoreTk=link:#entity-datastore_dimension["データストアのディメンション"].tk 
+
+
+| qtree_dimension | link:#entity-qtree_dimension["qtree_dimension"] | 1つの JOIN：qtreeTk=link:#entity-qtree_dimension["qtree_dimension"].tk 
+
+
+| ホスト ディメンション | link:#entity-host_dimension["ホスト ディメンション"] | 1つ JOIN：hostTk=link:#entity-host_dimension["ホスト ディメンション"].tk 
+
+
+| 日付ディメンション | link:#entity-date_dimension["日付ディメンション"] | 1つ JOIN：dateTk=link:#entity-date_dimension["日付ディメンション"].tk 
+|===
+
+
+[[vmdimension]]
+=== vm_dimension
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：vm_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この仮想マシン行のTK。 
+
+
+| 名前 | 文字列 | はい | 仮想マシンの名前。 
+
+
+| naturalKey | 文字列 | はい | 仮想マシンの自然識別子。 
+
+
+| オペレーティング システム | 文字列 | はい | ゲストオペレーティングシステム。 
+
+
+| virtualCenterIp | 文字列 | はい | 仮想マシンの仮想センターのIPアドレス。 
+
+
+| ips | 文字列 | はい | 仮想マシンのIPアドレスをカンマで区切ったリスト。 
+
+
+| URL | 文字列 | はい | Insight Server 上のこの仮想マシンへの URL。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.hv_virtual_machine 内の仮想マシンの GUID 
+
+
+| 最新 | 文字列 | はい | この行がこの仮想マシンの最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | この仮想マシン行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | 多くの 
+|===
+
+
+[[volumecapacityfact]]
+=== ボリューム容量ファクト
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット：volume_capacity_fact
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| volumeTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するボリュームのTK。 
+
+
+| chargebackFactTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ボリューム容量がカウントされるチャージバック ファクト行のTK。 
+
+
+| storageAndSpFactTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ストレージおよびストレージプール容量ファクト行のTK。この行では、ボリューム容量がカウントされます。 
+
+
+| hostTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ホストグループを表すホストのTK。 
+
+
+| storageTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するストレージのTK。 
+
+
+| hostGroupTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ホストグループのTK。 
+
+
+| tierTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ティアのTK。 
+
+
+| serviceLevelTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | サービスレベルのTK。 
+
+
+| storagePoolTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するストレージプールのTK。 
+
+
+| internalVolumeTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在する内部ボリュームのTK。 
+
+
+| qtreeTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するqtreeのTK。 
+
+
+| k8sNamespaceTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8s名前空間のTK。 
+
+
+| k8sNamespaceGroupTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8sネームスペースグループのTK。 
+
+
+| isVirtual | 文字列 | はい | この容量が仮想ストレージプール上にあるかどうかを指定します。 
+
+
+| isBackend | 文字列 | はい | この容量がバックエンドストレージプール上にあるかどうかを指定します。 
+
+
+| protectionType | 文字列 | はい | この容量の保護タイプを指定します。レプリカでない場合は N/A です。 
+
+
+| isAccessed | 文字列 | はい | このボリュームがホストによってアクセスされるかどうかを指定します。 
+
+
+| isOrphaned | 文字列 | はい | このボリュームがマスクされているが、アクティブなパスが存在しないかどうかを指定します。 
+
+
+| isProtection | 文字列 | はい | このボリュームがレプリケーションに使用されるかどうかを指定します。 
+
+
+| isUnused | 文字列 | はい | このボリュームがホストからアクセスされないかどうかを指定します。 
+
+
+| プロビジョンド容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | プロビジョニングされたボリューム容量（MB単位）。 
+
+
+| アクセス済み容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ホストがアクセスするボリュームのプロビジョニング済み容量（MB単位）。 
+
+
+| 孤立した容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | マスクされているがアクティブなパスを持たないボリュームのプロビジョニング済み容量（MB単位）。 
+
+
+| protectionCapacityMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | レプリケーションに使用されるボリュームのプロビジョニング済み容量（MB単位）。 
+
+
+| 未使用容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ホストからアクセスされていないボリュームのプロビジョニング済み容量（MB単位）。 
+
+
+| daysSinceLastAccessed | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ボリュームが読み取りまたは書き込みのためにアクセスされてから経過した日数。 
+|===
+
+
+[[volumedimension]]
+=== ボリューム寸法
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（複数可）：volume_dimension
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このボリューム行のTK。 
+
+
+| storageIdentifier | 文字列 | はい | ボリュームストレージの識別子。 
+
+
+| 名前 | 文字列 | はい | ボリュームの名前。 
+
+
+| ラベル | 文字列 | はい | ボリュームのラベル。 
+
+
+| thinProvisioned | 文字列 | はい | ボリュームはシンプロビジョニングされていますか？ 
+
+
+| type | 文字列 | はい | ボリュームの種類。 
+
+
+| isVirtual | 文字列 | はい | ボリュームは仮想ボリュームですか？ 
+
+
+| meta | 文字列 | はい | ボリュームはメタボリュームですか？ 
+
+
+| Snapshot | 文字列 | はい | このボリュームがスナップショットボリュームであるかどうかを示します。 
+
+
+| technologyType | 文字列 | はい | テクノロジーの種類（FC/iSCSI/不明）を指定します。 
+
+
+| uuid | 文字列 | はい | ボリュームのUUID。 
+
+
+| isMainframe | 文字列 | はい | メインフレームのボリュームですか？ 
+
+
+| URL | 文字列 | はい | Insight Server 内のこのボリュームへの URL。 
+
+
+| id | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | dwh_inventory.volume内のボリュームのGUID 
+
+
+| 最新 | 文字列 | はい | この行がこのボリュームの最新の行であるかどうかを示します。 
+
+
+| dateTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このボリューム行が作成された日付のTK。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| ボリューム履歴容量の詳細 | link:#entity-volume_history_capacity_fact["ボリューム履歴容量の詳細"] | 多くの 
+|===
+
+
+[[volumefactcurrent]]
+=== 現在のボリューム情報
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：volume_fact_current
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| chargebackFactTk *[FK]* →link:#entity-chargeback_fact["チャージバック_fact"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ボリューム容量がカウントされるチャージバック ファクト行のTK。 
+
+
+| volumeId *[PK]* | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | インベントリに表示されるボリュームのGUID 
+
+
+| storageId | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | このボリュームが格納されているストレージのGUID（インベントリに表示されるもの） 
+
+
+| volumeName | 文字列 | はい | ボリューム名 
+
+
+| volumeType | 文字列 | はい | ベンダー固有のボリュームタイプ（例：SFS、BCV）。 
+
+
+| thinProvisioned | 文字列 | はい | このボリュームがシンプロビジョニングされているかどうかを示します。 
+
+
+| isVirtual | 文字列 | はい | このボリュームが仮想ボリュームであるかどうかを示します。 
+
+
+| Snapshot | 文字列 | はい | このボリュームがスナップショットボリュームであるかどうかを示します。 
+
+
+| technologyType | 文字列 | はい | テクノロジーの種類（FC/iSCSI/不明）を指定します。 
+
+
+| 物理使用可能MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ストレージから消費され、ファクト行にカウントされるボリュームの使用可能容量（MB単位）。 
+
+
+| physicalRawMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ストレージから消費され、ファクト行にカウントされるボリューム生容量の量（MB単位）。 
+
+
+| プロビジョンド使用可能MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ファクト行にカウントされるホスト/ユーザーにプロビジョニングされた、使用可能なボリューム容量（MB 単位）。 
+
+
+| provisionedRawMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ファクト行にカウントされるホスト/ユーザーにプロビジョニングされたボリュームの生容量（MB単位）。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| チャージバック_fact | link:#entity-chargeback_fact["チャージバック_fact"] | 1つのJOIN：chargebackFactTk=link:#entity-chargeback_fact["チャージバック_fact"].tk 
+|===
+
+
+[[volumehistorycapacityfact]]
+=== ボリューム履歴容量の詳細
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：volume_history_capacity_fact
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| tk *[PK]* | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 事実のTK。 
+
+
+| dateTk *[PK]* | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 日付は未定です。 
+
+
+| volumeTk *[FK]* →link:#entity-volume_dimension["ボリューム寸法"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するボリュームのTK。 
+
+
+| chargebackFactTk *[FK]* →link:#entity-chargeback_fact["チャージバック_fact"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ボリューム容量がカウントされるチャージバック ファクト行のTK。 
+
+
+| storageAndSpFactTk *[FK]* →link:#entity-storage_and_storage_pool_capacity_fact["ストレージとストレージプールの容量に関する事実"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ストレージおよびストレージプール容量ファクト行のTK。この行では、ボリューム容量がカウントされます。 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["ホスト ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ホストグループを表すホストのTK。 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["ストレージ寸法"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するストレージのTK。 
+
+
+| hostGroupTk *[FK]* →link:#entity-host_group_dimension["ホスト グループのディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ホストグループのTK。 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["階層ディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ティアのTK。 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["サービスレベルの次元"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | サービスレベルのTK。 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["ストレージプールのディメンション"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するストレージプールのTK。 
+
+
+| internalVolumeTk *[FK]* →link:#entity-internal_volume_dimension["内部ボリューム寸法"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在する内部ボリュームのTK。 
+
+
+| qtreeTk *[FK]* →link:#entity-qtree_dimension["qtree_dimension"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | 容量が存在するqtreeのTK。 
+
+
+| k8sNamespaceTk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8s名前空間のTK。 
+
+
+| k8sNamespaceGroupTk *[FK]* →link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | k8sネームスペースグループのTK。 
+
+
+| isVirtual | 文字列 | はい | この容量が仮想ストレージプール上にあるかどうかを指定します。 
+
+
+| isBackend | 文字列 | はい | この容量がバックエンドストレージプール上にあるかどうかを指定します。 
+
+
+| protectionType | 文字列 | はい | この容量の保護タイプを指定します。レプリカでない場合は N/A です。 
+
+
+| isAccessed | 文字列 | はい | このボリュームがホストによってアクセスされるかどうかを指定します。 
+
+
+| isOrphaned | 文字列 | はい | このボリュームがマスクされているが、アクティブなパスが存在しないかどうかを指定します。 
+
+
+| isProtection | 文字列 | はい | このボリュームがレプリケーションに使用されるかどうかを指定します。 
+
+
+| isUnused | 文字列 | はい | このボリュームがホストからアクセスされないかどうかを指定します。 
+
+
+| isMasked | 文字列 | はい | このボリュームがマスクされているかどうかを指定します。 
+
+
+| isMapped | 文字列 | はい | このボリュームがマッピングされているかどうかを指定します。 
+
+
+| プロビジョンド容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | プロビジョニングされたボリューム容量（MB単位）。 
+
+
+| アクセス済み容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ホストがアクセスするボリュームのプロビジョニング済み容量（MB単位）。 
+
+
+| 孤立した容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | マスクされているがアクティブなパスを持たないボリュームのプロビジョニング済み容量（MB単位）。 
+
+
+| protectionCapacityMB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | レプリケーションに使用されるボリュームのプロビジョニング済み容量（MB単位）。 
+
+
+| 未使用容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ホストからアクセスされていないボリュームのプロビジョニング済み容量（MB単位）。 
+
+
+| 消費容量MB | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ボリュームの消費容量（MB単位）。 
+
+
+| daysSinceLastAccessed | Int32を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ボリュームが読み取りまたは書き込みのためにアクセスされてから経過した日数。 
+|===
+
+
+==== ナビゲーションプロパティ（結合）
+
+[cols="1,1,1"]
+|===
+| ナビプロパティ | 関連エンティティ | カーディナリティ / 結合 
+
+
+| チャージバック_fact | link:#entity-chargeback_fact["チャージバック_fact"] | 1つのJOIN：chargebackFactTk=link:#entity-chargeback_fact["チャージバック_fact"].tk 
+
+
+| 内部ボリューム寸法 | link:#entity-internal_volume_dimension["内部ボリューム寸法"] | 1つ JOIN:internalVolumeTk=link:#entity-internal_volume_dimension["内部ボリューム寸法"].tk 
+
+
+| ストレージ寸法 | link:#entity-storage_dimension["ストレージ寸法"] | 1つのJOIN：storageTk=link:#entity-storage_dimension["ストレージ寸法"].tk 
+
+
+| ストレージとストレージプールの容量に関する事実 | link:#entity-storage_and_storage_pool_capacity_fact["ストレージとストレージプールの容量に関する事実"] | 1つのJOIN：storageAndSpFactTk=link:#entity-storage_and_storage_pool_capacity_fact["ストレージとストレージプールの容量に関する事実"].tk 
+
+
+| ホスト グループのディメンション | link:#entity-host_group_dimension["ホスト グループのディメンション"] | 1つ JOIN：hostGroupTk=link:#entity-host_group_dimension["ホスト グループのディメンション"].tk 
+
+
+| k8s_namespace_group_dimension | link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | 1つのJOIN:k8sNamespaceGroupTk=link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk 
+
+
+| サービスレベルの次元 | link:#entity-service_level_dimension["サービスレベルの次元"] | 1つ JOIN：serviceLevelTk=link:#entity-service_level_dimension["サービスレベルの次元"].tk 
+
+
+| 階層ディメンション | link:#entity-tier_dimension["階層ディメンション"] | 1つ JOIN：tierTk=link:#entity-tier_dimension["階層ディメンション"].tk 
+
+
+| ストレージプールのディメンション | link:#entity-storage_pool_dimension["ストレージプールのディメンション"] | 1つのJOIN：storagePoolTk=link:#entity-storage_pool_dimension["ストレージプールのディメンション"].tk 
+
+
+| qtree_dimension | link:#entity-qtree_dimension["qtree_dimension"] | 1つの JOIN：qtreeTk=link:#entity-qtree_dimension["qtree_dimension"].tk 
+
+
+| ホスト ディメンション | link:#entity-host_dimension["ホスト ディメンション"] | 1つ JOIN：hostTk=link:#entity-host_dimension["ホスト ディメンション"].tk 
+
+
+| 日付ディメンション | link:#entity-date_dimension["日付ディメンション"] | 1つ JOIN：dateTk=link:#entity-date_dimension["日付ディメンション"].tk 
+
+
+| ボリューム寸法 | link:#entity-volume_dimension["ボリューム寸法"] | 1つのJOIN：volumeTk=link:#entity-volume_dimension["ボリューム寸法"].tk 
+|===
+
+
+[[volumelastaccessedtime]]
+=== volume_last_accessed_time
+
+
+
+[[top]]
+=== ↑トップ
+
+エンティティセット（s）：volume_last_accessed_time
+
+[cols="1,1,1,1"]
+|===
+| フィールド | タイプ | Nullable | コメント 
+
+
+| volumeId | Int64を使用したチャンク アップロード署名要求がサポートされるようになりました。 | はい | ボリュームID 
+
+
+| volumeName *[PK]* | 文字列 | はい | ボリューム名 
+
+
+| storageIdentifier *[PK]* | 文字列 | はい | ストレージ識別子 
+
+
+| lastAccessed | DateTimeOffset | はい | 前回ボリュームにアクセスした時刻 
+|===
