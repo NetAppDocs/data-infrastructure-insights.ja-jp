@@ -7,6 +7,10 @@ summary: Windows および Linux での Acquisition Unit のインストール�
 = 取得ユニットの設定
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -89,7 +93,15 @@ image:NewLinuxAUInstall.png["Linux AU の説明"]
 
 NOTE: ワイルドカードとしてアスタリスク (*) を使用するのは一般的ですが、プロキシ/ファイアウォールの構成では異なる形式が使用される場合があります。プロキシのドキュメントを参照して、環境内でのワイルドカードの指定が正しいことを確認してください。
 
+AUがDIIへの接続を試みてもブロックされている場合は、プロキシに以下のエンドポイントを追加してみてください。
+
+....
+api.bluexp.netapp.com
+netapp-cloud-account.auth0.com
+....
 プロキシ設定の詳細については、 NetApplink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["ナレッジベース"] 。
+
+必要な特定のNetApp Console プロキシエンドポイントは、link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list["コンソールセットアップ管理者"]ドキュメントに記載されています。
 
 
 
