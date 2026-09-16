@@ -7,10 +7,14 @@ summary: Storage Workload Security の内部脅威検出、ハイブリッド環
 = ストレージワークロードセキュリティについて
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Data Infrastructure Insights Storage Workload Security (旧称Cloud Secure) は、内部脅威に関する実用的なインテリジェンスによってデータを保護します。ハイブリッド クラウド環境全体にわたるすべての企業データ アクセスの集中的な可視性と制御を提供し、セキュリティとコンプライアンスの目標を確実に達成します。
+Data Infrastructure Insights ストレージワークロードセキュリティ（旧称 Cloud Secure）は、高度な内部脅威検出と実用的なインテリジェンスにより、組織のデータを保護します。ハイブリッドクラウド環境全体にわたるすべての企業データアクセスを一元的に可視化および制御し、リアルタイム監視機能と自動応答機能を通じてセキュリティとコンプライアンスの目標を確実に達成します。
 
 
 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_dashboard_best_practices.html 
-summary: ダッシュボードを最大限に活用するためのベストプラクティス 
+summary: 適切な指標を見つける方法、アセットを効果的にフィルタリングする方法、ウィジェットを設定して強力で洞察力のあるダッシュボードを作成するためのベストプラクティスを学びます。 
 keywords: dashboard, hints, tips, best practice, widgets, metrics, 
 ---
 = ダッシュボードとウィジェットのベストプラクティス
@@ -14,7 +14,7 @@ keywords: dashboard, hints, tips, best practice, widgets, metrics,
 
 
 [role="lead"]
-ダッシュボードとウィジェットの強力な機能を最大限に活用するためのヒントとコツ。
+適切な指標を見つけ、資産を効果的にフィルタリングし、最大限の洞察を得るためにウィジェットを設定するための実績のある戦略を用いて、ダッシュボード作成をマスターしましょう。これらのベストプラクティスは、実用的なインフラストラクチャ情報を提供する、より効果的なダッシュボードを構築するのに役立ちます。
 
 
 

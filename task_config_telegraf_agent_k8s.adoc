@@ -420,7 +420,7 @@ Kubernetes モニタリング オペレーターの設定中に問題が発生�
 | PSP/PSA を使用しているのですが、Operator を展開しようとして問題が発生しました。 | 1.次のコマンドを使用してエージェントを編集します: kubectl -n <name-space> edit agent 2. 「security-policy-enabled」を「false」としてマークします。これにより、ポッド セキュリティ ポリシーとポッド セキュリティ アドミッションが無効になり、オペレーターがデプロイできるようになります。次のコマンドを使用して確認します: kubectl get psp (Pod Security Policy が削除されたことが表示されます) kubectl get all -n <namespace> | grep -i psp (何も見つからないことが表示されます) 
 
 
-| 「ImagePullBackoff」エラーが発生 | カスタムまたはプライベートなDockerリポジトリを使用しており、Kubernetes Monitoring Operatorがそれを正しく認識するようにまだ設定されていない場合、これらのエラーが発生する可能性があります。<<カスタムまたはプライベートDockerリポジトリの使用,詳細はこちら>>カスタム/プライベートリポジトリの設定について。 
+| 「ImagePullBackoff」エラーが発生 | カスタムまたはプライベートなDockerリポジトリを使用しており、Kubernetes Monitoring Operatorがそれを正しく認識するようにまだ設定されていない場合、これらのエラーが発生する可能性があります。<<using-a-custom-or-private-docker-repository,詳細はこちら>>カスタム/プライベートリポジトリの設定について。 
 
 
 | モニタリング オペレーターのデプロイメントで問題が発生していますが、現在のドキュメントでは解決できません。  a| 

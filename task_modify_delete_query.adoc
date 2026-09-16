@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_modify_delete_query.html 
-summary: クエリの変更または削除 
+summary: 条件や列を変更することで既存のクエリを修正でき、更新、名前変更、新規バージョン作成のための柔軟な保存オプションに加え、不要になったクエリを削除するオプションも用意されています。 
 keywords: query, queries, modify, edit, delete, remove 
 ---
 = クエリの変更または削除
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-クエリするアセットの検索条件を変更する場合は、クエリに関連付けられている条件を変更できます。
+検索条件の変更、列の追加または削除、柔軟な保存オプションの選択などにより、クエリを効果的に管理できます。既存のクエリを更新したり、新しいバージョンを作成したり、不要になったクエリを削除したりすることで、クエリライブラリを整理し、最新の状態に保つことができます。
 
 
 

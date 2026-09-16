@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_dashboard_features.html 
-summary: ダッシュボードの機能と概念。 
+summary: ウィジェットのカスタマイズ、クエリのフィルタリング、変数の設定、データ変換、書式設定オプションなど、高度なダッシュボード機能を習得し、強力で柔軟なビジュアライゼーションを作成します。 
 keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll up, grouping, aggregate, aggregation, filter, axis, group by, expressions, timeseries, exact match, theme, visibility, formatting, conditional, hide, collapse, expand 
 ---
 = ダッシュボードの機能
@@ -14,7 +14,7 @@ keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll 
 
 
 [role="lead"]
-ダッシュボードとウィジェットを使用すると、データの表示方法を柔軟に設定できます。ここでは、カスタム ダッシュボードを最大限に活用するのに役立つ概念をいくつか紹介します。
+高度な機能とカスタマイズオプションを活用して、ダッシュボードの可能性を最大限に引き出しましょう。ウィジェットクエリの設定方法、データ変換の適用方法、動的フィルタリングのための変数の使用方法、高度な書式設定の実装方法を学び、インフラストラクチャ監視のニーズに合わせた、非常に効果的な視覚化を作成しましょう。
 
 目次:[]
 

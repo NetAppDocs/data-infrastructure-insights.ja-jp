@@ -7,6 +7,10 @@ keywords: security, risk, protection
 = 情報と地域
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -99,10 +103,4 @@ Data Infrastructure Insights は、環境が作成されたリージョンに応
 [[more-information]]
 == 詳細情報
 
-NetApp のプライバシーとセキュリティの詳細については、次のリンクをご覧ください。
-
-* link:https://www.netapp.com/us/company/trust-center/index.aspx["信頼センター"]
-* link:https://www.netapp.com/us/company/trust-center/privacy/data-location-cross-border-transfers.aspx["国境を越えたデータ転送"]
-* link:https://www.netapp.com/us/company/trust-center/transparency/third-party-data-requests.aspx["サードパーティのデータ要求への対応"]
-* link:https://www.netapp.com/us/company/trust-center/privacy/privacy-principles-security-safeguards.aspx["NetAppプライバシー原則"]
-
+NetAppのプライバシーとセキュリティの詳細については、* NetApp link:https://www.netapp.com/responsibility/trust-center/["信頼センター"]を参照してください。

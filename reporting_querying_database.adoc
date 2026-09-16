@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reporting_querying_database.html 
-summary: Data Infrastructure Insights API を使用して、レポート DB を直接クエリします。 
+summary: APIを介してレポートデータベースに直接アクセスすることで、Cognosを介さずに、カスタム統合、自動レポート作成、高度なデータ分析ワークフローを実現できます。 
 keywords: reporting, cognos, data warehouse, dwh, API 
 ---
 = API経由でレポートデータベースにアクセスする
@@ -14,7 +14,7 @@ keywords: reporting, cognos, data warehouse, dwh, API
 
 
 [role="lead"]
-Data Infrastructure Insightsの強力な API を使用すると、ユーザーは Cognos Reporting 環境を経由せずに、 Data Infrastructure Insights Reporting データベースを直接クエリできます。
+Data Infrastructure Insights レポートデータベースに OData v4 準拠の API を介して直接アクセスし、Cognos インターフェースをバイパスすることで、より高い柔軟性を実現します。これにより、インフラストラクチャデータへのプログラムによるアクセスが必要なユーザー向けに、カスタム統合、自動レポートワークフロー、および高度なデータ分析が可能になります。
 
 
 NOTE: このドキュメントは、 Data Infrastructure Insights Premium Edition で利用できるData Infrastructure Insightsレポート機能について説明しています。
@@ -24,7 +24,7 @@ NOTE: このドキュメントは、 Data Infrastructure Insights Premium Editio
 [[odata]]
 == 小田田
 
-Data Infrastructure InsightsサイトレポートAPIは、link:https://www.odata.org/["OData v4"]レポート データベースのクエリを実行するための Open Data Protocol (Open Data Protocol) 標準。さらに詳しい情報や詳細については、link:https://www.odata.org/getting-started/basic-tutorial/["このチュートリアル"] OData で。
+Data Infrastructure Insights レポート API は、レポートデータベースへのクエリにlink:https://www.odata.org/["OData v4"]（Open Data Protocol）標準に従っています。詳細については、OData に関するlink:https://www.odata.org/getting-started/basic-tutorial/["このチュートリアル"]をご覧ください。
 
 すべてのリクエストは、URL _\https://< Data Infrastructure Insights URL>/rest/v1/dwh-management/odata_ で始まります。
 

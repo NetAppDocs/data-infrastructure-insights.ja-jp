@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_export_query_results.html 
-summary: クエリの結果を.csvファイルにエクスポートする方法 
+summary: クエリ結果、ダッシュボードテーブル、ランディングページ、その他のデータを .CSV ファイルにエクスポートし、非同期処理を使用して外部分析、レポート作成、および他のアプリケーションとの統合に活用できます。 
 keywords: query, queries, export, csv 
 ---
 = クエリ結果を .CSV ファイルにエクスポートする
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-クエリの結果を .CSV ファイルにエクスポートして、データを分析したり、別のアプリケーションにインポートしたりすることができます。
+クエリ、ダッシュボードテーブルウィジェット、ランディングページテーブルからデータを.CSVファイルにエクスポートし、外部分析、レポート作成、および他のアプリケーションとの統合に活用できます。非同期エクスポート処理により、大規模なデータセットがバックグラウンドで処理されている間も、作業を継続できます。
 
 .手順
 . Data Infrastructure Insightsにログインします。

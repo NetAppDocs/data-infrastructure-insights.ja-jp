@@ -789,9 +789,7 @@
   <block id="993b883ba6ed65dd9cd44e22a60f9896" category="cell">解決：</block>
   <block id="95524184da43a6b53391528cc33e5efd" category="cell">攻撃が検出されてから 24 時間以内に電子メールアラートが受信されます。  UI では、 Data Infrastructure Insights Workload Security が電子メールを受信する 24 時間前にアラートが表示されます。</block>
   <block id="e82a63ea247ecd6c098c0cfc9ffdb493" category="cell">ONTAP が_Ransomware Detected_ イベントをData Infrastructure Insights Workload Security (Workload Security) に送信すると、電子メールが送信されます。イベントには攻撃のリストとそのタイムスタンプが含まれます。  Workload Security UI には、攻撃を受けた最初のファイルのアラート タイムスタンプが表示されます。 ONTAP は、一定数のファイルがエンコードされると、_Ransomware Detected_ イベントをData Infrastructure Insightsに送信します。したがって、UI にアラートが表示される時間と電子メールが送信される時間には差が生じる可能性があります。</block>
-  <block id="48e541ea8b327711fa60ab7bd3808d2b" category="summary">ダッシュボードを最大限に活用するためのベストプラクティス</block>
   <block id="30d41b0aa6a845f67fdda29577dfc2e7" category="doc">ダッシュボードとウィジェットのベストプラクティス</block>
-  <block id="d012476aa8fdb87aabf9587f68381dc1" category="paragraph">ダッシュボードとウィジェットの強力な機能を最大限に活用するためのヒントとコツ。</block>
   <block id="d934b755bc4f16d28bfbe3aefa9c9927" category="section-title">適切な指標を見つける</block>
   <block id="da394a4a6384221c7a1e0ae64cf23d6c" category="paragraph">Data Infrastructure Insights は、データ コレクターごとに異なる場合がある名前を使用してカウンターとメトリックを取得します。</block>
   <block id="bafc7a119d4f6fbf1cb4ea645eaee406" category="paragraph">ダッシュボード ウィジェットに適したメトリックまたはカウンターを検索するときは、必要なメトリックが、考えていたものとは異なる名前で表示されている可能性があることに注意してください。 Data Infrastructure Insightsのドロップダウン リストは通常​​アルファベット順ですが、用語がリスト内の必要な場所に表示されない場合があります。たとえば、「生の容量」と「使用済み容量」などの用語は、ほとんどのリストでは一緒に表示されません。</block>
@@ -846,9 +844,7 @@
   <block id="e3e456f4f8ea96739847653aa1533e64" category="paragraph"><block ref="e3e456f4f8ea96739847653aa1533e64" category="inline-image-macro-rx" type="image"></block></block>
   <block id="40a0c0d52b54aeef4418a544a4783052" category="paragraph">グラフに X 軸の上位 N、Y 軸の上位 N、X 軸の下位 N、または Y 軸の下位 N を表示するように選択できます。最後の例では、合計 IOPS が最も高い上位 100 個の VM がグラフに表示されます。これを *Y 軸による上位* に変更すると、チャートには、合計レイテンシが最も高い上位 100 個の VM が再び表示されます。</block>
   <block id="0cee28fb2244e1f493099dda51f52313" category="paragraph">散布図では、ポイントをクリックすると、そのリソースの資産ページにドリルダウンできることに注意してください。</block>
-  <block id="38ed7bc985f8fe26e5b34cecd650286e" category="summary">ダッシュボードの機能と概念。</block>
   <block id="24d256825c40c4686e0e7bfb247bf40d" category="doc">ダッシュボードの機能</block>
-  <block id="36e7daeea464991f71bc9f7d59abc06f" category="paragraph">ダッシュボードとウィジェットを使用すると、データの表示方法を柔軟に設定できます。ここでは、カスタム ダッシュボードを最大限に活用するのに役立つ概念をいくつか紹介します。</block>
   <block id="923fc210f74163c8b2f7b1b3b93f66d9" category="paragraph">目次:[]</block>
   <block id="554c387b4cc54e5b15b7b9ce27d28df0" category="section-title">ウィジェットの命名</block>
   <block id="59f8ad2450d81d69bb7178de28870ace" category="paragraph">ウィジェットは、最初のウィジェット クエリで選択されたオブジェクト、メトリック、または属性に基づいて自動的に名前が付けられます。ウィジェットのグループ化も選択した場合、「グループ化」属性が自動命名（集計方法とメトリック）に含まれます。</block>
@@ -1248,9 +1244,7 @@
   <block id="31187a5ee059290053d0f82340837242" category="inline-image-macro">異常境界の設定（検出アルゴリズム、季節性、感度など）</block>
   <block id="2ffe23ad54a8e26e74e3f37be728dbeb" category="paragraph"><block ref="2ffe23ad54a8e26e74e3f37be728dbeb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ef5c52fd00b778503c506ad346c37295" category="paragraph">チャートが 1 本の線を表示するように設定されている場合にのみ、予想される境界が表示されることに注意してください。グループ化設定またはフィルターに複数の行が表示されている場合、またはウィジェットに複数のクエリを設定している場合、予想される境界を表示するオプションは無効になります。</block>
-  <block id="f76c5114e30bafab7ce8af90f1b06ba4" category="summary">Data Infrastructure Insightsのダッシュボードの概要。</block>
   <block id="36d33d9f788712f837a1b7b78bd38df7" category="doc">ダッシュボードの概要</block>
-  <block id="bec89705ab499dea383ff97a344267a6" category="paragraph">Data Infrastructure Insights は、さまざまなウィジェットを使用してカスタム ダッシュボードを作成できるようにすることで、インフラストラクチャ データの運用ビューを柔軟に作成できるようにします。各ウィジェットは、データの表示とグラフ化に非常に柔軟に対応します。</block>
   <block id="4445b92d47c6064291aa06a6396a0733" category="admonition">これらのセクションの例は説明のみを目的としており、考えられるすべてのシナリオを網羅しているわけではありません。ここで説明する概念と手順を使用すると、独自のダッシュボードを作成し、特定のニーズに固有のデータを強調表示することができます。</block>
   <block id="760d211d5ae560f52f862c13806f5865" category="section-title">ダッシュボードの作成</block>
   <block id="1da60b5bc1bcd40bbbacad066fdf2da8" category="paragraph">新しいダッシュボードは、次の 2 つの場所のいずれかで作成します。</block>
@@ -1529,9 +1523,7 @@
   <block id="de611c8e9567515efd9824b262d8d9e1" category="paragraph">十分な空きリソースを確保するためにワークロードごとに QoS ポリシーを実装すると、ストレージ プールの飽和状態が緩和されます。これは長期的な解決策です。</block>
   <block id="5d43336b0046b068224b4a4c606863ba" category="list-text">追加のリソースを追加する</block>
   <block id="31fa4ab3e19080703e914efb949bbced" category="paragraph">共有リソース (たとえば、ストレージ プール) が IOPS 飽和点に達した場合は、プールにディスクを追加したり、より高速なディスクを追加することで、飽和を緩和するのに十分な空きリソースを確保できます。</block>
-  <block id="661407737232b02ed42fdcaccc52a989" category="summary">ビジネス洞察に関する質問への回答を支援するために、推奨ダッシュボードをインポートできます。以前にエクスポートしたカスタム ダッシュボードをインポートすることもできます。</block>
   <block id="814e9312d5012962801c92801ada715a" category="doc">ダッシュボードのインポート</block>
-  <block id="35642875ab84f7c01f7b4f8c5b7370eb" category="paragraph">Data Infrastructure Insights は、データに関するビジネス分析情報を提供するための推奨ダッシュボードを多数提供します。各ダッシュボードには、テナントで現在収集されているデータに関連する特定の質問に答えたり、特定の問題を解決したりするために設計されたウィジェットが含まれています。DII を使用すると、便利なダッシュボードをエクスポートして別のテナントにインポートすることもできます。</block>
   <block id="cfa4bbfe8fe25421b55d6bc77170da89" category="section-title">ダッシュボードギャラリーからのインポート</block>
   <block id="62a23650084673f5c844edf6588b4cbc" category="paragraph">ギャラリーからダッシュボードをインポートするには、次の手順を実行します。</block>
   <block id="9eef967a7122bf9630405305617e4e10" category="list-text">*オブザーバビリティ &gt; 探索 &gt; すべてのダッシュボード*を選択します</block>
@@ -1567,7 +1559,6 @@
   <block id="b7624838ae3358523818a8ce1e7252cb" category="paragraph">使用することもできます<block ref="0909c8b5d270efe34a0d9a849c651330" category="inline-link-macro-rx"></block>ランディングページに資産関連の情報を表示します。</block>
   <block id="4b1a441cee8ab7a3e24907f03ffb3043" category="summary">Kubernetes ワークロードの依存関係とフローを示し、ネットワークとパフォーマンスの問題を強調します</block>
   <block id="8022a6c696c4f5ec847420e8ebe1de9e" category="doc">Kubernetes ネットワークパフォーマンス監視とマップ</block>
-  <block id="60a414e81fe118967fa6232e8eb9f5ed" category="paragraph">Kubernetes ネットワーク パフォーマンス モニタリングおよびマップ機能は、サービス (ワークロードとも呼ばれます) 間の依存関係をマッピングすることでトラブルシューティングを簡素化し、ネットワーク パフォーマンスの遅延と異常をリアルタイムで可視化して、ユーザーに影響が及ぶ前にパフォーマンスの問題を特定します。この機能により、組織は Kubernetes トラフィック フローを分析および監査して全体的なコストを削減できます。</block>
   <block id="d11c5cdc648931cebdccd4a555384487" category="paragraph">主な機能: • ワークロード マップは、Kubernetes ワークロードの依存関係とフローを示し、ネットワークとパフォーマンスの問題を強調表示します。  • Kubernetes ポッド、ワークロード、ノード間のネットワーク トラフィックを監視し、トラフィックとレイテンシの問題の原因を特定します。  • イングレス、エグレス、クロスリージョン、クロスゾーンのネットワーク トラフィックを分析することで、全体的なコストを削減します。</block>
   <block id="1cd9ce57b7c44af6c8a130743e74dd52" category="inline-image-macro">ワークロードマップの例</block>
   <block id="7af846b3cedb6c2658e0a5a0470d77f4" category="paragraph"><block ref="7af846b3cedb6c2658e0a5a0470d77f4" category="inline-image-macro-rx" type="image"></block></block>
@@ -1860,7 +1851,6 @@
   <block id="4e4315d948ef3fd3aad9be88a442863d" category="paragraph"><block ref="4e4315d948ef3fd3aad9be88a442863d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="79bac41a8e857539d5a75dc7e93e17d8" category="summary">ナレッジベースの記事を表示したり、 NetAppコミュニティに接続したり、ビデオを視聴したり、チケットを開いてサポートをリクエストしたりできます。</block>
   <block id="69ac5d78c7ecb4ab9a461a7400773ec3" category="doc">サポートのリクエスト</block>
-  <block id="8305fef4b296f66634635a66ae1c297a" category="paragraph">*ヘルプ &gt; サポート* を選択すると、 Data Infrastructure Insightsで利用可能なサポート オプションにアクセスできます。</block>
   <block id="f407e820df29faa344002c82daa17ec2" category="inline-image-macro">サポートページ、幅=600</block>
   <block id="b0baa05e4ca03a2c83cff1367375a3bf" category="paragraph"><block ref="b0baa05e4ca03a2c83cff1367375a3bf" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e9d356ec51ae4d84881e70ea3c98b6dc" category="section-title">サポート資格の有効化</block>
@@ -1906,11 +1896,6 @@
   <block id="8e2e894a8f2d0c798eda10b04a6aae2c" category="inline-link-macro">クラウドデータサービスサポート登録</block>
   <block id="960807b3a38d77ca1916570b1732dda1" category="inline-xref">サポートを有効にする</block>
   <block id="801ef9b405d4e49db3e3da2aa073e5f6" category="admonition">登録が必要です<block ref="5dae4a2b8da6e9eee160d72287b835e3" category="inline-xref-macro-rx"></block>NetApp Cloud 製品向け。登録するには、NetAppの<block ref="c5b01460a42d58b3ab6bc662dda87194" category="inline-link-macro-rx"></block>。</block>
-  <block id="26bf81182a5b7a20da27b311cdf97f3d" category="paragraph">以下のいずれかの方法でサポートをリクエストできます。これらのサポート オプションを使用するには、アクティブなData Infrastructure Insightsサブスクリプションが必要です。</block>
-  <block id="e145a699aa519b4431527a84030fe1fd" category="inline-link-macro">*電話*</block>
-  <block id="d509e88fe0d420e546f838c2bf3149e4" category="list-text"><block ref="d509e88fe0d420e546f838c2bf3149e4" category="inline-link-macro-rx"></block></block>
-  <block id="78ce7a1ba00884845ede733dc79b1141" category="inline-link-macro">*サポートチケット*</block>
-  <block id="1ce9a43d63998783a781596de13b0965" category="list-text"><block ref="fa5b9c38e8e5b8e1f4e408b08ce16532" category="inline-link-macro-rx"></block></block>
   <block id="f55d23a57e602a67ed79cd2014d28415" category="paragraph">*営業部に問い合わせる*リンクをクリックして営業サポートをリクエストすることもできます。</block>
   <block id="30a12dfd5908adfdb9f06395cb4b5c34" category="paragraph">Data Infrastructure Insights のシリアル番号は、サービス内の *ヘルプ &gt; サポート* メニューから確認できます。サービスへのアクセスに問題があり、以前にNetAppにシリアル番号を登録している場合は、次のようにしてNetAppサポート サイトからData Infrastructure Insightsシリアル番号のリストを表示することもできます。</block>
   <block id="290bf19e1ed3fabfc80a0ac6d77f6466" category="list-text">mysupport.netapp.comにログイン</block>
@@ -3489,7 +3474,6 @@
   <block id="ef64e7e27fcc41880602820204326750" category="inline-image-macro">スナップショットの消去設定</block>
   <block id="58e92099c75821827b7a665f2931deb2" category="paragraph"><block ref="58e92099c75821827b7a665f2931deb2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b451cdd4206327fd0afecbb2df7b2bec" category="doc">ストレージワークロードセキュリティについて</block>
-  <block id="d91922a1bdba61ab374e14011d46cddf" category="paragraph">Data Infrastructure Insights Storage Workload Security (旧称Cloud Secure) は、内部脅威に関する実用的なインテリジェンスによってデータを保護します。ハイブリッド クラウド環境全体にわたるすべての企業データ アクセスの集中的な可視性と制御を提供し、セキュリティとコンプライアンスの目標を確実に達成します。</block>
   <block id="1729a56cfc89021478498fe0c89a843a" category="section-title">可視性</block>
   <block id="72afd90b781c569f0442e6e45c9f3193" category="paragraph">オンプレミスまたはクラウドに保存されている重要な企業データへのユーザー アクセスを一元的に可視化し、制御できます。</block>
   <block id="6bb784bfbef2792b99ae322d0ce648b6" category="paragraph">データへのアクセスと制御に関するタイムリーで正確な可視性を提供できないツールと手動プロセスを置き換えます。  Workload Security は、クラウドとオンプレミスの両方のストレージ システムで独自に動作し、悪意のあるユーザーの行動に関するアラートをリアルタイムで提供します。</block>
@@ -3573,9 +3557,7 @@
   <block id="e8aaaf728a906b8e9d531bb2447c9cf2" category="cell">これは、_csuser_ に ssh を実行する権限がない場合に発生する可能性があります。  (クラスター レベルでの接続を確認し、ユーザーが ssh を実行できることを確認します)。 _csuser_ ロールにはこれらの権限が必要です。<block ref="3066b8235934d1594e54f7b043a73648" category="inline-link-rx"></block>クラスタ認証情報を持つ _csuser_ の場合は、 ONTAPコマンドラインから次の操作を実行します。security login role create -role csrole -cmddirname "vserver export-policy rule" -access all security login role create -role csrole -cmddirname set -access all security login role create -role csrole -cmddirname "vserver cifs session" -access all security login role create -role csrole -cmddirname "vserver services access-check authentication translate" -access all security login role create -role csrole -cmddirname "vserver name-mapping" -access all _csuser_ が使用されず、クラスタ レベルの管理者ユーザが使用される場合は、管理者ユーザがONTAPへの SSH 権限を持っていることを確認します。</block>
   <block id="4550bd733b367bee1e03cd59abc31e8d" category="cell">ユーザーがブロックされるはずなのに、エラー メッセージ「_SID の変換に失敗しました。_ _理由:255:エラー: コマンドが失敗しました: このコマンドに対して権限がありませんエラー: "access-check" は認識されたコマンドではありません_」が表示されます。</block>
   <block id="f5ce9e1caf923fc5af4671571a0fa7de" category="cell">これは、_csuser_ に適切な権限がない場合に発生する可能性があります。見る<block ref="54b565a562b697bec979a5b58e397a1a" category="inline-link-macro-rx"></block>詳細についてはこちらをご覧ください。権限を適用した後、 ONTAPデータ コレクターとユーザー ディレクトリ データ コレクターを再起動することをお勧めします。必要な権限コマンドは以下のとおりです。  ---- security login role create -role csrole -cmddirname "vserver export-policy rule" -access all security login role create -role csrole -cmddirname set -access all security login role create -role csrole -cmddirname "vserver cifs session" -access all security login role create -role csrole -cmddirname "vserver services access-check authentication translate" -access all security login role create -role csrole -cmddirname "vserver name-mapping" -access all ----</block>
-  <block id="18082cdb9388e2686e081dd6012e47b8" category="summary">作成するダッシュボードを公開するか非公開にするかを決定します。</block>
   <block id="cc5c681651d638257ae03658c963c7c6" category="doc">ダッシュボードアクセス管理</block>
-  <block id="571ad98bb1054a211a5d3fa3a3240265" category="paragraph">Data Infrastructure Insightsでは、作成したダッシュボードへのアクセスをより細かく制御できるようになりました。グラフを変更できるユーザーを選択します。潜在的に機密性の高い情報への公開を制御できます。ダッシュボードを非公開にしておくと、組織内の他のユーザーが使用できるようになるまで、視覚化を完成させることができます。</block>
   <block id="505e6238dfdc62d1b4bbdf930fa887b8" category="inline-image-macro">ダッシュボード共有オプション、幅=300</block>
   <block id="43b5d7a5affce9056fb3d7ec4b82fe17" category="paragraph"><block ref="43b5d7a5affce9056fb3d7ec4b82fe17" category="inline-image-macro-rx" type="image"></block></block>
   <block id="547a803d844f9925f62c57d49f10caf6" category="paragraph">デフォルトでは、新しいダッシュボードを作成すると、そのダッシュボードは作成者であるあなただけに表示されます。他のユーザーはダッシュボードを表示したり変更したりすることはできません。</block>
@@ -4208,11 +4190,8 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">オープンソース</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知ファイルには、 NetAppソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が提供されます。</block>
-  <block id="65be717dc296d58230cdf6471cf551c6" category="summary">パフォーマンス、容量、構成、コンポーネントのアラートに基づく統合スコアリングを使用してインフラストラクチャの健全性を監視し、問題をプロアクティブに解決します。</block>
   <block id="48f51aa9a5737857bbd298bfb874281e" category="doc">インフラストラクチャの健全性を監視する</block>
-  <block id="9af3e29dc9d4dd7c03ed034e837cae19" category="paragraph">Data Infrastructure Insights は、ストレージ環境のパフォーマンス、容量、構成、コンポーネントの状態を追跡する包括的なインフラストラクチャのヘルス監視を提供します。ヘルススコアは、これらのカテゴリ全体のモニターアラートに基づいて計算され、システムのヘルスを統合的に表示して、問題をプロアクティブに解決できるようになります。</block>
   <block id="6021dbd64d31bad79679304f2df95f96" category="section-title">インフラストラクチャヘルスダッシュボード</block>
-  <block id="90fee6011aeb14ebd1b3f6d5319de775" category="admonition">インフラストラクチャの健全性の監視は<block ref="312c0c6b46ba32b4b11ba8c9da5788ed" category="inline-link-macro-rx"></block>機能は変更される可能性があります。</block>
   <block id="6d6ede202b061f87d3856c3a68a32733" category="paragraph">*可観測性 &gt; 分析* に移動し、*インフラストラクチャの健全性* を選択します。ダッシュボードには、以下に説明するモニターのアラート カテゴリとスコアに基づいて、システムの健全性の概要が表示されます。上部でフィルターを設定して、調査の焦点を絞り込みます。</block>
   <block id="2fea58dd0f63d16cb2264053904f52cb" category="inline-image-macro">インフラの健全性の概要</block>
   <block id="de0fb65c9e3436d4f762f2f75c9c80b0" category="paragraph"><block ref="de0fb65c9e3436d4f762f2f75c9c80b0" category="inline-image-macro-rx" type="image"></block></block>
@@ -5578,13 +5557,10 @@
   <block id="89ec4e12f0fff9f1c5f297f7ac6e9a24" category="paragraph">XIV アレイ別容量レポートには、アレイの使用済み容量と未使用容量が表示されます。</block>
   <block id="0b4d8c251e2dfb1eead179c1134336fd" category="section-title">XIV プール別収容人数</block>
   <block id="dff813d382afd170b121f4a3001876f2" category="paragraph">XIV プール別容量レポートには、ストレージ プールの使用済み容量と未使用容量が表示されます。</block>
-  <block id="1da2f66b50b1308792b663513a421880" category="summary">Data Infrastructure Insights API を使用して、レポート DB を直接クエリします。</block>
-  <block id="266675e88801512a731359823fa8e305" category="paragraph">Data Infrastructure Insightsの強力な API を使用すると、ユーザーは Cognos Reporting 環境を経由せずに、 Data Infrastructure Insights Reporting データベースを直接クエリできます。</block>
   <block id="a34e29a0686800d882e09161ffc71235" category="admonition">このドキュメントは、 Data Infrastructure Insights Premium Edition で利用できるData Infrastructure Insightsレポート機能について説明しています。</block>
   <block id="2946f573e2e09deeeecdc2af8dba7379" category="section-title">小田田</block>
   <block id="ebb397c50a10a758892e24ffe755b4e4" category="inline-link-macro">OData v4</block>
   <block id="a755b355075d62b57c54f7a8a785c054" category="inline-link-macro">このチュートリアル</block>
-  <block id="ba7d10bf45b2219942c55c6b6ffbd3d4" category="paragraph">Data Infrastructure InsightsサイトレポートAPIは、<block ref="3174809a10586791538fc9a640526e27" category="inline-link-macro-rx"></block>レポート データベースのクエリを実行するための Open Data Protocol (Open Data Protocol) 標準。さらに詳しい情報や詳細については、<block ref="e667935284fd58d7e65ea97109344a3b" category="inline-link-macro-rx"></block> OData で。</block>
   <block id="6346ef36a30feacef7c837238fa5e2ce" category="paragraph">すべてのリクエストは、URL _\https://&lt; Data Infrastructure Insights URL&gt;/rest/v1/dwh-management/odata_ で始まります。</block>
   <block id="125afb495c1f31ea312e38a98946b3a3" category="section-title">APIキーの生成</block>
   <block id="79077b8c217f63ad257dd00c00fd1223" category="inline-link-macro">Data Infrastructure InsightsAPI</block>
@@ -5752,9 +5728,7 @@
   <block id="9b32116d8eca48b62ed2e18d3ce0a898" category="paragraph"><block ref="9b32116d8eca48b62ed2e18d3ce0a898" category="inline-image-macro-rx" type="image"></block></block>
   <block id="735b6ed9b0069fd73dd0986ba5ad4bf2" category="section-title">取引量日次パフォーマンス</block>
   <block id="5eb8a99093a69e48aa26443ea1c211ed" category="paragraph"><block ref="5eb8a99093a69e48aa26443ea1c211ed" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="cfbf1d79d6b8c6542bc0c846048611fc" category="summary">ストレージ サービスの日常的な管理には、ストレージ マネージャー ダッシュボードを使用できます。</block>
   <block id="662f8024f59fc1c2dd8a5286eea38232" category="doc">ストレージマネージャーダッシュボード</block>
-  <block id="d74252d9dcf59266ed739f9e49821535" category="paragraph">ストレージ マネージャー ダッシュボードでは、集中化された視覚化が提供され、時間の経過に伴うリソースの使用状況を許容範囲や過去のアクティビティと比較することができます。ストレージ サービスの主要なパフォーマンス メトリックのみを表示することで、データ センターの保守方法を決定できます。</block>
   <block id="290612199861c31d1036b185b4e69b75" category="section-title">まとめ</block>
   <block id="0d04c76d344b77c4e10b41c28526be07" category="paragraph">チーム コンテンツから *ストレージ マネージャー ダッシュボード* を選択すると、トラフィックとストレージに関する情報を提供するいくつかのレポートが表示されます。</block>
   <block id="bfc0aa4d9884a38d2f3079aa329eef54" category="inline-image-macro">ストレージマネージャーダッシュボードオプション</block>
@@ -5972,15 +5946,7 @@
   <block id="566a4c81478be8a9ccd7d6589cefe57c" category="list-text">EMEA: eu-central-1</block>
   <block id="7b1afe899e5efa6ba9f4935be9f98d92" category="list-text">APAC: ap-southeast-2</block>
   <block id="18206c5add24b8898426959c811b779b" category="section-title">詳細情報</block>
-  <block id="4e85b536571f514e502457526a23655c" category="paragraph">NetApp のプライバシーとセキュリティの詳細については、次のリンクをご覧ください。</block>
   <block id="f8740f1a33df1d51373d406115f7a351" category="inline-link-macro">信頼センター</block>
-  <block id="1d3a47e64cfbeb6f43f26517be02a023" category="list-text"><block ref="1d3a47e64cfbeb6f43f26517be02a023" category="inline-link-macro-rx"></block></block>
-  <block id="286ecb4572a276871772bdbf167316f2" category="inline-link-macro">国境を越えたデータ転送</block>
-  <block id="e38fea3e33cc0a5f1866f4eb9682e240" category="list-text"><block ref="e38fea3e33cc0a5f1866f4eb9682e240" category="inline-link-macro-rx"></block></block>
-  <block id="f27a46645af620bac8278c39a9d657b8" category="inline-link-macro">サードパーティのデータ要求への対応</block>
-  <block id="0e07493de1ccce1a68aff3dbd2cd6cac" category="list-text"><block ref="0e07493de1ccce1a68aff3dbd2cd6cac" category="inline-link-macro-rx"></block></block>
-  <block id="e87433704018842ba5eb9ad6c1a93e26" category="inline-link-macro">NetAppプライバシー原則</block>
-  <block id="e56b6ba842252c40995f764b4ae57614" category="list-text"><block ref="e56b6ba842252c40995f764b4ae57614" category="inline-link-macro-rx"></block></block>
   <block id="af7817cd5ef3e241d8e057c1322de5f0" category="doc">Data Infrastructure Insightsセキュリティ</block>
   <block id="1ebba8b1fca558fbf0a70cf3439171fe" category="paragraph">NetAppでは、製品と顧客データのセキュリティが最も重要です。  Data Infrastructure Insights は、リリース ライフサイクル全体にわたってセキュリティのベスト プラクティスに従い、顧客情報とデータが可能な限り最善の方法で保護されるようにします。</block>
   <block id="a2760670df3c85c0fae64e4eb92ee36e" category="section-title">セキュリティの概要</block>
@@ -6976,7 +6942,6 @@
   <block id="f15a825eae4d7211f1b9f849387b4133" category="paragraph">割り当てた新しいアプリケーションは、別のアセットから派生したアセット上のアプリケーションを上書きします。たとえば、ボリュームはホストからアプリケーションを継承し、新しいアプリケーションがボリュームに割り当てられると、新しいアプリケーションは派生アプリケーションよりも優先されます。</block>
   <block id="46152eb4e0d7febe5ed5ec5aa51b068f" category="admonition">関連する資産が大量にある環境では、それらの資産へのアプリケーション割り当ての継承に数分かかることがあります。関連する資産が多数ある場合は、継承が発生するまでにさらに時間がかかります。</block>
   <block id="f64880272c45a077dc9152ab7dd2f24a" category="paragraph">ホストをアプリケーションに割り当てた後、残りのアセットをアプリケーションに割り当てることができます。アプリケーションのランディング ページにアクセスするには、[管理] &gt; [アプリケーション] をクリックし、作成したアプリケーションを選択します。</block>
-  <block id="91771bf0d5be307a250d706e57df1eb1" category="summary">パフォーマンスやインベントリのしきい値、およびメトリックやログの状態についてアラートを発するモニターを作成します。</block>
   <block id="3f5fb2a45a144339f9591a104342f79b" category="paragraph">モニターを使用すると、ストレージ、VM、EC2、ポートなどの「インフラストラクチャ」オブジェクトによって生成されたメトリックや、Kubernetes、 ONTAP の高度なメトリック、Telegraf プラグインなどで収集された「統合」データのしきい値を設定できます。これらのメトリック モニターは、警告レベルまたは重大レベルのしきい値を超えたときに警告を発します。</block>
   <block id="e730b9c349889018dc9deaccaa5a438b" category="paragraph">指定されたログ イベントが検出されたときに、警告、重大、または情報レベルのアラートをトリガーするモニターを作成することもできます。</block>
   <block id="b18c8095ec7b7cd0c63a4e28b715f6c1" category="inline-link-macro">システム定義モニター</block>
@@ -7092,9 +7057,7 @@
   <block id="81620819ff61f392cb05937161de6a10" category="paragraph">表示<block ref="c48a3e56f23a81aaf8fad75ccfbc3d89" category="inline-link-macro-rx"></block>Data Infrastructure Insightsに含まれるモニターの説明ページ。</block>
   <block id="b724fba8ffec757b004a0fd1f0662764" category="inline-link-macro">アラートの表示と消去</block>
   <block id="24b2e6934ffdb3b416b798e02d2fca63" category="list-text"><block ref="24b2e6934ffdb3b416b798e02d2fca63" category="inline-link-macro-rx"></block></block>
-  <block id="44aaf5b3ab5109153ebcc76a7fecf773" category="summary">クエリを使用すると、関心のある資産とメトリックをすばやく簡単に特定できます。</block>
   <block id="e05de58f50b638dc3dd3798e60726367" category="doc">クエリの作成</block>
-  <block id="db651011bf6874a28b1ab363b1db8322" category="paragraph">クエリを使用すると、テナント上のアセットを詳細なレベルで検索できるため、必要なデータをフィルタリングし、結果を好みに合わせて並べ替えることができます。</block>
   <block id="320781104b70f64381bb249c5a4608d5" category="paragraph">たとえば、ボリュームのクエリを作成し、選択したボリュームに関連付けられた特定のストレージを検索するフィルターを追加し、選択したストレージの「Tier 1」などの特定の注釈を検索する別のフィルターを追加し、最後に IOPS - 読み取り (IO/s) が 25 を超えるすべてのストレージを検索する別のフィルターを追加できます。結果が表示されたら、クエリに関連付けられた情報の列を昇順または降順で並べ替えることができます。</block>
   <block id="4b6bbf6c69cf8c8e3487a46b14b2b975" category="paragraph">注: アセットを取得する新しいデータ コレクターが追加されたり、注釈やアプリケーションの割り当てが行われたりした場合は、クエリがインデックス化された後でのみ、それらの新しいアセット、注釈、またはアプリケーションをクエリできます。インデックス作成は、定期的にスケジュールされた間隔で、または注釈ルールの実行などの特定のイベント中に実行されます。</block>
   <block id="896c3bf153eadc411489b6fa241a83de" category="list-title">クエリの作成は非常に簡単です。</block>
@@ -7326,9 +7289,7 @@
   <block id="65e164b1fa429ad3c8da14d927b960f7" category="list-text">各ユーザーに対して希望するロールを選択します。</block>
   <block id="811b5ad1e386d9637dbe52f536822854" category="paragraph">新しいユーザーを追加するときは、希望するロール (通常はユーザーまたはゲスト) を選択するだけです。</block>
   <block id="1c823102aa56424a5f80a9b5c5c2fdff" category="paragraph">ユーザーアカウントとロールの詳細については、Data Infrastructure Insightsをご覧ください。<block ref="3bb7d59230d413058ffce58eae85db7e" category="inline-link-macro-rx"></block>ドキュメント。</block>
-  <block id="e6bfb980e30f4f6a39aeb1af52be14f3" category="summary">仮想マシンのパフォーマンスを強調表示するダッシュボードの例。</block>
   <block id="287be892ac0a0d2502fdde816a5dab3a" category="doc">ダッシュボードの例: 仮想マシンのパフォーマンス</block>
-  <block id="cf24907d80b780a349784724d6dae76d" category="paragraph">今日の IT 運用には多くの課題が存在します。管理者は少ないリソースでより多くの成果を出すことが求められており、動的なデータセンターを完全に可視化することが必須となっています。この例では、テナント上の仮想マシン (VM) のパフォーマンスに関する運用上の洞察を提供するウィジェットを含むダッシュボードを作成する方法を説明します。この例に従い、独自の特定のニーズをターゲットにしたウィジェットを作成することで、バックエンドのストレージ パフォーマンスをフロントエンドの仮想マシンのパフォーマンスと比較して視覚化したり、VM のレイテンシと I/O 需要を比較表示したりといったことが可能になります。</block>
   <block id="b098e5ef56b37ff4069c2e7e6d9bf50c" category="paragraph">ここでは、次の内容を含む仮想マシン パフォーマンス ダッシュボードを作成します。</block>
   <block id="958dea8f57f203ce12436da3e3a88704" category="list-text">VM名とパフォーマンスデータをリストしたテーブル</block>
   <block id="96b3f9cc45a631167992dd29c24482af" category="list-text">VMレイテンシとストレージレイテンシを比較したグラフ</block>
@@ -9453,9 +9414,7 @@
   <block id="d40435902e9d2aff211851b4be9e2a25" category="paragraph">ダッシュボード上のウィジェットは、凡例の有無にかかわらず表示できます。</block>
   <block id="82908db5a2e57cb0c3c9c7daae713304" category="paragraph">ダッシュボードを表示するときに、ウィジェットの *オプション* ボタンをクリックし、メニューで *凡例を表示* を選択すると、ウィジェットの凡例をオンまたはオフにすることができます。</block>
   <block id="1ca8bb723c638279d7c5ddb2b353ea54" category="paragraph">凡例が表示されている場合、凡例で示されるアセットのランディング ページに移動できる場合は、凡例はそのアセット ページへのリンクとして表示されます。</block>
-  <block id="de8c15fa89e8678b9bf3103b3af983de" category="summary">クエリの結果を.csvファイルにエクスポートする方法</block>
   <block id="d33a32a045d2f8fd982e5d3bf3425615" category="doc">クエリ結果を .CSV ファイルにエクスポートする</block>
-  <block id="a28f8ea31869026f095819f05219285b" category="paragraph">クエリの結果を .CSV ファイルにエクスポートして、データを分析したり、別のアプリケーションにインポートしたりすることができます。</block>
   <block id="cfd855569d59b48c5e78ad3ea5b91555" category="list-text">Data Infrastructure Insightsにログインします。</block>
   <block id="6bf988d25784231143b4418f8b3276c3" category="list-text">*クエリ*をクリックし、*すべてのクエリを表示*を選択します。</block>
   <block id="7b0f16b1eaee6aaf03ec5ce23ac38204" category="paragraph">クエリ ページが表示されます。</block>
@@ -9649,9 +9608,7 @@
   <block id="3cd59483bde57e839ca908da4280cde9" category="list-text">クエリをクリックし、Insight が注釈ルールを適用するために使用するクエリを選択します: *"Aggregate0"*</block>
   <block id="b3e5b96fb95a6c5ae373e50472986766" category="list-text">注釈をクリックし、*「ルート集計除外」*を選択します。</block>
   <block id="e62dcc88e7504fa135502828cf3f3374" category="list-text">*値*をクリックし、*True*を入力します。</block>
-  <block id="e7136d23b0fd79f1bfd83b357b92d160" category="summary">クエリの変更または削除</block>
   <block id="e7c09d456b9277f7cac0ab083d8e5272" category="doc">クエリの変更または削除</block>
-  <block id="fa4f35372eb9fd2595c594ca6e718eb2" category="paragraph">クエリするアセットの検索条件を変更する場合は、クエリに関連付けられている条件を変更できます。</block>
   <block id="5943bffb29d3b91de57cf4e3be5f6a9d" category="section-title">クエリの変更</block>
   <block id="c7c073ee2f0a59d176e92eafa318ec83" category="list-text">*探索*をクリックし、*すべてのメトリッククエリ*を選択します。</block>
   <block id="8f06259b106aa0ac2dfa7cf7f9a06407" category="list-text">クエリ名をクリック</block>
@@ -9665,9 +9622,7 @@
   <block id="2ea63e16b4815182c4235ddc166bb650" category="paragraph">クエリを削除するには、[*クエリ*] をクリックし、[*すべてのクエリを表示*] を選択して、次のいずれかを実行します。</block>
   <block id="bd0920c5ab9f4ec77e77b666354bb403" category="list-text">クエリの右側にある「3 つのドット」メニューをクリックし、「削除」をクリックします。</block>
   <block id="543b57bee233b33b15c7e6238bf6cc26" category="list-text">クエリ名をクリックし、[保存] ドロップダウン メニューから [削除] を選択します。</block>
-  <block id="4715797e850d7872546c22d0a379ca4f" category="summary">クエリを使用して、オブジェクトに複数のアプリケーションまたは注釈を割り当てたり、オブジェクトから複数のアプリケーションまたは注釈を削除したりします。</block>
   <block id="de1cabd167f3864b78d24d3da683bd0c" category="doc">資産に複数のアプリケーションを割り当てたり、資産から複数のアプリケーションを削除したりする</block>
-  <block id="a4dc3c56fe7e26b25b470b6a7c15badc" category="paragraph">複数割り当て可能<block ref="2a4b6454a635dd6d2517e4f81c46cc23" category="inline-link-macro-rx"></block>手動で複数のアプリケーションを割り当てたり削除したりする代わりに、クエリを使用して複数のアプリケーションを資産に追加したり削除したりできます。</block>
   <block id="9d0068916fee0d45d023af017221e708" category="admonition">以下の手順で追加または削除できます<block ref="5ee10a6642913576d2747e5e8b69f77c" category="inline-link-macro-rx"></block>同じように。</block>
   <block id="930ebcf0e051fb5a1e36f9ff9248a750" category="paragraph">編集するすべてのアセットを検索するクエリをすでに作成しておく必要があります。</block>
   <block id="faaaabae80472cad243639802e3d885e" category="list-text">*探索*をクリックし、*メトリッククエリ*を選択します。</block>
@@ -9682,9 +9637,7 @@
   <block id="565601d933cce2f1327c90a9769dd0e2" category="list-text">資産に割り当てられたアプリケーションを削除するには、「一括操作」をクリックし、「アプリケーションの削除」を選択します。</block>
   <block id="c7ddb198b304e6105825a061afe57109" category="list-text">削除するアプリケーションを選択します。</block>
   <block id="2c022c29b5e95da3740220bcbdc30296" category="paragraph">一括追加アクションで [保存] をクリックするか、一括削除アクションで [削除] をクリックすると、 Data Infrastructure Insights、アクションに時間がかかることが通知されます。このメッセージは閉じても構いません。アクションはバックグラウンドで続行されます。</block>
-  <block id="99d301f4dec03fe00ee2e9cef05695d1" category="summary">他のアプリケーションで使用するために、テーブルからクリップボードに値をコピーできます。</block>
   <block id="8b0cec3dd0c15262720b4713d8bcbf6e" category="doc">テーブルの値のコピー</block>
-  <block id="6d025f8133e95d3aec2e6c0cc1cc800e" category="paragraph">検索ボックスや他のアプリケーションで使用するために、テーブル内の値をクリップボードにコピーできます。</block>
   <block id="8bfd1dd6e5bf41c1cf3d087c5a8a39ac" category="paragraph">テーブルまたはクエリ結果の値をクリップボードにコピーするには、2 つの方法があります。</block>
   <block id="3df8930abf404a7a5c226a916c674703" category="list-text">方法 1: マウスで目的のテキストを強調表示し、コピーして、検索フィールドまたは他のアプリケーションに貼り付けます。</block>
   <block id="d23ac238ad6f9a71899add8581f00ac2" category="list-text">方法 2: 単一値フィールドの場合は、フィールドにマウスを移動し、表示されるクリップボード アイコンをクリックします。値は、検索フィールドや他のアプリケーションで使用するためにクリップボードにコピーされます。</block>
@@ -9705,12 +9658,10 @@
   <block id="65ac9349c49d4dc9ceeb30daad295f0f" category="inline-image-macro">ONTAPの高度なカウンタとEMSログ収集を有効にする</block>
   <block id="af5f3409a3cec43a03f959371f642cae" category="admonition">多くのシステム モニターは、デフォルトでは _一時停止_ 状態になっています。モニターの [再開] オプションを選択すると、システム モニターを有効にすることができます。データ コレクターで [Advanced Counter Data Collection] と [Enable ONTAP EMS log collection] が有効になっていることを確認します。これらのオプションは、 ONTAPデータ コレクターの [_Advanced Configuration_] にあります。<block ref="c9fb5b808ac97b65ea1073e21fb359f9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a126bfb1fdb6bbbe10997dfc35ed2144" category="section-title">モニターの説明</block>
-  <block id="aeb92e8c5a120fcbb9dbeee4d880039d" category="paragraph">システム定義のモニターは、事前定義されたメトリックと条件、および変更できないデフォルトの説明と修正アクションで構成されます。システム定義モニターの通知受信者リストを変更することができます。メトリック、条件、説明、修正アクションを表示したり、受信者リストを変更したりするには、システム定義のモニター グループを開き、リスト内のモニター名をクリックします。</block>
   <block id="81b15c5404e04e7a0285a18e2c702d75" category="paragraph">システム定義のモニター グループは変更または削除できません。</block>
   <block id="cabbbf7fefe4319bf83cb8fc4f054cbb" category="paragraph">以下のシステム定義モニターは、記載されているグループで使用できます。</block>
   <block id="8c3d5985ed501d011f08dd2f4a6a027f" category="list-text">* ONTAPインフラストラクチャ* には、 ONTAPクラスタのインフラストラクチャ関連の問題を監視するモニターが含まれています。</block>
   <block id="2bd726cf12f9292e804f46bb3ca1133e" category="list-text">* ONTAPワークロードの例* には、ワークロード関連の問題のモニターが含まれています。</block>
-  <block id="141e31818558b2f9c106f51987380a29" category="list-text">両方のグループのモニターはデフォルトで _一時停止_ 状態になります。</block>
   <block id="b69fb0739dff5542fa058e258ebc7fb7" category="paragraph">以下は、現在Data Infrastructure Insightsに含まれているシステム モニターです。</block>
   <block id="8ee82de7c36b7a2ab1b954c4886db271" category="section-title">メトリックモニター</block>
   <block id="007cc9547ae8884ad597cd92ba505422" category="cell">重大度</block>
@@ -9757,10 +9708,6 @@
   <block id="6f020841b73e150f652a53c82807c34c" category="cell">ユーザークォータ容量のハード制限</block>
   <block id="40d0e4ba790ef451c9f414b7c6957241" category="cell">ONTAP は、ボリューム、ボリューム内のファイル、またはディレクトリにアクセスする権限を持つ Unix または Windows システムのユーザーを認識します。その結果、 ONTAP を使用すると、顧客は Linux または Windows システムのユーザーまたはユーザー グループのストレージ容量を構成できるようになります。ユーザーまたはグループ ポリシー クォータは、ユーザーが自身のデータに利用できるスペースの量を制限します。…このクォータのハード制限により、ボリューム内で使用されている容量が合計容量クォータに達する直前にユーザーに通知することができます。ユーザーまたはグループのクォータ内に保存されるデータの量を監視することで、ユーザーが中断のないデータ サービスを受けられるようになります。</block>
   <block id="de3b3bcfd2e2f2d25d88ab1d94ea0b6a" category="cell">重大なしきい値を超えた場合は、サービスの中断を最小限に抑えるために、次の即時アクションを検討してください。1.成長に対応するために、ユーザーまたはグループのクォータのスペースを増やします。2.不要なデータを削除してスペースを解放するようにユーザーまたはグループに指示します。</block>
-  <block id="e89c167818c91da4b65948a699087631" category="cell">ユーザークォータ容量ソフト制限</block>
-  <block id="8f67a8bb400abe088de311417097081b" category="cell">ONTAP は、ボリューム、ボリューム内のファイル、またはディレクトリにアクセスする権限を持つ Unix または Windows システムのユーザーを認識します。その結果、 ONTAP を使用すると、顧客は Linux または Windows システムのユーザーまたはユーザー グループのストレージ容量を構成できるようになります。ユーザーまたはグループ ポリシー クォータは、ユーザーが自身のデータに利用できるスペースの量を制限します。…このクォータのソフト制限により、ボリューム内で使用されている容量が合計容量クォータに達したときに、ユーザーにプロアクティブに通知することができます。ユーザーまたはグループのクォータ内に保存されるデータの量を監視することで、ユーザーが中断のないデータ サービスを受けられるようになります。</block>
-  <block id="c844a9c24a0b86ab717cc11f2fc5f586" category="cell">警告しきい値を超えた場合は、次の即時措置を講じる計画を立ててください。1.成長に対応するために、ユーザーまたはグループのクォータのスペースを増やします。2.不要なデータを削除してスペースを解放します。</block>
-  <block id="99e0d62cd95722563a6ca27e3142cac5" category="cell">ボリューム容量がいっぱいです</block>
   <block id="b4377e0135c3410c9594eae5882bfb8e" category="cell">アプリケーションと顧客データを保存するには、ボリュームのストレージ容量が必要です。 ONTAPボリュームに保存されるデータが増えるほど、将来のデータのストレージ可用性は低下します。ボリューム内のデータ保存容量が合計保存容量に達した場合、保存容量不足によりお客様がデータを保存できなくなる可能性があります。使用されたボリュームのストレージ容量を監視することで、データ サービスの継続性が確保されます。</block>
   <block id="0aa136d499777fb8ac19fce0abe27f95" category="cell">重大なしきい値を超えた場合は、サービスの中断を最小限に抑えるために、次の即時アクションを検討してください。1.成長に対応するためにボリュームのスペースを増やします。2.不要なデータを削除してスペースを解放します。3.スナップショットのコピーがスナップショット リザーブよりも多くのスペースを占有している場合は、古いスナップショットを削除するか、ボリューム スナップショットの自動削除を有効にします。…警告しきい値を超えた場合は、次の即時アクションを実行するように計画してください。1.成長に対応するためにボリュームのスペースを増やします 2。スナップショットのコピーがスナップショット リザーブよりも多くのスペースを占有する場合は、古いスナップショットを削除するか、ボリューム スナップショットの自動削除を有効にします。……</block>
   <block id="fbc825226ae4d8f31c0f222df5d96f7a" category="cell">ボリュームのiノード制限</block>
@@ -9791,8 +9738,6 @@
   <block id="6a330cc3d1dd1f4ba2997354a3f21845" category="cell">ボリューム Qtree クォータ オーバーコミット</block>
   <block id="fb7354d1ae8b5435bfa69884ef47da15" category="cell">ボリューム qtree クォータ オーバーコミットは、ボリュームが qtree クォータによってオーバーコミットされていると見なされるパーセンテージを指定します。ボリュームの qtree クォータに設定されたしきい値に達しました。ボリューム qtree クォータのオーバーコミットを監視することで、ユーザーは中断のないデータ サービスを受けることができます。</block>
   <block id="c7138a3f31fdad6a8a7bd85a7c38cf78" category="cell">重要なしきい値を超えた場合は、サービスの中断を最小限に抑えるために、直ちに措置を講じる必要があります。1.ボリューム2のスペースを増やします。不要なデータを削除します。警告しきい値を超えた場合は、ボリュームのスペースを増やすことを検討してください。</block>
-  <block id="e58c27818bf68b1f92513ad4f99972c4" category="inline-xref">トップに戻る</block>
-  <block id="9bf2c4cb7192740e06519a5e67f22e59" category="paragraph"><block ref="5166de7f06aaa174e185aec47426a1b7" category="inline-xref-macro-rx"></block></block>
   <block id="9e3717c8a856a8fff78d3ed35be3524a" category="section-title">ログモニター</block>
   <block id="b8de81d6f52d224f773817fe81217dad" category="cell">AWS 認証情報が初期化されていません</block>
   <block id="551b723eafd6a31d444fcb2f5920fbd3" category="cell">情報</block>
@@ -9807,21 +9752,11 @@
   <block id="04b8993945a972c4f74f19996bef05cb" category="cell">FlexGroup構成員全員</block>
   <block id="fe21120bc14577f268d4d2be20edc1f7" category="cell">FlexGroupボリューム内の構成要素がいっぱいなので、サービスが中断される可能性があります。 FlexGroupボリューム上でファイルを作成または拡張することは可能です。ただし、構成要素に保存されているファイルは変更できません。その結果、 FlexGroupボリュームで書き込み操作を実行しようとすると、ランダムに領域不足エラーが発生する可能性があります。</block>
   <block id="6378c8a48276593b5eda6665ea7da751" category="cell">「volume modify -files +X」コマンドを使用して、 FlexGroupボリュームに容量を追加することをお勧めします。または、 FlexGroupボリュームからファイルを削除します。ただし、どのファイルが構成要素に到達したかを判断するのは困難です。</block>
-  <block id="1c5e1ca65bf95c63d58c93315f4ae493" category="cell">Flexgroupの構成員がほぼ満員</block>
-  <block id="66ccb0b236d70f106eac0f0966f5bea0" category="cell">FlexGroupボリューム内の構成要素のスペースがほとんど不足しており、サービスが中断される可能性があります。ファイルの作成と展開が可能です。ただし、構成要素のスペースが不足すると、構成要素上のファイルに追加したり変更したりできなくなる可能性があります。</block>
-  <block id="efc0cb7afd23cf91b4ebc52c3e2d8ed6" category="cell">FlexGroup構成要素の inode がほぼ不足しています</block>
-  <block id="e8d1207b204af89970bbd6c3fcd0f62c" category="cell">FlexGroupボリューム内の構成要素の inode がほとんど不足しているため、サービスが中断される可能性があります。構成要素は平均よりも少ない作成要求を受け取ります。要求はより多くの inode を持つ構成要素にルーティングされるため、 FlexGroupボリュームの全体的なパフォーマンスに影響する可能性があります。</block>
   <block id="93ec7808a5f104bb53817af485a82bf5" category="cell">FlexGroup構成要素の inode 不足</block>
   <block id="acb497ea0eac56962d6a2c8e5af21065" category="cell">FlexGroupボリュームの構成要素の inode が不足しており、サービスが中断される可能性があります。この構成要素に新しいファイルを作成することはできません。これにより、 FlexGroupボリューム全体でコンテンツの配分が全体的に不均衡になる可能性があります。</block>
-  <block id="d4bd8d52d9f5248461eab65877c33cd4" category="cell">LUN はオフライン</block>
-  <block id="c879db7459104a5347aa882f8638ec4e" category="cell">このイベントは、LUN が手動でオフラインになったときに発生します。</block>
-  <block id="03867f916783d279d2e18bebd13cd956" category="cell">LUN をオンラインに戻します。</block>
   <block id="7e2ea473b4d692f312fdafa6a4dab4d8" category="cell">本体ファンの故障</block>
   <block id="4c67552ba7b4d309c44112ed962d575b" category="cell">メインユニットの 1 つ以上のファンが故障しました。システムは引き続き動作します。…ただし、この状態が長時間続くと、過熱により自動シャットダウンがトリガーされる可能性があります。</block>
   <block id="76eeadb484fdebb878895dcc33f0b1f5" category="cell">故障したファンを取り付け直してください。エラーが解決しない場合は交換してください。</block>
-  <block id="1eb5bfc5bab8f3a50b9a8477412d8f19" category="cell">本体ファンが警告状態</block>
-  <block id="20b6be82c9564e602e5cc241f05c1273" category="cell">このイベントは、メインユニットの 1 つ以上のファンが警告状態にある場合に発生します。</block>
-  <block id="d102c04ae84b00d946f024f5a6fd34f0" category="cell">過熱を防ぐため、指定されたファンを交換してください。</block>
   <block id="fb973d4258ae588d5d24c45dddfdf7ca" category="cell">NVRAM バッテリ低下</block>
   <block id="80aa548a305f2ad1cfe96a483ccf6490" category="cell">NVRAMバッテリー容量が極めて低くなっています。バッテリが切れると、データが失われる可能性があります。…システムは、 AutoSupportまたは「コール ホーム」メッセージを生成し、 NetAppテクニカル サポートおよび設定された送信先（そのように設定されている場合は）に送信します。  AutoSupportメッセージが正常に配信されると、問題の特定と解決が大幅に改善されます。</block>
   <block id="b55fb260ebd70c6508eec1c9ce79cc2f" category="cell">次の修正アクションを実行してください。…「system node environment sensors show」コマンドを使用して、バッテリの現在のステータス、容量、充電状態を表示します。…バッテリを最近交換した場合、またはシステムが長期間動作していなかった場合は、バッテリを監視して、適切に充電されていることを確認します。…バッテリのランタイムが引き続き危険なレベルを下回り、ストレージ システムが自動的にシャットダウンする場合は、 NetAppテクニカル サポートに問い合わせてください。</block>
@@ -9831,7 +9766,6 @@
   <block id="0b7a641d1d319fdb4c77401df9d2f87c" category="cell">サービス プロセッサはオフライン</block>
   <block id="5517421872e8cf9e3d4813a85cc4243a" category="cell">すべてのSPリカバリアクションが実行されたにもかかわらず、 ONTAP はサービス プロセッサ (SP ) からハートビートを受信しなくなりました。  ONTAP はSPなしではハードウェアの状態を監視できません。…ハードウェアの損傷とデータ損失を防ぐためにシステムはシャットダウンします。  SPがオフラインになった場合に直ちに通知されるパニックアラートを設定します。</block>
   <block id="8bb6ac5b315e8c5f7870d2b02622d4e1" category="cell">次の操作を実行して、システムの電源を入れ直します。…コントローラをシャーシから引き出します。…コントローラを押し込みます。…コントローラの電源を入れ直します。…問題が解決しない場合は、コントローラ モジュールを交換します。</block>
-  <block id="07766d9fa14ba7d6b5cf8861de22d2b5" category="cell">棚ファンが故障しました</block>
   <block id="792b071d459d79421597bd9259dfd4c1" category="cell">シェルフの指定された冷却ファンまたはファン モジュールに障害が発生しました。シェルフ内のディスクに十分な冷却気流が供給されず、ディスク障害が発生する可能性があります。</block>
   <block id="e9c5971b4f7f1ba13f5e003dd03554c9" category="cell">次の修正アクションを実行します。…ファン モジュールが完全に装着され、固定されていることを確認します。注: 一部のディスク シェルフでは、ファンは電源モジュールに統合されています。…問題が解決しない場合は、ファン モジュールを交換してください。…それでも問題が解決しない場合は、 NetAppテクニカル サポートにお問い合わせください。</block>
   <block id="f96ea6956e87428787f316c02a3e369a" category="cell">本体ファンの故障によりシステムが動作不能</block>
@@ -9863,7 +9797,6 @@
   <block id="6bbc6be1e544c6641587b0fdf8d1cffe" category="cell">次の修正アクションを実行します。…「storage aggregate object-store show-space」コマンドを使用して、各FabricPoolストレージ層で使用されているライセンス容量の割合を確認します。…「volume snapshot delete」コマンドを使用して、階層化ポリシーが「snapshot」または「backup」であるボリュームから Snapshot コピーを削除し、スペースを解放します。…クラスターに新しいライセンスをインストールして、ライセンス容量を増やします。</block>
   <block id="330d541d831c0c8ca3957fb4856fbfbe" category="cell">FabricPool のスペース使用制限に達しました</block>
   <block id="828d6635aab125bf04a3bee0c8763889" category="cell">容量ライセンス プロバイダーからのオブジェクト ストアのクラスタ全体のFabricPoolスペース使用量の合計がライセンス制限に達しました。</block>
-  <block id="4c5698d5f23adf829fb938340349bc52" category="cell">集計のギブバックに失敗しました</block>
   <block id="90ef3b1aa5a2888ebadddd69b5d4a207" category="cell">このイベントは、ストレージ フェイルオーバー (SFO) ギブバックの一環としてアグリゲートを移行しているときに、宛先ノードがオブジェクト ストアに到達できない場合に発生します。</block>
   <block id="563de9bd8f4908a679631c394af6b45a" category="cell">次の修正アクションを実行します。…「network interface show」コマンドを使用して、クラスタ間 LIF がオンラインで機能していることを確認します。…宛先ノードのクラスタ間 LIF で「ping」コマンドを使用して、オブジェクト ストア サーバへのネットワーク接続を確認します。  …「aggregate object-store config show」コマンドを使用して、オブジェクト ストアの構成が変更されておらず、ログインおよび接続情報が正確であることを確認してください。…または、giveback コマンドの「require-partner-waiting」パラメータに false を指定してエラーを無効にすることもできます。…詳細またはサポートについては、 NetAppテクニカル サポートにお問い合わせください。</block>
   <block id="26997d5e5bb912bba50e3a785b892e17" category="cell">HA相互接続ダウン</block>
@@ -9896,13 +9829,10 @@
   <block id="174eaebe2f811ec526b3319ed5cd94b4" category="cell">NVMe名前空間のスペース不足</block>
   <block id="6e3884381c11734fb36fc457ab836213" category="cell">スペース不足による書き込み失敗のため、NVMe 名前空間がオフラインになりました。</block>
   <block id="0435182b9ddbd0229c40b478ef141b40" category="cell">ボリュームにスペースを追加し、「vserver nvme namespace modify」コマンドを使用して NVMe 名前空間をオンラインにします。</block>
-  <block id="d7a4b2066d2c4da4f3d6f49662d12570" category="cell">NVMF の猶予期間 - アクティブ</block>
   <block id="9d2cb7cbb953a478326fe27e52285b93" category="cell">このイベントは、NVMe over Fabrics (NVMe-oF) プロトコルが使用されており、ライセンスの猶予期間がアクティブな場合に毎日発生します。ライセンスの猶予期間が終了した後、NVMe-oF 機能にはライセンスが必要になります。ライセンスの猶予期間が終了すると、NVMe-oF 機能は無効になります。</block>
   <block id="65312caab35004589d4b8d533ab5e233" category="cell">営業担当者に連絡して NVMe-oF ライセンスを取得し、それをクラスターに追加するか、クラスターから NVMe-oF 構成のすべてのインスタンスを削除してください。</block>
-  <block id="164be969f890fc7fa4da2230c1657b18" category="cell">NVMF の猶予期間 - 終了</block>
   <block id="456afcff497af1aa5208c6956c56e81b" category="cell">NVMe over Fabrics (NVMe-oF) ライセンスの猶予期間が終了し、NVMe-oF 機能が無効になっています。</block>
   <block id="0c462b6a96423feb2ea0671d7b661539" category="cell">営業担当者に連絡して NVMe-oF ライセンスを取得し、クラスターに追加してください。</block>
-  <block id="79b5e6aa571bc2e88eec585f40c44448" category="cell">NVMe-oF 猶予期間の開始</block>
   <block id="e524afebf6849768adb779a12a127949" category="cell">ONTAP 9.5 ソフトウェアへのアップグレード中に、NVMe over Fabrics (NVMe-oF) 構成が検出されました。ライセンスの猶予期間が終了した後、NVMe-oF 機能にはライセンスが必要になります。</block>
   <block id="21028ac85c66603bccdb5e36033eed7e" category="cell">オブジェクトストアホストが解決できません</block>
   <block id="ed8d632e2bfb1dcc2b90c037d417fdd6" category="cell">オブジェクト ストア サーバーのホスト名を IP アドレスに解決できません。オブジェクト ストア クライアントは、IP アドレスを解決しないとオブジェクト ストア サーバーと通信できません。その結果、データにアクセスできなくなる可能性があります。</block>
@@ -9916,7 +9846,6 @@
   <block id="5d68db61b8ccb746a85eef15b994d95f" category="cell">READDIR タイムアウト</block>
   <block id="94d0326ee69d027aaf3d34c3aa17f8d8" category="cell">READDIR ファイル操作が、 WAFLで実行できるタイムアウトを超えました。これは、ディレクトリが非常に大きいか、またはディレクトリがまばらであるために発生する可能性があります。是正措置をお勧めします。</block>
   <block id="f2550d10b13db66d28dfda36b7eaea84" category="cell">次の修正アクションを実行します。…次の「diag」権限ノードシェル CLI コマンドを使用して、READDIR ファイル操作の有効期限が切れた最近のディレクトリに固有の情報を検索します: wafl readdir notice show。…ディレクトリがスパースとして示されているかどうかを確認します。…ディレクトリがスパースとして示されている場合は、ディレクトリ ファイルのスパース性を削除するために、ディレクトリの内容を新しいディレクトリにコピーすることをお勧めします。  …ディレクトリがスパースとして示されておらず、ディレクトリが大きい場合は、ディレクトリ内のファイル エントリの数を減らして、ディレクトリ ファイルのサイズを小さくすることをお勧めします。</block>
-  <block id="935da7f818cfdec6c28d2e6f6ff9453f" category="cell">集計の再配置に失敗しました</block>
   <block id="e7dc75d0e3386bfcaad6722ce16d8cae" category="cell">このイベントは、集約の再配置中に、宛先ノードがオブジェクト ストアに到達できない場合に発生します。</block>
   <block id="6cdac1740d60a31fda46c61891fa1ad5" category="cell">次の修正アクションを実行します。…「network interface show」コマンドを使用して、クラスタ間 LIF がオンラインで機能していることを確認します。…宛先ノードのクラスタ間 LIF で「ping」コマンドを使用して、オブジェクト ストア サーバへのネットワーク接続を確認します。  …「aggregate object-store config show」コマンドを使用して、オブジェクト ストアの構成が変更されておらず、ログインおよび接続情報が正確であることを確認してください。…または、再配置コマンドの「override-destination-checks」パラメータを使用してエラーを無効にすることもできます。…詳細またはサポートについては、 NetAppテクニカル サポートにお問い合わせください。</block>
   <block id="9773ab800993af6a5bc6195645c6c910" category="cell">シャドウコピーに失敗しました</block>
@@ -9934,14 +9863,6 @@
   <block id="204c2306ca4f4bb7c09f85d28fdc95cb" category="cell">ウイルスが検出されました</block>
   <block id="aa8582c4c58c34070341b5960e4edc7c" category="cell">Vscan サーバーがストレージ システムにエラーを報告しました。これは通常、ウイルスが見つかったことを示します。ただし、Vscan サーバー上の他のエラーがこのイベントの原因となる場合があります。…ファイルへのクライアント アクセスが拒否されました。  Vscan サーバーは、設定と構成に応じて、ファイルを消去したり、隔離したり、削除したりする場合があります。</block>
   <block id="39a107762943f2a3b73c54078d50973e" category="cell">「syslog」イベントで報告された Vscan サーバーのログをチェックして、感染したファイルを正常にクリーンアップ、隔離、または削除できたかどうかを確認します。それができなかった場合、システム管理者が手動でファイルを削除しなければならない可能性があります。</block>
-  <block id="0031016ba9d6e28ef548d4a2f95332e3" category="cell">ボリュームはオフライン</block>
-  <block id="5609b8e3a5a7d588b5e383ca4cbc5c57" category="cell">このメッセージは、ボリュームがオフラインになっていることを示します。</block>
-  <block id="e7536040ed5bedd31b479262b47500e3" category="cell">ボリュームをオンラインに戻します。</block>
-  <block id="d1c6b663baf98044c99cc6d564598639" category="cell">ボリュームは制限状態</block>
-  <block id="c8f1088c9457fdf2989240ba63ef79ec" category="cell">このイベントは、フレキシブル ボリュームが制限されたことを示します。</block>
-  <block id="083dfc3e7cc398a4bc31ef7290a24654" category="cell">ストレージ VM の停止に成功しました</block>
-  <block id="2863895a71d5cb9e33a098ac259eb334" category="cell">このメッセージは、「vserver stop」操作が成功したときに表示されます。</block>
-  <block id="b339435665ff601f5913edea4f10f768" category="cell">'vserver start' コマンドを使用して、ストレージ VM 上のデータ アクセスを開始します。</block>
   <block id="4dfd7227c51557eca5ad760f17b1e3b2" category="cell">ノードパニック</block>
   <block id="60b3e4bcb8a36a9f858c72d83a5d4291" category="cell">このイベントはパニックが発生したときに発行されます</block>
   <block id="7d8b9fd3afbc24d3726d797e23715603" category="cell">NetAppカスタマー サポートにお問い合わせください。</block>
@@ -10032,7 +9953,6 @@
   <block id="c941e3d6c35513ec6bad317f797958dd" category="cell">構成エラーのため、ノードをスケジュールできませんでした。</block>
   <block id="701714f5fbd36524d1a2977a95a150a5" category="cell">構成失敗の原因については、Kubernetes イベント ログを確認してください。</block>
   <block id="278d01e5af56273bae1bb99a98b370cd" category="cell">致命的</block>
-  <block id="0e14c27d69d1477839d9efc8b0ad46f8" category="cell">永続ボリュームの再利用に失敗しました</block>
   <block id="8c8cbcc14840938903ba6a12977112a5" category="cell">ボリュームの自動再利用が失敗しました。</block>
   <block id="f6aad30681bba4322fc5af1af69cf8ef" category="cell">警告 @ &gt; 0 B</block>
   <block id="a01254b5fadca078ea74cbeb0e57fe0c" category="cell">コンテナのCPUスロットリング</block>
@@ -10063,7 +9983,6 @@
   <block id="e5e09bf52d280084c87d12264b756edd" category="cell">警告 @ &gt; 85 % 重大 @ &gt; 90 %</block>
   <block id="74ef7bdeeb51a483e58c7ded021952ed" category="cell">リソースクォータCPU制限を超過しそうです</block>
   <block id="9b8e4b0bb0460afb26f3786cfd249927" category="cell">名前空間の CPU 制限が ResourceQuota を超えようとしています</block>
-  <block id="aa5d59f5b34fcd2e6570cb5b597748ae" category="cell">ポッドクラッシュループバックオフ</block>
   <block id="2f6430566c6afc6ea2ca5b08f5bb7c01" category="cell">ポッドがクラッシュし、複数回再起動を試行しました。</block>
   <block id="3bdafc039774c767282dbe18d44c1c99" category="cell">クリティカル @ &gt; 3</block>
   <block id="147f45a9ef97cc0341380f6f8a1d6e01" category="cell">ノードCPU高</block>
@@ -10073,7 +9992,6 @@
   <block id="9d45c8691c30b49f5f9bb02bd9d560b0" category="cell">TCP RTT（ラウンドトリップタイム）の遅延が高い</block>
   <block id="d7fb4a35576851603f71e722e49b7694" category="cell">ネットワークの輻輳を確認する▒ネットワーク帯域幅を大量に消費するワークロードを特定します。 Pod の CPU 使用率が高くないか確認します。ハードウェアのネットワークパフォーマンスを確認します。</block>
   <block id="5e8fb3d2a2c4c6e442f16a447b6ce44c" category="cell">警告 @ &gt; 150 ms 重大 @ &gt; 300 ms</block>
-  <block id="f51ad3a32d20f12a4aa62f7865c24b05" category="cell">ジョブが失敗しました</block>
   <block id="62cc8941365780e844a7a1a3edfdae70" category="cell">ノードのクラッシュまたは再起動、リソースの枯渇、ジョブのタイムアウト、またはポッドのスケジュール失敗のため、ジョブは正常に完了しませんでした。</block>
   <block id="5ee1a3ccbcd9ac286dece4ebf73be882" category="cell">Kubernetes イベント ログで失敗の原因を確認します。</block>
   <block id="2ec669c0c57f515b14422f2029d0d00c" category="cell">警告 @ &gt; 1</block>
@@ -10102,14 +10020,10 @@
   <block id="7a630b16f340cd744188cfe88ea277e0" category="cell">クラスターCPU飽和度が高い</block>
   <block id="ef9e90b0a74afb98891334eb9c2fec60" category="cell">クラスターの割り当て可能な CPU 飽和度が高くなっています。クラスターの CPU 飽和度は、CPU 使用量の合計をすべての K8s ノード全体の割り当て可能な CPU の合計で割って計算されます。</block>
   <block id="cc3da35abc04bdb599096c76784750c9" category="section-title">変更ログモニター</block>
-  <block id="8f0ea9dc7dd1704f6e4e6e709dc84ec2" category="cell">内部ボリュームを発見</block>
   <block id="5391f9a882a54c787b206138ed6d28b0" category="cell">情報</block>
   <block id="f42080c83d185f44a2df17faa40886d5" category="cell">このメッセージは、内部ボリュームが検出された場合に発生します。</block>
-  <block id="2652a160c7449e6a9d9867ab77272655" category="cell">内部ボリュームが変更されました</block>
   <block id="ff227a947c0e31eac1d84272a0a4148f" category="cell">このメッセージは、内部ボリュームが変更されたときに発生します。</block>
-  <block id="27a24fe47191d9d8388895fa49370e30" category="cell">ストレージノードが検出されました</block>
   <block id="e93b9e33542d91144ab9a9642a3a26a9" category="cell">このメッセージは、ストレージ ノードが検出されたときに表示されます。</block>
-  <block id="cc6843bc6cd1e570e50f7263422a340b" category="cell">ストレージノードが削除されました</block>
   <block id="754ddad2e9ef53ebffdea523a3044181" category="cell">このメッセージは、ストレージ ノードが削除されたときに表示されます。</block>
   <block id="35dfb12aba09ddfaeaa55717279f3093" category="cell">ストレージプールが検出されました</block>
   <block id="ab23bc42353ab4c690e0aedd260bcf22" category="cell">このメッセージは、ストレージ プールが検出されたときに表示されます。</block>
@@ -10118,50 +10032,13 @@
   <block id="cbe58c07baaa017f926c6594715fa74d" category="cell">ストレージ仮想マシンが変更されました</block>
   <block id="7177a13bcf2c1f14bff3599bdff189af" category="cell">このメッセージは、ストレージ仮想マシンが変更されたときに発生します。</block>
   <block id="e1c87fa2897a7e209d3911ea7c640c39" category="section-title">データ収集モニター</block>
-  <block id="db8d9ccfe5ecea7583ec770b7ba8b68f" category="cell">買収ユニットのシャットダウン</block>
-  <block id="199af9ce8ab16e33e98a26add2f43fda" category="cell">Data Infrastructure Insights取得ユニットは、新しい機能を導入するために、アップグレードの一環として定期的に再起動されます。通常の環境では、これは月に 1 回以下発生します。取得ユニットがシャットダウンしたという警告アラートの直後には、新しく再起動された取得ユニットがData Infrastructure Insightsへの登録を完了したことを通知する解決策が続く必要があります。通常、このシャットダウンから登録までのサイクルには 5 ～ 15 分かかります。</block>
-  <block id="c1e22147316e85ab61d0419eba630d75" category="cell">アラートが頻繁に発生する場合、または 15 分以上続く場合は、Acquisition Unit をホストするシステム、ネットワーク、および AU をインターネットに接続しているプロキシの動作を確認してください。</block>
   <block id="98f0032b558f695572ee2c60e17e2d6d" category="cell">データ コレクターのポーリングで予期しない障害状況が発生しました。</block>
   <block id="b76f1f2b697d772825753e542f17de1d" category="cell">状況の詳細については、 Data Infrastructure Insightsのデータ コレクター ページをご覧ください。</block>
   <block id="85cbbe353849360cf65793354f09c95b" category="cell">このアラートは通常、データ コレクターまたはターゲット システムの構成が誤っているために発生する可能性があります。今後のアラートを防ぐために構成を見直してください。また、データ収集者が収集可能なすべてのデータを収集したにもかかわらず、不完全なデータを取得したことが原因である可能性もあります。これは、データ収集中に状況が変化した場合に発生する可能性があります (たとえば、データ収集の開始時に存在していた仮想マシンが、データ収集中、データがキャプチャされる前に削除された場合など)。</block>
   <block id="2745e86ed1540385bf34b3d3a304cd23" category="cell">データ コレクターまたはターゲット システムの構成を確認します。コレクター警告のモニターは他のモニター タイプよりも多くのアラートを送信する可能性があるので、トラブルシューティングを行わない限り、アラート受信者を設定しないことをお勧めします。</block>
-  <block id="15a43b8a93156e727b3b81dc25fd6d32" category="section-title">セキュリティモニター</block>
   <block id="2a63f555989152ba866b43a1faacd680" category="cell">しきい値</block>
-  <block id="37a1ca329a6f5e5dca35632e49074596" category="cell">AutoSupport HTTPS 転送が無効</block>
   <block id="40692fef6f4ef30aa3b500774debd8f7" category="cell">警告 @ &lt; 1</block>
-  <block id="5b4b99885d6c41f784d4353df3954f85" category="cell">AutoSupportは、転送プロトコルとしてHTTPS、HTTP、およびSMTPをサポートします。AutoSupportメッセージは機密性が高いため、NetAppでは、NetAppサポートにAutoSupportメッセージを送信する際のデフォルト転送プロトコルとして、HTTPSを使用することを強く推奨しています。</block>
-  <block id="56e9eb9c60fd63630926841f5a7a0cf3" category="cell">AutoSupportメッセージのトランスポートプロトコルとしてHTTPSを設定するには、次のONTAPコマンドを実行します。…system node autosupport modify -transport https</block>
-  <block id="52c2cd14f22482229a7521ff77cec6e8" category="cell">SSH が安全でない暗号 (例: *cbc で始まる暗号) を使用していることを示します。</block>
-  <block id="af4b3d60f3b2a1b2019c7e6584e05ac0" category="cell">CBC暗号を削除するには、次のONTAPコマンドを実行します。…security ssh remove -vserver &lt;admin vserver&gt; -ciphers aes256-cbc,aes192-cbc,aes128-cbc,3des-cbc</block>
-  <block id="7e7108ba14d9f82f42515d305f9e4773" category="cell">ONTAPシステムにアクセスするユーザーに対してログイン バナーが無効になっていることを示します。ログイン バナーを表示すると、システムへのアクセスと使用に関する期待を確立するのに役立ちます。</block>
-  <block id="9ef097ac170ba2d0a3dbaa80e948d24e" category="cell">クラスタのログインバナーを設定するには、次のONTAPコマンドを実行します:…security login banner modify -vserver &lt;admin svm&gt; -message "Access limited to authorized users"</block>
-  <block id="eff504a7000baa17798b249c97b6a046" category="cell">ディザスタ リカバリ、キャッシュ、またはバックアップの目的でデータをレプリケートする場合は、あるONTAPクラスタから別のONTAPクラスタへの転送時にそのデータを保護する必要があります。暗号化は、ソース クラスターと宛先クラスターの両方で構成する必要があります。</block>
-  <block id="a8b0d51ab1676479b0a39c0ed8b9b9c6" category="cell">ONTAP 9.6 よりも前に作成されたクラスタ ピア関係に対して暗号化を有効にするには、ソースとデスティネーションのクラスタを 9.6 にアップグレードする必要があります。次に、「cluster peer modify」コマンドを使用して、ソース クラスタ ピアと宛先クラスタ ピアの両方がクラスタ ピアリング暗号化を使用するように変更します。詳細については、『 NetAppセキュリティ強化ガイド for ONTAP 9』を参照してください。</block>
-  <block id="144a851e30702c5c68b91e006bbc9af0" category="cell">警告 @ &gt; 0</block>
-  <block id="ab15923d336c9df71683a27a3b88f21b" category="cell">NetApp、lock コマンドを使用して、不要なデフォルトの管理者ユーザー (組み込み) アカウントをロック (無効化) することを推奨しています。これらは主に、パスワードが更新または変更されたことのないデフォルトのアカウントです。</block>
-  <block id="83ded096d536b0a9f273f70c8d46ca18" category="cell">組み込みの「admin」アカウントをロックするには、次のONTAPコマンドを実行します。…security login lock -username admin</block>
-  <block id="5218eaef8a5f3f66d2720b5e8156469d" category="cell">FIPS 140-2 への準拠を有効にすると、TLSv1 と SSLv3 は無効になり、TLSv1.1 と TLSv1.2 のみが引き続き有効になりますONTAPでは、FIPS 140-2への準拠が有効な場合、TLSv1とSSLv3を有効にすることはできません。</block>
-  <block id="96e4a7f4d19cdbf4e4dc1487d9e2089f" category="cell">クラスタでFIPS 140-2準拠を有効にするには、次のONTAPコマンドを詳細権限モードで実行します。…security config modify -interface SSL -is-fips-enabled true</block>
-  <block id="3c84fa81b2128d2870573dd56fceedc3" category="cell">情報の流出を単一のシステムまたはソリューションに限定するためには、syslog情報をオフロードする必要があります。そのため、syslog情報を安全な保管場所にオフロードすることを推奨します。</block>
-  <block id="c7dc508bab528b876e8f8f56ed6c817f" category="cell">ログ転送先を作成したら、そのプロトコルを変更することはできません。暗号化されたプロトコルに変更するには、次のONTAPコマンドを使用してログ転送先を削除して再作成します。…cluster log-forwarding create -destination &lt;destination ip&gt; -protocol tcp-encrypted</block>
-  <block id="b72f6d4281e334d8f1816c4c7b48a190" category="cell">NetApp、 ONTAPユーザー アカウント パスワードには、より安全な SHA-512 ハッシュ関数を使用することを強くお勧めします。安全性の低い MD5 ハッシュ関数を使用しているアカウントは、SHA-512 ハッシュ関数に移行する必要があります。</block>
-  <block id="b830e03eaaefb2ec43a4918402144e73" category="cell">NetAppは、ユーザーにパスワードを変更させることで、ユーザーアカウントをより安全なSHA-512ソリューションに移行することを強く推奨しています。…MD5ハッシュ関数を使用するパスワードでアカウントをロックするには、次のONTAPコマンドを実行します。…security login lock -vserver * -username * -hash-function md5</block>
-  <block id="a4acaf21eebc7bf33475d1bda0f71fb4" category="cell">NTPサーバーが設定されていません</block>
-  <block id="22c5be3ade73c0bbb31961b09d74c93e" category="cell">クラスターに NTP サーバーが構成されていないことを示します。冗長性と最適なサービスを確保するために、 NetApp少なくとも 3 台の NTP サーバーをクラスタに関連付けることを推奨しています。</block>
-  <block id="a3a5af2134056138bdb5aa2d608242c8" category="cell">NTPサーバをクラスタに関連付けるには、次のONTAPコマンドを実行します: cluster time-service ntp server create -server &lt;ntp server host name or ip address&gt;</block>
-  <block id="5edad07c8412daab278c10b18e62e6da" category="cell">NTP サーバ数が不足しています</block>
   <block id="adbc4b7c4cd23e8493bc55219426062f" category="cell">警告 @ &lt; 3</block>
-  <block id="083193cf390aff889ab229381b57bb1b" category="cell">クラスターに構成されている NTP サーバーが 3 台未満であることを示します。冗長性と最適なサービスを確保するために、 NetApp少なくとも 3 台の NTP サーバーをクラスタに関連付けることを推奨しています。</block>
-  <block id="7b5eac97a56d3de62a762976408f1604" category="cell">NTPサーバをクラスタに関連付けるには、次のONTAPコマンドを実行します。…cluster time-service ntp server create -server &lt;ntpサーバのホスト名またはIPアドレス&gt;</block>
-  <block id="3f8b20f5d4c0ae31c0e785a64f88acf6" category="cell">リモート シェルは、 ONTAPソリューションへのコマンド ライン アクセスを確立するための安全な方法ではありません。安全なリモート アクセスを実現するには、リモート シェルを無効にする必要があります。</block>
-  <block id="66b960fff3a2001089c50a4b5cba5aed" category="cell">NetAppは、安全なリモートアクセスのためにセキュアシェル（SSH）を推奨しています。…クラスタでリモートシェルを無効にするには、次のONTAPコマンドを高度な権限モードで実行します。…security protocol modify -application rsh- enabled false</block>
-  <block id="48b5db589e58fb639e7ee3a50e8a1bda" category="cell">SVM の監査ログが無効になっていることを示します。</block>
-  <block id="ff6cebe76939541117e856ec4b111c5c" category="cell">Vserver の監査ログを設定するには、次のONTAPコマンドを実行します:…vserver audit enable -vserver &lt;svm&gt;</block>
-  <block id="caa40d84ac4615bac46decaa416d068f" category="cell">CBC暗号を削除するには、次のONTAPコマンドを実行します。…security ssh remove -vserver &lt;vserver&gt; -ciphers aes256-cbc,aes192-cbc,aes128-cbc,3des-cbc</block>
-  <block id="0c5f0b019f859e20c9cbd4eaf4fc9ff8" category="cell">システム上の SVM にアクセスするユーザーに対してログイン バナーが無効になっていることを示します。ログイン バナーを表示すると、システムへのアクセスと使用に関する期待を確立するのに役立ちます。</block>
-  <block id="0b7726d8daf36aa49b06f7fdaf9721be" category="cell">クラスタのログインバナーを設定するには、次のONTAPコマンドを実行します:…security login banner modify -vserver &lt;svm&gt; -message "Access limited to authorized users"</block>
-  <block id="44335166ddb91bd1291079f3852a7eaf" category="cell">Telnet は、 ONTAPソリューションへのコマンドライン アクセスを確立するための安全な方法ではありません。安全なリモート アクセスのために、Telnet を無効にする必要があります。</block>
-  <block id="afb248522e19d4d05da83ae5f5e6a479" category="cell">セキュアなリモート アクセスを確立するために、Secure Shell（SSH）を推奨します。クラスタ上でTelnetを無効にするには、次のONTAPコマンドを詳細権限モードで実行します。…security protocol modify -application telnet -enabled false</block>
   <block id="a433675536fc11ef74a8e05a9afe38f9" category="section-title">データ保護モニター</block>
   <block id="8067f9dd56568eda9da771d5126fd283" category="cell">LUNスナップショットコピー用のスペースが不足しています</block>
   <block id="c7e5b8e812dd23889ad718547a93510f" category="cell">(フィルター contains_luns = Yes) 警告 @ &gt; 95 %…重大 @ &gt; 100 %</block>
@@ -10201,7 +10078,6 @@
   <block id="e27cdb180c7ac453d55cc5376d484e30" category="cell">次の修正アクションを実行します。「network interface show」コマンドを使用して、クラスタ間 LIF がオンラインで機能していることを確認します。宛先ノードのクラスタ間 LIF 経由で「ping」コマンドを使用して、オブジェクト ストア サーバーへのネットワーク接続を確認します。 「aggregate object-store config show」コマンドを使用して、オブジェクト ストアの構成が変更されておらず、ログインおよび接続情報がまだ正確であることを確認します。あるいは、再配置コマンドの「override-destination-checks」パラメータを使用してエラーを無効にすることもできます。詳細情報やサポートについては、 NetAppテクニカル サポートにお問い合わせください。</block>
   <block id="ba14a826a3059fa0dbf98ba39cdd538f" category="cell">CVO シャドウコピーに失敗しました</block>
   <block id="5793b85483d6f4727031f8cd27c2a2f8" category="cell">イベント メッセージに提供される情報を使用して、次の点を確認します。シャドウ コピー構成は有効になっていますか? 適切なライセンスがインストールされていますか? シャドウ コピー操作はどの共有で実行されますか? 共有名は正しいですか? 共有パスは存在しますか? シャドウ コピー セットとそのシャドウ コピーの状態はどうなっていますか?</block>
-  <block id="15e4f602af2b3fd276e8c1abb3e1d24c" category="cell">CVO ストレージ VM の停止に成功しました</block>
   <block id="4df327f108f33e6c2500a7f538a648ad" category="cell">CVO CIFS 認証が多すぎる</block>
   <block id="6da8b96955c7e59e295e11c0f211341a" category="cell">CVO 未割り当てディスク</block>
   <block id="0e932fe140878dddad130030e4c54088" category="cell">次の修正アクションを実行します。「disk show -n」コマンドを使用して、割り当てられていないディスクを特定します。  「disk assign」コマンドを使用してディスクをシステムに割り当てます。</block>
@@ -10209,8 +10085,6 @@
   <block id="daf241abd3ddf3fdcfcac4e97128f387" category="cell">次の修正アクションを実行します。指定されたユーザー名と IP アドレスがアクティブな Vscan スキャナー プールの 1 つに設定されていることを確認します。  「vserver vscan scanner pool show-active」コマンドを使用して、現在アクティブなスキャナ プールの構成を確認します。</block>
   <block id="e57596d14b25baac52672fc309c8a58d" category="cell">CVOウイルスが検出されました</block>
   <block id="5431a7feb1f4bd20d2eb82e67431449e" category="cell">Vscan サーバーがストレージ システムにエラーを報告しました。これは通常、ウイルスが見つかったことを示します。ただし、Vscan サーバー上の他のエラーによってこのイベントが発生する場合があります。ファイルへのクライアント アクセスが拒否されました。  Vscan サーバーは、設定と構成に応じて、ファイルを消去したり、隔離したり、削除したりする場合があります。</block>
-  <block id="4263cc2b53ae23f9cc6cf513a43b5e97" category="cell">CVOボリュームオフライン</block>
-  <block id="28b914f56ac8ad6ac5c0eb77527d0023" category="cell">CVO ボリューム制限</block>
   <block id="eab883150545736105e8c88087257995" category="section-title">SnapMirror for Business Continuity (SMBC) メディエーター ログ モニター</block>
   <block id="e0828fd72232d137dafad759271fe0fb" category="cell">ONTAPメディエーターが追加されました</block>
   <block id="46f05e41dafc7ca3fdb415dafaeadb9f" category="cell">このメッセージは、 ONTAP Mediator がクラスタに正常に追加されたときに表示されます。</block>
@@ -10270,16 +10144,13 @@
   <block id="fa2aee1bf59ed6d5ebff3672ad78e52a" category="cell">MetroClusterパートナーがピアリング ネットワーク経由でアクセスできない</block>
   <block id="e6ec28e0e2e9208013c2e1058800db86" category="cell">ピア クラスターへの接続が切断されました。</block>
   <block id="05b8acf883dfe256f5f39ca4014b54e1" category="cell">1) ポートが正しいネットワーク/スイッチに接続されていることを確認します。  2) クラスタ間 LIF がピア クラスタに接続されていることを確認します。 3) コマンド「cluster peer ping」を使用して、ピア クラスターが起動して実行されていることを確認します。ピア クラスタがダウンしている場合は、『 MetroClusterディザスタ リカバリ ガイド』を参照してください。</block>
-  <block id="4dcdd54705c7f20f01f094ab656a606f" category="cell">MetroClusterスイッチ間全リンクダウン</block>
   <block id="dc1ca76dfb1a12b26b8ce316f73ee2a3" category="cell">ストレージ スイッチ上のすべてのスイッチ間リンク (ISL) がダウンしています。</block>
   <block id="e83ac7645eb0fb1a3121d41f1adf11f1" category="cell">1) ストレージ スイッチ上のバックエンド ファブリック ISL を修復します。  2) パートナー スイッチが起動しており、その ISL が動作していることを確認します。  3) xWDM デバイスなどの中間機器が動作していることを確認します。</block>
   <block id="f0fa6605991a363821e648872f19cb87" category="cell">MetroClusterノードからストレージスタックへのSASリンクがダウンしています</block>
   <block id="73b3e7056192ed906edba7d7ad84556e" category="cell">SAS アダプタまたはそれに接続されたケーブルに障害がある可能性があります。</block>
   <block id="ca42f2db2956c3a6e8687e547b7dbe5b" category="cell">1.SAS アダプターがオンラインで実行されていることを確認します。2.物理的なケーブル接続が安全で動作していることを確認し、必要に応じてケーブルを交換します。3.  SAS アダプタがディスク シェルフに接続されている場合は、IOM とディスクが正しく取り付けられていることを確認します。</block>
-  <block id="fed1c67608dbad055a6c51bd844faeaf" category="cell">MetroClusterFCイニシエータリンクダウン</block>
   <block id="f4d347eaffdab4f74c5bac9af605ee25" category="cell">FC イニシエーター アダプターに障害があります。</block>
   <block id="763b81593b10cd91332e0da906323146" category="cell">1.FC イニシエーター リンクが改ざんされていないことを確認します。2.  「system node run -node local -command storage show adapter」コマンドを使用して、FC イニシエーター アダプターの動作ステータスを確認します。</block>
-  <block id="4a2ab00572700e82bc134c3cf18ddd3a" category="cell">FC-VIインターコネクトリンクダウン</block>
   <block id="007d6763a46a9f1013a702b54eb3e48a" category="cell">FC-VI ポート上の物理リンクがオフラインです。</block>
   <block id="3c8a727a341f3e65ef21972bd2e00049" category="cell">1.FC-VI リンクが改ざんされていないことを確認します。2. 「metrocluster interconnect adapter show」コマンドを使用して、FC-VI アダプタの物理ステータスが「Up」であることを確認します。3.構成にファブリック スイッチが含まれている場合は、それらが正しくケーブル接続され、構成されていることを確認します。</block>
   <block id="49eb4f5d51469f3666ba8cef7c6482dd" category="cell">MetroCluster で残ったスペア ディスクあり</block>
@@ -10302,9 +10173,6 @@
   <block id="bee46e725a4b2634d2b0af990cc98636" category="cell">1) コマンド「storage switch show -cooling」を使用して、ストレージ スイッチの温度センサーの動作状態を確認します。  2) スイッチが推奨温度条件下で動作していることを確認します。</block>
   <block id="beba9a3364681a5dd20427689e22618f" category="cell">MetroClusterスイッチの温度異常</block>
   <block id="b028c784c093a8b250f028da81cd5ac3" category="cell">ファイバー チャネル スイッチの温度センサーが異常な温度を報告しました。</block>
-  <block id="0a5d3748314cee07227ff41a58fcb820" category="cell">サービス プロセッサのハートビートが失われました</block>
-  <block id="89e7dd1914bc7aa7ba651383b401c5a7" category="cell">このメッセージは、 ONTAP がサービス プロセッサ (SP) から予期される「ハートビート」信号を受信しなかった場合に表示されます。このメッセージとともに、 SPからのログ ファイルがデバッグ用に送信されます。  ONTAP はSPをリセットして通信を復元しようとします。  SPは再起動中、最大 2 分間使用できなくなります。</block>
-  <block id="2b93885e6e9208541e7be2c4b663ce47" category="cell">NetAppテクニカル サポートにお問い合わせください。</block>
   <block id="dfb150a2ee53ff74afcec025a2b94753" category="cell">サービス プロセッサのハートビートが停止しました</block>
   <block id="79a80b3a6c91f0ab618fa82137244bac" category="cell">このメッセージは、 ONTAP がサービス プロセッサ (SP) からハートビートを受信しなくなったときに表示されます。ハードウェアの設計に応じて、システムはデータの提供を継続するか、データの損失やハードウェアの損傷を防ぐためにシャットダウンすることを決定する場合があります。システムは引き続きデータを提供しますが、 SPが動作していない可能性があるため、ダウンしたアプライアンス、ブート エラー、または Open Firmware (OFW) 電源投入時セルフテスト (POST) エラーに関する通知を送信できません。システムがそのように構成されている場合、 AutoSupport (または「コール ホーム」) メッセージが生成され、 NetAppテクニカル サポートと構成された送信先に送信されます。  AutoSupportメッセージが正常に配信されると、問題の特定と解決が大幅に改善されます。</block>
   <block id="8a80e3e94ba0d624e0fb3ffcc89f4fc9" category="cell">システムがシャットダウンした場合は、ハードパワーサイクルを試してください。コントローラをシャーシから引き出し、押し戻して、システムの電源を入れます。電源を入れ直しても問題が解決しない場合、または他に注意が必要な状況がある場合は、 NetAppテクニカル サポートにお問い合わせください。</block>
@@ -10345,7 +10213,6 @@
   <block id="5b54c3b04831265b1d859da4050ad35f" category="paragraph">追加のサポート情報は、Data Infrastructure Insightsから入手できます。<block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block>ページ。</block>
   <block id="90c8925e0cc3bad3ddb84b5af67af65a" category="paragraph">アクティブなData Infrastructure Insightsサブスクリプションをお持ちの場合は、次のサポート オプションを使用できます。</block>
   <block id="0af89698bf5d1150026d4fcbbcf784a6" category="inline-link-macro">サポートチケット</block>
-  <block id="b0441ab0b89b994706e83faa77bbe107" category="paragraph"><block ref="5924baf98227cb4c4a870a2369035bbd" category="inline-link-macro-rx"></block> <block ref="de1cde84399fb2a6056b099cf302293f" category="inline-link-macro-rx"></block></block>
   <block id="d51985e049703c2b8608d2bdcb0a3479" category="inline-link">Data Infrastructure Insightsサポートドキュメント</block>
   <block id="e7611d76087ecbbfabb3ffdc7d9b6c93" category="paragraph">詳細については、<block ref="e02ff98dd704948b513a359b140be8d8" category="inline-link-rx"></block> 。</block>
   <block id="8cc7620b98f53d4670d8d98f87e96bb6" category="summary">取得ユニットの問題に関するトラブルシューティングのヒント。</block>
@@ -10482,11 +10349,8 @@
   <block id="72238c7fba52a89cb558ec81f9614e14" category="list-text">変更するデータ コレクターの左側にあるチェック ボックスをクリックします。</block>
   <block id="7160ed89dc0c3f9785f3ac5000cec931" category="list-text">右側のオプション メニューで、実行するオプションをクリックします。</block>
   <block id="2b50467575ea0e31ee278faf3e0f67a9" category="paragraph">選択した操作はデータ コレクターに対して実行されます。データ コレクターを削除することを選択した場合、アクションの確認を求めるダイアログが表示されます。</block>
-  <block id="7eb410d92e2a18ab21dc72d9c0d990b0" category="summary">作成されたクエリの表示</block>
   <block id="0a1aca0ce8e56ded0adb600f66ec2de7" category="doc">クエリの表示</block>
-  <block id="1fc205cf7c624c62075df4662909d53d" category="paragraph">クエリを表示して資産を監視したり、クエリで資産に関連するデータを表示する方法を変更できます。</block>
   <block id="dfd32f627ae209fae0647c664a4c742a" category="list-text">Data Infrastructure Insightsテナントにログインします。</block>
-  <block id="312b02ceebedb57357854deed0127398" category="list-text">*クエリ*をクリックし、*すべてのクエリを表示*を選択します。次のいずれかの方法で、クエリの表示方法を変更できます。</block>
   <block id="d4cc08b1b6376cdc52281fccf8a163b7" category="list-text">フィルター ボックスにテキストを入力して検索し、特定のクエリを表示できます。</block>
   <block id="a0d1f1cd90b97eb951e193ad01d6679d" category="list-text">列ヘッダーの矢印をクリックすると、クエリ テーブル内の列の並べ替え順序を昇順 (上矢印) または降順 (下矢印) に変更できます。</block>
   <block id="fa2a3440e30dd958c3218bca7dd89b7f" category="list-text">列のサイズを変更するには、青いバーが表示されるまで列ヘッダーの上にマウスを置きます。マウスをバーの上に置き、右または左にドラッグします。</block>
@@ -11324,9 +11188,7 @@
   <block id="949cc8d1af819d8e6ec37390121bfa5f" category="section-title">ONTAP Autonomous Ransomware Protection を有効にする（オプション）：</block>
   <block id="67a5e480424bf6f9914a3b18393465e6" category="paragraph">セキュリティダッシュボードでは、ハードウェアおよびソフトウェアによるボリューム暗号化、ファイル改ざん対策の状況、クラスター認証方法などのグラフが表示され、現在のセキュリティ状況を瞬時に確認できます。セキュリティ基準は、<block ref="a1c84b5f46cbbd9a263e3a5732ed7485" category="inline-link-macro-rx"></block>で定義された推奨事項に基づいて評価されます。</block>
   <block id="7b46122c94da7a23999d34f71661a1c2" category="paragraph">暗号化またはファイル改ざん防止カウントのいずれかを選択して、環境を詳しく調べます。</block>
-  <block id="07a15244af601ef7f53e10ad7cf2a65e" category="summary">インベントリ資産と統合メトリックを照会して、ストレージ、コンピューティング、ネットワーク リソースを含むインフラストラクチャ全体のパフォーマンスを監視、トラブルシューティング、分析します。</block>
   <block id="c1dac515d770b50607db68702d91b2dd" category="doc">アセットとメトリクスのクエリ</block>
-  <block id="c154de8d96ee3aafd9f63d6d8b3821af" category="paragraph">インフラストラクチャの物理資産と仮想資産をクエリすることで、パフォーマンスの監視、問題のトラブルシューティング、注釈などのカスタム基準に基づいたきめ細かな検索を実行できます。Data Infrastructure Insightsは、ストレージアレイやホストからアプリケーションや仮想マシンまで、多様な資産タイプを対象としたクエリに加え、Kubernetes、Docker、ONTAP Advanced Dataの統合メトリクスも提供し、包括的な可視性を実現します。</block>
   <block id="a4814d069f57e94e2edb62e919af014a" category="paragraph">アセットに自動的にアノテーションを割り当てるアノテーション ルールを使用するには、クエリを全員に共有する必要があります。クエリの共有の詳細については、以下をご覧ください。</block>
   <block id="0ee1f19142dfe0c3765dfcf205abe414" category="paragraph">すべてのインベントリ（インフラストラクチャとも呼ばれる）アセット タイプ（ストレージ、スイッチ、VM、アプリケーションなど）は、クエリ、ダッシュボード ウィジェット、カスタマイズされたアセット ランディング ページで使用できます。フィルター、式、表示に使用できるフィールドとカウンターは、アセット タイプによって異なります。</block>
   <block id="b4ca152efced4e02c83a7d308fb6c8f9" category="section-title">クエリの共有</block>
@@ -12287,7 +12149,6 @@
   <block id="6a46079dd2d659655fc832470519e71a" category="paragraph">ユーザーが次回ログイン時のみメッセージを表示するか、以降のすべてのログイン時にメッセージを表示するかを選択してください。</block>
   <block id="1ef61a1b7e25b910ec7beca0741bd208" category="paragraph">ログインメッセージを閉じるには、ユーザーがログインメッセージを承認する必要があることに注意してください。一度閉じると、それ以降のポップアップ（新機能の更新、利用規約の更新など）が表示されます。</block>
   <block id="38f64824b0d19083b9c439a8b4af41e4" category="admonition">サーバー/VMにエージェントをインストールしたら、Data Infrastructure Insightsは設定したデータコレクタからの収集に加えて、そのシステムからのメトリクスも収集します。これらのメトリクスは「ノード」メトリクスとして収集されます。</block>
-  <block id="7fa36585f976625a51b4f3be0f46f0b5" category="cell">カスタムまたはプライベートなDockerリポジトリを使用しており、Kubernetes Monitoring Operatorがそれを正しく認識するようにまだ設定されていない場合、これらのエラーが発生する可能性があります。<block ref="2d47cbc88497421e2fe69677ce7d4cef" category="inline-xref-macro-rx"></block>カスタム/プライベートリポジトリの設定について。</block>
   <block id="f02e4a9177c27a051b895699ea0110ce" category="inline-link-macro">LDAP Explorer</block>
   <block id="d13806041219cf369ed889a6ff834216" category="inline-link-macro">Java LDAP Explorer</block>
   <block id="32b7ad0935b353d5c424244711c6c8cd" category="list-text">LDAPサーバーに接続できる任意の Windows マシンに<block ref="bdc822b7c7d5a07392a373c8455d25e9" category="inline-link-macro-rx"></block>または<block ref="21af31fb3fc4369ed8be68bf76e0e99a" category="inline-link-macro-rx"></block>をインストールしてください。</block>
@@ -15173,4 +15034,120 @@
   <block id="d23e4282924871b1db7a3f3eb6eda8b8" category="paragraph">AUがDIIへの接続を試みてもブロックされている場合は、プロキシに以下のエンドポイントを追加してみてください。</block>
   <block id="5d8be06cd693cc8e589d6313aebab4bf" category="inline-link-macro">コンソールセットアップ管理者</block>
   <block id="43770a02cdae19a089a9b34e2c93ce43" category="paragraph">必要な特定のNetApp Console プロキシエンドポイントは、<block ref="bbcee94e258ef7cfd197d85f372a9f11" category="inline-link-macro-rx"></block>ドキュメントに記載されています。</block>
+  <block id="360c3e2bdfb29611e7cb4e0809bc32e6" category="summary">適切な指標を見つける方法、アセットを効果的にフィルタリングする方法、ウィジェットを設定して強力で洞察力のあるダッシュボードを作成するためのベストプラクティスを学びます。</block>
+  <block id="3361178ead9ae6c3a174afb325ec54bd" category="paragraph">適切な指標を見つけ、資産を効果的にフィルタリングし、最大限の洞察を得るためにウィジェットを設定するための実績のある戦略を用いて、ダッシュボード作成をマスターしましょう。これらのベストプラクティスは、実用的なインフラストラクチャ情報を提供する、より効果的なダッシュボードを構築するのに役立ちます。</block>
+  <block id="59164f52f355b323b962bffa988b27eb" category="summary">ウィジェットのカスタマイズ、クエリのフィルタリング、変数の設定、データ変換、書式設定オプションなど、高度なダッシュボード機能を習得し、強力で柔軟なビジュアライゼーションを作成します。</block>
+  <block id="bea93c02d181fd291a218278c1717fda" category="paragraph">高度な機能とカスタマイズオプションを活用して、ダッシュボードの可能性を最大限に引き出しましょう。ウィジェットクエリの設定方法、データ変換の適用方法、動的フィルタリングのための変数の使用方法、高度な書式設定の実装方法を学び、インフラストラクチャ監視のニーズに合わせた、非常に効果的な視覚化を作成しましょう。</block>
+  <block id="7cac2016b152581772b16a008ff30566" category="summary">柔軟なウィジェットを使用してカスタムダッシュボードを作成し、インフラストラクチャデータを視覚化したり、パフォーマンスの傾向を監視したり、特定の監視ニーズに合わせた運用ビューを構築したりできます。</block>
+  <block id="d309e1424628d56e19aa8d8a9d81d90f" category="paragraph">業務に関する最も必要な洞察を提供するカスタムダッシュボードを作成します。テーブル、チャート、ゲージ、プロットなど、複数のウィジェットタイプから選択して、インフラストラクチャデータを思い通りに視覚化することで、より良い意思決定とより効果的な監視が可能になります。</block>
+  <block id="591d8f5600329f62ec84fffa17e17ce1" category="summary">ギャラリーから事前に作成されたダッシュボードをインポートして、ビジネスに関する洞察を迅速に得たり、エクスポートしたカスタムダッシュボードをインポートして、テナント間で設定を共有したりできます。</block>
+  <block id="2c7ac9dd8d7362f5fe59ebcb27cd1be2" category="paragraph">ギャラリーから事前に作成されたダッシュボードにアクセスして、インフラストラクチャに関する洞察をすばやく得たり、他のテナントからエクスポートしたカスタムダッシュボードをインポートしたりできます。ギャラリーダッシュボードは、お客様の環境のデータコレクタに合わせてカスタマイズされ、特定のビジネス上の疑問に答えるように設計されています。一方、エクスポートされたダッシュボードを使用すると、複数のテナント間で有用な設定を共有できます。</block>
+  <block id="a4fd59f2baa5f0c1e51b3feed01dbd00" category="paragraph">Data Infrastructure Insights は、Kubernetes 環境向けに、包括的なネットワークパフォーマンス監視機能と視覚的なマッピング機能を提供します。ワークロードの依存関係、ネットワーク遅延、トラフィックフローをリアルタイムで可視化することで、パフォーマンスの問題を事前に特定し、詳細なトラフィック分析を通じてコストを最適化します。</block>
+  <block id="4c20a220f150682167ce674fb852744f" category="summary">物理および仮想インフラの資産と統合メトリクスをクエリして、パフォーマンスを監視し、問題をトラブルシューティングし、詳細な検索条件を使用して環境の対象ビューを作成します。</block>
+  <block id="6455e55cfb4d96f13420d6323f937903" category="paragraph">クエリを使用して、インフラストラクチャの資産とメトリクスを詳細なレベルで検索および分析します。物理および仮想のインベントリ資産、Kubernetes と ONTAP からの統合データ、およびパフォーマンスメトリクスをクエリして、環境を監視し、問題をトラブルシューティングし、特定の条件に基づいたターゲットビューを作成します。</block>
+  <block id="9be41d01c0e4296943b2981eb5d1e292" category="paragraph">Data Infrastructure Insights は、セルフサービスリソース、コミュニティフォーラム、ドキュメント、および技術サポートを含む包括的なサポートオプションを提供します。「ヘルプ」＞「サポート」を選択してこれらのサポートリソースにアクセスし、サポート利用権を有効化することで、ウェブチケットや電話サポートによる完全な技術支援をご利用いただけます。</block>
+  <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link-macro">NetAppサポート サイト</block>
+  <block id="bfdeb0b1a501e277287d76f249de138e" category="paragraph">サポートをリクエストするには、<block ref="eeb4544bea4a2953d42cc0bd7cbc394b" category="inline-link-macro-rx"></block> にアクセスしてください。有効な Data Infrastructure Insights サブスクリプションが必要です。</block>
+  <block id="bf34b52f65c53866b4ec56b6f1714223" category="paragraph">Data Infrastructure Insights ストレージワークロードセキュリティ（旧称 Cloud Secure）は、高度な内部脅威検出と実用的なインテリジェンスにより、組織のデータを保護します。ハイブリッドクラウド環境全体にわたるすべての企業データアクセスを一元的に可視化および制御し、リアルタイム監視機能と自動応答機能を通じてセキュリティとコンプライアンスの目標を確実に達成します。</block>
+  <block id="c7487c4e4534fe6c3464b603a644b500" category="summary">ダッシュボードの表示設定とアクセス権限を、柔軟な共有オプションで制御できます。ダッシュボードを非公開にしたり、特定のユーザーと共有したり、組織全体で利用できるように設定したりできます。</block>
+  <block id="fe38a85740db115acf23f72798135dfd" category="paragraph">柔軟なアクセス管理オプションを使用して、ダッシュボードの表示と変更ができるユーザーを制御します。ダッシュボードの開発中は非公開にし、開発後に特定のユーザーまたは組織全体と共有する際に、編集権限や読み取り専用権限をカスタマイズして設定することで、機密情報を保護しつつコラボレーションを可能にします。</block>
+  <block id="f8fb89be068ab163a2891fc505a03646" category="summary">Data Infrastructure Insights の構成、デバイスサポート、環境への影響、権限、およびデータ収集機能に関するよくある質問。</block>
+  <block id="9b036e8159b72a8f04cf9a3452597d92" category="summary">パフォーマンス、容量、構成、コンポーネントのアラートを組み合わせた包括的な監視により、ストレージ環境の状態を統合的に把握し、実用的なヘルススコアを得ることができます。</block>
+  <block id="98d14e0c7232b67fa30cbdfc0ccdc94f" category="paragraph">Data Infrastructure Insights は、パフォーマンス、容量、構成、コンポーネントの状態を追跡することで、ストレージ環境の健全性を監視します。このシステムは、これらのカテゴリ全体にわたる監視アラートから統合された健全性スコアを算出し、システムの状態を明確に可視化し、問題の事前解決を可能にします。</block>
+  <block id="92eb58147380e57ed0e9726e5914646a" category="summary">APIを介してレポートデータベースに直接アクセスすることで、Cognosを介さずに、カスタム統合、自動レポート作成、高度なデータ分析ワークフローを実現できます。</block>
+  <block id="27eebcb84b54165e408af0cba31f697e" category="paragraph">Data Infrastructure Insights レポートデータベースに OData v4 準拠の API を介して直接アクセスし、Cognos インターフェースをバイパスすることで、より高い柔軟性を実現します。これにより、インフラストラクチャデータへのプログラムによるアクセスが必要なユーザー向けに、カスタム統合、自動レポートワークフロー、および高度なデータ分析が可能になります。</block>
+  <block id="c7005dd6d6baf2982e5d9ffcb829cb28" category="paragraph">Data Infrastructure Insights レポート API は、レポートデータベースへのクエリに<block ref="3174809a10586791538fc9a640526e27" category="inline-link-macro-rx"></block>（Open Data Protocol）標準に従っています。詳細については、OData に関する<block ref="e667935284fd58d7e65ea97109344a3b" category="inline-link-macro-rx"></block>をご覧ください。</block>
+  <block id="4caa1214bcf7947aa3b1944f2b627f8e" category="summary">容量利用率、パフォーマンス傾向、リソース予測に関する包括的なレポートを通じて、一元化されたストレージ管理の洞察にアクセスし、プロアクティブなデータセンター管理を実現します。</block>
+  <block id="7617e0ee693b6e3d48a8d71a2e0aee6e" category="paragraph">ストレージマネージャーダッシュボードは、包括的なレポート機能と視覚化機能を通じて、ストレージ環境に関する一元的な情報を提供します。容量利用状況を監視し、時間の経過に伴うパフォーマンスの傾向を追跡し、現在の指標を許容範囲と比較することで、データセンターの保守とリソース計画に関する情報に基づいた意思決定を行うことができます。</block>
+  <block id="566a0119aeca075a5a16257cf100e3a3" category="paragraph">NetAppのプライバシーとセキュリティの詳細については、* NetApp <block ref="696d614201d0fb092abe2954dcea54e5" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="31c512270381a100a1d6ed5460e4382a" category="cell">カスタムまたはプライベートなDockerリポジトリを使用しており、Kubernetes Monitoring Operatorがそれを正しく認識するようにまだ設定されていない場合、これらのエラーが発生する可能性があります。<block ref="64c2e35c96e92fc99426098fae703fff" category="inline-xref-macro-rx"></block>カスタム/プライベートリポジトリの設定について。</block>
+  <block id="f554903b3d1b286e454f891763c81da9" category="list-text">_Anomaly Detection_ は、データのパターン変化を監視してアラートを発します。</block>
+  <block id="9051434637cfa9e248de3baeb318a490" category="list-text">_Attribute_ モニターは、オブジェクトを新しいデータセンターに移動するなど、オブジェクトの属性の変更についてアラートを発します。</block>
+  <block id="385b67ab6ca42f248cf191cad11f8590" category="section-title">属性モニター</block>
+  <block id="14f027f6cd5c2f1c17833aa6882d000c" category="paragraph">属性モニターは、データセンター間で資産が移動した場合、ストレージプールが暗号化されていない場合、または属性に変更が生じた場合に、チームに自動的にアラートを送信します。これは構成の基準値を維持するのに役立ち、新規導入や変更の際に何も見落とされないようにするのに役立ちます。</block>
+  <block id="e3c72e67d753ce9f092e160bc745ccd6" category="paragraph">オブジェクトの種類を選択し、変更を監視する属性を選択するだけです。</block>
+  <block id="94b5c603b94ad9953cbb1dee2b4cf954" category="summary">きめ細かな制御、柔軟なグループ化、カスタマイズ可能な結果表示により、インフラストラクチャ資産とメトリクスを検索、フィルタリング、分析するためのカスタムクエリを作成できます。</block>
+  <block id="18c106fcc3adf5472ab98c7333036047" category="paragraph">柔軟なフィルタリング、グループ化、ソート機能を備え、インフラストラクチャ資産をきめ細かく検索するための強力なクエリを作成できます。特定の資産を特定し、パフォーマンス指標を分析し、必要な方法で結果を整理するのに役立つ、ターゲットを絞った検索を作成できます。</block>
+  <block id="140ffb892893627ffc9fe504721da885" category="summary">仮想マシンとストレージのメトリックを比較する表、グラフ、ウィジェットを備えた仮想マシンパフォーマンスダッシュボードを作成するためのステップバイステップチュートリアル。</block>
+  <block id="ab07f57b30eb8bfa03c5353bf0016559" category="paragraph">このステップバイステップのチュートリアルを通して、包括的な仮想マシンパフォーマンスダッシュボードを作成する方法を学びましょう。VMのパフォーマンスデータを視覚化するウィジェットを作成し、バックエンドのストレージメトリクスとフロントエンドのVMパフォーマンスを比較し、VMのレイテンシとI/O需要の関係を分析することで、より優れた運用上のインサイトを得ることができます。</block>
+  <block id="ff069b0a3c4d8c2f8a9816ed0e951337" category="summary">クエリ結果、ダッシュボードテーブル、ランディングページ、その他のデータを .CSV ファイルにエクスポートし、非同期処理を使用して外部分析、レポート作成、および他のアプリケーションとの統合に活用できます。</block>
+  <block id="402a392b30b81bdfa286400172e0fc99" category="paragraph">クエリ、ダッシュボードテーブルウィジェット、ランディングページテーブルからデータを.CSVファイルにエクスポートし、外部分析、レポート作成、および他のアプリケーションとの統合に活用できます。非同期エクスポート処理により、大規模なデータセットがバックグラウンドで処理されている間も、作業を継続できます。</block>
+  <block id="506effe79d088ec72f206c9cf4f7f9ca" category="summary">条件や列を変更することで既存のクエリを修正でき、更新、名前変更、新規バージョン作成のための柔軟な保存オプションに加え、不要になったクエリを削除するオプションも用意されています。</block>
+  <block id="8966db8d38f674ca3e6a673d94ec0ba0" category="paragraph">検索条件の変更、列の追加または削除、柔軟な保存オプションの選択などにより、クエリを効果的に管理できます。既存のクエリを更新したり、新しいバージョンを作成したり、不要になったクエリを削除したりすることで、クエリライブラリを整理し、最新の状態に保つことができます。</block>
+  <block id="41e83d18322dbc5aaec1132a91237362" category="summary">クエリベースの一括操作を使用して、複数のアセットにわたるアプリケーションと注釈を効率的に管理し、手動で個々のアセットを設定することなく、割り当てや削除を行うことができます。</block>
+  <block id="03b78fe010c338397f7f3d3d5552158e" category="paragraph">クエリを使用してアプリケーションとアノテーションに対して一括操作を実行することで、資産管理を効率化できます。各アセットを個別に手動で設定する代わりに、単一の操作で複数のアセットグループにわたって複数のアプリケーションやアノテーションを効率的に割り当てたり削除したりできます。</block>
+  <block id="3fd3992b7814181d5cae4fccfbb115de" category="summary">テキスト選択またはワンクリックコピーを使用してテーブルの値をクリップボードにコピーすることで、検索フィールドや外部アプリケーションへの効率的なデータ転送が可能になります。</block>
+  <block id="0beec3ed86f34c564a2f6cdac9dffe96" category="paragraph">テーブルの値を直接クリップボードにコピーして、検索や外部アプリケーションで使用できるようにすることで、ワークフローを効率化できます。アセットリンクを含む単一値フィールドについては、手動でのテキスト選択、または便利なワンクリックコピーのいずれかを選択してください。</block>
+  <block id="385c4d3dc67a15a19f56a119c562c877" category="summary">メトリック、ログ、属性、およびデータ収集条件について、システム定義のモニターを確認してください。</block>
+  <block id="4da647a72f089c854caa1635f4cd707d" category="paragraph">Data Infrastructure Insights には、メトリクス、ログ、属性、およびデータ収集条件に関するシステム定義のモニターが含まれます。利用可能なシステムモニターは、テナントに存在するデータコレクターによって異なります。そのため、Data Infrastructure Insights で利用可能なモニターは、データコレクターの追加や設定変更に伴い、変更される場合があります。</block>
+  <block id="fbaaf41d1a467f87cb5015ab3f6670b9" category="paragraph">システム定義のモニターは、事前に定義されたメトリックまたは属性と条件、およびデフォルトの説明と是正措置で構成されており、これらは変更できません。システム定義のモニターの通知受信者リストは変更できます。メトリクスや属性、条件、説明、是正措置を表示したり、受信者リストを変更したりするには、システム定義の監視グループを開き、リスト内の監視名をクリックします。</block>
+  <block id="94a7feec744d5934cb5393c1a80098cb" category="list-text">*CVOインフラストラクチャ*および*CVOワークロードの例*には、Cloud Volumes ONTAPに対応するモニターが含まれています。</block>
+  <block id="77a7f7cf9e0ac7f6a7e0aac32103d597" category="list-text">デフォルト設定はモニターによって異なります。通知を有効にする前に、以下の表を参照してモニターを確認してください。</block>
+  <block id="769fced2b5a3129c69f11bd969250729" category="cell">ONTAPボリューム容量フル</block>
+  <block id="15bdba2f70b788ec5d95d638ac4f39f2" category="cell">シェルフファンが故障しました</block>
+  <block id="f5c981b9c914bdb991c7ddeb629ab22d" category="cell">ストレージプールの返却に失敗しました</block>
+  <block id="296717e41f92fc3d5f59ae7fbd5899ca" category="cell">NVMe-oFライセンス猶予期間有効</block>
+  <block id="70ca5c6482ee7c6c0c23593e229f0d48" category="cell">NVMe-oFライセンスの猶予期間が終了しました</block>
+  <block id="26f823d1d9ca59c28581f624495f382d" category="cell">NVMe-oFライセンス猶予期間開始</block>
+  <block id="755353c7d5c0cfa9bced40370d1e5027" category="cell">ストレージプールの再配置に失敗しました</block>
+  <block id="ae9bdf5310b28f8592f7eb4497d4d467" category="cell">Kubernetes永続ボリュームの解放に失敗しました</block>
+  <block id="d48a02a28387c063ae4d2401607d0a97" category="cell">Kubernetes ポッド クラッシュ ループ バックオフ</block>
+  <block id="21c2be0338cc7660ab0c80fc36e87583" category="cell">Kubernetesジョブが失敗しました</block>
+  <block id="2a11d3d9c8439be52c30f18a0c0471ce" category="cell">ボリュームを検出</block>
+  <block id="2791bee7fd296dbe3b15baa72d61e0d0" category="cell">ボリューム変更</block>
+  <block id="0d815ca4e95c648c8c9ba04f60d37fa5" category="cell">ノードが検出されました</block>
+  <block id="13f0435fb2e980b7bc2c3b6c259bdc5d" category="cell">ノードを削除</block>
+  <block id="67bff7ce16ae81b8b1a154ee5e390528" category="section-title">属性モニター</block>
+  <block id="8d4415e37facfc24ec62427ef73b5ca5" category="paragraph">属性モニターは、オブジェクトに対して報告された構成属性を評価します。メトリックモニターとは異なり、時系列メトリックを数値的な閾値と比較することはありません。以下の各条件は、報告された属性が非準拠状態または利用不可状態に一致する場合に、_Warning_アラートを生成します。</block>
+  <block id="e8c19c7a42ec878ea98808ecc703e56c" category="paragraph">以前のスタンドアロン ONTAP Essentials セキュリティメトリックモニターは、統合された *ONTAP Cluster Misconfigured* および *ONTAP Storage Misconfigured* 属性モニターに置き換えられました。対応する CVO モニターは、同じチェックを Cloud Volumes ONTAP に適用します。</block>
+  <block id="fcf0bb8f60a35474e0a8e560834f5790" category="section-title">ONTAP属性モニター</block>
+  <block id="f7ccd07b3345922f6b1db931d8cc767a" category="cell">デフォルト状態</block>
+  <block id="229eb04083e06f419f9ac494329f957d" category="cell">Conditions</block>
+  <block id="7ef46d0c931651346a1d7e3258e3f511" category="cell">ONTAPクラスターの設定ミス</block>
+  <block id="32c3164a94bfcc777dde834487e62809" category="cell">ONTAPインフラストラクチャー</block>
+  <block id="827b17567fbb2890c2069d12f0767ff9" category="cell">以下の12のセキュリティ条件のうち1つ以上が検出された場合の警告：* AutoSupport HTTPSは構成されていません * Web HTTPは有効です * SSHは保護されていません * ログインバナーは無効です * クラスタピア通信は暗号化されていません * 証明書の発行者は自己署名です * デフォルトのローカル管理者は有効です * FIPSは無効です * ログ転送は暗号化されていません * MD5パスワードハッシュは有効です * リモートシェル（RSH）は有効です * Telnetは有効です</block>
+  <block id="8fd0239c9da66e982882d7e23d443cac" category="cell">アラートに記載されている影響を受ける属性を確認してください。組織のセキュリティポリシーに従って、安全性の低いプロトコルとパスワードハッシュを無効にし、SSHおよびピア通信を保護し、必要なセキュリティ制御を有効にし、自己署名証明書を置き換えてください。</block>
+  <block id="f597ad667263a61df5029ab2cbdae8e3" category="cell">ONTAPストレージの設定ミス</block>
+  <block id="dd02c500bfffdae72301d0f84293b000" category="cell">ONTAP ストレージ VM で監査ログが無効、SSH が保護されていない、またはログインバナーが無効になっている場合にアラートを生成します。</block>
+  <block id="25626f0fda05b1f13b64af7bcf4feb5a" category="cell">ストレージVMの監査ログを有効にし、SSHを保護し、適切なログインバナーを設定します。</block>
+  <block id="4d8a0db671d9c980856b4874e82ca109" category="cell">ONTAPクラスターに予備ディスクがない</block>
+  <block id="7c8fc6eb72f732285ac9ad185b2342c1" category="cell">クラスターが予備ディスクの残量が少ないと報告した場合にアラートを発します。</block>
+  <block id="708e1f9e68570a06b2cf940950cb4696" category="cell">ノードごとに予備ディスクを確認し、データ保護を維持するために互換性のある予備容量を追加してください。</block>
+  <block id="31f80eeb5a483dd97e15b21d8c5cbb94" category="cell">ONTAPストレージサービスが利用できません</block>
+  <block id="5951ac71ce3e3a74d6315d409967bd7c" category="cell">ONTAPワークロードの例</block>
+  <block id="26877856f1860027ed3144e6439bf887" category="cell">有効な FCP またはiSCSIサービスがONTAPストレージVM上で利用できない場合にアラートを発します。</block>
+  <block id="46a31be06e4d3f54c2e4dbff7efdfc86" category="cell">ストレージVM、プロトコル、およびデータLIFの状態を確認します。最近のONTAPヘルスメッセージとイベントメッセージを確認し、影響を受けたSANサービスを復旧します。</block>
+  <block id="18648e905a497df4d67574485011574c" category="cell">ONTAPノードの設定ミス</block>
+  <block id="e99180abf47a8b3a856e0bcb2656990a" category="cell">一時停止</block>
+  <block id="eef53295c2d8dbc3c758579fb90efe8b" category="cell">Cisco Discovery Protocol （CDP）がONTAPノードで無効になっている場合にアラートを発します。</block>
+  <block id="6027cb73281e7426a311f219c5df0c47" category="cell">ノードのCDP設定とネットワークポートの状態を確認し、ネットワーク検出とトポロジー監視に必要な場合はCDPを有効にしてください。</block>
+  <block id="1ea5f19553751aa3c40a40815dca4cf9" category="section-title">Cloud Volumes ONTAP属性モニター</block>
+  <block id="96cf64dffac9fa0ab1eedd0288df27ff" category="cell">CVOクラスターの設定ミス</block>
+  <block id="6a55fba9f7947c078f548fe31335bced" category="cell">CVOインフラストラクチャ</block>
+  <block id="237a0e09d7467ce49d5c4853d03f37dc" category="cell">*ONTAP クラスターの設定ミス*に記載されているクラスタセキュリティ構成チェックをCloud Volumes ONTAPに適用します。</block>
+  <block id="7e318ce588b89f2edf330b8442d50c4a" category="cell">影響を受ける属性を確認し、報告されたセキュリティ上の問題や非準拠のクラスタ設定を修正してください。</block>
+  <block id="5049ecd2984ab56c7d0a004343196fc6" category="cell">CVOストレージの設定ミス</block>
+  <block id="1c2bd79ae20624a346e78a68bc223e69" category="cell">Cloud Volumes ONTAP ストレージ VM で監査ログが無効、SSH が保護されていない、またはログインバナーが無効になっている場合にアラートを生成します。</block>
+  <block id="01c7962a17601fc2b8a0ab775bcfb02b" category="cell">CVOノードの設定ミス</block>
+  <block id="00ce710c6411eb7b4d2a0bb4f27c43a0" category="cell">CVOワークロードの例</block>
+  <block id="747205bf300c2d15f6fa11222ad3af79" category="cell">Cloud Volumes ONTAP ノードで CDP が無効になっている場合に警告を発します。</block>
+  <block id="d53a495e5e63fac954715333ef66f37e" category="cell">ノードのCDPおよびネットワーク設定を確認し、必要に応じてCDPを有効にしてください。</block>
+  <block id="934d4d27877f2d2038c8d2281b0f3517" category="section-title">NTP構成モニター</block>
+  <block id="e7d378f90fce82171d93a76f67ab11d0" category="paragraph">以下のNTPモニターは、ONTAPおよびCloud Volumes ONTAP用のスタンドアロンのシステム定義モニターとして引き続き利用可能です。</block>
+  <block id="419f3742e6de8e0ec4b22cce005e7630" category="cell">プラットフォーム</block>
+  <block id="253b40ae359ba25b56231803430c4873" category="cell">ONTAP</block>
+  <block id="390cc464174e60f3f3ed71b9b71e7d42" category="cell">このクラスターにはNTPサーバーが設定されていません。冗長性と最適なサービスのために、NetAppはクラスターに少なくとも3つのNTPサーバーを関連付けることを推奨します。</block>
+  <block id="2025a1261ded8e1a3ba97346eae15a6c" category="cell">NTPサーバーをクラスターに関連付けるには、<block ref="9f88c6f56fe590495515877ac522f789" prefix=" " category="inline-code"></block>を使用してください。</block>
+  <block id="f68699e24cec33116be3d5736173dea6" category="cell">このクラスターには、設定済みのNTPサーバーが3台未満しかありません。</block>
+  <block id="ad4e8b41fab2260f4d764a156ac61060" category="cell">クラスターに追加の NTP サーバーを関連付けるには、<block ref="9f88c6f56fe590495515877ac522f789" prefix=" " category="inline-code"></block>を使用します。</block>
+  <block id="e1ca7bde74e667a35e1773ff902315de" category="cell">CVO NTPサーバーが設定されていません</block>
+  <block id="99be105995c1432d7ee18819af846062" category="cell">このクラスターにはNTPサーバーが設定されていません。</block>
+  <block id="ca889c8c720925f08a8acef1e374fd60" category="cell">CVO NTPサーバー数が少ない</block>
+  <block id="7a6471cab127882545e3d25f82963df4" category="cell">MetroCluster スイッチ間全リンク切断</block>
+  <block id="dfea7fd89fb7e311c7654e80d3228164" category="cell">MetroCluster FC イニシエーターリンクダウン</block>
+  <block id="b5c80c6cca489dd4cb9ebfecd90dc471" category="cell">MetroCluster FC-VIインターコネクトリンクダウン</block>
+  <block id="0cdbe7f6c24e5642024dbf064cd1949d" category="paragraph"><block ref="d2933953df48fc71d353e0e203ca566f" category="inline-link-macro-rx"></block> <block ref="b887ae4e758496213d48180a2b0d3cf3" category="inline-link-macro-rx"></block></block>
+  <block id="479ff61f7565ededef051977562ac598" category="summary">保存したクエリを、フィルタリング、ソート、列配置などのカスタマイズ可能な表示オプションを使用して表示および管理し、効率的なクエリの整理とアクセスを実現します。</block>
+  <block id="305cab7c23a541c58dacb7e8fc2b8e38" category="paragraph">クエリインターフェースを通じて保存済みのクエリにアクセスし、管理できます。このインターフェースでは、フィルタリング、並べ替え、表示のカスタマイズが可能で、資産の監視と分析に必要なクエリを効率的に整理して見つけることができます。</block>
+  <block id="475f19c6d481aef4461b760733bc4fea" category="list-text">「Explore」をクリックし、「All metric queries」を選択します。クエリの表示方法は、以下のいずれかの方法で変更できます。</block>
 </blocks>

@@ -7,6 +7,10 @@ keywords: troubleshooting, problems, browser, login, log in, accessing, access t
 = 一般的なData Infrastructure Insightsの問題のトラブルシューティング
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -73,6 +77,6 @@ keywords: troubleshooting, problems, browser, login, log in, accessing, access t
 
 アクティブなData Infrastructure Insightsサブスクリプションをお持ちの場合は、次のサポート オプションを使用できます。
 
-link:https://www.netapp.com/us/contact-us/support.aspx["電話番号"] link:https://mysupport.netapp.com/site/cases/mine/create?serialNumber=95001014387268156333["サポートチケット"]
+link:https://www.netapp.com/company/contact-us/support/["電話番号"] link:https://mysupport.netapp.com/portal?_nfpb=true&_st=initialPage=true&_pageLabel=submitcase["サポートチケット"]
 
 詳細については、 https://docs.netapp.com/us-en/cloudinsights/concept_requesting_support.html["Data Infrastructure Insightsサポートドキュメント"] 。

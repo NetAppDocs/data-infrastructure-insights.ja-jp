@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_query_assign_multiple_applications.html 
-summary: クエリを使用して、オブジェクトに複数のアプリケーションまたは注釈を割り当てたり、オブジェクトから複数のアプリケーションまたは注釈を削除したりします。 
+summary: クエリベースの一括操作を使用して、複数のアセットにわたるアプリケーションと注釈を効率的に管理し、手動で個々のアセットを設定することなく、割り当てや削除を行うことができます。 
 keywords: query, queries, application, annotation, multiple 
 ---
 = 資産に複数のアプリケーションを割り当てたり、資産から複数のアプリケーションを削除したりする
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-複数割り当て可能link:task_create_application.html["アプリケーション"]手動で複数のアプリケーションを割り当てたり削除したりする代わりに、クエリを使用して複数のアプリケーションを資産に追加したり削除したりできます。
+クエリを使用してアプリケーションとアノテーションに対して一括操作を実行することで、資産管理を効率化できます。各アセットを個別に手動で設定する代わりに、単一の操作で複数のアセットグループにわたって複数のアプリケーションやアノテーションを効率的に割り当てたり削除したりできます。
 
 
 NOTE: 以下の手順で追加または削除できますlink:task_defining_annotations.html["アノテーション"]同じように。

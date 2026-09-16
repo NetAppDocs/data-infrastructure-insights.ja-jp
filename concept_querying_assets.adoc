@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_querying_assets.html 
-summary: インベントリ資産と統合メトリックを照会して、ストレージ、コンピューティング、ネットワーク リソースを含むインフラストラクチャ全体のパフォーマンスを監視、トラブルシューティング、分析します。 
+summary: 物理および仮想インフラの資産と統合メトリクスをクエリして、パフォーマンスを監視し、問題をトラブルシューティングし、詳細な検索条件を使用して環境の対象ビューを作成します。 
 keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, Host, Internal Volume, iSCSI, Network, Portal, Path, Port, Qtree, Quota, Share, Storage, Node, Pool, SVM, Switch, Tape, VMDK, Virtual Machine, VM, Volume, Zone, Member 
 ---
 = アセットとメトリクスのクエリ
@@ -14,7 +14,7 @@ keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, 
 
 
 [role="lead"]
-インフラストラクチャの物理資産と仮想資産をクエリすることで、パフォーマンスの監視、問題のトラブルシューティング、注釈などのカスタム基準に基づいたきめ細かな検索を実行できます。Data Infrastructure Insightsは、ストレージアレイやホストからアプリケーションや仮想マシンまで、多様な資産タイプを対象としたクエリに加え、Kubernetes、Docker、ONTAP Advanced Dataの統合メトリクスも提供し、包括的な可視性を実現します。
+クエリを使用して、インフラストラクチャの資産とメトリクスを詳細なレベルで検索および分析します。物理および仮想のインベントリ資産、Kubernetes と ONTAP からの統合データ、およびパフォーマンスメトリクスをクエリして、環境を監視し、問題をトラブルシューティングし、特定の条件に基づいたターゲットビューを作成します。
 
 アセットに自動的にアノテーションを割り当てるアノテーション ルールを使用するには、クエリを全員に共有する必要があります。クエリの共有の詳細については、以下をご覧ください。
 

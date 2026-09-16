@@ -14,7 +14,7 @@ keywords: support, knowledgebase, documentation, community, videos, help, contac
 
 
 [role="lead"]
-*ヘルプ > サポート* を選択すると、 Data Infrastructure Insightsで利用可能なサポート オプションにアクセスできます。
+Data Infrastructure Insights は、セルフサービスリソース、コミュニティフォーラム、ドキュメント、および技術サポートを含む包括的なサポートオプションを提供します。「ヘルプ」＞「サポート」を選択してこれらのサポートリソースにアクセスし、サポート利用権を有効化することで、ウェブチケットや電話サポートによる完全な技術支援をご利用いただけます。
 
 image:SupportPageExample.png["サポートページ、幅=600"]
 
@@ -115,11 +115,7 @@ NetAppサポートエンジニアがサポートセッション中にData Infras
 
 問題が解決した場合、またはサポートセッションが終了した場合は、チェックボックスのチェックを外してください。
 
-以下のいずれかの方法でサポートをリクエストできます。これらのサポート オプションを使用するには、アクティブなData Infrastructure Insightsサブスクリプションが必要です。
-
-* link:https://www.netapp.com/us/contact-us/support.aspx["*電話*"]
-* link:https://mysupport.netapp.com/portal?_nfpb=true&_st=initialPage=true&_pageLabel=submitcase["*サポートチケット*"]
-
+サポートをリクエストするには、link:https://www.netapp.com/support-and-training/["NetAppサポート サイト"] にアクセスしてください。有効な Data Infrastructure Insights サブスクリプションが必要です。
 
 *営業部に問い合わせる*リンクをクリックして営業サポートをリクエストすることもできます。
 

@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: reporting_storage_manager_dashboard.html 
-summary: ストレージ サービスの日常的な管理には、ストレージ マネージャー ダッシュボードを使用できます。 
+summary: 容量利用率、パフォーマンス傾向、リソース予測に関する包括的なレポートを通じて、一元化されたストレージ管理の洞察にアクセスし、プロアクティブなデータセンター管理を実現します。 
 keywords: reporting, cognos, data warehouse, dwh, smd, storage manager dashboard 
 ---
 = ストレージマネージャーダッシュボード
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-ストレージ マネージャー ダッシュボードでは、集中化された視覚化が提供され、時間の経過に伴うリソースの使用状況を許容範囲や過去のアクティビティと比較することができます。ストレージ サービスの主要なパフォーマンス メトリックのみを表示することで、データ センターの保守方法を決定できます。
+ストレージマネージャーダッシュボードは、包括的なレポート機能と視覚化機能を通じて、ストレージ環境に関する一元的な情報を提供します。容量利用状況を監視し、時間の経過に伴うパフォーマンスの傾向を追跡し、現在の指標を許容範囲と比較することで、データセンターの保守とリソース計画に関する情報に基づいた意思決定を行うことができます。
 
 
 NOTE: レポート機能は、Data Infrastructure Insightsで利用できます。link:concept_subscribing_to_cloud_insights.html["プレミアムエディション"] 。
