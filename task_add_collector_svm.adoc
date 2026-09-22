@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_add_collector_svm.html 
 keywords: data collector, ONTAP, NetApp, SVM, cloud ontap, firewall, Workload Security 
-summary: Workload Security 用の ONTAP SVM データコレクタの設定とトラブルシューティング。 
+summary: Workload Security 用 ONTAP SVM データコレクタの設定とトラブルシューティング。 
 ---
 = ONTAP SVMデータコレクターの設定
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Workload Security 用の ONTAP SVM データコレクタの設定とト
 
 
 [role="lead"]
-ONTAP SVM Data Collectorを使用すると、Workload SecurityはNetApp ONTAPストレージ仮想マシン（SVM）上のファイルおよびユーザーアクセスアクティビティを監視できます。コレクターはHTTPS経由でONTAPに接続してFPolicyを設定します。その後、ONTAPはWorkload Security Agentに接続して、ファイルおよびユーザーアクセスイベントをストリーミングします。このガイドでは、サポートされているバージョン、前提条件、接続方法、権限、Test Connectionの事前チェック、構成フィールド、機能固有の設定、およびよくある問題とその解決策について説明します。
+ONTAP SVM Data Collectorを使用すると、Workload SecurityはNetApp ONTAPストレージ仮想マシン（SVM）でのファイルおよびユーザのアクセスアクティビティを監視できます。コレクタはHTTPS経由でONTAPに接続してFPolicyを設定します。その後、ONTAPはWorkload Security Agentに接続して、ファイルおよびユーザのアクセスイベントをストリーミングします。このガイドでは、サポートされているバージョン、前提条件、接続方法、権限、接続テストの事前チェック、設定フィールド、機能固有の設定、およびよくある問題とその解決策について説明します。
 
 [quote]
 ____
@@ -53,13 +53,13 @@ ____
 | ONTAP Select | サポート済み。 
 
 
-| SVMタイプ／サブタイプ | データSVMのみ（無限ボリュームは不可）。サポートされているサブタイプ：default、sync_source、sync_destination。DP-destination SVMは、設計上、監査対象から除外されます。 
+| SVMタイプ／サブタイプ | データSVMのみ（無限ボリュームは不可）。サポートされているサブタイプ：default、sync++_++source、sync++_++destination。DP宛先SVMは、設計上、監査対象から除外されます。 
 
 
-| data-fpolicy-clientサービスポリシー | ONTAP 9.8以降で必要です（サービスポリシーを参照）。以前のリリースでは、設定する必要はありません。 
+| data-fpolicy-clientサービスポリシー | ONTAP 9.8以降で必要です（サービスポリシーを参照）。以前のリリースでは設定する必要はありません。 
 
 
-| 機能バージョンフロア | アクセス拒否：9.13.0{plus} • 自律型ランサムウェア対策（ARP）イベント：9.11.1{plus} • パーシステントストア：9.14.1{plus} • Protobufイベントフォーマット：9.15{plus} 
+| 機能のバージョンフロア | アクセス拒否：9.13.0{plus} • 自律型ランサムウェア対策（ARP）イベント：9.11.1{plus} • パーシステントストア：9.14.1{plus} • Protobufイベントフォーマット：9.15{plus} 
 |===
 [quote]
 ____
@@ -73,9 +73,9 @@ ____
 == 開始する前に
 
 * 接続テストを実行したり、データコレクターを追加したりするには、エージェントをインストールして接続を確立しておく必要があります。ワークロードセキュリティエージェントの展開とエージェントの要件を参照してください。
-* 監視対象のSVMにアクセスするユーザーがいるドメインごとに、ユーザーディレクトリコレクターを設定してください。ユーザーディレクトリコレクターでは接続テストは利用できません。コレクターがない場合、アクティビティフォレンジックではユーザー名の代わりにSIDが表示されます。
+* 監視対象のSVMにアクセスするユーザーがいるドメインごとに、ユーザーディレクトリコレクターを設定してください。ユーザーディレクトリコレクターでは「接続テスト」は利用できません。コレクターがない場合、アクティビティフォレンジックではユーザー名の代わりにSIDが表示されます。
 * エージェントに向けて、必要なFPolicyコールバックポートを予約します。接続テストは、割り当てられた有効なポートのみをテストし、予約済みのポート範囲全体をテストするわけではありません。また、すべてのSVMデータLIFがエージェントにルーティングできることを確認してください。エージェントIPの結果はローカルアドレスを選択しますが、ルーティングのテストは行いません。
-* SVMに対して、1つのWorkload Security環境内で、コレクターを1つだけ構成してください。Test Connectionでは、別の環境に存在する重複したコレクターを検出できません。
+* SVMに対して、1つのWorkload Security環境内で、コレクターを1つだけ構成してください。接続テストでは、別の環境に存在する重複したコレクターを検出できません。
 
 
 
@@ -91,19 +91,19 @@ ____
 | エージェント → ONTAP（クラスタまたはSVM管理IP） | TCP 443 | HTTPS経由のREST/ONTAPIを使用してFPolicyを設定します。 
 
 
-| ONTAP SVM データLIF → エージェント | TCP 35000～55000 | FPolicyファイル/ユーザーアクセスイベント（ONTAPがエージェントにコールバックします）。 
+| ONTAP SVM データLIF → エージェント | TCP 35000～55000 | FPolicyファイル/ユーザーアクセスイベント（ONTAPからエージェントへのコールバック）。 
 
 
-| ONTAPクラスタ管理IP → エージェント | TCP 35000～55000 | これらの機能が使用される場合のEMSイベント（たとえばARP）。 
+| ONTAPクラスタ管理IP → エージェント | TCP 35000～55000 | これらの機能が使用される場合のEMSイベント（例えばARP）。 
 
 
-| エージェント → ONTAPクラスター管理 | SSH 22 | CIFS/SMBユーザーのブロック（クラスタ認証情報）。 
+| エージェント → ONTAPクラスタ管理 | SSH 22 | CIFS/SMBユーザーのブロック（クラスタ認証情報）。 
 |===
-35000～55000の範囲全体を開く必要はありません。各SVMは最大4つのポート（有効なプロトコルごとに2つ、NFSとCIFS/SMB）を使用します。フル稼働状態のAgent（コレクター50個）用に約200個のポートを確保してください。Agentへの通信範囲を開放してください。Agentホスト自体のファイアウォールも対象に含めてください。
+35000～55000の範囲全体を開放する必要はありません。各SVMは最大4つのポート（有効なプロトコルごとに2つ、NFSとCIFS/SMB）を使用します。フル稼働状態のエージェント（コレクター50個）用に約200個のポートを確保してください。エージェントへの通信範囲を開放してください。エージェントホスト自体のファイアウォールも対象に含めてください。
 
 [quote]
 ____
-*注：* ファイアウォールが有効になっている場合は、コレクターが使用するポートの例外を定義してください。エージェントがAWSで実行されてCloud ONTAP SVMを監視する場合、エージェントとストレージは同じVPC内に配置されているか、VPC間で有効なルートが確立されている必要があります。
+*注：*ファイアウォールが有効になっている場合は、コレクタが使用するポートの例外を定義してください。エージェントがAWSで実行されてCloud ONTAP SVMを監視する場合、エージェントとストレージは同じVPC内に配置されているか、VPC間に有効なルートがある必要があります。
 
 ____
 
@@ -112,21 +112,21 @@ ____
 [[choose-a-connection-method]]
 == 接続方法を選択してください
 
-2つの方法のいずれかを使用してSVMを追加します。クラスタIP{plus}SVM名を強く推奨します。
+以下の2つの方法のいずれかを使用してSVMを追加します。クラスタIP{plus} SVM名を強く推奨します。
 
 [cols="25%,25%,25%,25%"]
 |===
 | *方法* | *認証情報* | *内容* | *注記* 
 
 
-| クラスタ管理IP {plus} SVM名（推奨） | Cluster-admin、csuser、またはcsroleと同等の役割を持つADユーザー | 接続テスト機能、RBACチェック、EMSベースの機能（ARP）など、すべての機能が利用可能です。 | SVM名はONTAPと完全に一致する必要があります（大文字と小文字を区別します）。 
+| クラスタ管理IP {plus} SVM名（推奨） | Cluster-admin、csuser、またはcsroleと同等の役割を持つADユーザー | 接続テスト機能、RBACチェック、EMSベースの機能（ARP）など、すべての機能が利用可能です。 | SVM名はONTAPと正確に一致する必要があります（大文字と小文字を区別します）。 
 
 
-| SVM管理IP | vsadmin、csuser、またはcsroleと同等の役割を持つADユーザー | コア監査。Test ConnectionはSVMモードでは機能/RBACチェックを実行できません（SVMアカウントにそれらを実行する権限がありません）。 | 専用のSVM管理LIFを使用するか、データLIFのファイアウォールポリシーをmgmtに設定してください（下記参照）。 
+| SVM管理IP | vsadmin、csuser、またはcsroleと同等の役割を持つADユーザー | コア監査。Test ConnectionはSVMモードでは機能/RBACチェックを実行できません（SVMアカウントには実行権限がありません）。 | 専用のSVM管理LIFを使用するか、データLIFのファイアウォールポリシーをmgmtに設定してください（下記参照）。 
 |===
 [quote]
 ____
-*よくある落とし穴：* vsadminを使用してSVM IP経由で接続し、LIFがデータ{plus}管理の複合ロールを持つ場合、pingは機能しますが、SSHは機能しません。SVM管理専用LIFを作成するか、データLIFのfirewall-policyをmgmtに設定します。
+*よくある落とし穴：*vsadminを使用してSVM IP経由で接続する際、LIFにデータ{plus}管理の統合ロールがある場合、pingは機能しますがSSHは機能しません。SVM管理専用LIFを作成するか、データLIFのfirewall-policyをmgmtに設定します。
 
 ____
 
@@ -141,22 +141,22 @@ _クラスター管理IP {plus} SVM名が推奨されます。SVMモードを使
 
 [listing]
 ----
-security login password -username vsadmin -vserver <svmname>
+security login password -username vsadmin -vserver ++<++svmname++>++
 
-security login unlock -username vsadmin -vserver <svmname>
+security login unlock -username vsadmin -vserver ++<++svmname++>++
 ----
 *専用のSVM管理LIFを使用してください。利用できない場合は、データLIFファイアウォールポリシーをmgmt:*に設定します。
 
 [listing]
 ----
-network interface modify -lif <SVM_data_LIF_name> -firewall-policy mgmt
+network interface modify -lif ++<++SVM++_++data++_++LIF++_++name++>++ -firewall-policy mgmt
 ----
 .SVMログイン出力例。
 image:ontap-svm-login-output.png["SVMログイン出力例,title=\"SVMログイン出力例\",width=646,height=164"]
 
 [quote]
 ____
-*Important：* SVMモードでは、機能チェックとRBACチェックを実行できません。可能な限り、クラスタ管理IP{plus}SVM名を使用してください。
+*Important:* SVMモードでは、機能チェックとRBACチェックを実行できません。可能な限り、クラスタ管理IP{plus}SVM名を使用してください。
 
 ____
 
@@ -165,7 +165,7 @@ ____
 [[permissions-rbac]]
 == 権限（RBAC）
 
-接続テストは、コレクターフォームに入力されたONTAPアカウントを使用して実行されます。実行する前に、cluster-adminクレデンシャルを使用するか、以下の必要な権限を持つcsuser/csroleを作成してください。これらの権限がないと、接続テストでFPolicyおよび選択した機能を検証または構成できません。
+接続テストは、コレクターフォームに入力されたONTAPアカウントを使用して実行されます。実行する前に、クラスター管理者の認証情報を使用するか、以下の必要な権限を持つcsuser/csroleを作成してください。これらの権限がないと、接続テストはFPolicyおよび選択された機能を検証または構成できません。
 
 *機能に応じた最小限の権限*
 
@@ -177,16 +177,16 @@ ____
 | FPolicy（すべてのデプロイメントで必須） | vserver fpolicy: all | サポートされているもの 
 
 
-| 管理者ショートカット | ロール DEFAULT：readonly (cluster) — 読み取りチェックを満たします。fpolicyには引き続きallが必要です | — 
+| 管理者ショートカット | ロール DEFAULT：readonly（cluster） — 読み取りチェックを満たします。fpolicyには引き続きallが必要です | — 
 
 
-| Snapshot 数 | ボリュームスナップショット：すべて（可能な場合は cloudsecure_* の範囲） | any 
+| Snapshot 数 | ボリュームスナップショット：すべて（可能な場合は cloudsecure++_*++ にスコープを限定） | any 
 
 
 | EMSベースのモニタリング | イベントカタログ、イベントフィルタ、イベント通知、イベント通知先、セキュリティ証明書：すべて | any 
 
 
-| ONTAPアクセスが拒否されました | RESTアクセス {plus} vserver fpolicy イベント | 9.13.0{plus} 
+| ONTAPアクセスが拒否されました | RESTアクセス {plus} vserver fpolicyイベント | 9.13.0{plus} 
 
 
 | 自律型ランサムウェア対策（ARP）イベント | security anti-ransomware volume {plus} volume: readonly/all | 9.11.1{plus} 
@@ -202,7 +202,7 @@ ____
 |===
 [quote]
 ____
-*よくある落とし穴：* ADをバックエンドとするONTAPアカウントの場合は、ユーザーに直接ロールを付与してください。ロールがグループレベルでのみ割り当てられている場合、権限プローブはそれを読み取ることができず、接続テストで「この Active Directory ユーザーに対して、ロールはユーザーレベルではなくグループレベルで割り当てられています」と報告されます。
+*よくある落とし穴：* ADベースのONTAPアカウントの場合は、ユーザーに直接ロールを付与してください。ロールがグループレベルでのみ割り当てられている場合、権限プローブはそれを読み取ることができず、Test Connectionは「この Active Directory ユーザーに対して、ロールはユーザーレベルではなくグループレベルで割り当てられています」と報告します。
 
 ____
 
@@ -215,18 +215,18 @@ ____
 
 [listing]
 ----
-security login delete -user-or-group-name csuser -application *
-security login role delete -role csrole -cmddirname *
-security login rest-role delete -role csrestrole -api *
-security login rest-role delete -role arwrole -api *
+security login delete -user-or-group-name csuser -application ++*++
+security login role delete -role csrole -cmddirname ++*++
+security login rest-role delete -role csrestrole -api ++*++
+security login rest-role delete -role arwrole -api ++*++
 ----
-役割とユーザーを作成します（クラスタ管理者として実行）：
+ロールとユーザーを作成します（クラスタ管理者として実行）：
 
 [listing]
 ----
 security login role create -role csrole -cmddirname DEFAULT -access readonly
 security login role create -role csrole -cmddirname "vserver fpolicy" -access all
-security login role create -role csrole -cmddirname "volume snapshot" -access all -query "-snapshot cloudsecure_*"
+security login role create -role csrole -cmddirname "volume snapshot" -access all -query "-snapshot cloudsecure++_*++"
 security login role create -role csrole -cmddirname "event catalog" -access all
 security login role create -role csrole -cmddirname "event filter" -access all
 security login role create -role csrole -cmddirname "event notification destination" -access all
@@ -246,37 +246,37 @@ security login create -user-or-group-name csuser -application http -authmethod p
 
 [listing]
 ----
-security login delete -user-or-group-name csuser -application * -vserver <vservername>
-security login role delete -role csrole -cmddirname * -vserver <vservername>
-security login rest-role delete -role csrestrole -api * -vserver <vservername>
+security login delete -user-or-group-name csuser -application ++*++ -vserver ++<++vservername++>++
+security login role delete -role csrole -cmddirname ++*++ -vserver ++<++vservername++>++
+security login rest-role delete -role csrestrole -api ++*++ -vserver ++<++vservername++>++
 ----
-ロールとユーザーを作成します（実行前に <vservername> を置き換えてください）：
+ロールとユーザーを作成します（実行前に ++<++vservername++>++ を置き換えてください）：
 
 [listing]
 ----
-security login role create -vserver <vservername> -role csrole -cmddirname DEFAULT -access none
-security login role create -vserver <vservername> -role csrole -cmddirname "network interface" -access readonly
-security login role create -vserver <vservername> -role csrole -cmddirname version -access readonly
-security login role create -vserver <vservername> -role csrole -cmddirname volume -access readonly
-security login role create -vserver <vservername> -role csrole -cmddirname vserver -access readonly
-security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
-security login role create -vserver <vservername> -role csrole -cmddirname "volume snapshot" -access all
-security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole -vserver <vservername>
-security login create -user-or-group-name csuser -application http -authmethod password -role csrole -vserver <vservername>
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname DEFAULT -access none
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname "network interface" -access readonly
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname version -access readonly
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname volume -access readonly
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname vserver -access readonly
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname "vserver fpolicy" -access all
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname "volume snapshot" -access all
+security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole -vserver ++<++vservername++>++
+security login create -user-or-group-name csuser -application http -authmethod password -role csrole -vserver ++<++vservername++>++
 ----
 
 
 [[feature-specific-permissions]]
 === 機能固有の権限
 
-*永続ストレージ（クラスタモードを表示。SVMモードの場合は -vserver <vservername> を追加）：*
+*永続ストレージ（クラスタモードを表示。SVMモードの場合は -vserver ++<++vservername++>++ を追加）：*
 
 [listing]
 ----
 security login role create -role csrole -cmddirname "vserver fpolicy" -access all
 security login role create -role csrole -cmddirname "job show" -access readonly
 ----
-*Protobuf（クラスタモードを表示。SVMモードの場合は -vserver <vservername> を追加）：*
+*Protobuf（クラスタモードを表示。SVMモードの場合は -vserver ++<++vservername++>++ を追加）：*
 
 [listing]
 ----
@@ -290,7 +290,7 @@ security login role create -role csrole -cmddirname "vserver fpolicy" -access al
 == データコレクターの設定とテスト
 
 . 管理者またはアカウント所有者としてData Infrastructure Insightsにログインします。
-. Workload Security > コレクター > &#43;データコレクターを選択します。
+. Workload Security ++>++ コレクター ++>++ &#43;データコレクターを選択します。
 . NetApp SVMタイルにカーソルを合わせ、「&#43;Monitor」をクリックします。
 . 以下の項目を入力してください。コレクターはまだ保存しないでください。
 
@@ -315,13 +315,13 @@ security login role create -role csrole -cmddirname "vserver fpolicy" -access al
 | SVM 名 | SVM名（クラスタIP経由で接続する場合に必須）。ONTAPと正確に一致する必要があります（大文字と小文字を区別します）。 
 
 
-| ユーザー名 | クラスタIP：cluster-admin、csuser、またはcsroleと同等の権限を持つADユーザー。SVM IP：vsadmin、csuser、またはcsroleと同等の権限を持つADユーザー。 
+| ユーザー名 | クラスターIP：cluster-admin、csuser、またはcsrole-equivalentを持つADユーザー。SVM IP：vsadmin、csuser、またはcsrole-equivalentを持つADユーザー。 
 
 
 | パスワード | 上記アカウントのパスワード。 
 
 
-| シェア/ボリュームをフィルター | イベント収集の対象に特定の共有/ボリュームを含めるか除外するかを選択します。 
+| シェア/ボリュームをフィルター | イベント収集に特定の共有/ボリュームを含めるか除外するかを選択します。 
 
 
 | 含める/除外する共有名 | カンマ区切りの完全な共有名（引用符なし）。リストが長い場合は、共有ではなくボリュームでフィルタリングしてください。 
@@ -333,11 +333,11 @@ security login role create -role csrole -cmddirname "vserver fpolicy" -access al
 | フォルダーアクセスを監視する | 一般的なフォルダアクセスイベントを有効にします。このオプションを選択しなくても、フォルダの作成、名前変更、削除は記録されます。有効化するとイベント数が増加します。 
 
 
-| ONTAP送信バッファサイズを設定する | FPolicyの送信バッファを調整します。9.8p7より前のONTAPでパフォーマンスの問題がある場合、ONTAPのパフォーマンスを向上させるために調整します。オプションが表示されない場合は、NetAppサポートにお問い合わせください。 
+| ONTAP送信バッファサイズを設定する | FPolicyの送信バッファを調整します。パフォーマンスの問題がある9.8p7より前のONTAPでは、ONTAPのパフォーマンスを向上させるために調整します。オプションが表示されない場合は、NetAppサポートにお問い合わせください。 
 |===
 [quote]
 ____
-*Important:* デフォルトで除外されるファイル拡張子：設計上、Workload SecurityはFPolicyスコープを設定してiniおよびDS_Store拡張子を除外します。これらのファイルのイベントはONTAPでフィルタリングされ、Workload Securityに到達することはないため、Activity Forensicsには表示されません。これは、お客様が設定可能なアラート除外とは別のものです。これは想定される動作です。これらの拡張子の監査は、UIで設定することはできません。
+*Important:* デフォルトで除外されるファイル拡張子：設計上、Workload SecurityはiniおよびDS++_++Store拡張子を除外するようにFPolicyスコープを構成します。これらのファイルのイベントはONTAPでフィルタリングされ、Workload Securityに到達することはないため、Activity Forensicsには表示されません。これは、お客様が設定可能なアラート除外とは別のものです。これは想定される動作です。これらの拡張子の監査は、UIで設定することはできません。
 
 ____
 
@@ -350,8 +350,8 @@ ____
 
 image:ws-test-connection-button.png["接続テストボタン,title=\"接続テストボタン\",width=433,height=54"]
 
-.コレクターの詳細を入力した後、「接続テスト」を実行してください。
-image:ws-test-connection-success.png["接続テストの成功結果,title=\"接続テストの成功結果\",width=937,height=298"]
+.コレクターの詳細を入力した後、接続テストを実行してください。
+image:ws-test-connection-success.png["接続テスト結果成功,title=\"接続テスト結果成功\",width=937,height=298"]
 
 接続テストが成功した例。
 
@@ -365,13 +365,13 @@ image:ws-test-connection-success.png["接続テストの成功結果,title=\"接
 | Https | エージェントはTCP 443でONTAP管理に到達できます。 | IPアドレス/モードとポート443のファイアウォール設定を確認してください。 
 
 
-| Ontapバージョン | 認証情報は有効です。バージョンと機能の利用資格も確認済みです。 | 資格情報/RBACおよびONTAPのバージョンを確認してください。 
+| Ontapバージョン | 認証情報は有効です。バージョンと機能の利用資格も確認済みです。 | 資格情報/RBACとONTAPのバージョンを確認してください。 
 
 
-| データLIF | 使用可能なデータLIFがdata-fpolicy-client（9.8{plus}）とともに存在し、稼働しています。 | サービスポリシーにdata-fpolicy-clientを追加します（サービスポリシーを参照）。 
+| データLIF | 使用可能なデータLIFがdata-fpolicy-client（9.8{plus}）とともに存在し、稼働中（up）です。 | サービスポリシーにdata-fpolicy-clientを追加します（サービスポリシーを参照）。 
 
 
-| エージェントIP | エージェントは、SVMデータLIFと同じIPv4またはIPv6ファミリーに属するアクティブなローカルアドレスを持っています。これはルーティングを証明するものではありません。 | エージェントに有効なローカルアドレスがあることを確認してください。後でFpolicy Serverに障害が発生した場合は、各SVMデータLIFからエージェントへのルーティングを確認してください。 
+| エージェントIP | エージェントは、SVMデータLIFと同じIPv4またはIPv6ファミリーに属するアクティブなローカルアドレスを持っています。ルーティングを証明するものではありません。 | エージェントに有効なローカルアドレスがあることを確認してください。後でFpolicy Serverに障害が発生した場合は、各SVMデータLIFからエージェントへのルーティングを確認してください。 
 
 
 | Fpolicyサーバー | ONTAPはエージェントにコールバックして、ライブポートでFPolicyハンドシェイクを完了できます。 | エージェントに向けて35000～55000のポートを開放し、1つのSVMと1つのコレクターが連携していることを確認します。 
@@ -389,29 +389,29 @@ ____
 
 [quote]
 ____
-*Important:* 接続テストの成功は、4つのネットワークチェックに基づいています。機能の結果は参考情報であり、成功してもすべてのオプション機能に必要なRBACが備わっているとは限りません。それらの機能を有効にする前に、失敗した機能チェックを修正してください。
+*Important：*接続テストの成功は、4つのネットワークチェックに基づいています。機能の結果は参考情報であり、成功してもすべてのオプション機能に必要なRBACが備わっているとは限りません。機能を有効にする前に、失敗した機能チェックを修正してください。
 
 ____
 
 
 
 [[if-the-data-lifs-check-fails]]
-== データLIFのチェックが失敗した場合
+== Data Lifsチェックが失敗した場合
 
-接続テストを行う前に、データLIFを手動で検証しないでください。Data Lifsの結果が失敗した場合は、以下のコマンドを使用してサービスポリシーを修正してください。ONTAP 9.8以降では、少なくとも1つの運用中のSVMデータLIFに、data-nfsおよび/またはdata-cifsを含むdata-fpolicy-clientが含まれている必要があります：
+接続テストを行う前に、データLIFを手動で検証しないでください。Data Lifsの結果が失敗した場合は、以下のコマンドを使用してサービスポリシーを修正してください。ONTAP 9.8以降では、少なくとも1つの運用中のSVMデータLIFに、data-nfsおよび/またはdata-cifsとともにdata-fpolicy-clientが含まれている必要があります：
 
 [listing]
 ----
-net int service-policy create -policy only_data_fpolicy -vserver <svm> \
+net int service-policy create -policy only++_++data++_++fpolicy -vserver ++<++svm++>++ ++\++ \
 -allowed-addresses 0.0.0.0/0 -services data-cifs,data-nfs,data,-core,data-fpolicy-client
 ----
 LIFを検証します：
 
 [listing]
 ----
-network interface show -vserver <svm> -fields service-policy,status-admin,status-oper
+network interface show -vserver ++<++svm++>++ -fields service-policy,status-admin,status-oper
 ----
-9.8より前のONTAPでは、data-fpolicy-clientを設定する必要はありません。NFSやCIFSを伝送する、data（up）ロールを持つLIFで十分です。
+9.8より前のONTAPでは、data-fpolicy-clientを設定する必要はありません。NFSやCIFSを伝送する、ロールがdata（up）のLIFで十分です。
 
 
 
@@ -427,8 +427,8 @@ MAVが有効になっている場合、Workload Securityがスナップショッ
 
 [listing]
 ----
-multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !*cloudsecure_*"
-multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !*cloudsecure_*"
+multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !++*++cloudsecure++_*++"
+multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !++*++cloudsecure++_*++"
 multi-admin-verify rule delete -operation set # allow user blocking
 ----
 
@@ -437,7 +437,7 @@ multi-admin-verify rule delete -operation set # allow user blocking
 === *ユーザーアクセスブロック（SMBおよびNFS）*
 
 * クラスタレベルの認証情報が必要です（SMBはユーザーをブロックし、NFSはホストIPをブロックします）。cluster-adminを使用する場合、追加の権限は必要ありません。クラスタ管理へのSSH接続（ポート22）を確保するだけで済みます。
-* カスタムユーザー（csuser）を使用して、以下のクラスタレベルの権限を付与し、ユーザーがSSH接続できることを確認してから、ONTAPおよびUser Directoryコレクターを再起動します。
+* カスタムユーザー（csuser）を使用して、以下のクラスタレベルの権限を付与し、ユーザーがSSH接続できることを確認してから、ONTAPおよびユーザーディレクトリコレクターを再起動します。
 
 
 [listing]
@@ -466,7 +466,7 @@ vserver fpolicy: all と job show: readonly が必要です（機能固有の権
 [[protobuf-mode]]
 === Protobufモード
 
-詳細設定で有効にすると、Workload SecurityはFPolicyエンジンをprotobufモードで構成します。ONTAP 9.15以降でサポートされています。vserver fpolicy: all が必要です。詳細については、ONTAPのドキュメントを参照してください。
+詳細設定で有効にすると、Workload SecurityはFPolicyエンジンをprotobufモードで構成します。ONTAP 9.15以降でサポートされます。vserver fpolicy: all が必要です。詳細については、ONTAPのドキュメントを参照してください。
 
 
 
@@ -475,13 +475,13 @@ vserver fpolicy: all と job show: readonly が必要です（機能固有の権
 
 * 2つのコレクターを設定します：1つは送信元SVM用、もう1つは宛先SVM用です。
 * 両者をクラスタIPで接続します。
-* 常に、アクティブなSVMのコレクターは「実行中」と表示され、スタンバイのコレクターは「停止中」と表示されます。
+* 常に、アクティブなSVMのコレクターは実行中と表示され、スタンバイのコレクターは停止中と表示されます。
 * 切り替え時には、状態が入れ替わります。移行には最大2分かかる場合がありますのでご了承ください。
 
 
 [quote]
 ____
-*注：* スタンバイ側の停止状態のMetroClusterコレクターは想定内の動作であり、エラーではありません。アクティブ側が「実行中」でない場合にのみ調査してください。
+*注：* スタンバイ側の停止したMetroClusterコレクタは想定内の動作であり、エラーではありません。アクティブ側が「実行中」でない場合にのみ調査してください。
 
 ____
 
@@ -490,15 +490,15 @@ ____
 [[pause-and-resume-a-collector]]
 == コレクターを一時停止して再開する
 
-一時停止と再開は、データコレクターに適用され、エージェントには適用されません。UI（コレクター > コレクター > オプション メニュー）またはAPIから実行できます。
+一時停止と再開は、データコレクターに適用され、Agentには適用されません。UI（コレクター ++>++ コレクター ++>++ オプションメニュー）またはAPIから実行できます。
 
 実行中のコレクターを一時停止すると、ONTAPからFPolicy構成が削除されます。一時停止中は、イベントは発生せず、データの送受信も行われません。
 
 * 一時停止中に作成された新しいボリュームは、再開するまで認識されません。
-* スナップショットの削除は、一時停止中のコレクターでは実行されません。
+* Snapshotのパージは、一時停止中のコレクタでは実行されません。
 * EMSイベント（例：ONTAP ARP）は一時停止中は処理されないため、ファイル改ざんイベントを見逃す可能性があります。
 * 一時停止中のコレクターに対しては、ヘルス通知メールは送信されません。
-* 一時停止中は、手動または自動の操作（スナップショット、ユーザーのブロック）はサポートされません。
+* 一時停止中は、手動または自動の操作（スナップショット、ユーザーブロック）はサポートされません。
 * 一時停止されたコレクターは、エージェント/コレクターのアップグレードやエージェントの再起動後も一時停止状態のままです。
 * エラー状態のコレクターは一時停止できません。一時停止は実行中からのみ可能です。
 * エージェントが切断されると、コレクターは停止状態になり、一時停止機能は無効になります。
@@ -506,9 +506,9 @@ ____
 
 *一時停止を使用するタイミング*
 
-* 計画的なONTAPアップグレードやSVMの停止など、長時間のONTAP側のメンテナンスにはPauseを使用し、ストレージが利用できない間にFPolicyの設定が適切に削除されるようにします。
+* 計画的なONTAPアップグレードやSVMの停止など、長時間のONTAP側メンテナンスにはPauseを使用し、ストレージが利用できない間にFPolicyの設定が適切に削除されるようにしてください。
 * メンテナンス完了後、すぐに再開してください。コレクターが一時停止している間に発生したアクティビティは収集されません。
-* エージェントまたはコレクターのアップグレードのタイミングを制御するために、一時停止機能を使用しないでください。代わりにエージェントを固定したり固定を解除したりしてください（ワークロードセキュリティエージェントのデプロイを参照）。
+* エージェントまたはコレクターのアップグレードのタイミングを制御するために、一時停止を使用しないでください。代わりにエージェントを固定したり固定を解除したりしてください（Workload Securityエージェントのデプロイを参照）。
 
 
 [quote]
@@ -538,16 +538,16 @@ image:ws-agent-selector.png["コレクターを移行するためのエージェ
 [[best-practices-for-data-collectors]]
 == データコレクターのベストプラクティス
 
-* コレクターを保存する前にTest Connectionを実行し、失敗したチェックはすべて解決してください。ほとんどのコレクターエラーは、Test Connectionが検出する前提条件の未充足によるものです。
+* コレクターを保存する前に接続テストを実行し、失敗したチェックはすべて解決してください。ほとんどのコレクターエラーは、接続テストが検出する前提条件の未充足によるものです。
 * SVM名とクラスタ認証情報を使用して、クラスタ管理IP経由で接続します。SVMモードでは、機能チェックおよびRBACチェックを実行できません。
-* 1つのWorkload Security環境でのみ、SVMごとに1つのコレクターを設定してください。2番目のコレクターは、最初のコレクターのFPolicy宛先を置き換えます。
-* 監視対象のSVMにアクセスするユーザーが属するすべてのドメインに対して、最初のONTAP SVMコレクターを設定する前または同時にユーザー ディレクトリ コレクターを設定し、アクティビティにSIDではなくユーザー名が表示されるようにします。
+* SVMごとに1つのコレクタを、1つのWorkload Security環境でのみ設定します。2番目のコレクタは、最初のコレクタのFPolicyの宛先を置き換えます。
+* アクティビティにSIDの代わりにユーザー名が表示されるように、監視対象のSVMにアクセスするユーザーが属するすべてのドメインに対して、最初のONTAP SVMコレクターを設定する前または同時に、ユーザー ディレクトリ コレクターを設定してください。
 * 引用符を付けずに、完全な共有名とボリューム名を入力してください。リストが長い場合は、共有ではなくボリュームでフィルタリングしてください。
 * イベント量を増加させるため、一般的なフォルダアクセスイベントが必要な場合にのみ、フォルダアクセス監視を有効にしてください。
-* ホスティングエージェントを容量内に収めてください（コレクター数は最大50、上限は毎秒20,000イベント）。また、Event Rate Checkerを使用して、ピーク時のイベントレートに合わせてサイズを決定してください。
-* MetroClusterの場合は、ソースSVM用に1つのコレクタ、デスティネーションSVM用に1つのコレクタを設定し、両方をクラスタIPで接続します。
+* ホスティングエージェントを容量内に維持してください（コレクター数は最大50、上限は毎秒20,000イベント）。また、Event Rate Checkerを使用して、ピーク時のイベントレートに合わせてサイジングしてください。
+* MetroClusterの場合は、ソースSVM用に1つ、宛先SVM用に1つのコレクタを構成し、両方をクラスタIPで接続します。
 * 長時間のONTAP側メンテナンスの場合にのみ、一時停止機能を使用してください。アップグレードのタイミングを制御するには、エージェントを固定および固定解除します（「ワークロードセキュリティエージェントのデプロイ」を参照）。
-* FPolicy のパフォーマンスを最適化するには、エージェントをストレージ ネットワークの近くに配置し、ネットワーク遅延を最小限に抑えます。
+* FPolicyのパフォーマンスを最適化するには、エージェントをストレージ ネットワークの近くに配置し、ネットワーク遅延を最小限に抑えてください。
 
 
 
@@ -557,7 +557,7 @@ image:ws-agent-selector.png["コレクターを移行するためのエージェ
 
 接続テストでは、セットアップ時の接続性、認証情報、データLIF、割り当てられたポートでのコールバック接続性、SMBを選択した場合のCIFSサーバーチェック、およびクラスタモードでの機能アクセスについて確認します。テストが成功した後は、これらのチェックを手動で繰り返さないでください。
 
-コレクタが後でエラーまたは劣化状態になった場合は、ステータス > 詳細を開き、ONTAP SVM Data Collectorのトラブルシューティングに従ってください。重複コレクタ、イベントレートの過負荷、一時停止中のコレクタ、永続ストアの配置、MetroClusterの移行、アクティビティの欠落、ID解決などの実行時条件は、保存前の接続テストワークフローの対象外です。
+コレクタが後でエラーまたは劣化状態になった場合は、ステータス ++>++ 詳細を開き、ONTAP SVM Data Collectorのトラブルシューティングに従ってください。重複コレクタ、イベントレートの過負荷、一時停止中のコレクタ、永続ストアの配置、MetroClusterの移行、アクティビティの欠落、ID解決などの実行時条件は、保存前の接続テストワークフローの対象外です。
 
 
 
@@ -565,6 +565,6 @@ image:ws-agent-selector.png["コレクターを移行するためのエージェ
 == 終了後の操作
 
 * 「インストール済みデータコレクター」ページで、オプションメニューを使用してコレクターを編集または再起動します。
-* コレクターが「実行中」になり、実際のクライアントI/O後にWorkload Security > Activity Forensicsにイベントが表示されることを確認します。
-* ユーザー名が解決されることを確認してください（SIDではなく）。解決されない場合は、User Directory Collectorを確認してください。
+* コレクターが「実行中」になり、実際のクライアントI/O後にイベントがWorkload Security ++>++ Activity Forensicsに表示されることを確認します。
+* ユーザー名（SIDではなく）が解決されることを確認してください。解決されない場合は、User Directory Collectorを確認してください。
 

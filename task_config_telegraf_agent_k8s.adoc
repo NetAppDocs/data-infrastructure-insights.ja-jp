@@ -288,6 +288,7 @@ NetApp Monitoring Operator インストール タイルから「イメージ プ
 イベントログ
 
 * ci-fluent-bit
+* fe05143e1e28d056a7092a13c7ef1fda
 
 
 ネットワークパフォーマンスとマップ
@@ -461,6 +462,26 @@ Kubernetes モニタリング オペレーターの設定中に問題が発生�
 | netapp-ci-monitoring-operator-<pod> と monitoring-operator-<pod> という名前の 2 つの監視オペレータ ポッドが実行されているのはなぜですか? | 2023年10月12日現在、 Data Infrastructure Insightsは、ユーザーへのサービス向上のため、オペレーターをリファクタリングしました。これらの変更を完全に適用するには、<<uninstalling,古い演算子を削除する>>そして<<installing-the-kubernetes-monitoring-operator,新しいものをインストールする>>。 
 
 
+| d91f7c56a5bd6c0e9735fe39d7d2d1a6  a| 
+0f21fa822dc46792cc163d7e77fe6c2c
+
+ `kubectl -n netapp-monitoring get pods |grep event-exporter |awk '{print $1}' |sed 's/event-exporter./event-exporter/'`
+9df5220f9f1e94f2849e58be10655af5
+
+....
+fluent-bit:
+...
+- name: event-exporter-ci
+  substitutions:
+  - key: LOG_FILE
+    values:
+    - /var/log/containers/netapp-ci-event-exporter*.log
+...
+....
+e832e916ac4edbd5ff4fc3ce13949058
+
+
+
 | Kubernetes モニタリング オペレーターによってデプロイされたポッドが、リソース不足のためにクラッシュしているのがわかります。 | Kubernetesモニタリングオペレーターを参照してくださいlink:telegraf_agent_k8s_config_options.html["設定オプション"]必要に応じて CPU および/またはメモリの制限を増やします。 
 
 
@@ -468,6 +489,9 @@ Kubernetes モニタリング オペレーターの設定中に問題が発生�
 
 
 | netapp-ci-kube-state-metrics ポッドは、Kubernetes Operator のアップグレードを実行した後に起動に失敗し、ErrImagePull (イメージのプルに失敗します) をスローします。 | ポッドを手動でリセットしてみてください。 
+
+
+| 2bc94fccd24faa68b4153886af40ec57 | 6c71496a372f3b5c0cbc9e2eb84a5fd0 
 
 
 | Telegraf は、ロック可能なメモリが不足しているために警告を発したりクラッシュしたりします。 | 基盤となるオペレーティング システム/ノードで Telegraf のロック可能なメモリの制限を増やしてみてください。制限を増やすことができない場合は、NKMO エージェント構成を変更し、_unprotected_ を _true_ に設定します。これにより、Telegraf はロックされたメモリ ページを予約しないように指示されます。復号化された秘密がディスクにスワップアウトされる可能性があるため、セキュリティ上のリスクが生じる可能性がありますが、ロックされたメモリを予約できない環境での実行が可能になります。  _unprotected_ 設定オプションの詳細については、link:telegraf_agent_k8s_config_options.html["設定オプション"]ページ。 
