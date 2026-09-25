@@ -14,18 +14,18 @@ summary: ワークロード セキュリティ Active Directory ユーザー デ
 
 
 [role="lead"]
-ONTAP SVM Data Collectorの前に、User Directory Collectorを設定します。
+ONTAP SVM Data Collectorの前にUser Directory Collectorを設定します。
 
 Workload Securityは、ディレクトリデータを使用してファイルアクセスアクティビティにおけるIDを解決します。ユーザーディレクトリコレクターには、接続テスト機能は備わっていません。
 
-image:config_ad_user_directory_image1.png["Active Directory と LDAP ディレクトリ サーバーオプションを含むユーザー ディレクトリの追加ダイアログ。,title=\"ユーザー ディレクトリの種類を選択してください\",width=652,height=211"]
+image:config_ad_user_directory_image1.png["Active Directory と LDAP ディレクトリ サーバー オプションを含むユーザー ディレクトリの追加ダイアログ。,title=\"ユーザー ディレクトリの種類を選択してください\",width=652,height=211"]
 
 [cols="50%,50%"]
 |===
 | *選択* | *使用する場合* 
 
 
-| Active Directory | ユーザーは Active Directory に保存され、監視対象のアクティビティは SMB です。または、Unix ユーザーは uidNumber 値とともに Active Directory に保存され、NFSアクティビティを実行します。 
+| Active Directory | ユーザーはActive Directoryに保存されており、監視対象のアクティビティはSMBです。または、UnixユーザーはuidNumber値とともにActive Directoryに保存されており、NFSアクティビティを実行します。 
 
 
 | LDAPディレクトリサーバー | Unixユーザーは主にLDAPディレクトリに保存され、監視対象のアクティビティはNFSです。 
@@ -54,7 +54,7 @@ image:config_ad_user_directory_image1.png["Active Directory と LDAP ディレ�
 [[add-the-active-directory-collector]]
 == Active Directoryコレクターを追加します
 
-*1.*Workload Security ++>++ Collectors ++>++ User Directory Collectors に移動し、{plus} User Directory Collector を選択します。
+*1.*Workload Security ++>++ Collectors ++>++ User Directory Collectors に移動して、{plus} User Directory Collector を選択します。
 
 *2.*Active Directoryを選択し、「続行」を選択します。
 
@@ -75,16 +75,16 @@ Active Directoryコレクターフィールドと既定の属性マッピング�
 
 [cols="34%,33%,33%"]
 |===
-| *フィールド* | *要件* | *入力内容* 
+| *フィールド* | *要件* | *入力する内容* 
 
 
 | 名前++*++ | 必須 | 一意のコレクター名。 
 
 
-| エージェント | 必須 | このADサーバにアクセスできる、接続済みのエージェント。 
+| エージェント | 必須 | このADサーバーにアクセスできる、接続済みのエージェント。 
 
 
-| サーバIP/ドメイン名++*++ | 必須 | ADサーバのIPアドレスまたはFQDN。 
+| サーバーIP/ドメイン名++*++ | 必須 | ADサーバーのIPアドレスまたはFQDN。 
 
 
 | フォレスト名++*++ | 必須 | hq.example.comのようなDNSドメイン、DC=hq,DC=example,DC=comのようなDN、または検索対象が特定の範囲のみである場合は、より狭いOU/CN DNを指定します。信頼済みのADドメインがサポートされています。 
@@ -93,10 +93,10 @@ Active Directoryコレクターフィールドと既定の属性マッピング�
 | バインド DN++*++ | 必須 | スコープの検索を許可されたアカウント（例：ws-reader@example.com）。マッピングされた属性に必要なディレクトリ読み取り権限のみを付与してください。 
 
 
-| バインド パスワード++*++ | 必須 | Bind DNアカウントのパスワード。 
+| バインドパスワード++*++ | 必須 | Bind DNアカウントのパスワード。 
 
 
-| プロトコル | デフォルト | LDAP、LDAPS、またはStartTLSを使用したLDAP。サーバで使用するプロトコルを選択してください。 
+| プロトコル | デフォルト | LDAP、LDAPS、またはStartTLSを使用したLDAP。サーバーが使用するプロトコルを選択してください。 
 
 
 | ポート++*++ | 必須 | 数値で表したディレクトリポート番号。一般的には389または636。 
@@ -106,7 +106,7 @@ Active Directoryコレクターフィールドと既定の属性マッピング�
 [[mandatory-attribute-mappings]]
 === 必須属性マッピング
 
-アスタリスクが付いているフィールドには、有効なマッピングが必要です。ADスキーマで異なる属性名を使用していない限り、デフォルトのままにしてください。
+アスタリスクが付いている項目は、有効なマッピングが必要です。ADスキーマで異なる属性名を使用していない限り、デフォルト設定のままにしてください。
 
 [cols="34%,33%,33%"]
 |===
@@ -173,7 +173,7 @@ Active Directoryコレクターフィールドと既定の属性マッピング�
 |===
 | （{vbar}（objectClass=posixAccount）（&（objectCategory=person）（objectClass=user）））  
 |===
-このフィルタに一致しないコンピュータ アカウント、マネージド サービス アカウント、またはカスタム サービス アカウント オブジェクトは、未解決のままになります。AD ExplorerでオブジェクトのobjectClassを検査し、必要なオブジェクトタイプのみにクエリを拡張します。例：
+このフィルタに一致しないコンピュータ アカウント、マネージド サービス アカウント、またはカスタム サービス アカウント オブジェクトは、未解決のままになります。AD ExplorerでオブジェクトのobjectClassを調べ、必要なオブジェクトタイプに対してのみクエリを拡張します。例：
 
 [cols="100%"]
 |===
@@ -190,14 +190,14 @@ Active Directoryコレクターフィールドと既定の属性マッピング�
 
 [cols="100%"]
 |===
-| *ユーザーディレクトリコレクターでは接続テストは利用できません* コレクターを保存する前に、同等のアクセス権限を持つホストから、ネットワーク アクセス、バインド認証情報、検索範囲、クエリ結果、およびマッピングされた属性を検証してください。 
+| *ユーザーディレクトリコレクタでは接続テストは利用できません* コレクタを保存する前に、同等のアクセス権限を持つホストから、ネットワーク アクセス、バインド認証情報、検索範囲、クエリ結果、およびマッピングされた属性を検証してください。 
 |===
 
 
 [[use-ad-explorer]]
 === AD Explorerを使用する
 
-目的のBind DNアカウントを使用して、Active Directoryサーバに接続します。アカウントが構成済みのフォレスト名またはOUを参照し、名前、objectSid、sAMAccountName、使用される場合はuidNumber、および任意のオプション属性を読み取ることができることを確認します。
+目的のバインドDNアカウントを使用して、Active Directoryサーバに接続します。アカウントが、構成されたフォレスト名またはOUを参照できること、および、名前、objectSid、sAMAccountName、使用される場合はuidNumber、および任意のオプション属性を読み取ることができることを確認します。
 
 https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer["[.underline"]#Microsoft Sysinternals AD Explorerをダウンロード#]
 
@@ -240,19 +240,19 @@ https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer["[.underline
 | *メッセージまたは症状* | *チェックすべき事項* 
 
 
-| LDAPサーバに無効な認証情報が指定されました。 | バインドDNとパスワードを確認してください。また、アカウントが設定されたフォレスト名を検索できることを確認してください。 
+| LDAPサーバに指定された認証情報が無効です。 | バインドDNとパスワードを確認してください。また、アカウントが設定されたフォレスト名を検索できることを確認してください。 
 
 
 | フォレスト名として指定されたDN=…に対応するオブジェクトを取得できませんでした。 | フォレスト名を修正してください。正確なドメイン、DN、OU、またはその他のサポートされているスコープを使用してください。 
 
 
-| LDAP接続の確立に失敗しました。 | Agentから、ADサーバのIP/FQDN、DNS解決、プロトコル、ポート、ファイアウォールパスを確認します。 
+| LDAP接続の確立に失敗しました。 | エージェントから、ADサーバのIP/FQDN、DNS解決、プロトコル、ポート、ファイアウォールパスを確認します。 
 
 
 | LDAPユーザーの取得に失敗しました…接続がnullです。 | コレクターを再起動してください。問題が再発する場合は、同等のネットワークロケーションからldapsearchを使用して接続性と検索を検証してください。 
 
 
-| コレクタが再試行中、またはAGENT008を報告しています。 | サーバーアドレスとフォレスト名を確認し、エージェントがディレクトリサービスにアクセスできることを確認してください。 
+| コレクターが再試行中、またはAGENT008を報告しています。 | サーバアドレスとフォレスト名を確認し、エージェントがディレクトリサービスにアクセスできることを確認してください。 
 
 
 | ユーザー属性またはオプション属性は表示されません。 | 検索クエリにオブジェクトが含まれていること、およびマッピングされた属性名がディレクトリスキーマと一致していること（大文字・小文字の区別を含む）を確認してください。保存して再起動し、再同期してください。 
