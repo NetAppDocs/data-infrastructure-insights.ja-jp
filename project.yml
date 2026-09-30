@@ -79,7 +79,7 @@ sidebar:
           url: "/mcp_recipe_capacity_risk.html"
         - title: 環境インベントリ
           url: "/mcp_recipe_environment_inventory.html"
-        - title: Kubernetesコレクターの最新性
+        - title: Kubernetesコレクタの最新性
           url: "/mcp_recipe_kubernetes_collector_currency.html"
         - title: 通知態勢
           url: "/mcp_recipe_notification_posture.html"
