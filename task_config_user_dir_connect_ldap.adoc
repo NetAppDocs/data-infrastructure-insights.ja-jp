@@ -14,18 +14,18 @@ summary: ワークロードセキュリティLDAPユーザーディレクトリ�
 
 
 [role="lead"]
-Workload Securityは、ディレクトリデータを使用してファイルアクセスアクティビティにおけるIDを解決します。User Directoryコレクターには、接続テスト機能は備わっていません。
+Workload Securityは、ディレクトリデータを使用してファイルアクセスアクティビティにおけるIDを解決します。ユーザーディレクトリコレクターには、接続テスト機能は備わっていません。
 
-*ONTAP SVMデータコレクタの前にユーザーディレクトリコレクタを設定する*
+*ONTAP SVM Data Collectorの前にUser Directory Collectorを設定します*
 
-image:config_ldap_directory_image1.png["Active DirectoryとLDAPディレクトリサーバーオプションを含むユーザーディレクトリの追加ダイアログ。,title=\"ユーザーディレクトリの種類を選択してください\",width=652,height=211"]
+image:config_ldap_directory_image1.png["Active DirectoryとLDAPディレクトリ サーバー オプションを含むユーザー ディレクトリの追加ダイアログ。,title=\"ユーザー ディレクトリの種類を選択してください\",width=652,height=211"]
 
 [cols="50%,50%"]
 |===
 | *選択* | *使用する場合* 
 
 
-| Active Directory | ユーザーは Active Directory に保存され、監視対象のアクティビティは SMB です。または、Unix ユーザーが uidNumber 値とともに Active Directory に保存されており、NFS アクティビティを実行します。 
+| Active Directory | ユーザーは Active Directory に保存され、監視対象のアクティビティは SMB です。または、Unix ユーザーは uidNumber 値とともに Active Directory に保存され、NFS アクティビティを実行します。 
 
 
 | LDAPディレクトリサーバー | Unixユーザーは主にLDAPディレクトリに保存され、監視対象のアクティビティはNFSです。 
@@ -42,7 +42,7 @@ image:config_ldap_directory_image1.png["Active DirectoryとLDAPディレクト�
 [[before-you-begin]]
 == 開始する前に
 
-* Data Infrastructure Insights管理者またはアカウント所有者としてサインインします。
+* Data Infrastructure Insightsの管理者またはアカウント所有者としてサインインします。
 * ディレクトリサーバーにアクセスできるWorkload Security Agentをデプロイして接続します。
 * LDAPディレクトリサーバのIPアドレスまたはFQDN、検索ベース、バインドDN、およびバインドパスワードを収集します。
 * エージェントがディレクトリサービスにアクセスできるようにします。一般的なポート番号は、LDAPまたはStartTLSの場合は389番、LDAPSの場合は636番です。ご使用のサーバーで設定されているポート番号を使用してください。
@@ -54,17 +54,17 @@ image:config_ldap_directory_image1.png["Active DirectoryとLDAPディレクト�
 [[add-the-ldap-directory-server-collector]]
 == LDAPディレクトリサーバコレクタを追加する
 
-*1.*Workload Security ++>++ Collectors ++>++ User Directory Collectors に移動して、{plus} User Directory Collector を選択します。
+*1.*Workload Security ++>++ コレクター ++>++ ユーザー ディレクトリ コレクター に移動し、{plus} ユーザー ディレクトリ コレクター を選択します。
 
-*2.*LDAPディレクトリサーバを選択し、「続行」を選択します。
+*2.*LDAPディレクトリサーバを選択し、続行を選択します。
 
 *3.*下記に説明する接続フィールドと属性マッピングをすべて入力してください。
 
 *4.*サービスアカウントがデフォルトの検索に含まれていないオブジェクトクラスを使用している場合は、詳細設定を確認してください。
 
-*5.*ldapsearchまたはLDAPブラウザを使用して設定を検証し、「Save Collector」を選択します。
+*5.*ldapsearchまたはLDAPブラウザを使用して設定を検証し、「コレクターを保存」を選択します。
 
-image:config_ldap_directory_image2.png["接続フィールド、必須およびオプションの属性マッピング、および高度な設定の検索クエリを示すLDAPディレクトリサーバコレクタフォーム。,title=\"Add LDAP Directory Server collector\",width=504,height=729"]
+image:config_ldap_directory_image2.png["接続フィールド、必須およびオプションの属性マッピング、および高度な構成検索クエリを示すLDAPディレクトリサーバコレクタフォーム。,title=\"Add LDAP Directory Server collector\",width=504,height=729"]
 
 LDAPディレクトリサーバのコレクタフィールドとデフォルトの属性マッピング。
 
@@ -90,7 +90,7 @@ LDAPディレクトリサーバのコレクタフィールドとデフォルト�
 | 検索ベース++*++ | 必須 | インポートするユーザーを含むベースDN。例：cn=accounts,dc=example,dc=com。検索範囲をそのサブツリーに限定する必要がある場合にのみ、より狭いOU/CN DNを使用してください。 
 
 
-| バインド DN++*++ | 必須 | ベースを検索することが許可されているアカウントの完全なDN（例：uid=ws-reader,cn=users,cn=accounts,dc=example,dc=com）。 
+| バインド DN++*++ | 必須 | ベースを検索することが許可されているアカウントの完全なDN。例：uid=ws-reader,cn=users,cn=accounts,dc=example,dc=com。 
 
 
 | バインドパスワード++*++ | 必須 | Bind DNアカウントのパスワード。 
@@ -126,14 +126,14 @@ LDAPディレクトリサーバのコレクタフィールドとデフォルト�
 [[optional-attribute-mappings]]
 === オプションの属性マッピング
 
-インポートするプロファイルデータに対してのみ、「オプション属性を含める」を選択してください。各マッピングは、サーバで大文字と小文字が区別される場合はそれを含め、実際のLDAPスキーマと一致している必要があります。
+インポートするプロファイルデータに対してのみ、「オプション属性を含める」を選択してください。各マッピングは、サーバが大文字と小文字を区別する場合はその区別を含め、実際のLDAPスキーマと一致している必要があります。
 
 [cols="50%,50%"]
 |===
 | *プロファイル値* | *デフォルトのLDAP属性* 
 
 
-| E メール アドレス | メールアドレス 
+| E メール アドレス | emailaddress 
 
 
 | 電話番号 | 電話番号 
@@ -168,9 +168,9 @@ LDAPディレクトリサーバのコレクタフィールドとデフォルト�
 
 [cols="100%"]
 |===
-| （{vbar}（objectClass=posixAccount)(objectClass=person)(objectClass=nsperson)） 
+| （{vbar}（objectClass=posixAccount）（objectClass=person）（objectClass=nsperson）） 
 |===
-別のobjectClassを使用するコンピュータアカウント、デバイスアカウント、アプリケーションID、またはサービスアカウントは、未解決のままになります。LDAPブラウザまたはldapsearchを使用してオブジェクトを検査し、必要なオブジェクトタイプのみにクエリを拡張します。例：
+別のobjectClassを使用するコンピュータアカウント、デバイスアカウント、アプリケーションID、またはサービスアカウントは未解決のままです。LDAPブラウザまたはldapsearchを使用してオブジェクトを検査し、必要なオブジェクトタイプのみにクエリを拡張します。例：
 
 [cols="100%"]
 |===
@@ -200,7 +200,7 @@ LDAPディレクトリサーバのコレクタフィールドとデフォルト�
 |===
 | ldapsearch -o ldif-wrap=no -LLL -x -H ldap://ldap.example.com:389 -D 「uid=ws-reader,cn=users,cn=accounts,dc=example,dc=com」 -W -b 「cn=accounts,dc=example,dc=com」 '({vbar}(objectClass=posixAccount)(objectClass=person)(objectClass=nsperson))' name uidNumber uid 
 |===
-* コレクターが使用する正確なアカウントとパスワードでバインドが成功します。
+* コレクタが使用する正確なアカウントとパスワードでバインドが成功します。
 * 検索結果には、想定される人間、コンピュータ、またはサービスのアカウントが返されます。
 * 必須のマッピング属性はすべて存在し、返されるオブジェクトに値を持っています。
 * エージェントは、ディレクトリサーバに対して同じDNS解決とネットワークパスを持ちます。
@@ -215,7 +215,7 @@ LDAPディレクトリサーバのコレクタフィールドとデフォルト�
 * 約300,000人のユーザーを含むディレクトリの同期には、約15分かかる場合があります。
 * ユーザーデータは12時間ごとに自動的に更新されます。
 * ディレクトリが利用できなくなった場合、以前に取得したユーザー情報は保持されますが、接続が復旧するまで新規ユーザーや変更されたユーザーは取得できません。
-* ユーザーデータは、更新なしで13か月間保持されます。ユーザーディレクトリデータは、テナントとは独立して削除することはできません。
+* ユーザーデータは、更新せずに13か月間保持されます。ユーザーディレクトリデータは、テナントとは独立して削除することはできません。
 
 
 
@@ -234,13 +234,13 @@ LDAPディレクトリサーバのコレクタフィールドとデフォルト�
 | 検索ベースとして指定されたDN=…に対応するオブジェクトを取得できませんでした。 | 検索ベースを修正してください。正確なドメイン、DN、OU、またはその他のサポートされているスコープを使用してください。 
 
 
-| LDAP接続の確立に失敗しました。 | エージェントからLDAPサーバのIP/FQDN、DNS解決、プロトコル、ポート、およびファイアウォールパスを確認します。 
+| LDAP接続の確立に失敗しました。 | エージェントから、LDAPサーバのIP/FQDN、DNS解決、プロトコル、ポート、およびファイアウォールパスを確認します。 
 
 
 | LDAPユーザーの取得に失敗しました…接続がnullです。 | コレクターを再起動してください。問題が再発する場合は、同等のネットワークロケーションからldapsearchを使用して接続性と検索を検証してください。 
 
 
-| コレクタが再試行中、またはAGENT008を報告しています。 | サーバアドレスと検索ベースを確認し、Agentがディレクトリサービスにアクセスできることを確認してください。 
+| コレクタが再試行中、またはAGENT008を報告しています。 | サーバアドレスと検索ベースを確認し、エージェントがディレクトリ サービスにアクセスできることを確認してください。 
 
 
 | ユーザー属性またはオプション属性は表示されません。 | 検索クエリにオブジェクトが含まれていること、およびマッピングされた属性名がディレクトリスキーマと一致していること（大文字・小文字の区別を含む）を確認してください。保存して再起動し、再同期してください。 

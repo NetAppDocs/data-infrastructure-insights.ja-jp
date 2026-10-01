@@ -4,7 +4,7 @@ permalink: mcp_setup.html
 summary: このガイドを使用して、MCP互換のAIクライアントをDIIに接続してください。 
 keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
 ---
-= DII MCPサーバーのセットアップ
+= DII MCPサーバーをセットアップする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -42,10 +42,10 @@ NOTE: DII MCPはlink:concept_preview_features.html["プレビュー"]機能で�
 [[configure-the-mcp-client]]
 == MCPクライアントの設定
 
-. 「管理者」＞「APIアクセス」に移動し、「MCP設定」タブを選択します。
+. 管理者 > APIアクセスに移動し、「MCP設定」タブを選択します。
 . 設定したいクライアントを選択してください。
 . 意味のある名前と有効期限を入力し、「トークンを生成」を選択してください。
-. *コードスニペットをコピーしてください* これをコピーできるのはこのステップの間だけです。トークンはスニペット内に隠されていますが、クライアントアプリに正しく貼り付けることができます。
+. *コードスニペットをコピーしてください* これをコピーできるのは、このステップの間だけです。トークンはスニペット内に隠されていますが、クライアントアプリに正しく貼り付けることができます。
 . クライアント設定で、「url」フィールドに正しいDIIホストURLを入力してください。
 . 設定を保存します。
 

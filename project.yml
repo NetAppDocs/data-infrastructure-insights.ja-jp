@@ -83,7 +83,7 @@ sidebar:
           url: "/mcp_recipe_kubernetes_collector_currency.html"
         - title: 通知態勢
           url: "/mcp_recipe_notification_posture.html"
-        - title: パフォーマンスの根本原因分析
+        - title: パフォーマンス根本原因分析
           url: "/mcp_recipe_performance_rca.html"
         - title: ストレージの状態
           url: "/mcp_recipe_storage_health.html"

@@ -14,18 +14,18 @@ summary: ワークロード セキュリティ Active Directory ユーザー デ
 
 
 [role="lead"]
-ONTAP SVM Data Collectorの前にUser Directory Collectorを設定します。
+ONTAP SVMデータコレクターの前に、ユーザーディレクトリコレクターを構成します。
 
-Workload Securityは、ディレクトリデータを使用してファイルアクセスアクティビティにおけるIDを解決します。User Directoryコレクターには、接続テスト機能は備わっていません。
+Workload Securityは、ディレクトリデータを使用してファイルアクセスアクティビティにおけるIDを解決します。ユーザーディレクトリコレクターには、接続テスト機能は備わっていません。
 
-image:config_ad_user_directory_image1.png["Active DirectoryとLDAPディレクトリサーバーオプションを含むユーザーディレクトリの追加ダイアログ。,title=\"ユーザーディレクトリの種類を選択してください\",width=652,height=211"]
+image:config_ad_user_directory_image1.png["Active DirectoryとLDAPディレクトリ サーバー オプションを含むユーザー ディレクトリの追加ダイアログ。,title=\"ユーザー ディレクトリの種類を選択してください\",width=652,height=211"]
 
 [cols="50%,50%"]
 |===
 | *選択* | *使用する場合* 
 
 
-| Active Directory | ユーザーは Active Directory に保存され、監視対象のアクティビティは SMB です。または、Unix ユーザーが uidNumber 値とともに Active Directory に保存されており、NFS アクティビティを実行します。 
+| Active Directory | ユーザーは Active Directory に保存され、監視対象のアクティビティは SMB です。または、Unix ユーザーは uidNumber 値とともに Active Directory に保存され、NFS アクティビティを実行します。 
 
 
 | LDAPディレクトリサーバー | Unixユーザーは主にLDAPディレクトリに保存され、監視対象のアクティビティはNFSです。 
@@ -42,7 +42,7 @@ image:config_ad_user_directory_image1.png["Active DirectoryとLDAPディレク�
 [[before-you-begin]]
 == 開始する前に
 
-* Data Infrastructure Insights管理者またはアカウント所有者としてサインインします。
+* Data Infrastructure Insightsの管理者またはアカウント所有者としてサインインします。
 * ディレクトリサーバーにアクセスできるWorkload Security Agentをデプロイして接続します。
 * Active DirectoryサーバーのIPアドレスまたはFQDN、フォレスト名、バインドDN、およびバインドパスワードを収集します。
 * エージェントがディレクトリサービスにアクセスできるようにします。一般的なポート番号は、LDAPまたはStartTLSの場合は389番、LDAPSの場合は636番です。ご使用のサーバーで設定されているポート番号を使用してください。
@@ -54,7 +54,7 @@ image:config_ad_user_directory_image1.png["Active DirectoryとLDAPディレク�
 [[add-the-active-directory-collector]]
 == Active Directoryコレクターを追加する
 
-*1.*Workload Security ++>++ Collectors ++>++ User Directory Collectors に移動して、{plus} User Directory Collector を選択します。
+*1.*Workload Security ++>++ コレクター ++>++ ユーザー ディレクトリ コレクター に移動し、{plus} ユーザー ディレクトリ コレクター を選択します。
 
 *2.*Active Directoryを選択し、「続行」を選択します。
 
@@ -116,7 +116,7 @@ Active Directoryコレクターフィールドと既定の属性マッピング�
 | 表示名++*++ | 名前 | Always 
 
 
-| SID++*++ | オブジェクトID | 常に；SMBセキュリティ識別子を解決します 
+| SID++*++ | オブジェクトID | 常に; SMBセキュリティ識別子を解決します 
 
 
 | ユーザー名++*++ | sAMAccountName | Always 
@@ -173,7 +173,7 @@ Active Directoryコレクターフィールドと既定の属性マッピング�
 |===
 | （{vbar}（objectClass=posixAccount）（&（objectCategory=person）（objectClass=user）））  
 |===
-このフィルタに一致しないコンピュータ アカウント、マネージド サービス アカウント、またはカスタム サービス アカウント オブジェクトは、未解決のままになります。AD ExplorerでオブジェクトのobjectClassを検査し、必要なオブジェクトタイプのみを対象にクエリを拡張します。例：
+このフィルタに一致しないコンピュータ アカウント、マネージド サービス アカウント、またはカスタム サービス アカウント オブジェクトは、未解決のままになります。AD ExplorerでオブジェクトのobjectClassを検査し、必要なオブジェクトタイプのみにクエリを拡張します。例えば：
 
 [cols="100%"]
 |===
@@ -197,7 +197,7 @@ Active Directoryコレクターフィールドと既定の属性マッピング�
 [[use-ad-explorer]]
 === AD Explorerを使用する
 
-目的のバインドDNアカウントを使用して、Active Directoryサーバに接続します。アカウントが、構成済みのフォレスト名またはOUを参照できること、および、名前、objectSid、sAMAccountName、使用される場合はuidNumber、および任意のオプション属性を読み取ることができることを確認します。
+目的のバインドDNアカウントを使用して、Active Directoryサーバに接続します。アカウントが、設定されたフォレスト名またはOUを参照でき、名前、objectSid、sAMAccountName、使用されている場合はuidNumber、および任意のオプション属性を読み取ることができることを確認します。
 
 https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer["[.underline"]#Microsoft Sysinternals AD Explorerをダウンロード#]
 
@@ -210,9 +210,9 @@ https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer["[.underline
 
 [cols="100%"]
 |===
-| ldapsearch -o ldif-wrap=no -LLL -x -H ldap://ad.example.com:389 -D 「ws-reader@example.com」 -W -b 「DC=hq,DC=example,DC=com」 '({vbar}(objectClass=posixAccount)(&(objectCategory=person)(objectClass=user)))' name objectSid sAMAccountName uidNumber 
+| ldapsearch -o ldif-wrap=no -LLL -x -H ldap://ad.example.com:389 -D "ws-reader@example.com" -W -b "DC=hq,DC=example,DC=com" '({vbar}(objectClass=posixAccount)(&(objectCategory=person)(objectClass=user)))' name objectSid sAMAccountName uidNumber 
 |===
-* コレクターが使用する正確なアカウントとパスワードでバインドが成功します。
+* コレクタが使用する正確なアカウントとパスワードでバインドが成功します。
 * 検索結果には、想定される人間、コンピュータ、またはサービスのアカウントが返されます。
 * 必須のマッピング属性はすべて存在し、返されるオブジェクトに値を持っています。
 * エージェントは、ディレクトリサーバに対して同じDNS解決とネットワークパスを持ちます。
@@ -227,7 +227,7 @@ https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer["[.underline
 * 約300,000人のユーザーを含むディレクトリの同期には、約15分かかる場合があります。
 * ユーザーデータは12時間ごとに自動的に更新されます。
 * ディレクトリが利用できなくなった場合、以前に取得したユーザー情報は保持されますが、接続が復旧するまで新規ユーザーや変更されたユーザーは取得できません。
-* ユーザーデータは、更新なしで13か月間保持されます。ユーザーディレクトリデータは、テナントとは独立して削除することはできません。
+* ユーザーデータは、更新せずに13か月間保持されます。ユーザーディレクトリデータは、テナントとは独立して削除することはできません。
 
 
 

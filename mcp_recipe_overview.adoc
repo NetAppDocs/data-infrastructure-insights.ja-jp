@@ -40,7 +40,7 @@ NOTE: DII MCPはlink:concept_preview_features.html["プレビュー"]機能で�
 | Kubernetesコレクションコンポーネントのバージョンを確認します | link:mcp_recipe_kubernetes_collector_currency.html["Kubernetesコレクターの最新状態を確認する"] | Kubernetesコレクター 
 
 
-| 低速なボリュームやワークロードを調査する | link:mcp_recipe_performance_rca.html["パフォーマンスのトラブルシューティング"] | オブジェクトメトリクス、アラート、ログ 
+| 遅いボリュームまたはワークロードを調査する | link:mcp_recipe_performance_rca.html["パフォーマンスのトラブルシューティング"] | オブジェクトメトリクス、アラート、ログ 
 
 
 | ルーティングと抑制を安全に確認する | link:mcp_recipe_notification_posture.html["通知状況を確認する"] | ルール、目標、メンテナンス期間 

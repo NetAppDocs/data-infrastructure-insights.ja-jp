@@ -14,12 +14,12 @@ keywords: MCP, DII, Data Infrastructure Insights, AI assistant
 
 
 [role="lead"]
-AIアシスタント/エージェントをData Infrastructure Insights（DII）に接続することで、自然言語を使用してインフラストラクチャのインベントリ、テレメトリ、アラート、収集の健全性を調査できるようになります。
+AIアシスタント/エージェントをData Infrastructure Insights（DII）に接続して、自然言語を使用してインフラストラクチャのインベントリ、テレメトリ、アラート、収集の健全性を調査できるようにします。
 
 
 NOTE: DII MCPはlink:concept_preview_features.html["プレビュー"]機能であるため、変更される可能性があります。
 
-DII MCPサーバーは、Model Context Protocol（MCP）を実装し、テナントスコープのツールをサポート対象のAIクライアントに公開します。現在の製品ツールセットは*読み取り専用*です：DIIデータを取得して分析しますが、インフラストラクチャやDIIリソースを変更することはありません。
+DII MCP Serverは、Model Context Protocol（MCP）を実装し、テナントスコープのツールをサポート対象のAIクライアントに公開します。現在の製品ツールセットは*読み取り専用*：DIIデータを取得して分析しますが、インフラストラクチャやDIIリソースを変更することはありません。
 
 
 
@@ -44,7 +44,7 @@ DII MCPサーバーは、Model Context Protocol（MCP）を実装し、テナン
 [[connect-an-ai-client]]
 === AIクライアントを接続する
 
-Cursor、Claude Code、VS Code、Codex、またはその他のMCP互換クライアントについては、link:mcp_setup.html["DII MCPサーバーのセットアップ"]に従ってください。
+Cursor、Claude Code、VS Code、Codex、またはその他のMCP互換クライアントについては、link:mcp_setup.html["DII MCPサーバーをセットアップする"]に従ってください。
 
 
 
@@ -92,7 +92,7 @@ DIIのリソースの多くは動的なスキーマを持っています。信�
 * 現在提供されている製品ツールはすべて読み取り専用です。
 * オブジェクトクエリ、パフォーマンスクエリ、ログクエリは、時間制限を設けて実行します。ツールページに明示的により短い制限が記載されていない限り、30日以下の期間を使用してください。
 * クエリフィールドは、選択したリソースタイプに対して返されるメタデータと一致する必要があります。
-* 大量の結果はページ分けされるか、上限が設定されます。
+* 大量の結果はページ分割されるか、上限が設定されます。
 * ツールの利用可否および返されるデータは、テナントのコレクター、有効化されている機能、およびユーザー権限によって異なります。
 * 完全なWebhookエンドポイントアドレスを要求したり、複製したりしないでください。link:mcp_security.html["セキュリティとプライバシー"] を参照してください。
 
@@ -102,7 +102,7 @@ DIIのリソースの多くは動的なスキーマを持っています。信�
 [[next-steps]]
 == 次の手順
 
-. link:mcp_setup.html["クライアントの接続"]。
+. link:mcp_setup.html["クライアントを接続します"]。
 . link:mcp_recipe_environment_inventory.html["環境インベントリレシピ"]をお試しください。
 . クエリが拒否された場合、または予期しない結果が返された場合は、link:mcp_troubleshooting.html["トラブルシューティング"]を確認してください。
 
