@@ -25,25 +25,25 @@ NOTE: DII MCPはlink:concept_preview_features.html["プレビュー"]機能で�
 == ワークフローを選択してください
 
 |===
-| 目標 | レシピ | 主要なDIIサーフェス 
+| 目標 | レシピ | 主要なDII表面 
 
 
-| 収集範囲と鮮度を検証する | link:mcp_recipe_environment_inventory.html["インベントリ環境と収集の健全性"] | 取得ユニット、データソース 
+| 収集範囲と鮮度を検証する | link:mcp_recipe_environment_inventory.html["インベントリ環境と収集の状態"] | 取得ユニット、データソース 
 
 
-| アクティブなインフラストラクチャの問題を優先する | link:mcp_recipe_storage_health.html["ストレージの健全性を評価する"] | アラート、モニター、ログ、オブジェクト 
+| アクティブなインフラストラクチャの問題を優先的に解決する | link:mcp_recipe_storage_health.html["ストレージの健全性を評価する"] | アラート、モニター、ログ、オブジェクト 
 
 
 | 容量限界に近づいているプールを探す | link:mcp_recipe_capacity_risk.html["キャパシティリスクを特定する"] | オブジェクトメタデータ、グループ化、時系列 
 
 
-| Kubernetesコレクションコンポーネントのバージョンを確認する | link:mcp_recipe_kubernetes_collector_currency.html["Kubernetesコレクターの最新状態を確認する"] | Kubernetesコレクター 
+| Kubernetesコレクションコンポーネントのバージョンを確認します | link:mcp_recipe_kubernetes_collector_currency.html["Kubernetesコレクターの最新状態を確認する"] | Kubernetesコレクター 
 
 
 | 低速なボリュームやワークロードを調査する | link:mcp_recipe_performance_rca.html["パフォーマンスのトラブルシューティング"] | オブジェクトメトリクス、アラート、ログ 
 
 
-| ルーティングと抑制を安全に確認する | link:mcp_recipe_notification_posture.html["通知状況を確認する"] | ルール、ターゲット、メンテナンス期間 
+| ルーティングと抑制を安全に確認する | link:mcp_recipe_notification_posture.html["通知状況を確認する"] | ルール、目標、メンテナンス期間 
 |===
 
 
@@ -55,7 +55,7 @@ NOTE: DII MCPはlink:concept_preview_features.html["プレビュー"]機能で�
 . 動的フィールドを使用する前にメタデータを取得してください。
 . 指定した時間範囲でクエリを実行します。
 . 独立した信号を相関させます。
-. 観察された事実と推論を区別する。
+. 観察された事実と推論を区別します。
 . レポートの制限事項と推奨されるフォローアップ。
 
 

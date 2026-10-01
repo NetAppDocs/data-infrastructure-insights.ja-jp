@@ -53,7 +53,7 @@ image:vm_analyzer_datastore_only_view.png["VM Analyzerで、データストア�
 
 image:user_data_edit_slideout.png["ユーザーデータが読み取り専用モードで表示されるアセット詳細スライドアウト。編集モードに入るための鉛筆アイコン付き、width=400"]
 
-image:user_data_edit_lp.png["ユーザーデータが編集モードで開かれ、変更を保存できる状態のアセットランディングページ、width=200"]
+image:user_data_edit_lp.png["ユーザーデータが編集モードで開かれ、変更を保存できる状態のアセットランディングページ、幅=200"]
 
 '''
 

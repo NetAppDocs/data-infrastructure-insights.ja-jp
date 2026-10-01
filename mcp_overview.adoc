@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: mcp_overview.html 
-summary: AIアシスタントをData Infrastructure Insights（DII）に接続して、自然言語を使用してインフラストラクチャのインベントリ、テレメトリ、アラート、および収集の健全性を調査できるようにします。 
+summary: AIアシスタントをData Infrastructure Insights（DII）に接続することで、自然言語を使用してインフラストラクチャのインベントリ、テレメトリ、アラート、および収集の健全性を調査できるようになります。 
 keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
 ---
 = DII MCP Server
@@ -14,12 +14,12 @@ keywords: MCP, DII, Data Infrastructure Insights, AI assistant
 
 
 [role="lead"]
-AIアシスタント/エージェントをData Infrastructure Insights（DII）に接続して、自然言語を使用してインフラストラクチャのインベントリ、テレメトリ、アラート、および収集の健全性を調査できるようにします。
+AIアシスタント/エージェントをData Infrastructure Insights（DII）に接続することで、自然言語を使用してインフラストラクチャのインベントリ、テレメトリ、アラート、収集の健全性を調査できるようになります。
 
 
 NOTE: DII MCPはlink:concept_preview_features.html["プレビュー"]機能であるため、変更される可能性があります。
 
-DII MCPサーバーは、モデルコンテキストプロトコル（MCP）を実装し、テナントスコープのツールをサポートされているAIクライアントに公開します。現在の製品ツールセットは*読み取り専用*です：DIIデータを取得して分析しますが、インフラストラクチャやDIIリソースを変更することはありません。
+DII MCPサーバーは、Model Context Protocol（MCP）を実装し、テナントスコープのツールをサポート対象のAIクライアントに公開します。現在の製品ツールセットは*読み取り専用*です：DIIデータを取得して分析しますが、インフラストラクチャやDIIリソースを変更することはありません。
 
 
 
@@ -27,11 +27,11 @@ DII MCPサーバーは、モデルコンテキストプロトコル（MCP）を�
 == 調査できること
 
 * *インフラストラクチャインベントリ：* ストレージ、仮想化、Kubernetes、ONTAP、Azure NetApp Files、StorageGRID、および関連リソース。
-* *パフォーマンスと容量：* オブジェクトメトリクス、グループ化された集計値、および時系列動作。
+* *パフォーマンスと容量：*オブジェクトメトリクス、グループ化された集計値、および時系列動作。
 * *ログとイベント：* ログの種類を検出し、イベントを検索し、イベント数のヒストグラムを作成します。
 * *アラート：* アクティブなアラートを検査し、定義、重大度、および是正ガイダンスを監視します。
 * *コレクションの状態：* 取得ユニット、データソース、サポートされているコレクタータイプ、およびKubernetesコレクターのバージョンを確認します。
-* *通知体制：* メンテナンス期間、通知ルール、およびウェブフックのターゲットタイプを確認します。
+* *通知体制：*メンテナンス期間、通知ルール、およびWebhookのターゲットタイプを確認します。
 
 
 
@@ -44,21 +44,21 @@ DII MCPサーバーは、モデルコンテキストプロトコル（MCP）を�
 [[connect-an-ai-client]]
 === AIクライアントを接続する
 
-Cursor、Claude Code、VS Code、Codex、またはその他のMCP互換クライアントについては、link:mcp_setup.html["DII MCPサーバーをセットアップする"]に従ってください。
+Cursor、Claude Code、VS Code、Codex、またはその他のMCP互換クライアントについては、link:mcp_setup.html["DII MCPサーバーのセットアップ"]に従ってください。
 
 
 
 [[browse-available-tools]]
 === 利用可能なツールを閲覧する
 
-link:mcp_tools_overview.html["ツールリファレンス"] を使用して、現在のすべてのツール、必要な検出呼び出し、クエリ制限、およびユーザー向け名称を把握してください。
+link:mcp_tools_overview.html["ツールリファレンス"] を使用して、現在のすべてのツール、必要な検出呼び出し、クエリ制限、およびユーザー向けの名称を把握します。
 
 
 
 [[start-with-an-operational-workflow]]
 === 運用ワークフローから始めましょう
 
-必要な結果がすでにわかっている場合は、link:mcp_recipe_overview.html["レシピ"]を使用します：
+必要な結果がすでにわかっている場合は、link:mcp_recipe_overview.html["レシピ"] を使用します：
 
 * インベントリ収集の健全性
 * ストレージの健全性を評価する
@@ -102,7 +102,7 @@ DIIのリソースの多くは動的なスキーマを持っています。信�
 [[next-steps]]
 == 次の手順
 
-. link:mcp_setup.html["クライアントを接続します"]。
-. link:mcp_recipe_environment_inventory.html["環境インベントリレシピ"] をお試しください。
+. link:mcp_setup.html["クライアントの接続"]。
+. link:mcp_recipe_environment_inventory.html["環境インベントリレシピ"]をお試しください。
 . クエリが拒否された場合、または予期しない結果が返された場合は、link:mcp_troubleshooting.html["トラブルシューティング"]を確認してください。
 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: mcp_tools_overview.html 
-summary: 'DII MCPサーバーは現在、9つのドメインにわたる26種類の読み取り専用製品ツールを公開しています。別の `mcp_auth`ヘルパーは、接続されたクライアントが認証を必要とする場合に表示されることがあります。' 
+summary: 'DII MCP Serverは現在、9つのドメインにわたる26種類の読み取り専用製品ツールを公開しています。接続されたクライアントが認証を必要とする場合、別の `mcp_auth`ヘルパーが表示されることがあります。' 
 keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
 ---
 = DII MCPツールリファレンス
@@ -38,12 +38,12 @@ NOTE: DII MCPはlink:concept_preview_features.html["プレビュー"]機能で�
 
 
 [[acquisition-units]]
-== Acquisition Unit
+== 取得ユニット
 
 
 
 [[list-acquisition-units]]
-=== 取得ユニットの一覧表示
+=== 取得ユニットの一覧
 
 +AcquisitionUnitsService_getAcquisitionUnits+
 
@@ -53,17 +53,17 @@ NOTE: DII MCPはlink:concept_preview_features.html["プレビュー"]機能で�
 
 []
 ====
-Acquisition Unitを一覧表示します。IPアドレスやUUIDを表示せずに、接続済み、障害発生、および未報告のユニットの概要を示します。
+Acquisition Unitを一覧表示します。IPアドレスやUUIDを表示せずに、接続されているユニット、障害が発生したユニット、および一度も報告されていないユニットの概要を表示します。
 
 ====
 
 
 [[get-an-acquisition-unit]]
-=== データ収集ユニットを取得する
+=== Acquisition Unitを取得する
 
 +AcquisitionUnitsService_getAcquisitionUnitByUuid+
 
-1つの取得ユニットに関する詳細情報を取得します。ユーザーが名前を指定した場合、まず取得ユニットを一覧表示してそのUUIDを解決します。
+1つの取得ユニットの詳細をすべて取得します。ユーザーが名前を指定した場合は、まず取得ユニットを一覧表示してそのUUIDを解決します。
 
 必須入力項目： `uuid`
 
@@ -99,7 +99,7 @@ Acquisition Unitを一覧表示します。IPアドレスやUUIDを表示せず�
 * `timezone`
 
 
-オプションの入力には、 `filter`、 `sortField`、 `sortAscending`、 `limit`、および `offset`が含まれます。 `limit`は1-500、 `offset`は0-1000です。期間は30日以内にしてください。
+オプションの入力には、 `filter`、 `sortField`、 `sortAscending`、 `limit`、および `offset`が含まれます。 `limit`は1～500、 `offset`は0～1000です。期間は30日以内にしてください。
 
 例：
 
@@ -115,7 +115,7 @@ Acquisition Unitを一覧表示します。IPアドレスやUUIDを表示せず�
 
 +AlertsService_getAlertByName+
 
- `AL-123456` 形式のアラート ID を使用して 1 つのアラートを取得します。
+ `AL-123456` 形式のアラートIDを使用して、1つのアラートを取得します。
 
 必須入力項目： `name`
 
@@ -148,7 +148,7 @@ UUIDを使用してアラートを1件取得します。
 
 []
 ====
-設定済みのデータソースをステータスとベンダーごとにグループ化します。失敗と、成功したものの古くなった取得を強調表示します。
+設定されたデータソースをステータスとベンダーごとにグループ化します。失敗した取得と、成功したものの古くなった取得を強調表示します。
 
 ====
 
@@ -194,7 +194,7 @@ DIIコレクターカタログでサポートされている製品タイプの�
 
 +LogService_getLogTypeMetadata+
 
-ログタイプに対して有効な属性を返します。イベントの検索やグループ化を行う前に呼び出してください。
+ログタイプに対して有効な属性を返します。イベントの検索やグループ化を行う前に、必ず呼び出してください。
 
 必須入力項目： `type`
 
@@ -248,7 +248,7 @@ DIIコレクターカタログでサポートされている製品タイプの�
 
 +MaintenanceWindowService_getMaintenanceWindows+
 
-有効で期限切れでないアラート抑制ウィンドウを一覧表示します。期限切れのウィンドウを含めるには、 `includeExpired`を `true`に設定します。
+有効な、期限切れでないアラート抑制期間を一覧表示します。期限切れのウィンドウを含めるには、 `includeExpired`を `true`に設定します。
 
 正常な空の応答は、該当するメンテナンス期間が存在しないことを意味します。
 
@@ -275,7 +275,7 @@ DIIコレクターカタログでサポートされている製品タイプの�
 
 +MonitorsService_queryMonitors+
 
-DIIモニターを一覧表示します。 `isSystem`を使用して、システムモニターのみを返す、システムモニターを除外する、またはすべてのモニターを返します。
+DIIモニターを一覧表示します。システムモニターのみを返す、システムモニターを除外する、またはすべてのモニターを返すには、 `isSystem`を使用します。
 
 
 
@@ -328,7 +328,7 @@ Slack、Microsoft Teams、Discord、PagerDuty、およびカスタムHTTP統合�
 
 []
 ====
-エンジンタイプ別にWebhookターゲットをカウントし、ターゲット名とステータスのみを一覧表示します。エンドポイントアドレスを返さないでください。
+エンジンタイプ別にWebhookターゲットの数をカウントし、ターゲット名とステータスのみを一覧表示します。エンドポイントアドレスを返さないでください。
 
 ====
 
@@ -339,7 +339,7 @@ Slack、Microsoft Teams、Discord、PagerDuty、およびカスタムHTTP統合�
 
 
 [[list-object-types]]
-=== オブジェクトタイプの一覧
+=== オブジェクト型の一覧
 
 +ObjectService_getObjectTypes+
 
@@ -363,7 +363,7 @@ Slack、Microsoft Teams、Discord、PagerDuty、およびカスタムHTTP統合�
 
 +ObjectService_query+
 
-オブジェクト、選択された属性、およびオプションのメトリックを取得します。メトリックを参照するフィルターは、時間枠集計前の生の値に適用されます。
+オブジェクト、選択された属性、およびオプションのメトリックを取得します。メトリックを参照するフィルタは、時間枠集計前の生の値に適用されます。
 
 必須入力項目：
 
@@ -382,7 +382,7 @@ Slack、Microsoft Teams、Discord、PagerDuty、およびカスタムHTTP統合�
 
 +ObjectService_groupObjects+
 
-オブジェクトを有効なグループ化可能な属性1つでグループ化し、選択されたメトリックを集計します。フィルターは集計前の生データに適用されます。
+オブジェクトを有効なグループ化可能な属性1つでグループ化し、選択されたメトリックを集計します。フィルターは集計前の生の値に適用されます。
 
 必須入力項目：
 
@@ -429,7 +429,7 @@ Slack、Microsoft Teams、Discord、PagerDuty、およびカスタムHTTP統合�
 
 +OperatorsManagement_getKubernetesCollectors+
 
-クラスタ名、全体的な最新ステータス、オペレータバージョン、Network Performance and Mapコンポーネントのバージョン、Change Analysisコンポーネントのバージョン、および最後に報告されたタイムスタンプを返します。
+クラスタ名、全体的な最新ステータス、オペレーターバージョン、ネットワークパフォーマンスおよびマップコンポーネントバージョン、変更分析コンポーネントバージョン、および最後に報告されたタイムスタンプを返します。
 
 例：
 
