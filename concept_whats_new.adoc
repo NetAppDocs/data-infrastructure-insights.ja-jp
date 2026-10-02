@@ -36,9 +36,9 @@ image:ai_assistant-column_graph.png["AI Assistantの可視化"]
 [[enhanced-vm-analyzer-filtering]]
 === VMアナライザーのフィルタリング機能の強化
 
-7e3b063a499521d531e921d85b5ffe47
+VMアナライザービューに新しい切り替え機能が追加され、データストアのないマウント済みボリュームを非表示にできるようになりました。これにより、より見やすいビューが提供され、VMのトラブルシューティングが簡素化されます。
 
-509d1d4de8b6cd47ea7d3ca1489eb431
+image:vm_analyzer_datastore_only_view.png["VM Analyzerで、データストアのないマウント済みボリュームを非表示にする切り替えボタンを表示"]
 
 
 
@@ -51,9 +51,9 @@ image:ai_assistant-column_graph.png["AI Assistantの可視化"]
 
 アセットのランディングページを直接開き、右上隅の「編集」を選択することもできます。
 
-d05c002809e2eff8dbbef3f837ebccae
+image:user_data_edit_slideout.png["ユーザーデータが読み取り専用モードで表示されるアセット詳細スライドアウト。編集モードに入るための鉛筆アイコン付き、width=400"]
 
-2676c87e0e32e08b02693582de233efc
+image:user_data_edit_lp.png["ユーザーデータが編集モードで開かれ、変更を保存できる状態のアセットランディングページ、width=200"]
 
 '''
 

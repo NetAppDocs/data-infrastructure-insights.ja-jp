@@ -53,7 +53,7 @@ ____
 | ONTAP Select | サポート済み。 
 
 
-| SVMタイプ／サブタイプ | データSVMのみ（無限ボリュームは不可）。サポートされているサブタイプ：default、sync++_++source、sync++_++destination。DP宛先SVMは、設計上、監査対象から除外されます。 
+| SVMタイプ／サブタイプ | データSVMのみ（無限ボリュームは不可）。サポートされているサブタイプ：default、sync_source、sync_destination。DP宛先SVMは、設計上、監査対象から除外されます。 
 
 
 | data-fpolicy-clientサービスポリシー | ONTAP 9.8以降で必要です（サービスポリシーを参照）。以前のリリースでは、設定する必要はありません。 
@@ -141,15 +141,15 @@ _クラスター管理IP{plus} SVM名が推奨されます。SVMモードを使�
 
 [listing]
 ----
-security login password -username vsadmin -vserver ++<++svmname++>++
+security login password -username vsadmin -vserver <svmname>
 
-security login unlock -username vsadmin -vserver ++<++svmname++>++
+security login unlock -username vsadmin -vserver <svmname>
 ----
 *専用のSVM管理LIFを使用してください。利用できない場合は、データLIFファイアウォールポリシーをmgmt:*に設定します。
 
 [listing]
 ----
-network interface modify -lif ++<++SVM++_++data++_++LIF++_++name++>++ -firewall-policy mgmt
+network interface modify -lif <SVM_data_LIF_name> -firewall-policy mgmt
 ----
 .SVMログイン出力例。
 image:ontap-svm-login-output.png["SVMログイン出力例,title=\"SVMログイン出力例\",width=646,height=164"]
@@ -180,7 +180,7 @@ Test Connection は、コレクターフォームに入力された ONTAP アカ
 | 管理者ショートカット | ロール DEFAULT：readonly (cluster) — 読み取りチェックを満たします。fpolicy は引き続きすべてを必要とします | — 
 
 
-| Snapshot 数 | ボリュームスナップショット：すべて（可能な場合は cloudsecure++_*++ の範囲） | any 
+| Snapshot 数 | ボリュームスナップショット：すべて（可能な場合は cloudsecure_* の範囲） | any 
 
 
 | EMSベースのモニタリング | イベントカタログ、イベントフィルタ、イベント通知、イベント通知先、セキュリティ証明書：すべて | any 
@@ -215,10 +215,10 @@ ____
 
 [listing]
 ----
-security login delete -user-or-group-name csuser -application ++*++
-security login role delete -role csrole -cmddirname ++*++
-security login rest-role delete -role csrestrole -api ++*++
-security login rest-role delete -role arwrole -api ++*++
+security login delete -user-or-group-name csuser -application *
+security login role delete -role csrole -cmddirname *
+security login rest-role delete -role csrestrole -api *
+security login rest-role delete -role arwrole -api *
 ----
 役割とユーザーを作成します（クラスタ管理者として実行）：
 
@@ -226,7 +226,7 @@ security login rest-role delete -role arwrole -api ++*++
 ----
 security login role create -role csrole -cmddirname DEFAULT -access readonly
 security login role create -role csrole -cmddirname "vserver fpolicy" -access all
-security login role create -role csrole -cmddirname "volume snapshot" -access all -query "-snapshot cloudsecure++_*++"
+security login role create -role csrole -cmddirname "volume snapshot" -access all -query "-snapshot cloudsecure_*"
 security login role create -role csrole -cmddirname "event catalog" -access all
 security login role create -role csrole -cmddirname "event filter" -access all
 security login role create -role csrole -cmddirname "event notification destination" -access all
@@ -246,37 +246,37 @@ security login create -user-or-group-name csuser -application http -authmethod p
 
 [listing]
 ----
-security login delete -user-or-group-name csuser -application ++*++ -vserver ++<++vservername++>++
-security login role delete -role csrole -cmddirname ++*++ -vserver ++<++vservername++>++
-security login rest-role delete -role csrestrole -api ++*++ -vserver ++<++vservername++>++
+security login delete -user-or-group-name csuser -application * -vserver <vservername>
+security login role delete -role csrole -cmddirname * -vserver <vservername>
+security login rest-role delete -role csrestrole -api * -vserver <vservername>
 ----
-ロールとユーザーを作成します（実行前に++<++vservername++>++を置き換えます）：
+ロールとユーザーを作成します（実行前に <vservername> を置き換えてください）：
 
 [listing]
 ----
-security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname DEFAULT -access none
-security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname "network interface" -access readonly
-security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname version -access readonly
-security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname volume -access readonly
-security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname vserver -access readonly
-security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname "vserver fpolicy" -access all
-security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname "volume snapshot" -access all
-security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole -vserver ++<++vservername++>++
-security login create -user-or-group-name csuser -application http -authmethod password -role csrole -vserver ++<++vservername++>++
+security login role create -vserver <vservername> -role csrole -cmddirname DEFAULT -access none
+security login role create -vserver <vservername> -role csrole -cmddirname "network interface" -access readonly
+security login role create -vserver <vservername> -role csrole -cmddirname version -access readonly
+security login role create -vserver <vservername> -role csrole -cmddirname volume -access readonly
+security login role create -vserver <vservername> -role csrole -cmddirname vserver -access readonly
+security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
+security login role create -vserver <vservername> -role csrole -cmddirname "volume snapshot" -access all
+security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole -vserver <vservername>
+security login create -user-or-group-name csuser -application http -authmethod password -role csrole -vserver <vservername>
 ----
 
 
 [[feature-specific-permissions]]
 === 機能固有の権限
 
-*永続ストレージ（クラスタモードを表示。SVMモードの場合は -vserver ++<++vservername++>++ を追加）：*
+*永続ストレージ（クラスタモードを表示。SVMモードの場合は -vserver <vservername> を追加）：*
 
 [listing]
 ----
 security login role create -role csrole -cmddirname "vserver fpolicy" -access all
 security login role create -role csrole -cmddirname "job show" -access readonly
 ----
-*Protobuf（クラスタモードを表示。SVMモードの場合は -vserver ++<++vservername++>++ を追加）：*
+*Protobuf（クラスタモードを表示。SVMモードの場合は -vserver <vservername> を追加）：*
 
 [listing]
 ----
@@ -290,7 +290,7 @@ security login role create -role csrole -cmddirname "vserver fpolicy" -access al
 == データコレクターの設定とテスト
 
 . Data Infrastructure Insights に管理者またはアカウント所有者としてログインします。
-. Workload Security ++>++ コレクター ++>++ &#43;データコレクターを選択します。
+. Workload Security > コレクター > &#43;データコレクターを選択します。
 . NetApp SVMタイルにカーソルを合わせ、「&#43;Monitor」をクリックします。
 . 以下の項目を入力してください。コレクターはまだ保存しないでください。
 
@@ -337,7 +337,7 @@ security login role create -role csrole -cmddirname "vserver fpolicy" -access al
 |===
 [quote]
 ____
-*Important:* デフォルトで除外されるファイル拡張子：設計上、Workload SecurityはiniおよびDS++_++Store拡張子を除外するようにFPolicyスコープを設定します。これらのファイルのイベントはONTAPでフィルタリングされ、Workload Securityに到達することはないため、Activity Forensicsには表示されません。これは、お客様が設定可能なアラート除外とは別のものです。これは想定される動作です。これらの拡張子の監査は、UIで設定することはできません。
+*Important:* デフォルトで除外されるファイル拡張子：設計上、Workload SecurityはFPolicyスコープを設定してiniおよびDS_Store拡張子を除外します。これらのファイルのイベントはONTAPでフィルタリングされ、Workload Securityに到達することはないため、Activity Forensicsには表示されません。これは、お客様が設定可能なアラート除外とは別のものです。これは想定される動作です。これらの拡張子の監査は、UIで設定することはできません。
 
 ____
 
@@ -402,14 +402,14 @@ ____
 
 [listing]
 ----
-net int service-policy create -policy only++_++data++_++fpolicy -vserver ++<++svm++>++ ++\++ \
+net int service-policy create -policy only_data_fpolicy -vserver <svm> \
 -allowed-addresses 0.0.0.0/0 -services data-cifs,data-nfs,data,-core,data-fpolicy-client
 ----
 LIFを確認します：
 
 [listing]
 ----
-network interface show -vserver ++<++svm++>++ -fields service-policy,status-admin,status-oper
+network interface show -vserver <svm> -fields service-policy,status-admin,status-oper
 ----
 ONTAP 9.8より前のバージョンでは、data-fpolicy-clientを設定する必要はありません。NFSおよび/またはCIFSを伝送する、ロールがデータ（up）のLIFで十分です。
 
@@ -427,8 +427,8 @@ MAVが有効になっている場合、Workload Securityがスナップショッ
 
 [listing]
 ----
-multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !++*++cloudsecure++_*++"
-multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !++*++cloudsecure++_*++"
+multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !*cloudsecure_*"
+multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !*cloudsecure_*"
 multi-admin-verify rule delete -operation set # allow user blocking
 ----
 
@@ -490,7 +490,7 @@ ____
 [[pause-and-resume-a-collector]]
 == コレクターを一時停止して再開する
 
-一時停止と再開は、データコレクターに適用され、エージェントには適用されません。UI（コレクター ++>++ コレクター ++>++ オプションメニュー）またはAPIから実行できます。
+一時停止と再開は、データコレクターに適用され、エージェントには適用されません。UI（コレクター > コレクター > オプション メニュー）またはAPIから実行できます。
 
 実行中のコレクターを一時停止すると、ONTAPからFPolicy構成が削除されます。一時停止中は、イベントは発生せず、データの送受信も行われません。
 
@@ -557,7 +557,7 @@ image:ws-agent-selector.png["コレクターを移行するためのエージェ
 
 接続テストでは、セットアップ時の接続性、認証情報、データLIF、割り当てられたポートでのコールバック接続性、SMBを選択した場合のCIFSサーバーチェック、およびクラスタモードでの機能アクセスについて確認します。テストが成功した後は、これらのチェックを手動で繰り返さないでください。
 
-コレクタが後でエラーまたは劣化状態になった場合は、ステータス ++>++ 詳細を開き、ONTAP SVM Data Collectorのトラブルシューティングに従ってください。重複コレクタ、イベントレートの過負荷、一時停止中のコレクタ、Persistent Storeの配置、MetroClusterの移行、アクティビティの欠落、ID解決などの実行時の条件は、保存前の接続テストワークフローの対象外です。
+コレクタが後でエラーまたは劣化状態になった場合は、ステータス > 詳細を開き、ONTAP SVM Data Collectorのトラブルシューティングに従ってください。重複コレクタ、イベントレートの過負荷、一時停止中のコレクタ、Persistent Storeの配置、MetroClusterの移行、アクティビティの欠落、ID解決などの実行時の条件は、保存前の接続テストワークフローの対象外です。
 
 
 
@@ -565,6 +565,6 @@ image:ws-agent-selector.png["コレクターを移行するためのエージェ
 == 終了後の操作
 
 * 「インストール済みデータコレクター」ページで、オプションメニューを使用してコレクターを編集または再起動します。
-* コレクターが「実行中」になり、実際のクライアント I/O 後にイベントがワークロード セキュリティ ++>++ アクティビティ フォレンジックに表示されることを確認します。
+* コレクターが「実行中」になり、実際のクライアントI/O後にWorkload Security > Activity Forensicsにイベントが表示されることを確認します。
 * ユーザー名（SIDではなく）が解決されることを確認してください。解決されない場合は、User Directory Collectorを確認してください。
 

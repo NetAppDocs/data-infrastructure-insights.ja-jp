@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, ports
 :imagesdir: ./media/
 
 
+[role="lead"]
+Portsスキーマには、ネットワークポートとスイッチのデータが含まれており、ポートの接続性、ステータス、接続されているデバイスとの関係などが含まれます。このスキーマを使用して、ストレージインフラストラクチャ内のネットワークトポロジーとファブリックの状態を分析します。
+
 ソース： *dwh_ports* OData エンドポイント — Data Infrastructure Insights
 
 見つかったテーブル数：*7* | 関連付け数：*4*

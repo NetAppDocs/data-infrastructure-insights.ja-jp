@@ -441,24 +441,10 @@
   <block id="993bb582982b324ee6465cc1d0c1a2bd" category="paragraph">カスタム時間範囲では、最大 31 日間連続して選択できます。この範囲の開始時刻と終了時刻を設定することもできます。デフォルトの開始時刻は、選択した最初の日の午前 12:00 で、デフォルトの終了時刻は、選択した最後の日の午後 11:59 です。  「適用」をクリックすると、カスタム時間範囲がアセット ページに適用されます。</block>
   <block id="75190982e0922ca96ba831f7c3eb9037" category="paragraph">ページの情報は、選択した時間範囲に基づいて自動的に更新されます。現在の更新レートは、概要セクションの右上隅と、ページ上の関連するテーブルやウィジェットに表示されます。</block>
   <block id="773a459dc0ea8ba03d599d96cb1af7ca" category="paragraph">パフォーマンス セクションでは、アセットに対して選択した期間に基づいていくつかのメトリックを表示できます。各メトリックは、独自のパフォーマンス チャートに表示されます。表示するデータに応じて、グラフにメトリックや関連アセットを追加したり削除したりできます。選択できるメトリックは、アセットの種類によって異なります。</block>
-  <block id="9dc6acc34988c6b63dea4000b689a580" category="summary">Data Infrastructure Insightsの資産ページの概要セクションの概要。</block>
-  <block id="29128cb5215fb2e80e1ee7a20fe86126" category="doc">資産ページの概要セクション</block>
-  <block id="1928ab7a05e24c9e7bde67fb9a528d0d" category="paragraph">資産ページの概要セクションには、懸念すべきメトリックやパフォーマンス ポリシーがあるかどうかなど、資産に関する一般情報が表示されます。潜在的な問題領域は赤い円で示されます。</block>
-  <block id="a529577c999092a8f244f1064ee16c6e" category="paragraph">概要セクションの情報、およびアセット ページ上のテーブルやカスタム ウィジェットの情報は、選択した時間範囲に基づいて自動的に更新されます。現在の更新レートは、概要セクション、テーブル、カスタム ウィジェットの右上隅に表示されます。</block>
-  <block id="05245c9c713dbc0e818edff595a4246c" category="inline-image-macro">ランディングページの概要セクションの例</block>
-  <block id="65ef2d3ac9b8dfdd7b17c10af9a602da" category="paragraph"><block ref="65ef2d3ac9b8dfdd7b17c10af9a602da" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ce7951793151a0f69487b414bdd8b498" category="paragraph">注: 概要セクションに表示される情報は、表示している資産の種類によって異なります。</block>
   <block id="77e5be94869a677b15024b30a6f71dbd" category="paragraph">いずれかのアセット リンクをクリックすると、そのアセット ページを表示できます。たとえば、ストレージ ノードを表示している場合、リンクをクリックすると、関連付けられているストレージの資産ページを表示できます。</block>
-  <block id="74202c0b51dce91cb2d7ff8a3db7b041" category="paragraph">資産に関連付けられたメトリックを表示できます。メトリックの横にある赤い円は、潜在的な問題を診断して解決する必要がある可能性があることを示します。</block>
   <block id="0072ea3bfe0375786c34c557c30c3890" category="admonition">一部のストレージ アセットでは、ボリューム容量が 100% を超えて表示される場合があります。これは、ボリュームの容量に関連するメタデータが、アセットによって報告される消費容量データの一部であるためです。</block>
-  <block id="bd7396064bde19099b129313d4e4960b" category="paragraph">該当する場合は、アラート リンクをクリックして、資産に関連付けられているアラートとモニターを表示できます。</block>
-  <block id="99571eecaa5c5d622bb0d1f855752d5f" category="section-title">トポロジ</block>
-  <block id="aa2a179e15d11223c669195106a7e555" category="paragraph">特定のアセット ページの概要セクションには、アセットのトポロジとその接続を表示するためのリンクが含まれています。</block>
-  <block id="575c9466566e751977f9292115eb4416" category="paragraph">トポロジは、次のアセット タイプで使用できます。</block>
   <block id="27432d6ac14dca995c573c963e1fecd8" category="list-text">内部容積</block>
   <block id="b19292cad601553e06435e12582db069" category="list-text">仮想マシン</block>
-  <block id="b3e588c8b8cdde417ea31ee3bbefd9a9" category="inline-image-macro">ランディングページのトポロジセクションの例</block>
-  <block id="3cb6e63269aa6edf3cc66859826feb7d" category="paragraph"><block ref="3cb6e63269aa6edf3cc66859826feb7d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a9bf92fda03d47c7754371c461a7b15c" category="summary">アセット ページのユーザー データ セクションでは、現在のアセットに注釈またはアプリケーションを割り当てることができます。</block>
   <block id="c2bb4a41eb70c8ef98d0a34bf2c6b8a0" category="doc">ユーザーデータセクション</block>
   <block id="5b85956dec7b32235b467a7425211daf" category="paragraph">アセット ページのユーザー データ セクションには、アプリケーションや注釈などのユーザー定義データが表示され、変更できます。</block>
@@ -15560,16 +15546,6 @@
   <block id="a6fa4aea2a61c78e74a437025bfc4121" category="list-text">パフォーマンス：レイテンシとIOPSのタイムライン、およびイベントレートのタイムライン。</block>
   <block id="2f5a98a7fe17728f8b6f19bb7dde8ff4" category="list-text">容量：サブスクリプション前後の使用量と、各コレクターが報告したRAW容量。</block>
   <block id="7db2da5d72ca4cfd4dc3591cdb8b5f7a" category="paragraph">Data Infrastructure Insightsで、ヘルプ ++&gt;++ サポートを使用してケースをオープンします。</block>
-  <block id="add9fe580da121a40e7d835cf08a489d" category="cell">データSVMのみ（無限ボリュームは不可）。サポートされているサブタイプ：default、sync++_++source、sync++_++destination。DP宛先SVMは、設計上、監査対象から除外されます。</block>
-  <block id="689b820747aa6a4d860f2786eb806378" category="cell">ボリュームスナップショット：すべて（可能な場合は cloudsecure++_*++ の範囲）</block>
-  <block id="a0f6fb0a8302b109f912737c2869ae71" category="paragraph">ロールとユーザーを作成します（実行前に++&lt;++vservername++&gt;++を置き換えます）：</block>
-  <block id="28c033259ae71cab82483e5eb721e1c5" category="paragraph">*永続ストレージ（クラスタモードを表示。SVMモードの場合は -vserver ++&lt;++vservername++&gt;++ を追加）：*</block>
-  <block id="8de1a3a6bc3dbbbe06d26a1bcaf978d0" category="paragraph">*Protobuf（クラスタモードを表示。SVMモードの場合は -vserver ++&lt;++vservername++&gt;++ を追加）：*</block>
-  <block id="58322ab2ae3213de6b39a5124b6c922f" category="list-text">Workload Security ++&gt;++ コレクター ++&gt;++ &amp;#43;データコレクターを選択します。</block>
-  <block id="c421bfa9e5f3f2069af785152ca7a7ab" category="paragraph">*Important:* デフォルトで除外されるファイル拡張子：設計上、Workload SecurityはiniおよびDS++_++Store拡張子を除外するようにFPolicyスコープを設定します。これらのファイルのイベントはONTAPでフィルタリングされ、Workload Securityに到達することはないため、Activity Forensicsには表示されません。これは、お客様が設定可能なアラート除外とは別のものです。これは想定される動作です。これらの拡張子の監査は、UIで設定することはできません。</block>
-  <block id="2900a29dbf701a91de01303efc97eac8" category="paragraph">一時停止と再開は、データコレクターに適用され、エージェントには適用されません。UI（コレクター ++&gt;++ コレクター ++&gt;++ オプションメニュー）またはAPIから実行できます。</block>
-  <block id="8939329780680219f89b75f98718d19d" category="paragraph">コレクタが後でエラーまたは劣化状態になった場合は、ステータス ++&gt;++ 詳細を開き、ONTAP SVM Data Collectorのトラブルシューティングに従ってください。重複コレクタ、イベントレートの過負荷、一時停止中のコレクタ、Persistent Storeの配置、MetroClusterの移行、アクティビティの欠落、ID解決などの実行時の条件は、保存前の接続テストワークフローの対象外です。</block>
-  <block id="ecfa6237a8a218fc5c797ee0578679c7" category="list-text">コレクターが「実行中」になり、実際のクライアント I/O 後にイベントがワークロード セキュリティ ++&gt;++ アクティビティ フォレンジックに表示されることを確認します。</block>
   <block id="a0d5cf132ea60556950b6db3b75e1331" category="summary">これらの概念を理解することで、AIアシスタントは適切なツールを選択し、有効なクエリを構築できるようになります。</block>
   <block id="3e22aa14b911d8584c3de2cb2d09c8e3" category="doc">DII MCPの概念とデータモデル</block>
   <block id="845c2e1f81c7167073b0b3f255d00af4" category="admonition">DII MCPは<block ref="312c0c6b46ba32b4b11ba8c9da5788ed" category="inline-link-macro-rx"></block>機能であるため、変更される可能性があります。</block>
@@ -16286,4 +16262,32 @@
   <block id="6ce78279e85ae6fe9f97051d8bc3c13e" category="sidebar">通知態勢</block>
   <block id="b349cdb464a16150566e060380a1b77f" category="sidebar">パフォーマンスの根本原因分析</block>
   <block id="aa70f40c4ba41bbc875ee1b79a091d75" category="sidebar">ストレージの状態</block>
+  <block id="5eb14926e2b0223f53564d7659171c1c" category="admonition">また、FlexGroupsの容量の数値は「0」と表示される一方で、構成要素には値が表示される場合があることにお気づきになるかもしれません。DIIでは、FlexGroups自体のほとんどの容量指標はゼロになりますが、構成要素にはそれらが含まれます。問題は二重カウントです。両方のエンティティが完全な容量指標を報告した場合、DIIは同じ容量を2回（FlexGroupで1回、構成要素で1回）報告することになります。構成要素レベルの報告を優先することで、その重複を回避しながら、重要なユースケースをサポートします。</block>
+  <block id="4613ec50b199e8fe1a45e8365d1126ed" category="paragraph">+ この場合、クエリ、ダッシュボード、またはモニターでFlexGroupの容量を報告するには、構成要素の親FlexGroupへの参照を使用します。その後、その参照に基づいて構成要素をグループ化し、それぞれの容量値を集計することができます。</block>
+  <block id="77064528bd054f741f0468e85617bf35" category="paragraph">+ DIIは意図的にFlexGroupの親の容量をゼロに設定します。ONTAP自体は引き続き容量を報告します。これは、パフォーマンス指標ではなく、容量/効率指標に適用されます。グループ名はグローバルに一意ではない可能性があるため、グループIDで構成要素をグループ化することをお勧めします。</block>
+  <block id="296cadc668db601a7fa80621086c9468" category="paragraph">VMアナライザービューに新しい切り替え機能が追加され、データストアのないマウント済みボリュームを非表示にできるようになりました。これにより、より見やすいビューが提供され、VMのトラブルシューティングが簡素化されます。</block>
+  <block id="b6bf3aac3b33a207b8b6bbe0fc935a91" category="inline-image-macro">VM Analyzerで、データストアのないマウント済みボリュームを非表示にする切り替えボタンを表示</block>
+  <block id="6915ad7aa1643475defe5f685b410352" category="paragraph"><block ref="6915ad7aa1643475defe5f685b410352" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d0e9b5f06f461adaa0050f06dafe9575" category="inline-image-macro">ユーザーデータが読み取り専用モードで表示されるアセット詳細スライドアウト。編集モードに入るための鉛筆アイコン付き、width=400</block>
+  <block id="c2634a77f707f71f03af6181a842b88a" category="paragraph"><block ref="c2634a77f707f71f03af6181a842b88a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="58cc13c80c3e227fbe00047a9b822edc" category="inline-image-macro">ユーザーデータが編集モードで開かれ、変更を保存できる状態のアセットランディングページ、width=200</block>
+  <block id="194f62cbfe18d1624a3706d766ab06ed" category="paragraph"><block ref="194f62cbfe18d1624a3706d766ab06ed" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e5e5f8878927980995e10a5cedd8b308" category="paragraph">容量スキーマには、インフラストラクチャ全体のストレージ容量、利用率、およびプロビジョニングに関連するテーブルとメトリックが含まれています。このスキーマを使用して、容量の傾向を分析し、将来のニーズを予測し、リソースの割り当てを最適化します。</block>
+  <block id="62c9105acfc20634e0945ecfaf29d0bb" category="paragraph">容量効率スキーマは、データ削減比率や最適化の機会など、ストレージ効率に関するメトリックを提供します。このスキーマを使用して、重複排除や圧縮などのストレージ技術の有効性を監視および分析します。</block>
+  <block id="d0a80c4370fe5dfc7960c7b868126b76" category="paragraph">ファイルシステム利用状況スキーマは、ファイルシステム、ホスト、およびコンピューティングリソース全体にわたるストレージの消費量と使用パターンを追跡します。このスキーマを使用して、容量のホットスポットを特定し、ファイルシステムレベルでのストレージ割り当てを最適化します。</block>
+  <block id="b2200689dae4036b4813579eff31d56c" category="paragraph">インベントリスキーマには、ストレージシステム、ホスト、アプリケーション、注釈など、包括的な資産およびオブジェクトデータが含まれています。これはデータ ウェアハウスで最大のスキーマであり、資産管理とインフラの可視性の基盤となります。</block>
+  <block id="d9a7965bf43985ef0fc40616a6785117" category="paragraph">パフォーマンススキーマは、ストレージ、ホスト、ボリューム、およびアプリケーション全体にわたるI/O、レイテンシ、スループット、およびその他のパフォーマンス指標に関する時系列メトリックを提供します。このスキーマを使用して、パフォーマンスの傾向を分析し、ボトルネックを特定し、ワークロードの配置を最適化します。</block>
+  <block id="18b7f15f593dc47ea50fd485e859a539" category="paragraph">Portsスキーマには、ネットワークポートとスイッチのデータが含まれており、ポートの接続性、ステータス、接続されているデバイスとの関係などが含まれます。このスキーマを使用して、ストレージインフラストラクチャ内のネットワークトポロジーとファブリックの状態を分析します。</block>
+  <block id="1bccf90180c31adab404747497809cea" category="cell">データSVMのみ（無限ボリュームは不可）。サポートされているサブタイプ：default、sync_source、sync_destination。DP宛先SVMは、設計上、監査対象から除外されます。</block>
+  <block id="aadaea56453502b49c3bb1d83460b925" category="cell">ボリュームスナップショット：すべて（可能な場合は cloudsecure_* の範囲）</block>
+  <block id="7f1025af379bb72826214683cac22df7" category="paragraph">ロールとユーザーを作成します（実行前に &lt;vservername&gt; を置き換えてください）：</block>
+  <block id="adf604179202ac8d7549519f9ce15c55" category="paragraph">*永続ストレージ（クラスタモードを表示。SVMモードの場合は -vserver &lt;vservername&gt; を追加）：*</block>
+  <block id="2ad63734d5ea88b691fcec8abfa334e6" category="paragraph">*Protobuf（クラスタモードを表示。SVMモードの場合は -vserver &lt;vservername&gt; を追加）：*</block>
+  <block id="03a48f775ff6c08509430c660d47baaa" category="list-text">Workload Security &gt; コレクター &gt; &amp;#43;データコレクターを選択します。</block>
+  <block id="d78aa3ef141641a0a1fc5a86295f9836" category="paragraph">*Important:* デフォルトで除外されるファイル拡張子：設計上、Workload SecurityはFPolicyスコープを設定してiniおよびDS_Store拡張子を除外します。これらのファイルのイベントはONTAPでフィルタリングされ、Workload Securityに到達することはないため、Activity Forensicsには表示されません。これは、お客様が設定可能なアラート除外とは別のものです。これは想定される動作です。これらの拡張子の監査は、UIで設定することはできません。</block>
+  <block id="24dda3b59a8373ca61cb08f3e04c9cce" category="paragraph">一時停止と再開は、データコレクターに適用され、エージェントには適用されません。UI（コレクター &gt; コレクター &gt; オプション メニュー）またはAPIから実行できます。</block>
+  <block id="77b5c5ee27c770993c6041b7b3f0105c" category="paragraph">コレクタが後でエラーまたは劣化状態になった場合は、ステータス &gt; 詳細を開き、ONTAP SVM Data Collectorのトラブルシューティングに従ってください。重複コレクタ、イベントレートの過負荷、一時停止中のコレクタ、Persistent Storeの配置、MetroClusterの移行、アクティビティの欠落、ID解決などの実行時の条件は、保存前の接続テストワークフローの対象外です。</block>
+  <block id="954c32784463d0103797201c7694bdf9" category="list-text">コレクターが「実行中」になり、実際のクライアントI/O後にWorkload Security &gt; Activity Forensicsにイベントが表示されることを確認します。</block>
+  <block id="a82c02e71992fe00dd9609cb03521444" category="cell">DIIでは、FlexGroupsの容量の数値は「0」です。構成要素は問題ありませんが、FlexGroupにはすべての構成要素のロールアップ容量が表示されません。</block>
+  <block id="53faddfe1edffe14cfa22b21a8e4e255" category="cell">これは意図的なものです。ほとんどの容量指標は、親FlexGroupではなく、FlexGroupのコンスティチュエントで報告されます。両方で同じ容量を報告すると、二重にカウントされることになります。コンスティチュエントレベルの報告を優先することで、重複を避けつつ、主要なユースケースをサポートします。クエリ、ダッシュボード、またはモニターでFlexGroupの容量を報告するには、コンスティチュエントから親FlexGroupへの参照を使用します。その参照によってコンスティチュエントをグループ化し、容量値を集計します。DIIは意図的に親FlexGroupの容量をゼロに設定しますが、ONTAP自体は引き続き容量を報告します。これはパフォーマンス指標ではなく、容量/効率の指標に適用されます。グループ名はグローバルに一意ではない可能性があるため、グループIDでコンスティチュエントをグループ化することをお勧めします。</block>
 </blocks>

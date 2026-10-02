@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, performance
 :imagesdir: ./media/
 
 
+[role="lead"]
+パフォーマンススキーマは、ストレージ、ホスト、ボリューム、およびアプリケーション全体にわたるI/O、レイテンシ、スループット、およびその他のパフォーマンス指標に関する時系列メトリックを提供します。このスキーマを使用して、パフォーマンスの傾向を分析し、ボトルネックを特定し、ワークロードの配置を最適化します。
+
 ソース： *dwh_performance* OData エンドポイント — Data Infrastructure Insights
 
 見つかったテーブル数：*74* | 関連付け数：*167*

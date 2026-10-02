@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, capacity
 :imagesdir: ./media/
 
 
+[role="lead"]
+容量スキーマには、インフラストラクチャ全体のストレージ容量、利用率、およびプロビジョニングに関連するテーブルとメトリックが含まれています。このスキーマを使用して、容量の傾向を分析し、将来のニーズを予測し、リソースの割り当てを最適化します。
+
 ソース: *dwh_capacity* OData エンドポイント — Data Infrastructure Insights
 
 見つかったテーブル数：*44* | 関連付け数：*92*
