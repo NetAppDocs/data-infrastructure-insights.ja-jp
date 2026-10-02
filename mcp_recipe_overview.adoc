@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_overview.html 
+summary: レシピは、複数の読み取り専用DIIツールを組み合わせて、再現可能なインフラストラクチャワークフローを作成します。これらを起点として、架空のリソース名をテナント内の値に置き換えてください。 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= DII MCP 運用レシピ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+レシピは、複数の読み取り専用DIIツールを組み合わせて、再現可能なインフラストラクチャワークフローを作成します。これらを起点として、架空のリソース名をテナント内の値に置き換えてください。
+
+
+NOTE: DII MCPはlink:concept_preview_features.html["プレビュー"]機能であるため、変更される可能性があります。
+
+
+
+[[choose-a-workflow]]
+== ワークフローを選択してください
+
+|===
+| 目標 | レシピ | 主要なDII表面 
+
+
+| 収集範囲と鮮度を検証する | link:mcp_recipe_environment_inventory.html["インベントリ環境と収集の状態"] | 取得ユニット、データソース 
+
+
+| アクティブなインフラストラクチャの問題を優先的に解決する | link:mcp_recipe_storage_health.html["ストレージの健全性を評価する"] | アラート、モニター、ログ、オブジェクト 
+
+
+| 容量限界に近づいているプールを探す | link:mcp_recipe_capacity_risk.html["キャパシティリスクを特定する"] | オブジェクトメタデータ、グループ化、時系列 
+
+
+| Kubernetesコレクションコンポーネントのバージョンを確認します | link:mcp_recipe_kubernetes_collector_currency.html["Kubernetesコレクターの最新状態を確認する"] | Kubernetesコレクター 
+
+
+| 低速なボリュームやワークロードを調査する | link:mcp_recipe_performance_rca.html["パフォーマンスのトラブルシューティング"] | オブジェクトメトリクス、アラート、ログ 
+
+
+| ルーティングと抑制を安全に確認する | link:mcp_recipe_notification_posture.html["通知状況を確認する"] | ルール、目標、メンテナンス期間 
+|===
+
+
+[[standard-investigation-pattern]]
+== 標準的な調査パターン
+
+. リソースの範囲と期間を明確にしてください。
+. 利用可能なタイプをご覧ください。
+. 動的フィールドを使用する前にメタデータを取得してください。
+. 指定した時間範囲でクエリを実行します。
+. 独立した信号を相関させます。
+. 観察された事実と推論を区別します。
+. レポートの制限事項と推奨されるフォローアップ。
+
+
+
+
+[[safety]]
+== 安全性
+
+* これらのレシピは読み取り専用ツールを使用します。
+* 期間は30日以内に限定してください。
+* 認証情報、プライベートアドレス、UUID、生のWebhookエンドポイント、および不要なログペイロードは省略してください。
+* MCPワークフロー外の、影響の大きい運用上のアクションを確認します。
+
+
+
+
+[[related-documentation]]
+== 関連ドキュメント
+
+* link:mcp_overview.html["DII MCPの概要"]
+* link:mcp_concepts.html["概念とデータモデル"]
+* link:mcp_tools_overview.html["ツールリファレンス"]
+* link:mcp_security.html["セキュリティとプライバシー"]
+

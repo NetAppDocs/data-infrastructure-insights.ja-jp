@@ -1,0 +1,108 @@
+---
+sidebar: sidebar 
+permalink: mcp_overview.html 
+summary: AIアシスタントをData Infrastructure Insights（DII）に接続することで、自然言語を使用してインフラストラクチャのインベントリ、テレメトリ、アラート、および収集の健全性を調査できるようになります。 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= DII MCP Server
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+AIアシスタント/エージェントをData Infrastructure Insights（DII）に接続して、自然言語を使用してインフラストラクチャのインベントリ、テレメトリ、アラート、収集の健全性を調査できるようにします。
+
+
+NOTE: DII MCPはlink:concept_preview_features.html["プレビュー"]機能であるため、変更される可能性があります。
+
+DII MCP Serverは、Model Context Protocol（MCP）を実装し、テナントスコープのツールをサポート対象のAIクライアントに公開します。現在の製品ツールセットは*読み取り専用*：DIIデータを取得して分析しますが、インフラストラクチャやDIIリソースを変更することはありません。
+
+
+
+[[what-you-can-investigate]]
+== 調査できること
+
+* *インフラストラクチャインベントリ：* ストレージ、仮想化、Kubernetes、ONTAP、Azure NetApp Files、StorageGRID、および関連リソース。
+* *パフォーマンスと容量：* オブジェクトメトリクス、グループ化された集計値、および時系列動作。
+* *ログとイベント：* ログの種類を検出し、イベントを検索し、イベント数のヒストグラムを作成します。
+* *アラート：* アクティブなアラートを検査し、定義、重大度、および是正ガイダンスを監視します。
+* *コレクションの状態：* 取得ユニット、データソース、サポートされているコレクタータイプ、およびKubernetesコレクターのバージョンを確認します。
+* *通知体制：*メンテナンス期間、通知ルール、およびWebhookのターゲットタイプを確認します。
+
+
+
+
+[[choose-an-entry-point]]
+== エントリポイントを選択してください
+
+
+
+[[connect-an-ai-client]]
+=== AIクライアントを接続する
+
+Cursor、Claude Code、VS Code、Codex、またはその他のMCP互換クライアントについては、link:mcp_setup.html["DII MCPサーバーをセットアップする"]に従ってください。
+
+
+
+[[browse-available-tools]]
+=== 利用可能なツールを閲覧する
+
+link:mcp_tools_overview.html["ツールリファレンス"]を使用して、現在のすべてのツール、必要な検出呼び出し、クエリ制限、およびユーザー向けの名称を把握してください。
+
+
+
+[[start-with-an-operational-workflow]]
+=== 運用ワークフローから始めましょう
+
+必要な結果がすでにわかっている場合は、link:mcp_recipe_overview.html["レシピ"]を使用します：
+
+* インベントリ収集の健全性
+* ストレージの健全性を評価する
+* キャパシティリスクを特定する
+* Kubernetesコレクターの最新状態を確認する
+* パフォーマンスのトラブルシューティング
+* 通知状況を確認する
+
+
+
+
+[[how-dii-mcp-queries-work]]
+== DII MCPクエリの仕組み
+
+DIIのリソースの多くは動的なスキーマを持っています。信頼できる調査は、まず発見から始まる一連の流れで行われます：
+
+. 利用可能なオブジェクトまたはログの種類を一覧表示します。
+. 選択したタイプのメタデータを取得します。
+. そのメタデータから有効な属性と指標のみを使用してください。
+. 指定した期間を照会します。
+. フィルター、グループ化、並べ替え、ページネーションを使用して結果を絞り込みます。
+
+
+詳細については、link:mcp_concepts.html["概念とデータモデル"]を参照してください。
+
+
+
+[[important-limitations]]
+== 重要な制限事項
+
+* 現在提供されている製品ツールはすべて読み取り専用です。
+* オブジェクトクエリ、パフォーマンスクエリ、ログクエリは、時間制限を設けて実行します。ツールページに明示的により短い制限が記載されていない限り、30日以下の期間を使用してください。
+* クエリフィールドは、選択したリソースタイプに対して返されるメタデータと一致する必要があります。
+* 大量の結果はページ分割されるか、上限が設定されます。
+* ツールの利用可否および返されるデータは、テナントのコレクター、有効化されている機能、およびユーザー権限によって異なります。
+* 完全なWebhookエンドポイントアドレスを要求したり、複製したりしないでください。link:mcp_security.html["セキュリティとプライバシー"]を参照してください。
+
+
+
+
+[[next-steps]]
+== 次の手順
+
+. link:mcp_setup.html["クライアントを接続します"]。
+. link:mcp_recipe_environment_inventory.html["環境インベントリレシピ"]をお試しください。
+. クエリが拒否された場合、または予期しない結果が返された場合は、link:mcp_troubleshooting.html["トラブルシューティング"]を確認してください。
+

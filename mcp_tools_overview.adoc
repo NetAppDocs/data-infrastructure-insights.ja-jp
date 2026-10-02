@@ -1,0 +1,466 @@
+---
+sidebar: sidebar 
+permalink: mcp_tools_overview.html 
+summary: 'DII MCP Serverは現在、9つのドメインにわたる26種類の読み取り専用製品ツールを公開しています。接続されたクライアントが認証を必要とする場合、別の `mcp_auth`ヘルパーが表示されることがあります。' 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= DII MCPツールリファレンス
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+DII MCPサーバーは現在、9つのドメインにわたる26種類の読み取り専用製品ツールを公開しています。接続されたクライアントが認証を必要とする場合、別の +mcp_auth+ ヘルパーが表示されることがあります。
+
+
+NOTE: DII MCPはlink:concept_preview_features.html["プレビュー"]機能であるため、変更される可能性があります。
+
+ツールの利用可否および結果は、認証されたテナント、有効になっているDII機能、構成済みのコレクター、およびユーザー権限によって異なります。
+
+
+
+[[query-conventions]]
+== クエリ規約
+
+* 動的フィールドをクエリする前に、型とメタデータを確認してください。
+* メタデータから返される属性名とメトリック名は、大文字と小文字を区別して正確に使用してください。
+* 必要に応じて、ISO-8601タイムスタンプとIANAタイムゾーン名を使用してください。
+* クエリの期間は30日以内にしてください。
+* オブジェクトとアラートのページネーションには、 `limit`および `offset`を使用します。
+* ログイベントのページネーションには、返されたカーソルを使用してください。
+* ウェブフックのエンドポイントアドレス全体を表示しないでください。
+
+
+
+
+[[acquisition-units]]
+== 取得ユニット
+
+
+
+[[list-acquisition-units]]
+=== 取得ユニットの一覧
+
++AcquisitionUnitsService_getAcquisitionUnits+
+
+接続状態、レポートの鮮度、オペレーティングシステム、バージョン、IPアドレス、および割り当てられたデータソース数を含む、すべての取得ユニットを返します。
+
+例：
+
+[]
+====
+Acquisition Unitを一覧表示します。IPアドレスやUUIDを表示せずに、接続されているユニット、障害が発生したユニット、および一度も報告されていないユニットの概要を表示します。
+
+====
+
+
+[[get-an-acquisition-unit]]
+=== Acquisition Unitを取得する
+
++AcquisitionUnitsService_getAcquisitionUnitByUuid+
+
+1つの取得ユニットの完全な詳細を取得します。ユーザーが名前を指定した場合は、まず取得ユニットを一覧表示してそのUUIDを解決します。
+
+必須入力項目： `uuid`
+
+
+
+[[alerts]]
+== アラート
+
+
+
+[[get-alert-metadata]]
+=== アラートメタデータを取得する
+
++AlertsService_getMetadata+
+
+有効なアラートフィールド名とデータ型を返します。アラートを照会する前にこれを呼び出してください。
+
+
+
+[[query-alerts]]
+=== クエリアラート
+
++AlertsService_queryForAlerts+
+
+選択した属性、フィルタ、並べ替え、時間範囲、オフセットページネーションを使用して、アクティブまたは非アクティブなアラートを照会します。
+
+必須入力項目：
+
+* `active`
+* `attributeNames`
+* `fromTime`
+* `toTime`
+* `timezone`
+
+
+オプションの入力には、 `filter`、 `sortField`、 `sortAscending`、 `limit`、および `offset`が含まれます。 `limit`は1～500、 `offset`は0～1000です。期間は30日以内にしてください。
+
+例：
+
+[]
+====
+過去7日間の重要なアクティブストレージアラートを取得します。アラートID、モニター名、重要度、ステータス、および関連するストレージ名を返します。
+
+====
+
+
+[[get-an-alert-by-name]]
+=== 名前でアラートを取得する
+
++AlertsService_getAlertByName+
+
+ `AL-123456` 形式のアラートIDを使用して、1つのアラートを取得します。
+
+必須入力項目： `name`
+
+
+
+[[get-an-alert-by-uuid]]
+=== UUIDでアラートを取得する
+
++AlertsService_getAlertByUUID+
+
+UUIDを使用してアラートを1件取得します。
+
+必須入力項目： `uuid`
+
+
+
+[[data-collectors]]
+== データコレクター
+
+
+
+[[list-data-sources]]
+=== データソースの一覧
+
++CollectorService_getDataSources+
+
+設定済みのコレクターを、名前、ステータス、ベンダー、モデル、取得ユニット、バージョン、および最後に正常に取得できたデータとともに一覧表示します。必要に応じて、AU UUIDでフィルタリングできます。
+
+例：
+
+[]
+====
+設定済みのデータソースをステータスとベンダーごとにグループ化します。失敗と、古くなった成功した取得を強調表示します。
+
+====
+
+
+[[get-a-data-source]]
+=== データソースを取得する
+
++CollectorService_getDataSourceById+
+
+構成、収集パッケージの状態、ポーリング活動、検出されたデバイス、パッチ情報、および取得ユニットのコンテキストを含むコレクターを1つ取得します。
+
+必須入力項目： `id`
+
+このツールは、ポーリング間隔、設定済みメトリック、収集設定、または障害調査に使用します。
+
+
+
+[[list-supported-data-source-types]]
+=== サポートされているデータソースの種類を一覧表示します
+
++CollectorService_getDataSourceTypes+
+
+DIIコレクターカタログでサポートされている製品タイプの一覧です。これは、テナントに設定されているコレクターのリストではありません。
+
+
+
+[[logs]]
+== Logs
+
+
+
+[[list-log-types]]
+=== ログの種類を一覧表示します
+
++LogService_getLogTypes+
+
+テナントで現在利用可能なログの種類を一覧表示します。
+
+
+
+[[get-log-type-metadata]]
+=== ログタイプのメタデータを取得する
+
++LogService_getLogTypeMetadata+
+
+ログタイプに対して有効な属性を返します。イベントの検索やグループ化を行う前に、必ず呼び出してください。
+
+必須入力項目： `type`
+
+
+
+[[query-log-events]]
+=== クエリログイベント
+
++LogService_queryLogEvents+
+
+ログイベントをタイムスタンプの降順で返します。
+
+必須入力項目：
+
+* `type`
+* `fromTime`
+* `toTime`
+* `timezone`
+
+
+オプションの入力には、 `attributes`、 `filter`、 `limit`、および `cursor`が含まれます。 `limit`は1～200です。イベントウィンドウは30日を超えることはできません。前の応答のカーソルを渡して、次のページを取得します。
+
+
+
+[[count-log-events-over-time]]
+=== 時間の経過に伴うログイベントのカウント
+
++LogService_queryLogEventsCountHistogram+
+
+イベント数を固定サイズの時間バケットに分割して返します。オプションで、有効なグループ化可能な属性に基づいて各バケットをグループ化できます。グループ化された結果には、上位セグメントと +__other__+ セグメントが返されます。
+
+必須入力項目：
+
+* `type`
+* `fromTime`
+* `toTime`
+* `timezone`
+
+
+オプション入力： `filter`、 `groupBy`
+
+
+
+[[maintenance-windows]]
+== メンテナンス時間帯
+
+
+
+[[list-maintenance-windows]]
+=== メンテナンス期間の一覧
+
++MaintenanceWindowService_getMaintenanceWindows+
+
+有効で期限切れではないアラート抑制期間を一覧表示します。期限切れの期間を含めるには、 `includeExpired`を `true`に設定します。
+
+正常な空の応答は、該当するメンテナンス期間が存在しないことを意味します。
+
+
+
+[[get-a-maintenance-window]]
+=== メンテナンスウィンドウを取得する
+
++MaintenanceWindowService_getMaintenanceWindowById+
+
+メンテナンスウィンドウを1つ取得します。
+
+必須入力項目： `id`
+
+
+
+[[monitors]]
+== モニター
+
+
+
+[[list-monitors]]
+=== モニター一覧
+
++MonitorsService_queryMonitors+
+
+DIIモニターを一覧表示します。システムモニターのみを返す、システムモニターを除外する、またはすべてのモニターを返すには、 `isSystem`を使用します。
+
+
+
+[[get-a-monitor]]
+=== モニターを入手してください
+
++MonitorsService_getMonitorById+
+
+モニター1台分の情報を取得し、その説明と、利用可能な場合は修正ガイダンスも取得します。
+
+必須入力項目： `id`
+
+
+
+[[notifications]]
+== 通知
+
+
+
+[[list-notification-rules]]
+=== 通知ルールの一覧
+
++NotificationService_getNotificationRules+
+
+一致するアラートを通知先にルーティングするルールを一覧表示します。成功した空の応答は、一致するルールが存在しないことを意味します。
+
+
+
+[[get-a-notification-rule]]
+=== 通知ルールを取得する
+
++NotificationService_getNotificationRuleById+
+
+ルーティングルールを1つ取得します。
+
+必須入力項目： `id`
+
+
+
+[[list-webhook-targets]]
+=== ウェブフックのターゲット一覧
+
++NotificationService_getWebhooks+
+
+Slack、Microsoft Teams、Discord、PagerDuty、およびカスタムHTTP統合のWebhookターゲットメタデータを一覧表示します。必要に応じて、カンマ区切りのエンジンタイプでフィルタリングできます。
+
+セキュリティ要件：完全なエンドポイントアドレスには認証情報が含まれる場合があります。アプリケーションとエージェントは、表示または転送される結果からアドレスフィールドを省略または編集する必要があります。
+
+安全な例：
+
+[]
+====
+エンジンタイプ別にWebhookターゲットをカウントし、ターゲット名とステータスのみを一覧表示します。エンドポイントアドレスを返さないでください。
+
+====
+
+
+[[objects-and-metrics]]
+== オブジェクトとメトリクス
+
+
+
+[[list-object-types]]
+=== オブジェクト型の一覧
+
++ObjectService_getObjectTypes+
+
+テナント内で現在利用可能なオブジェクトの種類を一覧表示します。
+
+
+
+[[get-object-metadata]]
+=== オブジェクトのメタデータを取得する
+
++ObjectService_getMetadataForObjectType+
+
+1つのオブジェクトタイプに対して有効な属性、メトリクス、タイプ、およびグループ化機能を返します。
+
+必須入力項目： `objectType`
+
+
+
+[[query-objects]]
+=== クエリオブジェクト
+
++ObjectService_query+
+
+オブジェクト、選択された属性、およびオプションのメトリックを取得します。メトリックを参照するフィルタは、時間枠集計前の生の値に適用されます。
+
+必須入力項目：
+
+* `objectType`
+* `attributeNames`
+
+
+オプションの入力には、 `metricNames`、 `filter`、 `sortFieldName`、 `isSortAscending`、 `fromTime`、 `toTime`、 `aggregateFunctions`、 `limit`、および `offset`が含まれます。
+
+サポートされているクエリ集計： `MAX`、 `MIN`、 `AVG`、 `SUM`、 `LAST`。 `limit`は1～500です。時間範囲を指定しない場合、ツールはデフォルトで直近3時間の範囲を使用します。
+
+
+
+[[group-objects]]
+=== グループオブジェクト
+
++ObjectService_groupObjects+
+
+オブジェクトを有効なグループ化可能な属性1つでグループ化し、選択されたメトリックを集計します。フィルターは集計前の生データに適用されます。
+
+必須入力項目：
+
+* `objectType`
+* `groupByAttribute`
+* `metricNames`
+
+
+オプションの入力には、 `aggregateFunctions`、 `filter`、ソート、時間制限、 `limit`、および `offset`が含まれます。
+
+サポートされているグループ集計： `MAX`、 `MIN`、 `AVG`、 `SUM`、 `FIRST`、 `CHANGE`、+CHANGE_RATIO+。
+
+
+
+[[query-performance-time-series]]
+=== クエリパフォーマンスの時系列データ
+
++ObjectService_queryPerformanceMetricsForObjects+
+
+1つのメトリックと一致するオブジェクトについて、バケット化された時系列データを返します。
+
+必須入力項目：
+
+* `objectType`
+* `metricName`
+* `fromTime`
+* `toTime`
+* `timezone`
+
+
+オプションの入力には、 `filter`、 `aggregationFunction`、 `limit`、および `isSortAscending`が含まれます。 `limit`は返される系列の数を制御し、1～50の範囲で指定する必要があります。
+
+サポートされているバケット集計： `MAX`、 `MIN`、 `AVG`、 `SUM`、 `FIRST`、 `CHANGE`、+CHANGE_RATIO+。
+
+
+
+[[kubernetes-collectors]]
+== Kubernetesコレクター
+
+
+
+[[list-kubernetes-collectors]]
+=== Kubernetesコレクターの一覧を表示する
+
++OperatorsManagement_getKubernetesCollectors+
+
+クラスタ名、全体的な最新ステータス、オペレーターバージョン、Network Performance and Mapコンポーネントバージョン、Change Analysisコンポーネントバージョン、および最後に報告されたタイムスタンプを返します。
+
+例：
+
+[]
+====
+古いKubernetesコレクターを特定し、どのコンポーネントに注意が必要かをまとめます。
+
+====
+
+
+[[filter-operators]]
+== フィルタ演算子
+
+アラート、ログ、およびオブジェクトクエリは、ネストされた条件をサポートしています：
+
+* `EQ`, `NE`
+* `GT`、 `LT`、 `GE`、 `LE`
+* `WILDCARD` `++*++`および `?`を使用して
+* `EXISTS`
+* ネストされた `and`、 `or`、および `not`
+
+
+接続されたサーバーは、メタデータに対してフィールドの妥当性を検証します。クエリが拒否された場合は、関連するメタデータを更新し、フィルタを再構築します。
+
+
+
+[[related-documentation]]
+== 関連ドキュメント
+
+* link:mcp_overview.html["DII MCPの概要"]
+* link:mcp_concepts.html["概念とデータモデル"]
+* link:mcp_recipe_overview.html["運用レシピ"]
+* link:mcp_troubleshooting.html["トラブルシューティング"]
+

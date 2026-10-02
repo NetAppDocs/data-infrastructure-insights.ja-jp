@@ -288,7 +288,6 @@ NetApp Monitoring Operator インストール タイルから「イメージ プ
 イベントログ
 
 * ci-fluent-bit
-* ci-kubernetes-イベントエクスポーター
 
 
 ネットワークパフォーマンスとマップ
@@ -462,26 +461,6 @@ Kubernetes モニタリング オペレーターの設定中に問題が発生�
 | netapp-ci-monitoring-operator-<pod> と monitoring-operator-<pod> という名前の 2 つの監視オペレータ ポッドが実行されているのはなぜですか? | 2023年10月12日現在、 Data Infrastructure Insightsは、ユーザーへのサービス向上のため、オペレーターをリファクタリングしました。これらの変更を完全に適用するには、<<uninstalling,古い演算子を削除する>>そして<<installing-the-kubernetes-monitoring-operator,新しいものをインストールする>>。 
 
 
-| Kubernetes イベントが予期せずData Infrastructure Insightsへのレポートを停止しました。  a| 
-イベント エクスポーター ポッドの名前を取得します。
-
- `kubectl -n netapp-monitoring get pods |grep event-exporter |awk '{print $1}' |sed 's/event-exporter./event-exporter/'`
-「netapp-ci-event-exporter」または「event-exporter」のいずれかである必要があります。次に、監視エージェントを編集します `kubectl -n netapp-monitoring edit agent`、LOG_FILE の値を、前の手順で見つかった適切なイベント エクスポーター ポッド名を反映するように設定します。具体的には、LOG_FILE は「/var/log/containers/netapp-ci-event-exporter.log」または「/var/log/containers/event-exporter*.log」のいずれかに設定する必要があります。
-
-....
-fluent-bit:
-...
-- name: event-exporter-ci
-  substitutions:
-  - key: LOG_FILE
-    values:
-    - /var/log/containers/netapp-ci-event-exporter*.log
-...
-....
-あるいは、<<uninstalling,uninstall>>そして<<installing-the-kubernetes-monitoring-operator,再インストール>>エージェント。
-
-
-
 | Kubernetes モニタリング オペレーターによってデプロイされたポッドが、リソース不足のためにクラッシュしているのがわかります。 | Kubernetesモニタリングオペレーターを参照してくださいlink:telegraf_agent_k8s_config_options.html["設定オプション"]必要に応じて CPU および/またはメモリの制限を増やします。 
 
 
@@ -489,9 +468,6 @@ fluent-bit:
 
 
 | netapp-ci-kube-state-metrics ポッドは、Kubernetes Operator のアップグレードを実行した後に起動に失敗し、ErrImagePull (イメージのプルに失敗します) をスローします。 | ポッドを手動でリセットしてみてください。 
-
-
-| ログ分析の Kubernetes クラスターで、「イベントは maxEventAgeSeconds より古いため破棄されました」というメッセージが表示されています。 | Operator の _agentconfiguration_ を変更し、_event-exporter-maxEventAgeSeconds_ (つまり 60 秒)、_event-exporter-kubeQPS_ (つまり 100)、および _event-exporter-kubeBurst_ (つまり 500) を増やします。これらの設定オプションの詳細については、link:telegraf_agent_k8s_config_options.html["設定オプション"]ページ。 
 
 
 | Telegraf は、ロック可能なメモリが不足しているために警告を発したりクラッシュしたりします。 | 基盤となるオペレーティング システム/ノードで Telegraf のロック可能なメモリの制限を増やしてみてください。制限を増やすことができない場合は、NKMO エージェント構成を変更し、_unprotected_ を _true_ に設定します。これにより、Telegraf はロックされたメモリ ページを予約しないように指示されます。復号化された秘密がディスクにスワップアウトされる可能性があるため、セキュリティ上のリスクが生じる可能性がありますが、ロックされたメモリを予約できない環境での実行が可能になります。  _unprotected_ 設定オプションの詳細については、link:telegraf_agent_k8s_config_options.html["設定オプション"]ページ。 

@@ -7,80 +7,133 @@ summary: ワークロード セキュリティ Active Directory ユーザー デ
 = Active Directory (AD) ユーザーディレクトリコレクターの構成
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Workload Security は、Active Directory サーバーからユーザー属性を収集するように設定できます。
+ONTAP SVMデータコレクターの前に、ユーザーディレクトリコレクターを設定します。
 
-.開始する前に
-* このタスクを実行するには、 Data Infrastructure Insights管理者またはアカウント所有者である必要があります。
-* Active Directory サーバーをホストしているサーバーの IP アドレスが必要です。
-* ユーザー ディレクトリ コネクタを構成する前に、エージェントを構成する必要があります。
+Workload Securityは、ディレクトリデータを使用してファイルアクセスアクティビティにおけるIDを解決します。User Directoryコレクターには、接続テスト機能は備わっていません。
 
+image:config_ad_user_directory_image1.png["Active DirectoryとLDAPディレクトリサーバーオプションを含むユーザーディレクトリの追加ダイアログ。,title=\"ユーザーディレクトリの種類を選択してください\",width=652,height=211"]
 
-.ユーザーディレクトリコレクターを構成する手順
-. Workload Securityメニューで、*コレクター > ユーザーディレクトリコレクター > + ユーザーディレクトリコレクター*をクリックし、*Active Directory*を選択します。
-+
-「ユーザー ディレクトリの追加」画面が表示されます。
+[cols="50%,50%"]
+|===
+| *選択* | *使用する場合* 
 
 
+| Active Directory | ユーザーは Active Directory に保存され、監視対象のアクティビティは SMB です。または、Unix ユーザーは uidNumber 値とともに Active Directory に保存され、NFS アクティビティを実行します。 
 
-次の表に必要なデータを入力して、ユーザー ディレクトリ コレクターを構成します。
 
-[cols="2*"]
+| LDAPディレクトリサーバー | Unixユーザーは主にLDAPディレクトリに保存され、監視対象のアクティビティはNFSです。 
+
+
+| 両方 | ID情報はActive DirectoryとLDAPに分散されています。監視対象のすべてのIDを解決できるように、権限のあるディレクトリごとにコレクターを1つ追加してください。 
+|===
+[cols="100%"]
+|===
+| *このページではActive Directoryについて説明します* このコレクターは、SMB IDおよびUnix IDがActive Directoryで管理されているNFS IDに使用します。 
 |===
 
 
-| Name | 説明 
+[[before-you-begin]]
+== 開始する前に
+
+* Data Infrastructure Insightsの管理者またはアカウント所有者としてサインインします。
+* ディレクトリサーバーにアクセスできるWorkload Security Agentをデプロイして接続します。
+* Active DirectoryサーバーのIPアドレスまたはFQDN、フォレスト名、バインドDN、およびバインドパスワードを収集します。
+* エージェントがディレクトリサービスにアクセスできるようにします。一般的なポート番号は、LDAPまたはStartTLSの場合は389番、LDAPSの場合は636番です。ご使用のサーバーで設定されているポート番号を使用してください。
+* 必要なディレクトリ範囲を検索し、コレクターにマッピングされているすべての属性を読み取ることができるBind DNアカウントを使用してください。
 
 
-| Name | ユーザー ディレクトリの一意の名前。例えば_GlobalADCollector_ 
 
 
-| エージェント | リストから構成済みのエージェントを選択します 
+[[add-the-active-directory-collector]]
+== Active Directoryコレクターを追加します
+
+*1.*ワークロード セキュリティ ++>++ コレクター ++>++ ユーザー ディレクトリ コレクターに移動して、{plus} ユーザー ディレクトリ コレクターを選択します。
+
+*2.*Active Directoryを選択し、「続行」を選択します。
+
+*3.*下記に説明する接続フィールドと属性マッピングをすべて入力してください。
+
+*4.*コンピュータアカウントまたはサービスアカウントの解決が必要な場合は、詳細構成を確認してください。
+
+*5.*AD Explorerまたはldapsearchを使用して構成を検証し、「コレクターを保存」を選択します。
+
+image:config_ad_user_directory_image2.png["Active Directory コレクターフォームには、接続フィールド、必須およびオプションの属性マッピング、および高度な構成検索クエリが表示されます。,title=\"Active Directory コレクターの追加\",width=504,height=754"]
+
+Active Directoryコレクターフィールドと既定の属性マッピング。
 
 
-| サーバーIP/ドメイン名 | アクティブ ディレクトリをホストするサーバーの IP アドレスまたは完全修飾ドメイン名 (FQDN) 
 
+[[connection-fields]]
+=== 接続フィールド
 
-| 森林名 | ディレクトリ構造のフォレスト レベル。フォレスト名では、次の両方の形式が許可されます: _x.y.z_ => SVM にある直接のドメイン名。  [例: hq.companyname.com] _DC=x、DC=y、DC=z_ => 相対識別名 [例: DC=hq、DC= companyname、DC=com] または、次のように指定することもできます: _OU=engineering、DC=hq、DC= companyname、DC=com_ [特定の OU engineering でフィルタリングする] _CN=username、OU=engineering、DC=companyname、DC=netapp、DC=com_ [OU <engineering> から <username> を持つ特定のユーザーのみを取得する] _CN=Acrobat Users、CN=Users、DC=hq、DC=companyname、DC=com、O= companyname、L=Boston、S=MA、C=US_ [その組織内のユーザー内のすべての Acrobat ユーザーを取得する] 信頼された Active Directory ドメインもサポートされています。 
-
-
-| バインドDN | ユーザーはディレクトリを検索する権限を与えられています。例：_username@companyname.com_ または _username@domainname.com_ 
-
-
-| BINDのパスワード | ディレクトリ サーバーのパスワード (つまり、Bind DN で使用されるユーザー名のパスワード) 
-
-
-| プロトコル | ldap、ldaps、ldap-start-tls 
-
-
-| ポート | ポートを選択 
+[cols="34%,33%,33%"]
 |===
-Active Directory でデフォルトの属性名が変更されている場合は、次のディレクトリ サーバーの必須属性を入力します。ほとんどの場合、これらの属性名は Active Directory では変更されません。その場合は、デフォルトの属性名をそのまま使用して続行できます。
+| *フィールド* | *要件* | *入力する内容* 
 
-[cols="2*"]
+
+| 名前++*++ | 必須 | 一意のコレクター名。 
+
+
+| エージェント | 必須 | このADサーバーにアクセスできる、接続済みのエージェント。 
+
+
+| サーバーIP/ドメイン名++*++ | 必須 | ADサーバーのIPアドレスまたはFQDN。 
+
+
+| フォレスト名++*++ | 必須 | hq.example.comのようなDNSドメイン、DC=hq,DC=example,DC=comのようなDN、または検索対象が特定の範囲のみである場合は、より狭いOU/CN DNを指定します。信頼済みのADドメインがサポートされています。 
+
+
+| バインド DN++*++ | 必須 | 検索範囲へのアクセス権限を持つアカウント（例：ws-reader@example.com）。マッピングされた属性に必要なディレクトリ読み取り権限のみを付与してください。 
+
+
+| バインドパスワード++*++ | 必須 | Bind DNアカウントのパスワード。 
+
+
+| プロトコル | デフォルト | LDAP、LDAPS、またはStartTLSを使用したLDAP。サーバが使用するプロトコルを選択してください。 
+
+
+| ポート++*++ | 必須 | 数値で表したディレクトリポート番号。一般的には389または636。 
 |===
 
 
-| 属性 | ディレクトリサーバーの属性名 
+[[mandatory-attribute-mappings]]
+=== 必須属性マッピング
 
+アスタリスクが付いているフィールドには、有効なマッピングが必要です。ADスキーマで異なる属性名を使用していない限り、デフォルトのままにしてください。
 
-| 表示名 | 名前 
-
-
-| SID | オブジェクトID 
-
-
-| ユーザー名 | sAMAccountName 
+[cols="34%,33%,33%"]
 |===
-次のいずれかの属性を追加するには、「オプション属性を含める」をクリックします。
+| *Workload Securityフィールド* | *デフォルトのAD属性* | *必要に応じて* 
 
-[cols="2*"]
+
+| 表示名++*++ | 名前 | Always 
+
+
+| SID++*++ | オブジェクトID | 常に; SMBセキュリティ識別子を解決します 
+
+
+| ユーザー名++*++ | sAMAccountName | Always 
+
+
+| UNIXID | uid番号 | ADに保存されているUnixユーザーのNFSアクティビティを解決する必要がある場合に必須です 
 |===
 
 
-| 属性 | ディレクトリサーバーの属性名 
+[[optional-attribute-mappings]]
+=== オプションの属性マッピング
+
+インポートしたいプロファイルデータに対してのみ、「オプション属性を含める」を選択してください。各マッピングは、実際のADスキーマと一致している必要があります。マッピングが空または不正確な場合でも、ID解決は妨げられませんが、プロファイル値は入力されません。
+
+[cols="50%,50%"]
+|===
+| *プロファイル値* | *デフォルトのAD属性* 
 
 
 | E メール アドレス | 郵便 
@@ -92,10 +145,10 @@ Active Directory でデフォルトの属性名が変更されている場合は
 | ロール | タイトル 
 
 
+| 州 | st 
+
+
 | 国 | 共同 
-
-
-| 州 | 状態 
 
 
 | 部門 | 部門 
@@ -104,85 +157,115 @@ Active Directory でデフォルトの属性名が変更されている場合は
 | 写真 | サムネイル写真 
 
 
-| マネージャーDN | マネージャー 
+| マネージャDN | マネージャー 
 
 
-| グループ | memberOf 
+| グループ | memberof 
 |===
 
 
-[[testing-your-user-directory-collector-configuration]]
-== ユーザーディレクトリコレクターの構成のテスト
+[[advanced-configuration-include-the-accounts-you-need]]
+== 詳細設定：必要なアカウントを含める
 
-次の手順を使用して、LDAP ユーザー権限と属性定義を検証できます。
+検索クエリは、どのディレクトリオブジェクトをインポートするかを制御します。デフォルトのクエリには、POSIXアカウントと標準のADユーザーオブジェクトが含まれます：
 
-* Workload Security LDAP ユーザー権限を検証するには、次のコマンドを使用します。
-+
-`ldapsearch -o ldif-wrap=no -LLL -x -b "dc=netapp,dc=com" -h 10.235.40.29 -p 389 -D \Administrator@netapp.com -W`
-
-* AD Explorer を使用すると、AD データベースをナビゲートしたり、オブジェクトのプロパティと属性を表示したり、権限を表示したり、オブジェクトのスキーマを表示したり、保存して再実行できる高度な検索を実行したりできます。
-+
-** インストールlink:https://docs.microsoft.com/en-us/sysinternals/downloads/adexplorer["広告エクスプローラー"]AD サーバーに接続できる任意の Windows マシン上。
-** AD ディレクトリ サーバーのユーザー名とパスワードを使用して AD サーバーに接続します。
-
-
-
-
-image:cs_ADExample.png["AD接続"]
-
-
-
-[[troubleshooting-user-directory-collector-configuration-errors]]
-== ユーザーディレクトリコレクターの構成エラーのトラブルシューティング
-
-次の表では、コレクターの構成中に発生する可能性のある既知の問題と解決策について説明します。
-
-[cols="2*"]
+[cols="100%"]
 |===
-| 問題： | 解決： 
-
-
-| ユーザー ディレクトリ コネクタを追加すると、「エラー」状態になります。  「LDAP サーバーに無効な資格情報が提供されました」というエラーが表示されます。 | 間違ったユーザー名またはパスワードが指定されました。正しいユーザー名とパスワードを編集して入力します。 
-
-
-| ユーザー ディレクトリ コネクタを追加すると、「エラー」状態になります。エラーには、「フォレスト名として指定された DN=DC=hq、DC=domainname、DC=com に対応するオブジェクトを取得できませんでした。」と表示されます。 | 指定されたフォレスト名が正しくありません。正しいフォレスト名を編集して入力します。 
-
-
-| ドメイン ユーザーのオプション属性が、Workload Security ユーザー プロファイル ページに表示されません。 | これは、CloudSecure に追加されたオプション属性の名前と Active Directory の実際の属性名が一致していないことが原因であると考えられます。正しいオプション属性名を編集して指定します。 
-
-
-| データ コレクターが「LDAP ユーザーの取得に失敗しました」というエラー状態です。失敗の理由: サーバーに接続できません。接続が null です。 | _Restart_ ボタンをクリックしてコレクターを再起動します。 
-
-
-| ユーザー ディレクトリ コネクタを追加すると、「エラー」状態になります。 | 必須フィールド (サーバー、フォレスト名、バインド DN、バインド パスワード) に有効な値を指定していることを確認してください。バインド DN 入力が常に 'Administrator@<domain_forest_name>' またはドメイン管理者権限を持つユーザー アカウントとして提供されるようにします。 
-
-
-| ユーザー ディレクトリ コネクタを追加すると、「再試行」状態になります。  「コレクターの状態を定義できません。理由: java.net.ConnectionException: 接続が拒否されたため、TCP コマンド [Connect(localhost:35012,None,List(),Some(,seconds),true)] が失敗しました。」というエラーが表示されます。 | AD サーバーに指定された IP または FQDN が正しくありません。正しい IP アドレスまたは FQDN を編集して入力します。 
-
-
-| ユーザー ディレクトリ コネクタを追加すると、「エラー」状態になります。  「LDAP 接続を確立できませんでした」というエラーが表示されます。 | AD サーバーに指定された IP または FQDN が正しくありません。正しい IP アドレスまたは FQDN を編集して入力します。 
-
-
-| ユーザー ディレクトリ コネクタを追加すると、「エラー」状態になります。 「設定の読み込みに失敗しました」というエラーが表示されます。理由: データ ソース構成にエラーがあります。具体的な理由: /connector/conf/application.conf: 70: ldap.ldap-port のタイプは NUMBER ではなく STRING です | 指定されたポートの値が正しくありません。  AD サーバーのデフォルトのポート値または正しいポート番号を使用してみてください。 
-
-
-| 必須属性から始めましたが、うまくいきました。オプションのものを追加した後、オプションの属性データが AD から取得されません。 | これは、CloudSecure に追加されたオプションの属性と Active Directory の実際の属性名が一致していないことが原因であると考えられます。正しい必須またはオプションの属性名を編集して指定します。 
-
-
-| コレクターを再起動した後、AD 同期はいつ行われますか? | コレクターが再起動するとすぐに AD 同期が行われます。約 30 万ユーザーのユーザーデータを取得するには約 15 分かかり、12 時間ごとに自動的に更新されます。 
-
-
-| ユーザー データは AD から CloudSecure に同期されます。データはいつ削除されますか? | 更新がない場合、ユーザーデータは 13 か月間保持されます。テナントが削除されると、データも削除されます。 
-
-
-| ユーザー ディレクトリ コネクタが「エラー」状態になります。 「コネクタはエラー状態です。サービス名: usersLdap。失敗の理由: LDAP ユーザーの取得に失敗しました。失敗の理由: 80090308: LdapErr: DSID-0C090453、コメント: AcceptSecurityContext エラー、データ 52e、v3839" | 指定されたフォレスト名が正しくありません。正しいフォレスト名を指定する方法については上記を参照してください。 
-
-
-| ユーザー プロフィール ページに電話番号が入力されません。 | これは、Active Directory の属性マッピングの問題が原因であると考えられます。1. Active Directory からユーザーの情報を取得している特定の Active Directory コレクターを編集します。2.オプション属性の下に、Active Directory 属性「telephonenumber」にマップされたフィールド名「電話番号」があることに注意してください。4.ここで、上で説明した Active Directory Explorer ツールを使用して Active Directory を参照し、正しい属性名を確認してください。3. Active Directory に、実際にユーザーの電話番号を持つ「telephonenumber」という名前の属性があることを確認します。5. Active Directory では「phonenumber」に変更されているとします。6.次に、CloudSecure ユーザー ディレクトリ コレクターを編集します。オプション属性セクションで、「telephonenumber」を「phonenumber」に置き換えます。7.  Active Directory コレクターを保存すると、コレクターが再起動し、ユーザーの電話番号を取得して、ユーザー プロファイル ページに表示します。 
-
-
-| Active Directory (AD) サーバーで暗号化証明書 (SSL) が有効になっている場合、Workload Security ユーザー ディレクトリ コレクターは AD サーバーに接続できません。 | ユーザー ディレクトリ コレクターを構成する前に、AD サーバー暗号化を無効にします。ユーザーの詳細が取得されると、その情報は 13 か月間保存されます。ユーザーの詳細を取得した後に AD サーバーが切断された場合、AD に新しく追加されたユーザーは取得されません。再度取得するには、ユーザー ディレクトリ コレクターを AD に接続する必要があります。 
-
-
-| Active Directory からのデータは CloudInsights Security に存在します。  CloudInsights からすべてのユーザー情報を削除します。 | CloudInsights Security から Active Directory ユーザー情報のみを削除することはできません。ユーザーを削除するには、テナント全体を削除する必要があります。 
+| ({vbar}(objectClass=posixAccount)(&(objectCategory=person)(objectClass=user))) 
 |===
+このフィルタに一致しないコンピュータ アカウント、マネージド サービス アカウント、またはカスタム サービス アカウント オブジェクトは、未解決のままになります。AD ExplorerでオブジェクトのobjectClassを検査し、必要なオブジェクトタイプのみにクエリを拡張します。例えば：
+
+[cols="100%"]
+|===
+| （{vbar}（objectClass=posixAccount） + （&（objectCategory=person）（objectClass=user）） + （objectClass=computer） + （objectClass=msDS-ManagedServiceAccount） + （objectClass=msDS-GroupManagedServiceAccount）） 
+|===
+[cols="100%"]
+|===
+| *結果を確認せずにクエリを拡大しないでください* 追加された各ブランチが、Workload Securityがインポートする必要のあるアカウントのみを返すことを確認してください。クエリ範囲を広げると、同期時間が長くなり、不要なディレクトリオブジェクトがインポートされる可能性があります。 
+|===
+
+
+[[validate-the-configuration]]
+== 設定を検証する
+
+[cols="100%"]
+|===
+| *ユーザーディレクトリコレクタでは接続テストは利用できません* コレクタを保存する前に、同等のアクセス権限を持つホストから、ネットワーク アクセス、バインド認証情報、検索範囲、クエリ結果、およびマッピングされた属性を検証してください。 
+|===
+
+
+[[use-ad-explorer]]
+=== AD Explorerを使用する
+
+目的のバインドDNアカウントを使用して、Active Directoryサーバに接続します。アカウントが設定されたフォレスト名またはOUを参照し、名前、objectSid、sAMAccountName、使用する場合はuidNumber、および任意のオプション属性を読み取ることができることを確認します。
+
+https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer["[.underline"]#Microsoft Sysinternals AD Explorerをダウンロード#]
+
+
+
+[[use-ldapsearch]]
+=== ldapsearchを使用する
+
+目的のバインドDNを使用して、範囲を限定した検索を実行します。例を実際のディレクトリ値に置き換え、コレクターの検索クエリをLDAPフィルタとして追加してください。
+
+[cols="100%"]
+|===
+| ldapsearch -o ldif-wrap=no -LLL -x -H ldap://ad.example.com:389 -D "ws-reader@example.com" -W -b "DC=hq,DC=example,DC=com" '({vbar}(objectClass=posixAccount)(&(objectCategory=person)(objectClass=user)))' name objectSid sAMAccountName uidNumber 
+|===
+* コレクタが使用する正確なアカウントとパスワードでバインドが成功します。
+* 検索結果には、想定される人間、コンピュータ、またはサービスのアカウントが返されます。
+* 必須のマッピング属性はすべて存在し、返されるオブジェクトに値を持っています。
+* エージェントは、ディレクトリサーバに対して同じDNS解決とネットワークパスを持ちます。
+
+
+
+
+[[after-you-save]]
+== 保存後
+
+* Active Directoryの同期は、コレクターが起動または再起動したときに開始されます。
+* 約300,000人のユーザーを含むディレクトリの同期には、約15分かかる場合があります。
+* ユーザーデータは12時間ごとに自動的に更新されます。
+* ディレクトリが利用できなくなった場合、以前に取得したユーザー情報は保持されますが、接続が復旧するまで新規ユーザーや変更されたユーザーは取得できません。
+* ユーザーデータは、更新せずに13か月間保持されます。ユーザーディレクトリデータは、テナントとは独立して削除することはできません。
+
+
+
+
+[[troubleshooting]]
+== トラブルシューティング
+
+[cols="50%,50%"]
+|===
+| *メッセージまたは症状* | *チェックすべき事項* 
+
+
+| LDAPサーバに無効な認証情報が提供されました。 | バインドDNとパスワードを確認してください。また、アカウントが設定されたフォレスト名を検索できることを確認してください。 
+
+
+| フォレスト名として指定されたDN=…に対応するオブジェクトを取得できませんでした。 | フォレスト名を修正してください。正確なドメイン、DN、OU、またはその他のサポートされているスコープを使用してください。 
+
+
+| LDAP接続の確立に失敗しました。 | エージェントから、ADサーバのIP/FQDN、DNS解決、プロトコル、ポート、ファイアウォールパスを確認します。 
+
+
+| LDAPユーザーの取得に失敗しました…接続がnullです。 | コレクターを再起動してください。問題が再発する場合は、同等のネットワークロケーションからldapsearchを使用して接続性と検索を検証してください。 
+
+
+| コレクタが再試行中、またはAGENT008を報告しています。 | サーバアドレスとフォレスト名を確認し、エージェントがディレクトリサービスにアクセスできることを確認してください。 
+
+
+| ユーザー属性またはオプション属性は表示されません。 | 検索クエリにオブジェクトが含まれていること、およびマッピングされた属性名がディレクトリスキーマと一致していること（大文字・小文字の区別を含む）を確認してください。保存して再起動し、再同期してください。 
+
+
+| AcceptSecurityContextエラー、データ52e。 | 認証情報とフォレスト名を確認してください。Active Directoryでは、データ52eは無効な認証情報を示します。 
+
+
+| ldap-port の型は NUMBER ではなく STRING です。 | 389や636などの数値ポート値を入力してください。 
+|===
+
+
+[[related-information]]
+== 関連情報
+
+https://docs.netapp.com/us-en/data-infrastructure-insights/task_config_user_dir_connect.html["[.underline"]#現在のNetAppドキュメントページ#]
