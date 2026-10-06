@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, file system, fs util
 :imagesdir: ./media/
 
 
+[role="lead"]
+ファイルシステム利用状況スキーマは、ファイルシステム、ホスト、およびコンピューティングリソース全体にわたるストレージの消費量と使用パターンを追跡します。このスキーマを使用して、容量のホットスポットを特定し、ファイルシステムレベルでのストレージ割り当てを最適化します。
+
 ソース: *dwh_fs_util* OData エンドポイント — Data Infrastructure Insights
 
 見つかったテーブル数：*8* | 関連付け数：*7*

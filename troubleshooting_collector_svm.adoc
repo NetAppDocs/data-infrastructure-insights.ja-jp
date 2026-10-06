@@ -110,8 +110,8 @@ ____
 
 *対象となるエラーの詳細*
 
-* ++[++host++]++ の ONTAP タイプを判別できませんでした。理由：ストレージシステムへの接続エラー：ホストに到達できません
-* ++[++IP++]++ はクラスタ/ノードとして識別され、このモードでは追加できません
+* [host] の ONTAP タイプを判別できませんでした。理由：ストレージシステムへの接続エラー：ホストに到達できません
+* [IP]はクラスタ/ノードとして識別され、このモードでは追加できません
 * SVM上に有効なデータインターフェース…が見つかりませんでした
 * 権限が不足しています：vserver fpolicy
 * このActive Directoryユーザーには、ユーザーレベルではなくグループレベルで役割が割り当てられています
@@ -177,7 +177,7 @@ ____
 
 *解決時*
 
-* cloudsecure++_++ FPolicy ポリシーが有効になっており、コレクターは実行中です。
+* cloudsecure_ FPolicy ポリシーが有効になっており、コレクターは実行中のままです。
 
 
 
@@ -240,8 +240,8 @@ ____
 . クライアントプロトコルが有効になっていること、およびSMBの場合はSVMにCIFSサーバーが設定されていることを確認してください。
 . 対象となる共有とボリューム、および除外される共有とボリュームを確認します。引用符を使用せずに完全な名前を使用してください。
 . 一般的なフォルダアクセスイベントが必要な場合は、「フォルダアクセス監視」を有効にしてください。このオプションを選択しなくても、フォルダの作成、名前変更、削除は収集されます。
-. .ini および .DS++_++Store アクティビティのみが欠落している場合は、何もする必要はありません。これらの拡張機能は FPolicy イベントの収集から除外されます。
-. それでもアクティビティがない場合は、高度な診断を使用して cloudsecure++_++ ポリシーと ONTAP FPolicy イベントログを確認してください。
+. .ini および .DS_Store のアクティビティのみが欠落している場合は、何もする必要はありません。これらの拡張子は FPolicy イベントの収集から除外されます。
+. それでもアクティビティがない場合は、高度な診断を使用して、cloudsecure_ ポリシーと ONTAP FPolicy イベントログを確認してください。
 
 
 *解決時*
@@ -309,7 +309,7 @@ ONTAP監査は機能していますが、ID解決は別の問題です。
 . コレクターが実行中で、一時停止していないことを確認してください。
 . ユーザーをブロックするには、クラスタレベルの認証情報を使用してください。カスタムユーザーには、TCP 22でのSSHアクセスと、ドキュメントに記載されているブロック権限も必要です。
 . カスタムユーザーに必要なスナップショット権限が付与されていることを確認してください。
-. ONTAPマルチ管理者検証が有効になっている場合は、cloudsecure++_++スナップショットと、ユーザーブロックで使用されるset操作について、ドキュメントに記載されている除外項目を追加します。
+. ONTAPマルチ管理者検証が有効になっている場合は、ドキュメントに記載されている、cloudsecure_スナップショットおよびユーザーブロックで使用されるset操作の除外を追加します。
 . クラスタモードで接続テストを実行し、スナップショット機能とユーザーブロック機能の結果を確認してください。
 
 
@@ -334,7 +334,7 @@ ONTAP監査は機能していますが、ID解決は別の問題です。
 | 劣化状態では、ローカルデータLIFのないノードがリストされます | ONTAPは、SVMをローカルで提供していないノードからFPolicyチャネルを確立できません。 | リストされているノードには、動作中のSVMデータLIFがあります。 
 
 
-| .ini または .DS++_++Store のイベントはありません | これらの拡張子はFPolicyの適用範囲から除外されます。 | その他の想定されるファイルアクティビティも確認されていません。 
+| .ini または .DS_Store に関するイベントはありません | これらの拡張子はFPolicyの適用範囲から除外されます。 | その他の想定されるファイルアクティビティも確認されていません。 
 
 
 | 一時的な初期化中、停止中、または劣化状態 | 再起動、アップグレード、移行、フェイルオーバー、および再開には再接続が必要です。 | 状態は操作後も持続するか、繰り返されます。 
@@ -374,7 +374,7 @@ sudo /opt/netapp/cloudsecure/agent/bin/cloudsecure-agent-symptom-collector.sh -o
 
 
 | コレクターログ  a| 
-/opt/netapp/cloudsecure/data-collectors/++<++collector-uuid++>++/logs/dsc.log
+/opt/netapp/cloudsecure/data-collectors/{lt}collector-uuid{gt}/logs/dsc.log
 
 エラーを含む、すべてのコレクターアクティビティが含まれています。このログを使用して、コレクターの問題を調査してください。
 
@@ -384,9 +384,9 @@ sudo /opt/netapp/cloudsecure/agent/bin/cloudsecure-agent-symptom-collector.sh -o
 
 
 | エージェントのインストールとアップグレード  a| 
-/opt/netapp/cloudsecure/agent/logs/cloudsecure++_++agent++_++install.log
+/opt/netapp/cloudsecure/agent/logs/cloudsecure_agent_install.log
 
-/opt/netapp/cloudsecure/agent/logs/cloudsecure++_++agent++_++upgrade.log
+/opt/netapp/cloudsecure/agent/logs/cloudsecure_agent_upgrade.log
 
 
 
@@ -419,7 +419,7 @@ event log show -source fpolicy -fields event,action,description
 fpolicy show
 fpolicy show-engine
 ----
-cloudsecure++_++というプレフィックスが付いたWorkload Securityポリシーを探します。ポリシーは有効になっている必要があり、すべてのデータ提供ノードで接続された外部エンジンが表示されている必要があります。チャネルが切断された場合は、イベントの理由とノード名を保持します。
+cloudsecure_ という接頭辞が付いたWorkload Securityポリシーを探してください。ポリシーは有効になっている必要があり、すべてのデータ提供ノードで外部エンジンが接続されていることが示される必要があります。チャネルが切断された場合は、イベントの理由とノード名を保持してください。
 
 
 
@@ -455,7 +455,7 @@ ____
 
 [listing]
 ----
-curl -kv https://++<++management-ip++>++:443
+curl -kv https://<management-ip>:443
 ----
 TLS応答はTCP経路を証明します。タイムアウトは、ルーティングまたはファイアウォールによるブロックを示しています。認証応答は到達可能性を証明するものであり、認証情報や役割が正しいことを証明するものではありません。
 
@@ -468,7 +468,7 @@ ONTAPから、関連する各SVMデータLIFからのルーティングをテス
 
 [listing]
 ----
-network ping -vserver ++<++svm++>++ -lif ++<++data-lif++>++ -destination ++<++agent-ip++>++ -show-detail
+network ping -vserver <svm> -lif <data-lif> -destination <agent-ip> -show-detail
 ----
 エージェント上で、ホストファイアウォールを検査します：
 
@@ -486,17 +486,10 @@ sudo iptables-save
 
 ONTAP 9.8以降では、運用中のSVMデータLIFに、data-nfsおよび/またはdata-cifsとともにdata-fpolicy-clientが含まれている必要があります。
 
-[listing]
-----
-network interface show -vserver ++<++svm++>++ -fields service-policy,status-admin,status-oper
-----
+ network interface show -vserver <svm> -fields service-policy,status-admin,status-oper
 適切なポリシーが存在しない場合は、お客様のONTAPネットワーク設計に従って作成または変更してください。例：
 
-[listing]
-----
-net int service-policy create -policy only++_++data++_++fpolicy -vserver ++<++svm++>++ ++\++ \
--allowed-addresses 0.0.0.0/0 -services data-cifs,data-nfs,data,-core,data-fpolicy-client
-----
+ net int service-policy create -policy only_data_fpolicy -vserver <svm> \
 *注：*ONTAP 9.8より前のバージョンでは、data-fpolicy-clientは不要です。LIFはdataロールを持ち、動作可能であり、NFSおよび/またはCIFSをサポートしている必要があります。
 
 
@@ -509,7 +502,7 @@ net int service-policy create -policy only++_++data++_++fpolicy -vserver ++<++sv
 . 関連するデータLIFおよびエージェントIPについて、ONTAPでパケットトレースを開始します。
 . 接続テストを実行するか、コレクターを再起動してください。
 . 障害が発生するまで待ち、その後トレースを停止します。
-.  https://++<++cluster-management-ip++>++/spi/++<++cluster-name++>++/etc/log/packet++_++traces/[]からトレースを取得します。
+.  https://<cluster-management-ip>/spi/<cluster-name>/etc/log/packet_traces/[]からトレースを取得します。
 . ONTAPからエージェントのコールバックポートへのSYNを確認してください。SYNがない場合は、ONTAP側のパスまたはポリシーに問題があることを示しています。ハンドシェイクが完了していないSYNは、ONTAPとエージェント間のファイアウォールまたはルーティングの問題を示しています。
 
 
@@ -539,7 +532,7 @@ ____
 
 [quote]
 ____
-*注：* アクティブなコレクターの cloudsecure++_++ オブジェクトを削除しないでください。コレクターはそれらのオブジェクトを所有し、更新します。
+*注：* アクティブなコレクターの cloudsecure_ オブジェクトを削除しないでください。コレクターはそれらのオブジェクトを所有し、更新します。
 
 ____
 
@@ -553,11 +546,11 @@ fpolicy show
 
 [listing]
 ----
-fpolicy disable -vserver ++<++svm++>++ -policy-name ++<++policy-name++>++
-fpolicy policy scope delete -vserver ++<++svm++>++ -policy-name ++<++policy-name++>++
-fpolicy policy delete -vserver ++<++svm++>++ -policy-name ++<++policy-name++>++
-fpolicy policy event delete -vserver ++<++svm++>++ -event-name ++<++event-name++>++
-fpolicy policy external-engine delete -vserver ++<++svm++>++ -engine-name ++<++engine-name++>++
+fpolicy disable -vserver <svm> -policy-name <policy-name>
+fpolicy policy scope delete -vserver <svm> -policy-name <policy-name>
+fpolicy policy delete -vserver <svm> -policy-name <policy-name>
+fpolicy policy event delete -vserver <svm> -event-name <event-name>
+fpolicy policy external-engine delete -vserver <svm> -engine-name <engine-name>
 ----
 シーケンススロットまたは競合オブジェクトがクリアされたら、ワークロードセキュリティコレクターを再起動してください。
 
@@ -583,7 +576,7 @@ fpolicy policy external-engine delete -vserver ++<++svm++>++ -engine-name ++<++e
 | AGENT009を使用したチャンク アップロード署名要求がサポートされるようになりました。 | 選択したエージェントと環境にコレクターがまだ存在し、同時削除または移行で削除されていないことを確認してください。 
 
 
-| エージェント NOT++_++CONNECTED | systemctlとjournalctl、TCP 443でのSaaSの送信、プロキシ設定、SSL検査、およびcssysアカウントを確認してください。 
+| エージェント NOT_CONNECTED | systemctlとjournalctl、TCP 443でのSaaSの送信、プロキシ設定、SSL検査、およびcssysアカウントを確認してください。 
 |===
 エージェントのサイズを決定するには、イベントレートチェッカーを使用してください。コレクターの数だけに頼ってはいけません。イベント量と有効になっている機能も負荷に影響します。
 
@@ -593,7 +586,7 @@ fpolicy policy external-engine delete -vserver ++<++svm++>++ -engine-name ++<++e
 == *基本的な確認後も活動が見られない場合の調査*
 
 . event log show -source fpolicy を実行し、エラーを保存してください。
-. fpolicy show を実行して、cloudsecure++_++ ポリシーが有効になっていることを確認してください。
+. fpolicy showコマンドを実行し、cloudsecure_ポリシーが有効になっていることを確認してください。
 . コレクターでクライアント操作を生成するプロトコルが有効になっており、SVM上で許可されていることを確認してください。
 . 共有またはボリュームが除外されていないことを確認してください。
 . 操作実行時にコレクターが一時停止状態になっていなかったことを確認してください。
@@ -640,7 +633,7 @@ ID：uidnumber
 
 [quote]
 ____
-multi-admin-verify rule modify -operation 「volume snapshot create」 -query 「-snapshot !++*++cloudsecure++_*++」 + multi-admin-verify rule modify -operation 「volume snapshot delete」 -query 「-snapshot !++*++cloudsecure++_*++」 + multi-admin-verify rule delete -operation set
+multi-admin-verify rule modify -operation 「volume snapshot create」 -query 「-snapshot !\*cloudsecure\_*」 + multi-admin-verify rule modify -operation 「volume snapshot delete」 -query 「-snapshot !\*cloudsecure\_*」 + multi-admin-verify rule delete -operation set
 
 *注：* 設定されたルールを削除すると、その操作のマルチ管理者検証保護が変更されます。ONTAPセキュリティ管理者と変更内容を確認してください。
 
@@ -655,7 +648,7 @@ ____
 
 *含む*
 
-* ステータス ++>++ 詳細からの完全なメッセージ、および障害発生時刻。
+* 「ステータス」＞「詳細」に表示されるメッセージ全文と、障害発生時刻。
 * 接続テストの結果（スキップされたチェック項目を含む）。
 * エージェントとコレクターのバージョンおよび現在の状態。
 * ONTAPバージョン、クラスター名とSVM名、接続モード、および最近のトポロジー変更。
@@ -666,4 +659,4 @@ ____
 * 容量について：サブスクリプションの前後における使用状況と、各コレクターが報告した生の容量。
 
 
-Data Infrastructure Insightsでヘルプ++>++サポートを使用して、ケースをオープンします。
+Data Infrastructure Insightsでヘルプ > サポートを使用して、ケースをオープンしてください。

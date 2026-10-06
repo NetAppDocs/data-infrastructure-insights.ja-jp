@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, capacity efficiency
 :imagesdir: ./media/
 
 
+[role="lead"]
+容量効率スキーマは、データ削減率や最適化の機会など、ストレージ効率に関する指標を提供します。このスキーマを使用して、重複排除や圧縮などのストレージ技術の有効性を監視および分析します。
+
 ソース: *dwh_capacity_efficiency* OData エンドポイント — Data Infrastructure Insights
 
 見つかったテーブル数：*3* | 関連付け数：*2*

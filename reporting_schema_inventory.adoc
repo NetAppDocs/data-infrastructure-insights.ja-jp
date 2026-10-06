@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, inventory
 :imagesdir: ./media/
 
 
+[role="lead"]
+インベントリスキーマには、ストレージシステム、ホスト、アプリケーション、注釈など、包括的な資産およびオブジェクトデータが含まれています。これはデータ ウェアハウスで最大のスキーマであり、資産管理とインフラの可視性の基盤となります。
+
 ソース: *dwh_inventory* OData エンドポイント — Data Infrastructure Insights
 
 見つかったテーブル数：*106* | 関連付け数：*171*
