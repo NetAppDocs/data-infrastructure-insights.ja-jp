@@ -76,6 +76,28 @@ Data Infrastructure Insightsでのユーザー ロールによって、レポー
 |===
 
 
+[[reporting-administration]]
+== レポート管理
+
+以前のレポート管理コンソールは利用できなくなりました。レポート管理には「管理」を使用してください。
+
+. Data Infrastructure Insightsで、*レポート*を開きます。
+. *メニュー > 管理*を選択します。
+
+
+「管理」画面から、レポート管理者はレポートの設定や、現在、過去、今後のレポート作成活動に関する操作を行うことができます。
+
+完了したアクティビティの実行詳細を開くには：
+
+. *メニュー > 管理 > アクティビティ > 過去* を選択します。
+. アクティビティ画面で、3点メニューを開きます。
+. *実行の詳細*を選択します。
+
+
+詳細については、こちらのlink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/IBM_Cognos_Administration_Console_Does_Not_Load_for_DII_Reporting_Scheduled_Reports["こちらの技術情報"^]をご覧ください。
+
+
+
 [[setting-reporting-cognos-email-preferences]]
 == レポート（Cognos）の電子メール設定
 

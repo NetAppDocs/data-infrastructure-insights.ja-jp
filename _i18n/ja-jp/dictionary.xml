@@ -16290,4 +16290,14 @@
   <block id="d822a0d21d568ecd22e518ef5dc10ebb" category="paragraph">multi-admin-verify rule modify -operation 「volume snapshot create」 -query 「-snapshot !\*cloudsecure\_*」 + multi-admin-verify rule modify -operation 「volume snapshot delete」 -query 「-snapshot !\*cloudsecure\_*」 + multi-admin-verify rule delete -operation set</block>
   <block id="4ff2cea234868624331b11228fa5ab0d" category="list-text">「ステータス」＞「詳細」に表示されるメッセージ全文と、障害発生時刻。</block>
   <block id="9277538c12d62b57cf00dc1681c9a5af" category="paragraph">Data Infrastructure Insightsでヘルプ &gt; サポートを使用して、ケースをオープンしてください。</block>
+  <block id="8a7cd4d03da68ae214bddbe265b1ad26" category="section-title">レポート管理</block>
+  <block id="7fa5390f038fb69139796793bf763a3a" category="paragraph">以前のレポート管理コンソールは利用できなくなりました。レポート管理には「管理」を使用してください。</block>
+  <block id="8ea7ade9ab3cfad9bd6b2431dd43a772" category="list-text">Data Infrastructure Insightsで、*レポート*を開きます。</block>
+  <block id="4239c0dba928cec50e8c21b945c051eb" category="list-text">*メニュー &gt; 管理*を選択します。</block>
+  <block id="76dabad1c4a80c549d100374a19b0969" category="paragraph">「管理」画面から、レポート管理者はレポートの設定や、現在、過去、今後のレポート作成活動に関する操作を行うことができます。</block>
+  <block id="ff48e2ee0f646866bbc62bcb29402a4e" category="paragraph">完了したアクティビティの実行詳細を開くには：</block>
+  <block id="2330f73a0085aaa309ecf31b2c395bb6" category="list-text">*メニュー &gt; 管理 &gt; アクティビティ &gt; 過去* を選択します。</block>
+  <block id="151bb4dbf64e2b3fe12dc4b50a276810" category="list-text">アクティビティ画面で、3点メニューを開きます。</block>
+  <block id="2bdb567b68e888c0bd681c966627b9d5" category="list-text">*実行の詳細*を選択します。</block>
+  <block id="04b3e949af7d6de572fc2375a3dd80b8" category="paragraph">詳細については、こちらの<block ref="e796b480a0964a566b0ed92c3ef65e64" category="inline-link-macro-rx"></block>をご覧ください。</block>
 </blocks>
