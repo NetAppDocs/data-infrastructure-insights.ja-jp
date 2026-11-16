@@ -197,6 +197,9 @@ Data Infrastructure Insightsでサポートされているデータ コレクタ
 | link:task_dc_na_storagegrid.html["NetAppStorageGRID"] | インフラ 
 
 
+| link:task_dc_nvidia_bcm_rest.html["NVIDIA Base Command Manager REST"] | インフラ 
+
+
 | link:task_dc_nutanix.html["Nutanix NXシリーズ"] | インフラ 
 
 

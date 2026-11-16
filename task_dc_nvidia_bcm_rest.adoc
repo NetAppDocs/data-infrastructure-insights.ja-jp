@@ -1,0 +1,238 @@
+---
+sidebar: sidebar 
+permalink: task_dc_nvidia_bcm_rest.html 
+keywords: data collector, NVIDIA, Base Command Manager, BCM, GPU, REST 
+summary: インベントリ、ホストパフォーマンス、およびGPUワークロードのメトリックを収集するように、NVIDIA Base Command Manager RESTデータコレクターを設定します。 
+---
+= NVIDIA Base Command Manager RESTデータコレクター
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NVIDIA Base Command Manager（BCM）データコレクターは、HTTPS RESTおよびJSON API（CMDaemon、デフォルトポート *8081*）を介して、BCMヘッドノードからインベントリ、ホストパフォーマンス、およびGPUワークロードのメトリックを収集します。*HYBRID*モードでは、 `/exporter`を介してDCGMエクスポーターのGPUメトリックを収集することもできます。クラスターごとに1つのデータソースを設定します。このコレクターは*プレビュー*段階です。 `root`やBCM `admin`プロファイルではなく、専用のBCMサービスアカウントを使用してください。
+
+
+
+[[terminology]]
+== 用語
+
+Data Infrastructure Insightsによって取得された資産タイプごとに、その資産に使用される最も一般的な用語が表示されます。このデータ コレクターを表示またはトラブルシューティングするときは、次の用語に留意してください。
+
+[cols="1,1"]
+|===
+| ベンダー/モデル用語 | Data Infrastructure Insights用語 
+
+
+| BCMクラスタ | ベンダー固有の指標 — `nvidia_bcm.cluster` 
+
+
+| 計算ノード／ヘッドノード | ホスト（インベントリ） 
+
+
+| Slurmジョブまたはチャージバック行 | ベンダー固有の指標 — `nvidia_bcm.workload` 
+
+
+| GPUメトリクス（BCM GPUサンプラーおよびプロファイリング、nvidia-smiフォールバック、オプションのDCGMエクスポーター） | ベンダー固有の指標 — `nvidia_bcm.gpu` 
+
+
+| ノードの状態 | ベンダー固有の指標 — `nvidia_bcm.host` 
+|===
+
+NOTE: これらは一般的な用語のマッピングのみであり、このデータ コレクターのすべてのケースを反映しているわけではありません。
+
+
+
+[[configuration]]
+== 構成
+
+[cols="1,2"]
+|===
+| フィールド | 説明 
+
+
+| BCMヘッドノードのIP/ホスト名 | BCMヘッドノードのIPアドレスまたはFQDN 
+
+
+| HTTPSポート | CMDaemonポート。デフォルトは *8081* です 
+
+
+| ユーザー名 | 基本認証用のBCMサービスアカウント 
+
+
+| パスワード | サービスアカウントのパスワード 
+|===
+データソースを保存する前に、取得ユニットが `https://<head>:8081`に到達できること、およびこれらのエンドポイントがデータとともにHTTP *200*を返すことを確認してください：
+
+[source, bash]
+----
+curl -sk -u user:pass https://<head>:8081/rest/v1/device
+curl -sk -u user:pass "https://<head>:8081/rest/v1/monitoring/latest?measurable=CPUUsage"
+----
+ベンダー固有のメトリックは、最新のインベントリポーリングからのホストインベントリを使用するため、新しく追加されたノードは、次のインベントリポーリング後（デフォルトでは最大60分後）に表示されます。
+
+
+
+[[advanced-configuration]]
+== 高度な設定
+
+UIの*Advanced*画面には、すべてのコレクターパッケージの設定が表示されます。ポーリング間隔はパッケージごとに個別の*必須*フィールド（非表示ではありません）です。通常、以下の3つすべてが、オプションのエキスパートプロパティとともに表示されます。
+
+[cols="1,2"]
+|===
+| フィールド | 説明 
+
+
+| インベントリポーリング間隔（分） | Foundation / インベントリパッケージ。デフォルトは*60*分です 
+
+
+| パフォーマンスポーリング間隔（秒） | ホストパフォーマンスパッケージ。デフォルトは*300*秒です 
+
+
+| 統合ポーリング間隔（秒） | *Vendor Specific Metrics*パッケージ。デフォルトは*300*秒です 
+
+
+| 収集モード | *REST_ONLY*（デフォルト）は、RESTおよびJSON APIのみを使用します。*HYBRID*は、DCGMエクスポーターのGPUメトリック用に `/exporter`も読み取ります。*HYBRIDモードでの/exporterの有効化*を参照してください。 `/exporter`が失敗した場合、ポーリングは続行され、修正方法を含む警告が表示されます 
+
+
+| エクスポータメトリック許可リスト | ハイブリッドのみ。オプションのカンマ区切りの `/exporter`メトリック名。空（デフォルト）の場合はすべてのDCGMシリーズを収集します 
+
+
+| クライアント証明書のパス | ハイブリッドのみ。取得ユニット上のBCMクライアント証明書へのパス(`.pem`） 
+
+
+| クライアントキーパス | ハイブリッドのみ。取得ユニット上の証明書のキーへのパス(`.key`） 
+
+
+| NVIDIA SMI REST統合 | フォールバック GPU ソース。 `/monitoring/latest` が GPU サンプラー行を返さない場合にのみ、 `/rest/v1/nvidia-smi` を呼び出して `smi_*` フィールドを取得します。デフォルトは *true* です。 `RUN_NVIDIA_SMI_TOKEN` が必要です（*nvidia-smi トークン（オプション）*を参照）。これがない場合、警告が表示され、ポーリングは継続されます。呼び出しはインターバル（デフォルトでは 15 分）ごとに間隔を空けて実行されます。呼び出しを行わないようにするには *false* に設定します 
+|===
+
+
+[[service-account-bcm-head-node]]
+== サービスアカウント（BCMヘッドノード）
+
+ヘッドノードで `root`として、組み込みの `readonly`プロファイルを使用して収集用の読み取り専用ユーザーを作成します：
+
+[source, bash]
+----
+cmsh -c "user; add dii-monitor; set password '<password>'; set profile readonly; commit"
+----
+データソースで `dii-monitor`とそのパスワードを使用します。組み込みの `readonly`プロファイルは、インベントリ、JSON API、 `/rest/v1/monitoring/latest`（GPUサンプラーのメトリクスを含む）、およびGPUプロファイリングデータを対象としています。このデフォルト設定ではトークンは不要です。Slurmのチャージバックとnvidia-smiのフォールバックには追加のトークンが必要です。*チャージバック トークン（オプション）*および*nvidia-smi トークン（オプション）*を参照してください。
+
+デフォルトの*REST_ONLY*モードでは、他のヘッドノードの変更は必要ありません。
+
+
+
+[[chargeback-token-optional]]
+== チャージバックトークン（オプション）
+
+Slurmのチャージバックデータが不要な場合は、このセクションをスキップしてください。トークンがない場合、 `/chargeback`は*401*を返します。コレクターは警告をログに記録し、残りのポーリングは続行されます。
+
+チャージバック(`/chargeback`、必須 `CHARGE_BACK_TOKEN`）は、Slurmジョブとチャージバックの行を `nvidia_bcm.workload`に追加します。ヘッドノード上の `root`として、トークンを保持するプロファイルに `readonly`をクローニングし、サービスアカウントをそのプロファイルに移動します：
+
+[source, bash]
+----
+cmsh -c "profile; clone readonly dii-readonly; append tokens CHARGE_BACK_TOKEN; commit"
+cmsh -c "user; use dii-monitor; set profile dii-readonly; commit"
+----
+データソースのユーザー名とパスワードは変更しないでください。標準の `readonly`プロファイルは変更されません。nvidia-smiトークンと以下のHYBRID手順により、この同じ `dii-readonly`プロファイルにトークンが追加されます。
+
+
+
+[[nvidia-smi-token-optional]]
+== nvidia-smiトークン（オプション）
+
+nvidia-smiのフォールバックが必要な場合を除き、このセクションはスキップしてください。 `/nvidia-smi`（必要 `RUN_NVIDIA_SMI_TOKEN`）はフォールバックGPUソースです。コレクターは、 `/monitoring/latest`がGPUサンプラー行を返さない場合にのみこれを呼び出します。トークンがない場合、*401*が返され、コレクターは警告をログに記録し、残りのポーリングは続行されます。
+
+ヘッドノード上の `root`として、前のセクションの `dii-readonly`プロファイルにトークンを追加します。そのセクションをスキップした場合は、まずそのクローンコマンドを実行してください：
+
+[source, bash]
+----
+cmsh -c "profile; use dii-readonly; append tokens RUN_NVIDIA_SMI_TOKEN; commit"
+----
+
+
+[[enabling-gpu-profiling-metrics-optional]]
+== GPUプロファイリング指標の有効化（オプション）
+
+BCMは、GPUプロファイリングメトリクス（SMやテンソルアクティビティなど）を、有効にしたあとにのみ収集します。有効にすると、コレクターは `nvidia_bcm.gpu`で `gpu_profiling_*`として報告します。ヘッドノード上の `root`として：
+
+[source, bash]
+----
+cmsh -c "device; gpuprofiling watch -c <gpu-category> 1001 1002 1003 1004 1005 1006 1007 1008 1009 1010"
+----
+再起動は不要で、BCMは数分以内にデータ収集を開始します。コマンドが `not initialized yet`を報告した場合は、1分後に再度実行してください。この設定はGPUノードの再起動後に保持されません。ノードの再起動後に再度コマンドを実行してください。プロファイリングを無効にするには、数値を除いた同じコマンドを実行してください。
+
+
+
+[[enabling-exporter-for-hybrid-mode]]
+== ハイブリッドモードで /exporter を有効にする
+
+*Collection Mode*が*HYBRID*の場合にのみ必要です。 `PrometheusExporterRequireCertificate`はデフォルトのままにします。コレクタはBCMクライアント証明書を使用して `/exporter`にログインします。ヘッドノード上の `root`として：
+
+. 各GPUノードでdcgm-exporterが実行されていることを確認し（ポート9400）、データが `/exporter`に到達するように登録します：
++
+[source, bash]
+----
+cmsh -c "device; use <node>; prometheusmetricforwarders; add dcgm-<node>; set urls http://127.0.0.1:9400/metrics; commit"
+----
+.  `/cm/local/apps/cmd/etc/cmd.conf`で、 `EnablePrometheusExporterService = true`を設定し、 `systemctl restart cmd`を実行します。
+. サービスプロファイルにエクスポータートークンを割り当て、それに対応する証明書を作成します。サービスプロファイルは `dii-readonly`*チャージバックトークン（オプション）*から作成します。そのセクションをスキップした場合は、まずそこで作成してください：
++
+[source, bash]
+----
+cmsh -c "profile; use dii-readonly; append tokens PROMETHEUS_EXPORTER_TOKEN; commit"
+cmsh -c "cert; createcertificate 2048 dii-monitor <org> <unit> <city> <state> <country> dii-readonly dii-monitor 365 /root/dii-monitor.key /root/dii-monitor.pem"
+----
+.  `dii-monitor.pem` と  `dii-monitor.key` を取得ユニットにコピーし、それらのパスを *クライアント証明書パス* と *クライアントキーパス* に入力します。
+
+
+取得ユニットから確認するには（0より大きい数値は正常に動作していることを意味します）：
+
+[source, bash]
+----
+curl -sk --cert dii-monitor.pem --key dii-monitor.key https://<head>:8081/exporter | grep -ci '^dcgm_'
+----
+証明書の有効期限は365日間です。期限が切れる前に新しい証明書を作成してください。
+
+
+
+[[troubleshooting]]
+== トラブルシューティング
+
+[cols="1,2"]
+|===
+| 問題 | これを試してみてください 
+
+
+| HTTP *401* | ユーザー名とパスワードを確認してください。 `/chargeback`のみが*401*を返す場合は、*チャージバック トークン（オプション）*に示すように `CHARGE_BACK_TOKEN`を追加してください。 
+
+
+| 警告 `BCM /exporter refused with HTTP 401`または `403` | *クライアント証明書パス*と*クライアントキーパス*を設定し、証明書のプロファイルに `PROMETHEUS_EXPORTER_TOKEN`が含まれていることを確認します（*ハイブリッドモードで /exporter を有効にする*を参照）。または、*収集モード*を*REST_ONLY*に設定します。 
+
+
+| 警告 `BCM /exporter not called: the client certificate cannot be used` | 警告に表示されているファイルを修正してください。両方のファイルは取得ユニットで読み取り可能である必要があり、キーは証明書に紐づいている必要があり、証明書は有効期限が切れていない必要があります。 
+
+
+| 警告 `BCM /nvidia-smi refused with HTTP 401`または `403`、または `BCM /nvidia-smi failed` | GPUサンプラーが行を返さなかったため、コレクターはnvidia-smiフォールバックを使用しましたが、それも失敗しました。401または403の場合、サービスプロファイルには `RUN_NVIDIA_SMI_TOKEN`がありません：GPUサンプラーを修正するか（*GPUメトリクスなし*を参照）、または*nvidia-smiトークン（オプション）*に示されているようにトークンを追加します。ポーリングは `smi_*`フィールドなしで継続されます。 
+
+
+| 警告 `BCM /exporter not found (HTTP 404)` |  `EnablePrometheusExporterService = true`を `cmd.conf`に設定してCMDaemonを再起動するか、*Collection Mode*を*REST_ONLY*に設定してください。 
+
+
+| パフォーマンスデータなし |  `/rest/v1/monitoring/latest?measurable=CPUUsage` が行を返すことを確認します。ノードで空の場合は、ヘッドノードで  `cmsh -c "device; use <node>; latestmonitoringdata"` を確認します。ノードが測定可能なデータをまったく報告しない場合、BCMはそのノードでサンプラーを実行していません。ノードを再インストールする（クラウドノードの場合：電源オフ、終了、電源オン）と、サンプラーが復元されます。 
+
+
+| GPUメトリクスなし |  `/rest/v1/monitoring/latest?measurable=gpu_utilization:gpu0` が行を返すことを確認します。BCMの `GPUSampler` には、ノードイメージ内に `cuda-dcgm` パッケージとGPUドライバが必要です。また、有効になっている必要があります： `cmsh -c "monitoring setup; use GPUSampler; get disabled"` は `no` を出力します。 `gpu_recovery_*` のみの行は、サンプラーが実行されていることを意味するものではありません。 
+
+
+| フィールド `gpu_profiling_*`なし | 「GPU プロファイリング メトリックの有効化」の `gpuprofiling watch`コマンドを実行し、GPU ノードの再起動後に再度実行してください。 `dcgm_fi_prof_*`フィールドは、*HYBRID* モードの dcgm-exporter からのみ取得されます。 
+
+
+| UIにワークロード / チャージバックなし | Slurmジョブが実行され、チャージバックが有効になっていることを確認します。アイドル状態のクラスタでは、APIが空になっていることがよくあります。 `CHARGE_BACK_TOKEN`が設定されていること（*チャージバック トークン（オプション）*を参照）、およびサーバ `nvidia_bcm`のメタデータが設定されていることを確認します。 
+|===
+このデータコレクターに関する追加情報は、サポートページまたはデータコレクターサポートマトリックスで確認できます。
