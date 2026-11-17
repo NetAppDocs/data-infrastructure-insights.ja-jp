@@ -11650,7 +11650,6 @@
   <block id="91a0d06a30de7119cf7ba6773ce38416" category="paragraph">DII Proxmox仮想環境コレクターは、PVEベースの仮想マシン（LXCコンテナを除く）およびホスト/ハイパーバイザーのインベントリデータとパフォーマンスデータを収集します。これはHTTPS REST APIベースのコレクターであり、TCP 8006でリッスンするpveproxyサービス/デーモンが提供するProxmox REST APIと通信する必要があります。</block>
   <block id="7bd4738e9b2442fc6fa7415e88a3298d" category="paragraph">このデータコレクターは、ユーザー＋トークン認証を使用します。各Proxmoxクラスター上にサービスアカウントを作成し、ユーザーに適切な権限を割り当て、同じ権限を持つAPIトークンを生成する必要があります。Proxmoxユーザーのトークンは、必ずしもユーザーと同じ権限を持つとは限らないことにご注意ください。DIIは通常、グローバルな監査/監視レベルの権限を必要とします。Proxmox UIを介してサービスアカウントを作成する場合は、PathPermisionの開始パスを「/」に設定し、「Propagate」を「Yes」に設定して、最低限、Datastore Audit、Mapping Audit、Pool Audit、SDN Audit、Sys Audit、VM Audit、VM Monitorのロックを解除してください。ユーザーを作成したら、そのユーザー用のアクセストークンを作成できます。トークンが期限切れにならないよう、有効期限を0に設定してトークンを作成することを強くお勧めします。</block>
   <block id="57e13573114577b3af8a0a24aa24d576" category="sidebar">Proxmox VE</block>
-  <block id="48c0a89dc87860e6c3b42a70bbd13c53" category="paragraph"><block ref="48c0a89dc87860e6c3b42a70bbd13c53" category="inline-link-macro-rx"></block></block>
   <block id="10fcc85a32e000abd9a522eb086aa8b9" category="list-text">注：エージェントインストーラーは、実行中のエージェントが格納されているフォルダとは別のフォルダにダウンロードしてください。</block>
   <block id="323d0a1ff366ae52ecb4199bd4c94bcc" category="paragraph">例えば、エージェントが「/test_user/apps」で実行されている場合、コマンドは次のようになります：</block>
   <block id="22e2d1e386d2ea8093c75a43b1b0223e" category="summary">容量データ ウェアハウスのスキーマテーブル</block>
@@ -16460,4 +16459,5 @@
   <block id="4dcdcb2e56c49bf89538b93565979fe4" category="cell">UIにワークロード / チャージバックなし</block>
   <block id="44aa343060dfa443edf605972782079e" category="cell">Slurmジョブが実行され、チャージバックが有効になっていることを確認します。アイドル状態のクラスタでは、APIが空になっていることがよくあります。<block ref="866d4e136372de4f4e0a83eb14fae02d" prefix=" " category="inline-code"></block>が設定されていること（*チャージバック トークン（オプション）*を参照）、およびサーバ<block ref="21669d594353bfb093b487f21cae5621" prefix=" " category="inline-code"></block>のメタデータが設定されていることを確認します。</block>
   <block id="bbb144aa78b3cd782d5706367bcc3f8e" category="paragraph">このデータコレクターに関する追加情報は、サポートページまたはデータコレクターサポートマトリックスで確認できます。</block>
+  <block id="9147d8a87f0c15b0e1cb8f0114b69cc2" category="paragraph"><block ref="9147d8a87f0c15b0e1cb8f0114b69cc2" category="inline-link-macro-rx"></block></block>
 </blocks>
